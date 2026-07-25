@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-07-25</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-07-25</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Guyana Ferry Death Toll Reaches 70, 33 Still Missing</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Rescue teams and volunteers continued searching after the MV Barima sank off Guyana’s coast during an overnight voyage from Georgetown to Port Kaituma. Authorities said on Thursday that the death toll had risen to 70, 33 people remained missing, and 76 passengers were rescued. The ferry had departed Georgetown at 3:15 p.m. local time on Saturday, carrying 179 people under the government’s latest figures.</p>
+<p>Officials initially reported 133 passengers on board, then revised the total to 179 on Monday after reviewing port surveillance footage. The accident happened on the night of July 18 during the roughly 16-hour route along Guyana’s North Atlantic coast. Search operations have continued for several days, with local fishermen joining coast guard crews, while relatives gathered in Charity on the Essequibo coast near the Pomeroon River, where authorities set up a reception center for families.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/guyana-ferry-death-toll-70-33-missing" target="_blank" rel="noopener noreferrer" title="Telesur English / Guyana Ferry Death Toll Reaches 70, 33 Still Missing">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>How Chinese tech and Russian tactics are aiding Iran’s bombing of US bases</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran’s strikes on US bases and Gulf infrastructure have become more accurate, and the picture emerging from officials and analysts is that Chinese satellite imagery and Russian-style tactics may be helping — even as some experts dispute how direct that assistance is.</p>
+<h3>Chinese imagery and target selection</h3>
+<p>Last Friday’s attack on the Muwaffaq Salti airbase in Jordan killed three US soldiers, despite the base being protected by a Thaad air defence system. Iranian media later released satellite imagery showing several buildings had been destroyed. Why the air defence system failed is not clear, and the incident is under Pentagon investigation.</p>
+<p>The strike has become a reference point in the broader debate over how Iran is improving its attacks. Andreas Krieg, an associate professor at the school of security studies at King’s College London, said the combination of better intelligence, missile navigation, manoeuvrability and coordinated attack planning amounted to “a real transformation”. He said that came after three years of technological development in Iran’s ballistic missile programme, which US intelligence estimates still judge to be roughly 70% intact despite earlier claims from Washington that Tehran’s military capabilities had been obliterated.</p>
+<p>One part of that picture is Chinese satellite imagery. The first step, the evidence says, was to use it to help identify targets at US bases and other sites in the Gulf. The US imposed sanctions on three Chinese companies in May for providing such images. One of them, Mizar Vision, exposed the presence of US military aircraft and Patriot and Thaad air defence systems at bases in Saudi Arabia, Bahrain and the Jordanian base hit last week, and imagery released on social media was widely picked up.</p>
+<h3>Russia’s shadow in Iran’s tactics</h3>
+<p>Alongside the imagery question is a second one: whether Iran has learned from Russia’s war in Ukraine. The evidence says a string of accurate Iranian attacks on CIA facilities across the Gulf made US analysts wonder whether Russia had shared locations with Tehran, but that hypothesis is tentative.</p>
+<p>Sidharth Kaushal of the Royal United Services Institute said Iran had focused on static targets at US bases, for which commercial imagery was enough. “I haven’t seen anything where Iran has struck a target so dynamic that I’ve looked at this and gone ‘this has got to be foreign aid,’” he said. Some experts, then, are less sure Beijing has been providing intelligence in the way the more sweeping claims suggest.</p>
+<p>Even so, the tactical parallels with Russia are part of the story. Iran has evolved its missile attacks using methods similar to Russia in Ukraine, where smaller salvos can be more effective than larger ones and drones are used to distract air defences before a ballistic attack. Kaushal said that looked more like “a convergent evolution” between the two militaries than direct Russian tutoring.</p>
+<p>Matthew Savill, a defence analyst from the Royal United Services Institute, said there is “a kind of collaboration” among Iran, Russia and China, and also North Korea, but he said the so-called “axis of upheaval” is far from a consistent military alliance. That leaves the degree of direct help open to interpretation, even as the attacks themselves appear more capable.</p>
+<h3>What the attacks have shown</h3>
+<p>The evidence also points to the hardware and planning behind the strikes. Iran’s ballistic programme relies heavily on Chinese electronics and ammonium perchlorate for rocket fuel, and the finished weapons are considered sophisticated enough to occasionally defeat stretched US and Gulf air defences. Iranian missiles use complex navigation, including GPS, China’s BeiDou and Russia’s Glonass simultaneously as they launch towards targets.</p>
+<p>Their re-entry speeds, several times the speed of sound, make interception difficult, and Tehran has also developed steerable warheads that can adjust course during descent on some missiles, according to Krieg. Heat-seeking and optical navigation in the terminal phase also means they are not vulnerable to electronic jamming because they are not using radio communication.</p>
+<p>Those capabilities matter because US air defences are already under strain. The evidence says stockpiles of Patriot and Thaad interceptors have been run down by about half after the 38-day US-Israel bombing campaign in the spring. Add in energy sites, oil refineries and desalination plants, and there is a large area to cover.</p>
+<p>The official line remains mixed. US defence secretary Pete Hegseth told Congress this week that China and Russia were helping Iran to some extent. Donald Trump contradicted him on Friday, saying Xi Jinping and Vladimir Putin had personally assured him they would not sell weapons to Iran. The result is a picture of Iranian strikes that are clearly becoming more precise, while the extent of foreign assistance — especially from China and Russia — remains contested.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/jul/24/irans-much-improved-missile-systems-pose-a-real-threat-to-the-us" target="_blank" rel="noopener noreferrer" title="The Guardian / How Chinese tech and Russian tactics are aiding Iran’s bombing of US bases">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Floods in India Leave 51 Dead and 700,000 People Affected</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Floods in India’s northeastern state of Assam left 51 people dead and affected over 700,000, according to Northeast Live on Friday. 900 villages across 11 districts were reeling under the floods, with Sivasagar, Charaideo and Jorhat in upper Assam described by All India Radio as the worst-hit areas. AIR said Sivasagar had more than 375,000 people impacted and around 300 villages inundated, while more than 186,000 people were affected in Charaideo and over 115,000 in Jorhat. Officials said 24,124 people were sheltering in 103 relief camps, and 255 relief distribution centres had been set up.</p>
+<p>The same material also gave a different toll, saying 41 people were dead and over 7 lakh people were affected as the floods swallowed 11 districts. That figure conflicts with the later 51-dead, over-700,000 count reported elsewhere in the package.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/floods-in-india-leave-51-dead-and-700000-people-affected" target="_blank" rel="noopener noreferrer" title="Telesur English / Floods in India Leave 51 Dead and 700,000 People Affected">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>Russian attack kills 10 after Zelensky hosts US firm making Patriot air defence systems</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Russian ballistic missile strike on Friday in Ukraine’s Kyiv region killed 10 people and injured almost 100 others at a site where a defence industry event was being held, Ukrainian officials and industry representatives said. The attack came a day after President Volodymyr Zelensky met in Kyiv with senior representatives of Raytheon, the US company that makes Patriot air defence systems. Zelensky said rescue operations were under way in the Kyiv region and that efforts to determine what happened were continuing. Raytheon did not immediately respond to an email asking whether any of its workers were at the event.</p>
+<p>Ukrainian officials gave differing descriptions of the target site: acting governor Ruslan Oliynyk said preliminary information pointed to a private training ground where events were taking place, while the Ukrainian Council of Defence Industry said a missile strike hit a site where representatives of Ukraine’s defence industry were present and said it was not the organiser of the event. Russia later confirmed it struck a defence industry event, saying it was showcasing drones that targeted Russian civilians. The Russian defence ministry said the site was hosting a demonstration of Ukrainian and foreign-made unmanned aerial vehicles, including future models, used to strike civilian targets within Russian territory.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/russia-central-asia/article/3361798/russian-attack-kills-10-ukraine-defence-event-almost-100-injured" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Russian attack kills 10 after Zelensky hosts US firm making Patriot air defence systems">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="la_jornada">
+  <summary>Gabriela Rodríguez*: Demographic impact of climate change</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Climate-linked disasters are pushing internal displacement onto Mexico’s demographic agenda, with Gabriela Rodríguez and Conapo warning that floods, droughts, earthquakes and other events are straining cities, water systems and public finances even as the exact climate share of those movements remains hard to pin down.</p>
+<p>Gabriela Rodríguez said disasters associated with extreme hydrometeorological phenomena and sudden geophysical events had displaced nearly 80 million people internally worldwide by 2023. She added that 7.7 million people were displaced by disasters in 2023 alone, and that such shocks can intensify global poverty and reverse development gains when they interact with socioeconomic, demographic or political vulnerabilities.</p>
+<h3>From floods to slow-onset losses</h3>
+<p>The study groups the relevant hazards into sudden hydrometeorological events linked to global warming and climate change, such as floods, hurricanes — also called tropical cyclones or typhoons — heat waves, cold waves and wildfires. It also includes geophysical events such as earthquakes, tsunamis, landslides, collapses and mudslides.</p>
+<p>It also points to slow-onset phenomena associated with climate change, including droughts, thawing or permafrost melt, the loss of coastal zones, desertification and lack of access to essential resources such as water. On that point, the text says it is difficult to establish to what extent climate change will contribute to sudden disasters and slow-onset events, but the evidence indicates that some of them will increase and may be irreversible, such as droughts and loss of coastal zones.</p>
+<h3>Mexico’s population policy is taking note</h3>
+<p>In Mexico, Rodríguez said population policy is paying greater attention to the demographic impact of climate change alongside the decline in fertility and the aging of the population, which are unfolding at different speeds across the country’s regions. She said people displaced by these events tend to move elsewhere, adding pressure on urban infrastructure and the water crisis.</p>
+<p>The study also says displaced people suffer irreparable human and material losses that worsen quality of life and raise marginalization. It adds that Mexico has made progress in civil protection, with regulatory frameworks, governmental structures and budgets for disasters associated with natural phenomena, but still faces major challenges in prevention and post-disaster response.</p>
+<p>Those challenges are also fiscal. The text says the costs of restoring conditions after a disaster have become increasingly substantial and have required extraordinary action by local and national governments, as well as collaboration from international organizations, the private sector and civil society.</p>
+<h3>What the study looked at</h3>
+<p>To deepen knowledge about population displacement due to climate change and disasters in Mexico, the study was produced through a collaboration between the technical teams of the National Population Council (Conapo) and the Laura Gabriela Rubio Díaz Leal consultancy, on behalf of the United Nations High Commissioner for Refugees (UNHCR). Rodríguez said the aim is to guide policies that can anticipate and meet the needs of people affected by these situations.</p>
+<p>The publication drew on the socioeconomic impact database of damages and losses caused by disasters in Mexico compiled by the National Center for Disaster Prevention for 2013 to 2023, the Flood Catalog compiled by the National Coordination of Civil Protection and the National Water Commission, and verified information in the media. For hydrometeorological and geophysical events, it identified 1,037,910 displacements over the 11 years analyzed.</p>
+<p>The broader message of the study is that prevention, adaptation and resilience to climate change have not been a priority for economic elites, even though population settlements and human activity have expanded into risk areas. Rodríguez said that knowing and measuring these effects is strategic for anticipating them and for building a more complete demographic diagnosis of Mexico.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/24/politica/013a2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Gabriela Rodríguez*: Demographic impact of climate change">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>11 people indicted over deaths of six people in cargo container in Texas</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A US attorney announced a federal indictment on Friday against 11 people in the smuggling deaths of six migrants whose bodies were found in a rail cargo container in Texas in May. The six were found dead in a rail yard shipping container in Laredo, on the US-Mexico border. Authorities said they were from Honduras and Mexico and included a 14-year-old boy, and that the oldest victim was 56.</p>
+<p>The bodies were discovered by a Union Pacific employee. The Webb county medical examiner suspected the deaths were caused by hyperthermia, or heatstroke. US attorney Justin Simmons said it was “very hard to survive in an un-air-conditioned, sealed container” in the heat that day. The evidence also says train smuggling has long been a concern because trains headed to the US often slow or stop in Mexico before crossing the border, creating opportunities to climb onboard or hide drugs or other contraband.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/jul/24/texas-migrant-deaths-indictment" target="_blank" rel="noopener noreferrer" title="The Guardian / 11 people indicted over deaths of six people in cargo container in Texas">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,bbc,cnn,middle_east_eye,nyt,scmp">
+  <summary>ICC chief prosecutor Karim Khan removed from post over sexual misconduct allegations</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">International Criminal Court member states have removed chief prosecutor Karim Khan after sexual misconduct allegations, opening a fight over due process and political pressure as he denies wrongdoing and says he will challenge the decision.</p>
+<p>The vote came on Friday at a meeting in New York, where the court’s 125 member states used a secret ballot to dismiss him. Assembly of States President Päivi Kaukoranta said 82 states backed the removal and concluded that Khan “committed serious misconduct and a serious breach of duty.” The court’s oversight body had already suspended him in June, and the allegations had first emerged in 2024.</p>
+<p>Khan’s accuser went public days before the vote in an interview with CNN, saying he sexually harassed her and subjected her to non-consensual sexual acts. CNN identified her as Sarah, a junior ICC staffer who worked for Khan. Khan has denied all wrongdoing, and his lawyer Tayab Ali said after the vote that he would challenge the decision.</p>
+<h3>The allegations and Khan’s denial</h3>
+<p>The claims at the center of the case were serious and specific. Sarah said Khan repeatedly subjected her to non-consensual sexual acts, including groping, attempted kissing and digital and genital penetration. In a previous interview, Khan denied having a sexual relationship with the staff member and told investigators he “completely denied engaging in any harassment, abuse of authority, inappropriate behavior whatsoever.”</p>
+<p>His defense has also argued that the case was mishandled. Ali said the decision was “unsupported by any lawful or properly reasoned finding” that Khan had committed misconduct or breached his duties. He also wrote that Khan “has denied the allegations from the outset and continues to do so,” and said Khan was not given a fair opportunity to be heard.</p>
+<h3>Clash over process, sanctions and pressure</h3>
+<p>The vote quickly turned into a dispute over how the court handled the allegations. Ali said an investigation by the UN Office of Internal Oversight Services did not find any misconduct, including sexual misconduct. Kaukoranta, however, said the assembly “fully respected” Khan’s due process and that the OIOS investigation did find evidence supporting the allegations.</p>
+<p>The broader setting also mattered. CNN reported that the move came amid renewed scrutiny of the court by Washington, and Al Jazeera said Khan’s defense team underscored that he was removed while many court officials are under US sanctions. CNN said the United States has sanctioned 11 ICC judges and prosecutors, including Khan, and South China Morning Post said the court’s dismissal of Khan followed that pressure.</p>
+<h3>What happens next</h3>
+<p>Khan’s lawyer said he will challenge the decision through all available legal mechanisms. The dismissal also starts the process to choose a new ICC prosecutor, and one report said that replacement is not expected to be voted in before next year.</p>
+<p>For now, the court has removed its top prosecutor, but the arguments over the allegations, the investigation and the fairness of the process are still unresolved.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/24/icc-prosecutor-khan-removed-over-sexual-misconduct-allegations-sources?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / ICC prosecutor Karim Khan removed over ‘political’ sex abuse claims">AJ #1</a><a href="https://www.bbc.co.uk/news/articles/cqjxddx12qqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / ICC top prosecutor removed over sexual misconduct allegations">BBC #1</a><a href="https://www.cnn.com/2026/07/24/world/icc-chief-prosecutor-vote-latam-intl" target="_blank" rel="noopener noreferrer" title="CNN / ICC member states vote to dismiss chief prosecutor Khan">CNN #1</a><a href="https://www.middleeasteye.net/news/icc-member-states-remove-prosecutor-karim-khan-majority-vote" target="_blank" rel="noopener noreferrer" title="Middle East Eye / ICC member states remove prosecutor Karim Khan by majority vote">MEE #1</a><a href="https://www.nytimes.com/2026/07/24/world/europe/karim-khan-icc.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Chief Prosecutor of International Court Is Removed After Sexual Misconduct Charge">NYT #1</a><a href="https://www.scmp.com/news/world/article/3361809/international-criminal-court-members-dismiss-prosecutor-karim-khan-insiders-say" target="_blank" rel="noopener noreferrer" title="South China Morning Post / ICC chief prosecutor Karim Khan removed from post over sexual misconduct allegations">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>U.S. Imposes New Coercitive Sanctions Targeting Cuba Medical Services and Energy</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The U.S. government imposed new unilateral sanctions on July 23, and OFAC, under the U.S. Treasury Department, said the package targets Cuba’s public healthcare, energy, remittances and port sectors. The measures were presented as aimed at Cuba’s main sources of international income and at the island’s domestic energy situation.</p>
+<p>The sanctions blacklisted Cuba’s Minister of Public Health, José Angel Portal Miranda, and Gretza Sánchez Padrón, director of the Central Unit of Medical Cooperation (UCCM). Washington also sanctioned the UCCM and the Cuban Medical Services Trading Company (CSMC), which coordinates international medical collaboration. Other targets named in the package were Orbit SA, the main company managing family remittances, the Mariel Container Terminal (TCVAL), Coral Marítima SA, Einarbo SA, a specialized investment fund, and the Oil Research Center (Ceinpet).</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/u-s-new-sanctions-cuba-medical-services" target="_blank" rel="noopener noreferrer" title="Telesur English / U.S. Imposes New Coercitive Sanctions Targeting Cuba Medical Services and Energy">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="mail_guardian">
+  <summary>Labour department investigates fire after three workers injured at Sasolburg plant</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The department of employment and labour has launched an investigation and issued a prohibition notice after a fire at Sasol’s Sasolburg polyethylene plant in Free State injured three contractor employees. Department spokesperson Teboho Thejane said a dangerous gas release ignited on Tuesday while contractors were deblocking a pipeline during heat treatment work at the Poly 3 facility, and an inspector was sent to the site on Thursday after the department confirmed the incident. Sasol confirmed the fire but said there had been no explosion.</p>
+<p>The injury details were not fully consistent in the accounts given. Thejane said three workers sustained burns, with two remaining in hospital, including one in ICU, and the third being treated in a surgical ward. Sasol later clarified that the third worker had only minor injuries and did not require hospital admission. Thejane said the department’s investigation was ongoing to establish what happened and whether there had been any contraventions of occupational health and safety legislation.</p></div>
+  <div class="source-list"><a href="http://mg.co.za/news/south-africa/2026-07-24-labour-department-investigates-fire-after-three-workers-injured-at-sasolburg-plant" target="_blank" rel="noopener noreferrer" title="Mail &amp; Guardian / Labour department investigates fire after three workers injured at Sasolburg plant">Mail &amp; Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cnn,middle_east_eye">
+  <summary>Israeli settlers kill four Palestinians in West Bank attack</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A clash involving Israeli settlers, soldiers and Palestinians in the occupied West Bank left four Palestinians and two Israelis dead, but the accounts differ on who shot whom as the Israeli military prepares a large-scale operation in the area.</p>
+<p>The Israeli military said settlers entered a West Bank area restricted to Israeli civilians on Friday for an “unauthorized and uncoordinated hike” near Tell/Till village, southwest of Nablus. As the group approached the Palestinian village, clashes broke out. Video from the incident shows an armed settler approaching two Palestinian men and appearing to push them away with his rifle; one Palestinian grabs the weapon’s strap, and seconds later one of the men is seen holding it. The sound of at least a dozen shots follows. The military said a Palestinian man took the weapon from a security officer from the nearby Havat Gilad settlement, and that officer and a second soldier were killed. It said it was not clear whether the video shows the precise moment they were killed.</p>
+<p>The Palestinian Ministry of Health said the four Palestinians who died were shot by Israeli soldiers. Walid Zeiden, who leads the Tell village committee, said they were all members of the same family, including two brothers and two cousins.</p>
+<p>The army said it was treating the incident as a terror attack and announced a “large-scale” operation in the area to go after “dozens of Palestinians” involved. The UN called for “urgent action” to stop escalating violence in the West Bank, and the Palestinian Authority condemned the settler attacks and criticized Israeli Prime Minister Benjamin Netanyahu and Defense Minister Israel Katz.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/07/24/middleeast/west-bank-settler-palestinian-clashes-military-operation-intl" target="_blank" rel="noopener noreferrer" title="CNN / Israel prepares major military operation in West Bank after four Palestinians and two Israelis killed">CNN #1</a><a href="https://www.middleeasteye.net/news/israeli-settlers-kill-four-palestinians-west-bank-attack" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israeli settlers kill four Palestinians in West Bank attack">MEE #1</a><a href="https://www.middleeasteye.net/news/israeli-rights-groups-call-international-community-stop-pogrom-against-palestinians-occupied" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Rights groups call for help stopping Israeli &#x27;pogrom&#x27; against Palestinians in West Bank">MEE #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye,nyt,scmp">
+  <summary>Japanese &#x27;Arab resistance fighter&#x27; Kozo Okamoto dies at 78</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Kozo Okamoto, the Japanese militant long identified with the Palestinian cause, has died in Beirut aged 78, ending a life that stretched from the 1972 Lod Airport attack to decades in Lebanon and leaving behind a legacy still framed in sharply different terms.</p>
+<p>The Popular Front for the Liberation of Palestine, which said it had protected him during his years in Lebanon, announced his death on Thursday and said he had suffered from a prolonged illness. Palestinians knew him as Ahmad al-Yabani, or Ahmad the Japanese, and he had rarely appeared in public after settling in Lebanon, even as supporters treated him as a symbol of international solidarity with the Palestinian cause.</p>
+<h3>From Lod Airport to life imprisonment</h3>
+<p>Okamoto was part of the Japanese Red Army, the far-left group that emerged in 1971 and was closely connected to the Palestinian struggle. On 30 May 1972, he joined two other members of the group in an attack on Lod Airport, now Ben Gurion Airport, near Tel Aviv. The three men arrived on a flight from Europe, retrieved rifles and grenades from their luggage, and opened fire.</p>
+<p>Okamoto’s two comrades died, while Israeli forces wounded and captured him. Middle East Eye said the attack, organized with the PFLP, killed 26 people, including 17 Christian pilgrims from Puerto Rico and eight Israelis. An Israeli court sentenced him to life imprisonment, and Israel released him in 1985 after 12 years as part of a prisoner exchange with Palestinian resistance groups.</p>
+<p>The PFLP later said that during his time in prison he spent much of his sentence in solitary confinement and was forced to “eat from the ground like a dog, with his hands cuffed behind his back.” In its statement on his death, the group said his life was “marked by immense sacrifices spanning for decades on the battlefields of struggle in support of the Palestinian cause,” and added that he “never compromised nor faltered but remained steadfast to his principles.”</p>
+<h3>Lebanon, asylum and a lasting emblem</h3>
+<p>After his release, Okamoto reached Lebanon and received political asylum. Lebanese authorities arrested him and four other Japanese nationals in 1997 over their immigration status. Beirut returned the other four to Japan in 2000 but allowed Okamoto to remain, repeatedly rejecting Japanese demands for his extradition.</p>
+<p>During his Lebanese trial, Okamoto described himself as “an Arab resistance fighter.” He remained in Lebanon until his death, and although he seldom appeared publicly, he was still remembered by supporters across the region as a figure who had left his homeland to stand with Palestinians confronting occupation.</p>
+<p>He made one of those rare appearances in May 2022, when he visited a Beirut cemetery containing the graves of Palestinian resistance figures to mark 50 years since the airport attack.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/ahmad-japanese-palestinian-resistance-figure-kozo-okamoto-dies-78" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Japanese &#x27;Arab resistance fighter&#x27; Kozo Okamoto dies at 78">MEE #1</a><a href="https://www.nytimes.com/2026/07/24/world/middleeast/japanese-militant-tel-aviv-airport.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Japanese Militant in Tel Aviv Airport Attack Dies in Lebanon at 78">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3361679/japanese-militant-who-took-part-1972-israel-airport-attack-dies-beirut" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Japanese militant who took part in 1972 Israel airport attack dies in Beirut">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Peru Court Overturns Law Criminalizing Protest Support</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Peru’s Constitutional Court ruled on Thursday that legal provisions criminalizing logistical and financial support for social protests are unconstitutional, striking down measures enacted during the government of Dina Boluarte. The ruling invalidated Articles 283-A and 315-B of the Penal Code, which had imposed criminal penalties for so-called “acts of collaboration,” including providing money, food, transportation or supplies for demonstrations. As a result, investigations, complaints and legal proceedings brought under those provisions will be archived and rendered without legal effect.</p>
+<p>The court said the law violated the principles of legality and legal certainty by criminalizing preparatory acts, logistical assistance and expressions of solidarity tied to the constitutional right to peaceful protest. It also upheld tougher penalties for public disorder and obstruction of public services, while reaffirming that peaceful protest is protected under the Constitution and that violence, damage to public or private infrastructure, and serious violations of others’ rights are not covered. The decision follows years of controversy over legislation introduced after the parliamentary removal of former President Pedro Castillo.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/peru-law-criminalizing-protest-support" target="_blank" rel="noopener noreferrer" title="Telesur English / Peru Court Overturns Law Criminalizing Protest Support">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cna">
+  <summary>US missiles hit Iran as path towards de-escalation uncertain</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US missiles hit targets across Iran on Friday, but Donald Trump left open both more strikes and a possible diplomatic deal, while Iranian forces answered with attacks on US bases in neighbouring Arab countries and warnings that they could hit buildings used by US personnel.</p>
+<p>The strikes came two weeks after the collapse of an interim truce meant to end the war. Trump had already threatened to expand the targets being hit in Iran to include energy plants and bridges, to send ground forces to seize the Kharg Island oil hub, and to bomb a deep-underground site known as Pickaxe Mountain. On Friday, he said he had not yet made a decision on new major strikes.</p>
+<p>Speaking at the White House, Trump said: “We are talking to them. I think they’re being serious. I think… they are being by far the most serious that we’ve seen them, but that doesn’t mean we get there.” Asked about an exit strategy, he said: “There’s a military exit where we just keep going just the way we are, and we can even make it a heavier dose… Or there’s a smarter strategy that you make a deal.” He also said: “We’re locked and loaded. We’re ready to go.”</p>
+<p>Trump had vowed “major military punishment” for Tehran and its Houthi allies in Yemen, while still leaving the door open to a deal. The Iranian armed forces responded by firing at US bases in neighbouring Arab countries and warning that non-military buildings used by US personnel could be targeted.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/world/us-missiles-iran-war-donald-trump-6277381" target="_blank" rel="noopener noreferrer" title="CNA / US missiles hit Iran as path towards de-escalation uncertain">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Venezuela Advances Recovery Efforts One Month After Devastating Earthquakes</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">One month after two earthquakes of magnitude 7.2 and 7.5 struck Venezuela on July 24, authorities and citizens were still working to support affected families in Caracas and the states of La Guaira, Carabobo, Miranda, Aragua and Falcon. Authorities have recorded 5,398 deaths, 16,740 injuries and thousands of people still missing beneath the rubble, while nearly 6,500 people have been rescued alive over the past month. The government said it remains actively assisting more than 128,000 affected families, and 23,122 people are living in 107 temporary camps.</p>
+<p>The administration led by Acting President Delcy Rodriguez has already delivered the first 200 apartments to affected families. Authorities expect to deliver 4,000 homes by December and 10,000 housing solutions in 2027. They are also accelerating completion of unfinished buildings, buying properties on the secondary market, conducting soil assessments and amending the Rental and Real Estate Guarantees Law to increase rental housing supply.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-advances-recovery-efforts-one-month-after-devastating-earthquakes" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela Advances Recovery Efforts One Month After Devastating Earthquakes">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>Judiciary Convicts Drug Traffickers Who Killed Singer Aline Borel</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Araruama Court, in the Região dos Lagos of Rio de Janeiro, convicted the killers of singer and influencer Aline Borel dos Santos, 28, for her 2022 killing. Natanael dos Santos Nunes was sentenced to 28 years and one month in prison, and Luiz Henrique Motta Fersura received 16 years and six months. The trial session began on Thursday (23) and ended in the early hours of Friday (24) at the Araruama Criminal Court. Aline Borel was lured on April 20, 2022, to Dentinho Beach, in Praia Seca, and shot to death.</p>
+<p>According to the indictment, João Vítor Fernandes dos Santos and Ricardo Santos Oliveira were also involved. Ricardo, identified as a leader of the faction that dominates drug trafficking in Corte, in Praia Seca, planned the singer’s death because he suspected she had passed information to the militia competing for control of the area. For the Civil Police and the Public Ministry of Rio de Janeiro state, she was executed by mistake. Judge Eric Baracho Dore Fernandes wrote in the sentence about Aline Borel’s spontaneity and her popularity on social networks.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/justica-condena-traficantes-que-mataram-cantora-aline-borel" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Judiciary Convicts Drug Traffickers Who Killed Singer Aline Borel">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>‘I will die for this cause’: how India’s cockroach meme became the biggest challenge to Modi’s grip on power</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A cockroach-themed online joke has spilled into Delhi street protests, where young Indians are challenging Narendra Modi’s government over a leaked medical-college exam, police violence and a demand that the education minister resign; the question now is how far the movement can push a leader long thought to silence dissent.</p>
+<h3>From meme to mass protest</h3>
+<p>What began as the Cockroach Janata party, a parody website and meme mocking Modi’s ruling party, spread online and then into the streets. That has been striking in a political climate where, for 12 years of Modi and the BJP’s rule, criticism was widely seen as something done at your peril. The evidence says dissent was routinely crushed, until the cockroaches came along.</p>
+<p>The protests have kept education at the centre, especially the scandal over a leaked examination for medical colleges. The core demand is the resignation of education minister Dharmendra Pradhan, alongside reform of a higher education system described in the evidence as chronically underfunded, corrupt and failing millions of young Indians. Insults to Modi now circulate in memes and Instagram reels, with gen Z Indians openly vilifying the government.</p>
+<p>The movement escalated after a peaceful protest in Delhi on Monday was met with police batons, teargas, pellet guns and the alleged manhandling of female protesters. Among those who joined was Aniruddh Gautam, a 21-year-old law student, who said he had turned down a place at a UK university because he believed in India but now felt the government had taken away young people’s hopes and dreams. Another protester, 17-year-old Deeksha Mishra, said she came because her sister had fallen into depression after the exam leaks and that they had been treated “as terrorists.”</p>
+<p>Modi has promised fast action against those responsible for the leaks, but he has not sacked Pradhan. Protesters say they will not move until he is gone, while analysts say the campaign has already lifted “the pall of fear.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/ng-interactive/2026/jul/25/i-will-die-for-this-cause-how-indias-cockroach-meme-became-the-biggest-challenge-to-modis-grip-on-power" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘I will die for this cause’: how India’s cockroach meme became the biggest challenge to Modi’s grip on power">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="jakarta_post">
+  <summary>AGO detains ex-top prosecutor Febrie after questioning</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Attorney General’s Office detained former assistant attorney general for special crimes Febrie Adriansyah on Friday evening after questioning him for several hours, with AGO spokesperson Anang Supriatna saying he had been present for questioning since 1 p.m. The AGO said investigators questioned him as a witness in a money laundering case. Febrie was not publicly seen arriving at the building.</p>
+<p>The questioning came after Febrie had previously failed to respond to a summons for questioning on July 22, citing health concerns, and earlier missed the first summons on Wednesday for the same reason. The Jakarta Post also reported that Febrie is implicated in at least a corruption case. The case against him followed raids by investigators with the National Police’s Corruption Eradication Corps in early July at at least a dozen locations, including a house in Sentul, Bogor regency, West Java, where police seized billions of rupiah-worth of banknotes in various currencies and 74 kilograms of gold bars.</p></div>
+  <div class="source-list"><a href="https://www.thejakartapost.com/indonesia/2026/07/25/ago-detains-ex-top-prosecutor-febrie-after-questioning" target="_blank" rel="noopener noreferrer" title="The Jakarta Post / AGO detains ex-top prosecutor Febrie after questioning">TJP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Petrol price up by Rs3.66, HSD by Rs4.80 as govt revises fuel rates</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The government on Friday raised the price of petrol by Rs3.66 per litre and high-speed diesel (HSD) by Rs4.80 per litre, with the new rates set to apply from July 25, Saturday. After the change, petrol stands at Rs335.18 per litre and HSD at Rs383.46 per litre. The government is charging Rs110 per litre in taxes and duties on petrol and Rs96 on diesel, and said the revision reflects fluctuating global oil prices after renewed hostilities in the Persian Gulf.</p>
+<p>Petroleum Minister Ali Pervaiz Malik said fuel prices would now be fixed on a daily basis because of international market fluctuations following renewed hostilities between Iran and the US. He said the cabinet and the prime minister had decided to give the Oil and Gas Regulatory Authority the responsibility of deciding fuel prices daily based on international market trends. The daily pricing decision was rejected by the All Pakistan Dealers Association, which said it would consider a protest plan this week.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2018099/petrol-price-up-by-rs366-hsd-by-rs480-as-govt-revises-fuel-rates" target="_blank" rel="noopener noreferrer" title="Dawn / Petrol price up by Rs3.66, HSD by Rs4.80 as govt revises fuel rates">Dawn #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Zhejiang leverages new technologies to strengthen typhoon preparedness</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Technicians from the Zhejiang Provincial Meteorological Bureau analyzed the path and impact of Typhoon Bavi on July 10 as Zhejiang used new technology to prepare for the storm. In Jiangfeng village, Fenglin town, Yongjia county, Wenzhou, a meteorological drone began patrolling at 10 p.m. on July 10, scanning riverbanks, tidal flats and residential areas for safety hazards while broadcasting evacuation alerts. Staff at the command center monitored live footage and coordinated with the village Party branch and villagers’ committee. By 10 a.m. on July 11, all 765 villagers had been relocated within 12 hours, and no casualties were reported even as floodwaters rose more than 2 meters at the peak.</p>
+<p>Across the province, local governments deployed drones, AI applications and digital platforms as part of typhoon response. The evidence says the earlier approach relied on manual patrols, visual inspections and phone reporting, while the newer system uses smart monitoring, data-driven decision-making and coordinated response. At a fishing port in Daishan County, Zhoushan, drones with high-definition cameras and remote loudspeakers patrolled the area and checked more than 400 moored vessels. In Cangnan county, Wenzhou, drones detected a seawall breach, and on the Xixian embankment in Yuhang district, drones with infrared thermal imaging and AI algorithms looked for hazards such as seepage and slope collapses.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0724/c90000-20481554.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Zhejiang leverages new technologies to strengthen typhoon preparedness">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China&#x27;s first-half economic performance signals stronger momentum, higher-quality growth</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China&#x27;s first-half 2026 economic data combined 4.7 percent GDP growth with record trade and a summer grain milestone, while the larger question is whether that momentum can hold as global growth slows and external uncertainties continue to mount.</p>
+<p>At a terminal in Lianyungang, east China&#x27;s Jiangsu province, Chinese manufactured automobiles were about to be shipped overseas. Behind that image, China said summer grain output exceeded 150 million tonnes for the first time, and total imports and exports passed 25 trillion yuan ($3.69 trillion), also a record for the period. The IMF recently cut its 2026 global growth forecast to 3.0 percent, but raised its forecast for China&#x27;s full-year growth by 0.2 percentage points.</p>
+<p>The explanation offered four words: stability, innovation, vitality and integration. On stability, China exported 187 high-value-added liquid cargo vessels worth more than 64.3 billion yuan in the first five months, up 188.8 percent year on year. In the first half, automobile exports surpassed 5 million units for the first time, while electric vehicle exports rose 68.7 percent. The account said the strong global performance of Chinese-built ships and automobiles reflected the resilience and competitiveness of the broader economy.</p>
+<p>The same account said China&#x27;s economic expansion in the first half of 2026 was the largest for the same period in the past five years. It added that some indicators saw short-term fluctuations because of external challenges and domestic structural adjustments, but said that did not change the long-term trajectory of development. On innovation, it pointed to Chongqing-based motorcycle maker ZXMOTO&#x27;s international superbike championship win, Huawei&#x27;s &quot;Tau Law&quot; chip-design approach, and the company&#x27;s 381 chip models in mass production. It also cited China’s supercomputer LineShine and the Long March-10B carrier rocket as signs of technological progress.</p>
+<p>Vitality and integration were linked to domestic demand and broader industrial coordination. By June 20, consumer goods trade-in programs had generated more than 1 trillion yuan in sales and benefited 136 million consumers. Preliminary estimates said new growth drivers, including high-end manufacturing, the digital economy and modern services, contributed more than 40 percent to first-half growth. The account also said China is deepening links among enterprises, universities, research institutes, end users, capital and talent, while building a unified national market.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0724/c90000-20481476.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China&#x27;s first-half economic performance signals stronger momentum, higher-quality growth">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>State Council establishes special team to investigate deadly south China reservoir breach</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The State Council has set up a special investigation and assessment team for the dam breach disaster on July 6 at Liulan Reservoir in Hengzhou, in the city of Nanning, Guangxi Zhuang Autonomous Region in south China. The breach caused heavy casualties and resulted in 26 confirmed deaths. The State Council said it established the team in accordance with relevant national laws and regulations.</p>
+<p>Led by the Ministry of Emergency Management, the team includes representatives from 10-plus central government departments and the People&#x27;s Government of Guangxi Zhuang Autonomous Region. Its first plenary meeting was held in Nanning on Friday, and Chen Min, the team’s head and vice minister of the MEM, presided. At the meeting, he set out arrangements for the investigation and assessment work and work requirements. The meeting said the team would retrace the full course of the disaster, determine its causes, and review problems and responsibilities in disaster prevention, response and emergency handling. It also called on localities and relevant departments to draw lessons, strengthen flood prevention and disaster relief, and protect people’s lives and property.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260724/03680f8f22e1494bb6ef229a663ada43/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / State Council establishes special team to investigate deadly south China reservoir breach">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China clarifies individual income tax rules for offshore trusts</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s tax authorities have issued detailed rules to address long-standing ambiguities in the taxation of offshore trusts, with the Ministry of Finance and the State Taxation Administration announcing on Friday that Chinese resident individuals must declare and pay individual income tax on income from transferring assets into offshore trusts and on income generated during the trusts’ lifetime. The announcement sets reporting requirements across the establishment, operation and termination stages of offshore trusts, and says the rules bring existing legal provisions into more effective operation.</p>
+<p>Gains from transferring assets into a trust are taxed as “income from transfer of property,” while trust income during the lifetime of the trust is taxed either as “income from transfer of property” or as “interest, dividends and bonuses,” depending on the returns, with both categories subject to a 20 percent rate. For trusts operating for more than three years, tax liabilities from the establishment stage will not be collected retroactively. Income accrued during the trust’s lifetime must still be reported regardless of when the trust was established. The announcement also gives a three-month grace period for voluntary disclosure, during which late-payment penalties are waived. Shi Zhengwen of China University of Political Science and Law said the move does not introduce new legislation, but detailed rules for more effective law enforcement.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260724/b4210103695a49b89ab6178813f71721/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China clarifies individual income tax rules for offshore trusts">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Madrid and Ávila fires at risk of merging into one: “There is very little left”</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Wildfires in Madrid and Castile and León kept spreading on Thursday and Friday, forcing mass evacuations and confinements as officials warned that the Madrid and Ávila blazes could still merge and make suppression even harder.</p>
+<h3>Madrid’s fronts came together</h3>
+<p>In Madrid, three active fire fronts joined into a single front during the afternoon, complicating firefighting efforts. The region had already forced eight municipalities to evacuate and three to confine residents, and by then there were already 50,000 evacuees or confined people in the community.</p>
+<p>The fires in Madrid were not perimetered or controlled during the day, and officials said they kept burning hectares. Madrid Government delegate Francisco Martín said in mid-afternoon that he did not rule out the toll growing in the coming hours. Later, after a meeting of the coordination center, he said conditions had improved, with lower temperatures, weaker wind and higher humidity, and that there was now a chance to attack the fire with greater success.</p>
+<p>Madrid president Isabel Díaz Ayuso described the situation as the worst in the history of the Community of Madrid and said the region had suffered an “unprecedented situation.” She said about 6,000 hectares had burned in Madrid and that 100 minor cases had been treated for smoke inhalation and anxiety crises. She also said 43 houses had burned in Villa del Prado and another 286 had been affected in one way or another.</p>
+<h3>Ávila and Castile and León stayed under pressure</h3>
+<p>Castile and León had nine active fires, with three towns under evacuation orders and two under confinement in Ávila. In total, more than 8,000 residents had been evacuated and 5,000 confined there.</p>
+<p>Nicanor Sen, the Castile and León government delegate, said he was concerned that the fires in the two regions could also merge, and that “there is very little left” for that to happen. The Madrid government delegate echoed the risk, while Interior Minister Fernando Grande-Marlaska said one of the “maximal priorities” was to prevent convergence between the fires in both areas.</p>
+<p>The fire picture was severe enough that, together, Madrid and Castile and León accounted for 63,000 affected inhabitants and around 15,000 hectares burned. The weather remained a major problem through the day, with southwest wind gusts of up to 50 kilometers per hour, high temperatures and very low humidity.</p>
+<h3>Reinforcements are being kept in place</h3>
+<p>The Government of Spain declared a national emergency on Thursday in both communities after Isabel Díaz Ayuso requested it. More than 1,100 personnel and 225 ground assets from the Emergency Military Unit were deployed between Ávila and Madrid, along with 650 Civil Guard officers and 110 Civil Protection personnel.</p>
+<p>Spain also asked Brussels early in the morning to activate the European response mechanism. The European Commission deployed four Canadair aircraft, two from Greece and two from Italy, to help fight the fires; they were due to reach the peninsula on Saturday.</p>
+<p>Firefighting crews were to keep working overnight with ground resources, and aerial resources were to be added in the morning. Martín said the night conditions would be important for trying to control the perimeter, which had been difficult during the day because of wind and the fire’s advance.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/madrid/2026-07-24/los-tres-incendios-que-arrasan-madrid-siguen-ardiendo-sin-control.html" target="_blank" rel="noopener noreferrer" title="El País / Madrid and Ávila fires at risk of merging into one: “There is very little left”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,guardian,scmp">
+  <summary>Firefighters struggle to contain Madrid wildfires, as more than 140,000 evacuated in France and Spain</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Wildfires in Spain and south-west France forced mass evacuations and emergency deployments, with Madrid warning one blaze was beyond firefighters’ capacity and French authorities saying the fire was heading toward Bordeaux, while evacuation totals were reported at more than 140,000 and more than 200,000.</p>
+<h3>Madrid’s fire pushed past containment</h3>
+<p>In Spain, three fires west of Madrid merged into a single blaze, and Spanish officials said it was “beyond the capacity” of firefighters to contain. Spain’s government declared a national emergency after blazes spun out of control in several areas close to the capital, prompting the evacuation of at least 30,000 people.</p>
+<p>Madrid’s regional president, Isabel Díaz Ayuso, described it as the “worst fire in the history of the region,” saying the area was facing a “perfect storm” of high temperatures, relentless wind and merging fire fronts. Carlos Novillo, the Madrid regional government’s emergency management chief, said the wildfire was “at its peak” and “currently beyond the capacity of firefighters to contain.” He added: “It’s not possible to attack the fire in that area, so defensive measures are being taken.”</p>
+<p>Local emergency services said the fires were moving toward Robledo de Chavela and Fresnedillas de la Olivia, about 50km from the capital. The Military Emergency Unit was deployed to try to halt the advance of the flames, with its main focus on protecting areas near El Escorial. Authorities were also watching a separate wildfire in nearby Ávila province, where officials feared the Burgohondo blaze could merge with the Madrid fire.</p>
+<p>Spain’s Interior Minister Fernando Grande-Marlaska said authorities were doing “everything we can” to stop that from happening. Francisco Martín, the government delegate in Madrid, warned the numbers of displaced people could rise further because “embers are flying for miles and the fire is jumping great distances.”</p>
+<h3>France evacuated tens of thousands as the blaze moved toward Bordeaux</h3>
+<p>The situation was also severe in south-west France, where more than 110,000 people were evacuated after wildfires tore through the Gironde and Landes regions. Other reports put the total higher, at more than 140,000 and more than 200,000 across France and Spain combined. In Gironde, the Cap Ferret peninsula was evacuated village by village, with some people leaving by boat.</p>
+<p>The fire changed direction later on Friday and was heading toward Bordeaux, with further evacuations expected. French President Emmanuel Macron mobilised the military to assist the response, and France activated the European Union’s civil protection mechanism to bring in reinforcements.</p>
+<p>Local officials described a fast-moving, difficult fire. The Gironde blaze had burned through more than 19,000 hectares of forest, and local prefect Sophie Brocas called it an “XXL fire.” France’s Interior Minister Laurent Nuñez said the blaze was “self-sustaining” and changing direction, while fire and rescue chief Marc Vermeulen said conditions were more severe than during the devastating fires in 2022. Nuñez also said around 50 firefighters had been injured.</p>
+<p>A separate wildfire near Biscarrosse in the Landes region forced more evacuations, and authorities said strong winds and dry conditions were making firefighting harder. Macron said France would receive reinforcements, including aircraft and heavy helicopters from other European countries.</p>
+<h3>A second Spanish fire and what officials are trying to prevent</h3>
+<p>In Spain, the Ávila province fire remained a major concern alongside the blaze near Madrid. The Military Emergency Unit was focused on protecting areas near El Escorial, while officials said the Burgohondo fire in Ávila could still merge with the Madrid fire. In that province, the mayor of El Tiemblo said flames spread from Navaluenga to the Iruelas Valley, about 20km away, in less than half an hour.</p>
+<p>Authorities said more than 60,000 people had been affected in the Madrid region, with 30,000 forced to evacuate and 20,000 placed under lockdown. Eight municipalities were evacuated, including Chapinería, Navas del Rey, Colmenar del Arroyo, Fresnedillas de la Oliva, Robledo de Chavela, Aldea del Fresno, Navalagamella and Zarzalejo. Several other towns, including San Martín de Valdeiglesias, Pelayos de la Presa and Villa del Prado, remained under lockdown.</p>
+<p>The fires left wide areas burned in both countries. Officials said at least 6,000 hectares had burned in the Madrid region, while the Ávila blaze had consumed almost 9,000 hectares. In France, the Gironde blaze destroyed about 80 homes, and another fire near Biscarrosse had forced tens of thousands to leave homes, campsites, a nursing home and a summer camp.</p>
+<p>Spain’s Prime Minister Pedro Sánchez was due to visit the emergency coordination centre on Saturday, after chairing an emergency meeting and saying the government had deployed “all available resources.” In France, Macron said reinforcements were on the way as authorities prepared for more evacuations.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/czjlenp0xk8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Firefighters struggle to contain Madrid wildfires, as more than 140,000 evacuated in France and Spain">BBC #1</a><a href="https://www.theguardian.com/world/2026/jul/24/france-evacuation-cap-ferret-peninsula-wildfire" target="_blank" rel="noopener noreferrer" title="The Guardian / More than 200,000 people flee or lock down as wildfires sweep France and Spain">Guardian #1</a><a href="https://www.scmp.com/news/world/europe/article/3361753/spain-france-wildfires-force-tens-thousands-evacuate" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Raging wildfires in France and Spain force over 200,000 to flee">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Trump administration admits canceling clean energy grants to Democratic states</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Trump administration has admitted scrapping more than $7.5 billion in federal grants for clean energy projects in states that backed Donald Trump’s 2024 rival, Kamala Harris, according to court filings last week. Government lawyers said the Department of Energy accepts that neither the ARCHES grant nor other grants in the October notice tranche were cut for “programmatic, statutory, cost-reduction or performance-based” reasons, and that the terminations were based solely on the political identity of the grant recipient’s state, described in the filing as whether it was a “Blue State” or a “non-Blue State.”</p>
+<p>The filing also says the department would not contend that it looked beyond prime grantees to consider downstream beneficiaries. A spokesperson for the energy department said on Friday that the report was “a misrepresentation of the court filing” and that “none of the termination decisions were based on political considerations.” The spokesperson said the reference to political considerations was about the timing of the announcement, not the decisions themselves. The filings stem from a lawsuit filed last June by six University of California faculty members and other researchers challenging federal agencies that halted Biden-era funding.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/jul/24/trump-administration-cancel-clean-energy-grants-democrat-states" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump administration admits canceling clean energy grants to Democratic states">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Georgia school shooter handed victims’ families ‘life sentence of trauma’, court hears</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At a sentencing hearing on Friday in Barrow County Superior Court in Winder, Georgia, Shayna Aspinwall said the families of the four victims of the Apalachee High School shooting had been left with “a life sentence of grief and trauma.” Aspinwall, whose husband Richard died in the attack at the school about 45 miles north-east of Atlanta on 4 September 2024, spoke as the court considered punishment for Colt Gray, 16. Gray had earlier pleaded to 55 charges, including second-degree murder, and admitted in court that he carried out the attack. The plea deal meant no sentence had been agreed, and Judge Nicholas Primm was hearing summaries from both sides before deciding Gray’s punishment.</p>
+<p>Teachers Aspinwall, 39, and Cristina Irimie, 53, and students Mason Schermerhorn and Christian Angulo, both 14, were killed. Another teacher and eight other students were wounded, seven by gunshots. Breanna Schermerhorn, Mason’s mother, said she did not forgive Gray and said he chose to bring the gun and pull the trigger: “Those decisions were his and his alone.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/jul/24/apalachee-school-shooter-sentencing-hearing" target="_blank" rel="noopener noreferrer" title="The Guardian / Georgia school shooter handed victims’ families ‘life sentence of trauma’, court hears">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,el_pais,guardian,scmp,vanguard_ng,yonhap">
+  <summary>US small businesses challenge Trump’s new forced labour tariffs</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two US small businesses have asked a New York trade court to block Donald Trump’s latest tariffs on goods from 60 trading partners, arguing that the forced-labour measures again exceed presidential power and lack the country-specific findings needed to stand.</p>
+<p>The lawsuit, filed on Friday in the US trade court in New York, says the new tariffs need more detailed findings about each country’s forced-labour practices to be legally justified. The plaintiffs are Burlap &amp; Barrel, a spice importer, and Collective Horology, a California watch retailer, backed by the Liberty Justice Center, a nonprofit legal group that previously helped sue over earlier rounds of Trump tariffs.</p>
+<p>Trump’s administration imposed new duties of 10 percent and 12.5 percent on 60 trading partners, including the European Union, over allegations that they were not doing enough to stop exports of goods made with forced labour. The tariffs took effect as a temporary 10 percent global tariff expired.</p>
+<p>The businesses say the policy goes beyond the president’s authority to tax imports and is an attempt to reimpose tariffs that were already ruled illegal by the US Supreme Court. On February 20, the court ruled against most of Trump’s widest-ranging tariffs, finding that the International Emergency Economic Powers Act does not authorise the president to unilaterally impose tariffs on trading partners.</p>
+<p>In this case, the tariffs were imposed under Section 301 of the Trade Act. The lawsuit says Section 301 has historically been used for targeted action against specific nations and industries, not the broad approach Trump has taken here. The plaintiffs argue that the new tariffs cover 60 materially different economies without a reasoned, record-based explanation for how they would address forced-labour concerns.</p>
+<p>The Trump administration is appealing the earlier ruling against its tariffs.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/7/24/us-small-businesses-challenge-trumps-new-forced-labor-tariffs?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US small businesses challenge Trump’s new forced labour tariffs">AJ #1</a><a href="https://elpais.com/economia/2026-07-24/trump-amenaza-a-europa-con-nuevos-aranceles-tras-la-multa-de-la-ue-a-google.html" target="_blank" rel="noopener noreferrer" title="El País / Trump threatens Europe with new tariffs after EU fine on Google">El Pais #1</a><a href="https://www.theguardian.com/us-news/2026/jul/24/trump-european-union-tariffs" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump threatens EU with ‘substantial’ tariffs over fines of US tech giants">Guardian #1</a><a href="https://www.theguardian.com/us-news/2026/jul/24/american-businesses-lawsuit-trump-tariffs" target="_blank" rel="noopener noreferrer" title="The Guardian / Two small American businesses sue Trump administration over new tariffs">Guardian #2</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3361810/trump-vows-fresh-tariffs-eu-retaliation-us1-billion-google-fine" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump vows fresh tariffs on EU in retaliation for US$1 billion Google fine">SCMP #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3361812/us-small-businesses-sue-trump-administration-over-new-forced-labour-tariffs" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US small businesses sue Trump administration over new ‘forced labour’ tariffs">SCMP #2</a><a href="https://www.vanguardngr.com/2026/07/trump-says-eu-to-pay-very-big-price-for-google-fine" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / Trump says EU to pay ‘very big price’ for Google fine">VN #1</a><a href="https://en.yna.co.kr/view/AEN20260725000351315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (LEAD) 2 U.S. businesses sue Trump gov&#x27;t over new Section 301 tariffs">YNA #1</a><a href="https://en.yna.co.kr/view/AEN20260725000300315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / 2 U.S. businesses sue Trump gov&#x27;t over new Section 301 tariffs">YNA #2</a><a href="https://en.yna.co.kr/view/AEN20260725000200315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Trump threatens &#x27;substantial&#x27; Section 301 tariffs on EU after Google fine">YNA #3</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cnn,nyt">
+  <summary>France sends boats to evacuate tourist hotspot Cap Ferret as wildfires rage</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">French authorities ordered a complete evacuation of the Cap Ferret peninsula on Friday and sent boats to move people off the tourist hotspot as wildfires spread across southwestern France, with officials warning that the area’s only road could be cut off.</p>
+<p>Boats operated from three piers on the peninsula, which lies about 70 kilometers west of Bordeaux, according to the province’s prefect, Sophie Brocas. Interior Minister Laurent Nuñez said 40,000 people had been evacuated in Cap Ferret alone, though only a few hundred were taken out by sea. The urgency was heightened because just one road connects the peninsula to the mainland.</p>
+<p>Residents described being alerted by text messages in the middle of the night telling them to leave. One resident told BFMTV there were “firefighters everywhere” and “police everywhere,” checking that people had left their homes. Another said the flames were visible just 200 to 300 meters away near Lège. Videos from the area showed smoke-filled skies, scorched vegetation and firefighters battling outbreaks that had moved into more residential areas.</p>
+<p>Marc Vermeulen, director of Gironde’s Fire and Rescue Service, said the fire grew by up to 1,000 hectares an hour overnight. He said the blaze was so powerful that it sent spot fires into the center of town while it was still on the outskirts, and burning embers caused the fire to spread from house to house. Brocas said 53 homes and one campsite had burned, while 1,000 firefighters were fighting the blaze.</p>
+<p>Another wildfire near Biscarrosse, about 40 kilometers south of Cap Ferret, had already forced 23,000 people to evacuate. Elsewhere in Europe, similar fierce wildfires in Spain pushed the government to declare a national state of emergency. French President Emmanuel Macron also said other European Union countries were sending firefighting aircraft after France requested assistance.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/07/24/europe/cap-ferret-peninsula-evacuated-intl" target="_blank" rel="noopener noreferrer" title="CNN / France sends boats to evacuate tourist hotspot Cap Ferret as wildfires rage">CNN #1</a><a href="https://www.nytimes.com/2026/07/24/world/europe/france-spain-wildfires.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Wildfires in France and Spain Drive Tens of Thousands From Their Homes">NYT #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Court orders publication of AHMSA workers&#x27; creditors list</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Second District Court in matters of mercantile bankruptcies ordered the trustee in AHMSA’s bankruptcy process, Víctor Manuel Aguilera Gómez, to immediately publish the final list of workers recognized as labor creditors in the bankruptcies of Altos Hornos de México (AHMSA) and Minera del Norte (Minosa). The document sets out the calculation of labor credits as preferred and non-preferred. Judge Ruth Haggi Huerta García asked for the list to be posted on the Federal Institute of Specialists in Mercantile Insolvencies (Ifecom) website, and she granted a 10-business-day extension, counted from the day after the court verifies that the lists can be consulted there.</p>
+<p>She also requested the collaboration of the Federal Public Defender’s Office so advisers can coordinate with the delegations in Mexico City, Coahuila, Zacatecas, Chihuahua and Durango to make the lists available to interested workers. The judge said the extension does not alter the sale proposal or interrupt the ongoing procedure, because resources must first be available to pay the preferred creditors, who are the workers. She urged all parties not to circulate information through unofficial channels and warned that access to personal data must be protected under Article 6 of the Constitution and related transparency and responsibilities laws.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/24/politica/012n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Court orders publication of AHMSA workers&#x27; creditors list">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,scmp">
+  <summary>Saudi Arabia strikes Houthi-held Hodeidah, Yemeni group says</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Houthi-controlled authorities said Saudi Arabia carried out strikes on Hodeidah late on Friday, hitting a city that is vital to northern Yemen’s imports and prompting warnings from both sides that the confrontation could deepen further.</p>
+<p>The Houthi-controlled Foreign Ministry said the attack would “prove costly” for Riyadh and that the group would respond, adding that Saudi Arabia had made “escalation for escalation” the defining feature of the next phase. Houthi-affiliated Al Masirah TV said the strikes targeted facilities belonging to the telecommunications authority, and also reported strikes on Kamaran Island.</p>
+<p>Accounts of the damage and casualties differed. Al Masirah TV said one woman was injured on Kamaran Island. A separate Houthi media report said two people were injured, including a worker in Hodeidah and a woman on Kamaran Island. Reuters, citing witnesses, said explosions were also seen at Hodeidah’s port, while the Saudi-led coalition denied targeting the port.</p>
+<p>Hodeidah’s port is a crucial lifeline for areas under Houthi control and handles the bulk of commercial and humanitarian imports into northern Yemen. That made the strikes especially sensitive as the conflict around Red Sea shipping widened.</p>
+<p>Major-General Turki al-Maliki, the Saudi-led coalition’s spokesman, blamed the Houthis for the escalation and called their attacks on Red Sea shipping “cowardly and reckless.” He said the coalition would continue to “take all necessary operational actions and measures,” and warned that any continued “hostile acts” would be met without hesitation.</p>
+<p>The strikes came after a period of retaliatory action between the two sides. The Houthis had announced a maritime blockade of Saudi Arabia and said they had targeted Saudi oil tankers in the Red Sea, while the coalition said it had hit Houthi sites and destroyed targets threatening commercial vessels. The group had framed its blockade as an “eye for an eye” response to an earlier strike on Sanaa’s international airport.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/24/saudis-strike-yemens-houthi-held-hodeida-rebel-media?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Saudi Arabia strikes Houthi-held Hodeidah, Yemeni group says">AJ #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3361814/saudi-strikes-houthi-sites-yemen-conflict-flares" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Saudi strikes Houthi sites in Yemen as conflict flares">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Washington Blames Cuban Socialism for U.S. Blockade Damage</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new U.S. State Department report on Cuba has sharpened the fight over responsibility for the island’s blackouts and shortages, with the document accusing Havana of decades of subversion while critics say it ignores the damage from the U.S. blockade and sanctions.</p>
+<p>On 20 July, the U.S. Department of State, led by Secretary Marco Rubio, released a 100-page report titled *Cuba: Capital of 21st-Century Communism*. The document lays out what it describes as a six-decade campaign of subversion, political infiltration and ideological warfare against the United States, and says the Cuban government poses a direct security threat. It also argues that Cuba’s historic revolution was not just a project of self-determination or economic reorganization, but a broader attack on Western civilization.</p>
+<p>The report also reaches into U.S. politics, naming Black Lives Matter, community-based immigration activist networks, the Democratic Socialists of America, CodePink and independent digital media creators as part of what it frames as a Cuban intelligence influence operation. Its case relies heavily on archived intelligence files, historical events and political movements from the 1960s and 1970s, including Cuba’s past support for the Black Panthers, to present a narrative of continuing Cuban state subversion.</p>
+<p>The story presents the document as part of a wider political fight over Cuba’s current crisis. It says the report serves as an ideological framework for ongoing economic pressure, energy restrictions and political isolation, even as Cuba faces nationwide power outages, food shortages and limited access to basic goods. It also cites data compiled by the United Nations Economic Commission for Latin America and the Caribbean showing more than $150 billion in cumulative damage from the blockade over six decades. U.S. Representative Mark Pocan criticized the report as an attempt to revive Cold War rhetoric, while Cuban Foreign Minister Bruno Rodriguez Parrilla called it propaganda meant to justify the blockade.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/u-s-blames-cuba-socialism-for-blockade" target="_blank" rel="noopener noreferrer" title="Telesur English / Washington Blames Cuban Socialism for U.S. Blockade Damage">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="peoples_daily_en,xinhua_en">
+  <summary>Philippine fishing boat leaks fuel in waters near China&#x27;s Huangyan Dao</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Philippine fishing boat leaked oil in waters near China’s Huangyan Dao on Thursday during a refueling operation, according to the China Coast Guard. The CCG said the incident happened as several Philippine fishing boats gathered near the island in the South China Sea and attempted to intrude into China’s territorial waters, and that the boats dangerously approached CCG vessels on routine law enforcement patrols.</p>
+<p>On Friday, CCG spokesperson Jiang Lue said the China Coast Guard took necessary measures to drive away Philippine vessels that had illegally intruded into Huangyan Dao’s territorial waters. Jiang said the Philippine side organized seven government vessels, three coast guard ships and one fish carrier, and instigated a large number of fishing boats to gather in the area. He said three Philippine government vessels ignored repeated warnings and dissuasion, and that the CCG used verbal warnings, blockade and control, and water cannon spraying to drive the vessels away, describing the operation as professional, standardized, legitimate and lawful.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0724/c90000-20481683.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / CCG expels Philippine vessels illegally intruding into China&#x27;s Huangyan Dao">PDE #1</a><a href="https://english.news.cn/20260724/65f452d011ef4630bf3ea412e453805a/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Philippine fishing boat leaks fuel in waters near China&#x27;s Huangyan Dao">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>Polish conservatives split ahead of 2027 election</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Poland’s nationalist Law and Justice party split on Friday in Warsaw, with party leader Jarosław Kaczyński expelling former Prime Minister Mateusz Morawiecki and some three dozen MPs after they refused to abandon an internal grouping in PiS. Kaczyński had given Morawiecki’s camp a midnight deadline to sign loyalty declarations. The rupture weakens the conservative camp’s effort to topple Prime Minister Donald Tusk in the next election and comes after PiS had hoped a May 2025 presidential victory for conservative Karol Nawrocki would help it build momentum toward a return to government in 2027.</p>
+<p>Morawiecki’s allies are expected to set up a separate caucus in the 460-seat Sejm. Their departure would cut PiS’s parliamentary contingent to about 140-145 seats, leaving it the second-largest caucus after Tusk’s Civic Coalition. The split follows months of tension inside PiS over its direction and succession, with the party also weakening in the polls since last fall.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/polish-conservatives-split-ahead-of-2027-election" target="_blank" rel="noopener noreferrer" title="POLITICO / Polish conservatives split ahead of 2027 election">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Existing care workers could be exempt from UK’s tough new immigration rules</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham is considering exemptions for existing care workers from tougher UK immigration rules as he looks for ways to relieve pressure on social care, while a wider push on care reform is being tied to a prime ministerial speech, a sped-up review and unresolved questions over how the sector will be funded.</p>
+<p>Hundreds of thousands of care workers could be exempted from Shabana Mahmood’s plans to make it harder to achieve settled status, or indefinite leave to remain, in the UK. Burnham is understood to be looking at widespread exemptions for people already in the country, while allowing the changes to apply to new entrants. The measure is not likely to be included in his speech next week, but could come later in the year after the Home Office has considered responses to a public consultation. Social care providers have said they are financially stretched, and many have complained about the likely impact of the plans to double the time it takes migrant workers to qualify for settled status.</p>
+<p>At the same time, the prime minister is due to give a speech next week spelling out his determination to start creating a National Care Service before the next general election, accelerating the process set up by his predecessor, Keir Starmer. Burnham will use his own speech to talk about his experience of the care system through his father, Roy, who has Alzheimer’s, and to announce that he is bringing forward Louise Casey’s review of the sector, which was due to conclude in 2028. He has said reform of social care is near the top of his priorities, and has argued that the system is “broken” and that Westminster has “flinched” from big decisions.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/jul/24/care-workers-exempt-uk-new-immigration-rules" target="_blank" rel="noopener noreferrer" title="The Guardian / Existing care workers could be exempt from UK’s tough new immigration rules">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Singer D4vd had impregnated teenager he is accused of fatally stabbing</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Evidence presented in a Los Angeles courtroom on Friday said singer D4vd impregnated the teenager he is accused of fatally stabbing. The teenager was identified as Celeste Rivas Hernandez, and the hearing was on its fourth day as the court considers whether he will stand trial for murder and child sexual abuse charges linked to her death. Prosecutors say Burke fatally stabbed Hernandez, who was 14, in April 2025 to silence her from disclosing the sexual nature of their relationship. He has pleaded not guilty. Prosecutors also said the abuse began when he was 18 and she was 13.</p>
+<p>Text messages obtained from Burke’s phone showed him apologizing to Rivas Hernandez in January 2024 for “putting her through this,” and included her reply: “Neither of us are capable of watching and taking care of the baby. it’s for the best no?” The messages indicated that she later received an abortion. Her age at the time was 13. The autopsy of her body was also discussed on Friday, alongside testimony that her remains were found in the front trunk of a Tesla registered to Burke last September.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/jul/24/celeste-rivas-hernandez-autopsy-d4vd" target="_blank" rel="noopener noreferrer" title="The Guardian / Singer D4vd had impregnated teenager he is accused of fatally stabbing">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Law student is charged over intercepted bomb in car</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Isobella Perrie Sullivan, 25, a law student from Abbeylands Park in Clane, County Kildare, appeared in court on Friday charged with possession of explosives after a bomb was discovered in a car in the Republic of Ireland. It was alleged she was driving the car when gardaí intercepted it near Carrickmacross, County Monaghan, on Wednesday, and she was brought before a special sitting of Trim District Court in County Meath that evening.</p>
+<p>A member of the Garda Special Detective Unit told the court the car was stopped on the N2 at Aclint, south of Carrickmacross, and that the bomb was found in a bag in the back of the vehicle. The officer said it contained a timing power unit, a detonator and what he believed to be Semtex. The court was told the Irish Defence Forces declared the device a viable bomb. A defence solicitor said his client had been asked to take a bag to Northern Ireland and did not know what was in it. The judge said he intended to grant bail on conditions including a €15,000 surety, but Perrie Sullivan was remanded in custody until a further hearing on Monday.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/ckgdz7pz3e7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Law student is charged over intercepted bomb in car">BBC #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="telesur_en">
+  <summary>Ecuador and Canada Sign Free Trade Agreement to Boost Exports</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ecuador and Canada signed a Free Trade Agreement on Friday in Ottawa, with Ecuador’s Minister of Production, Foreign Trade and Investment, Luis Alberto Jaramillo, and Canada’s Minister of International Trade, Maninder Sidhu, signing the deal. The agreement eliminates tariffs on 99.6% of Ecuador’s exportable goods and sets up new mechanisms for the exchange of goods and inputs. It also covers 29 chapters on trade in goods and services, investment, e-commerce, transparency, labor and environmental issues, gender, MSMEs, indigenous peoples, and dispute resolution. According to the evidence, more than 600 Ecuadorian products will gain tariff-free access to Canada once the treaty enters into force.</p>
+<p>The agreement opens opportunities for products including bananas, cocoa and its derivatives, shrimp, tropical fruits, broccoli, asparagus, hearts of palm, quinoa, and frozen vegetables, along with flowers, chocolates, confectionery, tuna preparations, juices, palm oil, textiles, clothing, ceramics, furniture, auto parts, tires, footwear, and cosmetics. The Ministry of Production said Canada is a strategic partner for diversifying exports, and the government said the treaty protects sensitive sectors by excluding or creating protection mechanisms for 227 strategic agricultural products, including rice, corn, milk, meat, and sugar. It also said Ecuador keeps its right to regulate for public health, the environment, product quality, and animal and plant health, and maintains its ban on imported used clothing.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/ecuador-and-canada-sign-free-trade-agreement-to-boost-exports" target="_blank" rel="noopener noreferrer" title="Telesur English / Ecuador and Canada Sign Free Trade Agreement to Boost Exports">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="cnn">
+  <summary>Volkswagen profits drop 10% as embattled automaker considers massive job cuts</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Volkswagen said its operating profit fell almost 10% in the three months to the end of June, to €3.5 billion ($4 billion), as it weighs a major restructuring and cost-cutting program. The German automaker also cut its revenue forecast for the current financial year, shifting from expecting a rise of up to 3% to a decline of up to 3%. CEO Oliver Blume said the industry environment remains “extremely challenging,” and the company said it is responding to intensifying competition from Chinese electric vehicle makers and higher tariffs on its exports to the United States.</p>
+<p>Blume said in a July memo that Volkswagen is considering axing a further 50,000 roles globally and closing four factories in Germany, after already announcing plans to cut 50,000 jobs in Germany by 2030. Volkswagen employs about 650,000 people globally. IG Metall, Germany’s biggest labor union, said it will fight the cuts, arguing they would violate a 2024 agreement with Volkswagen that ruled out plant closures and compulsory redundancies.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/07/24/business/volkswagen-profit-fall-job-cuts" target="_blank" rel="noopener noreferrer" title="CNN / Volkswagen profits drop 10% as embattled automaker considers massive job cuts">CNN #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="peoples_daily_en">
+  <summary>China&#x27;s resilient economy reinforces global confidence in development</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s first-half 2026 data show GDP rising 4.7 percent to 69.57 trillion yuan, with gains in AI, renewable energy and trade used to argue that the economy is still drawing confidence even as external pressures and a slowing world economy remain in view.</p>
+<p>The results came as China entered the first year of the 15th Five-Year Plan period, 2026-2030, and the economy stayed within a reasonable range despite mounting challenges and pressures. It described overall stability alongside a shift toward innovation-driven, higher-quality development. During the first half of the year, economic expansion reached 3.6 trillion yuan, the largest increase for the same period in the past five years.</p>
+<p>The report also framed the figures as evidence of resilience. It said China’s economy, already above 140 trillion yuan in size, sustained steady growth amid volatility in global energy markets and the restructuring of international industrial and supply chains. Production and supply expanded at a solid pace, employment remained generally stable, prices rose moderately, and people’s livelihoods continued to improve.</p>
+<p>That picture was tied to emerging industries. High-tech manufacturing enterprises above designated size saw value-added output rise 13.3 percent year on year in the first half, while AI-related industries such as integrated circuit manufacturing and intelligent in-vehicle equipment manufacturing grew by more than 30 percent. It also said emerging growth drivers including high-end manufacturing, the digital economy and modern services contributed more than 40 percent to overall economic growth.</p>
+<h3>Confidence at home and abroad</h3>
+<p>The IMF recently lowered its forecast for global economic growth in 2026 while raising its forecast for China by 0.2 percentage points, and described that divergence as reflecting growing international confidence in China’s outlook. It said the results helped the international community recognize the Chinese economy’s solid fundamentals and “great potential,” while expanding prospects for international cooperation.</p>
+<p>The same account linked that confidence to China’s broader role in trade and opening up. It said China remained the world’s largest trader in goods, with first-half imports and exports reaching 25.47 trillion yuan, and argued that the country is increasingly becoming a vast global marketplace as domestic demand expands.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0724/c90000-20481424.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China&#x27;s resilient economy reinforces global confidence in development">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="cnn,korea_herald,nyt">
+  <summary>Tech titan’s ex-wife fails to win greater share of AI boom in decade-long ‘divorce of the century’</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Korea’s long-running Chey Tae-won divorce fight has moved against Roh Soh-yeong, after a Seoul appellate court ordered the SK Group chairman to pay 944 billion won ($644 million) — less than she wanted and well below the payout she argued should reflect the AI-fueled rise in his fortune.</p>
+<p>The ruling extends a decade-plus battle over how to divide the wealth tied to SK Group and SK Hynix, Chey’s memory-chip giant. Chey and Roh, the daughter of former South Korean President Roh Tae-woo, married in 1988 at the Blue House in what was hailed as the “wedding of the century.” They split more than 10 years ago, after Chey publicly announced in a letter to South Korean media that their marriage was over.</p>
+<p>Since then, Roh has sought a larger share of his assets. In court filings described in the evidence, she argued that her father’s early investment helped build the company and that her payout should be based on Chey’s SK Group valuation in 2026. That approach would have captured the gains from the AI boom, which has boosted demand for SK Hynix memory chips and sent SK-related shares sharply higher.</p>
+<p>The Seoul High Court instead set the reference date for valuing the shares at April 16, 2024, when the appellate hearing closed, before the AI-driven surge. The court said the 944 billion won award was based on a one-third share for Roh and two-thirds for Chey. It also ordered Chey to pay cash rather than transfer any of his shares, saying his stake underpins his control of the companies he runs.</p>
+<p>Friday’s award sits between earlier rulings. A district court in 2022 awarded Roh 66.5 billion won, while an appeals court in 2024 raised that to 1.38 trillion won, or about $1 billion. In October, the Supreme Court overturned that valuation, saying Roh Tae-woo’s financial contribution should not be counted if it came from an illicit presidential fund.</p>
+<p>The appellate court also said Roh’s housework, child-rearing and public activity on SK Group’s behalf helped build the value of the shares registered in Chey’s name during the marriage. The two sides can still appeal.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/07/24/tech/south-korea-sk-hynix-divorce-ruling-intl-hnk" target="_blank" rel="noopener noreferrer" title="CNN / Tech titan’s ex-wife fails to win greater share of AI boom in decade-long ‘divorce of the century’">CNN #1</a><a href="https://www.koreaherald.com/article/10819431" target="_blank" rel="noopener noreferrer" title="The Korea Herald / SK Chair Chey ordered to pay ex-wife W944b in divorce asset ruling - The Korea Herald">TKH #1</a><a href="https://www.nytimes.com/2026/07/24/world/asia/korea-chey-tae-won-sk-hynix-divorce.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Tech Titan’s Ex-Wife Wins Big Divorce Payout but Misses Out on A.I. Riches">NYT #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>AREX: Towards a Recursively Self-Improving Agent for Deep Research</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The BAAI team’s AREX preprint introduces a recursively self-improving deep research agent built for questions that must satisfy multiple constraints at once, arguing that the central challenge is not only finding evidence but deciding what remains unresolved after each partial answer.</p>
+<h3>How AREX works</h3>
+<p>AREX is organized around two loops. An inner research loop gathers evidence, evaluates candidates, and builds a provisional answer. An outer self-improvement loop then audits that answer constraint by constraint, identifies weakly supported or unresolved claims, and sends the agent back into targeted follow-up research. The paper frames this as a response to a discovery–verification asymmetry: instead of simply searching longer, the agent uses verification to refine the next research problem. To keep that process going over long horizons, AREX also learns a dedicated context-update tool that compresses interaction history into a compact improvement state preserving verified evidence, unresolved constraints, validity concerns, rejected candidates, and the next-step plan.</p>
+<p>The system is trained on verified synthetic tasks and high-quality trajectories through supervised capability acquisition, agentic mid-training, and reinforcement learning for long-horizon research. The authors instantiate a dense Qwen3.5-4B model as AREX-Turbo and a Qwen3.5-122B-A10B Mixture-of-Experts model as AREX-Base, then test them on BrowseComp, WideSearch, DeepSearchQA, Humanity’s Last Exam (with Tools), GAIA, and xbench-DeepSearch-2510. They report that AREX improves over the Qwen3.5 family, remains competitive with much larger systems, and in some settings does better than specialized research agents. In the table shown, AREX-Base scores 82.5 on BrowseComp, 85.4 on GAIA, 71.0 on xbench-DeepSearch-2510, 89.9 on DeepSearchQA, 82.0 on WideSearch-en, and 52.4 on HLE (tool).</p>
+<p>The paper also analyzes inference behavior, saying AREX invoked context updates in 80.3% of BrowseComp cases and usually did so well before the 128K-token limit. An ablation study links the gains to autonomous context updating, the outer self-improvement loop, and step-aware training, suggesting that the model’s progress depends on preserving verified work while redirecting attention to what still needs to be proved.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.21461v1" target="_blank" rel="noopener noreferrer" title="arXiv / AREX: Towards a Recursively Self-Improving Agent for Deep Research">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>ReferTrack: Referring Then Tracking for Embodied Visual Tracking</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">ReferTrack shifts embodied visual tracking toward explicit image-space referring, giving a robot with only a forward-facing camera a way to pick the right person before planning motion, and it claims that this tighter grounding can match or beat multi-camera systems on the hardest disambiguation splits.</p>
+<h3>Referring first, then tracking</h3>
+<p>Embodied visual tracking asks a mobile agent to continuously follow a specific target described in natural language using only onboard vision. The ReferTrack paper argues that the hard part is not just planning a path, but first identifying which person in a crowded scene matches the instruction. It positions that identification step as a compact choice over indexed bounding boxes, rather than as abstract chain-of-thought reasoning in a latent space.</p>
+<p>The model’s pipeline reflects that choice. It first selects a target from an indexed set of detected pedestrian boxes, then predicts tracking waypoints conditioned on that image-grounded decision. To carry motion cues forward, it keeps a sliding-window queue of previously selected boxes and injects their geometry into the visual history through temporal-viewpoint-bbox indicator, or TVBI, tokens. The paper says this gives the system a target-specific memory while keeping the reasoning tied to visible regions instead of abstract spatial codes.</p>
+<p>To reinforce that referring ability, the authors also co-train on a custom Refer-QA dataset built around the same indexed-bbox selection interface. In the paper’s framing, this makes the identification step more directly supervised and more aligned with the kind of grounding a vision-language-action model needs for embodied tracking.</p>
+<h3>What the model was trained and tested on</h3>
+<p>ReferTrack is trained on two matched data sources: 1.3 million expert tracking trajectories from the EVT-Bench training split in Habitat 3.0, and 1.3 million custom referring samples synthesized from SYNTH-PEDES. The paper says the two are mixed 1:1 and trained in a two-stage supervised fine-tuning setup. Stage 1 trains the vision projector on general multimodal QA data, and Stage 2 jointly fine-tunes the navigation and Refer-QA tasks.</p>
+<p>For evaluation, the authors use EVT-Bench under a single forward-view protocol, with success rate, tracking rate, and collision rate reported on Single-Target Tracking, Distracted Tracking, and Ambiguity Tracking splits. The implementation uses Qwen3-4B as the language backbone and an indexed bbox catalog built from YOLO11 plus ByteTrack detections.</p>
+<p>On that benchmark, the paper says ReferTrack reaches 89.4/92.5/1.6 on STT, 73.3/81.8/7.6 on DT, and 74.1/85.7/7.7 on AT. The authors describe this as state-of-the-art single-view performance, and say it matches or surpasses several reported multi-camera baselines on identification-heavy tasks. They also highlight that the gains come without reinforcement learning and with a 4B-parameter backbone.</p>
+<h3>What the ablations and robot runs suggest</h3>
+<p>The paper’s ablation study points to the same split between identification and motion. On the Distracted Tracking split, removing both Refer-CoT and TVBI reduces performance to 55.7% SR and 71.4% TR, while removing only TVBI leaves 70.4% SR and 80.8% TR. A variant with ground-truth TVBI boxes reaches 81.5% SR and 84.7% TR, which the authors use to argue that target identification is the main bottleneck in distracted scenes, while temporal bbox memory helps stabilize tracking over time.</p>
+<p>ReferTrack was also tested in real-world qualitative deployment on two robotic platforms, each with a single forward-facing camera. The paper says the full perception-and-control loop ran at an average of 10.6 Hz on a remote GPU server, with target detection taking 12 ms per step. In one example, a Unitree Go2 followed a target through cluttered obstacles and stayed stable even when the pedestrian detoured and the camera view captured only the lower body.</p>
+<p>The code is available at the project repository listed in the paper.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.20061v1" target="_blank" rel="noopener noreferrer" title="arXiv / ReferTrack: Referring Then Tracking for Embodied Visual Tracking">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced K12-KGraph, a curriculum-aligned knowledge graph built from official People’s Education Press textbooks, together with benchmark and training sets for educational LLMs, after arguing that existing K–12 tests mostly measure factual recall rather than curriculum cognition.</p>
+<p>The preprint says K12-KGraph was extracted from textbook material in mathematics, physics, chemistry, and biology across primary, middle, and high school. It uses nine node types — including Book, Chapter, Section, Concept, Skill, Experiment, Exercise, Figure, and VisualElement — and 14 relation types that cover both curriculum structure and visual grounding. From that single graph, the authors derived two resources: K12-Bench, a 23,640-question multi-select benchmark spanning five task families — Ground, Prereq, Neighbor, Evidence, and Locate — and K12-Train, a supervised fine-tuning corpus of 7,335 samples, including 2,267 text-only QA pairs and 5,068 multimodal VQA pairs.</p>
+<p>The paper’s experiments frame the gap as one between answer accuracy and structural understanding. On K12-Bench, Gemini-3-Flash reached 57% exact match and Gemma-4-31B-IT reached 46%, with Prereq and Neighbor described as the hardest tasks. The authors say domain-specific supervision from K12-Train can address that limitation.</p>
+<p>In downstream training tests, K12-Train-Text outperformed equally sized subsets of eight mainstream instruction-tuning corpora under a matched 2,300-sample budget on GaokaoBench and EduEval. For multimodal models, K12-Train-Full performed best on Gaokao-MM, MDK12-medium, and K12Vista, and it outperformed both K12-Train-Text and K12-Train-MM. The preprint says the result points to the complementarity of textual and visual supervision, and the authors say they are releasing the graph, benchmark, training data, and construction pipeline.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2605.09635v3" target="_blank" rel="noopener noreferrer" title="arXiv / K12-KGraph: A Curriculum-Aligned Knowledge Graph for Benchmarking and Training Educational LLMs">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Visual Contrastive Self-Distillation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint proposes Visual Contrastive Self-Distillation, or VCSD, for vision-language models, aiming to replace extra supervision in on-policy self-distillation with a signal built only from input conditioning; the open question is whether visual contrast alone can create a stronger teacher target than the student already has.</p>
+<p>On-policy self-distillation is attractive because it removes the external teacher used in on-policy distillation, but the paper says it still needs an asymmetry between teacher and student. Existing methods create that gap with privileged answers or visual evidence. VCSD tries to remove both. It treats a content-erased image as a control and, at each student-generated response prefix, has an exponential-moving-average teacher produce two next-token distributions under the same prompt and prefix: one with the original image and one with the content-erased control.</p>
+<h3>How VCSD shapes the target</h3>
+<p>The paper says the token-wise log-probability difference between those two teacher outputs highlights candidates whose likelihood is increased by the instance-level visual content. VCSD then uses that contrast to sharpen the teacher’s original-image distribution while keeping it within plausible support, and distills the resulting full-distribution target into the student.</p>
+<p>The method is presented as not needing an external teacher, privileged answers, visual evidence signals, reasoning traces, or extra inference-time cost. In the paper’s framing, the only changing ingredient is the visual condition, which is what supplies the self-distillation asymmetry.</p>
+<p>Reported results.</p>
+<p>Using the ViRL39K dataset, VCSD reportedly outperforms matched OPSD across Qwen3-VL and Qwen3.5 models. On Qwen3-VL, the paper gives seven-benchmark aggregate gains from 62.27% to 67.04% at 2B, from 71.30% to 73.16% at 4B, and from 72.51% to 76.26% at 8B.</p>
+<p>The preprint’s larger claim is that visual contrast can stand in for the auxiliary signals that earlier self-distillation methods relied on, making the target both on-policy and visually informed without adding another teacher pipeline.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.21556v1" target="_blank" rel="noopener noreferrer" title="arXiv / Visual Contrastive Self-Distillation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Show, Don&#x27;t Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A July 2026 arXiv preprint from researchers at Zhejiang University argues that spatial cognition in image-generation models should be judged in pixels, not forced into text, and it introduces ProVisE and SpatialGen-Bench to close the gap between what models can show and what existing benchmarks ask them to tell.</p>
+<p>Xu Wang, Kaixiang Yao, Miao Pan, Xiaohe Zhou, Xuanyu Liu, Wenqi Zhang and Xuhong Zhang say spatial intelligence is essential if agents are to move beyond static semantic understanding and interact with the physical world. Their problem is that many spatial tasks are naturally continuous and visual, while existing benchmarks usually require answers in coordinates, options or text. That makes it awkward to evaluate image-generation models under the same task semantics as text-output vision-language models.</p>
+<p>The paper’s main fix is ProVisE, short for Protocolized Visual Evaluation. It is described as a benchmark-agnostic framework that asks image-generation models to give protocol-constrained visual answers and then parses those answers into structured predictions that fit the original metrics. The framework also includes an Agentic builder that can construct and validate task-specific protocols for new benchmarks.</p>
+<p>On top of that, the authors introduce SpatialGen-Bench, a curated diagnostic benchmark with 470 samples, 14 spatial subtasks, four capability levels and diverse answer forms. They say the benchmark spans counting, depth, orientation, relationship, perspective, grounding, multi-hop reasoning, prediction, feasibility, affordance, navigation and trajectory planning. The team evaluates representative text-output VLMs and image-generation models in a unified setting, and also validates Agentic protocol construction on six external spatial benchmarks.</p>
+<p>The results point to a split rather than a single winner. The paper says image-generation models are competitive when spatial answers can be externalized directly in pixel space, while text-output VLMs keep a clear advantage in compositional spatial reasoning. In the reported experiments, GPT-5.4 leads text answering with an overall score of 61.04, while GPT Image 2 leads visual answering with 54.49; both are still well below the human reference of 87.79. Visual gains are strongest on Depth and Relationship, while text answering leads on Size, Feasibility, Prediction and Counting. GPT Image 2 also solves 71 items missed by GPT-5.4, and SenseNova’s visual mode solves 78 items missed by its text mode.</p>
+<p>The authors conclude that ProVisE and SpatialGen-Bench provide a metric-compatible testbed for generative spatial evaluation and future studies of spatial cognition in image-generation models.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.21072v1" target="_blank" rel="noopener noreferrer" title="arXiv / Show, Don&#x27;t Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="nature">
+  <summary>White House rolls out AI funding — and signals a new era for US science</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The White House moved to expand AI-backed science funding this week, with Michael Kratsios unveiling a report to reshape federal research and officials announcing early Genesis Mission grants, even as the administration’s broader direction for US science remains contested.</p>
+<p>On Tuesday, Kratsios, President Donald Trump’s chief science adviser, released *Science: A New Golden Age*, a report that proposes substantial changes to federally funded research. The next day, he helped unveil some of the first winners from the Genesis Mission, the administration’s flagship artificial-intelligence initiative. Some 5,000 teams applied for funding, and officials announced about 280 winning projects in the first phase at a summit on 22 July.</p>
+<p>The selected teams will use AI on problems including improving the US power grid and automating laboratories. Each project will get a 9-month grant of between US$500,000 and $750,000, and researchers can later apply for a second phase: a three-year programme with millions in annual funding. Jeremy Zucker, a computational scientist at Pacific Northwest National Laboratory in Richland, Washington, said he was “very, very, very happy” to be chosen because it was “incredibly competitive”. Zucker is leading a project to model algal growth in ponds to maximize biofuel production.</p>
+<h3>A new funding vision</h3>
+<p>Kratsios’s report drew a mixed reception at a hearing in Washington DC the same day. He called for shifting US science funding away from “legacy institutions” such as universities and argued that “too much of our research enterprise has come to serve itself rather than the scientists within it.” He also proposed ideas such as “golden tickets”, which would let grant reviewers override colleagues’ decisions to fund high-risk proposals.</p>
+<p>Republicans on the House Science, Space and Technology Committee broadly backed the vision, while Democrats criticized the Trump administration’s cuts to science budgets and agencies and its push for political control of grant awards.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02332-8" target="_blank" rel="noopener noreferrer" title="Nature / White House rolls out AI funding — and signals a new era for US science">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>OpenForgeRL: Train Harness-native Agents in Any Environment</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from Columbia University, Dartmouth College and Microsoft Research introduced OpenForge RL, a framework meant to let people train harness-based AI agents inside the same inference setups they use at deployment, after arguing that today’s open RL stacks still struggle with those stateful, multi-process harnesses.</p>
+<p>Modern AI agents increasingly rely on elaborate inference harnesses such as Claude Code, Codex and OpenClaw to handle multi-turn reasoning, tool use and access to external systems. The authors say that same harness layer is what makes end-to-end training difficult: open SFT and RL infrastructure cannot natively express that kind of inference flow, so training often diverges from deployment.</p>
+<h3>How OpenForge RL works</h3>
+<p>OpenForge RL is built around two pieces. A lightweight proxy serves the harness’s model calls and records them as training data for a standard RL codebase such as veRL, while a Kubernetes orchestrator runs each rollout in its own remote container. The paper says that combination lets the system train on any harness in any environment at scale and, by decoupling training and inference, lets researchers study agents directly in the real harnesses and environments where they are deployed.</p>
+<p>The authors also describe a task and environment synthesis pipeline that is meant to mimic how a human would curate tasks. Given a target domain, it proposes candidate instructions from sources such as the web or X API, removes low-quality and duplicate tasks, builds an executable environment and verifier script, tests the task with a separate open LLM or VLM, and then refines the setup if defects or ambiguities appear. Because each environment is defined by a custom Dockerfile, the pipeline extends from Linux and CLI tasks to GUI and computer-use tasks, and it can pre-install harnesses such as OpenClaw and Codex.</p>
+<h3>What the benchmark runs showed</h3>
+<p>For tool-use “Claw” agents, the authors trained on four harnesses: ReACT, ZeroClaw, OpenClaw and Codex. They used Qwen3-30B-A3B-Thinking as the backbone model, distilled successful trajectories from MiniMax-M2.5 for SFT, and then continued with GRPO through veRL on Microsoft Azure. On ClawEval, OpenForge-Claw reached 31.7 pass^3 and 55.9 pass@3; on QwenClawBench it reached 33.7; and on MCPAtlas it reached 28.1. The paper says these results were better than open models of similar size and, in the GUI setting, sometimes matched or surpassed models several times larger.</p>
+<p>The GUI side used Qwen3-VL-8B-Thinking, with Kimi-K2.5 as the SFT teacher and GRPO for RL. There, OpenForge-GUI reached 37.7 on OSWorld-Verified, 63.0 on Online-Mind2Web and 72.3 on WebVoyager. The authors say that, despite being trained on only 2.5k tasks, it outperformed MolmoWeb-8B on Online-Mind2Web and stayed competitive on WebVoyager.</p>
+<h3>What the authors say agents learned</h3>
+<p>Beyond benchmark scores, the paper tries to answer how harness choice and RL shape behavior. On ClawEval, the authors compare OpenForge-Claw across ReACT, ZeroClaw, OpenClaw and Codex and say some harnesses are substantially harder to learn than others. They also report that training on one harness can transfer to unseen harnesses, while training on multiple harnesses at once works best overall.</p>
+<p>They say RL improves agentic reliability in several ways, including self-verification, tool coverage and completing multi-step plans. In one analysis, RL reduced generic shell calls from 22.6% to 13.9% of all tool calls and slightly shortened trajectories. But the paper also says some important abilities, including error recovery, remain weak.</p>
+<p>In short, OpenForge RL is presented as a way to train agents without rewriting the harness they already use, while also making it possible to compare how different harnesses and RL affect the resulting behavior.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.21557v1" target="_blank" rel="noopener noreferrer" title="arXiv / OpenForgeRL: Train Harness-native Agents in Any Environment">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Tencent WorkBuddy Bench: A Multi-Domain Coding-Agent Benchmark with Contamination-Resistant Task Construction</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tencent WorkBuddy Bench adds a new open test for coding agents across Code, Web, Office, and Security, trying to measure realistic work while limiting web-searchable prompt leakage; its main tension is that the benchmark is fully released even as it tries to stay contamination-resistant by construction.</p>
+<h3>What WorkBuddy Bench measures</h3>
+<p>The preprint dated 23 Jul 2026 introduces Tencent WorkBuddy Bench as a multi-domain evaluation suite for coding agents and says it includes a construction methodology, a scoring protocol, and a cross-model leaderboard. Its core idea is a unified framework for building distribution-informed tasks across four work domains: Code, Web, Office, and Security.</p>
+<p>The suite is meant to capture different kinds of real work in one release. The four subsets target repository-level engineering, front-end development, office and business workflows, and red-/blue-team security. The paper frames this as a response to two benchmark styles the field already uses: static public suites whose prompts and answers can circulate online, and closed vendor benchmarks whose task mix cannot be inspected from outside.</p>
+<h3>How the tasks are built and scored</h3>
+<p>Tencent WorkBuddy Bench says each task is reverse-engineered from a real commit, pull request, or business scenario and rewritten as a short, colloquial, role-played request. The instructions are intentionally underspecified, so the agent has to recover missing context from the workspace rather than being handed a full specification. The paper also says no raw user prompt, session, or other user data is used.</p>
+<p>The open release includes task directories, environment images, the evaluation harness, grading tests, and reference solutions, so the benchmark’s contamination resistance depends on its construction and dataset versioning rather than secrecy. All four subsets share a uniform task-directory format and are run under a reproducible protocol on two agent harnesses, CodeBuddy Code and Claude Code, inside isolated sandboxes. The paper says any third party can rerun each task and inspect its content.</p>
+<p>The subsets share the same packaging but not the same scoring rule. The paper says scores are not comparable across subsets, and it reports no suite-wide average. Web tasks use rubric-style scoring with pass/fail items and penalties, Office tasks combine a deterministic Rule score with an evidence-grounded LLM Judge, and Security tasks use deterministic scoring only, with no LLM judge anywhere. Code tasks are scored with hidden tests in the Harbor-style setup described in the report.</p>
+<p>The paper also says each subset uses its own verification style. Office tasks may rely on deterministic checks plus semantic judgment over submitted deliverables and task-specific evidence, while Security tasks cover whitebox source audit, blackbox binary exploitation, web exploitation, agent security, malware analysis, and security operations. In the Security subset, the authors say the scorer can check proof-of-concept behavior, captured flags, indicators of compromise, YARA match rate, or report quality, depending on the task type.</p>
+<h3>What the leaderboard showed</h3>
+<p>The report gives a cross-model leaderboard across several model families and two harnesses. In the headline table, Claude Opus 4.8, GPT-5.5, GLM-5.2, HY-3, MiniMax-M3, DeepSeek-V4-Pro, and DeepSeek-V4-Flash all appear across the four domains. The paper says rankings can shift when the harness changes, so a model that leads under one harness may not lead under the other.</p>
+<p>The narrative highlights a few patterns. For Office, Claude Opus 4.8 leads multi-source merge and reconciliation under both harnesses, while GPT-5.5 leads five of the seven diagnostic task types shown under Claude Code, including aggregation and metric reasoning, complex rule execution, and structured extraction. The paper also says Office performance varies by difficulty and task type, and that incomplete workflows lose points even when one deliverable looks plausible because the verifier checks files, cross-file relations, state, output contracts, and evidence-grounded semantic requirements.</p>
+<p>One example in the results section shows why scores can fall sharply even when output looks reasonable: in an OpenAPI contract task, a model may produce behaviorally reasonable output but omit required fields such as deprecated or examples, or leave a path parameter’s required flag at its default, and the verifier’s per-field checks then zero the affected items. The report uses that case to illustrate how contract mismatches, not just obvious functional failures, can drag down results.</p>
+<p>The paper also notes one comparability caveat. Claude Opus 4.8’s Code score under Claude Code used a slightly different setup: the AskUserQuestion tool was disabled, and an explicit do-not-ask, complete-in-one-pass instruction was added. The authors say that score is reported alongside the others but not folded into the Code harness-shift aggregate.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.20911v1" target="_blank" rel="noopener noreferrer" title="arXiv / Tencent WorkBuddy Bench: A Multi-Domain Coding-Agent Benchmark with Contamination-Resistant Task Construction">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Bizarre CRISPR enzyme kills cancer cells by shredding their DNA</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers have repurposed a peculiar CRISPR enzyme that recognizes a chosen RNA and then shreds DNA inside cancer cells, creating an experimental “kill switch” that may one day target tumors driven by hard-to-drug mutant proteins.</p>
+<p>CRISPR systems naturally help bacteria and other microorganisms defend themselves, and many use guide RNAs to steer Cas enzymes to invading DNA. But Cas12a2 behaves differently. Ryan Jackson at Utah State University and others spent years working out what it did, after lab assays showed it was not acting like the gene-editing proteins they expected. Once Cas12a2 finds an RNA sequence matching its guide RNA, it begins indiscriminately chewing up DNA, which can stop the affected cell from growing.</p>
+<p>Two papers in Nature report how researchers turned that behavior against cancer. One group aimed Cas12a2 at RNA from cells with TP53 mutations, which are altered in up to half of all cancers. Another targeted RNA from mutated KRAS, a driver of some of the deadliest cancers. The approach could give researchers a way to kill cells expressing “undruggable” mutant proteins, and Yang Liu of the University of Utah School of Medicine called it “a molecular kill switch that recognizes a particular RNA” and “basically a programmable chemotherapy.”</p>
+<p>The work is already moving toward a therapy. Akribion Therapeutics, in Zwingenberg, Germany, is developing a treatment based on the approach for head and neck cancers caused by human papillomavirus, and co-founder Paul Scholz said the goal is to have first clinical-trial data by 2030.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02268-z" target="_blank" rel="noopener noreferrer" title="Nature / Bizarre CRISPR enzyme kills cancer cells by shredding their DNA">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>APOE2 may protect the brain from Alzheimer’s and aging</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Buck Institute study suggests APOE2 does more than track with longer life and lower Alzheimer’s risk: it may help neurons protect their DNA and resist senescence, a clue to why the gene variant seems to slow brain aging.</p>
+<p>People who carry APOE2, one of three common forms of the apolipoprotein E gene, have long been associated with longer life and a lower risk of Alzheimer’s disease. The biological reason for that advantage has been unclear. In *Aging Cell*, researchers from the Buck Institute for Research on Aging say APOE2 helps neurons defend their DNA and avoid senescence, a damaged, poorly functioning cellular state that becomes more common with age and is linked to neurodegeneration.</p>
+<h3>What the researchers saw</h3>
+<p>To compare APOE2, APOE3 and APOE4, the team used human induced pluripotent stem cells engineered to differ only at the APOE locus, then turned them into inhibitory GABAergic neurons and excitatory glutamatergic neurons. They also studied hippocampal tissue from older mice engineered to carry the human APOE2, APOE3 or APOE4 gene.</p>
+<p>The researchers found that APOE2 neurons accumulated less DNA damage. RNA sequencing showed stronger activation of DNA repair and damage-response pathways in APOE2 GABAergic neurons, while APOE4 neurons showed gene-activity patterns associated with Alzheimer’s disease. APOE2 neurons also had lower markers of senescence after stress, including radiation or doxorubicin, and showed better-preserved nuclear architecture.</p>
+<p>The study also found that adding recombinant APOE2 protein to APOE4 neurons reduced DNA-damage signaling after radiation exposure, suggesting some of APOE2’s effect may be transferable. In older APOE2 knock-in mice, hippocampal tissue showed similar signs of healthier aging, including smaller nucleoli and better-preserved heterochromatin.</p>
+<p>Senior author Lisa M. Ellerby said the work connects APOE to genome protection rather than only cholesterol transport. The researchers still do not know exactly how APOE2 stabilizes the nuclear envelope and strengthens DNA repair, but they say future work will test APOE2-mimetic compounds and targeted DNA repair treatments.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260723084856.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / APOE2 may protect the brain from Alzheimer’s and aging">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Ancient ape fossil in Egypt challenges the story of human origins</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A newly identified ape fossil from Wadi Moghra in northern Egypt pushes the record of early apes into North Africa and complicates long-running ideas about where the ancestors of modern apes, including humans, first emerged.</p>
+<p>An international team of researchers described the species, <strong>Masripithecus moghraensis</strong>, in a study published in *Science*. The fossil is about 17 to 18 million years old, from the Early Miocene, and was found during fieldwork in 2023 and 2024 by members of the Sallam Lab. The team said the remains provide the first definitive evidence of an ape from North Africa.</p>
+<p>The discovery matters because earlier Early Miocene sites in North Africa had yielded monkey fossils but no confirmed apes. That absence had led many researchers to think apes and their close relatives were mostly restricted to areas farther south in Africa at the time. The new fossil broadens the known distribution of early apes and suggests that Egypt, along with the wider Middle East region, played an important role in the evolutionary developments that eventually gave rise to modern apes.</p>
+<p>Only part of the lower jaw has been found, but it carries a mix of traits not known in any other ape from the same period. The jaw has unusually large canine and premolar teeth, molars with rounded and strongly textured chewing surfaces, and a particularly sturdy build. Shorouq Al-Ashqar, a researcher at the Mansoura University Vertebrate Paleontology Center and a first author of the study, said those features suggest a flexible, mainly fruit-based diet, with the ability to process harder foods such as nuts or seeds when needed.</p>
+<h3>What the fossil suggests about ape origins</h3>
+<p>The researchers said the anatomy and age of *Masripithecus* point to a more complicated early ape history than the fossil record had implied. They used Bayesian methods that combined anatomical traits from living and extinct apes, DNA from living species, and the geological ages of known fossils to estimate relationships and the timing of evolutionary splits. Their results indicate that *Masripithecus* was more closely related to living apes than any Early Miocene species currently known from East Africa.</p>
+<p>They also ran biogeographic analyses to ask where the common ancestor of all living apes most likely lived. Those analyses point to northern Africa and the Middle East during the Early Miocene. The team said gaps in the fossil record may have distorted the history of crown Hominoidea, the group that includes all living apes and their last common ancestor. The researchers expect more fieldwork in North Africa and the Middle East will uncover additional fossils that help clarify how modern apes originated and diversified.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260723084852.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Ancient ape fossil in Egypt challenges the story of human origins">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>China’s Tianwen-1 captures interstellar comet 3I/ATLAS near Mars</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Tianwen-1 spacecraft photographed the interstellar object 3I/ATLAS as it passed near Mars. According to the China National Space Agency, the orbiter used its high-resolution camera to capture the comet from about 30 million km (18.6 million mi) away. Tianwen-1 has been orbiting Mars for four years and eight months, making it one of the closest spacecraft to observe the object since its discovery on May 7, 2025. The new images show a visible tail and a cloud of gas and dust, or coma, around the nucleus.</p>
+<p>Researchers combined multiple images into an animation tracing the comet’s movement toward its closest approach to the Sun. The Tianwen-1 team began preparing for the encounter in early September, with repeated simulations, theoretical modeling, and instrument inspections. The observation was difficult because 3I/ATLAS was both distant and relatively small, and the camera was not originally built to observe such a dim object. The findings also add to evidence that the object contains water and other volatile materials.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260723084052.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / China’s Tianwen-1 captures interstellar comet 3I/ATLAS near Mars">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Sweden’s hidden rare earth deposits could help break China’s grip</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Swedish researchers are exploring how the country’s mineral resources could support cleaner production of rare earth elements and the powerful magnets made from them. Martin Sahlberg, in the Sustainable materials and material flows research area at Uppsala University, is studying whether Sweden’s deposits could become the basis for a more sustainable magnet industry. He said rare earth magnets are largely manufactured in China, called the supply chain “a geopolitical problem,” and described today’s production as “a dirty business” because separating and purifying the elements can require toxic chemicals and involve radioactive substances.</p>
+<p>The work is also focused on what is actually in Sweden’s deposits. Sahlberg said the country has known rare earth mineral deposits in Kiruna, Bergslagen and Norra Kärr outside Gränna, and that one early priority is to inventory the elements and their proportions. The researchers want to design new “magnet recipes” that match the materials naturally present in local deposits, rather than forcing Swedish minerals into existing manufacturing formulas. They say that could reduce processing and lower the environmental impact of both purification and manufacturing.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260723084055.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Sweden’s hidden rare earth deposits could help break China’s grip">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>New giant salamander species discovered in 3.5-million-year-old fossils</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In the late 1990s, scientists in the Ajimu area of Oita prefecture, Japan, uncovered three fossilized vertebrae from a giant salamander in the Cryptobranchidae family. The bones were preserved in the Tsubusugawa Formation, a layer of Pliocene lake sediments dating to about 3.5 million years ago. A Kyoto University research team later revisited the fossils and concluded that they belonged to a previously unknown species and a new genus.</p>
+<p>The researchers compared the Ajimu bones with skeletons from living Cryptobranchidae species and identified an anterior trunk vertebra, a mid trunk vertebra, and a sacro-caudal vertebra. They said the mid trunk vertebra had anatomical features not seen in any other known giant salamander. The species was named *Limnospondylus ajimuensis*. The fossils also came from a formation that has yielded elephants and crocodiles, suggesting the region was once considerably warmer and more humid than it is today.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260722032119.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / New giant salamander species discovered in 3.5-million-year-old fossils">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
