@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-07-28</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-07-28</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="atlantic,bbc,guardian">
+  <summary>Devastating European wildfires in maps - and how they&#x27;re being tackled</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">climate_disaster</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">major supplement</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Wildfires across France and Spain have forced more than 300,000 people to leave home, with the biggest damage around Gironde near Bordeaux and west of Madrid, as firefighters race to slow fast-moving blazes before another heatwave makes the job harder.</p>
+<p>The fires have cut through dry forests and fields in both countries over the week of July 20-26. In France, the worst-hit area is Gironde, where more than 200,000 people have been evacuated and about 162 square miles (420 sq km) have burned in less than four days. The blaze was said to be nine miles (15km) from the south of Bordeaux and has threatened sensitive military and industrial sites, including facilities working on French ballistic missiles, rocket motors and hazardous chemicals.</p>
+<p>West of Madrid, separate wildfires have burned about 297 square miles (770 sq km), according to authorities, while officials said the region was facing the worst fires in its history. A fire in the hilly terrain of Ávila was described as Spain’s largest on record, burning 50,000 hectares, with the scorched land near the capital reaching 70,000 hectares. Smoke has also blanketed Madrid in recent days.</p>
+<h3>Firebreaks, aircraft and rapid evacuations</h3>
+<p>French crews have been using planes loaded with fire retardant, along with Canadair aircraft that can scoop 6,000 litres of water from lakes or the sea in 12 seconds and drop it directly on the flames. On dangerous days, aircraft patrol high-risk areas before a fire has even been reported so they can respond within minutes. Ground crews have also used bulldozers, diggers and mechanical shovels to cut firebreaks, including a 100-metre-wide strip near Lacanau.</p>
+<p>In Gironde, about 2,500 firefighters, 1,500 military personnel and 1,200 police officers and gendarmes have been involved. Gironde official Jean Luc Gleyze said authorities do not have enough people or trucks to fight the fires. Similar methods have been used in Spain, where an Air Tractor AT-802F Fire Boss dumped water near San Martín de Valdeiglesias, a helicopter scooped water from a swimming pool there, and firefighters battled flames in El Tiemblo and La Adrada. Evacuees have been sheltered in Bordeaux and around Madrid, while horses and dogs have also been moved out of danger.</p>
+<h3>Another heatwave may keep the crisis going</h3>
+<p>The immediate concern is that weather may worsen before the fires are under control. Forecasts in France point to temperatures of up to 40C in some areas from Tuesday, while Spain’s interior minister said Monday and Tuesday were “absolutely crucial days” before hotter weather returns from Wednesday. Officials also warned that winds and dry conditions could make the blazes even harder to contain.</p>
+<p>The European Union has already sent extra firefighting help: seven planes and four helicopters to France, and six planes plus three forest firefighting teams to Spain, after both countries triggered the bloc’s emergency assistance mechanism. EU officials said the wildfire season began in April and could last until early November, leaving both countries vulnerable to more flare-ups if the heat holds.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/photography/2026/07/photos-wildfires-rage-across-france-and-spain/688077" target="_blank" rel="noopener noreferrer" title="The Atlantic / Photos: Wildfires Rage Across France and Spain">TA #1</a><a href="https://www.bbc.co.uk/news/articles/cj638jx0l53o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Devastating European wildfires in maps - and how they&#x27;re being tackled">BBC #1</a><a href="https://www.bbc.co.uk/news/articles/ckg34128nvpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Wildfire now nine miles from French city of Bordeaux, mayor warns">BBC #2</a><a href="https://www.theguardian.com/world/2026/jul/27/france-and-spain-race-to-contain-huge-wildfires-before-fresh-heatwave-begins" target="_blank" rel="noopener noreferrer" title="The Guardian / France and Spain race to contain huge wildfires before fresh heatwave begins">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc,scmp">
+  <summary>TV presenter and comedian Bill Oddie dies at 85</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Bill Oddie has died aged 85, his agent said on Monday, closing a career that moved from The Goodies to Springwatch and leaving tributes that focused as much on his conservation work as on his comedy.</p>
+<p>David Foster said Oddie was “the country’s best-loved birder” and a “multitalented celebrity” who encouraged people to respect and protect the environment. Foster added that Oddie “protested, lobbied and campaigned” for nature, and said his contribution to conservation would “never be forgotten”.</p>
+<h3>From The Goodies to wildlife television</h3>
+<p>Oddie became a household name in the 1970s as part of the comedy trio The Goodies, alongside Tim Brooke-Taylor and Graeme Garden. Their slapstick comedy and songs ran for 12 years and, according to the BFI, Oddie was known as the group’s “hairy, cynical, anarchist member”. His contribution also included novelty songs such as *The Funky Gibbon* and *The Inbetweenies*, both of which reached the UK top 10.</p>
+<p>He had already been writing and appearing in television from the early 1960s, including *That Was The Week That Was*, *I’m Sorry I’ll Read That Again*, *At Last the 1948 Show*, *Twice a Fortnight* and *Doctor in the House*. Later, The Goodies worked together again on *Astronauts* and *Bananaman*, while Oddie also appeared in children’s programmes including *Tickle on the Tum*, *From the Top* and *The Bubblegum Brigade*.</p>
+<p>His later public life was tied to wildlife and ornithology. He presented programmes including *Birding with Bill Oddie*, *Britain Goes Wild with Bill Oddie* and *Bill Oddie’s How to Watch Wildlife*, and co-presented the first four series of *Springwatch* from 2005, as well as the spin-off *Autumnwatch*. He was made an OBE in 2003 for services to wildlife conservation.</p>
+<h3>A public struggle with depression</h3>
+<p>BBC News said Oddie’s life was marked by bouts of acute depression and many visits to psychiatric hospitals. He also spoke openly about his own struggles, saying that after being dropped in 2009 he suffered “probably the worst 12 months of my life” because of depression and bipolar disorder.</p>
+<p>Former *Springwatch* co-host Kate Humble said he was one of the earliest and bravest public figures to say that mental health was something he had to deal with. She remembered him as someone who could tell a story, make people laugh and encourage anyone to go outside and get excited about a robin.</p>
+<p>Other tributes described the same mix of wit, expertise and activism. Chris Packham, Oddie’s successor on *Springwatch*, called him “a renegade polymath with binoculars and a beard” who loved birds and disliked those who harmed them. Samuel West said Oddie had introduced a generation to the fascination of birds, while naturalist Stephen Moss said he “did more than anyone to popularise birding”.</p>
+<p>Jo Rowland of the RSPCA said many wildlife rescuers had been inspired by Oddie’s broadcasting and knowledge of British birds, and that “nature has lost one of its best friends, fiercest champions and most iconic defenders.”</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c4nnkylr0llo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Bill Oddie: Comedian who found nature a welcome refuge from mental illness">BBC #1</a><a href="https://www.bbc.co.uk/news/articles/cjejw8pq5elo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / TV presenter and comedian Bill Oddie dies at 85">BBC #2</a><a href="https://www.scmp.com/news/world/europe/article/3362039/bill-oddie-wildlife-presenter-and-star-british-comedy-series-goodies-dies-85" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Bill Oddie, wildlife presenter and star of British comedy series The Goodies, dies at 85">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="ocha">
+  <summary>South Sudan: Restoring life-saving nutrition services in Akobo</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">humanitarian expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Akobo Town, South Sudan, emergency nutrition services have been restored for children and mothers after clashes forced a temporary closure, giving returning families somewhere to treat severe malnutrition even as hunger, displacement and illness continue to strain the county.</p>
+<h3>A child’s recovery shows why the service matters</h3>
+<p>When Nyemiem Biel came back home to Akobo Town in Jonglei State after weeks of displacement, she had hoped the worst was over. The family had been in Tiergol, where food was scarce, and soon after their return her 15-month-old son, Chuol Gatbel, developed a fever and diarrhoea.</p>
+<p>By the time she reached Akobo Hospital, his condition had worsened. He spent a week in the hospital’s stabilization centre before being referred to an outpatient therapeutic programme in Kony, Akobo Town. A month after treatment began, health workers recorded an encouraging sign: his weight had risen from 9.3 kilogrammes to 10.5 kilogrammes.</p>
+<p>Nyemiem now returns to the programme every week to collect 14 sachets of ready-to-use therapeutic food so Chuol can keep receiving treatment at home. “I feel very happy when I have food for my child,” she said.</p>
+<h3>Services reopened after clashes in Akobo</h3>
+<p>Chuol’s treatment is part of a wider response in Akobo, where many children are struggling with acute malnutrition after weeks of prolonged hunger, displacement and limited access to healthcare. A rapid emergency response supported by the OCHA-managed UN Global Emergency Fund (CERF) has helped UN agencies and partners restore food assistance and nutrition services for children and mothers at risk.</p>
+<p>UNICEF, the World Food Programme, the World Health Organization, Oxfam and Medair have supported the delivery of lifesaving nutrition supplies and services across Akobo. For families returning from displacement, the outpatient therapeutic programme is also a place to turn when children fall sick.</p>
+<p>The site had been temporarily closed in mid-March when clashes broke out in Akobo. It reopened on 16 May after Medair’s Emergency Response Team relaunched it under the Emergency Rapid Response Mechanism, with funding from the European Union Civil Protection and Humanitarian Aid Operations and the United Kingdom Foreign, Commonwealth and Development Office.</p>
+<p>Since reopening, the site has admitted 377 children. It is one of 12 outpatient therapeutic programmes supported by Medair in Akobo County, where 6,000 children and pregnant and breastfeeding mothers are receiving nutrition support.</p>
+<p>“We are thankful for this place,” Nyemiem said. “After we returned from Tiergol, we had nowhere to take our children for treatment.”</p>
+<h3>Hunger, disease and the return from displacement</h3>
+<p>The response is reaching families whose displacement left them without enough food for months. In another case in Dengjok Payam, Nyibol Lia arrived at the Thokliel Primary Healthcare Stabilization Centre on 18 June carrying her 10-month-old son, Balat Tut. He had a high fever, diarrhoea and vomiting, and she said he could not even breastfeed.</p>
+<p>Nyibol had walked for two hours from neighbouring Galdong Payam to reach the facility. Balat was diagnosed with severe acute malnutrition with medical complications and was started immediately on antibiotics and therapeutic milk. Within a week, the diarrhoea and vomiting had stopped and his weight had increased from 5 kilogrammes to 5.7 kilogrammes.</p>
+<p>Like Nyemiem’s family, Nyibol’s family fled to Tiergol after violence erupted in Akobo. They returned home in early May when calm returned, but months without enough food had already taken a toll. “We had no food in Tiergol, and the children were getting sick,” she said. “Now I am happy because we have been given food, water and soap.”</p>
+<p>Her family, including her four other children, also received food assistance from WFP. The Thokliel stabilization centre began operating on 15 June and had admitted 10 children with severe acute malnutrition and complications by the end of June. Eight had recovered and were referred to a nearby outpatient therapeutic programme to continue treatment.</p>
+<p>Mothers attending the programme also receive counselling on infant and young child feeding, as well as hygiene practices. “We teach mothers how to prepare balanced meals at home and also how to maintain good hygiene to prevent infections,” said Makhor Mai, an infant and young child feeding counsellor at the site.</p></div>
+  <div class="source-list"><a href="https://www.unocha.org/news/south-sudan-restoring-life-saving-nutrition-services-akobo" target="_blank" rel="noopener noreferrer" title="UN OCHA updates / South Sudan: Restoring life-saving nutrition services in Akobo">UN OCHA updates #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Trump administration’s revision of Iran war casualties ‘huge disrespect’, say veterans</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Pentagon’s weekend update to the Defense Casualty Analysis System reclassified Iran war casualties, adding more than 140 wounded service members and creating a new “Overseas Operations” category for personnel killed and wounded starting July 7. Under that category, four US service members killed in action by Iranian forces are listed: 1st Lt Tyler James Feehan, Pvt Isabella Gonzales, Sgt Angel S. Rampersad and Sgt Michael Emmanuel Swinton. US military veterans criticized the move as disrespectful to the dead and their families. Michael E Smith, a retired US rear admiral and founder of National Security Leaders for America, said it was “such a huge disrespect for the families,” while Tristeza Ordex of VoteVets said it was not just about numbers but also about accountability.</p>
+<p>The Trump administration has argued that the April ceasefire with Iran paused the clock on May 1 for the conflict’s initial period, and that the separate casualty count beginning July 7 follows that interpretation. The reclassification has also drawn criticism in Washington. Republican House member Thomas Massie called it “an absurd ruse,” and said the Pentagon was pretending there had been two Iran wars separated by a brief cease-fire. Senator Kirsten Gillibrand said Americans deserve “the truth about the human cost” and called for transparency and accountability.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/jul/27/trump-administration-iran-war-casualties-veterans" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump administration’s revision of Iran war casualties ‘huge disrespect’, say veterans">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Bab al-Mandeb: US war on Iran gives Houthis new leverage over Saudi Arabia</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Yemen’s Houthis have raised the stakes against Saudi Arabia by threatening a maritime embargo on Saudi ports, while attacks on Sanaa International Airport and Saudi shipping have turned Bab al-Mandeb into a new pressure point alongside the Strait of Hormuz.</p>
+<h3>Pressure on Bab al-Mandeb</h3>
+<p>The escalation began after Saudi Arabia attacked Yemen’s Sanaa International Airport more than two weeks ago, after the Houthis had decided to reopen the airport to direct flights from Iran. Those would have been the first such flights since 2015, and Riyadh would have seen them as a major red line and a sign of growing Iranian influence, including the possible transfer of weapons. Hamish Kinnear, principal analyst for the Middle East and North Africa at Maplecroft, told Middle East Eye that the airport strike was also a red line for the Houthis.</p>
+<p>The Houthis, officially known as Ansar Allah, have since said they launched missiles at the Saudi cities of Jazan and Yanbu. They also reported targeting two Saudi oil ships last week, while Riyadh confirmed one attack in the Red Sea. Houthi military spokesperson Yahya Saree said the group would “not hesitate to expand our movements and escalate our steps” depending on developments in the coming hours and days.</p>
+<p>Saudi Arabia has already diverted more than 70 percent of its crude exports from the Strait of Hormuz to the Red Sea port of Yanbu after the US-Israeli attack on Iran and Iran’s blockade of Hormuz. That shift has made Red Sea routes more important, and the renewed fighting now threatens the Bab al-Mandeb Strait, the narrow passage between the Red Sea and the Gulf of Aden. Before shipping companies began diverting vessels around the Red Sea, it carried about 12 percent of global seaborne oil trade and 8 percent of global liquefied natural gas trade.</p>
+<p>Shipping through Bab al-Mandeb has not stopped completely, with some tankers still carrying crude to Asia through the waterway. Kinnear said this showed the Houthis were open to negotiations with the Saudis and the Saudi-backed Yemeni government, which has also said it does not want to widen the confrontation. Khaled Almaeena, a Saudi political analyst, said the escalation was “totally unexpected” and warned that quiet could be taken as weakness, even as he said Saudi Arabia would want to avoid unnecessary bloodshed.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/bab-al-mandeb-us-war-iran-gives-houthis-new-leverage-over-saudi-arabia" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Bab al-Mandeb: US war on Iran gives Houthis new leverage over Saudi Arabia">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Double certification received by 527,000 high school graduates</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">During the 2025-2026 school year, the Mexican government delivered double certification to more than 527,000 graduates of the National Bachillerato. They are the first generation to receive a document certifying both their academic formation and their technical skills. The Ministry of Public Education (SEP) said that this model is meant to expand academic and employment opportunities, giving young people greater possibilities to continue university studies or enter the labor market with competencies recognized by higher education institutions.</p>
+<p>SEP head Mario Delgado Carrillo said the National Bachillerato offers 207 technical, technological and vocational training options, organized into 10 fields of knowledge aligned with the country’s productive and strategic needs. He said 1,979,084 students are currently studying one of these options. Delgado Carrillo also said the program is the result of coordinated work by the Academic Council for the Transformation of Technical and Professional Upper Secondary Education, with 31 public institutions participating, including 23 state universities and six national ones, plus the National Institute of Fine Arts and Literature and the Mexican Social Security Institute.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/27/politica/008n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Double certification received by 527,000 high school graduates">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="axios">
+  <summary>U.S. officials believe sanctions could hurt Iran more than bombs</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">U.S. officials believe sanctions and a naval blockade could hurt Iran more than bombs, even as President Donald Trump’s economic pressure campaign has drawn far less attention than the strikes against Iran. Trump paused U.S. strikes over the weekend after 13 consecutive days of attacks, then said Monday that Tehran had requested a meeting about a deal; Iranian Foreign Ministry spokesperson Esmaeil Baghaei denied that claim. U.S. officials said both sides are talking through mediators led by Oman, Qatar and Pakistan, with a proposal that could give Iran and Oman authority and potential revenue from traffic through the Strait of Hormuz.</p>
+<p>A senior administration official said Iran wants assurances it will not be attacked again and also wants money, including unfrozen assets and relief from U.S. sanctions. A second U.S. official said sanctions and the naval blockade would take longer to force Tehran to the table than a full-scale bombing campaign. U.S. intelligence and open-source media reports point to a deepening economic crisis inside Iran, including gasoline shortages, and the official said Iran is “more scared of Treasury than the War Department.”</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/07/27/iran-war-trump-sanctions-blockade-economy" target="_blank" rel="noopener noreferrer" title="Axios / U.S. officials believe sanctions could hurt Iran more than bombs">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="el_pais,scmp">
+  <summary>French police arrest man who wounded 3 with knives in Paris</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">French police detained a man on Monday after he attacked three women with knives near Porte de Clichy in Paris, Interior Minister Laurent Nunez told reporters. Nunez said the women were aged 19, 24 and 36, and that two were severely wounded. Police were patrolling the area after the attack. Video aired on social media and verified by Reuters showed a man with long black hair, wearing a cream tracksuit and wielding one big knife in each hand, stabbing and attempting to attack a young woman.</p></div>
+  <div class="source-list"><a href="https://elpais.com/internacional/2026-07-27/la-policia-francesa-detiene-a-un-hombre-tras-un-ataque-con-cuchillo-a-tres-mujeres-en-paris.html" target="_blank" rel="noopener noreferrer" title="El País / French police detain a man after knife attack on three women in Paris">El Pais #1</a><a href="https://www.scmp.com/news/world/europe/article/3362022/paris-police-arrest-man-who-wounded-3-knives" target="_blank" rel="noopener noreferrer" title="South China Morning Post / French police arrest man who wounded 3 with knives in Paris">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Government of Mexico strengthens comprehensive attention in the High and Low Mountains of Guerrero</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Mexican government said it is maintaining a comprehensive, permanent intervention in 19 communities in the municipalities of Chilapa de Álvarez, Olinalá, Atlixtac and Zapotitlán de las Tablas, Guerrero, as part of the Master Plan for the High and Low Mountain of Guerrero. The strategy involves coordination of 20 government agencies from three levels of government through an Operations Center in Chilapa de Álvarez, with the Secretariat of Governance, the Secretariat of Security and Citizen Protection and the National Guard present. It includes security work, well-being programs, medical and psychosocial services, and support for youth, farming and infrastructure.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/27/politica/011n4pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Government of Mexico strengthens comprehensive attention in the High and Low Mountains of Guerrero">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Information minister pledges better welfare for media workers, highlights digital journalism</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Information Minister Attaullah Tarar on Monday reaffirmed the government’s commitment to supporting journalists and strengthening Pakistan’s media sector at the inauguration of the National Press Club’s website in Islamabad. He said measures were being planned to improve media workers’ welfare, expand digital capabilities and address financial challenges in electronic and print media. Tarar called the NPC website launch a welcome move toward modernisation, said digitalisation had become essential, and announced that a modern digital laboratory would be set up at the club within two months. He also said the government would support digital skills training for journalists and was working on partnerships for structured training programmes.</p>
+<p>Tarar said the government was working on steps to safeguard journalists’ employment, ensure timely payment of salaries and outstanding dues, address housing issues, restore health cards and expand other welfare initiatives. He also urged media organisations to pay salaries and dues on time. NPC President Abdul Razaq Syal and Secretary Dr Furqan Rao announced honorary membership for Tarar at the event, which was attended by senior officials, journalists, media workers and club members. Syal also raised long-standing demands including restoration of the housing quota, health cards, financial grants and payment of outstanding dues.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2018782/information-minister-pledges-better-welfare-for-media-workers-highlights-digital-journalism" target="_blank" rel="noopener noreferrer" title="Dawn / Information minister pledges better welfare for media workers, highlights digital journalism">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>PHC stops deportation of man named ‘Quaid-e-Azam’, directs him to appear before Nadra board</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Peshawar High Court (PHC) on Monday restrained authorities from deporting a petitioner named Quaid-e-Azam and directed him to appear before the National Database and Registration Authority (Nadra)’s verification board. A two-member bench comprising Justice Waqar Ahmed and Justice Inamullah Khan was hearing a petition filed by resident Quaid-e-Azam against the blocking of his national identity card. Advocate Saifullah Mohib Kakakhel appeared for the petitioner, while Nadra’s legal representative Shahid Imran Gigiyani represented the authority.</p>
+<p>During the hearing, the petitioner’s counsel told the court that his client was doing business in Dubai and Pakistan, was a Pakistani citizen, and had been paying taxes. He said the blocked identity card was causing his client immense hardship and added that he was being asked to produce his uncle before Nadra, while other family members also held Pakistani identity cards. Gigiyani said Nadra had already submitted its response to the court and that the petitioner’s identity card was considered suspicious and had therefore been blocked. After hearing both sides, the bench ordered the petitioner to appear before Nadra’s verification board and said he could not be deported until then.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2018808/phc-stops-deportation-of-man-named-quaid-e-azam-directs-him-to-appear-before-nadra-board" target="_blank" rel="noopener noreferrer" title="Dawn / PHC stops deportation of man named ‘Quaid-e-Azam’, directs him to appear before Nadra board">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>&#x27;This is a Jewish state&#x27;: Arabic banned at work for Palestinian citizens of Israel</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Salma*, a 19-year-old Palestinian citizen of Israel, says her manager sent a WhatsApp message to staff saying employees were banned from speaking Arabic in their shop. She and her colleagues initially ignored it, but the next day the manager reacted when one worker briefly spoke Arabic while saying she was taking a box to the storeroom. Salma recalled the manager shouting, kicking boxes and telling them they were forbidden to speak Arabic, adding: “This is a Jewish state. Here we speak only Hebrew. Arabic stays at home.”</p>
+<p>Salma’s case is one of several recent complaints from Palestinian workers who say they have been told not to speak Arabic at work, including in hospitals, pharmacies and retail stores. One recent case involved a Palestinian employee at a Good Pharm branch in Jaffa. Local media published WhatsApp messages in which a manager allegedly threatened workers who used languages other than Hebrew, saying hearing Arabic could deter customers traumatised by the 7 October attacks. Good Pharm said it employs and serves people from all sections of society, is committed to equality, and would address the manager’s conduct internally.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/jewish-state-arabic-banned-work-palestinian-citizens-israel" target="_blank" rel="noopener noreferrer" title="Middle East Eye / &#x27;This is a Jewish state&#x27;: Arabic banned at work for Palestinian citizens of Israel">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Iván Restrepo: The sulfurous odor of sargassum that arrived to stay in the Greater Caribbean</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iván Restrepo said sargassum has arrived massively this year to the coasts of Quintana Roo and the countries of the Greater Caribbean. He noted that although the algae has an important ecological role as food and shelter for many marine species, when it reaches shore it affects coral formations, seagrasses, beach sand, tourism, fishing and the health of exposed people, and can concentrate arsenic, mercury and cobalt. As it decomposes, it gives off a sulfurous odor that keeps people from being on the beaches.</p>
+<p>He also recalled that in June 2019, during López Obrador’s term, representatives of 13 Caribbean countries and scientists from the United States and Mexico met in Cancún to set strategies to control the arrival of sargassum, but no further details were made public. Days earlier, López Obrador had presented a government plan to prevent the seaweed from reaching Mexico’s beaches, with the Navy coordinating with the Environment and Natural Resources Secretariat, the business sector, Quintana Roo and affected municipalities; harvesting at sea increased, yet barriers and beach-cleaning equipment were still overwhelmed.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/27/politica/014a1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Iván Restrepo: The sulfurous odor of sargassum that arrived to stay in the Greater Caribbean">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Congress will analyze in September the reform on femicide</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Laura Itzel Castillo, president of the Permanent Commission, said the Executive’s initiative on the General Law to Prevent, Investigate and Sanction the Crime of Feminicide will be analyzed in Congress’s next ordinary session, in September. In a video message on social networks, she said the proposal was received last week by the Permanent Commission and sent to the joint commissions for Gender Equality, Justice and Legislative Studies First. She also said the Permanent Commission will meet next Wednesday, with items including the UNAM autonomy commemoration, the assault on the Moncada Barracks and Miguel Hidalgo’s death anniversary.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/27/politica/010n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Congress will analyze in September the reform on femicide">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian,nyt,scmp">
+  <summary>Iran halts strikes as Trump gives space to talks</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran and the United States have paused strikes, giving diplomacy a brief opening and sending oil prices lower, but the reprieve is fragile: Donald Trump has signaled room for talks while warning that more strikes could still come, and traders are unsure the calm will last.</p>
+<p>Brent crude, the international benchmark, initially fell 9% to below $88 a barrel on Monday after rising to $100 last week, when the Iran-aligned Houthis attacked Saudi Arabian oil tankers in the Red Sea. An attempted recovery later in the day was reversed after Trump said the US was having “good talks” with Iran, pushing Brent back down about 8%.</p>
+<p>The move came as the US and Iran paused hostilities after 13 days of fighting, with Trump suggesting talks to end the conflict had resumed. Tehran said it had stopped “retaliatory” attacks after two nights without American missiles. On Sunday, the US ambassador to the UN, Mike Waltz, said Trump had decided to pause the attacks to allow more time for diplomacy, while also saying forces remained “locked and loaded” and the president was giving negotiations “a little bit of room.”</p>
+<p>The easing in prices reflected hopes that a renewed focus on diplomacy could prevent a wider escalation that would further restrict global supply. The conflict has already disrupted oil and gas flows from Gulf states through the strait of Hormuz since the end of February, and in recent weeks has also interrupted vessels leaving the Red Sea via the Bab al-Mandab strait.</p>
+<p>But the market reaction was met with skepticism. Ole Hvalbye, an analyst at SEB Research, said: “We’ve been here multiple times since March,” adding that “each rally on a leak has faded as substance failed to materialise.” John Evans, an analyst at PVM, said oil prices would only fall further if there was a meaningful decline in demand, “not questionable mini-ceasefires.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/2026/jul/27/oil-prices-fall-us-strikes-iran-brent-crude-bp-shell-ftse-100" target="_blank" rel="noopener noreferrer" title="The Guardian / Oil prices fall as US pauses strikes on Iran over strait of Hormuz">Guardian #1</a><a href="https://www.nytimes.com/2026/07/27/us/politics/trump-backs-new-talks-with-iran.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Trump Backs New Talks With Iran but Warns More Strikes Could Come">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3362025/iran-halts-strikes-trump-gives-space-talks" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Iran halts strikes as Trump gives space to talks">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>Rescue and relief work underway following flash flood in China&#x27;s Gansu</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Rescue crews are still working in Weiyuan County, Gansu, after a sudden flash flood struck a scenic area and left 10 people dead and 23 injured, while authorities said tourists had been trapped and more than 300 rescuers were deployed to the site.</p>
+<p>The flood hit a scenic area in Weiyuan County, Dingxi City, on Sunday afternoon after sudden heavy rainfall, according to local authorities. By 6 p.m., officials said the disaster had left 10 people dead and 23 injured. Authorities also said some tourists were camping in the scenic area when the flood burst out and trapped them there.</p>
+<h3>Search and rescue at the flood-hit site</h3>
+<p>The Ministry of Emergency Management said 305 rescue personnel with 68 vehicles from the national comprehensive fire and rescue teams were conducting rescue operations at the scene. A separate Xinhua report said over 300 rescue personnel were working “tirelessly” at the site. The accounts point to an ongoing emergency response focused on the same flood-hit area in Weiyuan County.</p>
+<p>Images from the scene showed rescuers working in the flood-hit area, machinery clearing silt, and rescue vehicles on site. Another photo showed a volunteer preparing food for flood-affected people at a temporary relocation site in Weiyuan County. Together, the images showed both the cleanup effort and the immediate relief work under way after the flood.</p>
+<h3>Relief efforts alongside the response</h3>
+<p>The reporting also showed the relief side of the operation, not only the search effort. A temporary relocation site was visible in Weiyuan County, where a volunteer was preparing food for flood-affected people. That detail suggested that people displaced by the flood were already being supported while the rescue work continued.</p>
+<p>As background, China on Monday urgently pre-allocated 180 million yuan, or about 26.5 million U.S. dollars, in central natural disaster relief funds. The Ministry of Finance and the Ministry of Emergency Management said the money was for flood control and typhoon relief in Guangdong, Fujian, Jiangxi, Hunan, Liaoning and Jilin. The ministries said the funds would mainly be used for search and rescue operations, relocation and resettlement of disaster-affected people, emergency response such as hazard elimination, inspection and removal of hazards that could trigger secondary disasters, and repair of damaged or collapsed homes.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260727/ce2aab8ea62e406ba429ab0d6e7786ff/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Rescue and relief work underway following flash flood in China&#x27;s Gansu">XNAE #1</a><a href="https://english.news.cn/20260727/4ff745d0d27b4b7faa739f2f756b035b/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Rescue teams race against time following flash flood in China&#x27;s Gansu">XNAE #2</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China targets 2030 for surveillance network covering over 15 respiratory pathogens</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China plans to build a surveillance network for respiratory infectious diseases covering more than 15 pathogens by 2030, according to a five-year plan released on Monday by the National Disease Control and Prevention Administration. The 2026-2030 plan also calls for stepping up immunization for key groups including the elderly and children, improving health management in high-risk settings, and enhancing preparedness for potential outbreaks of emerging respiratory infectious diseases. It aims to modernize the country’s public health system.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260727/95e811583cb44c5391e5722111f2ea42/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China targets 2030 for surveillance network covering over 15 respiratory pathogens">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China to improve legal framework for people with disabilities during 2026-2030</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China will improve legal frameworks on education and adult guardianship for people with disabilities during the 2026-2030 period, Cheng Kai, chairman of the China Disabled Persons&#x27; Federation, said on Monday at a press conference on the country’s plan for the protection and development of persons with disabilities during the 15th Five-Year Plan period. Cheng said China will also revise the law on the protection of disabled persons and support local legislation for the law on building a barrier-free living environment. He said the current framework includes more than 110 laws, over 70 administrative regulations and more than 90 local regulations.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0727/c90000-20482050.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China to improve legal framework for people with disabilities during 2026-2030">PDE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>3 self-radicalised teens detained by ISD; 2 planned attacks on schools in Singapore</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Three Singapore teenagers have been detained under the Internal Security Act after ISD said they were self-radicalised online and made plans for local violence, including two school-related attack plots and one case that extended into cyberattacks.</p>
+<h3>A 14-year-old built a school attack plan around violence he found online</h3>
+<p>The most detailed case involved a 14-year-old Secondary 2 student who ISD said created a 21-page manifesto for a mass-casualty stabbing attack at his secondary school. The agency said he was arrested in May, about a month before the attack he had planned, and issued a detention order on Monday (Jul 27).</p>
+<p>ISD said the boy was self-radicalised online and had first been drawn in through first-person shooter games on Roblox that recreated real-life school shootings. It said he then searched for more information, consumed violent gore and mass shooting content through social media algorithms, and joined online channels in the True Crime Community. He later came across ISIS supporter Omar Mateen’s 2016 mass shooting on a Florida gay nightclub and, ISD said, admired Mateen’s “high kill count” and identified with his experience of bullying.</p>
+<p>The agency said the boy had imagined his school bullies as the people in the games and videos, and himself as the attacker. By late 2025, ISD said, he was planning a mass-casualty attack against non-Muslim teachers and schoolmates during the school holidays in June 2026. It said he considered firearms, then homemade bombs, before settling on a kitchen knife and penknife after repeatedly watching ISIS execution and stabbing tutorial videos.</p>
+<p>ISD also said he drafted a 21-page manifesto in January this year listing his targets and weapons, and planned to circulate it on social media the day before the attack. The boy admitted he would have carried out the stabbings if he had not been arrested, the agency said.</p>
+<h3>Two other detained teens had separate ISIS-linked plans</h3>
+<p>The boy was one of three teenagers detained under the ISA, ISD said. The other secondary school student was a 15-year-old Secondary 4 student who ISD said had been self-radicalised online by ISIS ideologies and wanted to conduct an attack in Singapore to further the group’s cause and establish an Islamic caliphate in Southeast Asia through violent means.</p>
+<p>ISD said the 15-year-old’s radicalisation was triggered by Hamas’ attacks against Israel in October 2023, after which he consumed online content about Palestinian suffering and joined online religious groups where he encountered violent extremist material. It said he developed hatred for Israelis, the Israel Defense Forces and Zionists, and supported Hamas, Hezbollah and the Houthis as well as ISIS. By mid-2025, ISD said, he wanted to establish a “Malaya Caliphate” covering Indonesia, Malaysia and Brunei, created chat groups, shared pro-ISIS content and searched for bomb-making information. The schools targeted in the attack plots were not identified by ISD, and the two secondary school students were not named because they are under 18.</p>
+<p>The third detainee was 19-year-old tertiary institution student Tan Jun Jie. ISD said he supported ISIS and planned knife attacks against Singapore Armed Forces troops at Sembawang Air Base and LGBTQ students in his school. It said he also attempted cyberattacks against the websites of Muslim organisations he considered deviant, using malware to carry out Distributed Denial-of-Service attacks. The Singapore Police Force is separately investigating him for potential offences under the Computer Misuse Act.</p>
+<h3>ISD says the cases show a wider youth threat</h3>
+<p>ISD said the three cases were not related, but that all three teenagers were self-radicalised online by violent extremist ideologies and had made preparations for local attacks. It said the 14-year-old is the youngest person to be detained under the ISA, and the first detention involving Composite Violent Extremism, previously known as “salad bar” extremism.</p>
+<p>The agency said the youths had accessed violent material easily online and that repeated exposure to gore, violent games and extremist content can normalise violence and make young people more receptive to extremist narratives. It also said all three researched bomb-making information online.</p>
+<p>ISD said the three will undergo a holistic rehabilitation programme and that it will work with their families and schools so they can continue their studies while in detention. It also said public and parental vigilance can help detect signs of radicalisation early, and that early reporting can in some cases allow a suspected radicalised individual to be managed without using the ISA.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/teens-radicalisation-detained-planned-school-attacks-isd-6280021" target="_blank" rel="noopener noreferrer" title="CNA / 3 self-radicalised teens detained by ISD; 2 planned attacks on schools in Singapore">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Machine could make more donated lungs suitable for transplant</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A machine that keeps donated lungs alive outside the body could save four in every five lungs that currently go to waste in England and Wales, according to draft guidance from the National Institute for Health and Care Excellence. The guidance recommends the XVIVO perfusion system be used in the NHS for a four-year period to assess its effectiveness and value for money. The UK has one of the poorest lung transplantation rates in the world, and NHS Blood and Transplant figures show 170 patients in the UK, including six children, are waiting for new lungs. Most adults wait a year for a transplant, some wait two years or more, and up to a fifth of adults awaiting an urgent transplant die within a year of joining the list before a suitable lung is found.</p>
+<p>The machine warms donated lungs to body temperature, pumps a fluid through them that mimics blood plasma, and ventilates them to mimic normal breathing. That lets transplant teams monitor lung function, treat infection, drain excess fluid and reinflate collapsed areas. Nice says the draft guidance aims to ensure all transplant centres can benefit from the technology, and it had already been trialled at three adult transplant centres but had not been endorsed for all centres or for paediatric cases.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/jul/28/machine-donated-lungs-organ-transplant-nhs-nice" target="_blank" rel="noopener noreferrer" title="The Guardian / Machine could make more donated lungs suitable for transplant">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Social care in England: how could we pay to fix a ‘broken system’?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham has said the adult social care system in England is broken and needs fixing, with policymakers broadly agreeing that reform is needed but differing sharply on how to pay for it. He previously led an unsuccessful attempt to reform English adult social care in 2010, and he has said the process could be long and costly, but that he will not flinch from big policy decisions and is prepared to “expend a lot of political capital” on his plans.</p>
+<p>The current system is heavily means-tested: people with assets above £23,250 generally pay for their own care, while those below that level may get council support. The evidence says many taxpayers already contribute through council tax and can still end up meeting their own care costs, and one in seven people pay more than £100,000, with some selling their home. Reform options include free care for some services, a cap on care bills, or an NHS-style national care service. Burnham has talked about a national care service on the “NHS principle”; the evidence puts an NHS-style free-at-point-of-use system at £18.5bn a year by 2035-36, while free personal care for over-65s in England is estimated at an extra £7.5bn and a cap model at £4bn a year by 2035-36.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/jul/27/social-care-reform-in-england-how-could-we-pay-to-fix-a-broken-system" target="_blank" rel="noopener noreferrer" title="The Guardian / Social care in England: how could we pay to fix a ‘broken system’?">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Man convicted in Idaho college student killings seeks to withdraw guilty plea</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Bryan Kohberger has filed to withdraw his guilty plea and seek a new trial in Ada county district court, saying he pleaded guilty because of bad legal advice. According to the docket, he is representing himself. Kohberger was convicted last year in the 2022 killings of four University of Idaho students — Madison Mogen, Kaylee Goncalves, Xana Kernodle and Ethan Chapin — who were found dead in a six-bedroom house with dozens of knife wounds; Goncalves also showed evidence of asphyxiation and blunt force trauma.</p>
+<p>In a statement shared with the New York Times, Kohberger said he intended to enter a not guilty plea and said his “actual innocence is my truth,” while saying the plea must be withdrawn. The Goncalves family sharply criticized his attempt to challenge the conviction, calling him a “narcissist” and saying he had admitted his guilt. Idaho attorney general Raúl Labrador said on social media that his office stands ready to do what is necessary to ensure justice is carried out.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/jul/27/idaho-college-student-killings-bryan-kohberger" target="_blank" rel="noopener noreferrer" title="The Guardian / Man convicted in Idaho college student killings seeks to withdraw guilty plea">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="axios,guardian">
+  <summary>Trump warns of return to ‘strong military action’ if Iran diplomacy fails</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump said he has paused U.S. strikes on Iran to give negotiations another chance, but warned the military could move back to “strong military action” if talks fail, leaving the fate of efforts over the Strait of Hormuz and a wider nuclear deal unresolved.</p>
+<p>Trump told Axios on Monday that “we are in very deep talks with Iran” and that if the talks do not work out, “we will go back to very strong military action.” Asked how long he would give diplomacy, he replied: “Not much time. Either it goes fast or not at all.” He also said he decided on Friday to pause strikes after mediators and other countries in the region asked him to give negotiations another chance.</p>
+<p>The talks are focused on a new deal that would reopen the Strait of Hormuz and restart discussions on a comprehensive nuclear agreement. Axios said the main channel is between Iran and Oman, with Qatar, Pakistan, Egypt and Trump’s envoys Steve Witkoff and Jared Kushner also involved. Trump said he believed Iran wanted to make a deal and said of his pause: “Nothing gained, nothing lost.” He also noted that oil prices fell and the stock market rose after the attacks were halted.</p>
+<h3>Negotiations still open, but no agreement yet</h3>
+<p>Trump’s warning came as regional sources said talks between Oman and Iran had made progress but had not produced an agreement. Omani Foreign Minister Badr al-Busaidi said Monday’s calls with counterparts in Iran, Qatar, Saudi Arabia, Kuwait and Egypt focused on “practical, fair and sustainable arrangements” for maritime navigation through the strait.</p>
+<p>The Guardian reported that Tehran said there were no direct talks with the United States. Iran’s foreign ministry spokesperson, Esmaeil Baqaei, said mediators may pass along messages, but “at present we are not engaged in any negotiations with the United States.”</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/07/27/trump-interview-iran-bombing-pause" target="_blank" rel="noopener noreferrer" title="Axios / Trump to Axios: I&#x27;m ready for &quot;strong military action&quot; if Iran talks fail">Axios #1</a><a href="https://www.theguardian.com/world/2026/jul/27/trump-warns-return-strong-military-action-iran-diplomacy-fails" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump warns of return to ‘strong military action’ if Iran diplomacy fails">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Badenoch calls for emergency legislation to stop early release scheme</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Kemi Badenoch is pressing for emergency legislation to halt an early-release prison scheme, arguing that without it dangerous offenders will start leaving prison when MPs return from the summer recess, while Labour says the government is trying to manage an overcrowded system left in crisis.</p>
+<p>The Conservative leader is calling on Andy Burnham to fast-track legislation to keep serious offenders behind bars, and to revoke rules coming into effect on 2 September if necessary. She is expected to tell a press conference with victims on Tuesday that “paedophiles and rapists are about to be let out on our streets” and that “Burnham needs to show us he’s ready to take the tough decisions.” The Conservatives say the government’s review will not stop offenders being released.</p>
+<p>Burnham announced last week that he was pausing the scheme after a backlash from survivors and victims. The first phase would have seen about 700 prisoners freed in September. But the policy was introduced as part of a bid to deal with what Labour describes as unprecedented overcrowding, which it says was caused by Conservative governments failing to build new prisons.</p>
+<p>The release scheme has already been used before. According to the BBC’s account, the Conservative government first used early release in 2023 because of prison overcrowding, initially for 18 days and then for 70 days, and about 10,000 prisoners had been released early by June 2024, before Labour came to power. When Sir Keir Starmer entered Downing Street in July 2024, there were fewer than 100 spare prison places across the adult male estate, prompting the Sentencing Act to release another 6,000 prisoners early from September.</p>
+<p>The act already excludes the most serious and dangerous offenders, including murderers serving life sentences and those on extended sentences. But eligibility for early release is based on sentence length, rather than the type of offence, and Badenoch wants that changed so the worst violent and sexual offenders are exempted.</p>
+<p>Labour has defended the review, with a spokesperson saying: “It’s this government that is fixing the Tories’ mess.” The party says the Conservatives left the criminal justice system close to collapse. Conservative shadow justice secretary Nick Timothy said victims should not have to “live in fear all summer waiting for a review,” adding: “The clock is ticking.”</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cjwxvw5ppw0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Badenoch calls for emergency legislation to stop early release scheme">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="agencia_brasil">
+  <summary>RJ security forces will have to undergo extraordinary and mandatory re-registration of firearms</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">general_news</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Rio de Janeiro security forces will have to carry out an extraordinary and mandatory re-registration of restricted-use weapons, including rifles, carbines and submachine guns, whether they were handed over to public bodies or entities or held by individuals and companies. The order was published this Monday, the 27th, in the state’s official gazette. It is meant to improve governance and oversight of weapons from the Military and Civil police forces.</p>
+<p>Under the decree, control bodies such as the Rio public prosecutor’s office will be able to ask the police for information and receive updated details, including the name of the person holding the weapon and who signed the authorization. The corporations have 30 days to send acting governor Ricardo Couto a report on how many rifles, carbines and submachine guns were re-registered and collected, the irregularities found and the measures taken. They must also present a proposal for periodic re-registration of this kind of armament.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/forcas-de-seguranca-do-rj-terao-de-fazer-recadastramento-de-armas" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / RJ security forces will have to undergo extraordinary and mandatory re-registration of firearms">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>UN slams Israel’s expansion of illegal settlements in occupied West Bank</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">United Nations Secretary-General Antonio Guterres condemned Israeli plans to accelerate settlement development in the occupied West Bank, saying in a statement released on Monday that the settlements have “no legal validity” and are a “flagrant violation” of international law. His criticism came amid escalating violence in the West Bank and Israeli plans to legalise existing outposts and establish new ones. Israeli Prime Minister Benjamin Netanyahu said on Friday that his government would be “accelerating the legalisation of farm outposts and establishment of new ones” in the occupied West Bank. Guterres said the settlements remain a major obstacle to a two-state solution and to a “just, lasting and comprehensive peace” between Israelis and Palestinians.</p>
+<p>The statement follows repeated UN and partner agency warnings in recent months. All Israeli settlements in the West Bank, including East Jerusalem, are described as illegal under international law, a position reaffirmed in a 2024 International Court of Justice advisory opinion that found Israel’s continued occupation of Palestinian territory unlawful. Since Thursday, at least eight Palestinians, including a child, and two Israelis have been killed amid the violence in the occupied West Bank, according to the evidence cited.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/27/un-slams-israels-expansion-of-illegal-settlements-in-occupied-west-bank?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / UN slams Israel’s expansion of illegal settlements in occupied West Bank">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Man jailed for abduction and rape of girl, 15, in Edinburgh basement</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 21-year-old man has been jailed after abducting a 15-year-old girl at knifepoint in Edinburgh and raping her in a basement, with a lifelong restriction order that means a parole board will later decide whether he is ever safe to release.</p>
+<p>At the High Court in Edinburgh, Aaron Strachan admitted raping the girl and charges of serious assault against two male victims. The court heard that he was wearing a balaclava when he approached her at a bus stop on Lothian Road in the early hours of 25 May last year. When she moved away because she felt uneasy, he followed her to Princes Street.</p>
+<p>There, outside the Marks and Spencer shop, Strachan demanded her phone and told her not to scream, before producing a knife and threatening her. He then grabbed her by the shoulders and marched her towards York Place, sometimes stopping to cover her eyes, before forcing her down steps into a basement area strewn with pallets, crates and rubbish. She was taken into a room, put onto a mattress on a makeshift bed and raped.</p>
+<p>The court also heard that Strachan warned her not to tell anyone or he would find her and hurt her. He was caught days later after being spotted by police officers on a street.</p>
+<h3>Sentence and wider offending</h3>
+<p>Judge Michael O’Grady described Strachan’s crimes as the “stuff of nightmares” and said he expected him to be in custody or under supervision for the rest of his life. He jailed him for a minimum of five years and imposed an order for lifelong restriction, or OLR. That means a parole board must decide if he is ever safe to be released.</p>
+<p>The High Court also heard that Strachan attacked a man with a hammer days later and had a criminal record of violence, robbery and possession of weapons. The evidence said he also admitted repeatedly stabbing a man on the hand with a knife, causing severe injury, hours before the rape, and later pleaded guilty to attacking another man with a claw hammer on 28 May.</p>
+<p>Strachan was brought back to court for sentencing on 13 January this year after fleeing from the GEOAmey escort while being moved to a waiting vehicle. He admitted attempting to defeat the ends of justice by breaking free from his handcuffs and running into the Royal Mile before police detained him a short time later.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c141x6lp8p4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Man jailed for abduction and rape of girl, 15, in Edinburgh basement">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Israel to allow international force into Gaza under Trump ceasefire plan</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An Israeli official said Israel will allow a multinational security force to enter Gaza under US President Donald Trump’s ceasefire plan. The official said Prime Minister Benjamin Netanyahu’s security cabinet approved the legal framework on Sunday to enable the force’s entry. Netanyahu was scheduled to depart for Washington on Monday and was expected to meet Trump on Tuesday. The official said the mission was called the International...</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/middle-east/article/3361969/israel-allow-international-force-gaza-under-trump-ceasefire-plan" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israel to allow international force into Gaza under Trump ceasefire plan">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>Indonesia faces crucial choice after central bank chief&#x27;s surprise resignation</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Bank Indonesia chief Perry Warjiyo’s surprise resignation, two years before his term was due to end, jolted Indonesia’s markets on Monday and left President Prabowo Subianto facing an immediate choice over who should steer monetary policy next.</p>
+<p>When the news broke on Monday morning in Jakarta, the Jakarta Stock Exchange Composite Index fell 32 points, or 0.5 per cent, to 6,153 within 20 minutes of opening before recovering to around 6,175 at the close. The rupiah also weakened as trading began, slipping to 17,972 per US dollar from 17,935 on Friday, then crossing 18,000 two hours later. It later firmed slightly to 17,988 before ending the day at 18,009.</p>
+<p>The government said Perry had resigned “for personal reasons” and State Secretary Prasetyo Hadi said the president received the resignation letter at Bank Indonesia’s headquarters and accepted it. Prasetyo declined to explain the reason further, but denied speculation that the 67-year-old was in poor health.</p>
+<p>Perry had spent more than four decades at Bank Indonesia. He was appointed governor by then-president Joko Widodo in 2018, led the central bank through the Covid-19 pandemic and was reappointed in 2023 for a second five-year term that would have run until 2028.</p>
+<p>Analysts said the market backlash was short-lived partly because Senior Deputy Governor Destry Damayanti was named interim governor. Yusuf Rendy Manilet of the Center of Reform on Economics told CNA that Destry has “extensive experience in formulating monetary policy and safeguarding financial system stability,” adding that her appointment “sends a positive signal that policy continuity will be maintained.”</p>
+<p>But the longer-term picture is still unsettled. Prabowo has not decided who to nominate as Perry’s permanent successor, and by law he can choose any candidate as long as parliament vets the nominee. There is no set deadline for naming a replacement.</p>
+<p>The timing matters because Indonesia’s currency has already fallen to record lows this year, touching the psychological 18,000 mark in June, and the country is preparing to present its 2027 budget to parliament on Aug 14. Analysts said restoring confidence will depend on whether the eventual transition is seen as professional and independent, or as a political move that could unsettle Bank Indonesia’s role.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/indonesia-central-bank-governor-perry-warjiyo-surprise-resignation-6280466" target="_blank" rel="noopener noreferrer" title="CNA / Indonesia faces crucial choice after central bank chief&#x27;s surprise resignation">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Police say there were at least 3 shooters at Seattle food festival, 1 among the dead</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Seattle police now say the Bite of Seattle shooting involved at least three shooters, including a 15-year-old in juvenile detention and another person who died at the scene, but the case still leaves open how many gunmen were involved and why the teenager missed a Monday court appearance.</p>
+<p>Gunfire erupted around 6pm on Sunday in the waning hours of the food festival near Seattle’s Space Needle, leaving three people dead and at least four others injured. As shots rang out, many attendees rushed into campus buildings or ran from Seattle Centre, the sprawling park and event space that hosts the annual three-day festival.</p>
+<p>In a juvenile court filing, police said they believe there were at least three shooters rather than two: the 15-year-old, an acquaintance who died at the scene, and “at least one other unknown suspect.” The filing said investigators believe the teenager and one of the deceased “engaged in a gunfight with at least one other unknown suspect.” Mayor Katie Wilson said the teenager was being held in juvenile detention for investigation of firearms violations and first-degree assault before the scheduled appearance, and it was not immediately clear why he did not appear.</p>
+<p>The account followed confused statements from city officials. Police waited five hours on Sunday to tell the public that one shooter was in custody and another was believed to be on the loose. Earlier, the mayor had wrongly said two people were in custody. On Monday, Police Chief Shon Barnes said investigators were not sure whether the second shooter was among the dead, and neither he nor the mayor mentioned additional shooters.</p>
+<p>Police said two victims died at the scene and a third died at a hospital. The wounded included a two-year-old boy, who was in satisfactory condition on Monday, while the other injured victims had been discharged.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3362051/police-say-there-were-least-3-shooters-seattle-food-festival-1-among-dead" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Police say there were at least 3 shooters at Seattle food festival, 1 among the dead">SCMP #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3361939/shooting-seattle-food-festival-leaves-2-dead-5-injured" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Shooting at Seattle food festival leaves 3 dead, 4 wounded">SCMP #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cnn">
+  <summary>Five climbers confirmed dead on Russia’s Mount Elbrus, Europe’s highest peak</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Five Bosnian climbers died on Russia’s Mount Elbrus, Europe’s highest mountain, after being caught in a violent storm, RIA Novosti reported on Sunday citing Russian authorities. The bodies of three people had not yet been evacuated because of bad weather. Russian authorities did not specify their nationality, but regional law enforcement agencies told RIA Novosti the dead climbers were from Bosnia and Herzegovina.</p>
+<p>Russia’s Emergencies Ministry said rescuers had evacuated the bodies of two climbers found on the mountain at an altitude of 5,350 meters, after first saving two other climbers who were taken down for medical care. The regional branch of the Investigative Committee said rescuers had recovered the bodies of three more climbers but could not evacuate them because of the weather. Bosnian media said the seven-person expedition came from the central town of Zenica and included a married couple and a female doctor who worked at the local hospital. Russian media said strong winds complicated the search and recovery operation.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/07/27/europe/climbers-dead-mount-elbrus-scli-intl" target="_blank" rel="noopener noreferrer" title="CNN / Five climbers confirmed dead on Russia’s Mount Elbrus, Europe’s highest peak">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,scmp">
+  <summary>US singer D4vd to go on trial for murder in death of 14-year-old</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Los Angeles judge has ordered US musician D4vd to stand trial for murder in the death of Celeste Rivas Hernandez, after a five-day preliminary hearing that centred on text messages, witness testimony and competing accounts of what happened before the teen’s body was found in a Tesla registered to his address.</p>
+<p>The judge, Charlaine Olmedo, said prosecutors had met the probable-cause threshold needed to send the case to trial — a standard lower than the beyond-a-reasonable-doubt test that will apply later. David Anthony Burke, 21, whose stage name is D4vd, has pleaded not guilty to charges including murder and sexually abusing Hernandez. Prosecutors also alleged murder with special circumstances, including lying in wait, motive for financial gain and eliminating a witness.</p>
+<p>During the hearing, Los Angeles prosecutors questioned a dozen witnesses and showed photographic evidence while Hernandez’s family watched. Evidence read in court on Monday included texts prosecutors said Hernandez sent to Burke on 22 April 2025, after arguments about his friendship with another girl. One message said, “I swear to GOD I will kill u,” while another said, “i will end ur career and ur life I will damage anything.” Prosecutors said Hernandez went to Burke’s Hollywood home the following day in an Uber he had sent to pick her up, and alleged he stabbed her when she arrived. They said her remains were found last September in a Tesla registered to Burke’s address.</p>
+<p>The prosecution told the court the teen had threatened to expose Burke’s relationship with a minor and ruin his multi-million dollar music career. In court, Detective Corey Farrell said text messages indicated Burke and Hernandez had attended church with her family, and that she had told him she was 16 and 18 at different times. Prosecutors also said earlier testimony pointed to sexually explicit photos and years of messages, including material they said showed an abortion in 2024 after Burke got her pregnant.</p>
+<p>Burke’s defence argued there was not enough evidence to prove he committed the crimes. Lawyer Marilyn Bednarski said he had “the opposite of homicidal malice” toward Hernandez, and the defence said her parents knew about the relationship and had given written consent for her to travel to London with him for a week. They also pointed to texts suggesting Hernandez wanted to come to his Hollywood Hills home on the night of 23 April 2025, plus the lack of surveillance video and the medical examiner’s inability to prove how the wounds occurred.</p>
+<p>Olmedo said, “The people have met their burden on all counts.” Burke was ordered held without bail, is due back in court on 31 August, and the trial is expected to begin within 90 days of that date. Los Angeles County District Attorney Nathan Hochman said prosecutors have not yet decided whether to seek the death penalty.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c70gkg62w0ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / US singer D4vd to go on trial for murder in death of 14-year-old">BBC #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3362050/judge-rules-singer-d4vd-must-stand-trial-killing-14-year-old-celeste-rivas-hernandez" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Judge rules singer D4vd must stand trial in killing of 14-year-old Celeste Rivas Hernandez">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="rappler">
+  <summary>MANILA, Philippines – President Ferdinand Marcos Jr.</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Ferdinand Marcos Jr. used his fifth State of the Nation Address to ask Congress to stop electricity distributors from making consumers pay for system losses. He said households should not be charged for electricity that never reaches them, and called for an “immediate amendment” to the Electric Power Industry Reform Act (EPIRA) to prohibit system loss charges and the value-added tax imposed on them.</p>
+<p>Meralco says system loss is the gap between electricity entering a power network and the amount eventually measured and billed to customers. It said most of the loss is technical, caused by resistance in wires and small power dissipation in transformers and other equipment, while non-technical losses include electricity theft, illegal connections, defective meters, and metering or billing errors. Based on its 2025 bill breakdown, Meralco said system loss accounted for about 5% of an average customer’s bill. The Department of Energy backed Marcos’ proposal, saying consumers should no longer bear avoidable system losses, but it also said any EPIRA amendment must protect consumers while preserving a financially sound and reliable electricity industry.</p></div>
+  <div class="source-list"><a href="https://www.rappler.com/business/explainer-what-system-loss-affect-power-bill" target="_blank" rel="noopener noreferrer" title="Rappler / MANILA, Philippines – President Ferdinand Marcos Jr.">Rappler #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="yonhap">
+  <summary>Top headlines in major S. Korean newspapers</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On July 28 in Seoul, Yonhap News Agency listed the top headlines in major South Korean newspapers. Several Korean-language dailies led with Yoon’s election law case, describing him as getting an election-invalidating or suspended sentence over lies that influenced the vote, while the PPP was said to face repayment or loss of 39.7 billion won. Other prominent front-page items included China’s CXMT surpassing Intel in market cap on trading debut, the ruling party seeking 48-hour police detention powers, and the government weighing easier capital gains tax rules to encourage owners of multiple homes to sell.</p>
+<p>The roundup also highlighted business and international coverage. Maeil Business Newspaper and Korea Economic Daily ran the headline that Nvidia becomes Naver’s third-largest shareholder after a US$1 billion investment, while the Korea Times said Nvidia invests $1 billion in Naver for a 4.5% stake. Among English-language dailies, the Korea Herald highlighted Lee’s push for wider reach in Latin America as the global order shifts, and Korea JoongAng Daily asked whether CXMT’s debut will threaten Korea’s chip titans.</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20260728000800320" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Top headlines in major S. Korean newspapers">YNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>Burnham to tell schools in England to adapt teaching to local business needs</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham will tell schools across England to adapt their curriculums to the needs of local businesses, as part of a devolution drive aimed at tackling the jobs crisis for young people. The plan is based in part on the Greater Manchester baccalaureate he introduced as mayor, and would ask schools to make provision for students aged 14 and above more responsive to the local jobs market, teaching technical skills alongside traditional academic subjects. It is intended to begin operating from September 2028, with mayors and other local leaders working with schools, colleges and employers to design technical training built around local jobs.</p>
+<p>The package also includes prioritised funding for technical and vocational qualifications, plus guidance to Ofsted to recognise their value alongside more traditional qualifications. Burnham said the aim was to redress what he described as an over-simplified focus on academic routes, saying students had too often been told they must take the academic path to do well and be respected. No 10 described the announcement as “a fundamental change to the education system.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/jul/27/burnham-to-tell-schools-in-england-to-adapt-teaching-to-local-business-needs" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham to tell schools in England to adapt teaching to local business needs">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="korea_herald">
+  <summary>Lee, Lula broaden ties into defense, space and minerals - The Korea Herald</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Korea and Brazil moved to widen their relationship beyond trade on Monday, with President Lee Jae Myung saying his summit with Luiz Inacio Lula da Silva produced new cooperation plans in defense, space and critical minerals while the long-stalled Korea-Mercosur trade deal remained unresolved.</p>
+<p>Lee and Lula met in Brasilia for their fifth meeting since Lee took office in June 2025, and the trip was the first state visit to Brazil by a South Korean president in 11 years. After a 140-minute summit, Lee said they “agreed to strengthen economic cooperation” and reached a “profound consensus” that the trade agreement with Mercosur can no longer be postponed amid growing uncertainty in the global trading environment. Negotiations on the pact, which would cover Brazil, Argentina, Paraguay and Uruguay, have been stalled since 2021.</p>
+<p>The two leaders also agreed to set up a working group to revive the trade talks and widen bilateral cooperation on economic and security issues. Brazilian Vice President Geraldo Alckmin and South Korean presidential policy chief Kim Yong-beom will lead it. Lula said the group would identify sensitive issues so that negotiations can resume, while Lee said it would provide a channel for direct communication on advancing bilateral relations.</p>
+<p>Beyond trade, Lee said the summit opened new areas of cooperation. South Korea and Brazil agreed to expand ties into aerospace and critical minerals, and signed a memorandum of understanding on the peaceful exploration and use of outer space. Lee said the space deal would streamline commercial launch procedures and broaden cooperation on satellite-data sharing and space exploration. The countries are also preparing for a September launch, when South Korean private space startup Innospace is scheduled to send a commercial rocket into space from Brazil’s Alcantara Space Center.</p>
+<p>Defense was another major part of the talks. Lee said the two countries agreed to launch a joint defense industry committee in the second half of this year and to pursue a General Security of Military Information Agreement, or GSOMIA. He said the steps would open new opportunities for cooperation in defense and the defense industry, and the two sides also agreed to deepen cooperation in resources and energy to diversify supply chains.</p></div>
+  <div class="source-list"><a href="https://www.koreaherald.com/article/10822136" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Lee, Lula broaden ties into defense, space and minerals - The Korea Herald">TKH #1</a><a href="https://www.koreaherald.com/article/10821689" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Lee eyes wider reach in Latin America as global order shifts - The Korea Herald">TKH #2</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="bbc,guardian">
+  <summary>New technical education routes to be offered at 14 in England</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">England’s government plans to let 14-year-olds follow technical routes alongside academic study, with courses from Year 10 tied to local jobs and industries, but unions and opposition figures are demanding detail on delivery, funding and whether the changes will really widen opportunity.</p>
+<p>Pupils would be able to study subjects such as manufacturing and AI from age 14 under the new plans for education in England. The government said those courses, available from Year 10, would be linked to local jobs and industries, and that students would be able to combine core academic learning such as English and maths with technical education, skills training, work experience and links to employers.</p>
+<p>The government expects the new pathways into work to be up and running in some areas by 2028. The changes announced on Tuesday will only affect England, and ministers said they would work with regional mayors, local leaders, schools, colleges and employers to deliver the plans nationally.</p>
+<h3>Why ministers say the change is needed</h3>
+<p>The announcement comes after data published earlier this year showed more than one million young people across the UK were not in education, employment or training, or “Neet” — the highest level in more than 12 years. In May, former minister Alan Milburn warned of a “lost generation” in his review into why so many young people fall into the Neet category, and Office for National Statistics figures showed 13.5% of UK 16 to 24-year-olds were Neet at the start of this year.</p>
+<p>Burnham said that “for too long” students had been told to take academic subjects to “do well and be respected”. He said young people should be able to choose routes such as construction, coding, classics, maths, manufacturing or mechanics and still be given the skills they need and the respect they deserve. He also said the government was delivering the “major shake-up” needed to address Britain’s youth unemployment crisis, starting with improving the availability and quality of technical education.</p>
+<h3>Questions over delivery and funding</h3>
+<p>School leaders’ unions welcomed the ambition to improve technical education, but said they wanted much greater clarity on how and when the changes would be introduced, and how they would be paid for. Pepe Di’Iasio, general secretary of the Association of School and College Leaders, said there was “little detail” about how the plans would work in practice, and said it was wrong to make major education announcements during the summer holiday. Paul Whiteman, general secretary of the National Association of Head Teachers, said school leaders supported giving technical and vocational education the same status as academic routes, but that schools would need much greater clarity over what the plans meant in practice and over funding.</p>
+<p>Laura Trott, the shadow education secretary, said the announcements “don’t come anywhere close” to undoing the damage Labour had already done to the job market. She said it was not clear whether Labour intended to replace GCSEs, which she called “a disaster”, and argued that the focus should remain on the knowledge-rich curriculum.</p>
+<h3>Building on local models</h3>
+<p>The government said the reforms would build on local initiatives such as the MBacc, or Greater Manchester Baccalaureate, announced in 2023 by Burnham when he was mayor of the city. Launched there in September 2024, it has given pupils a framework for choosing GCSE subjects in both academic and technical areas that align with growing local industries such as green energy or digital.</p>
+<p>Education Secretary Lucy Powell said the announcement “marks the start of a real shared effort” with employers, businesses, mayors and councils to design an education system that connects young people to jobs and careers in their local area. She said the technological revolution should help young people become the “fresh lifeblood” the economy needs to adapt and grow, and said she wanted this generation to seize that opportunity whatever their background or postcode.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cj4k2djd5qpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / New technical education routes to be offered at 14 in England">BBC #1</a><a href="https://www.theguardian.com/society/2026/jul/27/andy-burnham-cross-party-agreement-social-care" target="_blank" rel="noopener noreferrer" title="The Guardian / Andy Burnham seeks cross-party agreement on future of social care">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="al_jazeera_en,middle_east_eye">
+  <summary>British court dismisses Bahrain’s bid to block activists’ spyware lawsuit</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Britain’s Supreme Court has cleared a spyware lawsuit by two Bahraini dissidents to continue, rejecting Bahrain’s immunity bid in a 3-2 ruling that could make foreign states answerable in UK courts for remote surveillance carried out against people in Britain.</p>
+<p>Saeed Shehabi, a journalist and founder of a Bahraini political party opposed to the Khalifa royal family’s rule, and Moosa Mohammed, a Bahraini refugee, say their computers were infected in 2011 with FinSpy spyware capable of logging keystrokes, tracking locations and monitoring them remotely. Both men, who live in the UK, brought the case in London’s High Court in 2020 seeking damages for psychiatric harm.</p>
+<p>Bahrain denied the hacking and argued the alleged acts happened outside UK jurisdiction, which it said entitled it to state immunity. That argument was rejected by the High Court of Justice in London in 2023, and the Court of Appeal upheld that decision the following year before Bahrain made its final appeal to the Supreme Court.</p>
+<p>On Monday, the Supreme Court dismissed Bahrain’s bid by a narrow majority, finding that the alleged surveillance counted as an act carried out in the UK because the claimants and their computers were in Britain when the spyware allegedly took effect. That ruling opens the way for the case to proceed to trial.</p>
+<p>The judgment adds to a growing body of litigation testing whether states and surveillance firms can be held liable in Western courts for spyware used against critics abroad.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/27/british-court-dismisses-bahrains-bid-to-block-activists-spyware-lawsuit?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / British court dismisses Bahrain’s bid to block activists’ spyware lawsuit">AJ #1</a><a href="https://www.middleeasteye.net/news/supreme-court-says-no-state-immunity-bahrain-uk-surveillance-case" target="_blank" rel="noopener noreferrer" title="Middle East Eye / UK Supreme Court says no state immunity for Bahrain in surveillance case">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="guardian">
+  <summary>New York school district halts plan to use humanoid robot amid backlash</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Salamanca City Central school district in upstate New York said on 24 July that its pilot project with Toronto-based Realbotix had been put on hold after backlash over plans to bring a humanoid robot named Sally to Salamanca High School. The district said it was working through enhanced student data privacy agreements with the New York State Education Department and continuing to engage with community members and stakeholders. The district, located on the Seneca Nation reservation, said privacy protections and community input were important parts of the process.</p>
+<p>The proposal had drawn criticism from educators and community members. Realbotix had said in a June press release that the approximately $58,000 robot, with silicone skin and brown hair, would use “natural conversation, facial expressions and real-time interaction” to create hands-on learning experiences and encourage student participation. The New York State United Teachers union condemned the plan, and union president Melinda Person said in a 23 July statement that a robot built by a company associated with sex dolls had no business in classrooms.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/jul/27/new-york-school-humanoid-robot-plan-paused" target="_blank" rel="noopener noreferrer" title="The Guardian / New York school district halts plan to use humanoid robot amid backlash">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-section="undercovered_watchlist" data-sources="la_jornada">
+  <summary>UNAM debuts online services for the Smoking Cessation Clinic</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Mexico, diseases linked to tobacco use cause 171 deaths a day, and UNAM launched online services for its Smoking Cessation Clinic through Zoom, WhatsApp and podcasts to reach a larger population. Guadalupe Ponciano Rodríguez, coordinator of the Tobacco Research and Prevention Program of the UNAM clinic’s Public Health Department, said they are designing and evaluating a digital model to support people who want or need to quit smoking, based on cognitive behavioral therapy.</p>
+<p>She said the clinic now offers 12 online sessions, with 10 to 15 participants in weekly one-hour Zoom meetings, and a WhatsApp group where therapists answer questions and send activities tied to treatment. Ponciano Rodríguez said more than 150 people have taken the online model, eight of every 10 participants quit smoking, and about 3,000 people quit between 2000 and 2025 through in-person and remote work. The program also provides follow-up at three, six and 12 months after addiction is overcome, and she said future plans could include avatars or robots that respond in real time to patients’ questions.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/27/politica/009n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / UNAM debuts online services for the Smoking Cessation Clinic">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>DataPrep-Bench: Benchmarking LLMs as Training Data Preparators</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A benchmark called DataPrep-Bench tries to give LLM builders a common way to test whether models can turn raw sources into training data and judge which datasets will actually help, addressing the lack of a unified measure across data-preparation workflows.</p>
+<p>The project frames LLM-driven data preparation as two complementary tasks: data construction, which turns raw sources into supervised training data, and data quality evaluation, which predicts a candidate dataset’s training value before fine-tuning. The authors say “quality” here means downstream training utility, not surface features such as fluency or cleanliness. They argue this matters because existing comparisons are hard to line up: different methods often use different sources, base models, and downstream benchmarks.</p>
+<p>DataPrep-Bench is presented as a unified benchmark that evaluates both tasks under a shared downstream-grounded protocol across six domains and multiple base models. For construction, methods work from identical raw sources and are scored by fine-tuning a base model on their outputs together with Dolly-15k. The paper says the source corpus is built from domain-specific books and long-form materials, and that all PDF sources are converted to Markdown using MinerU.</p>
+<p>The benchmark also releases a construction baseline called Data-Construction-Skill, described as a skill-guided agent with a reusable skill layer for output schemas, filtering rules, coverage constraints, and validation utilities. In the Finance domain, the paper says it lifts the Dolly-only baseline by nearly 20 points absolute on Llama-3.1-8B and is competitive with the strongest agent- and DataFlow-based methods in knowledge-extraction-dense domains.</p>
+<p>For data quality evaluation, candidate scorers are judged by Pearson correlation with downstream performance on a shared candidate pool. The paper introduces Distributional Alignment Score, or DAS, a distribution-based evaluator that uses MMD between a candidate dataset and a domain proxy. DataPrep-Bench says DAS has the strongest cross-model correlation in four of six domains and is the only metric clearing r &gt; 0.70 simultaneously in Math, Science, and Medical, outperforming existing quality-, diversity-, and heuristic-based evaluators.</p>
+<p>The result is a benchmark meant to treat data construction and data quality evaluation as co-equal targets, with downstream model performance as the common test.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.20465v1" target="_blank" rel="noopener noreferrer" title="arXiv / DataPrep-Bench: Benchmarking LLMs as Training Data Preparators">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In a preprint on arXiv, researchers presented Skill Self-Play (Skill-SP), a co-evolutionary framework for LLM training built around agent skills. The paper says LLM training is moving from manual design and annotation toward interaction-driven self-evolution, but existing methods face a tradeoff: environment-bound approaches give precise feedback yet stay narrow, while open-ended self-generation widens the task space but can produce unreliable rewards. Skill-SP is meant to sit between those extremes, using skills to keep execution verifiable while still allowing varied tasks. It combines a proposer, a solver, and a dynamic skill controller in a reinforcement-learning self-play loop.</p>
+<p>In that loop, the proposer generates challenging tasks conditioned on sampled skills, the solver searches for solutions, and the skill controller uses execution feedback to update and expand the skill library. The preprint says this setup bridges structured verification and open-ended exploration. On tool-use and reasoning benchmarks, Skill-SP is reported to push the performance ceiling of competent backbones and to produce strong turnarounds for initially misaligned models. The code is available at https://github.com/Qwen-Applications/skill-self-play.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.22529v1" target="_blank" rel="noopener noreferrer" title="arXiv / Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Molt is a new PyTorch-native framework for agentic reinforcement learning that aims to make iterative algorithm changes easier for researchers and AI coding assistants to trace, while testing whether a leaner code path can still match heavier Megatron-based stacks.</p>
+<p>The preprint says the problem is that agentic RL changes — new estimators, new pipeline stages, new rollout schemes — usually have to be threaded through trainer, distributed backend and rollout glue in mainstream frameworks. Molt’s answer is a compact codebase built around human readability first and AI-assistant navigability second, with one visible asynchronous loop that trains multimodal and mixture-of-experts policies and never trains on a token it did not generate.</p>
+<p>Its core design is split into plain Python user agents, vLLM rollout engines behind a request router, and a single FSDP2 policy actor on NeMo AutoModel around one Ray asynchronous queue. The paper says this lets trajectories move token-exactly from generation into training, while weight refit goes back to the engines over NCCL directly, bypassing the router. It also frames the agent as an ordinary program, so the same loop can be traced and changed end to end.</p>
+<h3>Performance, memory and the tradeoff Molt accepts</h3>
+<p>The paper backs that design with benchmarks. On a Qwen3.6-35B-A3B multimodal MoE workload, `--fsdp.offload` cut actor peak GPU memory from 64.7 GB to 46.4 GB, enough to fit the 8-GPU training partition, but policy training time rose from 213 seconds to 251 seconds.</p>
+<p>In a head-to-head test against slime on Qwen3-30B-A3B, both stacks ran fully asynchronously on 2 nodes with 8 H100s for training and 8 for rollout. Molt posted 119.4 ± 2.3 seconds per step versus slime’s 109.5 ± 10.3 seconds, and the authors say the mean gap of roughly 9% fell within cross-run variability, so they claim no superiority in either direction.</p>
+<p>The benchmark section also notes a routing-sensitive 128-expert checkpoint where actor log-probabilities differed from an independent reference forward by about one nat, and the [0.99, 1.01] sequence gate rejected the batch. In that case, the reported step times measure throughput without an effective policy update.</p>
+<p>The repository is open source and includes recipes and prebuilt containers at `https://github.com/NVIDIA-NeMo/labs-molt`.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.21653v1" target="_blank" rel="noopener noreferrer" title="arXiv / Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new arXiv preprint argues that agent memory failures are less about reasoning and more about how systems manage context over time, with costs, recall, and isolation becoming the pressure points for production agents and the organizations that run them.</p>
+<p>The paper says today’s agents drown in growing conversation histories, large prompts, tool definitions, and tool outputs, while paying a token cost that rises with every turn. It treats the usual answer—storage and retrieval—as too narrow, and instead frames context as a lifecycle that runs from deciding what to remember, to structuring it, to choosing the right store, to consolidating, forgetting, anticipating, and compacting without losing what matters. The authors also argue that this has to work across a scope hierarchy: the user, the customer organization, and the client platform, so that one user’s context does not leak into another’s session.</p>
+<h3>From memory tool to managed lifecycle</h3>
+<p>To name that discipline, the paper introduces <strong>Agentic Context Management (ACM)</strong> and breaks it into five primitives: architecting, ingesting, scoping, anticipating, and compacting &amp; consolidation. It presents this as a response to several failure modes, including junk accumulation, lost detail, identity fragmentation, scope bleeding, cross-session amnesia, and quadratic cost growth. On cost, the paper says naïve full-append context grows token cost quadratically with conversation length, while crude summarization buys linear cost only by creating an accuracy cliff. In its framing, only validated compaction reaches linear cost while preserving fidelity.</p>
+<p>The paper places that argument in the context of production adoption, saying that as of 2025 a majority of enterprises are experimenting with AI agents, but only about a quarter report scaling and fewer than 10% have scaled agents within any single business function. It then describes a reference implementation, <strong>Maximem Synap</strong>, as a multi-tenant service that implements the five primitives and adds anticipatory retrieval so context can be prepared before an explicit request. The system is described as enforcing tenant isolation at the storage and query layers, with identity derived from the credential.</p>
+<p>On the reported evaluation, the paper says Maximem Synap reached <strong>92.0%</strong> on LongMemEval, or <strong>460/500</strong>, and <strong>93.2%</strong> on LoCoMo categories 1–4, under the configuration it details. It also says existing benchmarks do not yet capture all the dimensions that matter in production, and points to future work on a benchmark that would measure accuracy, latency, token efficiency, and resistance to context rot together.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.21503v1" target="_blank" rel="noopener noreferrer" title="arXiv / Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Interactive Training 2: Auditable Control Plane for Live Model Training</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the University of Waterloo and the University of Wisconsin-Madison present Interactive Training 2, a control plane for live model training that is meant to make steering runs auditable; the open question is whether one shared protocol can replace the trainer-specific code researchers now rely on.</p>
+<p>The paper says experiment trackers can show how training is progressing, but changing a live run still usually requires custom callbacks or logic written for one trainer and one experiment. Interactive Training 2 is designed to sit between training code and its controllers: training applications declare which settings and actions they expose, humans and automated controllers send requests through the same interface, and the training loop decides when to validate and apply those requests at safe control points.</p>
+<h3>How the system is meant to work</h3>
+<p>The authors describe the training loop as staying in control. A controller can request a change — for example, a learning-rate adjustment — but the update is only applied when the loop reaches a designated control point. The system also records what was requested, whether it succeeded, and what happened around it, which is why the authors call it “auditable.”</p>
+<p>A customized Aim workspace is used to combine live metrics and controls with a chronological record of requests and outcomes. The paper says the same typed protocol can be used by humans, scripts, heuristics, and an optional LLM agent. It also says the project moves beyond Interactive Training v1, which showed a human or constrained LLM modifying a live Hugging Face training job, by turning that trainer-specific demonstration into a reusable protocol.</p>
+<p>The system is demonstrated across five NLP and reinforcement-learning workflows: sentiment classification, sentiment mixing, layerwise GPT, Muon–AdamW GPT, and RLVR Countdown. In the released runs, the protocol covers a range of changes, from optimizer and checkpoint settings to source and class mixtures, layerwise learning rates, momentum, and curriculum controls. The paper says the released code and traces are meant to provide a reusable foundation for auditable human- and agent-guided training.</p>
+<p>The authors also show a concrete request-to-result path in the deployed interface and say the journals can be checked against the traces. Their conclusion is that Interactive Training 2 turns live training intervention from experiment-specific logic into a reusable interface for interactive training tools and for more systematic studies of human and automated supervision during learning.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.18314v1" target="_blank" rel="noopener noreferrer" title="arXiv / Interactive Training 2: Auditable Control Plane for Live Model Training">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="nature">
+  <summary>How to prevent AI from harming mathematics</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Leiden Declaration on Artificial Intelligence and Mathematics was published on 2 June after a September 2025 workshop in Leiden, the Netherlands, that brought together around 60 mathematicians, computer scientists, historians, philosophers and social scientists. The declaration was written with 15 colleagues and, the author says, has since been signed by roughly 3,000 scientists, most of them research mathematicians. It was presented against worries that rapid AI development is already affecting science, including a rise in low-quality research papers written with chatbots and the growing power of technology companies over the strongest models.</p>
+<p>The declaration calls on mathematicians, as individuals and as a community, to make sure AI brings benefits rather than irreversible harm to the field. It says AI should speed up work and help researchers gain insights, but not erase expertise, create rifts in the community or weaken the educational system. It also sets out core values for the discipline — transparency, scientific integrity and proper attribution — and urges researchers to ensure correctness, follow open science, provide enough information for thorough review, insist on human authorship, disclose AI use and make informed ethical choices about which tools to use and whether to collaborate with industry.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02309-7" target="_blank" rel="noopener noreferrer" title="Nature / How to prevent AI from harming mathematics">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new method for frozen LLMs and VLMs tries to make agent decisions cheaper and more precise by reading hidden states instead of adding heavier routing or orchestration, with the key question being whether a model can tell when to continue, hand off, call tools, or stop from its own latent generation process.</p>
+<p>The authors call the system <strong>Multi-Head Latent Control</strong>. It adds a lightweight layer on top of a frozen backbone and uses hidden-state trajectories to produce deployment-time control signals without modifying the model itself. One head, the <strong>Capability Head</strong>, predicts whether the current model should keep handling the instance or defer to a stronger model. The other, the <strong>Resolution Head</strong>, predicts the appropriate within-model action: clarification, tool use, abstention, or direct answering. Both heads are trained only on latent traces from the same frozen LLM backbone.</p>
+<h3>What it does in practice</h3>
+<p>The paper frames this as a unified control interface for agentic inference. Instead of relying on prompt-level routing or external orchestration, the method tries to make the decision from the model’s internal representations. The authors also say this can support both language and vision-language settings.</p>
+<p>In routed execution with a small model plus a large model, the method reduces large-model usage by up to <strong>90.7% on AndroidWorld</strong> and by <strong>27–53% on average across benchmarks</strong>, while retaining most of the large-model performance. For tool-use decisions, it improves quality with up to <strong>+158% relative score gain</strong> and <strong>65.5% fewer missed-required tool calls</strong>. The paper also says the control signals improve When2Call resolution decisions and web-search decisions on TriviaQA.</p>
+<p>The reported setup includes training control heads on top of backbones such as <strong>Qwen3-VL-2B/4B/32B</strong>, <strong>Qwen3-VL-2B-Thk/4B-Thk</strong>, <strong>Qwen3.5-4B/9B</strong>, and <strong>Gemma-4B/4B-Thk</strong>. The authors say the approach enabled early handoff from partial generations and more accurate intervention choices, and they made code available at the listed GitHub repository.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.14277v1" target="_blank" rel="noopener noreferrer" title="arXiv / Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>SceneActBench: Can Agents Act on the 3D Scenes They See?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">SceneActBench adds a shared test for vision-language model agents that act on 3D scenes, and its first results suggest the field still lacks systems that perform well across full scenes of many objects rather than only one operation or one kind of answer.</p>
+<p>The benchmark asks agents to turn visual evidence into executable 3D outputs across five tasks: Layout, Camera, Articulated, Reconstruction, and Dynamic. It uses a unified inspect–act–render loop, with PNG views or sampled video frames and, where applicable, supplied 3D assets. The final output is checked against hidden ground truth using task-specific geometric metrics, so the benchmark measures whether the produced 3D result matches the target scene rather than whether the agent can describe it.</p>
+<p>SceneActBench draws on 210 source instances and produces 520 task cases, including paired input conditions. The sources include 100 furnished rooms from 3D-FRONT, 100 articulated objects from the S2O Articulated Containers Dataset, and 10 multi-object dynamic scenes built from Kenney kits. The paper says all tasks run through one fixed agent loop to keep comparisons fair.</p>
+<p>Across eleven proprietary VLM configurations, Overall scores range from 38.6 to 50.2, and no configuration performs consistently well across all tasks. One example of that unevenness is GPT 5.4 High, which leads Layout, Articulated, and Reconstruction but ranks fourth overall because it trails GPT 5.4 Medium by 21.8 task-score points on Dynamic. The Dynamic task’s contribution is concentrated in a few scenes, with raceloop and factory accounting for most of the gap between two leading systems.</p>
+<p>The authors say the benchmark is meant as a geometric stress test for multi-object 3D action, but they also flag limits in the current study: it evaluates proprietary VLM configurations, uses one completed run per configuration-case pair, and treats Dynamic as a targeted test rather than a broad estimate of dynamic-scene performance.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.22393v1" target="_blank" rel="noopener noreferrer" title="arXiv / SceneActBench: Can Agents Act on the 3D Scenes They See?">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>‘Timer’ in the brain tracks sleep — and predicts awakening</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers in mice have identified a chemical signal in the brain that tracks the length of a sleep session, counts interruptions and predicts when an animal is likely to wake, raising the possibility of a new way to measure sleep debt.</p>
+<p>Sleep deprivation can be dangerous, but it is difficult to measure. Previous sleep research has focused mostly on the circuitry that snaps people awake in seconds or on how sleep debt builds up after days of poor sleep. The unanswered question was how the brain keeps track of the minutes or hours spent in one continuous sleep session.</p>
+<p>Yao Chen, a neuroscientist at Washington University in St. Louis, Missouri, and her team looked for molecular signals that change gradually during sleep. Using a specialized fluorescent sensor in mouse brains, they watched the effects of protein kinase A, or PKA, an enzyme also found in humans and previously linked to wakefulness. The signal they tracked behaved in a regular pattern: when mice were awake, protein tagging stayed high and steady; once they fell asleep, it declined slowly through the sleep session. During microarousals, the signal jumped up and then fell again.</p>
+<p>That pattern meant the tagging recorded both total sleep time and the number of interruptions, and the researchers found it predicted the moment-to-moment chance that a mouse would wake more accurately than sleep duration alone. Chen said the signal does not act like an alarm clock for the exact second of waking, but reflects a growing physiological readiness to wake.</p>
+<p>Ketema Paul, a neuroscientist at the University of California, Los Angeles, who was not involved in the research, said such a biomarker could one day help check whether someone is sleep-deprived. He called it a possible “sobriety test” for sleep, useful in high-stakes jobs such as truck driving or hospital emergency-room work. The work was posted on bioRxiv and has not yet been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02294-x" target="_blank" rel="noopener noreferrer" title="Nature / ‘Timer’ in the brain tracks sleep — and predicts awakening">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>When should you treat a fever? Evolution holds the answer</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Evolutionary thinking is presented as a guide to medicine, law and policy in Owen D. Jones’s *Force of Nature*, but the review says the hardest question may be a familiar one: when a fever helps recovery, and when it should be treated.</p>
+<p>Jones, a biologist and legal scholar, argues that understanding natural selection can improve how humans interact with their environment and with one another, and that ignoring Darwinian thinking can cause problems. He draws on case studies from medicine, agriculture and law to make that case. Among the examples is antimicrobial resistance, where overuse of antibiotics and antimicrobial chemicals creates the conditions for resistance to evolve. People who stop tuberculosis antibiotics early, he says, can inadvertently encourage antibiotic-resistant microbes. He also points to cancer, where mathematical models can help predict how tumour cells respond to targeted therapies and how resistant cells can rebound if competitive pressure is reduced.</p>
+<h3>The fever debate</h3>
+<p>The review says Jones’s discussion of fever shows both the promise and the limits of that approach. He follows evolutionary biologist Paul Ewald in describing raised body temperature as a natural response to infection that aids recovery, and suggests that people should avoid ibuprofen and other fever reducers when it is safe to let the body respond as it evolved to.</p>
+<p>But the review says the issue is more complicated. Ewald’s 1994 book noted that many germs grow well in febrile conditions, and viruses and bacteria evolve faster than animal immune systems. Rather than a blanket rule, the review argues, medical researchers should identify which germs thrive in fever and which do not, so physicians can choose the best intervention. If genomic markers suggest a virus or bacterium is likely to grow in fever, temperatures should be reduced; otherwise, the fever should be left to run its course.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02313-x" target="_blank" rel="noopener noreferrer" title="Nature / When should you treat a fever? Evolution holds the answer">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Researchers are building computers that run on brain organoids — but have neglected a major ethical issue</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers are testing whether lab-grown brain tissue can do some of the work of a computer, but the push to build biocomputers from brain organoids has opened a gap in consent practices that could matter for donors whose cells were given for other kinds of research.</p>
+<p>The appeal is straightforward: brain tissue combines memory and computation in the same substrate, and brains use far less energy than AI machines while avoiding vast cooling systems. In the lab, pluripotent stem cells can be coaxed into brain organoids, and information can be encoded in neural stimulation and read out through microelectronic array systems. The setup has already been used for some simple computational processes that underpin how hardware-based AI models identify patterns and make predictions.</p>
+<h3>The consent problem</h3>
+<p>The ethical issue raised here is not the familiar debate over consciousness or the morality of using lab-grown brain tissue. It is that, one key issue has been absent from debates so far: explicit consent for the use of human neural tissue in biocomputing.</p>
+<p>Biocomputing research depends on voluntary cell donations, often from people undergoing medical procedures who give material altruistically for biomedical and basic biological research. But the consent forms typically do not ask what future uses donors would accept, or what uses they would reject. That matters because someone who agreed to support cancer research might not expect their tissues to be used to build biocomputers, including for possible commercial uses.</p>
+<p>A more explicit and nuanced consent approach is needed. It argues that researchers should avoid using cell lines whose consent covered only biomedical research, and a system should be created for seeking retrospective consent or, when that is impossible, for reviewing the ethics of the project through re-consent processes or independent review.</p>
+<p>Additionally, biocomputers could eventually be used for commercial tasks unrelated to biomedicine, such as voice or face recognition. On that basis, open-ended consent is not enough for this field, and biocomputing needs strong ethical oversight before lab-grown brain tissue is put to work in new kinds of computing.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02316-8" target="_blank" rel="noopener noreferrer" title="Nature / Researchers are building computers that run on brain organoids — but have neglected a major ethical issue">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>The existential choice facing UK physics facilities: commercialize or close</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">UK physics facilities are being told to find commercial income or face closure, as the Science and Technology Facilities Council confronts a £42 million a year shortfall that could reshape flagship sites including Diamond, ISIS, the CLF and other national labs.</p>
+<p>The government has said all STFC-funded sites must raise more money to cover their running costs. That pressure comes as UK public research funding is being overhauled around government priorities, with UKRI’s budget set to rise from £8.8 billion in 2025–26 to £10 billion in 2029–30 while cash for “curiosity-driven research” is expected to stay roughly flat. Most of the increase is due to go to strategic priorities such as artificial intelligence, business support, talent and infrastructure.</p>
+<p>Patrick Vallance resigned as science minister on 20 July, and Chris McDonald was appointed on 24 July after Andy Burnham merged the Department for Science, Innovation and Technology into a larger Department of Business, Innovation, Science and Trade.</p>
+<h3>The pressure on STFC sites</h3>
+<p>The STFC said cuts will be needed elsewhere to meet rising grant costs for postdoctoral researchers and membership fees to international organizations such as CERN. Under the current plan, Diamond Light Source, the ISIS Neutron and Muon Source and the Central Laser Facility will fall by 15% — or £28 million a year — by 2030. Spending on national labs and estates will fall by 8%, or £14 million a year, and the Boulby Underground Laboratory faces a 40% annual reduction over the same period.</p>
+<p>UKRI has given the STFC a one-off £135 million injection over three years so facilities can stay open long enough to find savings and extra income. The STFC says sites should cut user support and technical assistance, and UKRI chief executive Ian Chapman said on 9 July that ISIS beam time will fall from 80% to 66%. He also said job cuts are coming across the STFC, with headcount reductions likely to be in the hundreds.</p>
+<p>The push is also toward more external income. Diamond and ISIS already charge companies for proprietary research, and facilities can sell technology, charge for lab access or support industrial work. But Chapman said staff at STFC sites are relatively inexperienced at generating revenue from outside sources. The STFC received £29 million in revenue from facilities, goods and services in 2025–26, about 3.5% of its annual budget, compared with around 5% at the Institut Laue–Langevin in Grenoble and about 7% at the Paul Scherrer Institute in Switzerland.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02171-7" target="_blank" rel="noopener noreferrer" title="Nature / The existential choice facing UK physics facilities: commercialize or close">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>A fever dream of jellies and slugs</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new volume on Ernst Haeckel gathers 450 drawings, watercolours and sketches that still echo in art and architecture, while his vivid natural history sits uneasily beside his eccentric, eugenic and racist ideas.</p>
+<p>The book, *The Art and Science of Ernst Haeckel* by Julia Voss and Rainer Willmann, ranges across the nineteenth-century German polymath’s work, from umbrella-shaped medusae with tentacles like bridal veils to radiolarians that call to mind beehives and Buddhist temples. It also shows nudibranchs sprouting fronds and tubules, and Siphonophorae resembling coiled intestines.</p>
+<p>Born in 1834 in Potsdam, Haeckel was a biologist, evolutionist, artist, philosopher and physician. He was known for defending Charles Darwin’s theory of evolution in an 1863 lecture in Stettin, and his colourful illustrations inspired several artists and architects. The book says his drawings helped shape later designs, including a ceiling lamp at the Oceanographic Institute in Monaco and a chandelier at the Amsterdam Stock Exchange.</p>
+<p>But the same career carried darker ideas. The evidence describes Haeckel’s views as ranging from eccentric to eugenic, and says he believed the simplest unicellular organisms had an early form of the soul, a notion he extended to atoms and crystals. It also says he ranked “the diverse types of mankind” by relative “value” and wrote of “woolly haired” people as the lowest-value group, “incapable of a true inner culture and a higher intellectual development.”</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02314-w" target="_blank" rel="noopener noreferrer" title="Nature / A fever dream of jellies and slugs">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="openalex">
+  <summary>Navigating parameter space: mitigating catastrophic forgetting in continual learning</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A study titled *Navigating parameter space: mitigating catastrophic forgetting in continual learning* examined how fully connected (FC) layer architecture affects parameter regularization in class incremental learning. Using a modified ResNet-18 trained on the CIFAR-10 dataset, it found that a dynamically expanding FC architecture substantially outperformed a conventional static FC layer. The work frames the problem as catastrophic forgetting, where performance on earlier tasks deteriorates as new tasks are learned, and builds on parameter regularization approaches such as Elastic Weight Consolidation (EWC).</p>
+<p>To address limited memory retention with EWC in static FC architectures, the study proposes a new method called Range Matrix. Unlike EWC, which constrains parameters identified by the Fisher Information Matrix, Range Matrix constrains all network parameters within dynamically computed bounds derived from loss gradients. The reported results say Range Matrix improves memory retention and reduces catastrophic forgetting relative to EWC with a static FC architecture. Control experiments further found that the gain from Dynamic FC came mainly from context partitioning rather than model capacity alone, and overlap analysis showed that EWC and Range Matrix target substantially different parameter subsets.</p></div>
+  <div class="source-list"><a href="https://doi.org/10.64336/001c.165645" target="_blank" rel="noopener noreferrer" title="OpenAlex / Navigating parameter space: mitigating catastrophic forgetting in continual learning">OpenAlex #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
