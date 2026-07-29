@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-07-29</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-07-29</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>&#x27;It feels like hell&#x27;: Gaza families battle suffocating summer heat in tents</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gaza families living in tents and school shelters are now enduring a summer they say traps heat, insects and thirst inside flimsy coverings, turning the same shelters that failed them in winter into another hazard as displacement, damaged services and scarce relief leave little escape.</p>
+<h3>From winter cold to a greenhouse in summer</h3>
+<p>In January, Rajaa Jendiya described Gaza’s winter as the harshest she had endured in nearly two years of displacement. Now the rain has stopped, and the same tent that did not protect the Palestinian widow and mother of three from the cold has become, she said, a trap for stifling heat under the summer sun.</p>
+<p>“It’s exactly like living in a greenhouse,” Jendiya said. “The way the tent traps the sun’s rays and concentrates the heat creates the same conditions as a greenhouse.” She said the temperature and humidity become so intense that it feels “literally suffocating” and she has to go outside.</p>
+<p>Jendiya lost her husband when Israeli forces killed him on 14 March 2024 in one of the “flour massacres” during Israel’s siege and starvation of northern Gaza. After her home in Shujaiya, in eastern Gaza, was destroyed in an Israeli bombing, she is among the hundreds of thousands of Palestinians in Gaza who remain displaced, living in makeshift shelters such as the school in the heart of Gaza City where she now stays.</p>
+<h3>Heat, mosquitoes and sleepless nights</h3>
+<p>With little access to basic services and few ways to escape the heat, summer has brought a new set of problems for displaced families. Jendiya said the insects are as much a burden as the temperature itself.</p>
+<p>“The heat is something, and the insects that come with it are another thing,” she said. “All night long, we cannot sleep because of the mosquitoes, and once the sun rises, flies take over.” She said the problem has become so severe that “we cannot sleep either at night or during the day,” and that the heat has brought “new kinds of insects we have never seen before.”</p>
+<p>The scale of displacement in Gaza gives those complaints wider weight. Around 1.9 million of Gaza’s 2.1 million residents remain displaced, according to Unicef, many of them living in tents and other makeshift shelters. Gaza’s summers are also marked by high humidity because of its Mediterranean location, with average temperatures around 30-32C and frequent heatwaves above 35C.</p>
+<p>Jendiya says she regularly takes her children to hospital because of illnesses linked to the unhealthy conditions in the school-turned-displacement camp. “Inside and around the school, you often see sewage water overflowing, while rubbish accumulates, attracting flies and insects,” she said. “These conditions become even worse with the heat, and many times my children have developed skin diseases.”</p>
+<p>Health workers have reported that skin diseases have become increasingly widespread among displaced Palestinians across the Gaza Strip, including scabies, fungal infections, rashes and lice, particularly among children.</p>
+<h3>No shade, no clean water, no way to cool down</h3>
+<p>For other displaced Palestinians, the problem is not only the heat inside a shelter but the absence of any place to escape it. Mona al-Mallahi, 47, has set up her tent on a street island opposite al-Azhar University of Gaza, and she says she spends much of her day outside because the tent becomes unbearable.</p>
+<p>“There is no escape from the heat. During the day, we cannot stay inside the tent because it becomes unbearably hot, but outside there is no shade to protect us from the blazing sun,” she said. “We spend every day searching for a way to breathe.”</p>
+<p>Al-Mallahi said the lack of water makes the heat harder to bear. “We are drenched in sweat from the moment we wake up until we go to sleep. I need to shower at least five times a day just to cope, but that’s impossible,” she said. “We barely have enough water for the most basic needs, let alone to cool ourselves down.” Families often collect water for washing and bathing by filling containers from nearby schools, homes or displacement sites, while drinking water is harder still to get and can require hours of queuing at distribution trucks.</p>
+<p>The destruction of more than 81 percent of Gaza’s buildings has made conditions even harsher for people living in tents, while more than 80 percent of the Strip’s water, sanitation and hygiene infrastructure has been damaged or destroyed. That has left many displaced people without what they describe as the “luxury” of running water, even as the summer sun intensifies the hardship.</p>
+<h3>Even a roof does not bring relief</h3>
+<p>The burden is not limited to people sleeping in tents. Emad al-Sirsawi, who lives in a damaged apartment in Tal al-Hawa, southwest of Gaza City, said the only difference between his situation and that of people in tents is that he has a ceiling above his head.</p>
+<p>“The only difference is that we have a ceiling above our heads to protect us from the sun. But we still suffer from the heat and insects with very little protection,” he said. “We don’t have air conditioners or fans. And even if some of us had them before the war, we cannot use them because there is no electricity, or because we cannot afford the electricity supplied by private generators.”</p>
+<p>Since the beginning of Israel’s military offensive on Gaza in October 2023, the Strip has been plunged into darkness because of fuel shortages and the destruction of much of its electricity infrastructure. The electricity authority has not been able to restore a reliable supply, even partially, and private generator owners sell limited electricity at extremely high prices. In some areas, one kilowatt-hour costs around 35 Israeli shekels, or about $11.5, leaving most residents able to use it only for essentials such as lighting and charging devices.</p>
+<p>That shortage also affects food and cooking. Al-Sirsawi said refrigerators often cannot be used, so food spoils by the end of the day. He said families are forced to cook every day, but without cooking gas they rely on firewood even in the extreme heat. “No one can find comfort in Gaza, neither in summer nor in winter,” he said.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/its-suffocating-gazas-displaced-families-battle-summer-heat-tents" target="_blank" rel="noopener noreferrer" title="Middle East Eye / &#x27;It feels like hell&#x27;: Gaza families battle suffocating summer heat in tents">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="cnn,guardian,nyt">
+  <summary>Japan earthquake injures at least 100 and kills two inside shopping mall</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 6.8-magnitude earthquake in Kumamoto prefecture killed at least two people and injured at least 100, with the most urgent questions centered on the Aeon Mall Kumamoto, where rescuers were pulling people out after an explosion and searching for anyone still missing.</p>
+<p>The quake struck southern Kyushu late on Tuesday afternoon, damaging buildings, roads and bridges and knocking out power to thousands of homes. CNN said the earthquake was recorded on Kyushu, about 550 miles from Tokyo, and noted that the area was still recovering from the 2016 Kumamoto quakes, which killed hundreds and caused widespread damage.</p>
+<h3>The mall became the hardest-hit and most uncertain site</h3>
+<p>The prefectural government said rescuers working overnight at the Aeon Mall Kumamoto shopping centre had taken eight people out of the building. Two women in their 20s were confirmed dead, one other person was reported to be in cardiopulmonary arrest, and the remaining five were injured but not thought to be in life-threatening condition.</p>
+<p>Firefighters had said earlier that an explosion occurred in the mall shortly after the earthquake. A government official told reporters that a gas leak had been reported, but the cause was still not known. NHK reported that about 20 to 30 workers at the mall were unaccounted for, while fire services said “many people” were trapped inside.</p>
+<p>Footage showed one side of the mall, the prefecture’s largest with roughly 200 shops, torn away, exposing steel beams and leaving debris across the neighbouring car park. Several ambulances and fire engines were parked outside as rescue teams searched for survivors.</p>
+<h3>Damage spread beyond the shopping centre</h3>
+<p>Kyodo News agency said a hospital in Yatsushiro city accepted about 40 people with injuries from the quake. The Guardian also cited NHK saying two hospitals reported more than 50 injuries each, including 10 in a serious condition.</p>
+<p>Other damage was reported around the prefecture. A train derailed and fell on its side at Yatsushiro station, and stone walls were damaged at Kumamoto Castle, Kyodo said. In the nearby town of Mashiki, Shinto priest Yozo Kai said a few stone lanterns fell down. “I worried if the main hall and the gate would tilt again,” he told Kyodo.</p>
+<p>Hiroki Shimoda, an official at Mifune town hall, said rooftiles from nearby homes crashed down to the ground. “The shaking reminded me of the Kumamoto quake (10 years ago) and I was frightened,” he said.</p>
+<h3>Aftershocks kept the prefecture on edge</h3>
+<p>CNN said at least six additional quakes were recorded in the region after the larger incident, with magnitudes ranging from 4.4 to 5.6. The Japan Meteorological Agency said the biggest tremors would remain at risk of further strong quakes and landslides for about a week, and that more than 60 aftershocks ranging in magnitude from 1 to 4 had already been recorded.</p>
+<p>The disaster management agency said about 300,000 people had been instructed to go to evacuation centres. A tsunami warning was issued immediately after the quake, but was lifted within two hours.</p>
+<p>Japan’s prime minister, Sanae Takaichi, said authorities were still assessing the extent of the damage. She said people had been injured and that “power outages and fires have occurred in some areas,” along with damage to roads, bridges and buildings.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/07/28/world/japan-earthquake-maps-charts-vis" target="_blank" rel="noopener noreferrer" title="CNN / Tracking the impact of the Japan earthquake in maps and charts">CNN #1</a><a href="https://www.theguardian.com/world/live/2026/jul/28/people-trapped-japan-earthquake-kumamoto-aeon-shopping-centre-mall-latest-news-updates?page=with%3A6a6890328f089924d071939f#6a6890328f089924d071939f" target="_blank" rel="noopener noreferrer" title="The Guardian / Kyodo News agency said a hospital in Yatsushiro city accepted about 40 people with injuries from the quake.">Guardian #1</a><a href="https://www.theguardian.com/world/live/2026/jul/28/people-trapped-japan-earthquake-kumamoto-aeon-shopping-centre-mall-latest-news-updates?page=with%3A6a68ccf68f089924d071972b#6a68ccf68f089924d071972b" target="_blank" rel="noopener noreferrer" title="The Guardian / What we know so far A 6.8-magnitude earthquake has shaken south Japan, leaving at least 50 people injured.">Guardian #2</a><a href="https://www.theguardian.com/world/2026/jul/28/japan-earthquake-traps-people-collapsed-shopping-mall" target="_blank" rel="noopener noreferrer" title="The Guardian / Japan earthquake injures at least 100 and kills two inside shopping mall">Guardian #3</a><a href="https://www.nytimes.com/interactive/2026/07/28/world/quake-tracker-japan.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Map: 6.8-Magnitude Earthquake Shakes Japan">NYT #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>‘The dream I carried is gone’: Miscarriages rise amid trauma of Gaza’s war</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Pregnancy losses are rising in Gaza as doctors and women describe war, displacement, hunger and collapsing medical care shaping pregnancies that end in miscarriage, stillbirth or emergency birth, with one mother in Deir el-Balah saying repeated losses have left her long-held dream of motherhood in ruins.</p>
+<h3>A mother’s repeated losses</h3>
+<p>In Deir el-Balah, Gaza, Nuha Abu Lebda said she had dreamed for years of becoming a mother. Since the war began in October 2023, she has been forcibly displaced several times across the Gaza Strip and has lost three pregnancies.</p>
+<p>She said the losses came after months of air strikes, fear, hunger and living without proper medical care. “I miscarried because of the air strikes, the displacement, the difficult conditions, the lack of clean water and malnutrition,” she said. After each miscarriage, she hoped she could still become a mother, but after the latest loss she said, “the dream I carried for 10 years was gone.”</p>
+<p>Abu Lebda said she sold her gold and almost everything she owned to pay for heparin injections, a drug prescribed to some women to prevent blood clotting during pregnancy. She hoped the treatment would help her carry a pregnancy to term, but she lost the babies anyway. “I cried so much because I lost the baby I dreamed of every single day,” she said.</p>
+<p>Even after the fighting slowed, she said, the hope remained the same. “I dream of bringing a baby into this world. I want to be a mother and have children,” she said.</p>
+<h3>Doctors say the losses are increasing</h3>
+<p>At al-Awda Hospital, doctors said they are seeing a sharp rise in pregnancy losses. Dr Yasser Saadeddine, the maternity director at the hospital in Deir el-Balah in central Gaza, said roughly 70% of the pregnancy losses his team treats are linked to the war and blockade.</p>
+<p>He said the increase has worsened as Gaza’s health system has collapsed under bombardments and Israeli ground operations, with malnutrition and psychological strain among the main drivers. Doctors at the hospital said they have seen more miscarriages, more premature deliveries and more dangerous pregnancy complications.</p>
+<p>Saadeddine said the causes include “the war and the blockade, including malnutrition, poor hygiene, environmental contamination and continuous displacement.” He also said many women have lost homes, medical records and access to regular check-ups during repeated displacements, while hospitals struggle with shortages of medicines, equipment and medical staff.</p>
+<h3>Other women describe the same pattern</h3>
+<p>Abu Lebda is one of several women in Gaza who told of losing pregnancies or babies while trying to survive the war. Mai Zaqout said she lost her daughter during childbirth because she could not access the medical care she needed. She said her daughter had died in her womb a month earlier, but she could not deliver because the medical resources and support she needed were unavailable. Her loss came soon after her husband was killed.</p>
+<p>Sara al-Awad said powerful explosions in Tal al-Hawa, a neighbourhood in Gaza City, caused extreme fear and stress when she was eight months pregnant, leading to severe bleeding. She said no ambulance could reach her, so after waiting for hours she was taken to al-Quds Hospital in a wheelchair by her brother. Doctors decided she needed an emergency C-section immediately. Her baby, Muhammad, was born weighing 1.1kg and placed in an incubator. She said fighting around the hospital later separated her family from him, and they could only check on him through messages from medical staff until they were reunited after more than a month.</p>
+<p>Other women described similar losses. Iman Badah said she lost her only son after giving birth prematurely while being displaced. Nuha Salameh said fear and trauma caused her to lose twins. Nidaa Seyam said she suffered a second miscarriage during the war and was told by doctors that psychological stress and malnutrition had affected the pregnancy.</p>
+<p>For women in Gaza, the war has left wounds that persist in every lost pregnancy and every interrupted attempt to become a mother.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/features/2026/7/28/the-dream-i-carried-is-gone-miscarriages-rise-amid-trauma-of-gazas-war?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / ‘The dream I carried is gone’: Miscarriages rise amid trauma of Gaza’s war">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>Israel expands ‘yellow line’ military zone, pushing Gazans away from home</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Gaza City’s Zeitoun district, Palestinian resident Assem Dawla loaded mattresses and bags onto a truck as concrete yellow blocks marked the edge of Israel’s expanding military zone amid the rubble. Dawla said it was the seventh or eighth time since the war began that he and his family had been forced to leave a shelter because of Israeli evacuation orders and the advance of what residents call the yellow line. Zeitoun is one of at least five locations across Gaza mentioned in connection with it.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/middle-east/article/3362135/israel-expands-yellow-line-military-zone-pushing-gazans-away-home" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israel expands ‘yellow line’ military zone, pushing Gazans away from home">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>Ebola cases in DR Congo top 3,200, nearing record of country’s worst outbreak</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Confirmed Ebola cases in the Democratic Republic of Congo’s ongoing outbreak reached 3,262, the health ministry said in an overnight update, putting the tally close to the 2018-2020 outbreak, which remains the largest ever recorded in the country. Ministry data showed 1,437 deaths among the 3,262 cases. Officials have said the outbreak is the fastest on record and that it is concentrated in the eastern Ituri province.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/africa/article/3362155/ebola-cases-dr-congo-top-3200-nearing-record-countrys-worst-outbreak" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Ebola cases in DR Congo top 3,200, nearing record of country’s worst outbreak">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="vanguard_ng">
+  <summary>9 million still miss HIV treatment, WHO warns</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">WHO says the global response to HIV has made major gains, but nearly nine million people are still without treatment and recent funding cuts, humanitarian shocks and inequalities could still upset the drive to end HIV, viral hepatitis and STIs as public health threats by 2030.</p>
+<p>The warning comes from WHO’s latest assessment of the Global Health Sector Strategies on HIV, Viral Hepatitis and STIs 2022–2030, released at the 26th International AIDS Conference in Rio de Janeiro, ahead of World Hepatitis Day. The picture is mixed: progress over the past decade is real, but it remains fragile unless countries keep investing and strengthen the systems that deliver care.</p>
+<h3>Gains on treatment, but the gap remains large</h3>
+<p>WHO said about 32 million people were receiving HIV treatment by the end of 2025. The report also says new HIV infections have fallen by 42 per cent and AIDS-related deaths by 57 per cent since 2010.</p>
+<p>Even so, WHO said nine million people still lack access to treatment. Additionally, new infections are still rising in several regions, especially among key populations including sex workers, men who have sex with men, people who inject drugs, transgender persons and people in prisons.</p>
+<p>WHO Director-General Dr Tedros Adhanom Ghebreyesus said the report shows “two stories” at once: what can happen when countries invest in health, communities and science, and how quickly progress can be undone by funding disruptions, humanitarian emergencies and persistent inequalities. He said the next five years will require “integrated, resilient health systems” that reach people “furthest behind.”</p>
+<p>The report also says progress is uneven because access to prevention has been affected in some places. It expressed concern that reductions in international donor funding in 2025 disrupted HIV prevention programmes in several countries, limiting access to pre-exposure prophylaxis, or PrEP. While some governments have stepped in to sustain services, preliminary data show PrEP use has declined in a number of countries and communities.</p>
+<h3>WHO warns the pressure is broader than HIV</h3>
+<p>The assessment does not limit its concerns to HIV. WHO said viral hepatitis remains one of the world’s deadliest infectious diseases despite advances in prevention and treatment.</p>
+<p>Annual hepatitis B infections have fallen by 32 per cent since 2015 and hepatitis C-related deaths have dropped by 12 per cent. But it also says hepatitis still caused an estimated 1.3 million deaths in 2024, and deaths linked to hepatitis B rose by 17 per cent over the past decade because diagnosis and treatment coverage remain low.</p>
+<p>On sexually transmitted infections, WHO said progress is mixed. More countries have strengthened syphilis screening during pregnancy and expanded HPV vaccination, but STI cases continue to rise in several countries. The report also flags antimicrobial resistance, particularly in gonorrhoea, as an increasing public health challenge.</p>
+<p>That wider picture matters because the Global Health Sector Strategies are meant to guide work across HIV, viral hepatitis and STIs together through 2030. WHO said the central risk is that gains in one area can be weakened if health systems, financing and service delivery are not strong enough to hold them.</p>
+<h3>WHO wants integrated care and stronger community reach</h3>
+<p>WHO identified integrated healthcare as one of the biggest opportunities to speed up progress. It urged countries to deliver HIV, hepatitis and STI services through primary healthcare, alongside tuberculosis, maternal and child health, sexual and reproductive health, and non-communicable disease programmes.</p>
+<p>The agency also called for wider use of digital health technologies, stronger disease surveillance systems, broader access to multi-disease testing platforms and equitable access to new prevention tools, including twice-yearly injectable lenacapavir for HIV prevention and doxycycline post-exposure prophylaxis for bacterial STIs.</p>
+<p>WHO further said stronger community leadership and greater use of community-generated data would improve accountability and help services reach people at highest risk. Dr Tereza Kasaeva, who heads WHO’s Department for HIV, Tuberculosis, Hepatitis and STIs, described the report as “a practical guide for action for the second half of this strategy period.” She said it shows where countries are succeeding, where progress is stalling and where investments can have the greatest impact.</p>
+<p>The assessment comes shortly after the adoption of the 2026 United Nations High-Level Meeting Political Declaration on HIV/AIDS. WHO said the report provides fresh evidence to support efforts to meet the 2030 goal of ending HIV, viral hepatitis and STIs as public health threats through universal health coverage and stronger primary healthcare systems.</p></div>
+  <div class="source-list"><a href="https://www.vanguardngr.com/2026/07/9-million-still-miss-hiv-treatment-who-warns" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / 9 million still miss HIV treatment, WHO warns">VN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,nyt,scmp">
+  <summary>Saudi Arabia says it shot down more drones as Houthis claim to have turned back tanker</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Saudi Arabia said its air defences intercepted drones aimed at eastern petroleum facilities while Yemen’s Houthis said they forced a Saudi oil tanker to turn back in the Red Sea, deepening a dispute over attacks that have spread from the Gulf of Aden route to a wider shipping confrontation.</p>
+<p>The Saudi statement added another layer to a week of cross-claims. At the same time, the Houthis continued to press their self-declared maritime blockade of Saudi vessels, saying they had targeted the Saudi oil tanker NCC GHAZAL and earlier naming two other tankers, Encelia and Layla, as part of the same campaign.</p>
+<h3>Saudi Arabia says drones were shot down</h3>
+<p>Saudi Arabia’s Defence Ministry said air defences intercepted and destroyed several drones that tried to target petroleum facilities in the country’s eastern region. The ministry said the attacks were launched from Iraqi territory and carried out by Iran-affiliated militias.</p>
+<p>Iraq moved to contain the fallout. Iraqi Prime Minister Ali al-Zaidi ordered security agencies to investigate after the Saudi allegation of a similar attack on Monday, and the Iraqi military said Iraq was committed to preventing its territory from being used as a route or launching point for attacks on “brotherly or friendly countries”. The Iraqi militias denied involvement, while the Islamic Resistance in Iraq called the Saudi claims “fabrications” and suggested Monday’s attacks were carried out by the Houthis.</p>
+<h3>The Houthis extend their Red Sea blockade claim</h3>
+<p>In Yemen, the Houthi military spokesman, Yahya Saree, said in a post on X that the group had carried out “a military operation targeting the Saudi oil tanker (NCC GHAZAL) for violating the maritime navigation ban” it had imposed on Saudi vessels. He said the group used several ballistic missiles and forced the vessel to retreat.</p>
+<p>The Houthis said their blockade announcement came on July 20, when they accused Saudi leaders of imposing “an unjust and oppressive siege” on Yemen for nearly 12 years and said they had “the right of our great people to respond to the blockade with a blockade”. More than a week later, the group said it had fired missiles at the tanker as the blockade campaign widened in the Red Sea.</p>
+<p>That was not the first tanker claim. The Houthis also said they attacked two Saudi oil tankers transiting the Red Sea last week. Saree said on July 22 that they had targeted Encelia and Layla “for their violation of the blockade decision issued by the armed forces”. The Saudi Press Agency later reported that Encelia had been hit, citing an official source at Saudi Arabia’s Transport General Authority who said all crew members were safe.</p>
+<h3>What the shipping reports say</h3>
+<p>A maritime monitor, UK Maritime Trade Operations, said a tanker reported an explosion while transiting the Red Sea and added that the crew was safe and no environmental damage was reported. In the separate Saudi-linked tanker claims, the reports also left different pieces of the picture unresolved: the Houthis said the vessel retreated, while Saudi reporting said one tanker had been hit and its crew was unharmed.</p>
+<p>The stakes are high because the Bab al-Mandeb chokepoint links the Red Sea to the Gulf of Aden and is one of the world’s most important shipping routes, including for oil exports. At its narrowest point it is just 29km wide, and in 2024 about 4.1 billion barrels of crude oil and refined petroleum products passed through it, roughly 5 percent of the global total.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/28/yemens-houthis-claim-missile-attack-on-saudi-arabia-oil-tanker?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Yemen’s Houthis claim missile attack on Saudi Arabia oil tanker">AJ #1</a><a href="https://www.nytimes.com/2026/07/28/world/middleeast/houthis-strike-saudi-tanker.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Houthis Claim Strike on Another Saudi Oil Tanker">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3362186/saudi-arabia-says-it-shot-down-more-drones-houthis-claim-have-turned-back-tanker" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Saudi Arabia says it shot down more drones as Houthis claim to have turned back tanker">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Senate confirms Trump ally Jay Clayton as director of national intelligence</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Senate confirmed Jay Clayton as director of national intelligence on Tuesday in a 51-47 vote that split along party lines, with all Republicans supporting his nomination and all Democrats opposing it. Clayton, who is currently the US attorney for the southern district of New York, will replace Bill Pulte, who had been serving in the role temporarily since June. Trump’s first director of national intelligence, Tulsi Gabbard, resigned earlier this year.</p>
+<p>Clayton previously served as chairman of the Securities and Exchange Commission during Trump’s first term. At his confirmation hearing on 15 July, he sidestepped questions about the 2020 election and declined to say Trump lost it, and he would not say whether voter fraud is a problem in American elections. In a CNBC interview in June, he suggested there was “something amiss” about California’s long ballot-counting process and said, “We had a problem, a deep problem with voting in America.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/jul/28/senate-confirms-jay-clayton-national-intelligence-director" target="_blank" rel="noopener noreferrer" title="The Guardian / Senate confirms Trump ally Jay Clayton as director of national intelligence">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="indian_express">
+  <summary>10-yr-old girl raped, 4-yr-old sister sexually abused; 61-yr-old held</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Pimpri Chinchwad police arrested a 61-year-old construction worker on charges of raping a 10-year-old girl and sexually abusing her four-year-old sister. A First Information Report was registered on Monday at a police station under the Pimpri Chinchwad police jurisdiction in Pune after the girls’ mother filed a complaint, and the accused was produced before a court on Tuesday and remanded to seven days of police custody. Police said he is a resident of the same locality as the girls’ family.</p>
+<p>According to the complaint, the man allegedly raped the 10-year-old on at least two occasions between May and July, and also sexually abused her younger sister. The complaint also says he forcefully took the girls to his own house and assaulted them. Police booked him under Bharatiya Nyay Sanhita provisions related to rape and sexual assault, along with the Protection of Children from Sexual Offences Act. He was also booked under the Scheduled Caste and Scheduled Tribe (Prevention of Atrocities) Act, as the victims’ family is from a Scheduled Caste community.</p></div>
+  <div class="source-list"><a href="https://indianexpress.com/article/cities/pune/10-yr-old-girl-raped-4-yr-old-sister-sexually-abused-61-yr-old-held-10808006" target="_blank" rel="noopener noreferrer" title="The Indian Express / 10-yr-old girl raped, 4-yr-old sister sexually abused; 61-yr-old held">TIE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Four members of the Sinaloa cartel charged for migrant kidnapping</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The FGR said it had enough evidence for a federal judge to bind over four people tied to the Sinaloa cartel for possible involvement in the aggravated kidnapping of migrants in Sinaloa and for organized crime. At the initial hearing, the control judge ordered official pretrial detention and gave three months for the supplementary investigation. The inquiry began in June 2024 after a phone call from a man who reported that his underage son and four other foreign migrants had been abducted by armed individuals while traveling by bus through Escuinapa, and the alleged perpetrators contacted families to demand money for their release.</p>
+<p>Days later, a legally authorized search at a property in the Villa Galaxia neighborhood of the same city found the five victims and another 26 people of various nationalities who were also deprived of liberty. The Federal Public Ministry then obtained search warrants for six properties in Mazatlán and Culiacán, where Milagros Danae Tiznado Guzmán, Yadira Vázquez García and José Ismael Ruiz Galindo were detained; Tomás Guerrero Pérez, alias El Contador, had an arrest warrant executed at the El Castillo Penitentiary Center.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/28/politica/012n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Four members of the Sinaloa cartel charged for migrant kidnapping">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="atlantic">
+  <summary>Trump Crashes Into Reality</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Trump’s attempt to project boundless power is running into hard limits in Iran and at home, where a prolonged war, slipping Republican loyalty, and resistance to his voting agenda are narrowing his room to maneuver.</p>
+<p>Recent months have brought a reckoning for Trump, who has crashed against obstacles that his own allies did not seem to expect. The war in Iran, which he once thought would last only a few weeks, hit the five-month mark today. The U.S. casualty count is growing, weapons stockpiles are running low, and gas prices are surging again. Trump wants the war to end, but he is getting conflicting advice: some advisers want escalation, while others urge him to cut his losses.</p>
+<p>On Friday, Trump gathered senior advisers at the White House to review the latest options after nearly two weeks of U.S. bombing. Tehran has struck back against allies in the region, including a hit on a military base in Jordan that killed three American service members. Negotiations for a permanent peace have stalled, and Iran has continued to threaten the Strait of Hormuz, including talk of charging tolls for ships using the waterway. Trump had previously wanted to avoid resuming hostilities after signing a cease-fire agreement last month at Versailles, but the new bombing campaign has not produced meaningful change along the strait.</p>
+<p>A senior White House official said Trump was more inclined to order a heavier assault, but he and his advisers again backed away from it. The reasons included concern about depleting defensive interceptor missiles used by Central Command, widening the war in the Middle East, angering Gulf allies, and triggering an energy or refugee crisis. The official said Trump repeatedly worried that escalation could spark a global economic conflagration and “turn me into Hoover.”</p>
+<p>Domestically, Trump is also running into resistance. His approval numbers have sunk, and Republicans are starting, in small doses, to defy him. He has demanded that the Senate blow up the filibuster to pass the SAVE Act, which would make voting more difficult and require proof of citizenship, but Republicans have refused. Trump then called for Republicans to stay in Washington to work on it, even though the legislation appears dead and the move could saddle them with unpopular votes while keeping them from campaigning before the midterms.</p>
+<p>Strategists from both parties predict that at least one chamber of Congress will flip to Democrats, which could stall what remains of Trump’s legislative agenda and open investigations into his administration and allies. After that, Trump could face his worst fear: irrelevance. Even some close allies do not know how he will react if the national conversation starts moving on without him.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/politics/2026/07/trump-iran-midterms/688089" target="_blank" rel="noopener noreferrer" title="The Atlantic / Trump Crashes Into Reality">TA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Judicial Clampdown: Mind your emojis: Judge President Selby Mbenenge — when law and decency trump ‘culture’</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Judicial Service Commission recommended that Eastern Cape Judge President Selby Mbenenge be formally suspended over sexual harassment allegations involving court secretary Andiswa Mengo. The JSC said the Tribunal had not understood the power balance between a judge president and a secretary, and described sexual harassment as an “affront to the propriety of judicial office and the values underpinning the Constitution.” The decision was presented as a response to conduct that the JSC said had no place in the judiciary.</p>
+<p>The case has also moved into court. The tribunal had earlier found Mbenenge not guilty of Category C misconduct, though it did find him guilty of misconduct, a lesser charge. The JSC later overturned that outcome, found him guilty of gross misconduct and sexual harassment, and said it would write to the Speaker of the National Assembly, opening the door to possible impeachment. Mbenenge has since filed papers in the Pretoria high court to stop the impeachment process while he seeks review of the JSC’s decision, which he called “unreasonable, unconstitutional and unlawful.”</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-07-28-mind-your-emojis-judge-president-selby-mbenenge-when-law-and-decency-trump-culture" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Judicial Clampdown: Mind your emojis: Judge President Selby Mbenenge — when law and decency trump ‘culture’">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>OMS Director General says Brazil is a global example for its health system</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tedros Adhanom Ghebreyesus, the director-general of the World Health Organization, said on Monday (27) that Brazil’s Sistema Único de Saúde, or SUS, is an example for the world because it provides universal care to a population of more than 200 million people. He made the statement during a visit to the Hospital Federal do Andaraí in the North Zone of Rio de Janeiro, alongside President Luiz Inácio Lula da Silva, Health Minister Alexandre Padilha, and state and municipal authorities. Tedros said few countries have such broad public coverage and described SUS as one of the rare health systems in the world that covers the whole population, including people who cannot pay for health services.</p>
+<p>He also praised Brazil’s role in international health, citing this year’s global pandemic agreement and the long-standing cooperation between the WHO and the Oswaldo Cruz Foundation, or Fiocruz. During the visit, Tedros took part in the delivery of a dossier marking the start of the international certification process for eliminating vertical transmission of hepatitis B, from mother to child, as a public health problem in Brazil. The document was presented on World Hepatitis Day.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/politica/noticia/2026-07/diretor-da-oms-diz-que-brasil-e-exemplo-mundial-por-sistema-de-saude" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / OMS Director General says Brazil is a global example for its health system">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Life in prison, no parole, for US teenager who killed 4 in Georgia school shooting</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Colt Gray, 16, pleaded guilty to the September 2024 shooting at Apalachee High School in Winder, Georgia, where he shot dead two 14-year-old pupils and two teachers and wounded nine other people. Superior Court Judge Nicholas Primm sentenced him on Tuesday to life in prison without the possibility of parole. Gray was 14 when the attack happened, and he was charged as an adult.</p>
+<p>Primm said Gray had been failed by his parents and extended family, but that did not excuse “who you chose to idolise, worship and become.” He also said the attack was not caused by bullying or hatred and that Gray did not know anyone at the school. The evidence also says Gray’s father, Colin Gray, was convicted in March 2026 of second-degree murder and involuntary manslaughter, in a rare case of a parent charged over a shooting carried out by their child. Colin Gray had bought the AR-15-style rifle used in the shooting as a Christmas present in 2023, despite warnings that his son had threatened to carry out a school shooting.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3362187/life-prison-no-parole-us-teenager-who-killed-4-georgia-school-shooting" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Life in prison, no parole, for US teenager who killed 4 in Georgia school shooting">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Detain El Tío, operator of cell linked to Los Chapitos</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">general_news</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Federal forces detained Ricardo “El Tío” Ozuna Tirado in Mazatlán, Sinaloa. He was described as a presumed financial operator and one of the main leaders of a criminal cell linked to Los Chapitos, the Sinaloa cartel faction. Five alleged members of the same group were also detained: Alejandro Coronel Reyes Jr., a U.S. national, and the Mexicans Marcelo Eduardo Mendoza Ramírez, José Manuel Félix Covarrubias, Jano Alonso López Ruiz, and José Manuel Sosa Carrasco. Authorities also seized two firearms, magazines, cartridges, about 100,000 dollars in cash, cellphones, computers, two vehicles and two properties.</p>
+<p>El Tío, 49, was said to have been operating in the municipality of La Cruz de Elota, Sinaloa. Intelligence work located two properties used for crimes, and a security cordon led to the detention of six people. The operation was led by Navy personnel, the Secretariat of Security and Citizen Protection, and the Attorney General’s Office, in coordination with the National Intelligence Center.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/28/politica/012n3pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Detain El Tío, operator of cell linked to Los Chapitos">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Police constable martyred, 2 suspected robbers killed in shootout in Karachi&#x27;s Orangi Town: police</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two suspected robbers were shot dead and a police constable was martyred in an encounter in Karachi’s Orangi Town early Tuesday morning, police and rescue services officials said. District West SSP Tariq Illahi Mastoi said four District West police officials were on routine motorcycle patrolling near Liaquat Chowk, within the limits of Pakistan Bazaar Police Station, when they encountered armed robbers. He said the suspects opened fire, the police returned fire in self-defence, and both armed suspects were killed.</p>
+<p>Police said two pistols with ammunition, spent shell casings and the suspects’ motorcycle were recovered. During the exchange, 26-year-old constable Hassan Ali was hit by gunfire and taken to hospital, where he later died. District West police spokesperson Nabeel Ahmed Rajput said Ali was wearing body armour, but the bullets hit him from the side. Police said he was unmarried and originally from Sukkur. Funeral prayers were offered at Garden police headquarters before his coffin was taken for burial, with Sindh IGP Javed Alam Odho, Additional IGP Azad Khan and other senior officials attending.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2019018/police-constable-martyred-2-suspected-robbers-killed-in-shootout-in-karachis-orangi-town-police" target="_blank" rel="noopener noreferrer" title="Dawn / Police constable martyred, 2 suspected robbers killed in shootout in Karachi&#x27;s Orangi Town: police">Dawn #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China aims to bring quality TCM services within 15-minute reach</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China aims to ensure that all residents can access high-quality traditional Chinese medicine (TCM) services within a 15-minute journey from their homes over the next five years, a senior health official said Tuesday. China recently issued an action plan to strengthen TCM services at the grassroots level and improve accessibility to meet people’s needs for TCM care. Meng Qingbin, an official of the National Administration of Traditional Chinese Medicine, said the plan is a step in advancing the Healthy China initiative and accelerating a tiered healthcare delivery system. He said it will channel more high-quality medical resources to primary healthcare institutions, strengthen their ability to diagnose and treat common, frequently occurring and chronic diseases, and support comprehensive healthcare close to home.</p>
+<p>The plan outlines seven key initiatives and 25 major tasks, including optimizing grassroots TCM service networks, improving service capacity and expanding the grassroots TCM workforce. By 2030, it aims to broaden access to TCM services, with a focus on county-level TCM hospitals. It also calls for each county-level TCM hospital to establish at least two specialty departments with distinctive TCM strengths, strengthen TCM clinical departments in non-TCM medical institutions, support smart county-level shared service centers for Chinese herbal medicine, and encourage and regulate private-sector participation in primary-level TCM services. The document was jointly issued by 11 government departments, including the National Administration of Traditional Chinese Medicine, the National Health Commission and the National Development and Reform Commission.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260728/e63e3f425b374265abd14d385063534a/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China aims to bring quality TCM services within 15-minute reach">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China issues new five-year plan on public legal education</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China has unveiled a new five-year plan to strengthen public legal education and promote the rule of law, aiming to create a favorable legal environment for China’s modernization drive. The 2026-2030 plan is the ninth of its kind and was formulated by the Publicity Department of the Communist Party of China Central Committee and the Ministry of Justice. It calls for improving officials’ ability to govern in accordance with the law and raising citizens’ legal awareness so as to foster a culture that respects the law, observes rules, honors contracts and upholds fairness.</p>
+<p>By the end of the decade, the plan says public legal education is expected to become more institutionalized, standardized and technology-enabled. It puts particular emphasis on legal awareness in business and innovation, including laws on the business environment, the private economy, the digital economy and intellectual property protection. It also seeks greater awareness of financial regulations to better protect consumers and investors and help prevent and mitigate financial risks. Other priorities include laws related to foreign trade, cross-border investment, international commercial dispute resolution and cross-border travel, as well as environmental protection, personal data security, and the prevention of telecom and online fraud.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0728/c90000-20482319.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China issues new five-year plan on public legal education">PDE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="axios">
+  <summary>How the Supreme Court deepened uncertainty over Temporary Protected Status</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Supreme Court upheld the termination of Temporary Protected Status for hundreds of thousands of Haitians and Syrians in the U.S., ending their legal protections and limiting courts’ ability to review Homeland Security’s TPS decisions. That makes challenges harder and leaves many people at risk of losing legal status, work authorization and protection from deportation. TPS, established in 1990, is meant to protect nationals of designated countries fleeing extraordinary circumstances. Esther Sung, the Justice Action Center’s legal director, said the ripple effects would be “really big” for TPS holders and their communities.</p>
+<p>The decision comes as the Trump administration has moved to end TPS for nationals of more than a dozen countries, complicating legal challenges. At the start of President Trump’s term, around 1.3 million people had TPS, and hundreds of thousands have since lost protections. DHS said recipients without another lawful immigration status will be subject to deportation once TPS ends and urged them to use the administration’s self-deportation app. USCIS spokesperson Zach Kahler said DHS was “upholding the rule of law” and argued the Biden administration had used TPS beyond its intended scope.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/07/28/trump-supreme-court-temporary-protected-status" target="_blank" rel="noopener noreferrer" title="Axios / How the Supreme Court deepened uncertainty over Temporary Protected Status">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,scmp">
+  <summary>Wildfires in south-west France flare up as region braces for new 40C heatwave</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Firefighters in Gironde were still battling flare-ups on Tuesday as a new heatwave threatened to push temperatures to 40C, keeping pressure on efforts to protect communities between the Atlantic coast and Bordeaux and leaving officials warning the fire is far from over.</p>
+<p>About 2,000 firefighters had been deployed in Gironde to contain flames that have ravaged the countryside for days, according to Eric Brocardi, spokesman for the national firefighters’ federation. He called the blaze “like David against Goliath” and said four of his colleagues had died in recent weeks across France. Regional prefect Sophie Brocas said 14 places that had already been hit by the fires saw new flare-ups on Tuesday. “We are not in the clear,” she said.</p>
+<p>The timing was especially difficult because this summer’s fourth heatwave was expected to begin by Wednesday, with temperatures in the area forecast to reach 40C. Similar temperatures were expected in Spain, where dozens of communities were still threatened by wildfires that forced more than 70,000 people to evacuate over the last week, although many have since been allowed back. In neighbouring Portugal, 400 firefighters were tackling a large fire on three active fronts in the eastern Guarda area.</p>
+<p>Bordeaux was not currently under threat, according to officials, even though one of the wildfires burning on Monday came within 15km of the city’s edge. But commander Rémi Lassoureille, who is leading the firefighting response in Gironde, said he was still worried about the impact on Bordeaux and the metropolitan area. Air quality in the city deteriorated greatly, with smoke, ash and masks becoming part of daily life as residents and tourists stayed indoors and many businesses thinned out or closed.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c5yd8gly1ydo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Wildfires in south-west France flare up as region braces for new 40C heatwave">BBC #1</a><a href="https://www.scmp.com/news/world/europe/article/3362177/france-spain-make-headway-against-wildfires-new-heatwave-looms" target="_blank" rel="noopener noreferrer" title="South China Morning Post / France, Spain make headway against wildfires but new heatwave looms">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="indian_express">
+  <summary>Seven years on, how Assam’s NRC process remains incomplete</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nearly seven years after Assam’s final National Register of Citizens was published, the exercise remains incomplete: more than 3.11 crore listed names still have no identity cards, while around 19 lakh excluded people have not been able to start appeals because rejection slips were never issued.</p>
+<p>A Supreme Court bench of Chief Justice of India Surya Kant and Justices Joymalya Bagchi and Vipul Pancholi has issued notice on a writ petition filed by the Assam State Jamiat Ulama seeking directions to the Centre to complete those last statutory steps. The petition says the process stalled after the final list came out on August 31, 2019, even though the NRC exercise had already run for years under Supreme Court supervision.</p>
+<p>The NRC was built around the Assam Accord of 1985 and its March 24, 1971 cut-off date for identifying illegal migrants who entered Assam from Bangladesh. Parliament gave that framework legal shape through Section 6A of the Citizenship Act, which applies only to Assam. Applicants had to prove citizenship through “legacy data,” mainly the 1951 NRC and electoral rolls up to the 1971 cut-off, along with documents linking them to those records.</p>
+<p>The final list included 3.11 crore people and excluded 19 lakh. But the petition says publication was only half the process. It points to Section 14A of the Citizenship Act and Rule 13 of the 2003 Rules, which require identity cards for those on the final list, and to Paragraph 8 of the Schedule to Rule 4A, which requires rejection slips for excluded persons so they can appeal to Foreigners Tribunals.</p>
+<p>According to the petition, neither step happened. It says that failure has left included citizens without statutory recognition and excluded people without any practical way to challenge the decision. The filing argues that this has turned a court-sanctioned exercise meant to restore confidence into a “discriminatory regime” and that it offends the federal principle, equal citizenship, Articles 14 and 21, and Article 355.</p>
+<p>The petition also says the delay is more than administrative drift because the NRC was completed under continuous Supreme Court monitoring from 2013 to 2019. It argues that selective completion of the process leaves Assam in a state of uncertainty rather than closure.</p></div>
+  <div class="source-list"><a href="https://indianexpress.com/article/explained/explained-law/assam-nrc-supreme-court-petition-explained-10807102" target="_blank" rel="noopener noreferrer" title="The Indian Express / Seven years on, how Assam’s NRC process remains incomplete">TIE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Burnham to seek cross-party consensus over urgent reforms to social care</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham is pushing for cross-party agreement on long-delayed social care reform, but the effort is already running into familiar obstacles over money, party red lines and whether Westminster can finally agree on a system that has defeated generations of politicians.</p>
+<p>Before a speech on Wednesday, Burnham said he wanted “problem-solving, not point-scoring” and argued that social care was the place where a different kind of politics was most urgently needed. The prime minister has invited Kemi Badenoch, the Conservative leader, and Ed Davey, the Liberal Democrat leader, to discuss how to enact urgent reform, as he tries to find common ground across party lines.</p>
+<p>Davey said he would join by video call. The Conservatives said they would send the shadow health secretary, Stuart Andrew, instead of Badenoch, who was having pre-planned minor surgery. Even so, the prospect of a breakthrough looked limited after the Tories set out their own red lines and against a backdrop of negative headlines about inheritance tax.</p>
+<p>Several Labour MPs also voiced concern about how a reformed care sector would be paid for. One minister said the prime minister “must exercise a lot of care” in weighing up the quality of care, the cost and who pays. A centrist Labour MP said the UK at least had to try to do something, warning that without a better care system, pressure on the NHS would keep growing.</p>
+<p>Burnham said governments had spent decades pushing the issue aside because it was “too risky, too difficult and too complicated”. He said the human cost was carers struggling, families paying the price and the NHS “buckling under the strain”.</p>
+<h3>What the government is expected to do</h3>
+<p>The prime minister is expected not to unveil a full new social care system in the speech. Instead, he is expected to confirm plans to speed up the independent review led by Louise Casey, which has been looking at possible options.</p>
+<p>Lady Casey is due to launch the Big Conversation on Care on Wednesday, giving the public a chance to share views on adult social care in England through an online platform. She has warned that money alone will not fix the problem.</p>
+<p>Burnham is understood to favor a system free at the point of use, in the same way as the NHS. Other options, including a care costs cap, are said to be less attractive to him, though they would cost the taxpayer less. A middle-ground model would be similar to Scotland’s, with the state paying personal care costs while accommodation and food in care homes would still fall to individuals and their families.</p>
+<p>Any route the government chooses is likely to require significant extra investment over the long term, probably through higher taxation. Burnham has previously suggested replacing inheritance tax with a 10% levy on all estates, and at the weekend did not rule that out, saying it could raise as much as £18bn.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/jul/28/andy-burnham-cross-party-consensus-reforms-social-care" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham to seek cross-party consensus over urgent reforms to social care">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>With US troops departing, Iraq looks beyond balancing Washington and Tehran</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Baghdad is trying to use the departure of US-led Coalition troops and the possibility of a US-Iran settlement to widen its room for manoeuvre, as Prime Minister Ali Falih Kadhim al-Zaidi pushes reforms that could strengthen the Iraqi state while also reducing Tehran’s informal leverage.</p>
+<p>For several years, officials in Baghdad have tried to balance US pressure to curb Iran’s influence with strong ties to Tehran. That approach, the evidence says, has limited Iraq’s ability to carry out domestic economic and security reforms or to pursue a more autonomous foreign policy. Now, recent efforts to strengthen state institutions, the planned withdrawal of US-led Coalition troops from Federal Iraq and the prospect of a settlement between Washington and Tehran are being presented as a chance to redefine those relationships.</p>
+<h3>Reforms that touch banking, energy and arms</h3>
+<p>According to al-Zaidi, whose government has been in place since April, the priority is to strengthen the Iraqi state through institutional reform. That includes improving access to the international banking system, strengthening the energy sector and trying to enforce a state monopoly over arms. Al-Zaidi is a former banker; he once chaired Al-Watania Holding Group and also led Al-Janoob Islamic Bank.</p>
+<p>Some of the banking changes began under the previous administration and are aimed at reducing corruption as well as improving access to international finance. Hayder al-Shakeri, a research fellow at Chatham House, said these reforms are not Baghdad’s stated objective but they do constrain channels through which Iran and Iran-aligned networks exercise influence.</p>
+<p>Iraq has also used its relationship with the US to expand energy partnerships and reduce reliance on Iranian gas imports. During a recent visit to Washington, the Iraqi premier signed 48 economic agreements and partnerships with US firms, including investments in associated gas projects that would allow Baghdad to capture gas otherwise flared during oil production. Those projects are meant to help reduce Iraq’s dependence on Iranian gas imports, which have historically met around 40 percent of the country’s gas and electricity requirements.</p>
+<p>Security remains a harder test. Al-Zaidi has set a 30 September deadline for the disarmament of all militias in Iraq and called for their reintegration into the state apparatus. Even then, the evidence says, these groups would likely keep significant influence in Baghdad because their political networks are deeply embedded in parliament, government and state institutions.</p>
+<p>The US-led Coalition is also expected to complete its withdrawal from Federal Iraq by 30 September. Taken together, the banking changes, militia deadline and troop withdrawal point to Baghdad’s effort to move beyond simply balancing Washington and Tehran and toward a relationship with both that is more defined by Iraqi state institutions.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/can-iraq-finally-break-free-us-iran-tug-war" target="_blank" rel="noopener noreferrer" title="Middle East Eye / With US troops departing, Iraq looks beyond balancing Washington and Tehran">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>How US defence aid shaped Israel’s military developments since Oct 7, 2023</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US military support for Israel has kept expanding after Oct. 7, 2023, and the latest House-passed defence bill would add more money for missile defence and other capabilities, but the package is still stuck in Congress and its final shape is unsettled.</p>
+<p>The House narrowly passed the National Defense Authorization Act, or NDAA, last week. The bill sets military priorities for the 2027 fiscal year, which begins later this year on Oct. 1, and includes $750m for Israel-related military programmes, $65m more than the previous year. But the NDAA is not yet law. It now moves to the Senate, where its future remains uncertain, especially after Senate Democrats blocked the Senate version earlier this month. The measure must clear both chambers before it can reach the president’s desk.</p>
+<p>If the House version passes unchanged, $500m would go to missile defence programmes, including Iron Dome. US assistance to Israel has long covered both defensive systems meant to intercept incoming threats and military equipment used in operations. The remaining $250m would support other capabilities: $100m for counter-unmanned systems, $100m for subterranean operations such as mapping tunnels and underground facilities, and $50m for emerging defence technologies, including AI-driven systems and autonomous capabilities. Iron Dome became fully operational in 2011, and a 2020 Congressional Research Service report said it intercepted close to 90 percent of rockets identified as threatening populated areas during periods of conflict.</p>
+<p>The House bill drew sharply different reactions. Pro-Israel advocacy groups, including AIPAC, welcomed the funding, while organisations including the Council on American-Islamic Relations criticised continued US military assistance, arguing that it risks contributing to Israel’s military campaign in Gaza.</p>
+<p>The broader flow of aid has also gone well beyond this year’s bill. A 2025 analysis from Brown University’s Costs of War Project estimated that the US provided about $21bn in military assistance to Israel between October 2023 and September 2025. That support has extended to systems and suppliers tied to Israel’s air fleet, missile defence and drone warfare, and Palantir has provided artificial intelligence and data-analysis technology to Israel’s Ministry of Defence since Oct. 7, 2023, though the value of those contracts has not been disclosed.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/7/28/how-us-defence-aid-shaped-israels-military-developments-since-oct-7-2023?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / How US defence aid shaped Israel’s military developments since Oct 7, 2023">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="xinhua_en">
+  <summary>Explainer: What to happen after pause of U.S.-Iran conflict in 6th month?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The U.S.-Iran conflict has entered a fragile pause after weeks of strikes and retaliation, but the bigger question is whether the lull will hold long enough for talks on the Strait of Hormuz and wider disputes to avert another round of escalation.</p>
+<p>Since late June, the United States has carried out consecutive strikes on Iran, which U.S. Central Command said were meant to “degrade Iran’s ability to threaten commercial shipping in the Strait of Hormuz.” Iran responded with drone strikes against U.S. bases and assets in the Gulf states, including Jordan, Bahrain and Kuwait. Iran’s Health Ministry said at least 55 people were killed and 629 wounded in U.S. strikes since June 27, while the Pentagon’s casualty statistics updated on Sunday put U.S. losses at four servicemen killed and 207 injured.</p>
+<p>Over the weekend, the war showed signs of de-escalation. Both Washington and Tehran indicated a pause in direct attacks, and U.S. media reported on Saturday that the U.S. military had paused strikes on Iran. The explanations for the halt were not the same: CBS News, citing two regional sources, said Washington suspended attacks to avoid disrupting an Omani delegation’s visit to Tehran for talks on reopening the Strait of Hormuz. The New York Times separately reported that President Donald Trump had set aside plans for a sharp escalation after senior advisers warned of dwindling U.S. air-defense stocks.</p>
+<p>Iran said on Sunday that it had halted retaliatory attacks after the United States suspended its strikes for the past two nights. That pause then reopened diplomatic channels, with Washington and Tehran exchanging messages through mediators. Trump said on Friday that the two sides were in talks and that he believed Iran was getting “more serious.” On Monday, he said he decided to halt strikes because mediating countries and some states in the region had asked him to give talks another chance, but he warned he could restart the attacks if the negotiations fail.</p>
+<p>On the Iranian side, Iranian media cited Foreign Ministry spokesman Esmaeil Baghaei as saying on Monday that Tehran would not allow the U.S. side “to determine the time of war and peace, and we will defend ourselves for as long as necessary.” He also said Iran and Oman had held “fruitful” talks on managing safe shipping traffic in the strait and that the United States was not involved in those talks, which he described as “positive.” Baghaei said the waterway “remains closed.”</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260728/cb8b25166933421e9cf15cc796fb4a9d/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Explainer: What to happen after pause of U.S.-Iran conflict in 6th month?">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Cate Blanchett and Angelina Jolie appeal for refugee protections as UN convention turns 75</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Cate Blanchett, Angelina Jolie and Archbishop of Canterbury Sarah Mullally were among public figures who on Tuesday called for refugee protections to be upheld as the United Nations marked 75 years of the 1951 Refugee Convention. The convention’s safeguards, drafted after World War II, were described as part of a framework that has been ratified by 149 states. The UN refugee agency backed the convention with a statement called “The Promise,” signed by dozens of celebrities, athletes, business leaders and faith leaders, including Ben Stiller, Michelle Yeoh, Cynthia Erivo, Riz Ahmed, Ellen Johnson Sirleaf and Wenyen Gabriel.</p>
+<p>High Commissioner Barham Salih, a former Iraqi president and refugee, said the convention had “saved millions of lives” and that its “fundamental promise” remained vital. Speaking at a meeting on refugee protections at the UN in Geneva, he said, “I do believe we need to keep that promise alive.” Gabriel, a former refugee whose family fled civil war in southern Sudan in the 1990s and was later resettled in the United States, said, “We cannot turn away, we cannot turn our backs on people.” The report also said the United States has recently considered severing ties with the UN refugee agency, while Salih said on Tuesday he was hopeful of a continuing partnership.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3362183/cate-blanchett-and-angelina-jolie-appeal-refugee-protections-un-convention-turns-75" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Cate Blanchett and Angelina Jolie appeal for refugee protections as UN convention turns 75">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="axios">
+  <summary>Scoop: Trump asks Supreme Court to overturn $83M judgment for E. Jean Carroll</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Trump’s lawyers are asking the U.S. Supreme Court to overturn the $83.3 million defamation judgment he was ordered to pay E. Jean Carroll. Their filing argues that Trump is entitled to presidential immunity because he made the comments while serving as president, in response to reporters’ questions about his fitness for office. The award stemmed from Trump’s 2019 statements denying Carroll’s accusation that he sexually assaulted her in the 1990s and attacking her credibility.</p>
+<p>Trump’s team had already unsuccessfully appealed the judgment to the federal appeals court in the 2nd Circuit. In the Supreme Court filing, they say the appeals court never decided whether presidential immunity applied and rejected the appeal on procedural grounds, and they argue that upholding the ruling would expose future presidents to liability for statements made while in office. The court is also dealing with Carroll-related litigation for the second time in two months: in June, it declined to hear Trump’s appeal of the separate $5 million verdict, and his team has asked the court to reconsider that judgment.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/07/28/trump-appeal-defamation-sexual-assault" target="_blank" rel="noopener noreferrer" title="Axios / Scoop: Trump asks Supreme Court to overturn $83M judgment for E. Jean Carroll">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Judges Ignored National Laboratories in Patent Cases</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ricardo del Olmo, executive director of the National Association of Drug Manufacturers (Anafam), said Federal Judicial Branch rulings that extended the life of already expired patents for innovative drugs did not take into account national pharmaceutical laboratories that had sanitary registrations for generic versions of the same products. He said the generic versions were already on the market, but the laboratories had no chance to take part in the judicial proceedings involving Denosumab (Prolia and Xgeva) for osteoporosis and Bimatoprost (Lumigan) for glaucoma and ocular hypertension.</p>
+<p>Del Olmo said only one national laboratory affected by the Denosumab ruling, whose patent expired in 2022, filed an extraordinary appeal to the Supreme Court of Justice of the Nation, and the deadline for the court to say whether it would accept and resolve the case has already passed, leaving the ruling pending. He also said laboratory legal teams are seeking a way to review the Bimatoprost rulings, where validity ended in March 2025. In another case, Allergan won an extension to 2028 from the specialized IP chamber of the Administrative Federal Court of Administrative Justice in January, and a collegiate court authorized 10 years of data protection for Semaglutide from July 3, 2019, even though the patent expired in March 2026.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/28/politica/009n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Judges Ignored National Laboratories in Patent Cases">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="kompas">
+  <summary>National</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A trial hearing in Jakarta over bribery and gratification involving three officials of the Directorate General of Customs and Excise (DJBC) exposed details of illicit practices. Budiman Bayu Prasojo, a former Head of the Intelligence Section at the Customs Center, testified at the Jakarta Pusat Corruption Court on Tuesday (28/7/2026). He said he received four envelopes containing Singapore dollars that he believed came from Blueray Cargo Group, and that he was told to “clean up” when information about law enforcement attention emerged.</p>
+<p>Budiman said the case also implicates former P2 Director Rizal, former Head of Intelligence Subdirectorate Sisprian Subiaksono, and Head of Intelligence, Customs 1 Orlando Hamonangan. He said the term “operational funds” began after Sisprian became Head of Intelligence, and that Sisprian later asked him to engage with cannabis-trade businessmen. Budiman said the P2 Directorate already had an official budget through the Budget Implementation List (DIPA) and Operational Funds for State Wealth Protection (DOKPPN), but the funds in question were different. He said there was a need for more than DOKPPN because other needs were not covered.</p></div>
+  <div class="source-list"><a href="http://nasional.kompas.com/read/2026/07/29/05313971/kesaksian-pejabat-bea-cukai-amplop-dolar-hingga-bersih-bersih-jelang-ott" target="_blank" rel="noopener noreferrer" title="Kompas / National">Kompas #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>Finance Minister Enoch Godongwana released July’s municipal equitable share payments despite non-compliance, citing service delivery concerns.</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Finance Minister Enoch Godongwana has released July’s municipal equitable share payments even for municipalities that have not met Treasury’s compliance demands, saying a prolonged withholding would harm service delivery and leave poor households carrying the cost of municipal failures.</p>
+<p>Godongwana announced the decision on Tuesday and said the equitable share is an important source of funding for basic services. He said National Treasury must balance its duty to enforce financial management rules with the need to avoid communities “carrying the immediate consequences” of failures by municipal institutions and officials. Treasury said Friday would be payout day for municipalities still waiting for their allocations, with the total due then put at R7.1-billion.</p>
+<p>The move does not end the pressure on local governments. Godongwana warned that December payments would be withheld if municipal financial management did not improve, and said municipalities had been given clear notice that measurable corrective action was required. Treasury said its review found wider weaknesses in municipal budgeting, cash flow management, oversight, accountability and consequence management, along with problems in dealing with unauthorised, irregular, fruitless and wasteful expenditure.</p>
+<p>Several municipalities were singled out in the announcement. Nelson Mandela Bay and Mangaung were named as metros that had still not complied with Treasury’s demands, while the City of Johannesburg had already received part of its equitable share to pay Eskom and Rand Water and would receive the balance on Friday. Godongwana also highlighted high levels of non-compliance by Free State municipalities.</p>
+<p>The South African Municipal Workers Union welcomed the release, saying thousands of its members had not been paid because municipalities lacked funds while the equitable share was withheld. Samwu spokesperson Dumisane Magagula said the National Treasury should not “expect applause for extinguishing a fire that should never have been started in the first place,” and added that the payment would bring relief but could not erase the hardship already caused to workers and their families.</p>
+<p>Godongwana said 20 municipalities had already received their full equitable share after complying with Treasury’s demands. Another 21 would receive partial allocations on Friday, while 28 municipalities that did not comply would receive nothing.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-07-28-withheld-equitable-share-treasury-announces-friday-payday-for-non-compliant-municipalities" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Finance Minister Enoch Godongwana released July’s municipal equitable share payments despite non-compliance, citing service delivery concerns.">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,middle_east_eye,scmp">
+  <summary>Iran and Oman exchange proposals to manage Strait of Hormuz</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran and Oman have traded competing ideas for managing the Strait of Hormuz, with Muscat pushing a fee-based regional mechanism and Tehran insisting on control over its side of the waterway as talks continue and several core disputes remain unresolved.</p>
+<p>Oman presented Iran with a proposal for a joint regional mechanism to manage the strait with “voluntary fees,” Reuters reported on Tuesday. The plan is based on the Strait of Malacca model in East Asia, where ships that use the waterway voluntarily contribute toward navigation, environmental protection and search-and-rescue operations. Under the Omani proposal, which an unnamed Gulf source and a Western diplomat said has regional backing, Iran would not exercise sole control of the strait.</p>
+<p>The stakes are high because the Strait of Hormuz is strategic, bordering the territorial waters of both countries, and its closure in the US-Israeli war on Iran has disrupted trade. Before the conflict, a fifth of global oil and liquefied natural gas flowed through the waterway, making its management a major issue in talks over how to restore shipping.</p>
+<h3>Tehran’s counterproposal and red lines</h3>
+<p>Tehran, however, says the strait cannot go back to its pre-war status, when shipping flowed freely. In comments to Iranian state media on Tuesday, Kazem Gharibabadi, Iran’s deputy foreign minister for legal and international affairs, said Tehran rejects an Omani proposal for an equal division of transit routes between the two countries, arguing that it does not address Iran’s security concerns.</p>
+<p>Gharibabadi said Tehran proposed that Iran manage shipping through its side of the strait and that Muscat manage part, but not all, of the opposite lane. He also said Iran had “no plans to negotiate with the US,” while talks with Oman were continuing “step by step.” He warned that Tehran would consider “any action” to maintain control over the strait, including the resumption of war.</p>
+<p>From Tehran, Al Jazeera’s Resul Serdar said the Omanis were suggesting three lines for maritime traffic: one through Iran’s territorial waters, one international route and one through Omani territorial waters. Al Jazeera’s Tohid Asadi said the main sticking points include the trajectory of ships, the fees, who will define the arrangements and mine clearances, which he said would reportedly be Iran’s responsibility.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/28/iran-and-oman-exchange-proposals-to-manage-strait-of-hormuz?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Iran and Oman exchange proposals to manage Strait of Hormuz">AJ #1</a><a href="https://www.middleeasteye.net/news/oman-proposes-joint-management-strait-hormuz-mediators-expect-breakthrough-talks" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Oman proposes joint control of Strait of Hormuz as mediators expect talks &#x27;breakthrough&#x27;">MEE #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3362164/oman-offers-iran-gulf-backed-plan-voluntary-fees-use-hormuz" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Oman offers Iran Gulf-backed plan for voluntary fees to use Hormuz">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>Removal of 15-month rule unlikely to drive up HDB resale prices: Analysts</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Singapore’s scrapping of the 15-month wait-out period for private owners buying HDB resale flats could bring more right-sizers back into the market, but analysts say moderating prices and a larger supply of flats mean it is unlikely to reignite the sharp gains seen before.</p>
+<p>National Development Minister Chee Hong Tat announced on Tuesday (Jul 28) that the restriction would be removed with immediate effect, allowing eligible private property owners to buy non-subsidised HDB resale flats without waiting 15 months after selling their homes. Analysts said the move may unlock pent-up demand from households looking to right-size, but the market is better placed to absorb the extra demand than it was when the rule was introduced.</p>
+<p>That is because HDB resale prices have cooled. Analysts noted that the cooling measure was brought in when resale prices were rising rapidly, but since then the market has moderated: prices have fallen for two consecutive quarters since the start of the year, after five straight quarters of slower or no growth. Ms Christine Sun, chief researcher and strategist at Realion (OrangeTee &amp; ETC) Group, said the policy’s key aims had largely been achieved, pointing to moderating prices and lower transaction volumes as signs that the public housing market has stabilised.</p>
+<p>Supply also matters. Mr Eugene Lim, key executive officer of ERA Singapore, said the change gives private homeowners greater flexibility to right-size, while the growing number of flats reaching their minimum occupation period over the next few years should help absorb demand and keep the market stable. About 13,500 flats are expected to reach MOP this year, up from 8,000 in 2025, and buyers still have alternatives such as Build-to-Order flats.</p>
+<h3>Larger flats are likely to feel the pressure first</h3>
+<p>The biggest impact is expected in the market for larger resale flats. Mr Lee Sze Teck, senior director of data analytics at Huttons Group, said the cooling measure had reduced demand from private property owners for five-room or larger flats. He pointed to transaction volumes falling from 6,951 five-room flats in 2022 to 5,966 in 2025, while executive and multi-generation flat sales dropped from 1,946 to 1,539 over the same period.</p>
+<p>With the restriction lifted, some former private homeowners may return to the market for bigger homes, but analysts do not expect a broad-based spike in prices. Ms Sun said any renewed demand is likely to be concentrated in larger units, while smaller flats could see slower growth. Mr Mohan Sandrasegeran of Singapore Realtors Inc said he expects resale prices to remain broadly stable, forecasting a more measured increase of 0.5 per cent to 2 per cent for 2026.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/hdb-resale-condos-wait-out-period-private-property-absd-6282371" target="_blank" rel="noopener noreferrer" title="CNA / Removal of 15-month rule unlikely to drive up HDB resale prices: Analysts">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="xinhua_en">
+  <summary>Interview: Shanghai Spirit core guidance for SCO unity, says Uzbek expert</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In a recent interview, Kabuljon Sabirov, director of the Tashkent-based SCO Public Diplomacy Center, said China has made important contributions to advancing the Shanghai Cooperation Organisation and deepening political mutual trust among its members, with the Shanghai Spirit serving as core guidance for SCO unity. He said the organisation has achieved solid results over its 25-year history in education, youth, sports, tourism and media cooperation, and that the Shanghai Spirit has been bringing together peoples across different economic scales and cultural backgrounds.</p>
+<p>Sabirov also said people-to-people connectivity is an important prerequisite for lasting peace and common prosperity, describing trust-based people-to-people diplomacy as a bridge for inter-civilizational dialogue. He pointed to Uzbekistan-China cultural exhibitions for children, a charitable medical program that provided free cataract surgeries to thousands of Uzbek patients, and an SCO Knowledge Hall established in Tashkent with Chinese support. He said the center wants to continue telling stories of friendship under the Shanghai Spirit and help build a safer and more prosperous world.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260728/e59fc37f5ffe45828e0c8ef0ccc3e1bb/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Interview: Shanghai Spirit core guidance for SCO unity, says Uzbek expert">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="jakarta_post">
+  <summary>Rating agencies flag credibility risks over Perry’s resignation</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Perry Warjiyo’s sudden resignation from Bank Indonesia and the government’s decision to bring state asset fund Danantara into the Financial System Stability Committee have raised concerns about political intervention and credit credibility, with Moody’s and Fitch warning that Indonesia’s assets could become more volatile.</p>
+<p>The inclusion of Danantara in the Financial System Stability Committee, or KSSK, on the same day Perry’s exit was announced further fueled those worries. The agencies pointed to mounting institutional risks, saying the question now is how much confidence markets will have in the direction of monetary policy after the leadership change at the central bank.</p>
+<p>Martin Petch, Moody’s vice president of ratings, told The Jakarta Post on Tuesday that Bank Indonesia’s change of leadership has a bearing on credit implications depending on the “credibility of monetary policy going forward.” He said that in the near term, there could be “further volatility in capital flows and the exchange rate” while financial market participants assess the future overall direction of macroeconomic and monetary policy.</p>
+<p>Moody’s in February reaffirmed Indonesia’s sovereign bond ratings at Baa2 but cut the outlook from stable to negative over concerns about policy effectiveness and signs of weakening governance. Petch said Bank Indonesia’s “long-standing track record of effective monetary policy” was a key factor behind that affirmation, but he also indicated the rating view could change if policy changes.</p>
+<p>Fitch Ratings also flagged pressure on the rupiah. George Xu, Fitch’s Asia Pacific sovereign ratings director, said the currency might face extra pressures from the latest developments. Fitch had likewise maintained Indonesia’s ratings but downgraded the outlook to negative in March.</p>
+<p>Xu said the risks stemmed from “fragile investor sentiment” amid uncertainty over the future trajectory of monetary policy and perceptions of central bank independence.</p></div>
+  <div class="source-list"><a href="https://www.thejakartapost.com/business/2026/07/28/rating-agencies-flag-credibility-risks-over-perrys-resignation" target="_blank" rel="noopener noreferrer" title="The Jakarta Post / Rating agencies flag credibility risks over Perry’s resignation">TJP #1</a><a href="https://www.thejakartapost.com/business/2026/07/29/industry-seeks-clarity-ahead-of-indonesias-national-ev-bike-launch" target="_blank" rel="noopener noreferrer" title="The Jakarta Post / Industry seeks clarity ahead of Indonesia’s national EV bike launch">TJP #2</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="bbc">
+  <summary>Some parents on benefits to get up to £4,500 for child starting apprenticeship</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The government said some parents on benefits will be given up to £4,500 a year to encourage their children to start apprenticeships. Under the plan, families will be offered a bursary to replace Universal Credit payments they could lose when a child starts work-based training. The payment is expected to reach a few thousand households, including families that currently face losing between £17 and £330 a week if their children begin apprenticeships. The bursary will come from a £30m pot funded through the growth and skills levy, a tax on employers with annual wage bills over £3m.</p>
+<p>The move follows a Social Security Advisory Committee report that warned of the “perverse effects” of the benefits system on young people’s employment choices. It said single parents with a disabled child could lose up to £340 a week in benefits if their child started an apprenticeship, more than the expected apprenticeship salary of £258 a week. The committee said the system was hampering efforts to reduce the number of young people not in education, employment or training. The Conservatives welcomed Prime Minister Andy Burnham’s support for apprenticeships but criticised the funding plan, with Helen Whately calling it “uncosted.”</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cwy4v6e9d2go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Some parents on benefits to get up to £4,500 for child starting apprenticeship">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="middle_east_eye">
+  <summary>Inside Turkey&#x27;s plan for world&#x27;s largest startup hub at Ataturk Airport</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Turkey is turning Ataturk Airport, closed to commercial traffic in 2018 and now largely empty, into Terminal Istanbul, a startup campus officials hope will become the world’s largest hub for entrepreneurs, even as investors question whether the country’s rules and economy will support the plan.</p>
+<p>The former airport, once a major gateway carrying millions of passengers from the 1950s, is being redesigned from the inside out. The halls that once held check-in counters and luggage areas are set to become open-plan offices, meeting rooms, co-working spaces and incubation centres, with international accelerator programmes for companies and investors. Around 200,000 sqm of terminal buildings will be converted into modern workspaces. The first phase is due next month, when a 5,000-sqm area is set to open to 50 startups and other initiatives, with officials expecting that figure to reach 100 by year’s end.</p>
+<p>Erkam Tuzgen, chief executive of the Terminal Istanbul initiative, said the aim was broader than building a tech campus. He described it as an ecosystem meant to draw local and foreign investors, businesses and entrepreneurs, and to give people with viable ideas access to international mentorship and capital. Tuzgen said the project had already signed a memorandum of understanding with Techstars and an agreement with Shanghai State-owned Capital Investment, a Chinese government entity. Venture capital firms including Disrupt, Enhance Ventures and Uzbekistan’s UzVC are negotiating separate deals, while Flat6Labs has already signed on and Saudi Arabia’s Monshaat is also in talks.</p>
+<p>The project is unfolding against a sensitive backdrop. Turkey faced fierce criticism in 2018 when commercial operations moved from Ataturk Airport to the newly built Istanbul Airport, which has since become one of Europe’s busiest. Terminal Istanbul has attracted less backlash, Tuzgen said, partly because the old airport buildings had stood empty for years. The government is also trying to position Turkey as a destination for businesses and investors leaving the Gulf, offering tax incentives and other relief for startups and some foreign residents.</p>
+<p>Still, investors speaking on condition of anonymity told Middle East Eye that frequent regulatory changes, concerns over the rule of law and a complex immigration system make relocation difficult. Turkey’s economic difficulties also remain a concern, with annual inflation expected to stay close to 30 percent by year-end. Tuzgen said parliament was expected to approve legislation allowing companies to be established digitally, and that the complex would include a one-stop service centre for immigration, social security and taxation.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/inside-turkeys-plan-worlds-largest-startup-hub-ataturk-airport" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Inside Turkey&#x27;s plan for world&#x27;s largest startup hub at Ataturk Airport">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>UK faces ‘very difficult trade-offs’ in budget because of Iran war, say analysts</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham has been warned by the National Institute of Economic and Social Research of “very difficult trade-offs in the next autumn budget” if the Iran war keeps oil prices and inflation high. NIESR said the new prime minister faced a “challenging inheritance” and that plans to revamp public services would come under severe pressure from persistently higher prices. With oil prices briefly back above $100 a barrel and the strait of Hormuz “all but closed since March,” the thinktank said inflation could rise to 3.8% over the next seven months, forcing the chancellor, John Healey, to find an extra £24bn by the end of the decade to maintain services and real-terms welfare payments.</p>
+<p>NIESR said it had cut its forecast for the chancellor’s spending headroom in the budget from just over £7bn to nearer £3bn. It also said the economy would grow more slowly this year and in 2027, with growth downgraded to 1.1% this year and the same pace next year, implying £28bn in lost growth over two years compared with January forecasts. David Aikman said Burnham faced a “challenging inheritance,” with spending eroded by inflation, the highest borrowing costs in the G7 and new spending demands.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/2026/jul/29/uk-faces-trade-offs-because-of-iran-war-inflation" target="_blank" rel="noopener noreferrer" title="The Guardian / UK faces ‘very difficult trade-offs’ in budget because of Iran war, say analysts">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="peoples_daily_en">
+  <summary>China&#x27;s MAZU initiative expands global access to AI-powered early warnings</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">technology_and_ai</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At the opening ceremony of the 2026 World AI Conference and High-Level Meeting on Global AI Governance, Chinese President Xi Jinping announced that China will enable 30 countries to use MAZU, the AI-powered meteorological warning system, to help safeguard homes around the world. China launched the MAZU initiative in July 2025 in support of the United Nations’ Early Warnings for All initiative, and it is described as a global early warning network built around multi-hazard monitoring, seamless coverage and universal accessibility.</p>
+<p>The conference also featured strong interest in the system. A staff member at the meteorology exhibition area said, “The exhibition hall has been packed from opening to closing every day. Everyone is here to learn about MAZU.” MAZU had been deployed on the ground in seven countries and was providing cloud-based services in more than 40 countries. It also said China had provided technical guidance to nearly 1,000 professionals from more than 100 countries and regions through training, scholarships and academic exchange opportunities.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0728/c90000-20482403.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China&#x27;s MAZU initiative expands global access to AI-powered early warnings">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="cnn">
+  <summary>AI is making your life more expensive. Here’s how</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Artificial intelligence is already showing up in Americans’ bills, with higher electricity, electronics and software prices adding to inflation, while the question is how far these costs spread before any longer-term productivity gains arrive.</p>
+<p>The basic pattern is the familiar one for major technological shifts: they can create new industries and productivity gains, but the transition can bring shorter-term pain. In AI’s case, that has included job losses, slower wage growth, widening wealth inequity and, especially in recent months, higher inflation. Recent data cited by CNN says the surge in AI adoption investment — estimated at around $750 billion this year alone — has pushed a variety of prices higher and lifted overall inflation.</p>
+<p>Mark Zandi, chief economist at Moody’s Analytics, wrote to CNN that the higher inflation means households must spend just over $375 more to buy the same goods and services as a year ago because of AI’s inflationary impact. Even so, AI is still described as a minor contributor to inflation overall, at an estimated 0.2 percentage points, with the effects currently limited to a handful of categories. The concern is that the pressure may not fade quickly and could broaden, leaving Federal Reserve officials, including the central bank’s new chairman, watching closely.</p>
+<h3>Where the costs are showing up</h3>
+<p>Electricity is one of the clearest examples. AI data centers have voracious appetites for energy, especially electricity and water, and their rapid expansion threatens to strain grids and drive prices up further. PJM Interconnection, America’s largest grid operator, noted recently that data center facilities can be built or expanded at double or triple the pace of new electricity generation systems needed to serve them. Pooja Sriram, a US economist at Barclays, told CNN that data centers are demanding huge amounts of power, crowding out electricity available to residents and helping bid up wholesale prices. She said residential electricity prices rose about twice as fast in 2025 as the average in prior years, and BLS data shows they were up 4% from a year earlier in the latest CPI reading.</p>
+<p>The data-center buildout is also boosting demand for memory chips, where supply has been constrained. Sriram said manufacturers are prioritizing high-bandwidth, high-speed memory products for data centers, diverting production away from consumer hardware. That pressure has shown up in producer prices for semiconductors and other electronic component manufacturing, which were up 26% from a year ago in June. Apple raised prices on some products by roughly 20%, Sony raised the price of its PlayStation console, and Microsoft raised Xbox console prices by about 25%, each linking the moves to the components squeeze.</p>
+<p>The ripple effects may reach software, construction costs and wages too. Microsoft raised personal Office 365 prices by 43% in February after adding Copilot, its AI tool. Gregory Daco of EY-Parthenon said these are still the early innings of consumer price pressures from higher producer prices, import prices and AI-led investment.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/07/28/economy/ai-boosting-inflation-us" target="_blank" rel="noopener noreferrer" title="CNN / AI is making your life more expensive. Here’s how">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="la_jornada">
+  <summary>William I. Robinson*: Global Resistance to the Data Center Boom</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">climate_disaster</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The data center boom tied to AI is spreading across continents, pulling in land, electricity, water, and minerals as resistance grows in multiple countries over who bears the costs and who benefits from the expansion.</p>
+<p>William I. Robinson argues that the boom is driven by the AI revolution, which he says is pushing up the capital and energy needed to train AI and the computing power behind it. In turn, he says, the rise in computing demand requires enormous amounts of electricity and water, setting off a global race to secure sites for data centers, energy sources to run them, and the critical minerals used in AI-driven technologies. He says the expansion now spans every continent, with the fastest growth in China and the United States and major hubs in Southeast Asia, Latin America, Africa, and the Middle East.</p>
+<p>He points to a data center under construction in Utah as an example of the scale involved: once completed, he says, it will cover twice the area of Manhattan, consume more energy than the entire state does, and draw heavily on water in a drought-stricken region. Robinson also says AI use is surging worldwide, including in “developing markets,” and argues that this dependence is deepening the power of transnational capital over states and working populations.</p>
+<p>He describes the new ruling class as a triangular bloc linking tech giants, transnational financial capital, and the military–industrial–repressive complex — “Silicon Valley + Wall Street + the Pentagon,” in his formulation. In that account, the U.S. State Department has called the new AI order “Pax Silica,” and Trump’s administration, in its first year of a second term, pursued deregulatory AI policies and promised a vast expansion of data centers.</p>
+<p>Against that backdrop, Robinson presents the spread of opposition as a bottom-up working-class struggle. He says mass protests have taken place in recent months from Ireland to Mexico, Chile, the Netherlands, Malaysia, the United Kingdom, Brazil, Spain, Australia, and across the United States, as people push back against what he calls billionaire tech oligarchs and the land, energy, and mineral grab behind the boom.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/28/politica/014a1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / William I. Robinson*: Global Resistance to the Data Center Boom">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Kimi K3: Open Frontier Intelligence</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In an arXiv preprint, researchers introduced Kimi K3, a 2.8T-parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window. They said it is built on Kimi Delta Attention and Attention Residuals, and that those components improve information flow across sequence length and model depth. The paper also says Stable LatentMoE effectively activates 16 of 896 routed experts per token, and that the training and data recipes together produce about a 2.5x improvement in overall scaling efficiency over Kimi K2.</p>
+<p>The preprint says post-training emphasizes reinforcement learning across general, agentic, and coding domains at multiple reasoning-effort levels, aiming for compositional generalization and robust long-horizon execution. It also says the model was supported by infrastructure advances in algorithm-system co-design for KDA, perfectly balanced expert-parallel training with efficient memory management, million-token agentic RL with persistent rollout and sandbox states, and deployment innovations. In evaluations, the authors say Kimi K3 reached frontier-level performance across long-horizon coding, agentic, knowledge, reasoning, and vision tasks, while still trailing Claude Fable 5 and GPT-5.6 Sol overall but outperforming other open and proprietary models in their suite. They also said they are releasing the full Kimi K3 model weights.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.24653v1" target="_blank" rel="noopener noreferrer" title="arXiv / Kimi K3: Open Frontier Intelligence">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">JarvisHub aims to give creative AI a shared, editable workspace for long-horizon multimodal projects, keeping drafts, versions, feedback, and tool actions in one place. The open question it tackles is how agents can stay coherent across extended creative workflows instead of losing context in chat or closed systems.</p>
+<p>The JarvisX Team says current creative AI can already produce high-quality images, videos, audio clips, UI elements, storyboards, slides, and other assets, but real projects involve much more than one prompt and one output. They describe a workflow built around references, alternatives, edits, failed attempts, version links, evaluation signals, and human feedback. In that setting, they argue, prompt-based, chat-based, and node-based systems only partly support the evolving state of a project because they often discard intermediate context, depend on linear conversations, or require manually specified workflows.</p>
+<h3>Canvas as shared project state</h3>
+<p>JarvisHub’s answer is to treat an editable canvas as the user workspace, the agent’s external memory, its action space, and the shared project state. Multimodal artifacts, dependencies, versions, and feedback are represented as typed canvas nodes and links, so the process stays visible and traceable rather than hidden inside tool calls or transient chat history.</p>
+<p>The system is built in three layers: canvas state, protocol bridge, and agent runtime. The bridge checks and controls canvas reads and writes, while the runtime decides what the agent can do in a turn and turns that into valid updates. The harness also records trajectories, evaluator signals, human edits, and checkpoints so the creative process can be inspected, recovered, and analyzed later.</p>
+<p>The preprint says this design moves creative agents beyond isolated tool use toward sustained, human-steerable automation, where the agent can plan, generate, revise, and organize multimodal projects while users can inspect, guide, and intervene. It also says the approach was evaluated on three long-horizon tasks: narrative media generation, interactive web development, and presentation deck generation. In the examples described, a short-drama prompt becomes a visual sequence, an aesthetic and interaction brief becomes a photography website, and a machine-learning lecture topic becomes a structured slide deck.</p>
+<p>The authors also say the recorded trajectories could be useful for future benchmarks and training, including planning, tool selection, multimodal state tracking, local repair, and feedback-guided revision, though final output quality still depends on the external models and tools used by the runtime.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.23588v1" target="_blank" rel="noopener noreferrer" title="arXiv / JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Multi-Agent Protocol Distillation, or MAPD, is a new training framework for agentic search that tries to let open-source models learn from proprietary teachers without inheriting their verbose style, after the researchers found that direct imitation can widen the gap between teacher and student and destabilize training.</p>
+<p>Agentic search lets large language models tackle knowledge-intensive tasks by mixing multi-step reasoning with retrieval, but the paper says outcome-based reinforcement learning gives only sparse supervision. It argues that distilling from proprietary models could supply denser guidance, yet conventional logit matching is blocked by hidden logits and mismatched tokenizers, while raw natural-language trajectory imitation can transfer surface style instead of reasoning skill.</p>
+<p>MAPD addresses that by inserting a structured, style-normalized protocol between teacher and student. An offline multi-agent system decomposes each query, retrieves supporting evidence, repairs failed searches, and turns the resulting trace into a JSON protocol with the task type, reasoning plan, and extractive grounding facts. During training, that protocol is shown only to a privileged branch of the student policy, where its token distributions provide a dense distillation signal alongside the sparse RL objective. The code is open sourced at https://github.com/AaronLiu0702/MAPD.</p>
+<p>The paper reports evaluations across seven QA benchmarks, where MAPD outperformed competitive distillation and RL and reached average success rates of 39.4% on Qwen3-1.7B and 44.4% on Qwen3-4B. It also says the framework generalized across three proprietary teachers — Claude-Opus-4.6, GPT-5.5, and Gemini-3.1-Pro — with narrow variance across teachers, within 2 points.</p>
+<p>The results also show why the protocol matters. Pure OPSD collapsed in the agentic setup, dropping to 5.9% on Qwen3-1.7B and 20.9% on Qwen3-4B, while the length clip ratio surged from 5% to about 74%. The paper says too much distillation pressure can also hurt: with λ = 0.1, single-hop scores improved on some benchmarks, but multi-hop tasks fell sharply. A middle setting, λ = 0.05, gave the best balance between distillation strength and policy stability.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.24280v1" target="_blank" rel="noopener noreferrer" title="arXiv / From Proprietary to Open-Source: Bridging the Distribution Gap via Multi-Agent Protocol Distillation in Agentic Search">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Progress Reward Modeling for Robotic Learning: A Comprehensive Survey</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new survey argues that progress rewards are becoming central to robotic learning because a terminal success signal does not show whether a robot is moving forward, standing still, or undoing earlier gains, while the field still lacks a shared framework for comparing methods.</p>
+<p>Robotic learning, the survey says, takes place in dynamic, sequential, high-dimensional environments where the same action can have different effects depending on the task and current state. That has pushed recent work toward progress rewards that provide feedback during task execution, not just at the end. The survey says these signals can support policy learning as well as online monitoring, trajectory reranking, data filtering, planning, action selection, and failure recovery.</p>
+<h3>How the field is being organized</h3>
+<p>The survey lays out the area in three connected steps. First, it looks at the interface of a progress model: what information the model receives and what kind of progress signal it produces. That interface can use a single observation, a trajectory prefix or short window, a full trajectory, or explicit comparisons between states or rollouts. Task goals are often language-conditioned, but can also be structured or programmatic. Outputs can be scalar scores, progress deltas, rankings or preferences, or executable reward functions.</p>
+<p>Second, it groups methods by how progress rewards are constructed. The survey identifies four paradigms: frozen foundation-model scoring, learning from temporal and relative supervision, instruction-tuned progress prediction, and programmatic reward construction. It cites code-based reward logic and feature-function approaches as examples of the last category.</p>
+<p>Third, it connects those methods to data and evaluation. Progress supervision may come from human annotation, human-guided automation, or fully automated procedures. Benchmarks, the survey says, should separate progress fidelity from robustness, generalization, and downstream utility. That distinction matters because a reward can help a policy without faithfully representing progress, and a good progress estimator may still be unsuitable for closed-loop control.</p>
+<p>The survey also says the current literature is fragmented: different methods use different observations, goal specifications, output signals, supervision sources, and evaluation protocols. That makes direct comparison difficult and makes it hard to tell what reported results actually validate.</p>
+<p>What remains unresolved.</p>
+<p>The survey’s limitations section says current progress models still need to handle temporal adaptation better. Future work, it says, should adjust progress magnitude to task events, execution speed, and stage difficulty, while also representing stagnation and regression. It also notes that visually similar observations can mean different things at different stages, because progress depends on execution history.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.21655v1" target="_blank" rel="noopener noreferrer" title="arXiv / Progress Reward Modeling for Robotic Learning: A Comprehensive Survey">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new arXiv preprint argues that a common way of distilling diffusion models with classifier-free guidance can leave the student free to trade one branch’s error for another, and proposes a branch-aware fix aimed at more stable transfer across guidance scales.</p>
+<p>The paper, *Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation*, looks at on-policy distillation (OPD), where a student diffusion model is trained on trajectories it generates itself while a teacher is evaluated on the same visited states. The authors say the open question is how OPD should behave when the underlying diffusion model uses classifier-free guidance, or CFG, a default component of modern diffusion systems. In the setup they study, both teacher and student keep separate positive and negative branches, and a natural OPD objective is to match the CFG-composed velocity rather than each branch directly.</p>
+<p>That choice, they argue, is the problem. Matching only the composed prediction can be under-identified at the branch level, because positive- and negative-branch errors can cancel in the guided output. Through two contrasting cases, the authors say naive matching works when both models share the same negative conditioning, since both branch errors fall together. But when the teacher’s negative branch contains privileged information that the student does not have, the pattern changes: the paper says naive matching can reduce positive-branch error while increasing negative-branch error. The authors call this failure mode Negative Branch Asymmetry, or NBA.</p>
+<p>To address that, they introduce Positive–Direction Matching, or PDM, a branch-aware objective that separately constrains the positive prediction and the CFG conditional direction. They say this restores identifiable supervision and avoids the ambiguity that allows infinitely many degenerate branch-error pairs under composed matching alone.</p>
+<h3>Where the fix is tested</h3>
+<p>The paper applies PDM to dense-to-sparse video control on Wan-VACE, saying naive guided matching is highly sensitive to inference guidance scales, while branch-aware supervision gives more robust and effective knowledge transfer. It also discusses image-domain distillation settings: in text-rendering distillation, both naive matching and PDM track the teacher closely across guidance scales, and in reference-conditioned distillation PDM more closely follows the teacher and preserves the reference-supplied style, while naive matching shows appearance drift and visual artifacts.</p>
+<p>The authors frame PDM as a way to keep OPD stable when CFG is part of the model interface rather than something baked into a single distilled target.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.24731v1" target="_blank" rel="noopener noreferrer" title="arXiv / Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>StateAct: Program State, before Pixels, for Long-Horizon Computer-Use Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An arXiv preprint from Salesforce AI Research argues that computer-use agents improve when they act on program state rather than only on screenshots, a change that matters for long desktop tasks where the same pixels can hide different underlying states.</p>
+<p>The paper says current agents are usually pushed toward better perception: stronger models for reading screenshots and choosing where to click. StateAct takes the opposite route. It treats the screenshot as a lossy rendering of the underlying state — files, application backends, and DOM — and builds a code-first harness around that distinction, so the main agent works directly with program state while a dedicated GUI subagent handles visual click-based interaction only when needed.</p>
+<h3>State, verification, and long-horizon control</h3>
+<p>StateAct combines three parts: state-grounded action, an independent finish gate, and context management for long runs. The authors say the finish gate re-checks the saved result for structural failures such as missing output, unsaved output, or output written to the wrong path. To keep long episodes on track, the main agent hands subgoals to fresh subagents instead of letting its own context grow without bound.</p>
+<p>The paper reports that the GUI subagent is used sparingly: 28 of 108 OSWorld 2.0 tasks and 1.1% of main-agent steps. A code-only variant without the GUI subagent did worse than the screenshot-based baseline on partial success, which the authors use to argue that some tasks still need direct visual interaction.</p>
+<p>On OSWorld 2.0, StateAct raises Claude Opus 4.8 from 20.6% to 26.9% on binary success and from 54.8% to 61.6% on partial success. The preprint also says this comes at about 9 times lower cost per task than the same model driven by screenshots alone. In the paper’s comparison, the state-grounded harness is the best-performing entry and exceeds the public frontier they cite.</p>
+<p>The authors also report that the gain is strongest on tasks whose state is machine-checkable, such as multi-item state, cross-source reasoning, and conflict disambiguation, while weaker on more visually demanding or human-in-the-loop tasks. They add that on OSWorld-Verified, a shorter-horizon benchmark, StateAct and the reference perform similarly, which they present as evidence that the advantage is concentrated on long-horizon tasks.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.22798v1" target="_blank" rel="noopener noreferrer" title="arXiv / StateAct: Program State, before Pixels, for Long-Horizon Computer-Use Agents">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Data Pyramid for Embodied Manipulation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new arXiv preprint reframes embodied manipulation as a data problem, arguing that robots do not get the same internet-scale shortcut as multimodal models and need a layered mix of real, simulated, human, and general data to balance scalability with alignment to physical action.</p>
+<p>On July 27, 2026, Yifan Ye and colleagues posted <strong>“Data Pyramid for Embodied Manipulation”</strong>, a survey-style framework for organizing embodied learning around the kinds of data that feed it. The authors say the basic tension is that data closely tied to real robot execution is usually expensive and hard to scale, while highly scalable data can be only loosely connected to physical interaction.</p>
+<h3>Five layers of embodied data</h3>
+<p>The paper organizes the embodied data ecosystem as a “pyramid” with five complementary sources: <strong>real-robot data</strong>, <strong>UMI-style data</strong>, <strong>egocentric and exocentric data</strong>, <strong>simulation data</strong>, and <strong>general vision-language data</strong>. In that ordering, real-robot data sits at the apex because actions recorded on the target robot are directly executable on the same platform. Lower layers trade away some of that direct coupling in exchange for scale, diversity, or convenience.</p>
+<p>The authors describe the pyramid around two main axes: <strong>scalability</strong> and <strong>robot alignment</strong>. They also characterize each source by <strong>data quality, diversity, reusability, and physical fidelity</strong>. Real-robot data is the most physically grounded, but it requires hardware, human effort, and resets. UMI-style demonstrations use portable, robot-independent interfaces to collect manipulation data without a robot in the loop. Egocentric and exocentric recordings capture human interaction from first- or third-person views. Simulation restores executable actions and privileged labels, while general web-scale image, video, language, and vision-language data adds semantic and reasoning coverage without robot grounding.</p>
+<p>The paper says this framework is not just a taxonomy. It reviews datasets, collection pipelines, embodiments, sensing configurations, supervision, scale, diversity, and transferability across the five layers. It also notes that several recent embodied foundation models already use pyramid-like training mixtures, including hierarchical or heterogeneous data recipes.</p>
+<h3>How the paper reads model training</h3>
+<p>Beyond cataloging data sources, the authors analyze recent embodied foundation models through the lens of their <strong>data recipes</strong>: how sources are selected, aligned, and mixed during pretraining. They focus on three model families — <strong>embodied brain models</strong>, <strong>vision-language-action models</strong>, and <strong>world action models</strong> — and relate data composition to capabilities in <strong>perception, reasoning, planning, action generation, and world prediction</strong>.</p>
+<p>The paper says embodied brain models use broad multimodal and embodied data to support perception, spatial and temporal reasoning, affordance understanding, memory, and high-level planning. Vision-language-action models and world action models draw on heterogeneous data in different ways, with the latter also using action-free temporal data, action-conditioned interaction, and synthetic experience to model how environments evolve and what actions do. The authors also point to systems such as <strong>OpenVLA</strong>, <strong>Octo</strong>, and <strong>π 0.5</strong> as examples of models that combine large-scale vision-language pretraining with embodied grounding data.</p>
+<p>A further point in the paper is that these data mixtures are becoming more diverse over time. It says some newer recipes combine real-robot, UMI, simulation, and other sources, and that one cited model family extends across all five levels of the pyramid. The authors present this as evidence that embodied pretraining is moving from conventional robot datasets toward larger, more heterogeneous corpora.</p>
+<h3>The open problems they leave on the table</h3>
+<p>The paper closes by naming <strong>six open challenges</strong>: building large-scale tactile datasets, collecting failure and recovery data, developing scalable data-collection pipelines, aligning actions across embodiments, leveraging egocentric data for dexterous manipulation, and designing principled data recipes for robot learning.</p>
+<p>Those unresolved issues are central to the paper’s message. The authors argue that the next generation of embodied systems will depend less on one dominant dataset and more on how well different sources are combined, aligned, and reused. Their stated aim is to lay a foundation for future embodied system design, but the framework also makes plain how much work remains in gathering the right kinds of data for robots that must act in the physical world.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.24744v1" target="_blank" rel="noopener noreferrer" title="arXiv / Data Pyramid for Embodied Manipulation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Sol-Attn: Accelerating Video Generation Inference via On-the-Fly Attention Sparsification</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In a preprint on arXiv, Sol-Attn is presented as a training-free way to speed up video generation inference by sparsifying attention on the fly. The work says diffusion transformers are important for high-fidelity video generation, but long token sequences make attention a major bottleneck. Sol-Attn unifies dynamic routing, sparse computation, and approximation correction in a single online-softmax pass, using on-the-fly block thresholding with proxy-score reuse to pick critical key-value blocks while keeping budgets controllable. It also reuses proxy scores from unselected blocks to approximate their contribution, rather than materializing the full proxy map.</p>
+<p>The paper frames its approach as a response to two problems in existing dynamic sparse attention methods: rigid, costly routing based on fixed top-block fractions or cumulative probability mass, and lossy keep-or-drop sparsification that can hurt accuracy under aggressive sparsity. In experiments across image and video generation tasks, Sol-Attn is reported to improve the quality-efficiency frontier of training-free sparse attention, with 2.1 times end-to-end speedups for video generation and 2.3 times for video editing while preserving visual quality.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.24027v1" target="_blank" rel="noopener noreferrer" title="arXiv / Sol-Attn: Accelerating Video Generation Inference via On-the-Fly Attention Sparsification">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Fertility clinics are offering young mitochondria in controversial fertility technique</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A small number of fertility clinics are marketing mitochondrial replacement therapy as a way to boost IVF success, even though scientists say the treatment remains experimental and should only be used in clinical trials. The dispute is over whether clinics are offering a real, evidence-based service or selling an unproven promise to people desperate to have a baby.</p>
+<h3>Experimental use beyond the trial setting</h3>
+<p>Mitochondrial replacement therapy, or MRT, involves removing the nucleus from a person’s egg or a couple’s single-cell embryo and transplanting it into an egg from a young donor. The idea is that the donor’s mitochondria might help the egg or embryo mature after fertilization. Any resulting child would have nuclear DNA from the biological mother and father, and mitochondrial DNA from the egg donor.</p>
+<p>Scientists have already shown in a clinical trial that MRT can produce healthy children for parents whose mitochondria carry disease-causing mutations. But Nature identified clinics in Asia, Europe and the Americas advertising MRT for a broader group of IVF clients who do not have those mutations. The International Fertility Group’s website says, “MRT can transform your fertility journey,” and the agency says it helps people find and receive services from fertility clinics around the world. A spokesperson said MRT is done by partner clinics, not the agency itself.</p>
+<p>Nature said it was difficult to confirm that all of the clinics are actually performing the procedure, but they were advertising it on websites and social media. Clinicians and scientists, including some who think MRT may hold promise, broadly agree that it is experimental and should at present be offered only as part of a clinical trial.</p>
+<p>Some of those interviewed were sharply critical. Richard Anderson, a fertility doctor at the University of Edinburgh, said he was “pretty horrified” after reviewing one clinic’s offering, calling the technique difficult, risky and of uncertain benefit. Mary Herbert, a reproductive biologist at Monash University who led a clinical trial involving MRT, said clinics were offering “generally very expensive treatment” to people who are desperate for a baby despite the absence of published controlled-trial evidence for infertility use.</p>
+<p>Others defended the practice. Uliana Dorofeyeva, advisory clinical director for the International Fertility Group, said, “This is the patient[’s] right to choose.” Kent McQueen of IVF Asia Group said adding MRT to IVF can make results for a 40-year-old resemble those of someone 25, calling the outcomes “like miracle results.”</p>
+<p>The evidence for infertility use remains thin. Nature found only a few published human studies, including a 2023 study of 25 people without mitochondrial disease and a 2019 study with a single birth out of 30 participants; neither had a control arm.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-01935-5" target="_blank" rel="noopener noreferrer" title="Nature / Fertility clinics are offering young mitochondria in controversial fertility technique">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Why some wool is wavy</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tsukuba, Ibakaki (JP) National Institute for Materials Science (NIMS) The Sharifi Lab seeks postdocs to study endocrine and metabolic mechanisms in GU cancers, driving translational discovery to therapies Miami, Florida (US) University of Miami Desai Sethi Urology Institute Job Title: Executive Publisher, Springer Journals Location: New York or Philadelphia (Hybrid Working Model) Application Deadline: August 24, 2026... A useful reading is that news &amp; Views 21 JUL 26 ‘Climate free fall’: why the biggest risk to our economies is yet to be recognized Comment 14 JUL 26 Led by the nose: a queen’s scent shapes naked mole rat society News &amp; Views 28 JUL 26 Rare contagious cancer discovered in wild catfish News 22 JUL 26 Exceptional brain and ecological diversity in the earliest snakes Article 22 JUL 26 Scientific Director (f/m/x) at the Gregor Mendel Institute of Molecular Plant Biology (GmbH) of the Austrian Academy of Sciences (OeAW), Vienna. The work carries weight because it makes a concrete, source-linked research claim that can be checked against methods, evidence, and later replication rather than against hype alone.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02104-4" target="_blank" rel="noopener noreferrer" title="Nature / Why some wool is wavy">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Misfolded insulin may be quietly driving diabetes</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A June 1 study from Sanford Burnham Prebys Medical Discovery Institute and the University of Michigan adds detail to a diabetes problem that starts inside pancreatic beta cells, where misfolded proinsulin can build up and stress the cells that make insulin.</p>
+<p>Beta cells in the pancreas monitor blood sugar and, when glucose rises, produce more insulin to bring it back toward normal. As diabetes progresses, those cells increasingly struggle to meet demand. Previous research had already linked that decline to proinsulin misfolding, but it was not clear which other proteins help manage the process or how they work together.</p>
+<p>To trace that system, the researchers genetically modified mice so BiP, a chaperone protein in beta cells, carried a 3xFLAG-tag that made it easier to detect and isolate. The work pointed to a key role for p58 IPK, one of BiP’s cochaperones. When the team removed p58IPK from two cell lines, misfolded proinsulin accumulated at higher levels. Mice engineered not to produce p58 IPK showed similar results, and their beta cells made smaller amounts of both proinsulin and insulin.</p>
+<p>Restoring p58 IPK improved the cells’ ability to fold and transport proinsulin, but only when BiP was also present. Adding extra BiP without p58 IPK produced only modest gains. “BiP cannot just go it alone,” said lead author Insook Jang.</p>
+<p>The researchers also identified additional partner proteins involved in folding, transporting, and managing misfolded proinsulin. They said more research is needed to pin down exactly how these proteins influence insulin production and diabetes progression.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260727214616.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Misfolded insulin may be quietly driving diabetes">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Twisted laser light can tell mirror-image molecules apart</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from Tata Institute of Fundamental Research, Indian Institute of Technology Mumbai, and Indian Institute of Technology Hyderabad showed that specially shaped laser light can distinguish mirror-image molecules, or enantiomers, from one another. The work builds on the challenge of telling apart molecules that can look nearly identical but behave very differently, especially in living systems and medicines. At the laser facility at TIFR Hyderabad, the team used ultrashort laser pulses with controlled spin and twist on gaseous samples of R- or S-Camphor. The pulses broke the molecules into charged fragments, which the scientists measured with a time-of-flight mass spectrometer. The fragment counts changed depending on how the light’s twist matched the molecule’s handedness, letting the researchers identify which mirror-image form was present.</p>
+<p>The experiments were done in the gas phase, away from solvents and surfaces, so the interaction between the structured light and the molecular shape could be seen more directly. The researchers said the twisted light also strengthened the difference between the two enantiomers, producing larger signals than traditional optical methods.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260727214557.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Twisted laser light can tell mirror-image molecules apart">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Hidden charcoal reveals the true age of ancient cave paintings</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Scientists have for the first time pinned down the age of prehistoric paintings inside Font-de-Gaume in southwestern France, after hidden charcoal in black pigment made two images datable and showed that the cave’s art was added in more than one period.</p>
+<p>The cave near Les Eyzies in Dordogne is part of a region known for some of Europe’s best-known prehistoric art, but exactly when many of those images were made has long been hard to determine. Radiocarbon dating can work on charcoal because it contains organic carbon, while mineral pigments usually do not. Many black paintings were therefore assumed to be made entirely from iron and manganese oxides and treated as impossible to date directly.</p>
+<p>To test that assumption, researchers analyzed two black figures at Font-de-Gaume: a bison and a masklike image. Using Raman microspectrometry and hyperspectral imaging, they found traces of charcoal spread consistently through the black lines. That pattern suggested the carbon belonged to the original pigment rather than later contamination from graffiti, visitors, or tourist activity.</p>
+<p>Once the charcoal was confirmed, the team took extremely small samples for carbon-14 dating. The bison dated to between 13,461 and 13,162 calBP, placing it in the Upper Paleolithic. The mask produced a more complex result, with three date ranges: 8,993 to 8,590 calBP, 15,981 to 15,121 calBP, and 15,297 to 14,246 calBP. Together, those dates suggest the figure may include elements created thousands of years apart.</p>
+<p>The work points to a new way to reconstruct when people entered decorated caves, painted, returned, and altered the same images. The study was published in PNAS.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260727214619.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Hidden charcoal reveals the true age of ancient cave paintings">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Blazing like 10 billion suns: NASA’s Swift sees a wandering black hole devouring a star</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">NASA’s Neil Gehrels Swift Observatory has spotted a rare supermassive black hole far from the center of a distant galaxy as it tore apart a star, and astronomers say the unusual location raises the key question of how the black hole got there.</p>
+<p>The discovery began with an exceptionally bright flare from a star that wandered too close and was ripped apart by the black hole’s gravity, a type of event astronomers call a tidal disruption event. The black hole is described as an apparent “orphan” because it sits unusually far from the galactic core, where supermassive black holes are normally found. The team says no previous event of this kind had been detected at such a great distance from a galaxy’s center.</p>
+<p>The flare was first flagged by ZTF, the Zwicky Transient Facility operated by the Palomar Observatory in Southern California, after it detected an unusual burst of light in a galaxy about 750 million light-years from Earth. Robert Stein, a research fellow at The University of Maryland, College Park and NASA’s Goddard Space Flight Center in Greenbelt, Maryland, said the team was looking for these star-shredding events to find otherwise invisible supermassive black holes wandering away from galactic cores. He said the discovery, “one of just a couple” confirmed so far, validates a new technique for finding more.</p>
+<p>Additional observatories helped confirm the interpretation. The SOAR telescope in Chile found spectral features consistent with a tidal disruption event, and Swift’s UVOT measured the flare’s temperature at about 54,000 degrees Fahrenheit (30,000 degrees Celsius). At its peak, the flare briefly radiated with the brilliance of about 10 billion suns.</p>
+<p>The black hole’s unusual position leaves an open question about its origin. Stein said it likely began in a galaxy’s center, and researchers say it may have been displaced during a merger.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260727214609.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Blazing like 10 billion suns: NASA’s Swift sees a wandering black hole devouring a star">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
