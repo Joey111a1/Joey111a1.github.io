@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-07-30</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-07-30</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Israel Has Left 60,737 Minors Orphaned in Gaza</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Wednesday, the Gaza-based Health Ministry said Israeli occupation forces had left 60,737 minors orphaned since the offensive began in October 2023. It also said more than 2,200 families were completely wiped out during the offensive. Among the victims, it listed 52,095 minors who lost their father, 5,929 children who lost their mother, and 2,713 children left completely orphaned.</p>
+<p>Civil registry data, the account said, showed the offensive completely destroyed 2,276 family units, comprising 8,858 people who were killed. It described the Gaza Governorate, in the northern part of the Strip, as the hardest-hit area, with 19,700 children losing their father, 2,083 losing their mother, and 1,075 losing both parents. The report also said other severely affected areas included Khan Younis, the central area of the Strip and Rafah, and that Rafah has been virtually uninhabited for more than a year and a half because of the Israeli occupation.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/israel-has-left-60737-minors-orphaned-in-gaza" target="_blank" rel="noopener noreferrer" title="Telesur English / Israel Has Left 60,737 Minors Orphaned in Gaza">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="axios,bbc,cnn,guardian,middle_east_eye,nyt">
+  <summary>Saudi Arabia is getting dragged into a war it has tried desperately to avoid</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Saudi Arabia’s defense minister met Vice President Vance at the White House after joint strikes in Iraq, telling him Riyadh still wants de-escalation with Iran even as it retaliates against attacks on its infrastructure — a sign the kingdom is trying to defend itself without being pulled deeper into the war.</p>
+<h3>The White House message after the Iraq strikes</h3>
+<p>Prince Khalid bin Salman told Vance on Wednesday that, despite the joint U.S.-Saudi strike on pro-Iranian militias in Iraq, Saudi Arabia still favored de-escalation with Iran, a source familiar with the meeting told Axios. The point of the meeting was to deliver a message from Crown Prince Mohammed bin Salman about the war with Iran and the wider regional situation.</p>
+<p>The visit came a day after Saudi and U.S. Officials had already crossed into more direct military action. On Tuesday, the Saudi military and U.S. Central Command carried out joint strikes against pro-Iranian militias in Iraq. CENTCOM said the strikes जवाब came after more than 30 drone attacks directed by the Islamic Revolutionary Guard Corps and carried out by militias against targets in Saudi Arabia over the previous 72 hours. Saudi Arabia’s Defense Ministry later confirmed it participated and said the strikes were coordinated with CENTCOM.</p>
+<p>According to the source familiar with the meeting, Prince Khalid told Vance that the attacks by pro-Iranian Iraqi militias on Saudi infrastructure and energy facilities had crossed a red line and forced the kingdom to respond. The same source said the Crown Prince wanted to make clear that the strikes in Iraq did not mean Saudi Arabia was seeking escalation, but that it was ready to defend itself if needed.</p>
+<h3>Why Riyadh said it had to respond</h3>
+<p>The Saudi defense minister had been expected in Washington last week, but delayed the trip because of the Iraq strikes. In the meeting, the message was not only about Iraq but about the broader regional confrontation. Prince Khalid was also trying to signal that Saudi Arabia views de-escalation with Iran as the more fruitful path, even after the military response.</p>
+<p>That balancing act has become harder over the past five months, with Saudi Arabia trying to avoid being drawn into a wider conflict while still dealing with repeated threats. CNN reported that Saudi Arabia has kept open channels of communication with Tehran, even as Iranian drones targeted its oil industry, and this policy of détente predates the war and was later reflected in a 2023 agreement mediated by China.</p>
+<p>The pressure has also come from the Houthis in Yemen. CNN said the Houthis fired missiles at two Saudi oil complexes on the Red Sea coast at the weekend, after attacks on two Saudi tankers and a declared blockade of Saudi shipping through the Bab al-Mandeb chokepoint. Earlier this month, the Houthis accused Saudi Arabia of bombing the airport in Sanaa to stop an Iranian aid flight from landing. The same report said Saudi officials still face threats from Iranian drones and short-range ballistic missiles across the Gulf.</p>
+<h3>A wider conflict Riyadh still wants to avoid</h3>
+<p>BBC News framed Saudi Arabia’s position as a choice between keeping up retaliatory strikes as deterrence or trying to de-escalate. CNN described the kingdom as being “in the eye of a storm,” with threats on three fronts: the Houthis in Yemen, Iran-backed militias in Iraq, and Iran itself. Saudi Arabia’s military is far more capable than it was 10 years ago, but that the kingdom’s size, coastline and dispersed oil infrastructure make the threat harder to manage.</p>
+<p>The political setting was also tense. The Saudi defense minister visited the White House a day after Israeli Prime Minister Benjamin Netanyahu met with Trump. An Israeli official said Netanyahu discussed the situation in Saudi Arabia “in the context of regional challenges,” and the source familiar with the Saudi meeting said Prince Khalid told Vance that Netanyahu was pushing for escalation with Iran while Saudi Arabia wanted de-escalation.</p>
+<p>Other reporting suggested the Iraq strikes were already rippling through the region. The Guardian said the joint U.S.-Saudi strikes had pushed the region into “uncharted territory,” and reported that Iraq’s presidency called them a violation of sovereignty. Middle East Eye said Iraqi Prime Minister Ali al-Zaydi called an urgent security meeting after the attacks. Against that backdrop, the Saudi message in Washington was clear: Riyadh says it has struck back, but still wants to avoid becoming fully absorbed into the war.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/07/29/saudi-arabia-iraq-strikes-vance-deescalation-iran" target="_blank" rel="noopener noreferrer" title="Axios / Saudi defense minister holds urgent meeting with Vance after Iraq strikes">Axios #1</a><a href="https://www.bbc.co.uk/news/articles/clyx83l8jv8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Saudi Arabia&#x27;s dilemma as it tries to stay out of US-Iran war">BBC #1</a><a href="https://www.cnn.com/2026/07/29/middleeast/saudi-arabia-iran-iraq-yemen-war-houthis-intl" target="_blank" rel="noopener noreferrer" title="CNN / Saudi Arabia is getting dragged into a war it has tried desperately to avoid">CNN #1</a><a href="https://www.cnn.com/2026/07/29/middleeast/why-iran-chose-to-restart-the-fight-us-intl" target="_blank" rel="noopener noreferrer" title="CNN / Why Iran chose to restart the fight after the US stopped firing">CNN #2</a><a href="https://www.theguardian.com/world/2026/jul/29/us-saudi-strikes-in-iraq-have-pushed-the-region-into-uncharted-territory-analysts-warn" target="_blank" rel="noopener noreferrer" title="The Guardian / US-Saudi strikes in Iraq push region into ‘uncharted territory’, analysts warn">Guardian #1</a><a href="https://www.middleeasteye.net/news/iraq-government-calls-urgent-security-meeting-after-joint-us-and-saudi-attacks" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Iraq calls urgent security meeting after US and Saudi attacks">MEE #1</a><a href="https://www.nytimes.com/2026/07/29/world/middleeast/iran-war-us-jordan-saudi-iraq.html" target="_blank" rel="noopener noreferrer" title="The New York Times / New Strikes Engulf More Countries in the Iran War">NYT #1</a><a href="https://www.nytimes.com/2026/07/29/world/middleeast/saudi-arabia-us-iran-war.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Saudi Arabia Reluctantly Enters U.S.-Iran War">NYT #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc">
+  <summary>How the UK&#x27;s extreme heat is shifting the conversation about air-con</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Britain&#x27;s hot spells are pushing air conditioning from a niche fix into a live policy argument, as residents like Mandy Bourne struggle in overheated flats and landlords, councils and policymakers weigh cooling against the country&#x27;s long focus on cutting carbon.</p>
+<p>Mandy Bourne lives with her 80-year-old mother in a top-floor social housing flat in the West Midlands. Both have health conditions worsened by the recent heatwaves, and Mandy says changes in temperature can trigger flare-ups of her chronic lung condition. &quot;I&#x27;ve got COPD and sometimes I can&#x27;t breathe,&quot; she says. As the flat overheats, she says she is constantly reaching for her inhaler: &quot;It&#x27;s red hot in the flat. The sun is just beaming in.&quot;</p>
+<h3>Homes that hold on to heat</h3>
+<p>Across the UK, solid brick homes absorb heat and then radiate it back into rooms that never fully cool down. That retained warmth can push night-time temperatures in urban centres up to 7C higher than the surrounding countryside, part of the urban heat island effect that is at its most dangerous in the early hours, when bodies need cooler air and cannot find it.</p>
+<p>Researchers from the University of Birmingham modelled a previous West Midlands heatwave and concluded that the heat-island impact alone accounted for roughly half the 130 heat-related deaths. Jo Shields, head of sustainability for Mandy&#x27;s housing association Walsall Housing Group, says she keeps hearing the same complaint: &quot;The heat gain stays within the concrete or the brick, so the night-time cooling becomes harder.&quot;</p>
+<p>Last summer, as the region baked, residents at Ellum Pointe, a whg scheme for over-55s, told their landlords they simply could not cool their flats. The response was improvised. The housing association took the community room, closed all the windows and doors, and put a mobile air-conditioning unit in there to create an &quot;internal cool room.&quot;</p>
+<h3>Why air-con is back in the argument</h3>
+<p>That kind of stopgap is part of a larger shift. For decades, richer countries have focused on mitigation, while adaptation such as cooling homes and hospitals has had less attention and far less money. In 2023, $1.8trn went to mitigation, while adaptation got $65bn. Last year, Bill Gates argued in a memo that the climate movement&#x27;s &quot;doomsday&quot; fixation on temperature targets had diverted money from measures that improve lives in a warming world, including cooling. Climate scientists accused him of false dichotomies, and the row exposed the fault line now visible this summer: how much should go to cutting carbon, and how much to adapting to the heat?</p>
+<p>Baroness Brown, who chairs the adaptation committee of the Climate Change Committee, says the current system is lopsided. Under the Climate Change Act, the mitigation side recommends legally binding carbon budgets, but adaptation has no such teeth; the government writes its own risk assessment and its own plans. This year, the committee published its report just as the first heatwave struck Britain in May, urging hard adaptation targets and saying support with cooling for the 30% of most vulnerable homes, plus cooling in hospitals and preventive care visits, could reduce 40% of the predicted increase in heat-related deaths by 2050.</p>
+<h3>The political fight over cooling</h3>
+<p>Air conditioning is the most contested part of that shift. Only about 5% of English homes have a cooling unit, but the committee recommends fitting them in hospitals and care homes within 10 years, and schools within 25 years. That goes against years of official advice that passive cooling — shade, ventilation and design changes — should come first.</p>
+<p>The politics are already visible. Some London councils, following a planning &quot;cooling hierarchy&quot;, prioritise low-energy ways of keeping homes cool over air conditioning and, in a small number of cases, have ordered property owners to remove units. The Conservative front bench calls that &quot;dark ages&quot; miserabilism, while other MPs and commentators want an &quot;air-con revolution.&quot; Since April, England and Wales have offered £2,500 towards a reversible air-air heat pump through the Boiler Upgrade Scheme, but the support is badged as a heat pump and only worth a third of the £7,500 for a heating-only model; in its first month, only around 45 households claimed it.</p>
+<p>The scheme is closed to social housing and newbuilds, so people like Mandy are left out. In Woolwich, a resident called Keisha says her top-floor flat reaches 43C in a heatwave, and she and around twenty neighbours are taking their landlord, PA Housing, to court over homes they say are unfit to live in. The landlord&#x27;s chief executive accepts that a growing number of residents face &quot;uncomfortably warm temperatures... due to the changing climate&quot; in homes &quot;designed to keep heat in rather than keep them cool.&quot;</p>
+<p>For Mandy, the issue is immediate rather than theoretical. The cooled community room gives her and her mother some relief, and she says she wants the same in her flat: &quot;We sit there all day with it on, it helps so much I want one in my flat.&quot;</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cy5dw4plzvlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / How the UK&#x27;s extreme heat is shifting the conversation about air-con">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Chile Declares Health Alert Over Hantavirus Fatality Rate</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Tuesday, the Chilean Health Ministry declared its first nationwide health alert for hantavirus to strengthen surveillance after the disease’s fatality rate rose this year. The measure applies from the northern region of Atacama to the southern region of Magallanes and will remain in effect until July 31, 2027. Health authorities said hantavirus is endemic in Chile and is transmitted by the long-tailed mouse, which lives in rural and semirural areas throughout most of the country.</p>
+<p>Official data showed 46 cases of infection and 18 deaths so far this year, with a fatality rate of 39 percent, up from 18 percent in 2025. The alert is meant to let authorities strengthen surveillance, manage resources, hire specialized personnel, carry out health control measures and speed up purchases of supplies. Authorities also urged the public to avoid contact with rodents, ventilate homes before entering if they have been closed, clean unused spaces with water and chlorine, keep garbage covered and store food safely. It said PAHO has maintained an epidemiological alert since December 2025 over rising hantavirus cases across the Southern Cone.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/chile-declares-health-alert-over-hantavirus-fatality-rate" target="_blank" rel="noopener noreferrer" title="Telesur English / Chile Declares Health Alert Over Hantavirus Fatality Rate">TE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Venezuelan Acting President Rodriguez’s First 200 Days Bring Economic Gains and Political Reconciliation</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Tuesday, the Venezuelan Communication Ministry published a report on the first 200 days of Acting President Delcy Rodriguez’s administration, saying public policies produced concrete results in citizens’ well-being, domestic peace and Venezuela’s position in international markets. The most significant achievements were the Amnesty Law for Democratic Coexistence and the recovery of economic stability. It said the law promoted civic dialogue and benefited 8,084 people.</p>
+<p>The same report said the government raised the comprehensive minimum income by 50%, from US$160 to US$240, and increased pensions by 40%, from US$50 to US$70 a month. It also said the Great Mission Return to the Homeland brought back more than 5,000 Venezuelans, commercial air links with the United States were restored after seven years, and Venezuela rejoined the global payments system. On the economic side, it said GDP grew 6% in the first six months of the year, marking 19 consecutive quarters of growth, while oil output rose from 942,000 to 1,203,000 barrels per day in June.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuelan-acting-president-rodriguezs-first-200-days-bring-economic-gains-and-political-reconciliation" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuelan Acting President Rodriguez’s First 200 Days Bring Economic Gains and Political Reconciliation">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Bold Changes in Cuban Parliament Reforms Reshaping the 2026 Economy</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Cuba’s parliament has opened a two-day session devoted to new laws and the 2026 Economic and Social Program, with lawmakers trying to turn 176 approved reforms into a legal framework that can work as the island faces economic strain and pressure from abroad.</p>
+<p>The National Assembly of People’s Power convened its seventh ordinary session of the 10th Legislature on July 29, mostly by videoconference, and the meeting is set to run until Thursday, July 30. The agenda includes 13 main items, from swearing in new deputies and reviewing earlier agreements to hearing an update from the Foreign Ministry on the international situation and its impact on Cuba.</p>
+<p>Several major laws are under discussion, including the Agricultural and Forestry Land Law, the Organization of the Central Administration of the State, the Housing Law and the Identity and Domicile System Law. Officials said the proposals were enriched through prior public consultations. Lawmakers are also weighing the repeal of Law 183 of December 2025, which governed the term of office for delegates to Municipal Assemblies of People’s Power.</p>
+<p>The session also turns to the economic side of the program. Deputies will review the state budget for the first half of 2026 and the final accounts for fiscal 2025, alongside a report from the Economic Affairs Commission. Teresa González Barea, vice president of that commission, said the Ministry of Finance and Prices has been asked to present an integral program against tax evasion and under-declaration, with results to be evaluated by year-end.</p>
+<p>At the center of the debate is the Economic and Social Program 2026, which the government has described as its “compass and roadmap” for crisis management. It was updated after consultation with more than 2 million people and is organized around 10 general objectives, 111 specific objectives, 505 actions, and 309 indicators and targets. The government says it is meant to tackle distortions, macroeconomic imbalances and external shocks, while the source material also notes a backdrop of deep contraction, recurring power outages of 20 to 25 hours, and about 23 percent economic shrinkage since 2019.</p>
+<p>Parliament is expected to approve the new laws and set timelines for implementation, while the government says it will inform the public about the consultation results, the main modifications to the program and its progress.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/cuban-parliament-reforms" target="_blank" rel="noopener noreferrer" title="Telesur English / Bold Changes in Cuban Parliament Reforms Reshaping the 2026 Economy">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>‘The war caused this’: Miscarriages soar in Gaza amid Israeli bombing and siege</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Miscarriages are rising sharply in Gaza as Israeli bombing, siege conditions and destroyed transport make pregnancy more dangerous, leaving women like Sahar al-Majdalawi to reach hospital too late and doctors to warn that the true scale is likely higher than recorded.</p>
+<p>A month after learning she was pregnant, al-Majdalawi began suffering agonising abdominal pain. The 34-year-old displaced Palestinian said it was her first pregnancy after seven years of trying to conceive, and she feared for her unborn baby. With roads destroyed and transport brought to a standstill, she and her husband walked for hours in the dark to Al-Awda Hospital in the Nuseirat refugee camp in central Gaza.</p>
+<p>“I was hit by severe cramps that felt like labour pains,” she said. “We had to walk so far because there was no transport despite my pain.” After doctors performed an ultrasound, they told her: “The foetus is still in your womb, but there is no heartbeat.” Al-Majdalawi said, “At that moment, it felt as though my own heart stopped beating.”</p>
+<p>Her case is one of many in Gaza’s war-ravaged maternity wards. Since Israel launched the two-year genocide in October 2023, miscarriages have risen sharply. The International Planned Parenthood Federation said miscarriage rates were around 300 percent higher at the height of the war than before October 2023. The figure now stands at around 460 miscarriages per 1,000 births, compared with 140 per 1,000 births in 2022. The Palestinian Ministry of Health recorded 3,958 miscarriages in the first six months of 2026.</p>
+<p>Dr Adnan Radi, head of the ministry’s advisory committee and a senior consultant in obstetrics and gynaecology, called the figure “shocking” and said official statistics undercount the true scale because many women cannot reach medical facilities and data collection in Gaza’s tent camps has become virtually impossible. He said there is “an undeniable and sharp surge in miscarriages during the war years.”</p>
+<p>Although physicians cannot point to a single cause, Radi said the rise is tied to the war’s conditions: severe anaemia, widespread malnutrition, infectious diseases, contaminated water, poor sanitation and exposure to toxic dust from bombardment. The Integrated Food Security Phase Classification warned that about 67 percent of Gaza’s population faces critical or worse acute food insecurity through December, while nearly 25,000 pregnant and breastfeeding women will need urgent nutritional support over the coming year.</p>
+<p>Al-Majdalawi said she still believes the war caused her loss. “Deep down, I know the war caused this,” she said.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/war-caused-miscarriages-soar-gaza-amid-israeli-bombing-and-siege" target="_blank" rel="noopener noreferrer" title="Middle East Eye / ‘The war caused this’: Miscarriages soar in Gaza amid Israeli bombing and siege">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Mexico to send new humanitarian aid to Cuba; confirms continued aid to Venezuela</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Claudia Sheinbaum Pardo announced a new shipment of humanitarian aid from the Mexican government to Cuba and said it was necessary to respect the “soberanía de los pueblos.” She made the remarks after a large Sunday march in Mexico City in support of Cuba and against the tightening of the U.S. blockade, and repeated them during Tuesday morning’s press conference at Palacio Nacional. She also said Mexico supports the island through various channels, including the Agencia Mexicana de Cooperación Internacional para el Desarrollo.</p>
+<p>Sheinbaum also said the Mexican government will continue sending humanitarian aid to Venezuela for people affected by the earthquakes of June 24. She said that in the coming weeks two ships from the Secretaría Marina will go to Venezuela.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/29/politica/008n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Anuncia la Presidenta nuevo envío de ayuda humanitaria para Cuba">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc">
+  <summary>Inquiry finds MoD Afghan data breach was foreseeable failure</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A parliamentary inquiry has blamed a MoD data breach that exposed details of more than 18,500 Afghans seeking resettlement in the UK on a foreseeable systemic failure, sharpening questions about how secrecy, expertise and accountability shaped the Afghan relocation scheme.</p>
+<p>In a report published on Thursday, the Commons Defence Committee said the Ministry of Defence lacked the expertise to run the scheme after the fall of Kabul to the Taliban and had used secrecy as a “shield” against proper accountability. The breach came to light in August 2023, but an unprecedented super-injunction prevented it from being reported until July 2025. The committee said the leak was not “an individual mistake” but a “foreseeable systemic failure” driven by “inappropriate tools, weak operating procedures, insufficient training, poor organisational continuity, and an inadequate culture of data protection and accountability”.</p>
+<p>The committee said the breach was one of 19 reported between February 2022 and November 2023 and was caused when a member of MoD personnel shared a Microsoft Excel spreadsheet with a “trusted third party”. The spreadsheet contained data on more than 18,500 applicants to the Afghan Relocations and Assistance Policy, or Arap, scheme — every person who had applied by January 2022. Arap was set up in April 2021 to help people whose lives were thought to be at risk because they had worked with British armed forces in Afghanistan, and to resettle eligible applicants and their family members in the UK.</p>
+<p>Committee chair Tan Dhesi said the MoD “should stick to defence” and “should never have been left to run immigration casework schemes”. He also criticised the secrecy around the breach, saying the super-injunction “imposed serious costs on accountability and trust” and had remained in place for almost two years even though it had originally been expected to last four months. The report also questioned the government’s policy of not commenting on special forces matters, saying it was inappropriate in the context of the breach and should not prevent Parliament and the public from understanding how administrative failings occurred.</p>
+<p>A MoD spokesperson said the leak “should never have happened” and welcomed the chance to learn from the incident.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c77gvr4172vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Inquiry finds MoD Afghan data breach was foreseeable failure">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>HRCP, Amnesty call for &#x27;prompt, independent&#x27; probe into Rawalakot unrest</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Human Rights Commission of Pakistan and Amnesty International called for a prompt, independent probe into unrest in Rawalakot area of Azad Jammu and Kashmir’s Poonch district after clashes between protesters and law enforcement personnel on Monday in Rawalakot and Tuesday in Mirpur. The reports said the violence resulted in several casualties. HRCP said it was “deeply alarmed” by reports of deaths and injuries and urged an end to the “cycle of violence,” while also calling for anyone responsible for unlawful use of force to be held to account.</p>
+<p>The unrest comes amid protests by the now-proscribed Joint Awami Action Committee, which has been demanding the abolishment of 12 seats in the local legislature reserved for refugees from Indian-held Kashmir, and as elections are being held across AJK in three division-wise phases. Amnesty International also called on the authorities to lift a communications blackout in the region and, through its Acting Regional Director for South Asia Isabelle Lassee, sought a “prompt, independent, and transparent investigation” into the reported use of force against protesters.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2019279/hrcp-amnesty-call-for-prompt-independent-probe-into-rawalakot-unrest" target="_blank" rel="noopener noreferrer" title="Dawn / HRCP, Amnesty call for &#x27;prompt, independent&#x27; probe into Rawalakot unrest">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Parents of the 43 request the Court to annul order to create another truth commission</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The parents of the 43 Ayotzinapa students who disappeared asked the Supreme Court of Justice of the Nation to revoke a ruling by a collegiate court that ordered the creation of a new investigative commission for truth and justice in the Iguala case. In an 11-page brief dated the 24th, they also asked the Court to order the Attorney General’s Office and the Interior Ministry to take measures that guarantee legal certainty and punishment for those responsible without using parallel administrative structures that weaken the criminal process. They said they went to the high court after it attracted four extraordinary review resources on the 7th to examine the sentence from the first collegiate court of the nineteenth circuit in Tamaulipas.</p>
+<p>Signed by Felipe de la Cruz Sandoval, Socorro Villarreal Moctezuma, Margarita Ramírez Rodríguez, Celso García Aristeo, Mario Micaela Fernández and Hugo Mora Venancio, the document says the case is already being investigated by the Commission for Truth and Access to Justice in the Ayotzinapa Case and a special FGR unit. It argues that a new “truth commission” lacks technical-legal basis, would duplicate existing work, fragment investigations and spread institutional resources. The parents also denounced irregularities in earlier rulings that led to suspects being released through incorrect use of torture criteria, and they called for strengthening existing investigative units under the Istanbul Protocol.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/29/politica/012n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Parents of the 43 request the Court to annul order to create another truth commission">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Israel slams Canada for statement opposing West Bank settlement expansion</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Canada’s foreign ministry, Global Affairs Canada, said on Wednesday that Israeli settlements in the occupied Palestinian territory are illegal under international law and undermine “peace, security and stability.” Israel’s Foreign Ministry answered on social media, accusing Canada of moving to “embolden terror” and saying Canada was focusing on Israel instead of “terrorists” in “Judea and Samaria,” the biblical term used by Israeli settlers for the occupied West Bank. The exchange came after Canada reaffirmed its opposition to Israeli settlement expansion in the West Bank, where settlers have carried out attacks on Palestinian communities.</p>
+<p>Canada’s statement said it condemns “the ongoing violence in the West Bank,” called for the expansion of Israeli settlements to stop, and urged de-escalation and protection of civilians. Hours earlier, the Office for the UN High Commissioner for Human Rights said it was alarmed by plans to further increase settlements and outposts and by calls for revenge and collective punishment against Palestinian communities. The UN said it had recorded roughly 190 settler attacks in each of the first four months of 2026 and that 76 Palestinians have died this year in settler attacks.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/29/israel-slams-canada-for-statement-opposing-west-bank-settlement-expansion?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Israel slams Canada for statement opposing West Bank settlement expansion">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>5 killed in Brazil, as fierce winds bring chaos to Rio, Sao Paulo region</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Five people died after powerful gusts of wind hit Rio de Janeiro and parts of Sao Paulo state in Brazil, cutting power and bringing public transport to a standstill. Winds reached up to 100km/h in Rio just before rush hour, where they felled dozens of trees and left thousands stranded as the city’s three subway queues ground to a halt. The fire department said two people died when a wall collapsed in Rio, and local authorities in Santos said a homeless person was killed by a fallen tree; a fisherman was also missing in Tarituba.</p>
+<p>Operations were affected at several major airports in Rio de Janeiro and Sao Paulo. Santos Dumont Airport said it suspended operations for about two hours, and Rio firefighters said more than 90 trees had fallen. Many areas of the city suffered blackouts before power was restored. In Botafogo, two large trees fell on either side of a news-stand where Patrick Diego, 39, has worked for over 20 years, while building manager Paula Rubim said the street was blocked and the “subway was at a standstill.” The city hall’s operations centre said the winds were caused by “the approach of an oceanic cold front.”</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/americas/article/3362319/5-killed-brazil-fierce-winds-bring-chaos-rio-sao-paulo-region" target="_blank" rel="noopener noreferrer" title="South China Morning Post / 5 killed in Brazil, as fierce winds bring chaos to Rio, Sao Paulo region">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>Civil Defense recognizes emergency situation in two Rio Grande do Sul cities</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">general_news</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The National Civil Defense, linked to the Ministry of Integration and Regional Development, recognized a state of emergency in the Rio Grande do Sul municipalities of São Sebastião do Caí and Feliz. The two cities were heavily affected by recent rains. In the state, the rains have intensified in recent days, and according to the State Civil Defense Operations Center, 218 municipalities and 59,967 people had been affected by last Monday (27).</p>
+<p>The recognition allows municipalities to request resources for civil defense actions through the Integrated Disaster Information System, or S2iD. Two other Rio Grande do Sul cities, Marques de Souza and Palmitinho, still have their recognition process underway. On Tuesday (28) alone, 114 municipalities were hit by hail, strong winds, heavy rain and a tornado, and more storms are forecast for next weekend.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/geral/noticia/2026-07/defesa-civil-reconhece-situacao-de-emergencia-em-duas-cidades-gauchas" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Civil Defense recognizes emergency situation in two Rio Grande do Sul cities">AB #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>(China Economic Roundtable) China&#x27;s economy starts new five-year plan with resilience, new growth drivers</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s economy entered the 15th Five-Year Plan period with first-half 2026 growth that Chinese officials described as resilient and supported by new growth drivers. The National Bureau of Statistics said GDP rose 4.7 percent year on year to 69.6 trillion yuan, or about 10.25 trillion U.S. dollars, in the first six months of 2026. Wang Guanhua, an NBS official, said the results “laid a solid foundation” for this year’s economic and social goals and gave a strong start to the 2026-2030 plan period. Yang Te of the National Development and Reform Commission said the pace matched the annual growth target of around 4.5 to 5 percent.</p>
+<p>Officials also pointed to signs of momentum in industry, consumption, and new sectors. The NBS said surveyed urban unemployment fell to 5 percent in June from 5.1 percent a month earlier, while per capita disposable income rose 5.2 percent in the first half. Value-added industrial output increased 5.4 percent and retail sales of goods and services rose 2.7 percent. Yang said resilience came from industrial and supply chains and energy security, while Wang said new growth drivers, led by high-end manufacturing, the digital economy and modern services, contributed more than 40 percent of first-half growth.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260729/5b2250c363514489959461142f1fc471/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / (China Economic Roundtable) China&#x27;s economy starts new five-year plan with resilience, new growth drivers">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China moves to unlock sci-tech finance data to spur innovation</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China will bolster the open sharing and integrated use of data in the sci-tech finance sector, according to a joint notice issued on Wednesday by nine government departments, including the People&#x27;s Bank of China. The notice said the move is meant to better support high-level technological self-reliance and provide more efficient financial support to innovative enterprises. It also unveiled the first version of a national catalog for sci-tech finance data development and utilization, covering 26 data indicators across eight major categories, including enterprise rosters, innovation capability assessments and enterprise needs.</p>
+<p>The notice encouraged localities to draw up region-specific data utilization lists and build supporting information infrastructure. It said authorized institutions may use public sci-tech data in a standardized manner, while local governments should provide authorized access channels, information query services and support for joint modeling. It also called for pilot trusted data spaces in eligible regions, with better use of corporate cash-flow data and new industry research information platforms. Market-oriented credit reporting agencies are encouraged to build specialized databases for tech-based firms, and financial institutions are guided to use them to build digital credit profiles, develop tailored risk-control and investment models, and design financing products for niche industries.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260729/77de9f2770ca49e59e48359392360fb8/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China moves to unlock sci-tech finance data to spur innovation">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="bbc">
+  <summary>Limiting sugar before age two linked to better brain health</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Scientists have suggested that eating very little sugar up to age two may help protect the brain decades later. The analysis looked at nearly 65,000 people in the UK Biobank project, focusing on children growing up either side of the end of sugar rationing in the UK. It found that people who were toddlers during rationing were linked to a 23% lower risk of dementia, and the disease was diagnosed about two and a half years later. The data were published in the journal *Neurology*.</p>
+<p>The research used the end of rationing in September 1953 as a kind of natural experiment, when average sugar consumption was estimated to rise quickly from about 41g a day, or 10 sugar cubes, to 80g, or 20 cubes. Previous research linked that change to higher rates of type 2 diabetes and blood pressure years later. The study cannot prove that sugar directly prevented dementia, and Jiazhen Zheng said further research is needed. Rachel Richardson of Cochrane said it “does not represent a smoking gun” and that the findings apply only limitedly to children today.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/clyx85z1ld5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Limiting sugar before age two linked to better brain health">BBC #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>‘She killed the kids!’ Police call from Lindsay Clancy’s husband brings tears to courtroom</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jurors in Lindsay Clancy’s Massachusetts murder trial heard the emergency call her husband made after returning home to find their three children dead, a recording that left Clancy sobbing in court and sharpened the fight over whether she acted intentionally or in the grip of mental illness.</p>
+<h3>The 911 call that broke the courtroom</h3>
+<p>On Wednesday, Patrick Clancy’s anguished call was played for the jury as he described coming back from an errand and finding the house wrong in every way. He had left after Lindsay Clancy asked him to make a quick trip for takeaway food and medication at a pharmacy for Cora. Prosecutors say that was an excuse to get him out of the house.</p>
+<p>The roughly seven-minute recording captures Patrick Clancy speaking with his wife after finding her badly injured and bleeding in the yard, after she jumped from the home’s second-storey window. “Look at me,” he says. “Say my name.” He tells the dispatcher he is going to check on the children, then moments later howls and cries after finding them in the basement. The dispatcher repeatedly asks what happened. “She killed the kids!” he yells.</p>
+<p>Jurors also heard Patrick Clancy’s account of what he found when he got home: an unusually silent house, blood in the main bedroom, and an open window. He said he searched the children’s rooms and the bathroom, at first thinking they might be in the tub. Injured but conscious, Lindsay Clancy told him she had tried to kill herself and that the children were in the basement, without saying they were dead. He said he did not realize he was still on the emergency call as he ran downstairs and found each child had been strangled with exercise bands.</p>
+<p>The scene in court was equally raw. Lindsay Clancy cried as the recording played. Her parents, seated in the front of the courtroom, also cried, while Patrick Clancy had already left the room after finishing his testimony.</p>
+<h3>What the trial is really about</h3>
+<p>Three years after Dawson, 3, Cora, 5, and Callan, 8 months, died in January 2023, the murder trial has centred on Lindsay Clancy’s mental state at the time. Prosecutors say Clancy, a former labour and delivery nurse at Massachusetts General Hospital, acted intentionally and is criminally responsible for the deaths.</p>
+<p>Her lawyers are trying to show otherwise. They will seek to prove she had post-pregnancy psychosis, which they describe as a rare mental illness linked to the stress, sleep deprivation and hormonal changes that follow childbirth. In opening arguments on Monday, her lawyer said she had bipolar disorder and that antidepressants prescribed after the birth of her third child worsened her condition.</p>
+<p>According to her lawyer, Lindsay Clancy said on the day of the killings that she heard a voice telling her: “This is your last chance. Kill the children so you can kill yourself.”</p>
+<p>Patrick Clancy testified on Monday about her deteriorating mental health in the months before the killings, including her telling him about intrusive thoughts of harming the children and of suicide. He said she had sought care from experts in post-partum mood disorders, had been put on multiple psychiatric medications, and later checked into a psychiatric hospital when nothing worked. She killed the children 19 days after she was discharged, he testified.</p>
+<p>He also said no one ever told him his wife should not be alone with the children. “I didn’t know what psychosis was until after this happened,” he said on Wednesday.</p>
+<p>Patrick Clancy testified that his last image of Dawson was of the boy sitting on the couch, eating chicken nuggets and green beans. Jurors were shown surveillance video from the pharmacy, where Patrick Clancy could be heard on the phone with his wife and later said, “She was pretty quiet. It sounded like she was busy,” adding that he thought she was probably in the middle of giving baths or something like that.</p>
+<p>The trial has also heard that Clancy and her ex-husband accuse her medical providers of failing to properly diagnose, treat and monitor her in lawsuits filed earlier this year. On cross-examination, her lawyer introduced daily handwritten notes about her medications and mood, including repeated references to “horrible thoughts,” along with a book and fact sheet on post-partum anxiety and a chart she used to track her mood.</p>
+<p>If convicted of murder, Clancy faces life in prison without parole. If found not guilty due to a lack of criminal responsibility, she would be committed to a state mental health facility.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3362317/she-killed-kids-police-call-lindsay-clancys-husband-brings-tears-courtroom" target="_blank" rel="noopener noreferrer" title="South China Morning Post / ‘She killed the kids!’ Police call from Lindsay Clancy’s husband brings tears to courtroom">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Amnesty: India sent 2,596 arms shipments to Israel during genocide in Gaza</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">climate_disaster</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Amnesty International says Indian state-owned and private companies sent at least 2,596 arms shipments to Israel between October 2023 and November 2025, a flow it says fed the war in Gaza and may be larger than its conservative count suggests.</p>
+<p>The report, *Made in India: The Supply of Weapons and Ammunition to Israel*, says the consignments included machine-gun components, 155 mm high-explosive artillery shells supplied to Elbit Systems, explosive warheads for SkyStriker “kamikaze” drones, and armoured vehicle components destined for major suppliers to the Israeli military. Amnesty said those shipments amounted to 564,970 parts of explosive ordnance, 390,516 small arms parts for military-grade weapons, and 298 components of military vehicles.</p>
+<p>It said its analysis was based on shipments classified under specific Harmonized System codes, excluding items it could not identify as military and leaving out some dual-use small-arms components and weapons likely intended for anti-missile defence systems. Conservative approach means the figures are likely to underestimate the “true extent of India’s contribution to Israel’s military supply chain.”</p>
+<h3>What about the trade</h3>
+<p>Amnesty said the shipments took place while Israel’s military campaign in Gaza was under way after the Hamas-led attacks on southern Israel on 7 October 2023. As of 29 July 2026, it said, at least 247,387 Palestinians had been killed or injured.</p>
+<p>The report is the latest allegation that India has materially supported Israel’s war effort. In May 2026, the Palestinian-led Boycott, Divestment and Sanctions movement and No Harbour for Genocide warned of a “flood” of military supplies from India to Israel. A spokesperson for No Harbour for Genocide told Middle East Eye at the time that Israel depends on specific imported components, including high-end aerospace materials and military steel.</p>
+<p>Amnesty also cited an Al Jazeera investigation based on Israeli Tax Authority import data that found India was the second-largest exporter of military-related goods to Israel between October 2023 and October 2025. That data, Al Jazeera noted, likely showed only part of the overall picture and did not establish how the shipments were used in Gaza.</p>
+<p>Amnesty said it wrote to nine companies and the Indian state but did not receive a reply by the time of publication. Agnes Callamard, Amnesty’s secretary general, said the Indian authorities could not credibly argue they did not know that continuing to authorize and facilitate arms transfers to Israel carried a substantial risk of contributing to serious violations of international law.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/made-india-new-amnesty-report-shows-indian-arms-sales-israel-during-genocide" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Amnesty: India sent 2,596 arms shipments to Israel during genocide in Gaza">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Saudi Arabia seeks international coalition against Houthis in Red Sea</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Saudi Arabia is seeking to build an international coalition to protect shipping in the Red Sea from attacks by Yemen’s Houthis, people familiar with the deliberations told Reuters. The coalition has not been finalized and is being discussed with dozens of countries, the sources said. The move comes as tensions in the Red Sea rise and global economic outlook is strained by the closure of the Strait of Hormuz.</p>
+<p>On July 20, the Houthis announced a maritime blockade on Saudi Arabia and accused its leaders of imposing an “unjust and oppressive siege” on Yemen for nearly 12 years. Since then, the Houthis said they have launched attacks on Saudi vessels in the Red Sea, and Saudi Arabia responded with air strikes on what it said were Houthi military facilities at Yemen’s Hodeidah port used to threaten commercial shipping. The evidence also says attacks on tankers carrying energy and other supplies have expanded beyond the Gulf and pushed oil prices higher.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/29/saudi-arabia-seeks-international-coalition-against-houthis-in-red-sea?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Saudi Arabia seeks international coalition against Houthis in Red Sea">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="axios">
+  <summary>Inside Bibi&#x27;s pivotal White House meeting with Trump</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Benjamin Netanyahu left a 90-minute White House meeting with Donald Trump after warning that a deal with Iran looked doubtful, while the two leaders weighed diplomacy, tighter economic pressure and possible military strikes just hours before Iran launched a missile attack that raised the risk of wider escalation.</p>
+<h3>Iran dominated the meeting</h3>
+<p>Iran was the main focus of Tuesday’s conversation, a senior Israeli official said after the sitdown. It was the first meeting between Netanyahu and Trump since the start of the war, and it came as Trump was still trying to reach a deal with Iran even as he also considered a return to major combat operations.</p>
+<p>The Israeli official said Netanyahu told Trump he was skeptical that an agreement with the Iranians could be struck. Trump’s envoys Steve Witkoff and Jared Kushner were still negotiating with the Iranians, the official said, though “the gaps still seem wide.”</p>
+<p>According to the official, Netanyahu did not just press skepticism. He also discussed increasing pressure on Iran through “kinetic and non-kinetic means,” and said that if Iran attacks Israel, the Israeli response would be immediate and powerful. The official said Netanyahu was awaiting Trump’s decision.</p>
+<h3>Three paths Trump is weighing</h3>
+<p>The Israeli official said the two sides discussed three options Trump is considering next. The first was reaching a deal with Iran. The second was continuing a naval blockade on Iran while increasing economic pressure. The third was resuming and intensifying military strikes.</p>
+<p>“We discussed all of those options at length and very candidly,” the official said. “Not as an attempt to promote one option over another, but to examine what the best outcome would be from each. That’s what the conversation was about.”</p>
+<p>Trump also expressed concern about the war’s impact on energy markets and the global economy, the official said. Netanyahu responded that the Iranian regime was trying to use the Strait of Hormuz as leverage to force U.S. concessions, and argued that there were ways to keep increasing pressure on Iran’s economy, which is already under severe strain.</p>
+<p>The official said the two also discussed continuing the blockade to pressure Iran. Netanyahu, according to the briefing, was not dismissing Trump’s concerns but was trying to show that economic pressure could still be intensified.</p>
+<p>Several hours after the meeting, Iran launched a missile attack on an American base in Jordan for the first time since Trump paused U.S. strikes in Iran on Friday. Trump vowed a serious response in an interview with Fox News on Wednesday. The attack, Axios said, could push him toward a full-scale escalation.</p>
+<h3>What Trump still has to decide</h3>
+<p>The meeting left Trump with the same basic choices, but with more pressure on each of them. A deal with Iran was still being negotiated by Witkoff and Kushner, but the gaps were described as wide. A harder economic approach was still on the table, including the naval blockade and additional pressure on Iran’s economy. Military escalation was also still being discussed.</p>
+<p>The timing made the stakes more immediate. Netanyahu had just warned Trump that Israel’s response would be immediate and powerful if Iran struck Israel, and then Iran hit an American base in Jordan. That sequence turned the White House meeting from a general policy discussion into an urgent test of whether Trump would move toward a deal, keep applying pressure, or return to broader military action.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/07/29/inside-trump-netanyahu-meeting-iran" target="_blank" rel="noopener noreferrer" title="Axios / Inside Bibi&#x27;s pivotal White House meeting with Trump">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Myanmar court sentences activists to 37 years over election protest</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Myanmar court in Mandalay sentenced nine activists over a protest against the military-backed December elections. Eight protesters, including prominent activist Htet Myat Aung, received 37-year terms from two courts on Tuesday, while a ninth activist was sentenced to 27 years, according to May Hnin, a spokesperson for the Anti-Junta Forces Coordination Committee-Mandalay. The activists had been arrested on December 4, a day after they held a flash protest in downtown Mandalay, Myanmar’s second-largest city.</p>
+<p>May Hnin said the demonstrators had urged the public to boycott elections set for between December 25, 2025, and January 25, 2026, reject mandatory conscription, and call for the release of political prisoners detained after the military seized power from Aung San Suu Kyi’s elected government in 2021. She said the activists would not appeal because they did not believe the verdicts would be overturned. The military-backed government has not publicly commented on the sentences.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/29/myanmar-court-sentences-activists-to-37-years-over-election-protest?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Myanmar court sentences activists to 37 years over election protest">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,scmp">
+  <summary>Hadi Matar convicted in terrorism trial over Salman Rushdie stabbing</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Hadi Matar’s conviction on federal terrorism charges over the 2022 stabbing of Salman Rushdie raises the stakes for a case that already carried a 25-year state sentence, while leaving motive at the center of the trial.</p>
+<p>A jury found Matar guilty of all the charges against him, including engaging in an act of transnational terrorism. BBC News said the conviction was for attempting to help Hezbollah by attacking the British-Indian author. Matar, 28, is already serving a 25-year New York state prison sentence on an attempted murder conviction in the August 2022 attack, and the federal conviction carries a potential life sentence.</p>
+<p>Rushdie was about to speak on writers’ safety when he was slashed 15 times in front of a stunned audience at the Chautauqua Institution in western New York. He was gravely wounded and lost the sight in his right eye. In court, prosecutors asserted that Matar was driven by the late Iranian Supreme Leader Ayatollah Ruhollah Khomeini’s 1989 call for Rushdie’s death over The Satanic Verses.</p>
+<p>Defence lawyer Nathaniel Barone said the government had no proof of what was in Matar’s head. Matar declined to testify. Rushdie did testify, telling jurors: “I can’t say what his ambitions or his aim was, but the wounds were dispersed across my body.”</p>
+<p>The attack echoed the long shadow over Rushdie’s work. The Satanic Verses drew protests across the Muslim world, and Rushdie spent years in hiding before gradually re-emerging after Iran’s government distanced itself in 1998 from Khomeini’s fatwa.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c86ng1g5wy4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Salman Rushdie attacker convicted of terror offenses">BBC #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3362314/hadi-matar-convicted-terrorism-trial-over-salman-rushdie-stabbing" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Hadi Matar convicted in terrorism trial over Salman Rushdie stabbing">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Hackers steal sensitive data from UK Department for Education and police</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Hackers targeted the UK Department for Education and a police database, exposing more than 740,000 pieces of data, according to The Guardian. Just over 600,000 lines were taken from the DfE’s help-desk portal, with a smaller package from its Turing portal, and the police national legal database (PNLD) was also breached. The data reportedly included details of government officials, senior school leaders, university staff, police officers and members of the public.</p>
+<p>The Guardian said the hackers claimed to have taken 135,000 pieces of data and posted samples on a leak site under the name ExfilSquad. Screen grabs seen by the paper showed demands for payment from the DfE and PNLD in exchange for not publishing all the data. The DfE said “swift action” had been taken to contain the incident and said the information involved was limited to customer service contact details. The PNLD said the material taken related to police officers and others working in criminal justice, including names, the force or organisation they work for and work email addresses.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/technology/2026/jul/29/department-for-education-police-hackers-cybercrime" target="_blank" rel="noopener noreferrer" title="The Guardian / Hackers steal sensitive data from UK Department for Education and police">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>More than half of England in drought, Environment Agency declares</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">More than half of England has been declared in drought by the Environment Agency, with dry weather already hitting rivers, farming and wildfire risk and raising the prospect of tighter water-use controls for millions of people.</p>
+<p>The declaration, made on Wednesday, covers much of central, eastern and southern England. Dorset is among the areas included, alongside East Anglia, Hertfordshire and the whole of London, the Thames Valley, Hampshire and the Isle of Wight, Devon and Cornwall, the West Midlands, and Wessex, which includes Somerset, Wiltshire and South Gloucestershire. The Environment Agency said drought decisions take into account a range of factors, and the move means it is stepping up its response with more monitoring and controls on how much water can be taken from rivers and groundwater.</p>
+<p>More than 20 million people are already under hosepipe bans. The agency said the impacts are already being felt in low river flows, early harvests and a high risk of wildfires. Helen Wakeham, the Environment Agency’s director of water and chair of the National Drought Group, said: “The hot and dry weather means we are currently using water faster than nature can replenish it.”</p>
+<p>The current drought has followed an unusual weather pattern. January and February were very wet in much of the UK, helping replenish reservoirs and groundwater, but late spring and summer have been exceptionally hot and dry. The Environment Agency said July has brought just 7% of the average rainfall in England so far, and only 1% in southern England. Some parts of Devon and Hampshire have gone more than a month without rain. The Met Office said there is no sign of sustained rainfall that would make a significant difference, and called the conditions a “flash drought” because they developed suddenly rather than over many months.</p>
+<p>The pressure is not limited to England. Natural Resources Wales said North Wales and the Upper Severn river basin entered drought conditions last week. Scotland does not declare drought, but monitors “water scarcity”; the Scottish Environment Protection Agency says some parts of eastern Scotland are in the most extreme category of “significant scarcity”. Northern Ireland is not currently in drought.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/ckg35n7yny3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / More than half of England in drought, Environment Agency declares">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,el_pais">
+  <summary>Trump appeals $83.3m E Jean Carroll civil verdict to US Supreme Court</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump’s lawyers are asking the US Supreme Court to erase the $83.3 million defamation award to E. Jean Carroll, while the Department of Justice has also filed in support of that effort, putting the case’s central question on whether Trump’s remarks were protected as presidential acts.</p>
+<p>Trump’s personal lawyers want the justices to reject the jury verdict that found him liable for defaming Carroll. Separately, representatives for the Department of Justice filed a similar petition this week, seeking the same outcome. Both filings argue that Trump’s statements about Carroll — who says he sexually assaulted her in the Bergdorf Goodman department store — fell within the bounds of his office’s immunity.</p>
+<p>In their papers, federal lawyers said that, “Absent this Court’s intervention, the sitting President is facing nearly a hundred million dollars of personal liability for conduct that was well within the scope of his federal office.” They pointed to the Westfall Act, which shields federal employees from certain civil lawsuits when an alleged harm is “committed within the scope of their employment.”</p>
+<p>Trump’s personal lawyers also invoked the Supreme Court’s 2024 decision in *Trump v United States*, saying his remarks about Carroll could fall under that precedent. They argued the ruling expanded presidential immunity to anything that could be considered an “official act” of the presidency, though the term was left largely undefined. That decision, however, dealt only with criminal prosecution, not civil cases like Carroll’s, and Trump’s legal team is now pressing to extend it further.</p>
+<p>The 2nd Circuit Court of Appeals in Manhattan rejected that approach on September 8 of last year. In the appeal now before the Supreme Court, Trump’s lawyers argued that his comments about Carroll were made as part of his presidential interactions with the public and news reporters, and therefore qualified as an “official act.” They also said lower courts avoided deciding the immunity question early in the litigation.</p>
+<p>Carroll has fought two defamation cases against Trump for years. A jury awarded her $5 million in 2023 in the first case, and in January 2024 another jury awarded $83.3 million, much of it punitive damages, after finding him liable for sexual abuse and harming her reputation. The Supreme Court declined in June to hear Trump’s appeal of the first award. It is unclear whether the court will take up the latest appeal.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/29/trump-appeals-83-3m-e-jean-carroll-civil-verdict-to-us-supreme-court?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Trump appeals $83.3m E Jean Carroll civil verdict to US Supreme Court">AJ #1</a><a href="https://elpais.com/us/2026-07-29/trump-pide-al-supremo-que-anule-la-indemnizacion-de-83-millones-de-dolares-a-favor-de-e-jean-carroll.html" target="_blank" rel="noopener noreferrer" title="El País / Trump asks the Supreme Court to overturn the $83 million damages awarded to E. Jean Carroll">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Wife and current partner of Los Cuinis boss admits to violating U.S. anti-drug sanctions</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Wendy Dalaithy Amaral Arévalo, a 45-year-old Mexican citizen and the ex-wife and current partner of Los Cuinis boss Gerardo González Valencia, pleaded guilty to knowingly violating U.S. sanctions against drug trafficking, the U.S. Department of Justice said. Court documents say she conducted transactions and real estate deals with IMG Academy in Bradenton, Florida, where her son attended, and arranged tuition payments totaling $504,497.</p>
+<p>The Treasury Department’s Office of Foreign Assets Control sanctioned Amaral Arévalo on Aug. 19, 2015 for assisting Los Cuinis’ international drug trafficking activities. The Justice Department said she faces a maximum sentence of 10 years in prison and a $10 million fine, with sentencing scheduled for Dec. 2. In July 2023, González Valencia was sentenced to life imprisonment for conspiring to distribute large quantities of cocaine for importation into the United States.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/29/politica/014n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Wife and current partner of Los Cuinis boss admits to violating U.S. anti-drug sanctions">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Ukraine Pursues EU Membership as Security Strategy</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ukraine’s EU bid has become more than a diplomatic project: after the 2022 war with Russia, Kyiv treated membership as a security shield, while Brussels kept pressing strict political and legal conditions and several member states kept objecting.</p>
+<p>Ukraine’s drive toward Europe did not begin with the war. Its parliament declared integration into the European Union a primary foreign policy goal in July 1993, and formal steps followed in 1994 with the Partnership and Cooperation Agreement. Momentum rose after the 2004 Orange Revolution, and in 2005 President Viktor Yushchenko called European integration a non-negotiable foreign policy objective. The European Parliament backed Ukraine’s European aspirations that same year, while Brussels later launched the European Neighbourhood Policy in 2004 and the Eastern Partnership in 2009. Ukrainian officials, however, were said to see those frameworks as substitutes for real membership.</p>
+<p>The 2022 invasion changed the pace. Ukraine submitted its official application on February 28, 2022, four days after the start of the military conflict with Russia. The evidence frames that move as a geopolitical turning point and says that for leaders in Kyiv, EU membership is a vital security necessity. The European Commission then issued an assessment in June 2022 recommending candidate status, but tied it to structural reforms covering the Constitutional Court, anti-corruption work, anti-money laundering measures, limits on oligarch influence, media law alignment, and minority rights. On June 23, 2022, the EU’s 27 heads of state unanimously granted Ukraine candidate status. After legal screening against EU law, the first negotiation cluster, “Fundamentals,” was later opened in mid-2026.</p>
+<p>The path has also exposed friction inside the EU. Because each stage requires unanimous approval, Hungary and Slovakia have been able to slow or block progress, with Budapest arguing that admitting a country in active war could pull the bloc closer to hostilities and Bratislava raising economic and energy-security concerns. Trade tensions followed when tariff-free Ukrainian grain and agricultural exports pushed down prices in Poland, Romania and Bulgaria. France, Germany and the Netherlands have focused on the longer-term financial burden, since EU funding formulas would shift heavily toward Kyiv.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/ukraine-pursues-european-union-membership-as-security-strategy" target="_blank" rel="noopener noreferrer" title="Telesur English / Ukraine Pursues EU Membership as Security Strategy">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Beltrones applauds the resumption of cattle export</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Manlio Fabio Beltrones said the federal government had done the work needed to reopen the U.S. border to national cattle starting next August, after 20 months of closure because of the screwworm fly. He described the agreement with the United States as fortunate and said he was pleased that exports will begin in Sonora, his state. Beltrones said the closure left losses of around $2 billion and called for stronger efforts to maintain sanitary quality and avoid new shutdowns.</p>
+<p>He also accused the government of former president Andrés Manuel López Obrador and Agriculture Secretary Julio Berdegué of indifference, saying they cut resources to the National Service of Health, Safety and Agro-Food Quality, or Senasica, to prevent the pest’s entry and minimize the crisis. Beltrones called the Agua Prieta-Douglas export a first advance and said it should lead to more openings later, including in Chihuahua and across the rest of Mexico.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/29/politica/010n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Beltrones applauds the resumption of cattle export">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>What is ‘salad bar’ extremism, and is a new rehab playbook needed to tackle this form of radicalisation?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Singapore’s recent cases of “salad bar” extremism have pushed experts to argue that radicalisation is becoming harder to spot and rehab, because some individuals now mix pro-ISIS, far-right and other narratives into a single violent mindset.</p>
+<p>The Internal Security Department has handled at least three such cases in the last 10 months under the Internal Security Act, including what it said was the first Singapore case last September, when a 14-year-old boy was dealt with under the ISA. In June, a 19-year-old youth was revealed to have been arrested for the same reason, and earlier this week the ISD announced that it had detained another 14-year-old boy who was plotting a school attack.</p>
+<p>“Salad bar” extremism, also known as Composite Violent Extremism or CoVE, describes people who pick and choose beliefs and narratives rather than subscribing to one ideology. The term was popularised by former FBI director Christopher Wray, and researchers have recently used CoVE to capture the complexity of these evolving pathways. Authorities in the United Kingdom have also used the label Mixed, Unstable and Unclear, or MUU, extremism.</p>
+<p>Experts said the rise of CoVE changes how radicalisation is understood. Rather than following one clear ideological route, individuals may draw from conspiracy theories, anti-government sentiments, racial or religious hatred, geopolitical events, online communities and even fascination with previous attackers. Rohan Gunaratna of the S Rajaratnam School of International Studies said that for people driven by CoVE, “it is violence first, and ideology second.”</p>
+<p>That makes rehabilitation more complicated. Associate Professor Razwana Begum of the Singapore University of Social Sciences said rehabilitation now has to address a more complex mix of ideological, psychological and behavioural influences. Kenneth Yeo, an RSIS associate research fellow, said the “pick-and-choose nature” of such ideologies adds danger because there is no single authoritative source to target with counter-ideological efforts.</p>
+<p>Prof Kumar Ramakrishna, dean of RSIS, said CoVE cannot be dealt with through a counter-ideological approach alone because it does not have a clear structure that can simply be deconstructed. He said rehabilitation may need to go beyond ideology to include intellectual, emotional and social resilience, as well as digital and media literacy, balanced understandings of geopolitical issues, and family support.</p>
+<p>Experts said Singapore’s existing rehabilitation system can still provide a base, but a new playbook and programme may have to be designed for CoVE. At the same time, they said the number of Singapore cases is still small, so there is insufficient evidence to say these cases necessarily take longer or are inherently harder to rehabilitate than single-ideology cases.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/salad-bar-extremism-self-radicalisation-rehabilitation-social-media-6285561" target="_blank" rel="noopener noreferrer" title="CNA / What is ‘salad bar’ extremism, and is a new rehab playbook needed to tackle this form of radicalisation?">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>INE seeks unprecedented 2027 budget to fund mega-election,額 15,000 million extra pesos</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">general_news</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The INE is preparing a 2027 budget request that could add about 15 billion pesos to its ordinary budget, a figure described as unprecedented and tied to what the institute calls a “mega-election.” The calculations are based on a 3% inflation forecast for 2027, which the consejeros said affects the cost of purchases and, especially, personnel services.</p>
+<p>The request comes as the INE faces a crowded electoral calendar: 500 federal deputy seats will be contested, with 300 by majority vote and 200 by proportional representation; the institute must also coordinate concurrent elections in 17 states, while 31 states, except Coahuila, will renew local congresses and 30, except Veracruz and Durango, will hold municipal elections. Specialists estimate nearly 4,000 offices will be at stake. The commission on budget, made up of Jorge Montaño, Norma de la Cruz, Rita Bell López, Uuc-kib Espadas and Arturo Chávez, is set to present the draft figures this Wednesday, including operating costs, payroll for about 18,000 permanent workers, election organization spending and party funding.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/29/politica/007n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Sin precedente, alta cifra que pedirá INE para 2027">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>A Western Cape high court order has temporarily restricted the arsenal that may be used to manage Betty’s Bay’s baboons.</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Western Cape high court interim order has paused plans to expand the weapons-based management of Betty’s Bay’s baboons, giving the Overstrand Municipality a narrower set of tools while a broader fight over how the troop should be handled remains unresolved.</p>
+<p>Under the order, made by agreement between the municipality and the EMS Foundation on 27 July, the municipality has agreed not to introduce paintball markers, pepper balls, bear bangers and other aversive devices while it reviews its Strategic Baboon Management Plan. Gel blasters, which are already being used, will stay in place for now, but the order stops the municipality from routinely extending to Betty’s Bay the wider weapons-based approach used elsewhere in the Overstrand during the review.</p>
+<p>The order is only interim. It does not decide the legal dispute, say that any baboon-management method is lawful or unlawful, or end active management of the Betty’s Bay troop. Still, EMS said it marks an important opening toward a more humane, scientific and transparent approach, and called it a significant, if qualified, success.</p>
+<p>EMS senior researcher Megan Carr said the group was confident that the active management of the Betty’s Bay troop would now be carefully regulated. She said the court process had also created an opportunity for the municipality to reconsider its strategy and develop an approach that is specific to the Overstrand, scientifically grounded and non-lethal.</p>
+<p>The foundation, which brought the application, has been involved in baboon management observation in Hermanus, Pringle Bay and Betty’s Bay, where shrinking habitat, poorly secured waste and expanding residential areas have brought people and baboons into tense contact. It said it had been raising concerns with the authorities since December 2022 and had sought assurances from CapeNature and the Overstrand Municipality over the proposed expansion of weapons-based management.</p>
+<p>Its attorneys sent a formal letter of demand on 4 June 2026 after municipal officials confirmed procurement was under way to extend the full suite of management devices to Betty’s Bay from July. Five days later, the municipal manager published a notice saying the municipality had begun reviewing its strategic baboon management plan and would publish a draft after an independent panel of wildlife and conservation experts had reviewed it by August 2026 for public participation.</p>
+<p>The substantive case has not gone away. Part B of the proceedings, which concerns the broader legal challenge, has been postponed while the municipality reviews and publishes an amended plan, and the question of legal costs remains open.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-07-29-court-clips-wings-of-weapons-based-baboon-control" target="_blank" rel="noopener noreferrer" title="Daily Maverick / A Western Cape high court order has temporarily restricted the arsenal that may be used to manage Betty’s Bay’s baboons.">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>Ed Miliband grabs Brexit reset role as he reboots UK Foreign Office</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ed Miliband is reshaping the Foreign, Commonwealth and Development Office around climate, development and a U.K.-EU reset, giving Britain’s new foreign secretary a broader brief than his predecessor and signaling a more outspoken style as the department adjusts to him.</p>
+<p>In London, the Foreign Office’s King Charles II Street headquarters is bracing for a shift in priorities under Miliband, who has moved quickly after taking over from Yvette Cooper, now at the health brief. He has said the development side of the job and his focus on climate change are central to it, and one person familiar with his accession talks with Andy Burnham said Miliband secured a promise that he could push those themes in office. The same account said he also wanted international development foregrounded, after recent governments sidelined it while prioritizing security and defense.</p>
+<p>Miliband has already tried to underline that emphasis. This week he went to Paris and Madrid for informal talks with French and Spanish counterparts Jean-Noël Barrot and José Manuel Albares, and on Wednesday he told guests at an IPPR event that he wants climate and the environment to have a much higher profile. He added: “I am a politician not a chief diplomat.”</p>
+<h3>A Brexit reset inside the Foreign Office</h3>
+<p>The other major change is that the post-Brexit U.K.-EU reset is moving into the Foreign Office’s ambit. Miliband has accepted an invitation to attend the EU’s informal foreign affairs ministers’ meeting in September, and he has said stronger ties with European allies serve Britain’s economic and security interests.</p>
+<p>He has also been seeking advice from Ed Llewelyn, a former Cameron aide and ex-head of the Foreign Office who later served as U.K. ambassador to Rome, and may meet David Cameron himself.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/ed-miliband-uk-brexit-reset-foreign-office" target="_blank" rel="noopener noreferrer" title="POLITICO / Ed Miliband grabs Brexit reset role as he reboots UK Foreign Office">POLITICO #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="guardian,scmp">
+  <summary>Brave New World or Groundhog Day? Burnham revisits old ground in speech on social care</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham used a speech at a north London care home to promise faster reform of adult social care in England, but the bigger question is whether this attempt can avoid the long line of reviews and political row-backs that have left families paying heavily and waiting for change.</p>
+<h3>Burnham’s renewed pitch</h3>
+<p>Burnham said he would accelerate the Casey Commission, the independent review of adult social care in England. One report said final recommendations are expected by summer 2027; Burnham’s speech also set out a shorter timetable, saying Lady Casey’s recommendations for a National Care Service would be published within 12 months. He backed the review “100%” but gave little detail, saying the options could be “fully fledged or lesser options or something in between.”</p>
+<p>He framed the issue as a political failure as much as a policy one. Burnham said, “I think social care in England is as unfair as American healthcare,” and added: “The vulnerable pay with everything and it can completely leave them with nothing.” He also said he would not tolerate “profiteering” by care firms, while saying the sector needed better pay, training and more support for unpaid carers. He was not drawn on whether he would raise taxes, but said some plans would require “difficult decisions” and that more could be done within existing resources.</p>
+<h3>Families say the costs are overwhelming</h3>
+<p>The speech was set against accounts from people who have lived through the system Burnham wants to change. Mary said her late husband, Richard, was diagnosed with early onset Alzheimer’s disease in 2015 when he was 55. She quit her job as a fashion designer to care for him and paid for 15 hours of care a week, which cost nearly £27,000 a year.</p>
+<p>When Richard moved into a residential care home in 2024, the couple were forced to sell their house in London to meet care bills of £2,000 a week. Mary, 67, from Kent, said she was left with “virtually no savings,” living on her pension, doing some work and renting from friends. She said it had been frustrating to give up the life they had built, and described having been through “a really ugly tunnel with very little help.” She also said she often had to juggle caring with shopping and sorting bills, and wished there was more guidance for carers dealing with finances after a dementia diagnosis.</p>
+<p>Mary said dementia was neglected by the system and argued that if a condition cannot be treated with a drug, people are “swept aside.” She said she would be willing to pay more tax to fund care, comparing it with insurance for cars.</p>
+<p>Other families described different but equally costly pressures. Annabel said her 27-year-old son Fred, who has Down’s syndrome and is autistic and deaf, lives independently with carers but is charged £147.54 a week from his benefits by his local council in North Somerset. She said he would be better off if he lived in places such as Hammersmith and Fulham, which do not charge for home care, or in Wales, where the cost cap for care at home is £100.</p>
+<p>Jayne described trying to support her daughter Alice, 32, whose autism and complex mental and physical health issues have left her dependent on a patchwork of care. Jayne said Alice’s home care was of very poor quality, that a council-funded residential home in Sussex was “horrendous,” and that she eventually had to bring Alice back home permanently. Jayne now has to work part-time while also acting as an employer for personal assistants and trying to manage the bureaucracy around care.</p>
+<h3>What happens next</h3>
+<p>Burnham said Louise Casey’s review would be sped up, with recommendations for a National Care Service due within 12 months, and he said he would work with opposition parties on the issue. He also said he would develop a care workforce plan and engage the Conservatives and Liberal Democrats in search of a national consensus.</p>
+<p>For now, though, the central tension remains the same one that campaigners and families described: whether another major review will become a real reform, or just another entry in what the King’s Fund calls Westminster’s “graveyard of good intentions.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/jul/29/you-have-to-sit-quietly-until-you-die-the-families-failed-by-englands-social-care-system" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘You have to sit quietly until you die’: The families failed by England’s social care system">Guardian #1</a><a href="https://www.theguardian.com/politics/2026/jul/29/patrick-butler-andy-burnham-revisits-old-ground-in-speech-on-social-care" target="_blank" rel="noopener noreferrer" title="The Guardian / Brave New World or Groundhog Day? Burnham revisits old ground in speech on social care">Guardian #2</a><a href="https://www.scmp.com/news/world/europe/article/3362304/uks-pm-burnham-vows-fix-englands-unfair-adult-care-system" target="_blank" rel="noopener noreferrer" title="South China Morning Post / UK’s PM Burnham vows to fix Britain’s ‘unfair’ adult care system">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="folha">
+  <summary>Government sees risk of new sanctions with Trump act renewing national emergency against Brazil</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Brazil’s government is weighing the risk of fresh U.S. sanctions after Donald Trump’s administration renewed the national emergency against Brazil, a move with no immediate practical effect but one that has sharpened fears of further commercial or other pressure.</p>
+<p>The renewal was issued on Tuesday (28) and, under the National Emergencies Act, is meant to be published in the Federal Register on Wednesday. The measure itself does not create new penalties or widen the tariffs already in place, but the Brazilian government sees it as keeping open the possibility of additional sanctions. The International Emergency Economic Powers Act is the legal basis for that kind of renewal and for U.S. economic sanctions more broadly.</p>
+<p>On Wednesday (29), the Lula government repudiated the decision and said Trump’s administration was using “unfair and untrue” arguments. In its statement, the government said Brazil was rejecting “the resumption of accusations without any basis in the facts” and reaffirmed its sovereignty and the independence of the branches of government.</p>
+<p>Trump justified the renewal by repeating accusations made against the Brazilian government last year. The White House said the measure addressed an “unusual and extraordinary threat” to U.S. national security, foreign policy and economy. It also repeated claims, without naming Jair Bolsonaro, that members of the Brazilian government were politically persecuting a former president, his family and supporters, and contributing to a breakdown of the rule of law, politically motivated intimidation and human-rights abuses.</p>
+<p>In Brasília, the economic team of President Luiz Inácio Lula da Silva prepared for a more hostile relationship with Washington after the tariff dispute resumed. That mood worsened after a 12.5% tariff linked to an investigation that found failures in combating imports of products made using forced labor. The government also said that keeping the indirect reference to Bolsonaro in the text showed the political character of the decision.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/07/governo-ve-risco-de-novas-sancoes-com-ato-de-trump-que-renovou-estado-de-emergencia-contra-o-brasil.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / Government sees risk of new sanctions with Trump act renewing national emergency against Brazil">Folha de S.Paulo #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="daily_star_bangladesh">
+  <summary>The High Court yesterday imposed a Tk 5 crore cost on GPH Ispat Ltd for filing an appeal to remove its name</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The High Court yesterday imposed a Tk 5 crore cost on GPH Ispat Ltd and dismissed its appeal after the company filed it to remove its name from Bangladesh Bank’s Credit Information Bureau defaulters’ list while concealing that the Appellate Division had already passed an order on the same matter. The bench of Justice Md Nazrul Islam Talukder and Justice Mahmud Hasan ordered GPH Ispat to deposit the money with the registrar general of the Supreme Court within a month, saying it must be used for the treatment and welfare of those injured in the July uprising.</p>
+<p>Attorney General Md Ruhul Quddus Kazal said GPH Ispat had earlier obtained a High Court order on July 7 directing that its name not be included in the CIB list despite defaulting on loans of Tk 2,100 crore from 29 banks, and that a chamber judge of the Appellate Division stayed that order on July 9 after a government petition. He said the company then filed another case before a lower court and later appealed to the High Court without disclosing the earlier writ petition, the stay order or the pending appeal. After the state raised the issue, the company’s lawyers offered an unconditional apology, saying they had not been informed about the earlier proceedings.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/hc-penalises-gph-ispat-tk-5cr-hiding-facts-4236021" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / The High Court yesterday imposed a Tk 5 crore cost on GPH Ispat Ltd for filing an appeal to remove its name">TDSB #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="el_pais">
+  <summary>Judge Calama authorizes the UDEF to investigate 57 accounts of Zapatero, his circle and companies of the &#x27;Plus Ultra case&#x27;</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Judge José Luis Calama of the National Court authorized UDEF agents to request information from a dozen banking entities about 57 banking products linked to José Luis Rodríguez Zapatero, his two daughters, his secretary Gertrudi Alcázar and 13 companies investigated in the so-called Plus Ultra case. The request covers six accounts in Zapatero’s name, nine belonging to his daughters, seven tied to his close collaborator, two more for Julio Martínez Martínez, and 33 mercantile accounts.</p>
+<p>According to the police report dated June 9, investigators say that between 2020 and 2025 Zapatero received 490,780 euros from Análisis Relevante, while 174 transfers totaling 2.6 million euros were also detected in his accounts, which they say would come from invoices for alleged professional services. The police say they have so far singled out 200,000 euros paid by Foscul Social Research SAC, which they link to alleged illicit influence before Bolivian authorities, and they also point to the purchase of a Madrid home in February 2024 for 580,000 euros, later canceled by a transfer of 498,000 euros ordered by his wife, Sonsoles Espinosa.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-07-29/el-juez-calama-autoriza-a-la-udef-a-investigar-57-cuentas-de-zapatero-su-entorno-y-empresas-del-caso-plus-ultra.html" target="_blank" rel="noopener noreferrer" title="El País / Judge Calama authorizes the UDEF to investigate 57 accounts of Zapatero, his circle and companies of the &#x27;Plus Ultra case&#x27;">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="al_jazeera_en,axios,guardian,scmp,yonhap">
+  <summary>(3rd LD) Fed holds key interest rate steady in 9-3 decision</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Federal Reserve left its benchmark rate unchanged on Wednesday, but the 9-3 vote and the officials’ competing views on inflation showed growing tension over how long policy should stay on hold.</p>
+<p>The committee kept the federal funds rate target range at 3.5% to 3.75%, marking the fifth straight pause since December. Three members — Cleveland Fed president Beth Hammack, Minneapolis Fed president Neel Kashkari and Dallas Fed president Lorie Logan — preferred a quarter-point hike, while the other nine officials, including chairman Kevin Warsh, voted to stand pat. The post-meeting statement said economic activity was expanding at a solid pace despite elevated uncertainty, in part because of the conflict in the Middle East, and repeated language from June.</p>
+<p>The Fed also said elevated inflation partly reflects supply shocks that have pushed up prices, including energy. In his remarks, Warsh said the central bank remains committed to its 2% inflation target and rejected any “soft implicit target.” He said five-plus years of inflation above target could not be fixed “in nine weeks” or by a single month of modest price declines.</p>
+<p>The decision had been widely expected, with markets already pricing in a hold. But there had been fresh speculation in recent days that persistently high inflation and a rebound in energy prices might push the committee toward a hike instead.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/7/29/us-fed-holds-interest-rates-steady-citing-elevated-inflation?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US Fed holds interest rates steady, citing ‘elevated’ inflation">AJ #1</a><a href="https://www.axios.com/2026/07/29/fed-warsh-rates-inflation" target="_blank" rel="noopener noreferrer" title="Axios / Fed leaves rates steady, with internal dissent">Axios #1</a><a href="https://www.theguardian.com/business/2026/jul/29/federal-reserve-interest-rates" target="_blank" rel="noopener noreferrer" title="The Guardian / Fed holds interest rates steady despite Trump’s renewed calls to lower them">Guardian #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3362310/us-federal-reserve-holds-interest-rates-steady-despite-warshs-inflation-vow" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US Federal Reserve holds interest rates steady despite Warsh’s inflation vow">SCMP #1</a><a href="https://en.yna.co.kr/view/AEN20260730000351315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (LEAD) Fed holds key interest rate steady in 9-3 decision">YNA #1</a><a href="https://en.yna.co.kr/view/AEN20260730000300315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Fed holds key interest rate steady for 5th straight time">YNA #2</a><a href="https://en.yna.co.kr/view/AEN20260730000352315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (2nd LD) Fed holds key interest rate steady in 9-3 decision">YNA #3</a><a href="https://en.yna.co.kr/view/AEN20260730000353315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (3rd LD) Fed holds key interest rate steady in 9-3 decision">YNA #4</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="xinhua_en">
+  <summary>China mulls law against cyber abuse</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Cyberspace Administration of China on Wednesday released a draft law against cyber abuse and opened it for public comment until Aug. 28. In a statement, the administration said the proposal responds to widespread public concern over harm caused by cyber abuse and growing calls for stronger measures.</p>
+<p>Under the draft, internet service providers would have to promptly alert users in an obvious manner once they identify possible risks of cyber abuse, provide anti-cyber abuse services, and report cases to authorities if minors, older adults, or people with disabilities are involved. If providers do not take the necessary steps to stop confirmed cyber abuse, victims could apply to a local court for an order requiring offenders to stop, and courts would be required to accept such applications. Where cyber abuse harms national or public interests, procuratorates or organizations designated by cyberspace administration authorities could bring public interest litigation.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260729/d3c78b593c1141bb9bdc9b606e0e11da/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China mulls law against cyber abuse">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="daily_maverick">
+  <summary>Deputy mayor van Niekerk rejects plea deal; trial for cyber fraud and MFMA contravention set for December in Nelson Mandela Bay</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gary van Niekerk, the Nelson Mandela Bay deputy mayor, rejected the State’s plea deal on Wednesday morning after appearing in the Gqeberha Magistrates’ Court. He said he welcomed the chance to present his case in court, and a small crowd of supporters cheered outside the courthouse as he spoke. Van Niekerk said he would return to the city’s Specialised Commercial Crimes Court on 8 December, where his trial for cyber fraud and contravention of the Municipal Finance Management Act is scheduled to begin.</p>
+<p>The charges date back to 2022, when he allegedly racked up more than R550,000 in legal bills. The charge sheet says he used the Speaker of Council’s letterhead to solicit legal opinions when he did not hold that position. It also says he approached Boqwana Burns Incorporated, which was not listed as a preferred municipal service provider, and later sought an opinion from McWilliams &amp; Elliott, where the request was denied by then acting city manager Selwyn Thys. Van Niekerk said the court, not the media, should test the evidence.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-07-29-nelson-mandela-bay-deputy-mayor-prepares-for-fraud-trial-after-refusing-plea-deal" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Deputy mayor van Niekerk rejects plea deal; trial for cyber fraud and MFMA contravention set for December in Nelson Mandela Bay">DM #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new robot-free manipulation pipeline claims to close the gap between scalable data collection and deployable real-robot control, with the key test being whether high-fidelity UMI demonstrations can replace the usual real-robot anchor in post-training.</p>
+<p>The paper presents HiFi-UMI, a portable UMI data-production system built around hardware and software choices aimed at trajectory accuracy, inter-gripper relative pose, synchronization, and field of view. Its setup includes head-mounted offline stereo-inertial SLAM, native rather than reconstructed relative pose, a shared microsecond GPIO trigger, and two wide-angle cameras per hand covering about 200 degrees. The authors say this setup reaches 3 mm workspace-local end-effector accuracy without external tracking infrastructure.</p>
+<p>Using that corpus, they report zero-robot post-training: a policy trained only on HiFi-UMI demonstrations deploys directly on a real robot and matches in-domain teleoperation across three backbones from the vision-language-action and world-action-model families. The success-rate differences are reported as -2.5, +3.1, and -0.6 percentage points on StarVLA-QwenPI, OpenPI-π0.5, and LingBot-VA. The strongest policy reaches 85% on a precision insertion task, even though the teleoperation baseline is collected in the evaluation scene and no HiFi-UMI trajectory is.</p>
+<p>The same corpus is also used for pre-training. The authors say pre-training on 4,000 hours lowers action error on ten unseen tasks by 41% and, on StarVLA-QwenPI, raises real-robot success by another 18.1 percentage points. They describe a clear scaling trend as the amount of pre-training data grows.</p>
+<p>HiFi-UMI-2K, the curated release, contains 2,000 hours of microsecond-synchronized, ultra-wide-FoV demonstrations that were automatically reconstructed and validated through simulation replay. The broader HiFi-UMI data engine is said to have collected more than 20,000 hours across over 480 scenes, with trajectory-reconstruction and replay validity rates above 98% each, or about 96% cumulatively.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.25895v1" target="_blank" rel="noopener noreferrer" title="arXiv / HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>A New Role for Relevance: Guiding Corpus Interaction in Agentic Search</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new preprint argues that relevance should do more than rank documents before search: it should steer what an agent explores inside the corpus, because direct corpus interaction can still uncover the right material too late and slow down convergence.</p>
+<p>The paper says retrieval agents usually use relevance to select a top-*k* set for the model, but that does not solve the harder problem of finding, composing, and verifying evidence inside the corpus. It frames Direct Corpus Interaction (DCI) as the workaround: an agent can search raw documents with grep-style tools, yet when traversal is relevance-agnostic, useful clues may appear late, tool use can rise quickly, and search can become less efficient as corpora grow. The authors say earlier systems narrowed the corpus into a working space, but still left open a gap between estimating relevance and using it during interaction.</p>
+<p>To close that gap, Jiangnan Li, Yuqing Li, Mo Yu, Jinchao Zhang, and Jie Zhou introduce the Relevance-Aware RipGrep Search Agent, or RARG. Their setup turns relevance into an execution prior for corpus interaction in three ways: it orders documents for sequential ripgrep traversal so globally relevant clues surface earlier, can seed the agent with query-relevant paragraphs as an entry point, and can rerank grep matches so informative excerpts are shown before less useful ones. In the paper’s framing, relevance is no longer just a filter on what enters the working set; it also shapes where search begins, which documents are visited first, and which local observations the model actually sees.</p>
+<p>The authors report that this changes the accuracy-efficiency tradeoff on challenging browse question answering and reasoning-heavy retrieval. On BrowseComp-Plus with GPT-5.4-mini and a 100K-document corpus, RARG++ reached 84% accuracy, compared with 78% for both RISE and DCI, while using 23.9 average tool calls versus 28.7 and 99.1. With GPT-5.4, it reached 91% accuracy, 9 points above RISE. After the corpus expanded to 1M documents, RARG++ still reached 79% accuracy, versus 69% for RISE. On BRIGHT, RARG+ reached 53.36 average nDCG@10, ahead of DCI, RISE, and the retrieval-specialized NeMo agent.</p>
+<p>The paper’s conclusion is that relevance-aware interaction can make search converge faster and more reliably by preserving DCI’s fine-grained corpus access while restoring relevance guidance during the search itself.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.24223v1" target="_blank" rel="noopener noreferrer" title="arXiv / A New Role for Relevance: Guiding Corpus Interaction in Agentic Search">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new preprint proposes a way to turn flat design images back into editable structures, addressing a bottleneck in workflows where layouts exist only as screenshots or raster exports and every meaningful change still has to be rebuilt by hand.</p>
+<p>ReDesign, from Jooyeol Yun, Jintae Park, Hyesu Lim, Junha Hyung, Hyungjin Chung and Jaegul Choo, treats the problem as recovering the layer hierarchy behind a design. The paper says that editability depends on multiple attributes at once — typography, vector geometry, colors, grouping and layer ordering — so the system grows an editable tree from the full image downward rather than relying on a single serial pass.</p>
+<p>The framework uses a vision-language controller that repeatedly chooses a node to expand and then composes specialized tools across modalities to split that region into children. To limit cascading mistakes, ReDesign adds “graceful verification” at each expansion, letting the system accept a split, prune redundant or hallucinated children, or retry locally instead of rerunning the whole reconstruction. The paper says this keeps the long decision process more reliable even when tool outputs are imperfect.</p>
+<p>To test whether the recovered outputs are actually editable, the authors introduce the Figma Edit Replay Benchmark, with 909 raw Figma files and 14,796 controlled edit instructions. The edits are replayed on reconstructed outputs and compared against ground truth. Across that benchmark and standard reconstruction metrics, the paper says ReDesign keeps strong visual fidelity while achieving the highest editability for layout, color and text edits, outperforming layered decomposition baselines and serial tool-use pipelines.</p>
+<p>The paper presents the payoff as practical rather than cosmetic: raster images can be turned into editable representations that support changes such as rewriting text, swapping color themes and repositioning layouts directly in the design.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.25565v1" target="_blank" rel="noopener noreferrer" title="arXiv / ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">CodeNib is a preprint proposing a multi-view data system for coding agents that need to search, navigate, and retain context in changing repositories, arguing that disconnected indexes, language servers, and task-local histories force repeated discovery and obscure the cost of each step.</p>
+<h3>How CodeNib serves repository context</h3>
+<p>The system builds reusable lexical, dense, and structural views for each repository commit, maps outputs to repository-relative source ranges, and keeps selected views alive across edits. It then serves ranked search, symbol navigation, and bounded context through one runtime. The paper frames that design around three coupled problems: repository changes require selected-view maintenance, agent requests need different kinds of evidence, and retrieved evidence still has to fit within bounded context.</p>
+<p>To evaluate that idea, the authors map quality–cost frontiers across 100 snapshots and separate retrieval, navigation, maintenance, and context delivery into distinct measurements. They report that when outputs match an independent rebuild, graph and vector updates are 8.7 times and 25.4 times faster at the median. On a static-navigation subset that matches normalized live-server locations, covering 63% of 1,000 requests, the median per-request live/static latency ratio is 4.7 times.</p>
+<p>Across five models, the paper says selected context policies preserve localization with 50% to 87% fewer trajectory tokens than paired grep/read. The authors present that as evidence that the same repository context can be delivered more efficiently when the system keeps ranked candidates, source locations, and prompt history separate instead of collapsing them into one abstraction.</p>
+<p>The paper limits its scope to repository localization and context serving. Patch generation and concurrent production updates are outside the study. Even so, the reported result is a system-level one: CodeNib is intended to make repository context a measurable serving problem, with explicit validity boundaries for different operations rather than one unqualified notion of reuse.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.25431v1" target="_blank" rel="noopener noreferrer" title="arXiv / CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new benchmark called InMind finds that memory-augmented agents can remember facts when asked directly yet still miss them when a later question depends on an unseen connection, exposing a gap between storing information and actually using it.</p>
+<h3>A memory that is there, but not when it matters</h3>
+<p>Ruizhe Li, Mingxuan Du, Benfeng Xu and Zhendong Mao frame the problem with a simple example: an agent can correctly answer that a user is allergic to tree nuts, then moments later suggest a macaron with almond flour. The issue is not that the fact disappeared. The paper argues that the failure comes from the retrieval setup itself, which assumes that a needed memory will resemble the query that needs it.</p>
+<p>That assumption breaks on what the authors call “implicit associations.” The allergy and the macaron request share no obvious cue for a retriever to catch, even though world knowledge makes the connection decisive. In the paper’s framing, the retriever must decide what is relevant before the model sees the memory, so any pair that depends on outside knowledge can slip through the crack.</p>
+<h3>What InMind was built to measure</h3>
+<p>To test that blind spot, the authors introduce InMind, a 125-task benchmark spanning ten life domains, with 113 tasks grounded in citable public sources and the rest expert-authored. Each task pairs a personal fact with two questions: a direct, naive query that asks for the fact itself, and an indirect query whose correct answer changes because of that fact.</p>
+<p>Those paired controls are meant to separate three possibilities that ordinary evaluations tend to mix together: the fact was never stored, the model lacks the bridging knowledge, or the fact was stored but never surfaced at the right moment. The benchmark also includes an in-context control, where the decisive memory is placed directly before the query, so the model’s ability to make the bridge can be measured without the retrieval step getting in the way.</p>
+<p>The tasks were built from public, inspectable material such as allergen guidance, OSHA regulations, USCIS travel rules and CPSC recalls, plus a smaller expert-written set. The authors say all 125 tasks were expert-verified, and they filtered out pairs where the target memory was already too obviously similar to the query, because those would test ordinary retrieval rather than implicit association.</p>
+<h3>What the systems did, and where they fell short</h3>
+<p>The results split the problem sharply. With the relevant memory already in context, the GPT-5-mini backbone answered 84.0% of indirect queries. But when the same memory had to be retrieved, six memory systems spanning vector, graph and agentic designs reached at most 14.4% on the indirect task, even though they could still answer the direct recall question at up to 100%.</p>
+<p>The comparison set included A-RAG, xMemory, Mem0, A-Mem, HippoRAG 2 and MemoryOS, along with a Naive RAG control. Under MiniLM and text-embedding-3-large, direct recall stayed high while indirect application remained low. The best retrieval configuration reached 16.0%, and one system, A-Mem, hit 100.0% on naive recall while still performing poorly on the indirect query.</p>
+<p>The authors also tested whether stronger representations would close the gap. Swapping MiniLM’s 384 dimensions for text-embedding-3-large’s 3,072 dimensions raised target recall across every system, but left the basic problem intact. Indirect application moved only modestly, and HippoRAG 2 even declined under the larger embedding. In the paper’s reading, better embeddings help retrieval find the fact, but they do not solve the missing handoff between retrieval and reasoning.</p>
+<p>The sharpest diagnostic came from a minimal always-in-state probe. Instead of retrieving memory at query time, the probe keeps a compact state visible before the question arrives. That version recovered 68.8% of indirect queries while matching 98.4% on direct recall. The authors use that result to argue that the failure sits in the query-conditioned interface itself: if the decisive memory is visible before the question, much of the gap disappears.</p>
+<p>What the paper says is still open.</p>
+<p>On that basis, the paper treats routing as the open problem. The question is no longer whether a system can store a fact or retrieve it on demand; it is which facts should remain visible in a persistent state because they may become decision-critical later. The authors say current systems rely on proxies such as recency, frequency or heat-thresholded promotion, none of which can know in advance which distant fact will matter for a later indirect question.</p>
+<p>They also describe InMind as a diagnostic benchmark with limits. It leans toward health, wellness and safety, and its bridges are assumed to be factual and uncontested. Even so, the paper argues that the benchmark captures a real weakness in today’s memory systems: they can recall what a user said, but still fail when the answer depends on keeping a hidden connection in mind.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.24368v1" target="_blank" rel="noopener noreferrer" title="arXiv / Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Pass the Baton: Trajectory-Relayed On-Policy Distillation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint from Zhejiang University and Alibaba Group’s Yuvion Team proposes Relay-OPD, a training method for weaker language models that lets a teacher briefly step in when the student’s reasoning starts to go wrong, then hands control back so the student can keep learning from its own trajectory.</p>
+<p>The authors frame the problem as prefix failure in on-policy distillation: the student generates its own rollout, but if it chooses a wrong direction early, everything that follows can become a long misdirected continuation. In that setting, the supervision can turn unreliable and training compute is wasted. They say they found a teacher–student continuation asymmetry on failed prefixes: the teacher tends to redirect, while the student tends to keep going.</p>
+<h3>Brief teacher takeovers</h3>
+<p>Relay-OPD turns that asymmetry into a label-free handoff trigger. During training, the student drafts a prefix and the method checks whether the teacher would choose a reflection token while the student would not. When that trigger fires, the teacher takes a short “teacher leg,” then the student resumes and is optimized on the resulting relay trajectory. A limited relay budget keeps those interventions short and concentrated on early positions, where the authors say prefix failure is most likely to become entrenched.</p>
+<p>The paper says preliminary trajectory-intervention tests support that choice. Replacing only a single reflection token at each trigger, with teacher tokens making up just 0.35% of generated tokens, raised accuracy from 27.73 to 34.96. Moving the same intervention later in the trajectory reduced accuracy from 41.99 to 33.98 and then 29.49, which the authors use to argue that timing matters more than length.</p>
+<p>On eight mathematical reasoning benchmarks, using a Qwen3-4B-Instruct-2507 teacher and Qwen3-0.6B/1.7B-Non-Thinking students, Relay-OPD reached the best or second-best result on every benchmark. The paper says it beat standard OPD by 5.73% on average and the strongest baseline, FastOPD, by 1.49% on average for the 1.7B student, with consistent gains at 0.6B. It also cut average training trajectory length by more than 50%.</p>
+<p>The authors say their evaluation is limited to mathematical reasoning with Qwen3 teacher–student pairs. They add that the relay mechanism is task-agnostic, but they have not yet tested it on code generation or agentic tool use, and the reflection-token set may need adjustment for other model families.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.26057v1" target="_blank" rel="noopener noreferrer" title="arXiv / Pass the Baton: Trajectory-Relayed On-Policy Distillation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Microsoft Mage Team’s Mage-VL preprint introduces a 4B-parameter streaming multimodal foundation model aimed at lowering video-token cost while keeping real-time understanding, and it argues that the open challenge is whether a codec-native system can outperform larger vision-language models on video and spatial tasks.</p>
+<p>The paper frames the work around a weakness it attributes to standard vision-language models: they can do well on offline visual reasoning, but struggle with simple streaming perception and computational efficiency. Mage-VL is built on a custom tokenizer, Mage-ViT, which replaces uniform frame sampling with selective encoding of dynamic, entropy-rich regions using motion vectors and residual energy across sparse anchor and predicted frames. At a 16 × 16 patch level, the paper says this cuts visual token use by over 75% while preserving spatio-temporal context. It also describes a five-stage training curriculum, starting with dense image and short-video captions and ending with streaming training, where a lightweight event gate serves as System 1 and a causal decoder acts as System 2.</p>
+<p>The training data and pipeline are large but still framed as efficient: the model is trained from scratch on approximately 560M unlabeled images and 100M unlabeled video frames, and the paper says this matches or outperforms encoders trained on billions of image-text pairs. It also says it establishes AI4AI data pipelines for prompt-code joint optimization and AI-driven performance diagnosis, and reports seven empirical findings spanning pre-training data efficiency, variable-resolution scaling, codec acceleration, VideoQA SFT redundancy, motion-spatial synergy, AI4AI pipelines, and Zero-Vision SFT for multimodal RL.</p>
+<p>On evaluation, the paper says Mage-VL-4B matches Qwen3-VL-4B on static tasks while improving video understanding and 2D/3D spatial reasoning, with up to 3.5× wall-clock inference speedup, and it says the model comprehensively surpasses the 15B Phi-4-reasoning-vision baseline. It also reports strong streaming results, including better event-triggering than StreamMind on SoccerNet-Caption and a new overall OVO-Bench score of 64.00. In its conclusion, the paper says Mage-VL still has a capability gap on complex agentic tasks compared with Qwen3-VL, and says future iterations will combine Zero-Vision SFT with RL and extend the system to native audio-visual stream fusion and embodied edge applications.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.24904v1" target="_blank" rel="noopener noreferrer" title="arXiv / Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>VisualPatchWorld: Code World Models as Latent Structured Representations for Planning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An arXiv preprint posted on 28 Jul 2026 says VisualPatchWorld (VPW) turns world dynamics into code, aiming to bridge neural latent models and hand-built simulators for planning, and reports stronger planning results than earlier code-based world models while still leaving contact-rich pushing as the hardest case.</p>
+<p>The paper argues that world models share a common goal — to capture how the world evolves under action in a form that supports perception, simulation, and planning — but that existing approaches split between neural predictors, which scale from data yet keep dynamics implicit, and physics engines, which are inspectable but hard to build at scale. VPW is presented as a third path: it represents dynamics as code, so the learned transition program can be rolled forward like a simulator, inspected in source form, and used to evaluate candidate actions.</p>
+<p>Its method has two main steps. First, it uses short active probes to choose a qualitative dynamical form. Then it fits that form’s free parameters from recorded state-action traces by minimizing multi-step prediction error. The paper says image-derived scene graphs can supply the live state at replan time, and that the resulting programs can be used inside model-predictive control.</p>
+<p>On evaluation, VPW is compared with prior code-based world models under the same planner. Across four control domains, it reaches 69.0% mean planning success and beats the strongest code baseline by 23.5 points. The largest gains appear where picking the right dynamical structure matters most: arm reaching rises from 8% to 72%, cube manipulation reaches 86%, and pushing improves from near zero for prior code methods to 22%. Under the same planner, the induced models approach ground-truth engine success on navigation and grasp-rich control, though a residual gap remains for contact-rich pushing; checking a shortlist of promising plans in the engine closes most of that gap.</p>
+<p>The code is available at https://github.com/HKBU-KnowComp/VisualPatchWorld/.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.25236v1" target="_blank" rel="noopener noreferrer" title="arXiv / VisualPatchWorld: Code World Models as Latent Structured Representations for Planning">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Mitochondrial metabolism and epigenetic crosstalk drive SASP</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Senescent cells need more than mitochondrial DNA-driven immune signalling to switch on SASP, the study reports: mitochondrial metabolism supplies acetyl-CoA for histone acetylation, and blocking the citrate-export pathway dampens inflammation while improving healthspan in aged mice.</p>
+<p>Cellular senescence is a permanent cell-cycle arrest that can help in embryonic development, tumour suppression and tissue repair, but persistent SASP activity can also drive chronic inflammation, tissue dysfunction, ageing and age-related disease. The unresolved question was how inflammatory signals from mitochondria are integrated with metabolic cues to control SASP gene expression.</p>
+<h3>A metabolic checkpoint for SASP</h3>
+<p>The study says mitochondrial metabolism provides a second layer of control that enables the inflammatory programme. In senescent cells, the mitochondrial pyruvate–citrate–acetyl-CoA axis was upregulated, raising acetyl-CoA availability to support histone acetylation at SASP genes. In that model, mitochondrial DNA-driven signalling activates inflammatory transcription factors, while acetyl-CoA is required for robust transcription of SASP genes.</p>
+<p>The researchers link that mechanism to chromatin state. When mitochondria were cleared from senescent cells, H3K27ac at SASP loci fell and a 51-gene SASP signature was suppressed. The study then used acetate treatment to test whether the drop reflected reduced acetyl-CoA availability, reinforcing the idea that mitochondrial metabolism feeds into epigenetic activation rather than acting only through immune signalling.</p>
+<h3>SLC25A1 and citrate export shape inflammatory output</h3>
+<p>A central node in that pathway was SLC25A1, the mitochondrial citrate exporter. The study reports that enhancing acetyl-CoA levels promotes SASP gene expression, while inhibition of SLC25A1 reduces histone acetylation at SASP loci and limits activity of the programme. It also says that using genetic and pharmacological perturbations across the mitochondrial citrate–acetyl-CoA axis, including MPC, SLC25A1 and ACLY, showed that mitochondrial metabolism is required to sustain histone acetylation and inflammatory gene expression.</p>
+<p>That effect was not presented as a simple switch-off of senescence itself. The paper says mitochondrial metabolic control of histone acetylation and mtDNA–cGAS–STING signalling act as distinct but complementary inputs: chromatin accessibility at SASP genes is not enough on its own without innate immune activation. In other words, one arm supplies the inflammatory signal, while the other supplies the epigenetic permission to execute it.</p>
+<h3>In mice, blocking citrate export eased inflammation</h3>
+<p>The in vivo test was whether this axis could be targeted to blunt age-related inflammation. In aged mice, inhibition of SLC25A1 with CTPI2 reduced chromatin accessibility at SASP loci, dampened inflammation and improved healthspan. The study also reports improved musculoskeletal phenotypes, with changes on the 31-parameter frailty index and better performance on the tightrope and hanging tests after 3 months of treatment.</p>
+<p>The same treatment did not improve spine and femur bone microarchitecture, and the paper says it did not change p16 or p21 expression, consistent with SASP modulation rather than senescent cell clearance. It also reduced cardiomyocyte-associated secretory factors in the whole heart and was associated with decreased immune recruitment in cardiac ageing.</p>
+<p>The broader tissue data pointed in the same direction. Across muscle, heart, hippocampus and kidney, SLC25A1 expression positively correlated with a mitochondrial-dependent SASP gene signature and with canonical senescence markers p16 and p21, whereas chronological age alone showed little or no association. Taken together, the study identifies a mitochondrial metabolic checkpoint that lets senescent cells translate innate immune signalling into the epigenetic execution of SASP.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10791-2" target="_blank" rel="noopener noreferrer" title="Nature / Mitochondrial metabolism and epigenetic crosstalk drive SASP">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Avalanche-like intercalation and intraparticle correlations in graphite</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Graphite’s lithium insertion in the dilute stages has been hard to pin down, and a new operando microscopy study says the process is not smooth: individual particles undergo rapid, localized step events that resemble avalanches and may help explain the long-running confusion over graphite phase behavior.</p>
+<h3>Step changes inside single graphite particles</h3>
+<p>Using operando optical microscopy, the researchers tracked sub-second lithiation dynamics in an individual active graphite particle during the dilute stages, up to about x ≈ 0.25 in Li_xC_6. They report that delithiation-lithiation does not proceed as a simple continuous change. Instead, graphitic particles undergo rapid, localized deintercalation-intercalation steps, producing micrometre-sized regions that change within seconds.</p>
+<p>That matters because graphite, the most widely used negative electrode material in lithium-ion batteries, has distinct staging transitions as lithium fills every Nth inter-graphene gallery. Lithiation begins with dilute stage 1′L and then proceeds through 4L → 3L → 2L → 2 → 1, with stage 1 corresponding to the closely packed LiC_6 configuration. But the dilute stages have remained poorly understood, and previous studies have reported contradictory phase compositions during operando cycling.</p>
+<p>Why the changes look like avalanches.</p>
+<p>The authors say the step-like features are reminiscent of “avalanches,” a phase-transition phenomenon in disordered materials marked by abrupt jumps between metastable states. They found that the apparently continuous intensity changes during the 4L → 3L transition actually break down into many small, sudden, discrete jumps when imaged at high enough frame rates.</p>
+<p>To interpret that behavior, they used a modified random field Ising model. In their description, avalanches are related to static disorder that disrupts intercalation dynamics, and the model can account for both the apparently continuous transitions between stages and the experimental avalanche statistics. The work also distinguishes these dilute-stage steps from the dense stage 2L → 2 and 2 → 1 transitions, which were described as biphasic.</p>
+<p>Mapping correlations across the particle.</p>
+<p>The study also developed a method to analyze the sequences of avalanche events in space and time, revealing considerable heterogeneous connectivity inside the particle. The authors say this approach lets them study spatio-temporal correlations without manual region selection or avalanche detection.</p>
+<p>Overall, the paper argues that local and static disorder help explain unexpected phase-transition behavior in graphite, and that the combination of operando microscopy and correlation analysis offers new tools for layered battery materials.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10862-4" target="_blank" rel="noopener noreferrer" title="Nature / Avalanche-like intercalation and intraparticle correlations in graphite">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>The piezochiral effect</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new study introduces the piezochiral effect, arguing that mechanical strain can generate or switch chirality in solid-state materials and that the rule applies to a broad class of achiral crystals, with AgGaS₂ used to demonstrate the effect experimentally.</p>
+<p>Chirality matters because it shapes phenomena across physics, chemistry and biology, but controlling it in solid-state systems has been difficult. The study says the long-sought goal of rational, continuous control has been elusive because there was no universal conjugate field that couples linearly to chirality. The new work proposes strain as that handle.</p>
+<h3>How strain changes handedness</h3>
+<p>The authors describe the piezochiral effect as the induction of chirality by applying strain. Through symmetry analysis, they say uniaxial strain can induce chirality in achiral crystals that contain fragments of opposite chirality within each unit cell. In that framework, the handedness can be tuned by changing the strain direction or by switching between compressive and tensile strain, allowing both left- and right-handed states.</p>
+<p>They also place the idea in a broader materials context. Earlier efforts to make chiral materials have relied mainly on bottom-up routes such as crystal growth, molecular synthesis and nanostructure fabrication. Other approaches have used external stimuli, including terahertz-frequency optical pulses that excite specific phonon modes, and axially ordered solids that can directly couple chirality to electric fields. The new claim is that strain offers a more general coupling.</p>
+<p>The experimental test was carried out in AgGaS₂. The authors say they measured optical activity under strain in a c-cut single crystal and found a linear dependence on the applied strain, which they present as direct evidence of strain-induced chirality. They also report that a uniaxial strain of 0.02% produced a rotary power on the order of 10% of α-quartz.</p>
+<p>The study says the result establishes a new scheme for chirality control, with potential applications ranging from spintronics to asymmetric catalysis and enantioselective interactions in biosystems. It also reports an online database built from the same tensor framework, listing more than 40,000 candidate piezochiral materials.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10845-5" target="_blank" rel="noopener noreferrer" title="Nature / The piezochiral effect">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Why tomorrow’s nanotechnologies need support today</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Support for nanotechnology research is needed now because the rapid rollout of mRNA COVID-19 vaccines developed by Moderna and the Pfizer–BioNTech collaboration depended on decades of earlier work in RNA biology and nanoscale delivery technologies, plus unprecedented funding, regulatory flexibility and early manufacturing investment. The piece uses that example to argue that work with no obvious practical application can later underpin major clinical advances.</p>
+<p>It says many of the advances in Nature Index 2026 Nanoscience and nanotechnology are still at similarly early stages, ranging from RNA-based nanostructures to materials for imaging and energy. RNA is described as more than a genetic messenger: it has been used for molecular switches, programmable biological circuits and self-assembling nanostructures. The article also notes unresolved gaps in how these designs behave inside living cells, and says a new class of nanomaterials could enable more powerful X-ray imaging if challenges around long-term stability and durability are overcome.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02179-z" target="_blank" rel="noopener noreferrer" title="Nature / Why tomorrow’s nanotechnologies need support today">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Retraction Note: Human HDAC6 senses valine abundancy to regulate DNA damage</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nature retracted *Human HDAC6 senses valine abundancy to regulate DNA damage*, an article originally published online on 20 November 2024. In the retraction note published on 29 July 2026, the editors said concerns had been raised about the authenticity of numerical source data for Fig. 4c,f and Extended Data Figs. 5c,f and 6c,m, which reported γH2AX-positive cell quantification under different experimental conditions. They said those datasets showed unusual similarities within and between figure panels.</p>
+<p>The editors also cited concerns about similarities between the 5hmC and 5fC dot blots in Fig. 3j and Extended Data Fig. 5o, and the Nucleus/Tubulin and Cytoplasm/H3 bands in Extended Data Fig. 2k. After correspondence with the authors, they identified additional concerns in Extended Data Fig. 10b,d,h,n and Extended Data Fig. 9i. Nature said the explanation for the γH2AX quantification similarities was not satisfactory, the authenticity concerns were extensive and persistent, and the institution’s independent confirmation of the paper’s conclusions was incomplete. The note says Ping Wang, Yihua Chen and Jian Yuan agreed with the retraction, while Jiali Jin, Tong Meng, Ya-Xu Li, Cong Jiang and Cizhong Jiang disagreed.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10942-5" target="_blank" rel="noopener noreferrer" title="Nature / Retraction Note: Human HDAC6 senses valine abundancy to regulate DNA damage">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="openalex">
+  <summary>Ensemble learning approach to support Manchester protocol triage</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A study on ensemble learning for Manchester Triage System triage tested whether machine learning could improve patient risk assessment in emergency departments. It used a public MTS dataset and explored Decision Tree, K-Nearest Neighbor, Random Forest, Multilayer Perceptron, and ensemble methods including Soft Voting, Hard Voting, and Stacking. The work ran two experiments: one combining categorical and numerical features, and another using numerical variables while keeping the hospital identifier to control for inter-institutional variation.</p>
+<p>The strongest performance came in Experiment #1, which reached up to 99.00% accuracy and an F1-score of 0.99. In Experiment #2, the Stacking ensemble achieved up to 74.68% accuracy and an F1-score of 0.74. The authors say these results suggest the approach may support risk classification in the MTS, but they also note that further real-world evaluation is needed because the study was retrospective and lacked prospective validation.</p></div>
+  <div class="source-list"><a href="https://doi.org/10.1007/s11042-026-21736-2" target="_blank" rel="noopener noreferrer" title="OpenAlex / Ensemble learning approach to support Manchester protocol triage">OpenAlex #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
