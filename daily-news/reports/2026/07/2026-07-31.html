@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-07-31</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-07-31</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,el_pais,scmp">
+  <summary>Milei demands expulsion of foreigners expressing ‘hate’ against Argentina</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Argentina’s President Javier Milei has signed an emergency decree that would let the government bar, deport or revoke visas for foreigners accused of spreading “hate” or insulting national symbols, while lawyers and opposition figures question how far the measure can legally go.</p>
+<p>The move was announced as Milei blamed a wave of criticism after Argentina’s World Cup run and said the state would not tolerate attacks on the country or its symbols. The decree has immediately opened two fronts: a fight over legality and a wider political argument over whether the government is responding to genuine abuse or turning football backlash into immigration policy.</p>
+<h3>What the decree allows</h3>
+<p>The decree says foreigners who “spread or incite hate messages” against Argentina or its people can be barred, expelled or stripped of visas. The president’s office said the government was responding to “recent displays of hostility toward the Argentine republic and Argentines,” adding: “Anyone who attacks the Argentine Republic is not welcome in our country.”</p>
+<p>It also says the measure does not apply to political, academic or civic criticism protected by Argentina’s constitution. But the text does not explain how “hate” will be defined, or how immigration authorities would identify the people affected. One report said it also leaves unclear whether officials would search the social media histories of tourists and foreign residents.</p>
+<h3>World Cup backlash fed the move</h3>
+<p>The decree was issued against a backdrop of anger in Argentina after the national team’s World Cup campaign. Milei’s office linked the measure to what it described as hostility toward Argentina after the tournament, and Milei framed the backlash as an attempt to discredit the country.</p>
+<p>The football context matters because the team reached the final before ending second, and the tournament was followed by accusations of racism among players and fans. After the final match, a brawl appeared to break out on the pitch. FIFA this week said it would open a disciplinary probe into three Argentinian players and one coach over allegations of “unsporting behaviour,” and it also said it would examine “discriminatory chants and gestures” and “inappropriate messages” from the Argentine side. One Spanish player was also cited.</p>
+<p>Milei has also claimed, without evidence, that the criticism was part of a coordinated “anti-Argentina campaign” financed by leftists in Brazil, Mexico and the US Democratic Party. On Sunday, he lashed out at those countries and at the Democratic Party over that alleged campaign. Brazil recalled its ambassador last weekend after those accusations and insults directed at Brazil’s president and judiciary.</p>
+<h3>Legal doubts and political pushback</h3>
+<p>The legality of the decree has already been questioned by experts. One report said the emergency measure is already in force but still requires parliamentary approval to remain law. It also said a legislative committee will review the urgency of the decree before both deputies and senators examine it, and that it would only be thrown out if both chambers rejected it.</p>
+<p>Opposition figures moved quickly to attack it. Leonel Chiarella, president of the centrist Radical Civic Union party, called the decree unconstitutional and said Congress should reject it. Agustin Rossi, an opposition lawmaker, said it mimics the anti-immigration logic of US President Donald Trump. Lucia Galoppo, an international law specialist at the Centre for Legal and Social Studies, said the measure leaves “too many grey areas,” because it does not specify what counts as hate speech, how it will be defined, or how the people producing it would be identified.</p>
+<p>One sociologist said the decree also runs against a long history of immigration in Argentina, which he described as having one of the world’s most lenient constitutional approaches on the issue. Milei, however, appears to be leaning into a mood of frustration over the World Cup fallout and the criticism that followed.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/30/argentinas-milei-seeks-to-deport-foreigners-that-spread-hate-of-country?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Argentina’s Milei seeks to deport foreigners that spread ‘hate’ of country">AJ #1</a><a href="https://elpais.com/argentina/2026-07-30/milei-ordena-por-decreto-expulsar-a-los-extranjeros-que-agravien-a-los-argentinos.html" target="_blank" rel="noopener noreferrer" title="El País / Milei orders by decree to expel foreigners who harass Argentines">El Pais #1</a><a href="https://www.scmp.com/news/world/americas/article/3362455/milei-demands-expulsion-foreigners-expressing-hate-against-argentina" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Milei demands expulsion of foreigners expressing ‘hate’ against Argentina">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>Turkey’s foreign minister Hakan Fidan meets newly elected Hamas leader</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Turkish Foreign Minister Hakan Fidan met Khalil al-Hayya, the newly elected head of Hamas’s political bureau, and a Hamas delegation in Ankara on Thursday. Sources within Turkey’s foreign ministry said Fidan congratulated Hayya on his appointment. Hayya briefed him on Israel’s continuing attacks across Gaza and the occupied West Bank, and at least six Palestinians were killed and 25 others wounded in Israeli air attacks across Gaza overnight on Thursday and Friday.</p>
+<p>Hayya said Prime Minister Benjamin Netanyahu’s government had accelerated illegal settlement expansion and intensified attacks on holy sites in occupied East Jerusalem. The International Criminal Court has issued an arrest warrant for Netanyahu over war crimes and crimes against humanity in Gaza. Hayya said Hamas remained committed to a constructive role in peace negotiations and outlined efforts to secure reconciliation between Palestinian factions. Fidan reaffirmed Turkey’s support for the Palestinians’ “just cause” and said Ankara would continue drawing global attention to Israel’s actions in Gaza and the occupied West Bank.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/turkeys-foreign-minister-meets-newly-elected-hamas-leader-khalil-al-hayya" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Turkey’s foreign minister Hakan Fidan meets newly elected Hamas leader">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc,cnn,guardian,nyt,scmp">
+  <summary>Spain to deploy military, as migrants surge across Morocco border and enter Ceuta</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Spain is sending its armed forces to Ceuta after a sudden surge of migrants crossing from Morocco left the North African enclave overwhelmed, while officials disputed the size of the influx and what may have driven people to attempt the crossing.</p>
+<p>On Thursday, footage showed migrants swimming toward Ceuta with inflatable rings and other flotation devices, while others ran through a gate in the border fence. Juan Jesús Vivas, the territory’s leader, said the influx was overwhelming resources and urged the Spanish government to intervene. Spain’s government said later that day it would send the Armed Forces to help the Civil Guard “maintain security in the city of Ceuta,” and CNN said Prime Minister Pedro Sánchez would join Interior Minister Fernando Grande-Marlaska in a visit on Friday. Spain’s government delegation in Ceuta said at least nine people died during the chaos.</p>
+<h3>What happened at the border</h3>
+<p>Ceuta, on Morocco’s northern coast, is separated from mainland Spain by the Strait of Gibraltar and has long been a focal point for migrants trying to reach Europe. The scenes on Thursday were described as a mass crossing: people swam in from the Moroccan side, while others got through on land at the border fence.</p>
+<p>Authorities in Ceuta said they needed reinforcements to deal with a border crisis that had been building through the week. CNN quoted the head of the association representing Spain’s Civil Guard officers in Ceuta as saying the border had “totally collapsed,” and local authorities said reception centers were under strain. Vivas said the territory was facing a humanitarian and security emergency, according to Reuters.</p>
+<h3>The numbers and the dispute over scale</h3>
+<p>The scale of the crossing was not clear. BBC News said there were conflicting reports, with figures ranging from hundreds to thousands of people. Spanish media estimated between 2,000 and 3,000 people entered Ceuta on Thursday, according to Reuters, but said the Guardia Civil had not confirmed that figure. Spain’s public broadcaster RTVE reported that “hundreds” crossed into the territory during the day.</p>
+<p>RTVE also said more than 1,500, mostly young Moroccan migrants, had reached Ceuta over the past two weeks. BBC News said Vivas warned that reception centers for unaccompanied minors were operating at several times their intended capacity, while Reuters said the territory was overwhelmed with hundreds of people sleeping on the streets. The bodies of 60 people had been recovered at sea in recent months, RTVE reported.</p>
+<h3>A ruling, a response, and the next visit</h3>
+<p>The surge came soon after Spain’s Supreme Court ruled that migrants intercepted at sea while trying to reach Ceuta or Melilla cannot be summarily returned to Morocco. Spain’s interior ministry said it believed human trafficking networks were exploiting that ruling to “encourage the flow of undocumented migrants, mostly young people.”</p>
+<p>The ministry also said Spain cooperates with Morocco on migration and that both countries had agreed to strengthen efforts to address the matter, including “the handover, as soon as possible, of all people who have entered Ceuta illegally.” CNN said Morocco’s police were stopping “numerous people” who were trying to cross the border, while the ministry said the Moroccan government was “closely cooperating” with Spain.</p>
+<p>The response is now moving from the border fence to Madrid. CNN said Spain will deploy its military to Ceuta, and Reuters said Grande-Marlaska was expected to visit on Friday. Spain’s government also said it could not declare a national emergency over migration concerns, even as local authorities pushed for one.</p>
+<p>The episode has revived memories of May 2021, when around 8,000 people entered Ceuta over a matter of days. For now, the immediate question is whether the reinforcements and the planned visit will slow the crossings and restore control at the border.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cg4drwzkrkxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Hundreds of migrants swim from Morocco to Spanish enclave of Ceuta">BBC #1</a><a href="https://www.cnn.com/2026/07/30/europe/ceuta-emergency-thousands-moroccans-intl" target="_blank" rel="noopener noreferrer" title="CNN / Spain deploys military to Ceuta after thousands of people breach Morocco’s border and at least 9 die">CNN #1</a><a href="https://www.theguardian.com/world/2026/jul/30/thousands-enter-spanish-enclave-ceuta-morocco-africa" target="_blank" rel="noopener noreferrer" title="The Guardian / Spain sends extra troops and police to Ceuta after thousands of migrants arrive">Guardian #1</a><a href="https://www.nytimes.com/2026/07/30/world/europe/spain-morocco-ceuta-migrants.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Spain Mobilizes Military as Thousands of Migrants Cross Into Ceuta">NYT #1</a><a href="https://www.scmp.com/news/world/europe/article/3362442/thousands-migrants-breach-moroccos-border-spains-ceuta" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Spain to deploy military, as migrants surge across Morocco border and enter Ceuta">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian,nyt,politico">
+  <summary>Russia accused of violating Polish airspace after missile explosion near village</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A missile that exploded in a field near Tarnawa-Kolonia in eastern Poland has prompted accusations that Russian weapons crossed Polish airspace, while officials in Warsaw and Kyiv described it as part of a much larger overnight attack on Ukraine that left at least 13 people dead.</p>
+<h3>What happened near Tarnawa-Kolonia</h3>
+<p>Polish authorities said the blast near the village, close to Lublin, left a 10-metre-wide crater. Residents of Tarnawa-Kolonia reported hearing an explosion at about 4am that shook the windows of their homes, police said. As the attack on Ukraine unfolded, Poland scrambled fighter jets to protect its airspace, its armed forces said, and Nato’s supreme allied commander for Europe, Gen Alexus Grynkewich, said: “Nato will continue to take all necessary measures to defend Nato territory.”</p>
+<p>The New York Times said investigators had yet to definitively identify the object that struck overnight. But Donald Tusk, speaking at the scene in a field about 50 miles from the Ukrainian border, said the missile was most likely Russian. “From the analysis of most of the traces, the recovered fragments point to a Russian KH-101 missile,” he told journalists. He added that there was no reason to think Poland had been the target, though the Polish military had been ready to shoot it down if it threatened a built-up area.</p>
+<h3>Who blamed Russia</h3>
+<p>Ukraine’s foreign minister, Andrii Sybiha, said in a post on X that a Russian Kh-101 cruise missile had crossed into Poland. António Costa, the president of the EU council, also said on X that Poland’s airspace had been violated during what he called a “massive combined strike against Ukraine.” Ursula von der Leyen, the European Commission president, called the missile incident in Poland another “unacceptable violation” of the EU’s airspace.</p>
+<p>The Russian embassy in Warsaw did not immediately respond to an email requesting comment. The episode added to a broader pattern noted by the New York Times: Russian missiles have briefly entered Polish airspace in the past.</p>
+<h3>The wider overnight assault on Ukraine</h3>
+<p>The Polish incident came in the middle of a Russian air raid on Ukraine that killed at least 13 people, including one in Kyiv. The attacks reached as far as Lviv in the west, where rescue workers were clearing rubble after Russian missiles damaged two blocks of flats and injured 26 people, officials said.</p>
+<p>President Volodymyr Zelenskyy said Russia appeared to have used a North Korean missile in an attack near Kryvyi Rih. Local officials said that strike killed six people, including two girls aged five and 12. Zelenskyy said another six people, including two children, were killed in the regions of Dnipropetrovsk and Poltava.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/jul/30/ukraine-russia-missile-strikes-attack-kyiv" target="_blank" rel="noopener noreferrer" title="The Guardian / Russia accused of violating Polish airspace after missile explosion near village">Guardian #1</a><a href="https://www.nytimes.com/2026/07/30/world/europe/ukraine-poland-russia-missile.html" target="_blank" rel="noopener noreferrer" title="The New York Times / NATO Says Russian Missile Hit Poland During Ukraine Attack">NYT #1</a><a href="https://www.politico.eu/article/unidentified-object-crashes-poland-russia-strikes-ukraine" target="_blank" rel="noopener noreferrer" title="POLITICO / Tusk: ‘Everything indicates’ Russian cruise missile hit Poland">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="el_pais">
+  <summary>Ceuta imposes maximum alert after uncontrolled crossing from Morocco leaves at least 18 dead</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ceuta moved to maximum alert after thousands of people crossed from Morocco on Thursday, leaving at least 18 dead and pushing police, emergency crews and reception facilities beyond capacity as the government rushed in Army units and a prime ministerial visit was announced.</p>
+<h3>A crossing that swelled by the hour</h3>
+<p>The surge came around midday, after a quieter night in which only dozens had entered by swimming. By Thursday afternoon, thousands were crossing without control from Morocco into Ceuta, first on foot and then by swimming around the breakwater that marks the border.</p>
+<p>People arrived wet and jubilant, some hugging, asking for clean clothes to dry their phones and shouting with relief. Others came with children in their arms and kept moving toward what they thought might be the reception center. Some were exhausted, some with bloodied feet from the rocks, and some shouted “¡Viva España!” while throwing their flip-flops into the air.</p>
+<p>Several of those who reached the asphalt knelt to kiss the ground. Others crossed the road running parallel to the sea without stopping to look at the traffic. The scene quickly turned into a mass arrival that, by the report’s account, made orderly reception impossible.</p>
+<h3>Emergency services were overwhelmed</h3>
+<p>The Guardia Civil and emergency crews were overwhelmed and focused on the injured. At least 18 people died while trying to reach Ceuta.</p>
+<p>The city’s reception center had already been unable to cope for days: its doors were closed and there were no free places. Hundreds, and at moments thousands, gathered around it, while the crowd on the ground and along the coast kept growing. Ceuta had been asking national authorities for help over previous days, and the situation resembled the severe crisis of 2021.</p>
+<p>By late afternoon, the government mobilized the units of the Army of Tierra deployed in Ceuta to support the Guardia Civil. Pedro Sánchez was also scheduled to travel to the city on Friday.</p>
+<h3>The immediate question</h3>
+<p>The urgent issue now is how Ceuta will absorb the people already inside the city and those still arriving. The report describes a reception system already at its limit, with the CETI closed and crowded areas around it, while emergency services remain focused on the injured and the dead.</p>
+<p>The government’s reinforcement and Sánchez’s planned visit on Friday mark the next official steps named in the evidence.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-07-30/otra-manana-de-centenares-de-entradas-de-inmigrantes-a-ceuta-pone-en-jaque-a-la-ciudad-autonoma.html" target="_blank" rel="noopener noreferrer" title="El País / Máxima alerta en Ceuta tras el cruce descontrolado de miles de personas desde Marruecos que deja al menos 18 muertos">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian,scmp">
+  <summary>US launches heavy wave of strikes on Iran in retaliation for Tehran’s attack on US forces, as peace efforts falter</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US struck dozens of targets in Iran overnight after Tehran attacked a base in Jordan hosting American troops, pulling the two sides back into open exchange while mediators said talks were still alive and reports from Jordan, Kuwait, Iraq and Egypt showed the conflict spreading.</p>
+<p>The strikes were the first in more than five days and came hours after Donald Trump vowed to hit Iran “very hard.” The latest round followed a days-long pause in violence, but US Central Command said the operation lasted two hours and hit dozens of Islamic Revolutionary Guard Corps targets, including military command centres, missile facilities and drone facilities.</p>
+<h3>Retaliation after a pause</h3>
+<p>US officials framed the strikes as a direct response to Tehran’s attack on US forces. In a separate account, the US military said the operation followed Iran’s ballistic-missile fire at US forces in the Middle East and aimed to further diminish threats posed by Iran and its proxies to American forces, commercial shipping and neighbouring Gulf countries.</p>
+<p>Iranian state media, meanwhile, said three people — reportedly a couple and a child — were injured in attacks on the island of Qeshm in the Strait of Hormuz, and said explosions were also reported in Khuzestan province in the north-west. The evidence supplied here does not attribute those reports beyond Iranian state media, but it does show that the strikes reached multiple parts of Iran.</p>
+<h3>Regional fallout stretches beyond Iran</h3>
+<p>The exchange was not confined to Iran and the US. Jordan reported incoming missiles for the second day in a row, while Kuwait accused Iran of carrying out a strike that hit a building and killed one person. The Guardian said both strikes were believed to have been part of Iranian retaliation against the US attacks.</p>
+<p>The renewed blows also came after the US partnered with Saudi Arabia to strike Iran-backed militias in neighbouring Iraq on Wednesday, killing at least 20 fighters and six Iranian advisers. That attack added another front to an already widening confrontation.</p>
+<h3>Talks stay open as the violence widens</h3>
+<p>Despite the renewed strikes, mediators said talks were still continuing. Pakistan’s foreign ministry spokesperson Tahir Andrabi said the key mediator was doing its “utmost to bring all parties back” to the negotiating table. The central uncertainty, based on the evidence provided, is whether that diplomacy can survive the latest exchange.</p>
+<p>The fighting also spread to Egypt. According to the British maritime security firm Ambrey, drone strikes set fires on two natural gas vessels at the Egyptian gas import hub at the port of Damietta. The Egyptian government confirmed that a drone attack ignited the blaze, but it was not immediately clear who was responsible for the strikes on a US-owned floating storage facility and a Greek-owned tanker. No injuries were reported and the port remained operational.</p>
+<p>That was the first time Egypt had been attacked since the Iran war started in late February, and it signalled a potential widening of the conflict.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/jul/30/donald-trump-todd-blanche-irs-justice-immigration-iran-latest-news-updates?page=with%3A6a6b5cae8f08fe3ae2b8d1a7#6a6b5cae8f08fe3ae2b8d1a7" target="_blank" rel="noopener noreferrer" title="The Guardian / US launches heavy wave of strikes on Iran in retaliation for Tehran’s attack on US forces, as peace efforts falter">Guardian #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3362326/us-launches-more-strikes-iran-conflict-spreads-across-region" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US launches more strikes on Iran as conflict spreads across region">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Bolivia Study Reveals Toxic Mercury Levels in Four Indigenous Communities</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Scientific studies in Bolivia found elevated mercury contamination in four indigenous communities in the Beni, Mamoré and Madre de Dios river basins. Hair analysis showed mercury levels above acceptable thresholds in 74% to 96% of residents, and Pablo Villegas of Bolivia’s Centre for Communication and Information said the readings were several times higher than the World Health Organization threshold across all communities tested.</p>
+<p>The study said the main contamination pathway was eating fish exposed to mercury waste discharged by mining cooperatives involved in illegal gold extraction. Research physician Roger Carvajal of San Andrés State University said herbivorous fish, more commonly eaten in the Madre de Dios basin, carried lower contamination levels, while carnivorous species showed variable readings across territories. La Paz State University has proposed at least three mercury-free extraction methods to the cooperatives, but the cooperatives rejected them because of the upfront investment required.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/bolivia-study-reveals-toxic-mercury-levels-in-four-indigenous-communities" target="_blank" rel="noopener noreferrer" title="Telesur English / Bolivia Study Reveals Toxic Mercury Levels in Four Indigenous Communities">TE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,guardian">
+  <summary>US appeals court rejects Trump expansion of mandatory migrant detention</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A federal appeals court decision has blocked the Trump administration’s effort to expand mandatory detention for migrants inside the United States, intensifying a split among appellate courts over whether detained immigrants can still seek bond and pushing the dispute closer to the Supreme Court.</p>
+<h3>The 9th Circuit rejects the detention expansion</h3>
+<p>On Thursday, the San Francisco-based 9th US Circuit Court of Appeals ruled 2-1 that the Trump administration cannot deny immigrants detained inside the United States a chance for release on bond. The majority said the administration’s reading of the law was not the better one, and the decision left in place a route that many detained noncitizens have traditionally used while their immigration cases are pending.</p>
+<p>The ruling matters because it cut against a policy change issued last July, when immigration officials expanded mandatory detention to immigrants in the US interior. That move, which was part of the Trump administration’s mass deportation campaign, triggered a wave of federal lawsuits from immigrants seeking release from custody. Under previous administrations, most noncitizens without a criminal record who were arrested inside the US were allowed to ask for a bond hearing while their cases were pending; mandatory detention was generally reserved for people arrested at the border.</p>
+<p>Writing for the majority, 9th Circuit Judge Daniel Bress, a Trump appointee, rejected the administration’s argument that Congress changed immigration law in 1996 to permit mandatory detention beyond the border. “Although no reading of the complicated and interrelated textual provisions at issue here is without some shortcomings, the historical understanding of the statute is the better one,” Bress wrote. He was joined by Judge M Margaret McKeown. Judge Carlos Bea dissented, saying the text and purpose of the 1996 amendment support the administration’s reading.</p>
+<h3>A widening split among appeals courts</h3>
+<p>The decision deepened a split between federal appeals courts over the mandatory detention policy. Four other appeals courts have also rejected it, while the Fifth Circuit in New Orleans and the Eighth Circuit in St Louis have sided with the Trump administration. The Guardian also reported that a Chicago-based 7th Circuit panel joined the 9th Circuit in rejecting the policy, in a pair of 2-1 decisions.</p>
+<p>That split is now large enough that the Supreme Court may eventually step in. The administration asked the high court last month to take up the issue, and the expanding divide among the circuits increases the chances that it will do so.</p>
+<p>The legal fight has also been marked by sharper clashes in the lower courts. Some federal judges who ordered bond hearings have blasted the administration for repeatedly violating their orders, according to the evidence cited in the reports.</p>
+<h3>The administration’s response and the next court fight</h3>
+<p>In response to Thursday’s ruling, the US Department of Homeland Security said it “strongly disagrees with the Ninth Circuit panel and is confident in its legal position regarding mandatory detention.” The statement added: “President Donald Trump and Secretary [Markwayne] Mullin are now enforcing the law as it was actually written to keep America safe.”</p>
+<p>The immediate question is whether the Supreme Court will take up the dispute after the administration’s request last month. For now, the appellate ruling keeps open the possibility of bond hearings for detained immigrants inside the United States, even as the federal courts remain split over whether the 1996 law requires mandatory detention for people who entered unlawfully.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/30/us-appeals-court-rejects-trump-expansion-of-mandatory-migrant-detention?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US appeals court rejects Trump expansion of mandatory migrant detention">AJ #1</a><a href="https://www.theguardian.com/us-news/live/2026/jul/30/donald-trump-todd-blanche-irs-justice-immigration-iran-latest-news-updates?page=with%3A6a6bb6778f08cf0c86618f47#6a6bb6778f08cf0c86618f47" target="_blank" rel="noopener noreferrer" title="The Guardian / Two federal appeals courts reject ICE policy to detain undocumented residents with no criminal records">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>‘I am dying slowly’: Gaza professor blocked from cancer treatment by Israel’s siege</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Gaza university professor with liver cancer says she is stuck in a school shelter as treatment runs out, while medicine shortages and a backlog of evacuation requests leave her and thousands of other patients waiting for permission to leave the strip.</p>
+<p>Kholoud Abu Sahmoud is living in a cramped space beneath the staircase of Ahmed bin Abdul Aziz School, which has been turned into a shelter in southern Gaza. She says her condition has worsened after 15 rounds of chemotherapy, and she was told she could not continue because the drugs available in Gaza were not suitable for her cancer. Abu Sahmoud, 33, said she was diagnosed with liver cancer about nine months ago, immediately after giving birth to her daughter. After several sessions of chemotherapy, she said, her health kept deteriorating instead of improving.</p>
+<p>“The doctor told me that the treatment was not suitable for my body or my condition,” she said. “The chemotherapy never treated my cancer. It only caused my hair and nails to fall out.” She said parts of her nails come off almost every day. Abu Sahmoud also said doctors told her the treatment she needs is available in Jordan or Turkey, but not in Gaza.</p>
+<h3>Medicine shortages and halted treatment</h3>
+<p>Her case sits inside a wider breakdown in cancer care across Gaza. Nearly 10 months after the ceasefire agreement in October 2025, Israeli authorities continue to restrict the entry into Gaza of essential medicines and medical supplies, including cancer drugs, chemotherapy medicines, antibiotics, anaesthetics, laboratory supplies, diagnostic equipment and surgical consumables. By March, around 46 percent of essential medicines and 66 percent of medical consumables were already completely out of stock, according to UN agencies and international organisations.</p>
+<p>This month, the Palestinian Ministry of Health in Gaza said chemotherapy for several types of cancer had largely ground to a halt, including breast, colorectal and gastrointestinal cancers, head and neck tumours, and sarcomas, because stocks of specialised oncology medicines had reached critical levels. The ministry said that, of Gaza’s nearly 11,000 cancer patients, at least 4,000 had been issued medical referrals and were still waiting for permission to leave the strip for treatment.</p>
+<p>Dr Muhammed Abu Nada, director of the Gaza Centre for Cancer, said doctors had been forced to use medicines that had already expired because of severe shortages, and even those had now run out. “This is clearly increasing the mortality rate,” he said. Abu Nada said Gaza was facing its worst shortage of chemotherapy drugs in years. He said doctors were increasingly relying on single-drug therapy instead of standard treatment protocols, which he said reduces effectiveness, worsens outcomes and can lead to more complications.</p>
+<h3>Waiting for permission to leave</h3>
+<p>Abu Sahmoud’s referral was approved shortly after her diagnosis because the treatment she needs is unavailable in Gaza, but nine months later she is still waiting to leave. Medical referrals are meant to send patients to specialist treatment in hospitals in the occupied West Bank, East Jerusalem, Egypt and Jordan, but patients still need permission to cross through Israeli- or Egyptian-controlled crossings.</p>
+<p>Since the genocide in Gaza began in October 2023, Israel has severely restricted medical referrals and evacuations from the strip, preventing thousands of critically ill and wounded Palestinians from accessing care unavailable locally. Four months after the October ceasefire agreement, Israel partially reopened the Rafah crossing with Egypt for medical evacuations under a tightly controlled mechanism, allowing only around 50 patients a day to leave with Israeli approval.</p>
+<p>The Palestinian Ministry of Health says more than 20,000 people in Gaza, including around 4,000 children, are awaiting urgent medical evacuation. Since Rafah reopened in February, only 1,655 patients had been evacuated as of 30 June, and more than 1,570 people had died while waiting for permission to leave since October 2023.</p>
+<p>Abu Sahmoud said the delay is steadily consuming what remains of her strength. She described shortness of breath, abdominal swelling caused by fluid retention and a weight loss of around 20kg. She said there are long periods when she cannot eat because of the fluid buildup in her abdomen. “My health deteriorates every day with this endless waiting,” she said.</p>
+<p>Her illness has also left her dependent on others for shelter. Abu Sahmoud said she was forcibly displaced around 30 times after her home was destroyed. She most recently moved into a tent in Mawasi al-Qarara, west of Khan Younis, but said the conditions were too unhealthy for her. She then moved in with her older sister, who is also displaced and lives beneath the stairs of the school, where around 10 people from two families are now staying together. “The environment is completely unsuitable for someone in my condition,” she said. “Even a healthy person would struggle to live here, let alone a cancer patient.”</p>
+<p>Before cancer changed her life, Abu Sahmoud said she was known as a “bookworm.” She said she had earned nearly 50 academic certificates through years of study and training, completed a master’s degree in record time, and later became an assistant professor at the Islamic University of Gaza, specialising in curriculum and teaching methods. She had started a PhD, she said, and had hoped to continue her academic career. Instead, she now says her days are defined by waiting. “I am dying slowly,” she said.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/i-am-dying-slowly-gaza-professor-blocked-cancer-treatment-israels-siege" target="_blank" rel="noopener noreferrer" title="Middle East Eye / ‘I am dying slowly’: Gaza professor blocked from cancer treatment by Israel’s siege">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,axios,bbc,el_pais">
+  <summary>Trump says Board of Peace reaches agreement on disarmament of Hamas in Gaza</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump says his Board of Peace has reached an agreement to disarm Hamas and other armed groups in Gaza, a step he says would lead to Israeli withdrawal and a new Palestinian government, even as key details, signatures and timing remain unclear.</p>
+<h3>What Trump announced</h3>
+<p>Trump said on Truth Social on Thursday that the Board of Peace had reached what he called a “critical step” toward Gaza being governed by “a new Palestinian government” that would work with the board. He said the agreement would disarm Hamas and all other armed groups in Gaza, and framed the move as part of the ceasefire deal he brokered in October.</p>
+<p>He also said the process would happen in phases. Once disarmament was complete, Israel would withdraw from Gaza and be replaced by an International Stabilisation Force working with a “new Palestinian police force,” he said. In his post, Trump said the arrangement would give Israel “the security it deserves,” while preventing Gaza from being used as a base for attacks.</p>
+<p>Al Jazeera said Hamas had not officially commented on the statement, although it had received a copy of a document agreed to by Hamas and other Palestinian factions. The same report said Hamas leaders had been in Cairo since late last week discussing the ceasefire deal with mediators from Egypt, Qatar and Turkiye, and that an unnamed Hamas official had earlier described the talks as “positive” and “making progress.”</p>
+<h3>What the draft agreement says</h3>
+<p>Axios said the White House and Trump’s Board of Peace believed Hamas could sign an agreement in the coming days to disarm and demilitarize the Gaza Strip. It said two U.S. officials claimed Hamas had agreed to the terms, while Israeli officials and Western diplomats remained skeptical that the group would follow through.</p>
+<p>According to Axios, the draft agreement is built around “one government, one legal system and one legitimate security authority” in Gaza. It said Hamas would decommission heavy and light weapons over six to eight months and provide maps of tunnel networks, weapons-production facilities and arms depots. The weapons would be placed into storage under the control of the National Committee for the Administration of Gaza, or NCAG.</p>
+<p>Axios also said a new Palestinian police force, made up of thousands vetted by Israel’s Shin Bet security service, would be trained and deployed in areas controlled by the NCAG. Anti-Hamas militias armed by Israel during the war would be disarmed and dismantled, and Hamas members would receive amnesty and be allowed to stay in Gaza. It said the technocratic government would take authority over each section of Gaza only after that area had been verified as demilitarized.</p>
+<p>The same account said Israel would withdraw to the “Yellow Line,” where its forces were positioned after last October’s ceasefire. Any further withdrawal would depend on implementation of the agreement and would happen only after Hamas surrendered its weapons. Axios also said Israel would stop assassinations of Hamas members in Gaza except where it judged there was an imminent threat.</p>
+<h3>What remains unresolved</h3>
+<p>The central uncertainty is whether the agreement Trump described has actually been signed by the parties it affects. One report said it was unclear whether Hamas and Israel were part of the agreement, and neither party had commented. That uncertainty sits alongside Trump’s claim that the Board of Peace has already reached a deal and Axios’s report that Hamas could sign in the coming days.</p>
+<p>There is also no clear public confirmation of the implementation timetable. Al Jazeera said the draft it saw required the weapons inventory process to have an implementation schedule prepared within 14 days, with the deadline extendable if an international verification commission agrees. Its Washington-based correspondent, Alan Fisher, said there were obstacles to getting all sides ready to sign, but that international pressure on Hamas had made the deal harder to resist financially.</p>
+<p>The announcement came against the backdrop of continuing violence. Al Jazeera said Israel had repeatedly violated the ceasefire agreement, killing more than 1,200 Palestinians, seizing more territory and restricting movement of people and goods into and out of Gaza. It also said six more Palestinians were killed in Israeli attacks on Thursday, including two children.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/30/trump-says-board-of-peace-reaches-agreement-on-disarmament-of-hamas-in-gaza?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Trump says Board of Peace reaches agreement on disarmament of Hamas in Gaza">AJ #1</a><a href="https://www.axios.com/2026/07/30/hamas-weapons-gaza-deal-israel-board-peace" target="_blank" rel="noopener noreferrer" title="Axios / Trump touts &quot;historic&quot; agreement to disarm Hamas, rebuild Gaza">Axios #1</a><a href="https://www.bbc.co.uk/news/articles/cj03m512r4go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Trump says Board of Peace has reached agreement for disarmament of Hamas">BBC #1</a><a href="https://elpais.com/us/2026-07-30/trump-anuncia-un-acuerdo-para-el-desarme-total-de-hamas.html" target="_blank" rel="noopener noreferrer" title="El País / Trump announces an agreement for the &#x27;total disarmament&#x27; of Hamas">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Trump claims Hamas agreed to disarm and allow international force to police Gaza</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump wrote on social media that his so-called “Board of Peace” reached an agreement on Thursday for the complete disarmament of Hamas militants and other armed groups in Gaza. He said the deal would be carried out in “carefully structured phases,” with Israeli forces withdrawing as disarmament is completed, and the International Stabilization Force working with a new Palestinian police force. Trump thanked Egyptian, Qatari and Turkish mediators and called it a step toward Gaza being governed by a new Palestinian government working closely with the Board of Peace.</p>
+<p>Earlier in the day, sources told Reuters that talks between mediators and Hamas leaders in Cairo on implementing a US-brokered Gaza peace plan had made rare progress, although an Israeli official said the proposed terms were not satisfactory. Trump also said, “One year ago there was a violent raging war” in Gaza and that “we have made historic progress.” He made no mention of ongoing Israeli attacks on the Palestinian enclave. Medics said Israeli strikes killed at least six Palestinians in Gaza on Thursday, including two children. Last week, the United Nations Office for the Coordination of Humanitarian Affairs said 1,180 Palestinians had been killed and 3,810 wounded since Trump announced the Gaza ceasefire agreement between Israel and Hamas on 9 October 2025.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/jul/30/donald-trump-todd-blanche-irs-justice-immigration-iran-latest-news-updates?page=with%3A6a6bda998f08be8c4a5f49bd#6a6bda998f08be8c4a5f49bd" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump claims Hamas agreed to disarm and allow international force to police Gaza">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="el_pais">
+  <summary>Marruecos tightens border controls as thousands head toward Castillejos near Ceuta</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Morocco tightened border controls across its north as thousands of people, mostly young men but also adults and families, converged on the road to Castillejos near Ceuta, turning a rumor of an easy crossing into a tense test of whether the rush to Spain could be stopped.</p>
+<h3>Road to Castillejos</h3>
+<p>By late afternoon, the road between Tangier’s port and Castillejos, also known as Fnideq, was clogged by the movement of people heading toward the border with Ceuta. They were described as overwhelmingly young, but also including adults and even some mothers with their children.</p>
+<p>The surge spread after word circulated across Morocco about a simple way into Spain, and rumor fed a much larger human movement. Along the toll road linking Tangier with the Ceuta frontier, near the port of Tangier Med, a boy said to be under 15 and calling himself Ahmed asked drivers to take him to Castillejos. When asked why he wanted to leave, he replied: “I don’t have anything better to do here” and “I’d rather go to Castillejos and try my luck.”</p>
+<p>Some of the people moving south and north toward the frontier were walking. Others were trying to hitch rides. Young people were covering the 40 to 50 kilometers to the border on foot, while others were pushing toward the coast in hopes of getting closer to Ceuta before nightfall.</p>
+<h3>Morocco’s security sweep</h3>
+<p>By afternoon, the Moroccan authorities had sharply changed course. After an initial period of restraint that allowed the mass movement toward the Spanish autonomous city, security forces deployed thousands of personnel to shut down the north of the country.</p>
+<p>At the frontier, agents acted forcefully, using tear gas and water cannons, according to Efe. The north of Morocco was placed under maximum surveillance, and controls tightened so much that circulation on Tangier’s ring road became nearly impossible.</p>
+<p>Vehicles carrying young people were repeatedly stopped and forced to pull over for identification before being allowed to continue. The same pressure was visible closer to Tangier Med, where security checks became more intense as travelers moved nearer the Mediterranean coast. The main crossings and communication points were being occupied to seal off the north before nightfall.</p>
+<p>The response also reached transport hubs. Tangier’s high-speed rail station was taken over by the army and police, who blocked anyone under 20 from leaving. At the doors of the train service linking Tangier and Casablanca, about 200 young people were detained, though many managed to escape by running and jumping walls as forces chased them. Around the station, taxis and buses were crowded with young people from across Morocco trying to get as close as they could to Castillejos.</p>
+<h3>A wider movement, not a single border rush</h3>
+<p>The flow was not limited to Moroccans from the north. Many arrived from central Morocco, from areas described as poorer and hit by six years of drought, which had driven a mass exodus because of a lack of jobs and means of living. Others came from Algeria and Tunisia, and many more were sub-Saharan migrants from countries including Sudan and Ivory Coast and other places facing conflict.</p>
+<p>Humanitarian associations in Morocco and NGOs had warned in the previous weeks about the concentration of young people trying to make the jump to Spain. The report also said families were following the movement anxiously, unsure where their sons had gone. A Moroccan human-rights activist, Jadiya Inani of the AMDH, said hundreds of families were looking for missing children in northern Morocco without getting answers. She added that there were no official figures for the missing, though some media were speaking of hundreds of young people who had set out from Morocco and not made it across to Ceuta by swimming.</p>
+<p>Inani said many had been rescued by boats from the Royal Navy, which she said was helping control the crisis. She also linked the rush to the spread of social media, saying young people were organizing through messaging groups and looking for the least watched crossing points. In Ceuta, arrivals at sea had already begun to add to the pressure on the border.</p>
+<p>The tension comes against a wider backdrop of hardship and political sensitivity inside Morocco. Inani argued that young people were leaving because they could not find stable study, work, or living conditions at home. She said the government was giving priority to other projects, while health, education, employment, and housing were being neglected. The report also noted that the border crisis was unfolding as King Mohamed VI marked the 27th anniversary of his reign in Mdiq, and he did not mention the situation in his speech to the nation.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-07-30/es-un-fracaso-para-el-pais-ver-a-una-chica-haciendo-la-senal-de-la-victoria-tras-haber-pasado-a-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / Marruecos refuerza los controles mientras miles de personas se dirigen a la frontera">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Race to extinguish blazes across Europe as fire weather breaks records</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Firefighters across southern Europe are still racing to contain blazes after EU fire weather hit record severity for this time of year, with France and Spain seeing some overnight progress even as Greece reported fatalities and more evacuations were ordered elsewhere.</p>
+<p>Data from the European Forest Fire Information Service showed that hot, dry and windy weather across the EU from the start of the year to the end of July was 43% more severe than the average for the same period over the past two decades. So far this year, 435,000 hectares have burned, roughly triple the recent historical average, across 1,400 fires, more than double the average. The figures were published on Thursday and may be revised further.</p>
+<p>In Greece, officials said three firefighters died on Tuesday. In France, a blaze in the dense pine forests near Bordeaux grew so large it generated a rare thunderstorm that could ignite more fires, and Effis said 91,000 hectares had burned there, breaking the country’s full-year fire record with one month of summer still to go. Sophie Brocas, the prefect of Gironde, called Thursday “the first somewhat optimistic day” since wildfires broke out more than a week ago. Regional authorities said the fire remained under control after a quiet night, with work continuing around its edge and in active hotspots, and they allowed another 84,000 people to return home after 60,000 were cleared to do so on Tuesday.</p>
+<p>Spain has also been hit hard. Effis said 207,000 hectares had burned across the country, where authorities described the fire situation west of Madrid as “stable” but said residents of seven housing estates could not yet return. Pedro Sánchez, the prime minister, announced the end of the national emergency in Ávila and Madrid on Thursday morning. But a new fire near the Portuguese border forced the evacuation of 600 people, and the Spanish meteorological agency warned that temperatures above 35C were expected over large parts of the interior, with some areas facing 40C-42C.</p>
+<p>Wildfires in France and Spain have forced more than 300,000 people from homes and tourist accommodation this month, and both countries have asked the EU for help with firefighters, fire engines and water-dropping aircraft. Officials at the EU’s crisis management centre said on Wednesday that further difficult weeks were expected as fires worsened in Italy and Greece.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/jul/30/fire-weather-eu-wildfires-data" target="_blank" rel="noopener noreferrer" title="The Guardian / Race to extinguish blazes across Europe as fire weather breaks records">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>After 19 years on strike in Sombrerete and Taxco, miners demand a solution</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Workers from Sombrerete, Zacatecas, and Taxco, Guerrero, affiliated with the National Miners Union, will march today in Mexico City to demand a definitive solution to labor conflicts that have kept their workplaces paralyzed for nearly two decades. The rally will go from the Monument to the Revolution to the Segob, and it will be joined by members of more than 70 union sections led by Napoleón Gómez Urrutia. They are also calling for a review and withdrawal of concessions granted to Grupo México, which they accuse of labor-rights violations and serious environmental damage from chemical spills.</p>
+<p>The strikes began simultaneously on July 30, 2007, over breaches of the collective bargaining agreement and unsafe conditions, along with the strike in Cananea, Sonora. Antonio Navarrete, spokesman for Sonoran Section 65, said a meeting agreed for January 15 with the SG has not taken place, and that formalizing pensions for 53 widows is still pending. He also said 450 miners in Cananea have not been rehired. In Sombrerete, José Núñez Velázquez of Section 201 said 16 colleagues have died during the strike; of the 483 miners who began it, 165 remain in the movement and are blacklisted, mostly over 60.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/30/politica/012n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / After 19 years on strike in Sombrerete and Taxco, miners demand a solution">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>IMF Approves $1.9 Billion Loan for Bolivia Under Adjustment Conditions</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Bolivia has moved back toward IMF financing with a $1.9 billion preliminary loan agreement under adjustment conditions, but the funding still faces approval hurdles and opposition from social organizations that say it could undo earlier economic gains.</p>
+<p>Bolivia secured the first IMF credit in two decades this Thursday, and the deal still needs approval from the IMF’s Executive Board and the Plurinational Legislative Assembly before the money can take effect. The Finance Ministry also announced a three-year program agreement with the International Monetary Fund and said it would seek new credits from other international institutions, including the IDB and the World Bank.</p>
+<p>The agreement comes after more than two decades in which Bolivia kept a limited and often adversarial stance toward the Washington-based lender, first under President Evo Morales and later under Luis Arce. The evidence says Morales’ government reduced dependence on the IMF and the World Bank through nationalization of hydrocarbon resources, exchange-rate controls, and public investment, while poverty fell and GDP grew over that period.</p>
+<p>Under President Rodrigo Paz, who took office in November 2025, the government has taken the opposite direction. The IMF-linked program is described as a Structural Adjustment Facility and includes reviews of price structures, cuts in public spending, adjustments to state-owned enterprises, and structural regulatory reforms. The Ministry of Economy, led by Gabriel Espinoza, has framed the deal as a stabilization tool amid fiscal deficits, falling hydrocarbon production, depleted reserves, rising inflation, and distortions in currency and goods markets.</p>
+<p>Social organizations, including the Bolivian Workers’ Center and native people’s confederations, have said they will oppose the agreement and defend public enterprises and the social gains of earlier years. The legislative ratification process is expected to begin next week, setting up the next political test for the Paz administration.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/imf-approves-1-9-billion-loan-bolivia" target="_blank" rel="noopener noreferrer" title="Telesur English / IMF Approves $1.9 Billion Loan for Bolivia Under Adjustment Conditions">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Residents face cascading service failures as the City of Joburg’s Telkom blackout and dual labour disputes at Johannesburg Water and Pikitup hinder</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Residents in Johannesburg were hit by overlapping municipal communication failures and service disruptions. On Thursday, the City of Joburg said some officials’ municipal mobile lines were experiencing temporary disruptions because of a contractual transition between mobile service providers, while insisting that landlines and customer-facing channels remained operational. But direct testing found a split in the network: emergency dispatch line 011 375 was live, while the city’s 011 407 administrative trunking network, used for public, councillor and senior official calls, was unresponsive and returned dead-line disconnect messages. The breakdown left ward councillors and residents unable to escalate infrastructure failures through those lines.</p>
+<p>The Telkom disruption came alongside labour disputes affecting Johannesburg Water and Pikitup. At Johannesburg Water, South African Municipal Workers’ Union members entered a second day of unprotected gatherings over the non-implementation of the R10.3-billion Politically Facilitated Agreement wage deal, and the utility warned of extended delays in fixing pipe bursts and clearing sewer blockages. Pikitup also faced secondary disruptions after casual workers and expanded public works participants shut down key depots over unpaid stipends and expired contracts, raising the risk of refuse backlogs.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-07-30-city-blames-service-provider-migration-for-telkom-mobile-and-landline-cutoffs-fiasco" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Residents face cascading service failures as the City of Joburg’s Telkom blackout and dual labour disputes at Johannesburg Water and Pikitup hinder">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Gangster Uzair Baloch’s brother shot, critically injured in Karachi’s Lyari: police</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Uzair Baloch’s brother, Zubair Baloch, was shot and critically wounded in Karachi’s Lyari area on Thursday evening, according to police. Chakiwara police said the 40-year-old was hit on main Chakiwara Road, and two passersby were also injured. All three were shifted to Civil Hospital Karachi. South DIG Syed Asad Raza said Zubair was sitting outside his residence in Singu Lane when armed suspects on a motorcycle opened fire and fled. He said Zubair suffered multiple injuries, including to his chest and abdomen, and was undergoing surgery.</p>
+<p>Raza also said one of the injured passersby was in serious condition. Police said they were investigating the shooting from different angles, including gang rivalry and personal enmity. Raza added that Zubair had been arrested in seven criminal cases in 2012 and was released in January 2025.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2019527/gangster-uzair-balochs-brother-shot-critically-injured-in-karachis-lyari-police" target="_blank" rel="noopener noreferrer" title="Dawn / Gangster Uzair Baloch’s brother shot, critically injured in Karachi’s Lyari: police">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Latin American’s First Remote Robotic Surgery Links Colombia and India</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A surgeon in Colombia carried out what was described as the first remote robotic surgery between Latin America and Asia on a patient in India. The operation took place at Colombia’s International Hospital in Piedecuesta, in the municipality of Bucaramanga, Santander. It was a bariatric telesurgery on a 50-year-old patient with morbid obesity in Indore, Madhya Pradesh. Surgeon Sudhir Srivastava, founder of SS Innovations, controlled the robotic system from Bucaramanga while the patient was in Indore. The system used was the SSI Mantra 3, and Dr. Víctor Raúl Castillo, president of the Cardiovascular Foundation, said on social media that “a new chapter in the history of robotic surgery was written from Colombia.”</p>
+<p>There is a difference in the distance figures attached to the procedure. Dr. Castillo said the signal traveled more than 24,000 kilometers in real time, connecting two continents with minimal latency. A separate social media post about the same operation said the robot operated from Piedecuesta to a patient in India and described the distance as 25,000 kilometers.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/1-remote-robotic-surgery-colombia-india" target="_blank" rel="noopener noreferrer" title="Telesur English / Latin American’s First Remote Robotic Surgery Links Colombia and India">TE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>New industries, business formats, business models make big contributions to the Chinese economy</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s new growth drivers continued to expand in 2025, with the value-added output of the “three new” economy — new industries, new business formats and new business models — reaching nearly 25.79 trillion yuan, or about 3.8 trillion U.S. dollars, the National Bureau of Statistics said. The figure was up 6.2 percent year on year, and the group’s share of GDP rose to 18.39 percent, up 0.38 percentage point from the previous year.</p>
+<p>Within that total, the primary industry added 986.5 billion yuan, accounting for 3.8 percent; the secondary industry contributed 10.63 trillion yuan, or 41.2 percent; and the tertiary industry reached 14.17 trillion yuan, or 55 percent. Separate recent data also showed high-tech manufacturing sustaining rapid expansion in the first half of 2026, with value-added industrial output rising 13.3 percent year on year.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260730/08f78e13352c4906908c24e1915ead62/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / New industries, business formats, business models make big contributions to the Chinese economy">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>3,000-km air rescue saves burned girl in China&#x27;s Xinjiang</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Xinjiang, police worked with airport and airline staff to open an emergency air rescue corridor after a 4-year-old girl suffered life-threatening burns. The girl was flown more than 3,000 km to a specialized burn hospital in Zhengzhou, in central China. The report was dated 2026-07-30 and described the transfer as a rescue effort coordinated across police, airport, and airline staff.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260730/8185d6a43b9d4cd586ea6e38ffbb139d/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / 3,000-km air rescue saves burned girl in China&#x27;s Xinjiang">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China moves to unlock sci-tech finance data to spur innovation</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China said it will expand the open sharing and integrated use of data in the sci-tech finance sector to support high-level technological self-reliance and give innovative enterprises more efficient financial backing. The move was set out in a joint notice issued on Wednesday by nine government departments, including the People&#x27;s Bank of China. The notice released the first version of a national catalog for sci-tech finance data development and utilization, with 26 data indicators across eight major categories, including enterprise rosters, innovation capability assessments and enterprise needs.</p>
+<p>It also urges localities to draw up region-specific data utilization lists and build supporting information infrastructure. Authorized institutions may use public sci-tech data in a standardized way, while local governments are asked to provide authorized access channels, information query services and joint modeling support. The notice calls for pilot trusted data spaces in eligible regions, where corporate cash-flow data would be better used and industry research information platforms established. It also encourages market-oriented credit reporting agencies to build specialized databases for tech firms, and asks financial institutions to use those databases to create digital credit profiles, develop tailored risk-control and investment models, and design financing products for niche industries.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0730/c90000-20483247.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China moves to unlock sci-tech finance data to spur innovation">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="scmp">
+  <summary>US sanctions Mahan Air’s China network over alleged support for Iran’s IRGC</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The United States sanctioned two China-based companies and a Chinese executive on Thursday over their alleged support for Iran’s Mahan Air. Washington described Mahan Air as the Islamic Revolutionary Guard Corps’ “airline of choice” for transporting weapons, military personnel and equipment. The action marked the second consecutive day that Washington targeted mainland China- or Hong Kong-linked businesses accused of supporting Tehran, expanding its latest pressure campaign beyond Iranian oil.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/us/article/3362446/us-sanctions-mahan-airs-china-network-over-alleged-support-irans-irgc" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US sanctions Mahan Air’s China network over alleged support for Iran’s IRGC">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Spanish Government mobilizes the Army to Ceuta and closes the Melilla border amid migrant crisis</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Spain moved army units already deployed in Ceuta and shut the Melilla border as the migration surge on the city intensified, with the crisis reported to have left at least 18 deaths and leaving open how far Madrid and Rabat can contain the crossings.</p>
+<p>The response came after what the government saw as a day of pressure beyond expectations. El País said between 1,500 and 2,000 people had arrived in Ceuta in the previous 10 days, and that Spain and Morocco agreed to “reinforce coordination” and review measures to return, as soon as possible, those who had entered illegally.</p>
+<h3>Troops and border closures</h3>
+<p>Late on Thursday, La Moncloa mobilized the Army of Land units deployed in Ceuta to support the Guardia Civil, which government sources said were overrun. Those forces, the sources said, would be coordinated by the operations command and would back the Guardia Civil in maintaining security in the city.</p>
+<p>Hours later, the executive closed the border with Melilla after an attempted entry through Beni Enzar. Pedro Sánchez also said he would travel to Ceuta on Friday because of the scale of the emergency, and Interior Minister Fernando Grande-Marlaska announced an urgent trip to the area as well.</p>
+<p>Sánchez had already sent a message on social media saying the government was focused on giving an immediate response in Ceuta. He said it was mobilizing all necessary resources, working with Moroccan and international authorities, and preparing measures to restore normality as soon as possible.</p>
+<p>El País also said the deployment in Ceuta was meant to support the Guardia Civil “as already happened in 2021,” when the city faced a similar crisis. The report added that the government’s move came after images of large numbers of migrants reaching the coast.</p>
+<h3>The fight over how to frame the emergency</h3>
+<p>The scale of the pressure on Ceuta was also reflected in the arguments over how the crisis should be described and handled. Juan Jesús Vivas, the city’s president, asked the government for a declaration of “emergency national,” saying Ceuta needed a single command and “decisive” action. He said around 1,500 people had entered in the previous week, which he described as nearly 2% of the city’s population, and said the flow was running at about 300 a day and rising.</p>
+<p>Vivas also said the city’s figures showed that at least 700 of those who had arrived were minors, while more than 1,000 young people were waiting outside the reception center because the facility had space for a little more than 500. He described the situation as one of “absolute humanitarian and social emergency” and called for more resources, stronger cooperation with Morocco, and more support for border and public-security forces.</p>
+<p>The central government answered that a migration flow cannot trigger the civil-protection emergency mechanism. In a ministry statement, it said the national-interest emergency declaration belongs to Spain’s civil-protection rules, and that those rules do not treat migratory flows as a risk covered by the system or set out specific plans or tools for dealing with them.</p>
+<p>The same statement listed the kinds of risks that do qualify under that law, including floods, seismic and volcanic risks, adverse weather, forest fires, accidents involving dangerous substances, and nuclear or radiological risk. Ceuta’s government, however, said there was a route under the Security National law instead, and the central government has not activated that option, according to government sources.</p>
+<p>Meanwhile, Foreign Minister José Manuel Albares was said to be in permanent contact with his Moroccan counterpart, Nasser Bourita, to strengthen coordination and try to channel the situation. The government also said Morocco was cooperating with Spain and that Moroccan security forces were helping stop many people from reaching Ceuta from Moroccan territory.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-07-30/el-presidente-de-ceuta-pide-al-gobierno-la-emergencia-nacional-y-mando-unico-por-la-presion-migratoria.html" target="_blank" rel="noopener noreferrer" title="El País / El Gobierno moviliza al Ejército de Tierra desplegado en Ceuta y cierra la frontera con Melilla">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>New survey reveals fears of US farm workers amid Trump’s immigration raids</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A survey released Thursday by the United Farm Workers Foundation found farm workers in the US fearful of immigration raids and deportations under the Trump administration. The survey included responses from 2,250 farm workers, many of them undocumented. It found that 92% said raids and deportations have affected their employment, while 90% said they worry about family separation. The survey also said 61% were shopping less, 29% were avoiding medical attention, and 17% feared being forced to do labor in immigration detention if arrested. Despite those fears, 80% said they had lived in the US for more than 10 years and 41% said more than 20 years.</p>
+<p>At a Thursday press conference about the survey, a farm worker identified as Yasmine said, “When I leave to work, I’m afraid to not come home and to never see my daughters again.” She said she is a mother of two US-citizen daughters, has been in the US for more than 20 years, is a DACA recipient, and is facing delays renewing her work permits. She said her husband is undocumented and that the family now goes out only when necessary, including for groceries.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/jul/30/farm-workers-survey-trump-immigration" target="_blank" rel="noopener noreferrer" title="The Guardian / New survey reveals fears of US farm workers amid Trump’s immigration raids">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>U.S. Oil Blockade Has Almost Completely Halted Tourism to Cuba</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Wednesday, the Cuban government acknowledged the “almost total paralysis” of tourism, saying 73% of hotel facilities had shut down and that about 25,000 jobs were at risk. Prime Minister Manuel Marrero attributed the crisis to the U.S. oil blockade and the threat of sanctions against foreign companies. He said seven international chains — including Melia, Iberostar, Barcelo, Blue Diamond, Archipelago International and ATG — had left, and that they accounted for about 46% of the island’s available hotel rooms.</p>
+<p>Tourism had already been falling since the COVID-19 pandemic, with Cuba’s arrivals dropping from 4.7 million in 2018 to 1.8 million in 2025. Data for January to May 2026 showed 359,491 international visitors, 58.4% fewer than in the same period of 2025. The report also said fuel imports were restricted, gas stations were empty, taxi drivers lacked gas, and fuel shortages reduced air routes and affected hotel operations.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/u-s-oil-blockade-has-almost-completely-halted-tourism-to-cuba" target="_blank" rel="noopener noreferrer" title="Telesur English / U.S. Oil Blockade Has Almost Completely Halted Tourism to Cuba">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>American Red Cross declares second-ever national blood supply crisis</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The American Red Cross declared what it called the second-ever national blood supply crisis after blood donations fell to a four-year summer low. On Monday, the 145-year-old non-profit said it had less than one day’s national supply of type O positive blood, which it described as the most commonly transfused blood. The ARC said type O positive accounts for about 60% of its blood distributions and can be given to about 80% of patients.</p>
+<p>The organization said donations are not keeping pace with hospital demand during the summer trauma season. It said extreme heat, poor air quality and widespread foodborne illnesses are contributing to lower donor turnout, and it urged more donations, saying just three additional donors at each blood drive this summer could help end the crisis. The ARC also said stronger supplies of A, B and AB blood would let hospitals match patients’ blood type when possible and preserve type O blood for type O patients and life-threatening emergencies. It said this summer’s crisis follows the first national blood crisis in 2022.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/jul/30/american-red-cross-blood-supply-crisis" target="_blank" rel="noopener noreferrer" title="The Guardian / American Red Cross declares second-ever national blood supply crisis">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,middle_east_eye">
+  <summary>Supreme Court will allow appeal hearing over Palestine Action ban</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UK Supreme Court has given Palestine Action co-founder Huda Ammori permission to appeal the government’s proscription of the group under anti-terrorism legislation. The ban was imposed in July 2025, and the case is expected to be heard in the autumn.</p>
+<p>The legal fight has already moved through lower courts. In June, the Court of Appeal quashed a High Court ruling that had found the ban unlawful, after a five-strong panel said the government’s move “struck a fair balance” between freedom of speech and assembly and national security. Middle East Eye also said the ban made membership of or support for Palestine Action a criminal offence punishable by up to 14 years in prison, and that some 3,500 people have been arrested for allegedly supporting the group.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c87n321w9qlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Palestine Action ban to be reviewed by Supreme Court">BBC #1</a><a href="https://www.middleeasteye.net/news/supreme-court-grants-permission-appeal-palestine-action-ban" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Supreme Court will allow appeal hearing over Palestine Action ban">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>The Supreme Court ruled that people who enter Ceuta and Melilla by swimming cannot be returned hotly (immediately/refused on the spot)</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Supreme Court ruled that people who enter Ceuta and Melilla by swimming cannot be subject to immediate “hot returns” at the border. The case came from an Algerian migrant who, on November 14, 2024, was intercepted at sea with two others while trying to enter Ceuta by swimming and was handed over to Moroccan authorities. He appealed, saying the return was carried out without any procedure or resolution and without access to a lawyer or international protection rights, and he asked for 6,000 euros in compensation. A Ceuta court and then the Andalusia High Court of Justice ruled in his favor on the main point.</p>
+<p>The State Attorney appealed, arguing that express returns are legal in these cases because the law allows them when foreigners are detected at the border line. But the Supreme Court said the special regime for Ceuta and Melilla is not generally applicable to everyone who tries to enter irregularly, and that people who arrive by sea do not overcome a border containment element in the sense required by the law. The court also said its ruling was meant to clarify its case law, and noted that the Government could act to extend express returns if maritime containment elements were established.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-07-30/el-supremo-determino-que-las-devoluciones-en-caliente-no-se-pueden-aplicar-a-quienes-entren-a-nado-en-ceuta-y-melilla.html" target="_blank" rel="noopener noreferrer" title="El País / The Supreme Court ruled that people who enter Ceuta and Melilla by swimming cannot be returned hotly (immediately/refused on the spot)">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Cristina Fernandez’s Case Enters International Legal Bodies</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Cristina Fernández de Kirchner’s defense has taken her corruption case to international human rights bodies, arguing that Argentina’s courts denied due process in the Roadworks case and that the convictions amount to political banishment rather than a fair trial.</p>
+<p>The filing was lodged with the United Nations Human Rights Committee and the Inter-American Commission on Human Rights, according to the evidence. It challenges the procedural integrity of the fraud trial that has made Fernández de Kirchner one of the most prominent judicial figures in recent South American politics. Supporters and several international legal observers have described the case as lawfare, while legal analysts and political commentators remain divided over what the rulings mean.</p>
+<h3>The case behind the petition</h3>
+<p>The Roadworks case began with a 2016 complaint by Argentina’s National Highway Administration during Mauricio Macri’s presidency. The investigation centered on 51 public road construction contracts awarded in Santa Cruz Province between 2003 and 2015. The prosecution alleged that Austral Construcciones received nearly 80 percent of the province’s roadwork projects during the presidencies of Néstor Kirchner and Cristina Fernández de Kirchner, despite lacking prior civil engineering experience, and that the work involved overcounts, cost overruns and unfinished highways.</p>
+<p>In December 2022, Federal Oral Tribunal No. 2 found Fernández de Kirchner guilty of fraudulent administration detrimental to the public interest and sentenced her to six years in prison, along with a perpetual ban from holding public office. Her legal team then turned to international arenas, arguing that the domestic process violated fair-trial and political-participation guarantees.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/cristina-fernandez-intl-legal-bodies" target="_blank" rel="noopener noreferrer" title="Telesur English / Cristina Fernandez’s Case Enters International Legal Bodies">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="rappler">
+  <summary>Prince Harry, others face multi-million legal bill after Daily Mail lawsuit defeat</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Prince Harry and other high-profile claimants faced the prospect of paying millions of dollars toward Associated Newspapers’ legal costs at London’s High Court on Wednesday, July 29, after losing their privacy lawsuits against the Daily Mail publisher. Earlier this month, Judge Matthew Nicklin ruled against King Charles’ younger son, singer Elton John and five other British figures, rejecting allegations that the Mail titles had engaged in widespread unlawful activity, including phone hacking. Associated said the ruling was “an overwhelming victory” for its newspapers and journalists, while Harry called it a “complete and obvious whitewash.”</p>
+<p>At the costs hearing, Associated’s lawyer Antony White argued the claimants should pay on an “indemnity basis,” meaning the losing party would cover the other side’s charges without needing to show they were proportionate. The court heard Associated had incurred a legal bill of £34.5 million ($45.8 million), while Harry and the other claimants had insurance covering £16 million. Associated said it was seeking an interim payment of £10 million; Nicholas Bacon, for the claimants, said the bill was “eye-watering” and said they had offered an interim payment of £8 million by August 28. The hearing was due to continue on Thursday.</p></div>
+  <div class="source-list"><a href="https://www.rappler.com/people/newsmakers/prince-harry-daily-mail-lawsuit-defeat" target="_blank" rel="noopener noreferrer" title="Rappler / Prince Harry, others face multi-million legal bill after Daily Mail lawsuit defeat">Rappler #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Amazon’s Zoox secures US federal approval for steering-wheel-free robotaxis</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Amazon’s Zoox won US approval on Thursday for limited commercial deployment of its steering-wheel-free robotaxis, clearing the way for the company to begin charging customers for rides once it secures state and local approval. The National Highway Traffic Safety Administration granted an exemption from federal rules that require human controls on motor vehicles, and Zoox plans to launch its commercial robotaxi service in Las Vegas. NHTSA administrator Jonathan Morrison said Zoox had received clearance to commercially deploy up to 2,500 vehicles in each of the next two years.</p>
+<p>Morrison said Zoox had so far met safety requirements, but the rollout would be staggered and no vehicles would be immediately available for sale to the public. He also said NHTSA is adding reporting requirements for issues such as crashes or stopping inappropriately on roads. The approval was described as a milestone for companies building robotaxis that do not follow the standard motor-vehicle model.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/7/30/amazons-zoox-secures-us-federal-approval-for-steering-wheel-free-robotaxis?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Amazon’s Zoox secures US federal approval for steering-wheel-free robotaxis">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>Singapore&#x27;s measles cases reach six-year high, three vaccinated cases among 40 infections</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Singapore has recorded 40 measles cases so far this year, the highest annual total since 2020, according to the Communicable Diseases Agency’s latest weekly infectious disease bulletin. That total has surpassed the 27 infections reported for all of 2025, and at least three of this year’s cases were fully vaccinated with two doses of the measles, mumps and rubella vaccine. The rest were unvaccinated or had no record of vaccination, and adults aged 25 to 44 made up the majority of cases.</p>
+<p>Among 12 cases recorded between Apr 4 and Jul 4, one was a tourist and 11 were Singapore residents. Nine were classified as imported because they had recently travelled overseas, while two were locally acquired. Two of the 12 were fully vaccinated; the rest had no documented vaccination. Health experts CNA spoke to attributed the rise to a global resurgence of measles rather than widespread local transmission, and Prof Hsu Li Yang said the risk of large sustained outbreaks in Singapore was “very negligible” because of the country’s high vaccination coverage.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/measles-infectious-diseases-health-moh-6287746" target="_blank" rel="noopener noreferrer" title="CNA / Singapore&#x27;s measles cases reach six-year high, three vaccinated cases among 40 infections">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Inflow of migrants to Ceuta triggers a diplomatic crisis between Spain and Italy</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Thousands of Moroccans entering Ceuta prompted a diplomatic clash between Spain and Italy, with Spain’s foreign minister, José Manuel Albares, summoning the Italian ambassador in Madrid, Giuseppe Buccino Grimaldi, after remarks by Italian Foreign Minister Antonio Tajani. Albares said on X that Tajani’s message was “inappropriate” and reflected “partisan demagoguery,” after Tajani wrote that he favored closing the Schengen area with Spain because of the Ceuta situation. Tajani also said irregular migration was a danger to national security and claimed the images from Ceuta showed Madrid’s decision to grant Spanish and European citizenship to more than 500,000 irregular migrants was “deeply erroneous” and encouraged human trafficking.</p>
+<p>The dispute extended beyond Rome. White House Deputy Press Secretary Anna Kelly blamed the crisis on Spanish authorities and their “far-left” policies, saying President Donald Trump had long warned Europe about “far-left globalist policies” that facilitate mass immigration. Spanish Foreign Ministry sources, meanwhile, said the Ceuta crisis “has nothing to do with regularization of migrants” or with the naturalization of foreigners, rejecting Tajani’s framing as a mix-up of two different issues.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-07-30/la-avalancha-de-inmigrantes-en-ceuta-provoca-una-crisis-diplomatica-entre-espana-e-italia.html" target="_blank" rel="noopener noreferrer" title="El País / Inflow of migrants to Ceuta triggers a diplomatic crisis between Spain and Italy">El Pais #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>US economy grows 1.5% in Q2; inflation remains above Fed target as GDP slows</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US economy expanded at a sluggish 1.5% pace from April through June, according to the commerce department, as rising imports weighed on growth. That was down from 2.1% in the first three months of 2026 and came in below economists’ expectations. The department also said its personal consumption expenditures price index, the Federal Reserve’s favored inflation gauge, rose 3.7% last month from June 2025, easing from 4.1% in May but still above the central bank’s 2% target. Core consumer prices, excluding food and energy, were up 3.3% from a year earlier, little changed from 3.4% in May.</p>
+<p>The report also said consumer spending rose even as growth slowed. Separately, the Fed left its benchmark interest rate unchanged for the fifth straight meeting, and three regional Fed presidents dissented, saying they wanted to raise rates to combat elevated inflation.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/jul/30/donald-trump-todd-blanche-irs-justice-immigration-iran-latest-news-updates?page=with%3A6a6b5f368f08bb447dcb8dc0#6a6b5f368f08bb447dcb8dc0" target="_blank" rel="noopener noreferrer" title="The Guardian / US economy grows 1.5% in Q2; inflation remains above Fed target as GDP slows">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="scmp,yonhap">
+  <summary>Trump weighs US$100,000 fee for foreign students to work in US after graduation</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Trump administration is weighing a US$100,000 fee on foreign students who want to stay in the US and work after graduating, a move that would hit Optional Practical Training and leave open the question of whether the White House will approve it or who would pay.</p>
+<p>A person familiar with the matter said the plan is still under internal discussion, and the person spoke on condition of anonymity. A White House official said there was no imminent policy change, but did not deny that the proposal was under consideration.</p>
+<p>If implemented, the fee would put a popular postgraduate visa extension out of reach for many students. Optional Practical Training, or OPT, lets student visa holders extend their stays to gain relevant work experience and is a core part of the international student pipeline in the US. Administration officials have targeted OPT in particular, saying it enables visa fraud and overstays.</p>
+<p>The potential fee would affect a large group of students: there were almost 300,000 international students on OPT as of last fall, according to the Institute of International Education, roughly a quarter of the foreign student population in the US. The proposal is the latest effort by the administration to curb the number of international students on US campuses.</p>
+<p>It also follows an earlier move by the Department of Homeland Security, which this month announced it was scrapping a decades-old policy that let student visa holders stay in the US for as long as their studies lasted, limiting them to four years unless they win a special extension. The idea also echoes the administration’s push to attach the same US$100,000 price tag to H-1B visas.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3362447/trump-weighs-us100000-fee-foreign-students-work-us-after-graduation" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump weighs US$100,000 fee for foreign students to work in US after graduation">SCMP #1</a><a href="https://en.yna.co.kr/view/AEN20260731000651315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (LEAD) U.S. mulling US$100,000 fee for foreign students hoping to work after graduation: WSJ">YNA #1</a><a href="https://en.yna.co.kr/view/AEN20260731000600315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / U.S. mulling US$100,000 fee for foreign students hoping to work after graduation: WSJ">YNA #2</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="bbc,guardian">
+  <summary>Andy Burnham to give regional mayors share of income tax</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham is set to give England’s regional mayors a share of income tax and more control over local revenues, in a shift he says will keep more money in communities, though the exact formula is still undecided and critics say weaker areas could lose out.</p>
+<p>On Friday, Burnham will announce that all mayors of city regions in England will, for the first time, receive a share of income tax revenue. He will also allow mayors of English strategic authorities to keep some business rates collected in their areas and give them greater control over services such as housing, transport and skills.</p>
+<p>The changes are being presented as part of Burnham’s drive to move power away from Westminster. He said the plan would “make good” on his promise to “bring power home” to “every postcode in the country”, and added: “Under our plans, more of the taxes raised in a community will stay in that community.”</p>
+<h3>What changes, and when</h3>
+<p>English metro mayors are expected to start retaining some revenue from business rates from April 2027, and receive a portion of income tax from April 2028. The idea is to replace grants with revenue from those taxes rather than add new money on top.</p>
+<p>The government has not yet decided the exact share mayors will receive. More detail is due in the autumn, when John Healey delivers his first budget, alongside a policy paper setting out the full plans. The income tax rates themselves will not change.</p>
+<p>Burnham’s argument is that local leaders are better placed to use this funding to support growth. The plans would also give mayors more room to borrow against future income for larger projects, something that has been limited by reliance on short-term Whitehall settlements.</p>
+<p>At the same time, the government is working on an equalisation system so areas where less tax is raised still receive support. Critics said the plans lacked detail and could leave places with weaker economies worse off. Ben Houchen, the Conservative mayor for Tees Valley, said he would rather see taxes cut, while Labour mayor Tracy Brabin welcomed the prospect of being able to invest more in public transport and skills.</p>
+<p>The backdrop is a UK system in which tax powers are highly centralised. The BBC cited OECD data saying 5.8% of national taxes are collected locally in the UK, the lowest share in the G7, and far below France, Japan and the US. Burnham has been pushing for greater control over tax revenue since his time as Greater Manchester mayor, rather than depending mainly on central government grants.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c4g3eyg60e0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Andy Burnham to give regional mayors share of income tax">BBC #1</a><a href="https://www.theguardian.com/politics/2026/jul/30/burnham-mayors-income-tax-business-rates-devolution" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham to free mayors from ‘Treasury death grip’ with new devolved powers">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="yonhap">
+  <summary>S. Korea to launch new sovereign wealth fund investing in strategic areas</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Korea plans to launch a new sovereign wealth fund next year to make long-term investments in cutting-edge and strategic industries, the finance ministry said Friday. The fund is set to start with at least 20 trillion won, or about US$14 billion, and will be created by opening a new account under the Korea Investment Corp. to use the state-run company’s global investment networks.</p>
+<p>State-run lenders including the Korea Development Bank, the Export-Import Bank of Korea and the Industrial Bank of Korea will inject 16 trillion won into the fund, while about 4 trillion won in shares accepted as payment for inheritance and gift taxes will also be contributed. The fund will focus on long-term investments without a maturity and will back projects based on profitability, stability and public interest. The finance ministry said the proceeds will be used only for reinvestment, government dividends and transfers to the national treasury, and the government aims to have the relevant bill passed by the National Assembly this year.</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20260731002000320" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / S. Korea to launch new sovereign wealth fund investing in strategic areas">YNA #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="al_jazeera_en,scmp">
+  <summary>Why is US GDP growth slowing, and how can it be reversed?</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US GDP growth slowed to 1.5% in the second quarter of 2026, and the immediate question is whether the economy can regain momentum after tariffs, higher petrol prices and a wider trade deficit pulled on growth even as consumer spending and AI-related investment remained strong.</p>
+<p>The Bureau of Economic Analysis reported on Thursday that gross domestic product rose by 1.5 percent between April and June, down sharply from 2.1 percent in the first quarter. Experts cited a widening trade deficit and a jump in petrol prices as key reasons the pace weakened. Michael Klein, professor of international economic affairs at The Fletcher School at Tufts University, called it “a classic supply shock”, saying the combination of tariffs and oil price spikes is what a macroeconomist would expect to happen.</p>
+<p>The trade numbers showed how the drag worked. BEA data showed the US increased purchases of goods such as semiconductors, telecommunications equipment and industrial equipment, while exports failed to keep up. Rachel Ziemba, adjunct senior fellow at the Center for a New American Security, said imports rose because of investment and consumption, leaving net exports as a drag on overall growth. In May, the trade deficit widened to $77.6bn, a 42 percent increase from the month before. Exports fell 3.2 percent to $317.7bn, while imports rose 3.3 percent to $395.3bn.</p>
+<h3>What is still holding up demand</h3>
+<p>The slowdown did not come from a collapse in domestic demand. Consumer spending surged at a 3.2 percent rate last quarter, after a 0.5 percent pace in the January-March period. Business investment in equipment rose by more than 15 percent in the second quarter, helped by the ongoing buildout of artificial intelligence infrastructure. That AI boom, along with resilient consumer spending, was described as supporting underlying strength even as net exports weakened.</p>
+<p>Klein said keeping the economy on a stronger path would require more stable conditions. He said consistent trade policies would help, and that uncertainty makes businesses less willing to hire or invest in ways that have long-lasting consequences. He also said growth would improve if consumers and businesses felt more secure and less burdened by higher prices.</p>
+<p>There are signs that caution is already spreading. Consumer confidence fell for a third straight month in July, according to a Conference Board report, which expected “little improvement” for the rest of the year.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/7/30/why-is-us-gdp-growth-slowing-and-how-can-it-be-reversed?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Why is US GDP growth slowing, and how can it be reversed?">AJ #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3362427/us-economic-growth-slows-second-quarter-domestic-demand-robust" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US economic growth slows in second quarter but domestic demand robust">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="xinhua_en">
+  <summary>Xinhua Headlines: AI, broadband and drones: How Chinese digital technologies are reshaping daily life in Africa</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Chinese digital technologies are moving beyond connectivity in Africa, with AI, broadband and drones now supporting weather warnings, medical work, teaching and farming, while the larger question is how far those infrastructure gains are turning into everyday benefits for ordinary people.</p>
+<p>Artificial intelligence is already being used in several places. In Ethiopia, forecasters use the China-developed MAZU platform to issue drought and flash flood warnings. In South Africa, AI-assisted tools are helping doctors improve traditional Chinese medicine diagnosis, while Chinese-made drones in the country’s sugarcane belt spray fields that once depended on manual labor. Behind those applications is years of digital infrastructure development, from 4G towers in northern Namibia to fiber backbones in Zimbabwe, a base station on Mount Kilimanjaro and community broadband in Kenya’s Kibera neighborhood.</p>
+<p>Humphrey Moshi, an economics professor at the University of Dar es Salaam, said the value of connectivity is not just in networks themselves. It is, he said, about connecting people to knowledge, healthcare, markets and one another.</p>
+<h3>From access to services</h3>
+<p>In Namibia, Huawei has worked with Mobile Telecommunications Limited since 2025 on Project Buffalo, a rural network expansion and optimization initiative aimed at improving 4G connectivity in underserved communities in northern Namibia. The company is also supporting the second phase of the Universal Service Fund program run by the Communications Regulatory Authority of Namibia, helping extend broadband to schools, health facilities and other public institutions. Toivo Shilumbu, principal at Shimbode Primary School in Epinga village, said the change is practical: “We used to go to the main road to make a phone call or drive to Eenhana to send emails. Now we can send messages, make calls and access the internet in the comfort of our homes.”</p>
+<p>Zimbabwe shows a similar expansion. The country’s national internet penetration reached 87.39 percent in the first quarter of 2026, with 4.44 million subscriptions, according to the Postal and Telecommunications Regulatory Authority of Zimbabwe, while the national fiber backbone now stretches beyond 19,000 kilometers. Huawei and ZTE have supported the country’s ICT development for years through equipment, technical expertise and financing.</p>
+<p>The shift is also visible in classrooms, clinics and farms. In Kibera, teacher Dorice Nereah uses a tablet to bring images to her lessons, and Benard Ochieng said community broadband training helped him move from casual work into fiber-optic installation and network maintenance. In Ethiopia, meteorologists who were trained by visiting Chinese scientists now operate MAZU and issue real-time alerts, while in Zanzibar, Chinese medical team members have set up remote consultations with specialists in east China. In South Africa’s KwaZulu-Natal Province, Chinese-made agricultural drones are helping farmers spray pesticides and fertilizer across sugarcane fields, and contractor John Prinsloo said the technology has improved efficiency.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260730/14b95bae45054635aa4b3483784aa573/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Xinhua Headlines: AI, broadband and drones: How Chinese digital technologies are reshaping daily life in Africa">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="axios">
+  <summary>Tim Cook says Apple may charge for AI Siri</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">technology_and_ai</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Apple hinted Thursday that heavy users of its revamped Siri may have to pay for access, and Tim Cook said on a conference call for Apple’s most recent quarterly earnings that the company is still developing a plan for the higher computing costs of the improved voice assistant. Cook said Apple expects “some kind of upgrade possibilities on iCloud+” for people who want to use it a lot. Axios said this is the first time Apple has confirmed it will charge for the new AI-powered voice assistant.</p>
+<p>Apple unveiled the long-delayed Siri upgrade at its developer conference in June. A public beta began this month, with broad availability due in the fall alongside new iPhones. Apple has also said users will need a paid iCloud subscription to use a new home security feature built into the next version of iOS. The report also said Apple is relying in part on Google Gemini models to help power the new Siri.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/07/30/tim-cook-apple-may-charge-for-ai-siri" target="_blank" rel="noopener noreferrer" title="Axios / Tim Cook says Apple may charge for AI Siri">Axios #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with &lt;1 GB VRAM</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new preprint introduces TurboVLA, a vision-language-action model for real-time language-conditioned robotic manipulation that the authors say runs at 32 Hz on a consumer-grade RTX 4090 while using less than 1 GB of inference VRAM, challenging the heavier LLM-centered designs that dominate the field.</p>
+<p>The paper says many existing VLA systems follow an indirect V → L → A pathway: visual observations are first projected into a large language model’s space, then decoded into robot actions. The authors argue that this adds substantial computation and memory overhead at every policy invocation. TurboVLA replaces that setup with a direct V + L → A mapping. Instead of putting a large language model at the center, it separately encodes visual observations and task instructions, exchanges information through lightweight bidirectional vision-language interaction, and uses a compact decoder to predict continuous action chunks.</p>
+<p>The implementation the authors describe uses DINOv3 as the visual backbone and BERT as the lightweight instruction encoder. They train the model with behavior cloning and an ℓ1 loss, and say no auxiliary language-modeling objective is required. In their formulation, the architecture is meant to build task-conditioned representations directly from visual and linguistic features while keeping inference cheap enough for local deployment.</p>
+<p>On LIBERO, TurboVLA reports 97.7% average success with only 0.2B parameters, 31.2 ms inference latency, and 0.9 GB inference VRAM on a consumer-grade RTX 4090. The paper says that performance matches or outperforms substantially larger VLA policies. It also reports 60.2% average success across 50 bimanual RoboTwin 2.0 tasks, and on four real-world AgileX Piper tasks it reports success rates of 92.5%, 80%, 90%, and 87.5%.</p>
+<p>The authors present TurboVLA as a simpler and more efficient alternative to the prevailing LLM-centric VLA paradigm, and frame its result as evidence that real-time manipulation can be achieved with much smaller models and lower memory use.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.27205v1" target="_blank" rel="noopener noreferrer" title="arXiv / TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with &lt;1 GB VRAM">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An arXiv preprint introduces CoRT, a token-level way to train instruction-tuned language models under rubric-guided GRPO, trying to fix the gap between detailed criteria and the single reward that is usually broadcast across every generated token.</p>
+<p>Rubric-based reinforcement learning is meant to judge model outputs against explicit criteria, but in GRPO-style pipelines those judgments are collapsed into one response-level advantage. The preprint says that leaves no direct way to assign credit within a response, even when different criteria depend on different spans, formatting choices, or semantic decisions. CoRT, short for Counterfactual Replay for Token-level credit weighting, is designed to address that mismatch without adding an auxiliary token scorer.</p>
+<h3>How CoRT assigns token credit</h3>
+<p>Instead of learning a separate token-level relevance model, CoRT replays the same sampled response twice: once under the original rubric-conditioned prompt and once under a matched prompt with the criteria removed. The resulting tokenwise log-likelihood contrasts are treated as a proxy for how much each token depends on the rubric context. CoRT then maps those contrasts to bounded, response-normalized weights and uses them to redistribute the signed GRPO advantage across tokens, while keeping the response-level reward unchanged.</p>
+<p>The authors describe this as a fixed-response intervention inspired by replay and counterfactual data augmentation in reinforcement learning. In their framing, the method converts sparse response-level supervision into denser within-response credit signals, while avoiding a separate relevance-learning stage.</p>
+<p>Reported results.</p>
+<p>Across instruction-tuned models and different reward granularities, the preprint says CoRT outperformed matched response-level GRPO in the vast majority of comparisons, with an average gain of 4.4 percentage points. It also remained competitive with learned token-level credit baselines, while keeping the training pipeline simpler.</p>
+<p>The reported experiments cover Qwen3-4B-Instruct, Qwen2.5-7B-Instruct, and Qwen3-14B on instruction-following benchmarks including IFEval, IFBench, MultiDimIF, and AdvancedIF. The preprint also says CoRT can be combined with DAPO and GSPO, and that those combinations improved most reported metrics as well.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.25659v1" target="_blank" rel="noopener noreferrer" title="arXiv / CoRT: Counterfactual Replay for Token-Level Rubric-Guided Policy Optimization">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>HumanCLAW: Can Vision-Language Models Act Through a Body?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">HumanCLAW proposes a way to test whether vision-language models can make body-level decisions in a physical scene, and its benchmark finds nine frontier models falling short, with the main problem showing up in body awareness rather than in recognizing the target.</p>
+<p>The preprint starts from a basic evaluation problem: when a humanoid task fails, it can be unclear whether the model chose badly or the motor controller simply failed to carry out the choice, such as by losing balance and falling. HumanCLAW tries to separate those two layers. In its setup, a harnessed, off-the-shelf VLM issues an atomic skill command at each step, and that command is translated into a sub-second chunk of continuous full-body motion. The body still interacts with the world under gravity and collisions, but balance and motor-tracking errors are factored out, so the remaining question is the model’s action intelligence: what it decides the body should do next.</p>
+<p>On top of that framework, the authors build HumanCLAW-Bench, with 1,218 long-horizon egocentric find-navigate-interact episodes across 41 indoor scenes. They test nine state-of-the-art VLMs and report that none solves the benchmark; the best model reaches only a 16.8% success rate. The paper says the gap is not mainly about seeing the target. Instead, the limiting factor is “embodied self-awareness” — knowing where the body is, whether it has arrived, and what its recent motion has caused.</p>
+<p>The failure analysis points to several recurring problems. In navigation, models often keep moving after they have already reached the target, or stop before they are actually there. In interaction, they frequently try to sit but place the body in the wrong spot, most often “sitting into thin air,” with the pelvis never touching a surface. Collisions also cluster in the parts of the body the model does not directly watch: legs and feet collide most, then arms and hands. HumanCLAW’s authors frame the result as a physically grounded stress test for current VLMs: they can describe the world, but they do not reliably track the body they control.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.27180v1" target="_blank" rel="noopener noreferrer" title="arXiv / HumanCLAW: Can Vision-Language Models Act Through a Body?">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>DecoEvo: Score-Decoupled Co-Evolution of Solver and Rubric-Generator Skills in Text Space</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new text-space optimization method changes how black-box large language models are updated by separating solver improvement from rubric improvement, aiming to avoid rubrics that drift toward the solver while still raising benchmark scores.</p>
+<p>Text-space optimization edits external natural-language artifacts instead of model weights, so the artifacts stay inspectable. The authors say existing methods can stall when the rubric stays fixed, because open-ended tasks may improve on measured criteria while hidden dimensions remain invisible. They also say score-driven rubric updates are unreliable, since apparent progress can come from making the rubric easier to satisfy rather than making it better.</p>
+<h3>How DecoEvo works</h3>
+<p>The paper introduces DecoEvo, short for score-decoupled co-evolution. It keeps two persistent text skills: a solver skill and a rubric-generator skill. The solver is updated with criterion-level feedback, while the rubric generator is updated through complementary audits of requirement coverage and response discrimination, and not through aggregate solver score. The method does this without using gold rubrics during optimization.</p>
+<p>In the reported experiments, DecoEvo outperformed the compared methods across five benchmarks and three LLM backbones. The authors report 2.8% to 5.0% relative gains over SkillOpt in the five-benchmark average, and say DecoEvo led all baselines in all 15 backbone-benchmark combinations. They also report average gains over SkillOpt of 5.0% for GPT-4o, 2.9% for Qwen3-4B, and 2.8% for Qwen3-8B. On the two transfer benchmarks, DecoEvo was still ahead of SkillOpt by 1.4% to 4.5% on LLMEval-Med and 2.7% to 3.9% on Creative Writing.</p>
+<p>The paper also tests whether the gains come from simpler explanations. Task-prior and budget-matched controls improved SkillOpt only slightly, while direct audit recovered part of the gain but still trailed DecoEvo. In the ablation study on HealthBench, removing either the structural audit or the contrastive audit reduced scores, and removing verification caused the largest drop. The authors also report higher criterion-level overlap with gold rubrics, with F1 rising by roughly 12 points over SkillOpt on the source benchmarks.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.25675v1" target="_blank" rel="noopener noreferrer" title="arXiv / DecoEvo: Score-Decoupled Co-Evolution of Solver and Rubric-Generator Skills in Text Space">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>CLBench-V: Evaluating Multimodal Context Learning from Grounding to Knowledge Acquisition</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new benchmark, CLBench-V, is meant to show where multimodal models succeed or fail when they must learn from provided context, but its first results suggest the field is still far from saturated: across 3,443 instances, the best overall score was only 0.2847.</p>
+<p>The authors organize CLBench-V around three levels of multimodal context learning: context grounding, new information application, and new knowledge learning. The aim is to separate failures caused by not finding the relevant evidence, by using it incorrectly, or by not learning knowledge that is defined only inside the context. The benchmark combines converted public benchmarks with newly constructed datasets spanning science, finance, long-document understanding, spatial reasoning, and web-based visual question answering. To reduce the cost of building the new tasks, the paper says it uses automated construction and filtering procedures.</p>
+<p>The evaluation covers six recent multimodal models. InternVL3.5-30B-A3B posts the best overall score and does best on context grounding and new knowledge learning, while Qwen3.5-Plus performs best on new information application. The paper also reports that Qwen3.6-27B, Qwen3.5-Plus, and Doubao-Seed-2.0-Lite are relatively stronger on new information application than on context-defined knowledge acquisition. For InternVL3.5-30B-A3B, the paper notes that a 0.0000 score on Financial Report ROE reflects the run exceeding the model’s maximum context length.</p>
+<p>Beyond the headline scores, the authors analyze judge reliability, context length, image count, and representative failure cases. Their failure taxonomy includes evidence missing, evidence misbinding, context misuse, prior override, incomplete induction, and format failure. The code is available at https://github.com/IamLihua/CLBench-V.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.25294v1" target="_blank" rel="noopener noreferrer" title="arXiv / CLBench-V: Evaluating Multimodal Context Learning from Grounding to Knowledge Acquisition">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>CAST: Game Solvers as Turn-Level Teachers for LLM Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces CAST, a training method that uses game solvers to give LLM agents turn-by-turn credit instead of only sparse end-of-game rewards, aiming to make long-horizon decisions in games easier to learn and easier to assign.</p>
+<h3>How CAST works and what it reported</h3>
+<p>CAST, short for Credit Assignment from Solver Teachers, compares a solver’s state value before and after each action an LLM takes. That value change becomes a solver advantage, which the method injects into reinforcement learning with verifiable rewards as a turn-level signal. The paper says this addresses a bottleneck in LLM game training: final rewards reveal whether an episode succeeded, but not which earlier moves helped or hurt. It also says that, under a soft-optimal solver assumption, maximizing the solver advantage is equivalent to on-policy distillation from the solver, and that this can be done with scalar values rather than teacher logits.</p>
+<p>The authors test CAST on Sokoban, Minesweeper, and Rush Hour, using a ReAct-style loop and dedicated solvers for each game. In the reported experiments, CAST outperforms all trained baselines on every game in both in-domain and unseen-difficulty evaluation. The paper says it also achieves the highest average zero-shot performance on ALFWorld and WebShop. In the training comparison shown in the paper, CAST is ahead of GRPO, GSPO, DAPO, and GiGPO on the source games, and it reaches DAPO’s peak validation performance in fewer steps: 120 instead of 200 on Sokoban, 200 instead of 400 on Minesweeper, and 140 instead of 240 on Rush Hour.</p>
+<p>The paper frames games as a bridge for studying generalist agents because they provide verifiable rewards and efficient solvers. It also notes that the solver signal is compressed with asinh to handle large penalties from dead-end states. The code is available at github.com/Wloner0809/CAST.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.25308" target="_blank" rel="noopener noreferrer" title="arXiv / CAST: Game Solvers as Turn-Level Teachers for LLM Agents">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>GPT-Red: Automated Red Teaming via Self-Play at Scale</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">OpenAI researchers introduced GPT-Red, an automated red-teaming agent trained to find novel prompt injection attacks against frontier LLMs, and said they used it to harden GPT-5.6; the open question is how far self-play can keep improving both attackers and defenses.</p>
+<p>The paper describes GPT-Red as a scalable self-play system in which an attacker model is trained against a diverse population of simultaneously trained defender agents. The authors say they built it to improve the robustness of their production systems, using realistic red-teaming environments and compute on the same scale as some of their largest RL post-training runs. They describe that setup as the single-largest LLM safety training run ever documented.</p>
+<p>The motivation is straightforward in the paper’s framing: if LLMs are to be safely deployed in agentic settings, they need to withstand adversarial attempts to manipulate their behavior. The authors argue that existing adversarial-training datasets are limited in size, which can leave models overfit to familiar attack patterns and still vulnerable to adaptive adversaries. Their answer is to let attacker and defender train against one another.</p>
+<p>GPT-Red, the authors say, was initialized from GPT-5.5 and trained to attack a broad set of red-teaming scenarios. In their evaluation, they report that it reliably breaks past models up to GPT-5.5, finds more successful attacks than human red-teamers, and generalizes to held-out environments, defender models, and harnesses. The paper also says GPT-Red discovered prompt injection attacks against real-world systems, including an AI-powered vending machine, and that it continued to improve as more test-time compute was added.</p>
+<p>The same work uses GPT-Red as part of adversarial training for GPT-5.6, which the authors call their most robust model to prompt injections to date. They also say GPT-5.6 benefited from attacks generated by earlier precursors to GPT-Red, which had already been incorporated into training since GPT-5.2.</p>
+<p>In the paper’s outlook, the authors say they expect a self-improvement flywheel: as each new GPT model becomes more robust, it should provide better learning signal for even stronger red-teamer agents.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.26115" target="_blank" rel="noopener noreferrer" title="arXiv / GPT-Red: Automated Red Teaming via Self-Play at Scale">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">OmegaUse-OfficeVal is meant to answer a practical question for LLM agents: can they complete long-horizon office-suite work well enough to produce correct, usable deliverables, and how much human labor or market value does that work represent?</p>
+<h3>What OmegaUse-OfficeVal measures</h3>
+<p>The benchmark focuses on office-suite tasks involving documents, spreadsheets, presentations, and PDFs, which the authors say often look routine but still require long-horizon execution. OmegaUse-OfficeVal contains 100 tasks built from authentic office requests proposed by practitioners and adapted through a privacy-preserving process. Each task combines a high-level instruction with one or more input files and asks the agent to produce deliverables in a practical office setting.</p>
+<p>The benchmark is designed around task-level economic grounding, not just task completion. The paper says the average task takes 2.32 hours of human labor, with a task price proxy averaging $6.86 and a median of $5.11. The authors frame that as a way to judge not only whether an agent finishes a task, but also how much effort or market value the task represents.</p>
+<h3>How the benchmark was built and scored</h3>
+<p>The construction pipeline began with 1,715 practitioner-proposed tasks. Experts filtered those to 595 tasks that were grounded in real office needs and had clear deliverables, then three senior experts screened for whether tasks were nontrivial, long-horizon, and feasible under normal working conditions. That left 282 candidates, from which the final 100 tasks were curated. The same experts also checked that each task posed no privacy risk and still matched the language, structure, and artifact format of real office scenarios.</p>
+<p>OmegaUse-OfficeVal assigns two kinds of economic signals to every task. Human labor time is measured using 20 annotators, with at least two annotators per task and a third added when completion times differ substantially. The task labor time is computed as the average of the two shortest valid completion times. The task price proxy comes from explicit price signals for about 20% of tasks, when practitioners could provide them, or from expert estimates when no direct price was available.</p>
+<p>Scoring is based on deterministic code-based verification. Each task has a usability rubric and a task-completion rubric. A submitted artifact must first pass all usability checks before it can receive any task-completion score. The paper says the benchmark contains 219 usability check items and 2,009 task-completion rubric items. The authors say this approach is intended to judge the final deliverable itself, rather than the path an agent took to produce it; agents may use GUI interactions, scripts, APIs, or hybrid strategies.</p>
+<h3>What the first results showed</h3>
+<p>The authors evaluated GLM-5.2, Kimi K2.6, DeepSeek-V4-Pro, MiniMax M3, and Qwen3.7-Plus, alongside a human baseline built from the highest-scoring human submission for each task. The human baseline scored 27.79 overall. The best LLM, GLM-5.2, scored 17.91, while Qwen3.7-Plus scored 17.51 and also led the value-weighted metrics with a time-weighted score of 34.73 and a price-weighted score of 106.50.</p>
+<p>The paper says the results show meaningful but limited progress. Qwen3.7-Plus had the lowest average cost per task among the evaluated models and was relatively strong on tasks tied to higher labor time or higher task price. GLM-5.2 had the highest average score, but it also required more cost and runtime than some alternatives. DeepSeek-V4-Pro had the lowest average runtime per task, while MiniMax M3 and DeepSeek-V4-Pro both had zero-score rates above 50% in the task-bucket analysis.</p>
+<p>A broader pattern in the results was that performance fell as human labor time rose. The authors interpret that as evidence that long-horizon office-suite work remains a difficult and heterogeneous setting for current LLM agents. They also argue that value-weighted evaluation matters because the model with the best average score is not necessarily the one that captures the most economically important tasks.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.27155" target="_blank" rel="noopener noreferrer" title="arXiv / OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Job insecurity is chipping away at me and my cohort. Is it us, or the state of the economy?</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An early-career researcher at Imperial College London says repeated job rejections and a contract ending in three months have turned career planning into a question shared by her peers: whether the pressure comes from personal shortcomings or a tougher economy.</p>
+<p>Over the past two years, she says she has been rejected for senior research fellow, lecturer and research funding manager roles. Her initial one-year contract was extended to 2.5 years, but it now ends in three months. She describes each application as “a lottery ticket” and each rejection as personal, with the stress reaching the point where she is worrying about both her career and how she will pay her rent. She says at least five friends and colleagues at a similar stage are also applying with only months, or even weeks, left on their contracts.</p>
+<p>She argues that the problem is not only individual. In her account, the job market is being squeezed by wider pressures: global conflicts have pushed up energy prices and destabilized economies, the administration of President Donald Trump has shifted science funding priorities, and in the United Kingdom projections point to fewer vacancies and rising unemployment. She also says the rapid use of artificial intelligence in grant and job applications has helped drive up the number of submissions, leaving review systems stretched.</p>
+<p>The article places her experience alongside a June meta-analysis in Nature Human Behaviour that reported early-career researchers have a greater prevalence of symptoms of mental ill health, including depression and anxiety, than the general population, with job insecurity listed as one stressor. It also notes that she first felt panic in July 2024, won a small pot of funding to extend her time by six months, and then broadened her search beyond fellowships to academic and non-academic roles.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-01843-8" target="_blank" rel="noopener noreferrer" title="Nature / Job insecurity is chipping away at me and my cohort. Is it us, or the state of the economy?">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Demand for lithium is surging: here’s how to make mining more sustainable</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Lithium demand is rising with electric vehicles and grid batteries, and the question now is how to expand supply without worsening the environmental damage tied to current mining, especially in South America’s brine fields.</p>
+<h3>Why existing brine mining is strained</h3>
+<p>Electric vehicles accounted for more than one-quarter of global car sales last year, according to the International Energy Agency, and the agency projects lithium demand for EVs could reach about 665 kilotonnes by 2035. Planned and existing mining projects would produce only about 450 kilotonnes, leaving a gap if production does not rise. Zhikao Li, a chemical and biological engineer at Monash University, says demand from batteries for renewable-energy storage will add further pressure.</p>
+<p>About 25% of this lithium is expected to come from parts of Chile and Argentina, where producers pump lithium-rich brine from underground aquifers into large evaporation ponds. Sunlight and wind slowly concentrate the brine until lithium salts can be recovered. The process works, but scientists say it is inefficient: brines contain many dissolved salts, and as water evaporates, lithium salts are among the last to separate. Up to 50% of the lithium can be left behind, and extra fresh water is often needed to purify what remains. Huanting Wang, who is working on alternative extraction methods at Monash University in Melbourne, says the key limitation is fresh water and speed. Ehsan Vahidi, who studies metallurgical engineering at the University of Nevada in Reno, says the water use is especially worrying in arid and semi-arid regions.</p>
+<p>Researchers are exploring direct lithium extraction as an alternative. In one approach from Wang’s team, brine is evaporated into a solid salt mixture, then acetone and ethanol are used to selectively dissolve lithium salts. In a laboratory study published last month, they reported recovering around 95% of the lithium present, with much less freshwater use and the possibility of recycling both water and solvents.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02195-z" target="_blank" rel="noopener noreferrer" title="Nature / Demand for lithium is surging: here’s how to make mining more sustainable">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Alien signals may be hiding where we rarely listen</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Astronomers say promising technosignals may have been missed because SETI searches have focused on a narrow slice of the radio spectrum, especially 1.42 to 1.66 GHz, the so-called “water hole.” Louisa Mason, a PhD researcher at the University of Manchester, used archived observations from the Atacama Large Millimeter/submillimeter Array (ALMA) in Chile to carry out the telescope’s first SETI survey. Instead of asking for new telescope time, she examined observations gathered for unrelated astronomy work and searched them for narrowband radio signals. The findings are being presented this week at the Royal Astronomical Society’s National Astronomy Meeting in Birmingham. The search covered only four archived ALMA observations and did not find any candidate technosignatures above the survey’s detection thresholds.</p>
+<p>The work also points to a different way of estimating how many stars have actually been included in SETI data. Astronomers have often relied on catalogues such as Gaia to count “stellar bycatch,” but Mason used the Besançon Galactic Model instead. Applied to an earlier SETI survey with 1,327 telescope pointings, Gaia data identified about 288,000 stars, while the model suggested that more than 6.1 million stars may have been observed. Mason said the result gives a more complete picture of how much of the Milky Way has already been searched and where future SETI work might go next.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260726015239.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Alien signals may be hiding where we rarely listen">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Ultrafast X-rays capture chemistry unfolding atom by atom</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers used rapid X-ray flashes at the European XFEL to watch chemistry unfold in real time in 3-fluoropyridine, a small ring-shaped molecule containing nitrogen and fluorine. After a brief ultraviolet laser pulse excited the molecule, they followed how energy moved through it as it bent out of its normally flat structure and passed through a conical intersection. By recording delayed measurements over just a couple of picoseconds, they tracked how the absorbed energy was released and redistributed at specific atoms.</p>
+<p>The results showed that different atomic sites carried different parts of the story. The fluorine atom gave a clearer signal for how vibrations relaxed, while the nitrogen atom reflected both electron redistribution and structural change because it was more directly involved in the excitation. The team used time-resolved X-ray photoelectron spectroscopy at the Small Quantum Systems instrument, along with computer simulations and theoretical models, to reconstruct the process. The technique could help scientists examine extremely fast chemical reactions at the atomic scale and in real time, including questions about DNA, light-harvesting materials, and other light-driven processes.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260729010726.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Ultrafast X-rays capture chemistry unfolding atom by atom">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>This 4,000-year-old city defied the rules of history</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A University of York study of Mohenjo-daro, the largest city of the Indus civilization, suggests the 4,000-year-old urban center followed a very different path from many early cities. Researchers examined differences in house sizes across the city and found that wealth became more evenly distributed as Mohenjo-daro matured. Instead of inequality growing as the city became larger, more productive, and more successful, the gap between the largest and smallest homes appears to have narrowed over time.</p>
+<p>The study also says Mohenjo-daro appears to have been more equal than comparable societies in Mesopotamia and Greece. Lead author Dr. Adam Green said legacy data show the wealth gap had dropped to levels typical of the first farming villages in the city’s later years. The researchers pointed to broad access to practical infrastructure, including brick-lined drains and organized street layouts, along with Indus seals that archaeologists usually find in ordinary homes rather than public buildings. They also noted a standardized system of weights and measures that may have supported fairer trade.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260729010730.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / This 4,000-year-old city defied the rules of history">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists found evolution repeating itself in the Galápagos Islands</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Scientists studying the Galápagos giant daisies have found that similar leaf shapes evolved more than once in separate branches of the same plant group, using different genes each time, raising questions about how many distinct lineages remain unrecognized.</p>
+<p>The work focuses on *Scalesia*, a group of plants on the Galápagos Islands that evolved rapidly after arriving from mainland South America. Professor Michael D. Martin of the Norwegian University of Science and Technology’s University Museum said the islands still “reveal new biology” more than 150 years after Darwin’s visit. The team, which included researchers from the Royal Botanic Gardens, Kew; the University of California, Davis; the University of Copenhagen; the Charles Darwin Foundation; the University of Georgia, Athens; and the University of British Columbia, published its findings in *Nature Communications*.</p>
+<h3>Different genes, same leaf shape</h3>
+<p>The researchers analyzed the complete genomes of every known *Scalesia* species. They found that deeply lobed leaves evolved independently several times in separate branches of the family tree. Vanessa Bieker, the study’s first author at Kew, said each time the trait appeared, it did so through different genes within the same biological system controlling leaf development.</p>
+<p>The study says *Scalesia* species range from low shrubs to tall trees and live in very different habitats, including humid highland forests and hot, dry lowlands. The leaf form may help plants survive dry conditions by limiting water loss and releasing heat more effectively.</p>
+<p>The genetic evidence also suggests the story is not finished. Martin said populations within the same species show large genetic differences and have been isolated for long periods, so new species may be forming. The researchers said many populations may represent distinct evolutionary lineages that have not yet been formally described, and that they should be treated as individual conservation units.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260729051537.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists found evolution repeating itself in the Galápagos Islands">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
