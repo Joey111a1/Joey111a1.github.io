@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-01</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-01</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Venezuela Begins Construction of 1,875 Homes for Earthquake Victims in La Guaira</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Construction has begun on 1,875 housing units for families affected by the June 24 double earthquake in La Guaira state, as part of the Venezuela Reborn Plan, according to Jorge Rodríguez, president of the General Staff for the Creation of Transitional Camps and Housing. He said the homes will be built at the fastest possible pace to restore housing for people who lost their homes, following orders from Acting President Delcy Rodríguez.</p>
+<p>Rodríguez said five plots have been identified, with three ready for work after geophysical studies to ensure safety. The terraces are in Catia La Mar and Catamare, and he said geological, engineering, and architectural studies have been completed to certify their safety. He also said the Venezuela Renborn Fund will subsidize 80% of properties up to $70,000, with families covering the remaining 20% through a 25-year loan. For homes valued between $70,000 and $100,000, he said the subsidy covers 50%, with the balance financed in the same way.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-begins-construction-of-1875-homes-for-earthquake-victims-in-la-guaira" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela Begins Construction of 1,875 Homes for Earthquake Victims in La Guaira">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Children face higher threat of US deportation as legal support deal expires</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Advocates warned that a federal contract providing legal services to unaccompanied children expired on Friday, putting about 24,000 children at risk of losing legal representation and facing higher rates of deportation. The contract had paid about 100 legal groups across the country to represent unaccompanied minors, including children who entered the United States without documentation or a legal guardian. It also allowed those groups to enter government-funded shelters as part of their representation.</p>
+<p>Melissa Lopez, the executive director of Estrella El Paso, said during a news conference earlier this week: “We have no understanding of what’s going to happen to those children come next week.” She added, “We don’t know if they’re going to have legal representation. The government as of yet has not identified who will take over this representation.” It was unclear what would happen after the contract expired or whether the groups would still be allowed to access their young clients. The administration of US President Donald Trump has not said why it was allowing the contract to expire, and the Department of Health and Human Services did not reply to a request for comment on its policy going forward.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/31/children-face-higher-threat-of-us-deportation-as-legal-support-deal-expires?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Children face higher threat of US deportation as legal support deal expires">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="atlantic,guardian">
+  <summary>A Tragedy in Iran Might Persuade Hegseth to Change Course</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Pete Hegseth’s Pentagon is weighing whether to restore up to half of the civilian-harm prevention jobs it cut, a possible reversal driven by the Iran war and the Minab school strike, even as the final decision still depends on Hegseth and the death toll in that strike remains disputed.</p>
+<p>When President Trump chose Hegseth from Fox News to lead the Defense Department, Pentagon officials quickly adapted to his preference for “lethality” and battlefield swagger over restraint. Hegseth then pushed through a broad purge, including deep cuts to staff assigned to avoiding civilian casualties in war, unwinding protections that had been built up after the wars in Iraq and Afghanistan.</p>
+<h3>How Hegseth dismantled the civilian-harm program</h3>
+<p>The staff targeted in Hegseth’s cuts had been part of a military-wide system developed after tens of thousands of ordinary people were killed in Iraq and Afghanistan. Congress had mandated some of the later enhancements to that system, but Hegseth fired or reassigned almost all of the personnel working on the program. Within months of his taking office, the Pentagon had slashed the total number of staff working to prevent and investigate civilian-casualty incidents by about 90 percent.</p>
+<p>Hegseth also brought the same approach into the war in Iran. Early in the conflict, he told reporters, “No stupid rules of engagement, no nation-building quagmire, no democracy-building exercise, no politically correct wars. We fight to win, and we don’t waste time or lives.” He had arrived at the Pentagon with a record of attacking what he saw as unnecessary shackles on battlefield operators, including military lawyers and international law, and his on-air defense of troops accused or convicted of war crimes helped build his bond with Trump.</p>
+<h3>The Minab strike changed the pressure</h3>
+<p>The possible reversal is tied to the military’s reckoning with the human cost of the five-month, on-again, off-again war with Iran, especially an air strike in the first hours of that conflict on a school in Minab, in southern Iran. One account says the strike killed almost 170 people, most of them children; another says at least 168 people died, also mostly children. In both versions, the school attack has become the defining civilian tragedy of the war so far.</p>
+<p>The details of that strike worsened the pressure around it. After the attack, U.S. defense officials reportedly could not believe the U.S. military had hit a school and wondered whether the Israeli military had done it. Trump suggested Iran was responsible. But the strike involved a Tomahawk missile, a weapon Iran does not have, and an initial examination found that although Iran’s military had once occupied the building, it was no longer there. U.S. government intelligence had noted the building’s conversion into a school, but that information did not reach the planners, defense officials said.</p>
+<p>Inside Iran, the Minab death toll has become a symbol of U.S. aggression. State media and government officials have invoked the incident repeatedly and commemorated it publicly, including during the FIFA World Cup, when members of Iran’s team wore #168 pins and posed in front of rows of children’s backpacks.</p>
+<h3>Legal and political pushback inside Washington</h3>
+<p>The civilian-harm cuts have also drawn formal scrutiny. A Pentagon inspector-general report this spring found that the deep reductions in civilian-harm protections may have violated laws designed to safeguard noncombatants. Democrats have urged the Defense Department to reverse course. The Guardian reported that the Pentagon is considering reversing about half the staff cuts it made to the civilian-harm prevention program.</p>
+<p>Some of the pressure is coming from within the military itself. A U.S. official said the leadership of the Pentagon’s combatant commands has uniformly supported restoring the personnel because commanders value the extra safeguards. The case for those safeguards, according to civilian-protection advocates, is that civilian casualties can fuel insurgent recruitment, erode local support, and undermine political objectives. Annie Shiel of the Center for Civilians in Conflict said restoring personnel dedicated to civilian protection, and allowing them to do their jobs, would be “one critical step towards preventing future harm.”</p>
+<p>The Pentagon has not announced a final decision. An official said the setup for preventing civilian harm is “currently undergoing a strategic reassessment to inform its future reorganization” and will remain in compliance with congressional requirements, but that “no final decisions have been made.”</p>
+<h3>What happens next</h3>
+<p>For now, the proposal awaits Hegseth’s signature. If he approves it, the Pentagon would restore at most part of what it cut and would be acknowledging that, in this one area, his reforms may have gone too far. If he rejects it, the civilian-harm system he hollowed out will remain in a much diminished form even as the Minab strike continues to shape the war’s political and moral fallout.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/national-security/2026/07/hegseth-pentagon-civilian-protections-iran/688110" target="_blank" rel="noopener noreferrer" title="The Atlantic / A Tragedy in Iran Might Persuade Hegseth to Change Course">TA #1</a><a href="https://www.theguardian.com/world/live/2026/jul/31/us-iran-war-live-updates-trump-claims-gaza-hamas-deal-middle-east-crisis-latest-news?page=with%3A6a6cf72a8f0866f0829b99b3#6a6cf72a8f0866f0829b99b3" target="_blank" rel="noopener noreferrer" title="The Guardian / The Pentagon considers reversing about half of staff cuts to civilian-harm prevention program">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="cnn">
+  <summary>Russia’s new target: Ukrainian civilians filling up at gas stations</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russia’s attacks on Ukraine’s fuel stations have turned ordinary refueling stops into danger zones, injuring civilians and police officers while leaving Ukrainians wondering whether a routine fill-up could be the next drone strike.</p>
+<h3>A gas station turned into a blast site</h3>
+<p>Policeman Mykhailo Tsypliakov said he and his colleagues ran into a gas station after it was already on fire. He heard the buzz of a second drone descending and hit the ground. “I saw a flash, then got up right away,” he said. “I saw that my arm, legs and torso were injured.”</p>
+<p>Tsypliakov is one of dozens of victims of what Ukraine says is Russia’s latest campaign against civilian infrastructure: fuel stations. Ukrainian officials say more than 200 have been hit in June and July, or about three a day. Tsypliakov said the strikes are meant “to intimidate, to sow fear and panic,” adding: “Panic is the scariest thing right now. Because when a person panics, they lose control of themselves.”</p>
+<h3>Why gas stations matter</h3>
+<p>The attacks have concentrated on gas stations close to the front lines, where Russian attack drones can more easily reach them. But airstrikes, longer-distance drones and smaller attack UAVs have also added to the toll, including strikes near Kyiv.</p>
+<p>Fuel stations matter more in Ukraine than they might elsewhere. With commercial air travel impossible and the country tied together by a vast road and rail network, they have become places where evacuees, soldiers and haulage drivers can stop, regroup and recover. Yaroslav Starovoitenko, president of the Ukrainian Oil and Gas Association, said the attacks target ordinary civilians. He said gas stations had also served as places of refuge during earlier efforts to cut off electricity and heating.</p>
+<p>A CNN analysis located and confirmed at least 30 videos of attacks on gas stations across Ukraine in June and July. Regina Kharchenko, acting mayor of Zaporizhzhia, said the city was hit with 54 strikes targeting gas stations over a 24-day period until July 27. She said those attacks killed four people and injured 29. “This is deliberate terrorism targeting civilian infrastructure and civilians,” Kharchenko said. “Russia is deliberately targeting facilities that have no military significance, but… are essential to the daily functioning of a big city.”</p>
+<h3>Fear, disruption and the broader campaign</h3>
+<p>The pressure is not limited to one city or one region. Zaporizhzhia is increasingly within range of Russian drones, and Kramatorsk in Donbas and Kharkiv near the Russian border are also heavily affected. Ukrainians see the campaign as an attempt to create the same kind of disruption they have caused in Russia, after repeated Ukrainian strikes on Russian refineries led to long fuel queues around Moscow and other major cities.</p>
+<p>The campaign has also been folded into a broader Russian assault on civilian targets. Russia has launched record numbers of ballistic missiles in recent weeks, and the United Nations said June was the deadliest month for Ukrainian civilians since 2022. Moscow has also posted some of the attacks online: Russia’s elite drone unit, Rubicon, released a video this month showing nine strikes on gas stations in the Kharkiv and Sumy regions.</p>
+<p>For people trying to keep working, the danger has not always stopped them. At a gas station outside Kyiv, one delivery driver said no one knows where the next attack will land, but he still has to work. Another said there are no problems in Kyiv yet, “but of course there will be if they keep destroying them.”</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/07/31/europe/ukraine-russia-gas-station-attacks-intl" target="_blank" rel="noopener noreferrer" title="CNN / Russia’s new target: Ukrainian civilians filling up at gas stations">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>DRC Ebola Outbreak Now Second-Largest in History With 3,532 Cases</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The current Ebola epidemic in eastern Democratic Republic of the Congo has reached 3,532 infections and 1,556 deaths since it was declared on May 15, making it the second-largest confirmed outbreak on record. A latest Ministry of Communication bulletin says the caseload has now surpassed the 3,481 cases recorded in the 2018–2020 epidemic in the same region. Data updated through July 29 put the case fatality rate at 44.1%, with 807 patients in isolation or hospitalization, 626 recoveries, and a 78.7% contact tracing rate. Five provinces have been affected: Ituri, North Kivu, South Kivu, Haut-Uele, and Tshopo.</p>
+<p>The outbreak began in Ituri and later spread into neighboring Uganda. Uganda’s last hospitalized patient was discharged on July 16, and the country was declared Ebola-free on July 28 after 42 consecutive days without new infections, according to the same government data. Uganda registered 20 confirmed cases in total, including 15 imported from the DRC, with two deaths. The World Health Organization said the epidemic involves the Bundibugyo strain, with a fatality rate of 30% to 50% and no licensed vaccine or specific treatment, and said the regional spread risk across sub-Saharan Africa is “high” while the global threat is “low.”</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/drc-ebola-outbreak-now-second-largest-in-history-with-3532-cases" target="_blank" rel="noopener noreferrer" title="Telesur English / DRC Ebola Outbreak Now Second-Largest in History With 3,532 Cases">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,bbc,cnn,guardian,middle_east_eye,nyt,scmp">
+  <summary>Trump hails ‘great breakthrough’ after Board of Peace brokers Hamas disarmament deal</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump has presented a Hamas disarmament deal as a “great breakthrough,” but the terms remain contested: Israel says it will not pull back without “genuine” disarmament, while Hamas says any handover depends on Israeli withdrawal and an end to attacks.</p>
+<p>Trump said the US-backed Board of Peace had reached an agreement for the “complete disarmament” of Hamas and other armed groups in Gaza, and described it as a big step for the Middle East. He made the comments at a cabinet meeting at Camp David on Friday, saying he had an “understanding” with Israel and that “Israel’s very happy about it.”</p>
+<p>The deal is being described as part of a broader Gaza ceasefire framework that includes phased disarmament, Israeli withdrawal and reconstruction. The Board of Peace said in an updated roadmap that its focus was now implementation, after what it called months of intensive negotiations. The 20-point plan tied to the process includes the creation of the Board of Peace to oversee implementation, along with disarmament of Hamas, withdrawal of Israeli troops and reconstruction of Gaza.</p>
+<h3>Trump presents the plan as phased and supervised</h3>
+<p>Trump said Hamas weapons would be handed over to the Board of Peace, which he said would run the process. He did not answer directly when asked whether Hamas would disarm before Israeli forces withdrew or whether the withdrawal would come first, saying only that Gaza remained “a very complex situation.”</p>
+<p>That sequencing is at the heart of the agreement’s uncertainty. Trump has said Israeli forces would withdraw “as disarmament is completed,” while the Board of Peace has said the process is meant to move in phases. Other accounts of the roadmap say an international stabilisation force would work alongside a new Palestinian police force, and that the Board of Peace would oversee the agreement’s implementation.</p>
+<h3>Israel and Hamas attach their own conditions</h3>
+<p>A senior Israeli official said the country’s position remained that there would be no IDF withdrawal from the current Yellow Line without the “genuine disarmament” of Hamas. The Yellow Line is the boundary Israel agreed to pull back to under the earlier US-brokered ceasefire arrangement, leaving it in temporary control of part of Gaza.</p>
+<p>Hamas has also tied any disarmament to Israeli action. The group said handing over its heavy weapons was contingent on Israel ending “all forms of aggression” and withdrawing its forces from Gaza. In another statement, Hamas said Israel’s commitment to ending its attack on Gaza was a “fundamental prerequisite” for moving forward, alongside what it called a guaranteed right to self-determination and an independent Palestinian state.</p>
+<h3>What happens next</h3>
+<p>For now, the key question is not whether a framework has been announced, but whether either side will accept the same sequence of steps. Trump said Israel was “very happy” with the proposal, but he also stopped short of saying the deal was fully settled. The BBC reported that Israel has not yet agreed to the plan for Hamas to surrender weapons in exchange for full Israeli withdrawal from Gaza.</p>
+<p>The details of who would receive the weapons, how they would be stored, and when withdrawals would happen remain central to the dispute. Some accounts say the weapons would go to the Board of Peace, while others say they would be collected and stored inside Gaza under a Palestinian technocratic committee, with no transfer to Israel or any non-Palestinian party. The agreement’s viability now appears to depend on whether those competing conditions can be reconciled into a single implementation plan.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/31/world-reacts-with-cautious-optimism-to-hamas-disarmament-agreement?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / World reacts with cautious optimism to Hamas disarmament agreement">AJ #1</a><a href="https://www.aljazeera.com/news/2026/7/31/trump-says-us-has-understanding-with-israel-on-hamas-disarmament-deal?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Trump says US has ‘understanding’ with Israel on Hamas disarmament deal">AJ #2</a><a href="https://www.bbc.co.uk/news/articles/cd9wjj4qleeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Israeli official says troops won&#x27;t pull back in Gaza without &#x27;genuine&#x27; Hamas disarmament">BBC #1</a><a href="https://www.cnn.com/2026/07/31/middleeast/trump-hamas-disarmament-announcement-intl" target="_blank" rel="noopener noreferrer" title="CNN / Trump announces a breakthrough in Gaza - but there are major caveats. Here’s what we know">CNN #1</a><a href="https://www.theguardian.com/world/live/2026/jul/31/us-iran-war-live-updates-trump-claims-gaza-hamas-deal-middle-east-crisis-latest-news?page=with%3A6a6ccb4c8f0890a389998033#6a6ccb4c8f0890a389998033" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump says there is an understanding with Israel on Hamas disarmament deal, but does not specify sequencing with IDF withdrawal">Guardian #1</a><a href="https://www.middleeasteye.net/news/hamas-disarm-when-israel-keeps-its-word-gazas-weapons-stay-palestinian" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Hamas says it will &#x27;disarm when Israel keeps its word&#x27;">MEE #1</a><a href="https://www.middleeasteye.net/news/full-text-15-point-draft-peace-plan-between-hamas-and-israel-gaza" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Full text: 15-point draft peace plan between Hamas and Israel in Gaza">MEE #2</a><a href="https://www.nytimes.com/2026/07/31/world/middleeast/trump-gaza-hamas-deal-disarm.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Trump’s Gaza Deal Sparks Questions on Whether Israel and Hamas Will Comply">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3362595/hamas-says-it-reaches-agreement-disarm-after-trump-announces-deal" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump hails ‘great breakthrough’ after Board of Peace brokers Hamas disarmament deal">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="la_jornada">
+  <summary>Pedro Miguel: CDMX: a vision of humanity</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At a meeting of the Coalition of Cities of the Americas on Migration at the Colegio de San Ildefonso, Mexico City head of government Clara Brugada proposed an international mechanism to protect migrant populations from discrimination and xenophobia and to broaden understanding of mobility processes. She said cities should become “refugee and hospitable cities” and offer a “rights-based urban passport” so people on the move can access health, education and employment. She also criticized policies that criminalize human mobility and expressed indignation over deaths of nationals during ICE operations.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/31/politica/013a1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Pedro Miguel: CDMX: a vision of humanity">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Algerian bus plunges into ravine killing at least 27</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A passenger bus crashed into a ravine in northern Algeria on Friday, killing at least 27 people and injuring 39 others, according to the country’s health minister. The bus was traveling from Setif to Algiers when it skidded in the locality of El Karma, about 50km (30 miles) from its destination, and plunged into a deep ravine outside the capital. Civil Protection said the bus had left the road for unknown reasons.</p>
+<p>Rescue teams were working at the scene with ambulances carrying the injured to nearby hospitals, and Health Minister Mohamed Seddik Ait Messaoudene warned the death toll could rise further. Ennahar TV reported that Prime Minister Sifi Ghrieb met some of the injured at the University Hospital of Boumerdes. According to state television, President Abdelmadjid Tebboune declared three days of national mourning, and in a statement from his office he called those responsible “road criminals and terrorists” and said the justice system would “crack down with an iron fist and without any leniency” after the investigation is completed.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/31/algerian-bus-plunges-into-ravine-killing-at-least-27?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Algerian bus plunges into ravine killing at least 27">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc,cnn,el_pais,guardian,middle_east_eye,nyt,politico">
+  <summary>At least 57 people die as tens of thousands cross to Spanish enclave of Ceuta from Morocco</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">climate_disaster</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tens of thousands of people crossed from Morocco into Ceuta in a sudden surge that left at least 57 dead and pushed Spain into a border crisis, with Pedro Sánchez blaming trafficking gangs while estimates of how many entered and returned kept shifting.</p>
+<h3>A border that suddenly gave way</h3>
+<p>Spain said about 50,000 people crossed into Ceuta on Thursday and in the early hours of Friday, while the president of the enclave put the figure at about 60,000. Ceuta’s population is around 83,600, so the influx overwhelmed the small Spanish territory on Morocco’s North African coast.</p>
+<p>The crossings came after Spain’s Supreme Court ruled that migrants stopped at sea while trying to reach Ceuta or Melilla could not be summarily returned to Morocco. Sánchez said on Friday that the surge was caused by criminal networks “purposefully misinterpreting” that ruling. In another description of the episode, he called it “a violation of Spain’s territorial integrity.”</p>
+<p>The route into Ceuta has long been sensitive. Ceuta and Melilla are Spain’s enclaves in North Africa and, as the evidence noted, have been a flashpoint in relations with Morocco. The crossings took place by land and sea, with people swimming around the breakwater, crossing on foot, and then moving further into the city.</p>
+<h3>Deaths, returns, and the scale of the surge</h3>
+<p>At least 57 people died during the surge, according to local media, and authorities in Ceuta said many of those who died drowned as crowds streamed over the border by land and sea. One report said rescue services were still searching waters near the border.</p>
+<p>By Friday evening, Spanish officials said more than 48,000 people had voluntarily returned to Morocco, while the interior ministry also put the number of crossings lower than the Ceuta authorities did, at around 50,000. Other accounts said around 48,300 had gone back by late Friday, and one official told POLITICO that “most of the people that came yesterday are now back in Morocco.”</p>
+<p>Some migrants described the return in bleak terms. One man told Reuters he was going back because “people are dying here,” and added: “I beg you, please, if you haven’t come yet, don’t come.”</p>
+<p>The size of the movement was large enough to change the pace of the city almost immediately. One report said border posts reopened land routes and that there was still a steady flow of people heading back, while another described “a huge influx” that took place over roughly 24 hours and overwhelmed the city.</p>
+<h3>Political fallout in Spain and beyond</h3>
+<p>Sánchez travelled to Ceuta on Friday morning and said he would use all the resources at his disposal to guarantee the safety of the city’s population. Spain later deployed armed forces to bolster security in Ceuta and in Melilla, where between 300 and 400 crossings were also reported overnight.</p>
+<p>The crisis quickly spilled into European politics. Italy’s right-wing prime minister, Giorgia Meloni, described the images from Ceuta as “shocking” and said “uncontrolled immigration” was a security threat to Europe. A later account said Italy moved to suspend its free-travel Schengen arrangements with Spain by sea and air. Finland’s interior minister backed Meloni, while Germany’s chancellor demanded that Morocco “take back illegal migrants immediately.”</p>
+<p>The European Commission later said Ceuta and Melilla were subject to special Schengen rules that prevented onward movement within the zone. EU sources said the crisis would give member states a chance to discuss the movements into Ceuta, the returns to Morocco, the support being provided to Spain, and diplomatic engagement with Morocco.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cx2kp639yx4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Spain&#x27;s PM blames traffickers after 60,000 migrants reach Ceuta from Morocco">BBC #1</a><a href="https://www.bbc.co.uk/news/articles/cdrvkzdpynyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / The Papers: &#x27;Spanish border crisis&#x27; and &#x27;iron chancellor&#x27;">BBC #2</a><a href="https://www.cnn.com/2026/07/31/europe/spain-ceuta-migrants-intl" target="_blank" rel="noopener noreferrer" title="CNN / Spain says most of the 50,000 migrants who crossed into its territory from Morocco have returned">CNN #1</a><a href="https://elpais.com/espana/2026-07-31/datos-por-donde-entran-los-migrantes-a-ceuta-cuantos-suelen-cruzar.html" target="_blank" rel="noopener noreferrer" title="El País / Data | Where do migrants enter Ceuta? How many do they typically cross?">El Pais #1</a><a href="https://elpais.com/espana/2026-07-31/marruecos-manda-parar-el-exodo-de-50000-migrantes-sobre-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / Morocco orders stop to exodus of 50,000 migrants over Ceuta">El Pais #2</a><a href="https://elpais.com/espana/2026-07-31/he-dormido-en-el-monte-porque-la-gente-nos-echaba-con-piedras-y-pistolas.html" target="_blank" rel="noopener noreferrer" title="El País / &quot;I slept in the mountains, because people were throwing stones and guns at us&quot;">El Pais #3</a><a href="https://elpais.com/espana/2026-07-31/mas-de-40000-migrantes-irregulares-han-entrado-en-ceuta-en-las-ultimas-24-horas.html" target="_blank" rel="noopener noreferrer" title="El País / 57 bodies recovered in Ceuta waters after 50,000 irregular migrants entered">El Pais #4</a><a href="https://www.theguardian.com/world/2026/jul/31/ceuta-spain-morocco-border-deaths" target="_blank" rel="noopener noreferrer" title="The Guardian / At least 57 people die as tens of thousands cross to Spanish enclave of Ceuta from Morocco">Guardian #1</a><a href="https://www.theguardian.com/world/2026/jul/31/ceuta-spain-eu-border-africa" target="_blank" rel="noopener noreferrer" title="The Guardian / Why is Ceuta a migration flashpoint and how were so many people able to cross from Morocco?">Guardian #2</a><a href="https://www.theguardian.com/world/live/2026/jul/31/cueta-spain-morocco-italy-migration-schengen-europe-latest-news-updates?page=with%3A6a6c490c8f08be8c4a5f4c34#6a6c490c8f08be8c4a5f4c34" target="_blank" rel="noopener noreferrer" title="The Guardian / Morning opening: Spain faces migration crisis in Ceuta as thousands breach border">Guardian #3</a><a href="https://www.theguardian.com/world/live/2026/jul/31/cueta-spain-morocco-italy-migration-schengen-europe-latest-news-updates?page=with%3A6a6cc7e58f08048874a82a4e#6a6cc7e58f08048874a82a4e" target="_blank" rel="noopener noreferrer" title="The Guardian / 57 Die, About 60,000 Migrants Reach Ceuta; Italy Suspends Schengen Travel with Spain">Guardian #4</a><a href="https://www.middleeasteye.net/news/were-happy-be-here-thousands-make-dramatic-sea-crossings-ceuta-morocco" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Thousands make dramatic sea crossing into Ceuta from Morocco">MEE #1</a><a href="https://www.nytimes.com/2026/07/31/world/europe/ceuta-europe-migration-2015-legal-changes.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Ceuta Evokes Europe’s 2015 Migration Crisis. But Much Has Changed Since.">NYT #1</a><a href="https://www.nytimes.com/2026/07/31/world/europe/young-men-poured-into-ceuta-seeking-work.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Young Men Poured Into Ceuta Seeking Work">NYT #2</a><a href="https://www.politico.eu/article/spain-ceuta-migration-crisis-pedro-sanchez-opposition-backlash" target="_blank" rel="noopener noreferrer" title="POLITICO / Ceuta crisis puts Spain’s Sánchez under fire over migration policies">POLITICO #1</a><a href="https://www.politico.eu/article/almost-all-ceuta-migrants-returned-morocco-spain-says" target="_blank" rel="noopener noreferrer" title="POLITICO / Almost all of Ceuta migrants have returned to Morocco, Spain says">POLITICO #2</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>A police investigation has revealed that the narcotics charges brought against Mirza Ishtiaq Ahmed Pranto, a law student who died last month</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A police internal investigation in Faridpur found that the narcotics charges brought against Mirza Ishtiaq Ahmed Pranto, a 27-year-old law student and former Chhatra League leader at Faridpur Law College, were fabricated, according to The Daily Star Bangladesh. Pranto died in Detective Branch custody on June 21, less than a day after he was picked up from in front of his home in Madhukhali. The inquiry said he was detained as part of an attempt to extort money from his family, and it recommended departmental action against 11 members of the Faridpur District Detective Branch.</p>
+<p>His death sparked protests, with family members and locals alleging that he had been tortured to death in custody. District police formed a three-member internal investigation committee on June 22, led by Additional Superintendent of Police (Administration and Finance) Fatema Islam, and asked it to submit a report within seven days. The committee submitted the report to the superintendent of police in Faridpur on July 27. Two committee members told The Daily Star, on condition of anonymity, that they found no evidence Pranto had narcotics when detained, that there were financial negotiations with his family, and that he had been assaulted in custody, though they could not say conclusively whether the beating caused his death.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/pranto-framed-narcotics-case-probe-4237361" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / A police investigation has revealed that the narcotics charges brought against Mirza Ishtiaq Ahmed Pranto, a law student who died last month">TDSB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israel uses sand walls to further encroach in Palestinian territory on Gaza as siege tightens</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel is pushing the so-called yellow line deeper into Gaza, displacing Palestinian families and squeezing more than two million people into an increasingly small section of the enclave. On Monday, residents of al-Tuffah in northern Gaza found concrete markers moved westwards into the middle of Salah al-Din Road, the territory’s main north-south route, and an Israeli flag raised over a three-metre-high sand and earth barrier nearby. Satellite imagery has shown the walled enclosure spread across vast tracts of Gaza, and residents have reported being expelled and prevented from returning by high earth walls. On Sunday, families whose home Israel had destroyed fled again after the Israeli military warned it would attack a nearby building; the strike then tore apart the tent that had become their only shelter.</p>
+<p>Under the US-brokered agreement reached with Hamas last October, Israel was supposed to withdraw to the yellow line while temporarily retaining control over 53 percent of Gaza. Benjamin Netanyahu has since said the military controls more than 60 percent of the enclave, and in May he said his “directive” was to raise that figure to 70 percent. The same evidence says the death toll from Israel’s war on Gaza has risen to 73,335, with at least 174,052 Palestinians wounded since 7 October 2023, according to medical sources.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israel-pushes-yellow-line-deeper-gaza-it-tightens-siege" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel uses sand walls to further encroach in Palestinian territory on Gaza as siege tightens">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Electricity and water tariffs have increased faster than inflation in the past 20 years, and with the latest hikes in July, households</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Electricity and water tariffs have risen faster than inflation for 20 years, and July’s latest hikes are forcing households to cut food purchases even as the National Energy Regulator of South Africa approved 176 municipal and local authority tariff hike applications from 1 July 2026.</p>
+<p>The increases vary by municipality. Electricity tariffs range from 7.5% in the City of Cape Town to 14% in Buffalo City. In Johannesburg, a household using 250kWh a month will pay R56.28 more, taking the bill to about R680; larger households will face an increase of R122 a month. Ekhurleni’s electricity tariff rose by 12.70%, Mangaung Municipality’s by 9.90% and Nelson Mandela Bay’s by 10.09%.</p>
+<p>The bigger picture is a long squeeze on basic services. From 1996 to 2026, electricity tariffs increased 5.3 times faster than inflation, while water tariffs rose six times faster than inflation. A bill for electricity and water that cost R638 in 1996 effectively cost R2,028 in 2020.</p>
+<p>That has unfolded alongside deteriorating infrastructure, with water interruptions and power outages continuing. Andile Zulu, the Energy Democracy Officer at the Alternative Information Development Centre, said the tariff hikes “deepen poverty, financial precarity and the social breakdown of communities” at a time when the expanded unemployment rate stands at 43.7% and economic growth is stagnant. He said 66.7% of the population lived below the upper-bound poverty line of R2,846 a month, leaving millions of households to make “more painful compromises” in how they use their income.</p>
+<p>Zulu said those compromises can mean reducing meal intake or limiting hot water use, while continued tariff rises can also push some households toward illegal connections or fuels such as wood, coal and paraffin for cooking or bathing.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-07-31-tariff-hikes-choose-between-hot-water-or-food" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Electricity and water tariffs have increased faster than inflation in the past 20 years, and with the latest hikes in July, households">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Trump claims Gaza deal reached – but hurdles remain</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump says a Gaza deal has been reached that would tie Hamas disarmament to an Israeli withdrawal, but the plan’s core sequence is still disputed by both sides, leaving the timing and conditions of implementation unresolved.</p>
+<p>Trump said on social media that the agreement would be carried out in “carefully structured phases.” In his description, Israeli forces would withdraw as disarmament is completed, while the International Stabilization Force would work with a new Palestinian police force to take responsibility for Gaza’s safety.</p>
+<h3>Disarmament first, or withdrawal first?</h3>
+<p>That sequence is exactly where the friction lies. Senior Hamas officials have reportedly agreed to the plan, but Ghazi Hamad, a member of the Hamas negotiating team, told Al Jazeera that “we will not take any action regarding disarmament prior to Israel’s withdrawal from the Strip.”</p>
+<p>An Israeli official told Reuters the proposed terms were not satisfactory. The official said Israel demands the complete disarmament of Hamas, including the removal of weapons from Gaza and the complete demilitarisation of the Strip, as a precondition for any process. The same official said the plan under discussion did not “provide a satisfactory response” to those demands and that Israel had conveyed its objections.</p>
+<p>A separate US official said Trump would be “very, very disappointed” if Israel did not adhere to its side of the peace plan. That official said the expectation was that Israel would continue to comply with the 20-point plan it had initially agreed to.</p>
+<h3>A deal announced after months of deadlock</h3>
+<p>The announcement came nine months after a US-brokered ceasefire was signed. Negotiations between Israel and Hamas had already largely deadlocked over the implementation of the second phase, including the disarmament of Hamas and the reconstruction of Gaza.</p>
+<p>That is the backdrop to Trump’s claim that a deal has been reached: the plan lays out a phased process, but the two central parties are still staking out opposing positions on the order in which those phases should happen. For Hamas, disarmament comes only after Israeli withdrawal. For Israel, disarmament is the prerequisite for moving forward.</p>
+<p>Rightwing members of Benjamin Netanyahu’s government have described the roadmap as “not acceptable,” and one Israeli official said there would be no IDF withdrawal from the so-called Yellow Line unless Hamas undergoes “genuine disarmament.” The result is a plan that has been presented as a breakthrough, but whose main terms remain contested even as its supporters argue it should move ahead.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/jul/31/us-iran-war-live-updates-trump-claims-gaza-hamas-deal-middle-east-crisis-latest-news?page=with%3A6a6c22f48f08cf0c8661918d#6a6c22f48f08cf0c8661918d" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump claims Gaza deal reached – but hurdles remain">Guardian #1</a><a href="https://www.theguardian.com/world/live/2026/jul/31/us-iran-war-live-updates-trump-claims-gaza-hamas-deal-middle-east-crisis-latest-news?page=with%3A6a6cc4ee8f0890a389997fdc#6a6cc4ee8f0890a389997fdc" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump would be &#x27;very, very disappointed&#x27; if Israel doesn&#x27;t comply with Gaza plan - report">Guardian #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Cuba’s National Assembly Approves New Labor Code</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Thursday, Cuba’s National Assembly approved a new Labor Code during the Seventh Session of the Tenth Legislature. The draft was developed through a participatory process that incorporated nearly 97,000 proposals, with 43% included, and input from more than 200,000 workers in the non-state sector. The law is designed to protect income and expand labor rights.</p>
+<p>Labor Minister Jesus Otamendiz described it as a “fundamental tool” for socioeconomic transformations, replacing Law 116 of 2013 and updating the labor framework in line with the 2019 Constitution. The code preserves acquired rights and adds new guarantees, especially for workers employed by private sector employers, including stronger income protection if interruptions, business closures, or corporate restructurings occur. It also strengthens collective labor relations, negotiation, and alternative dispute resolution through union, institutional, and judicial mechanisms.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/cuba-approves-a-new-labor-code-during-the-tenth-legislature" target="_blank" rel="noopener noreferrer" title="Telesur English / Cuba’s National Assembly Approves New Labor Code">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="axios">
+  <summary>Trump considering strikes on Iranian energy targets within days</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Trump is seriously considering launching attacks against energy targets in Iran in the next few days, but has not given final orders, a U.S. official told Axios on Friday. At the start of Friday’s Cabinet meeting, Trump alluded to a potential attack, saying, “Well, we’ll be hitting them very hard and, you know, at some point they’re going to say, we just can’t take it anymore.” He also said that the more the U.S. conducts strikes, the weaker the Iranians get “and then they peter out.”</p>
+<p>Axios said a new U.S. bombing campaign against energy and infrastructure targets would be aimed at getting Iran to agree to U.S. terms in ongoing ceasefire negotiations. It also said the strikes could involve the Israeli military for the first time in many weeks, and that such an escalation would likely lead to Iranian missile attacks on Israel. On the Iranian side, Tasnim news agency, which is affiliated with the IRGC, quoted a senior security official calling U.S. strikes on Iranian infrastructure targets “an act of madness” and saying Iran had prepared a broad response plan that includes strikes against the Zionist regime’s critical infrastructure and U.S. energy infrastructure in the region.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/07/31/trump-iran-strikes-energy-infrastructure-war" target="_blank" rel="noopener noreferrer" title="Axios / Trump considering strikes on Iranian energy targets within days">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>Labor unions propose measures to confront the US tariff blows</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Brazilian labor unions presented a document on Friday, the 31st, with proposals to confront the effects of U.S. tariffs on several Brazilian products. Delivered to Minister of Development, Industry and Foreign Trade Márcio Elias Rosa in São Paulo, the text calls for incentives to national production, more public investment, stronger support for the BNDES, and protection of jobs. The unions also want job retention to be a condition for companies seeking relief programs, along with new markets for tariffed products, expanded public procurement and local-content policy, and more investment in transport, energy, housing, health, and education.</p>
+<p>The document, signed by CUT, Força Sindical, UGT, CTB, CSB and NCST, also proposes reviewing the Patent Law to curb abuses of intellectual property, strengthening Mercosul, creating compensation funds and transition programs for workers affected by international trade, and reinforcing union organization and collective bargaining in impacted sectors. In a related move, the Brazilian government sent the WTO a document on Monday, the 27th, saying the U.S. tariffs are “inconsistent” and opening a request for consultations with the United States.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-07/centrais-sindicais-propoem-medidas-para-enfrentar-tarifaco-dos-eua" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Labor unions propose measures to confront the US tariff blows">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="vanguard_ng">
+  <summary>Troops rescue 14 kidnap victims in Edo</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Troops of the 4 Brigade, Nigerian Army, under the 2 Division, rescued 14 kidnapped victims after a kidnap incident along the Lagos–Benin Expressway in Ovia North-East Local Government Area of Edo State. The operation was conducted under Operation Whirl Stroke after what the brigade spokesman, Capt. Kennedy Anyanwu, described as credible intelligence received by troops on routine patrol at about 9:30 p.m. on July 30. Anyanwu said the troops pursued the kidnappers along their escape route, forcing them to abandon 11 victims before fleeing into a nearby forest.</p>
+<p>He said a follow-up clearance operation on July 31 led troops to comb the forest and rescue the remaining three victims, bringing the total to 14. All the victims were medically assessed, confirmed to be in stable condition and reunited with their families or allowed to continue their journeys, he said. Anyanwu added that efforts were ongoing to track down and arrest the fleeing kidnappers. Brig.-Gen. Ahmed Balogun, commander of the 4 Brigade, commended the troops for their professionalism, courage and resilience.</p></div>
+  <div class="source-list"><a href="https://www.vanguardngr.com/2026/08/troops-rescue-14-kidnap-victims-in-edo" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / Troops rescue 14 kidnap victims in Edo">VN #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China boosts protection, support for domestic workers</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China is moving to improve protection and support for more than 30 million domestic workers under a newly introduced 19-measure package. The measures aim to strengthen workplace protections and expand social security coverage for a workforce that includes many rural migrants in cities. They come as demand for elderly care, childcare and housekeeping has surged, while jobs in the sector often remain unstable and offer insufficient protections. The plan also encourages insurance companies to develop products that cover both domestic workers and employers for personal injury and property loss, and to clarify liability for damages during services.</p>
+<p>Another part of the package expands social insurance coverage for domestic workers, many of whom are freelancers. The new measures encourage on-demand home service platforms to help freelance domestic workers enroll in basic pension and medical insurance by providing subsidies. The National Healthcare Security Administration will also encourage local governments to extend maternity insurance coverage to eligible freelance workers, a benefit that has traditionally been unavailable to self-employed individuals, according to Wen Siyao, an official with the administration.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0731/c90000-20483856.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China boosts protection, support for domestic workers">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>Chinese premier chairs State Council executive meeting</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A State Council executive meeting chaired by Premier Li Qiang on Friday called for more concrete measures to promote sustained innovation-driven, high-quality and sound economic development and to ensure a good start to the 15th Five-Year Plan period from 2026 to 2030. It urged better macro policy implementation, fuller use of existing policies, and timely, pragmatic incremental policies. The meeting also called for efforts to expand domestic demand, accelerate major projects in the 15th Five-Year Plan, and push ahead with planning and construction of the “six major networks”: water networks, new-type power grids, computing power networks, next-generation communication networks, urban underground pipeline networks and logistics networks.</p>
+<p>The meeting also stressed strengthening endogenous drivers of development, building a unified national market and improving the business environment. It called for continued efforts to prevent and address risks in key areas, bolster disaster prevention, mitigation and relief, enhance workplace safety, support people in need, and meet basic living needs. Separately, it reviewed and approved two draft State Council decisions on housing provident fund management and on amending and repealing certain administrative regulations, and approved four nuclear power projects, including the first phase of the Zhuanghe nuclear power project in Liaoning Province. It stressed absolute safety in nuclear power development.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260731/7ec8e84005284c598ef554b0e6d243d9/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Chinese premier chairs State Council executive meeting">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="scmp">
+  <summary>US adds 43 Chinese companies to Uygur forced labour blacklist</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Friday, the White House added 43 Chinese companies to a blacklist meant to block imports made with alleged forced labour in Xinjiang. The Department of Homeland Security, enforcing the Uygur Forced Labour Prevention Act, said it increased its entity list by 30 per cent, covering companies in food, cotton, pharmaceuticals, metals and lithium production. The move was the third time this week Washington announced measures aimed at China.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/us/article/3362611/us-adds-43-chinese-companies-uygur-forced-labour-blacklist" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US adds 43 Chinese companies to Uygur forced labour blacklist">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="scmp,xinhua_en">
+  <summary>China unveils regulation on exit, entry administration</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China issued a new regulation on exit and entry administration that Premier Li Qiang signed as a State Council decree, with the rules set to take effect on Sept. 15. Xinhua said the regulation is meant to standardize exit and entry administration, protect the lawful rights and interests of exit and entry personnel, and safeguard national sovereignty, security and development interests. South China Morning Post said the new rules will also let the government ban citizens from leaving the country if they violate export controls or rules on technology transfers, and that the Ministry of Commerce and other departments can enforce exit bans when breaches “endanger national industrial or technological security.”</p>
+<p>The regulation also says the foreign affairs, culture and tourism, and other competent departments under the State Council should promptly and publicly issue overseas safety alerts and safety risk warnings for tourist destinations. It says immigration authorities should remind Chinese citizens to exercise caution when applying for exit and entry documents and during border inspections, especially when traveling to high-risk countries or regions. The text also details application requirements, refines restrictive measures and regulates intermediary services related to exit and entry.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/diplomacy/article/3362590/beijing-impose-exit-bans-export-control-tech-transfer-breaches" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Beijing to impose exit bans for export control, tech transfer breaches">SCMP #1</a><a href="https://english.news.cn/20260731/0506b383b2204497a9681969ffd465cf/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China unveils regulation on exit, entry administration">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,guardian">
+  <summary>US proposes cuts to Colorado River use for Arizona, California and Nevada</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US has proposed new Colorado River rules that would cut water use in Arizona, California and Nevada while sparing the other basin states for now, a move meant to slow a worsening shortage but still leaving unresolved how the shrinking river will be shared.</p>
+<p>On Friday, the US Bureau of Reclamation issued a proposal as the Colorado River faces a historic water shortage, with reservoirs dropping to levels not seen since 1957. The federal government said the plan is meant to be flexible, allowing deeper cuts in drier times while giving the states more time to agree on how to manage the dwindling water supply that flows through dams and helps produce hydropower.</p>
+<h3>What the proposal would change</h3>
+<p>Under the plan, the Lower Basin states of Arizona, California and Nevada could together be forced to reduce their use by up to 3 million acre-feet, or 130 billion cubic feet, annually through 2036. That is roughly the amount Arizona and Nevada receive and enough water to serve more than 25 million people a year. The actual reductions would be set every two years, depending on conditions throughout the basin.</p>
+<p>The proposal also says California, Nevada and Arizona would divide half the cuts based on a plan they had already developed, with priority water rights taking over beyond that. Doug Burgum, the US interior secretary, said in a statement that the department has a responsibility to ensure the Colorado River system remains “reliable and resilient” for the millions of Americans, communities and industries that depend on it.</p>
+<h3>Why the Lower Basin is taking the hit</h3>
+<p>The federal plan spares Colorado, Utah, New Mexico and Wyoming from mandatory cuts for now. It is the government’s response to years of deadlocked negotiations among the seven states that rely on the river, after they failed to agree on a single plan. Some of the laws and guidelines governing the river are set to expire at the end of 2026, adding urgency to the dispute.</p>
+<p>The cuts are also tied to the river’s physical decline. The evidence says the Colorado River’s two key reservoirs, Lake Mead and Lake Powell, are at their lowest combined level since 1957, and a record-low snowpack has added to the shortage. The river now supports more than 40 million people in seven US states, several tribal nations and Mexico, and it also supplies hydropower.</p>
+<h3>What the new rules could mean next</h3>
+<p>Arizona and Nevada have faced mandatory reductions before, but the new proposal goes deeper and could affect agriculture, cities and tribes. The evidence says it could mean higher water prices, more reliance on groundwater and leaving fields unplanted. Arizona’s water agency said cuts of that scale would devastate its water users and economy, while the Central Arizona Project said the proposal does not accurately portray Arizona’s rights.</p>
+<p>The states are still waiting for the details that will govern the plan in the short term. The federal government said a final environmental review was released on Friday, with binding operating guidelines expected by October 1. The Guardian also said a record of decision is expected in the coming week, and that it is likely to closely follow a lower-basin proposal earlier this year that would shave 3.2 million acre-feet from their combined total over 2027 and 2028.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/7/31/us-proposes-cuts-to-colorado-river-use-for-arizona-california-and-nevada?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US proposes cuts to Colorado River use for Arizona, California and Nevada">AJ #1</a><a href="https://www.theguardian.com/us-news/live/2026/jul/31/donald-trump-cabinet-camp-david-iran-midterms-gaza-latest-news-updates?page=with%3A6a6d0fbb8f08048874a82cdb#6a6d0fbb8f08048874a82cdb" target="_blank" rel="noopener noreferrer" title="The Guardian / US releases 10-year plan to manage Colorado River; proposes cuts to California, Arizona, Nevada while sparing Colorado and others for now">Guardian #1</a><a href="https://www.theguardian.com/us-news/2026/jul/31/colorado-river-water-cuts" target="_blank" rel="noopener noreferrer" title="The Guardian / Water cuts loom as US unveils long-awaited response to Colorado river crisis">Guardian #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>Helsinki went 12 months without a single traffic fatality. Can Singapore replicate this feat?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Singapore is trying to curb speeding even as record violations persist, drivers admit to routinely going above the limit, and experts say Helsinki’s Vision Zero success offers ideas but not a simple template for the city-state.</p>
+<h3>Speeding stays normalised on Singapore’s roads</h3>
+<p>The picture that emerges from interviews is not one of rare rule-breaking, but of a habit that many motorists describe as ordinary. A 24-year-old university student said he knew speeding was illegal, but excused it by saying, “It’s fun.” He said he felt it was acceptable to flout the limit when there were fewer cars and no speed cameras nearby, adding that “the law is kind of a suggestion” in those moments. He also said speeding was “very normalised” in Singapore.</p>
+<p>Another driver, a 31-year-old car owner, said he would treat 90kmh as a minimum and often drive at 100kmh or 110kmh, sometimes 130kmh. “That is my comfortable speed,” he said. A motorcyclist interviewed by CNA TODAY said he would speed by up to 20kmh above the limit, especially to overtake cars he considered road hogs.</p>
+<p>Those accounts sit alongside the police figures. In 2024, Singapore logged 201,358 speeding violations, the highest in a decade. That number rose again in 2025 to 253,550. Speeding-related accidents, however, moved differently: there were more than 700 each year between 2018 and 2020, then 1,138 in 2022, a peak that the Singapore Police Force’s 2022 Road Traffic Situation report linked to more traffic after COVID-19 restrictions were lifted. In 2025, speed-related accidents fell to 515 even as overall traffic accidents increased. Speeding-related fatal accidents also dropped 10.9 per cent, from 46 in 2024 to 41 in 2025.</p>
+<p>The authorities have already responded with tougher penalties. Higher demerit points and fines kicked in on Jan 1, 2026. From Jan 1, 2027, the demerit-point threshold for licence suspension will fall from 24 to 18, and suspension periods will be longer.</p>
+<h3>Why experts say enforcement alone is not enough</h3>
+<p>The interviews suggest that the problem is not only about enforcement, but about attitude. The 30-year-old university student and freelance swim coach said he speeds because he feels more focused when driving faster, while another recurring explanation was that everyone else is speeding too. A 32-year-old market analyst said it can feel “embarrassing” to stick to the limit if others are going 10kmh to 20kmh over it, because it makes him feel as if he is “hogging the road” and at risk of being rear-ended.</p>
+<p>Several motorists also said they speed when the roads seem clear. But Professor Chin Hoong Chor of the National University of Singapore said even without surrounding traffic, repeated acceleration and deceleration increase the risk of driving errors. Veteran transport engineering consultant AP Gopinath Menon said drivers need to understand that a vehicle is “akin to a weapon” and that the severity of injury in a crash depends on speed.</p>
+<p>Legal and road-safety experts said that stiffer penalties matter, but do not solve everything. Associate Professor Walter Theseira and Singapore Road Safety Council chairman Bernard Tay have said demerit points are generally a stronger deterrent than fines for some drivers, but lawyer Bozy Lu said there is no single archetype of a speedster and that penalties are not a silver bullet.</p>
+<p>The human cost of higher speed is also part of the case against casual speeding. The article cites a drunk-driving crash on Apr 23, 2023, in which a 64-year-old pedestrian was killed when hit by a car travelling between 111kmh and 122kmh on a road with a 70kmh limit. It also refers to a case in which a young boy was killed by a speeding driver in a collision so severe that the driver did not realise he had hit a pedestrian.</p>
+<h3>Helsinki’s model, and Singapore’s limits</h3>
+<p>Helsinki’s 12-month stretch without a traffic fatality is held up as a rare success. The city of Helsinki saw zero traffic-related fatalities between July 2024 and July 2025, before a fatal accident in August 2025. Singapore’s Ministry of Home Affairs said in May that it was studying Vision Zero and would draw reference from Finland and others in reducing road accidents.</p>
+<p>But experts said the Finnish example cannot simply be copied. Vision Zero builds roads to slow drivers down rather than relying on self-discipline. In Helsinki, roads were narrowed and lined with trees, speed limits in most residential neighbourhoods were lowered to 30kmh, and the city expanded its walking and cycling network. Reducing impact speeds from 40kmh to 30kmh cuts a pedestrian’s likelihood of fatal injury by around 50 per cent.</p>
+<p>Singapore already has some similar measures. Professor Chin said newer public housing estates use a localised adaptation of the Dutch “woonerf” concept, and the Land Transport Authority has widened footpaths and added traffic calming through Friendly Streets and Silver Zones. On pilot Friendly Streets in Ang Mo Kio, Bukit Batok West, Tampines, Toa Payoh and West Coast, the LTA said average vehicular speeds fell by up to 25 per cent. The programme is now expanding, and by 2030 every town in Singapore will have at least one Friendly Street.</p>
+<p>What happens next.</p>
+<p>Singapore’s next steps are already partly mapped out. The new demerit-point and fine regime is in force, the lower suspension threshold takes effect in 2027, and the LTA says Friendly Streets will keep spreading. The Traffic Police also said MHA and TP are studying measures from Australia and South Korea.</p>
+<p>The larger question remains whether Singapore can shift the culture that drivers themselves describe: one where speeding is normal, roads are often treated as places to save time, and only close shaves seem to change minds.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/big-read/singapore-speeding-culture-demerit-points-road-design-6287946" target="_blank" rel="noopener noreferrer" title="CNA / Helsinki went 12 months without a single traffic fatality. Can Singapore replicate this feat?">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais,guardian,politico,scmp">
+  <summary>Italy suspends EU Schengen free-travel pact with Spain over Ceuta migrant crisis</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Italy said it would suspend Schengen free-travel arrangements with Spain for non-EU nationals after the Ceuta migration surge, but officials quickly narrowed the move to third-country travelers, leaving unclear how much practical disruption it would cause.</p>
+<p>Italy does not share a land border with Spain, nor any direct connection to Ceuta. Even so, the government of Giorgia Meloni said it was suspending the Schengen rules because of the crisis in the Spanish enclave, where the Spanish government said almost all of the people who crossed from Morocco had already been sent back: 48,300 out of 50,000. Italian government sources, cited by Efe, said the restriction would not change anything for Spanish or other European travelers to Italy. Meloni said on X that the measure was an “extraordinary” step to safeguard national security and prevent spillover effects, and that border checks were being reintroduced on shipping and air links with Spain.</p>
+<p>The Spanish foreign ministry pushed back. In a tweet, José Manuel Albares said “virtually all” of those who entered Ceuta had already returned to Morocco and noted that it is not possible to travel from there to mainland Spain without going through border controls. He added that “the integrity of the Schengen area is absolutely guaranteed” and told critics to “stop the self-serving confusion.” Spanish Prime Minister Pedro Sánchez also responded by citing Frontex data on irregular arrivals through Italy and Spain.</p>
+<p>Italy had already proposed on Thursday that Spain’s suspension from the agreement be studied, and the issue has also been raised by Finland and Denmark, according to the evidence. The result is a dispute over whether Italy’s move is a real change in Schengen practice or a narrower restriction aimed only at non-EU nationals arriving from Spain.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-07-31/bruselas-y-berlin-reclaman-el-retorno-rapido-a-marruecos-de-los-migrantes-que-han-cruzado-la-frontera-en-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / Italy announces suspension of Schengen agreement with Spain for non-EU nationals due to Ceuta migration crisis">El Pais #1</a><a href="https://www.theguardian.com/world/live/2026/jul/31/cueta-spain-morocco-italy-migration-schengen-europe-latest-news-updates?page=with%3A6a6ccc8f8f08048874a82a8d#6a6ccc8f8f08048874a82a8d" target="_blank" rel="noopener noreferrer" title="The Guardian / Italy suspends Schengen border-free arrangements with Spain over Ceuta migrants influx">Guardian #1</a><a href="https://www.politico.eu/article/ceuta-crisis-migration-france-spain-border-checks-schengen-unity-morocco" target="_blank" rel="noopener noreferrer" title="POLITICO / Italy cracks down on free movement to Spain as Schengen unity crumbles">POLITICO #1</a><a href="https://www.scmp.com/news/world/europe/article/3362607/italy-suspends-eu-schengen-free-travel-pact-spain-over-ceuta-migrant-crisis" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Italy suspends EU Schengen free-travel pact with Spain over Ceuta migrant crisis">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Israel Approves 104 Illegal Settlements in Occupied West Bank</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel authorized 104 new settlements in the occupied West Bank, according to the evidence provided. The expansion was described as part of an effort to consolidate territorial control and prevent the creation of a Palestinian state. Finance Minister Bezalel Smotrich called it “the fulfillment of electoral promises,” and the text cites UN Security Council Resolution 2334, adopted in 2016, as saying the settlements have “no legal validity” and violate international law. It also cites the resolution’s statement that construction in territories occupied since 1967 is illegal under the Fourth Geneva Convention.</p>
+<p>Separately, the Palestinian Commission against the Wall and Settlements said the decision to upgrade Givat Ze’ev to the rank of a city was a war crime aimed at isolating occupied Jerusalem. Hassan Breijieh, the commission’s director of international law, said the change gives broad administrative and financial privileges and helps accelerate colonization northwest of the city. The same evidence says the move is meant to link Givat Ze’ev with Ma’ale Adumim and the Gush Etzion bloc, while armed settlers backed by the Israeli army have intensified forced evictions and land confiscation.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/israel-approve-104-settlements-west-bank" target="_blank" rel="noopener noreferrer" title="Telesur English / Israel Approves 104 Illegal Settlements in Occupied West Bank">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="korea_herald,yonhap">
+  <summary>(2nd LD) Nat&#x27;l Assembly passes bill on stripping prosecution of investigative powers</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Korea’s National Assembly has approved a Criminal Procedure Act revision that would strip prosecutors of direct investigative powers, setting up a confrontation with the main opposition and leaving open whether President Lee Jae Myung will sign the bill or side with calls for a veto.</p>
+<p>The bill passed the plenary session Friday in a 175-2 vote with one abstention, after lawmakers voted to end a filibuster launched the previous day by the main opposition People Power Party. Under the revision, prosecutors would no longer be able to conduct direct investigations, including supplementary investigations, and would instead be able to request judicial police officers to carry them out.</p>
+<p>The ruling Democratic Party of Korea described the measure as part of a broader prosecution reform push. The party said the goal is to separate investigative and prosecutorial functions, which it argues will prevent the concentration and abuse of power. It also said the reform is intended to strengthen protections for victims and the public’s human rights, while still allowing the prosecution to ask police to investigate further when needed.</p>
+<p>Party lawmakers also pushed back on criticism that the bill would weaken justice for victims. They said the revised law still gives victims of certain crimes, including sexual assault and domestic violence, the right to see how far an investigation has gone or to appeal if criminal procedures are delayed.</p>
+<p>Reaction came quickly after the vote. Cheong Wa Dae said it respected the National Assembly’s legislative process and final decision, and pledged to make sure the revised law is implemented smoothly. Seong Ghi-hong, senior presidential secretary for public relations and communications, said the revision would help curb abuse of power and bring the justice system closer to the people.</p>
+<p>The main opposition immediately called for a veto. People Power Party floor leader Jeong Jeom-sig said the bill would otherwise help Lee Jae Myung evade responsibility in criminal cases brought against him before he became president, and urged the president to reject it. Jeong also said the party was considering all available options, including constitutional appeals, to stop the measure from becoming law.</p>
+<p>The vote also triggered a dramatic response from the prosecution. Acting Prosecutor General Koo Ja-hyeon offered to resign Friday, saying he was taking responsibility for the passage of the bill. He said reform should not undermine the prosecution’s core role of uncovering the substantive truth and protecting victims, and urged a review to make sure the law does not create policy gaps.</p></div>
+  <div class="source-list"><a href="https://www.koreaherald.com/article/10827375" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Assembly votes to remove prosecution from crime investigation - The Korea Herald">TKH #1</a><a href="https://en.yna.co.kr/view/AEN20260731011751315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (LEAD) Top prosecutor offers to resign after passage of bill on stripping prosecution of investigative powers">YNA #1</a><a href="https://en.yna.co.kr/view/AEN20260731003252315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (2nd LD) Nat&#x27;l Assembly passes bill on stripping prosecution of investigative powers">YNA #2</a><a href="https://en.yna.co.kr/view/AEN20260731003251315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (LEAD) Nat&#x27;l Assembly passes bill on stripping prosecution of investigative powers">YNA #3</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>China Urges U.S. to End Threats Against Cuba and Lift Sanctions</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Friday, China urged the United States to stop threatening the use of force against Cuba and to lift the blockade imposed on the Caribbean nation. Chinese Foreign Ministry spokesperson Mao Ning made the call at a press briefing after being asked about reports that the Trump administration was evaluating possible military action against Cuba. She said China had “taken note of the relevant reports,” added that China had stated its position on the issue before, and said it would continue to support the defense of Cuban national sovereignty and self-determination.</p>
+<p>Mao also said China is committed to working with all parties to uphold fairness, international justice, and the principles of multilateral law. Her remarks came amid the U.S. oil blockade against Cuba, described in the evidence as a policy implemented at the beginning of the year that further tightened an economic blockade in place for more than six decades. The evidence also says Cuba’s government repudiated what it called the aggressive stance of Colombia’s far-right president-elect, Abelardo de la Espriella, after he threatened to sever diplomatic relations and close the Colombian Embassy in Havana.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/china-urges-u-s-to-end-threats-against-cuba-and-lift-sanctions" target="_blank" rel="noopener noreferrer" title="Telesur English / China Urges U.S. to End Threats Against Cuba and Lift Sanctions">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>President Diaz-Canel Denounces U.S. Suffocation Plan Against Cuba</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Cuba’s President Miguel Díaz-Canel denounced what he called a U.S. “collective suffocation plan” against the Cuban people during the closing speech of the 17th Ordinary Period of Sessions of the National Assembly of People’s Power in Havana. He said the United States had intensified pressure through an energy siege meant to provoke economic collapse and social unrest. Díaz-Canel said Cuba had received only one fuel vessel in the last seven months, which he linked to a January 2026 U.S. executive order threatening sanctions against countries and shipping companies that transport hydrocarbons to the island. He also said shortages of diesel and fuel oil had removed more than 1,400 megawatts of distributed generation from the National Electroenergetic System and caused prolonged blackouts.</p>
+<p>Díaz-Canel said the energy deficit had paralyzed water pumping systems, interrupted agricultural harvests, affected health centers, and hit tourism and industrial infrastructure. He also said Washington’s May regulations had led to blocking of accounts and persecution of medical cooperation and foreign investment. In the same speech, he ratified 176 measures for the Economic and Social Transformation, saying more than 120 were already ready for application. He said the reforms aim to release productive forces, give municipalities and state enterprises more autonomy, and encourage public-private alliances, while not meaning a return to capitalism or privatization of health, education, science, culture, or strategic services.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/diaz-canel-denounce-u-s-suffocation-cuba" target="_blank" rel="noopener noreferrer" title="Telesur English / President Diaz-Canel Denounces U.S. Suffocation Plan Against Cuba">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="dawn,middle_east_eye">
+  <summary>The &#x27;Board of Peace&#x27; announced a Palestinian body will take Hamas weapons. That&#x27;s not what Trump said</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump and the Board of Peace described Gaza’s disarmament role differently on Friday, with Trump saying the board would collect Hamas’s weapons even as the board said a Palestinian technocratic body would control them, leaving the handover process unclear.</p>
+<p>At a cabinet meeting at Camp David in Maryland, Trump told reporters that “it’s going to be run by the Board of Peace” when asked who would take possession of Hamas’s weapons as the group disarmed. That came after he had already said in a social media post that the board had reached a “historic agreement” for the “complete disarmament” of Hamas and other armed groups in Gaza, with disarmament to come in phases. Earlier, Trump also said talks in Cairo on Thursday between mediators and Hamas leaders had produced a phased disarmament agreement, though a Hamas official described the deal as a draft and US officials said Israel was sceptical the group would surrender its weapons.</p>
+<h3>Who would hold the weapons</h3>
+<p>Hours before Trump spoke, the Board of Peace posted on X that its framework included “full demilitarization, de-radicalization, and the transfer of all civilian and security authorities in Gaza to the National Committee for the Administration of Gaza (NCAG).” It added: “Only the NCAG will hold, store or control any weapon in the Strip.”</p>
+<p>That wording is what made Trump’s remarks seem different. On the board’s account, a Palestinian technocratic body would take on the weapons role. On Trump’s account, the Board of Peace itself would do so. The distinction matters because the announcement is meant to show how the Gaza plan would be carried out, but the exact chain of custody for Hamas’s weapons was not described the same way in the two statements.</p>
+<p>Pakistani Prime Minister Shehbaz Sharif also welcomed the developments under the Board of Peace, saying Pakistan hoped “concrete steps” would follow under the Gaza Peace Plan. He thanked the mediating countries — the United States, Egypt, Qatar and Turkiye — and said the effort should help bring about Palestinian self-determination through a credible political process.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2019749/pakistan-welcomes-board-of-peace-developments-under-gaza-peace-plan-pm-shehbaz" target="_blank" rel="noopener noreferrer" title="Dawn / Pakistan welcomes Board of Peace developments under Gaza Peace Plan: PM Shehbaz">Dawn #1</a><a href="https://www.middleeasteye.net/news/board-peace-announced-palestinian-body-will-take-hamas-weapons-thats-not-what-trump-said" target="_blank" rel="noopener noreferrer" title="Middle East Eye / The &#x27;Board of Peace&#x27; announced a Palestinian body will take Hamas weapons. That&#x27;s not what Trump said">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian,nyt,scmp">
+  <summary>Trump backtracks from promise to let Ukraine build Patriot missiles</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump has stepped back from an earlier suggestion that Ukraine could make its own Patriot air defense interceptors, telling reporters at a Camp David cabinet meeting that the US had not agreed to it and that sharing the technology would be “a big step” for Kyiv’s war effort.</p>
+<p>Volodymyr Zelenskyy had asked Trump for Patriot air defense interceptors when the two presidents met earlier this week, with Ukraine seeking them to defend against Russian attacks. Trump said the weapons were “incredible,” but added that the US had to be “very careful” about letting another country build them. “It’s a hard thing to give away that kind of technology,” he said, warning that people who receive such technology “can someday turn on you.”</p>
+<p>The remarks marked a reversal from comments Trump made earlier this month at a Nato summit in Turkey, when he suggested a license for Ukraine to manufacture Patriot missiles. Zelenskyy later described the subject as productive in their White House meeting on Tuesday. On Friday, Trump was noncommittal: “We have not agreed to that,” he said, while also saying talks were continuing.</p>
+<p>The issue matters because Ukraine has been pressing for more Patriot interceptors and, according to The New York Times, Zelenskyy had warned that the country was running out of them. South China Morning Post said Ukraine has long sought a co-production agreement for the Patriot PAC-3 missiles, with an eye to building them domestically. The paper also quoted Trump saying it would be difficult to hand over the underlying technology and that he did not think such a deal would ever happen, even as he said the US would be building many plants to produce Patriots and Tomahawk missiles at home.</p>
+<p>Trump’s comments came during a cabinet meeting at Camp David, where he framed the question as one of caution around advanced weapons technology rather than a final rejection. For now, though, his position left open the same unresolved question Ukraine has been pressing for: whether Washington will supply the interceptors, authorize local production, or do neither.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/jul/31/donald-trump-cabinet-camp-david-iran-midterms-gaza-latest-news-updates?page=with%3A6a6cd23f8f08048874a82aee#6a6cd23f8f08048874a82aee" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump expresses uncertainty about granting Patriot missiles to Ukraine">Guardian #1</a><a href="https://www.theguardian.com/us-news/2026/jul/31/trump-cabinet-camp-david-ukraine" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump backtracks from promise to let Ukraine build Patriot missiles">Guardian #2</a><a href="https://www.nytimes.com/2026/07/31/us/politics/trump-ukraine-patriot-missiles.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Trump Backs Away From Deal to Let Ukraine Build Patriot Missiles">NYT #1</a><a href="https://www.scmp.com/news/world/russia-central-asia/article/3362609/trump-says-us-hasnt-agreed-ukraine-building-patriot-missiles" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump says US hasn’t agreed to Ukraine building Patriot missiles">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>High Court upholds decision allowing Chinese super-embassy planning permission in London near Tower of London</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A High Court challenge to the decision granting planning permission for a new Chinese “super-embassy” in London has been dismissed, allowing the project to go ahead near the Tower of London. Following a hearing at the high court earlier this month, two judges rejected the challenge brought by the Royal Mint Court Residents’ Association (RMCRA) against the Ministry of Housing, Communities and Local Government and the London Borough of Tower Hamlets.</p>
+<p>RMCRA, which represents families and businesses in about 100 properties, argued that the embassy’s presence could lead to terrorist attacks or the repression of protests, and could be used to enforce “draconian” Chinese laws in the UK and target dissidents. The association also said diplomatic immunity could make it harder for UK authorities to enforce fire safety rules if the Chinese government ignored them. The government and the council defended the decision, saying they “conscientiously and carefully had regard” to residents’ concerns.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/live/2026/jul/31/andy-burnham-devolution-plan-labour-conservatives-kemi-bedenoch-uk-politics-live?page=with%3A6a6c7ecf8f08cf0c866194cd#6a6c7ecf8f08cf0c866194cd" target="_blank" rel="noopener noreferrer" title="The Guardian / High Court upholds decision allowing Chinese super-embassy planning permission in London near Tower of London">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Hamas says it will not disarm in Gaza before Israel withdrawal</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A senior Hamas official said the Palestinian movement will not take any steps toward disarmament before Israeli forces withdraw from Gaza. Ghazi Hamad told Al Jazeera that Israel would have no role in the disarmament process, saying it would instead be carried out by a Palestinian national committee. Hamas also told Reuters that handing over weapons was contingent on the withdrawal of Israeli forces and on more aid and goods entering the territory.</p>
+<p>Earlier on Friday, the Board of Peace said Hamas had officially agreed to a detailed framework for the next phases of the Gaza ceasefire. Its statement said the agreement was tied to President Donald J. Trump’s Comprehensive Peace Plan and U.N. Security Council Resolution 2803, and described Hamas disarmament as part of a sequence in which Israeli forces would then withdraw. Hamas sources also told AFP that the Palestinian technocratic committee established by the Board of Peace to govern Gaza would be the “sole entity” overseeing the managing and storing of the group’s weapons.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/hamas-says-it-will-not-disarm-gaza-israeli-withdrawal" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Hamas says it will not disarm in Gaza before Israel withdrawal">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>AHMSA executives remain on payroll; considered essential</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The bankruptcy trustee for Altos Hornos de México (AHMSA) delivered accounts to the Juzgado Segundo de Distrito en Materia de Concursos Mercantiles showing that seven possible company directors received a combined 681,888 pesos in biweekly payroll, even as thousands of former workers have gone more than three years without pay. The report, covering the last half of June in case 19/2023, listed the highest individual payments at 165,491 pesos, 145,365 pesos and 135,399 pesos, and marked all transfers as “nómina pagada.” The beneficiaries’ names were redacted, and trustee Víctor Manuel Aguilera said that was to protect personal data.</p>
+<p>In the same financial report, Aguilera said payroll for essential employees totaled 4,131,989 pesos, with supporting Afirme bank transfer records. He said the funds came from the sale of 50% of AHMSA’s shares in Línea Coahuila Durango to Industrias Peñoles through Química Magna, and that between July 13 and 17 another 3,904,000 pesos went to operating and security costs at the Monclova, Coahuila steel plant. The trustee also published the final list of labor credits on AHMSA’s website.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/31/politica/009n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / AHMSA executives remain on payroll; considered essential">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Migrants who have returned to Morocco after leaving Ceuta: “They told us we would have a reception place in Spain and it was a lie”</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Friday, Fnideq, also called Castillejos, was filled with thousands of young people returning from Ceuta after crossing into the Spanish autonomous city without Moroccan authorities stopping them. One of them, Mohamed, 18, said, “In Spain no one helped us. They had told us we would have a reception place and a visa to travel to Algeciras, but all of it was a lie.” He had come the night before from Fez, 290 kilometers south, to cross via the border breakwater, but by Friday he was back on Moroccan territory.</p>
+<p>Many of the migrants had slept outdoors in gardens and vacant lots and had eaten with help from neighbors or money sent by family through ATMs. They crowded into vehicles to try to return to their homes in the interior of Morocco. The evidence also says the early-morning clashes at the Ceuta border, where security forces used tear gas and high-pressure water cannons, had eased by early afternoon, while some migrants were still trying to cross as others returned.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-07-31/los-migrantes-que-han-vuelto-a-marruecos-tras-abandonar-ceuta-nos-dijeron-que-tendriamos-un-lugar-de-acogida-en-espana-y-era-mentira.html" target="_blank" rel="noopener noreferrer" title="El País / Migrants who have returned to Morocco after leaving Ceuta: “They told us we would have a reception place in Spain and it was a lie”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="straits_times">
+  <summary>While You Were Sleeping: 5 stories you might have missed, Aug 1, 2026</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On July 31, Italy said it had suspended its Schengen agreement with Spain after an influx of migrants into Ceuta, Spain’s North African enclave bordering Morocco. Italy’s interior ministry said it had closed maritime and air entry points to Spain, while Prime Minister Giorgia Meloni called the one-month suspension an “extraordinary measure” to “safeguard national security and prevent possible repercussions for our nation.” The same roundup also said the United States and 10 Asian and European allies warned companies against employing North Korean IT workers, and that Google rolled back a Google Earth feature that let users generate AI visualisations on top of satellite imagery after backlash over possible disinformation.</p>
+<p>Another story in the roundup said a magnitude 4.7 earthquake struck the Campi Flegrei area near Naples on July 31, causing power outages, transport disruptions and some building damage, according to authorities. The quake was recorded at 7.46pm and had its epicentre west of Naples at a depth of about 3km, according to Italy’s National Institute of Geophysics and Volcanology. The roundup also noted that Singapore sprinter Shanti Pereira finished eighth in her first Commonwealth Games final in Glasgow, clocking 23.21sec, while Adaejah Hodge won gold in 22.07sec.</p></div>
+  <div class="source-list"><a href="https://www.straitstimes.com/world/while-you-were-sleeping-5-stories-you-might-have-missed-aug-1-2026" target="_blank" rel="noopener noreferrer" title="The Straits Times / While You Were Sleeping: 5 stories you might have missed, Aug 1, 2026">TST #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Sánchez denounces an &#x27;infraction of Spain&#x27;s territorial integrity&#x27; following the arrival of thousands of irregular migrants to Ceuta</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Pedro Sánchez said the arrival of thousands of people to Ceuta from Morocco amounted to a “violation of the territorial integrity of Spain,” as the city faced a migration surge that the Interior Ministry said was far larger than the 2021 crisis and left key questions over border control and returns.</p>
+<p>Speaking on Friday at the Autonomous City Assembly, in his fifth visit since arriving at La Moncloa, Sánchez blamed “mafias that traffic in human beings” and defended Morocco’s response, which he described as that of “an ally.” He said the exchange with Moroccan authorities since the previous day had been “constant, fluid and very reasonable, unlike what happened in 2021,” when about 10,000 people arrived. Interior estimates that this time the figure has multiplied by five, and Sánchez said that hundreds of youths had also arrived earlier by swimming.</p>
+<p>Ceuta has about 84,000 inhabitants, and Sánchez asked Morocco to “streamline” and give “a much more forceful response” than so far. According to Interior, departures from Ceuta back to Morocco had already exceeded 37,500 people by 15:30 on Friday.</p>
+<p>The prime minister also linked the crisis to the “self-interested” use by mafias of a Supreme Court ruling from three weeks earlier. That ruling said people who enter Ceuta and Melilla by swimming cannot be sent back in hot pursuit, and that express refusal applies only to those who try to enter by overcoming “border containment elements,” such as fences. The court also noted that if the government wanted to establish containment elements at sea, nothing would prevent express refusal from applying to people who cross by overcoming those maritime barriers.</p>
+<p>Sánchez said the government was already studying the deployment of buoys on the breakwater between Ceuta and the Moroccan city of Castillejos, so that “there exists a containment barrier” that would make repatriation at the border easier. He also did not rule out changing laws to make returns more effective.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-07-31/sanchez-denuncia-una-violacion-de-la-integridad-territorial-de-espana-tras-la-llegada-de-miles-de-inmigrantes-irregulares-a-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / Sánchez denounces an &#x27;infraction of Spain&#x27;s territorial integrity&#x27; following the arrival of thousands of irregular migrants to Ceuta">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Federal judge sentences Zhenli Ye Gon to 15 years for money laundering</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A federal judge sentenced Zhenli Ye Gon to 15 years and one day in prison for operations with resources of illicit origin, in what the Fiscalía General de la República said was its first conviction against him. The judge also imposed a 140,400-peso fine, denied prison substitutes and conditional release, suspended his political and civil rights, and ordered an admonition. Ye Gon has been held at the Federal Social Readaptation Center No. 1, Altiplano, in Almoloya de Juárez, Estado de México.</p>
+<p>The arrest warrant in the money-laundering case was carried out on 14 February 2019, almost three years after he was extradited by the United States government, and the judicial order was served by elements of the Policía Federal Ministerial. The resolution was later confirmed on 25 July 2019 by a magistrate of the third unitary criminal court of the first circuit, according to the FGR. The case traces back to a 2008 complaint by the Unidad de Inteligencia Financiera, which alleged that Ye Gon, as legal representative and shareholder of Constructora Inmobiliaria Federal and through an exchange house, made cash transfers to tax havens to hide the illicit origin of the money.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/07/31/politica/012n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Federal judge sentences Zhenli Ye Gon to 15 years for money laundering">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="bbc,guardian">
+  <summary>Budget to be held in October, Healey announces</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">John Healey has confirmed his first budget for 28 October, beginning a period in which he will have to explain how the government will fund new spending pledges while staying within Labour’s fiscal rules and shifting money and power beyond Westminster.</p>
+<p>Healey wrote to the chair of the Treasury committee, Meg Hillier, to confirm the date. In that letter, he said the budget would “give businesses and families some of the stability they need to plan for the future” and described it as one that would move “power and money out of Westminster, into every postcode in Britain.” He also said: “Fiscal credibility is the bedrock of economic stability and national security.”</p>
+<p>The chancellor said Labour would abide by the fiscal rules and keep “a buffer” to protect against uncertainty and the impact of instability in the Middle East. That leaves him needing to spell out how the government will pay for its latest policy announcements, including cuts to VAT on electricity bills and business rates for pubs, as well as commitments to increase defence spending.</p>
+<p>Healey’s budget comes as he takes up the post during a difficult economic backdrop. The evidence describes soaring energy prices linked to the US-Israel war on Iran, alongside inflationary pressures and sluggish growth across the UK economy. Against that setting, Healey has tied the budget date to a promise of caution on the public finances and a broader claim that the budget will move resources away from Westminster and into communities around Britain.</p>
+<p>The announcement fixes the timing, but not the hard choices that the budget will require. Healey has said he wants stability for businesses and families, while also protecting the fiscal rules that he says underpin economic stability and national security. The date now sets up his first chance to show how those aims will fit together.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cjd4yz35x8go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Budget to be held in October, Healey announces">BBC #1</a><a href="https://www.theguardian.com/politics/live/2026/jul/31/andy-burnham-devolution-plan-labour-conservatives-kemi-bedenoch-uk-politics-live?page=with%3A6a6cad498f08448bd1b0bffb#6a6cad498f08448bd1b0bffb" target="_blank" rel="noopener noreferrer" title="The Guardian / Autumn budget to be delivered on 28 October, chancellor confirms">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="axios">
+  <summary>How extreme weather is shaping tomorrow&#x27;s electric grid</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">climate_disaster</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Dangerous heat waves this summer, including one that left 17 states under an emergency federal order, are putting the electric grid under a real-world stress test. Successive summer heat waves are forcing utilities to rethink how they prepare for longer and more frequent periods of extreme stress, while also raising questions about whether the grid can keep pace with rising demand from climate change and the AI-driven electricity boom. Heat waves are a double challenge because they drive up electricity use for air-conditioning and reduce the efficiency of some power plants.</p>
+<p>Texas has become a major proving ground since the deadly 2021 winter storm exposed major weaknesses. The Electric Reliability Council of Texas has since handled record seasonal demand with rapid battery expansion, mandatory weatherization, improved forecasting and expanded demand response. This month, the Public Utility Commission of Texas approved standards requiring large data centers to disconnect in a controlled way during grid disturbances to help protect grid stability. ERCOT told state lawmakers that statewide electric demand will reach about 175,000 megawatts by 2032, almost double the record set this month. Aidan Tuohy of the Electric Power Research Institute said utilities are shifting from planning for a single peak hour to staying reliable through prolonged periods of extreme heat.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/07/31/us-electric-grid-extreme-weather" target="_blank" rel="noopener noreferrer" title="Axios / How extreme weather is shaping tomorrow&#x27;s electric grid">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="scmp">
+  <summary>New EU team to crack down on AI deepfakes, illicit images and hacking</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">technology_and_ai</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The European Union rolled out a new team on Friday to rein in AI companies around the world, as Brussels moves to enforce its new rules on the fast-growing technology. The team is meant to track how AI models are used for violations of the bloc’s regulations, including the publishing of sexually explicit material, fake photos and videos, and cyber threats to public infrastructure. The effort comes as the EU’s AI Act takes shape.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/europe/article/3362566/new-eu-team-crack-down-ai-deepfakes-illicit-images-and-hacking" target="_blank" rel="noopener noreferrer" title="South China Morning Post / New EU team to crack down on AI deepfakes, illicit images and hacking">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">AskChem shifts chemistry literature search from ranked papers to provenance-carrying claims, aiming to help scientists and AI agents assemble cross-paper answers and verify sources; the open question is how well that claim-centered approach performs at scale.</p>
+<p>AskChem changes the retrieval unit from the paper to the claim. Each paper is converted into atomic, typed claims grounded by a source DOI and either a verbatim quote or an explicit evidence locator. Over that shared claim store, it offers three structures for search and synthesis: a stabilized faceted taxonomy for hierarchical retrieval and browsing, an evidence graph linking claims through relations, and a living taxonomy that places indexed papers under scientific principles.</p>
+<p>The system currently indexes 2.4 million claims from 147,000 papers and provides a web interface plus REST, SDK, and MCP access for AI agents. The authors say the goal is to let users retrieve specific findings, inspect their evidence, and assemble answers without first reading and filtering whole documents. They also say LLM-generated claims, relations, and taxonomy placements can be wrong, and that AskChem is meant to assist literature search and synthesis rather than replace primary sources for critical decisions.</p>
+<p>On AskChem-Bench, which covers 30 cross-paper chemistry questions, grounding a GPT-5.5 reader in AskChem yielded 100% resolvable DOIs, compared with 88.3% without retrieval, and the highest citation density among five tested systems. The paper says the deployed service jointly queries 2.4 million claims, 307,000 taxonomy nodes, and 171,342 evidence edges, and that AskChem is live at askchem.org.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.28618v1" target="_blank" rel="noopener noreferrer" title="arXiv / AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Qwen-UI-Agent is a new arXiv technical report from the MAI-UI Team at Alibaba Token Hub, Alibaba Group, describing a GUI agent built to close the gap between benchmark wins and real-device utility across mobile, computer-use, web, and DeepSearch tasks.</p>
+<h3>What the system is meant to do</h3>
+<p>The report frames GUI agents as a possible general-purpose executor over existing digital devices: they should understand intent, perceive application states, operate interfaces, and complete tasks without every service exposing a dedicated API. It says current systems are still largely tuned to simulated benchmarks, while real-world use demands reliability on real devices, cross-platform workflows, hybrid GUI and CLI execution, long-horizon task completion, proactive service initiation, and less human effort to improve over time.</p>
+<p>Guided by that goal, the team presents Qwen-UI-Agent as a real-world centric foundation GUI agent spanning mobile, computer-use, web, and DeepSearch environments. It is built on diverse sandbox environments plus a large-scale real-device mobile runtime. The system’s unified action space interleaves GUI operations with bash-based CLI commands and can generate batched actions in a single model turn. That, in computer-use tasks, CLI commands and GUI clicks are the two dominant action types, and more than 40% of action outputs are batched.</p>
+<p>The training and system design are also meant to be iterative. The report describes an AutoResearch-style data flywheel in which agents construct tasks and environments, diagnose failures, and plan the next iteration. It pairs supervised fine-tuning with action RL and online RL, including training on trajectories longer than 100 turns and using over 10,000 concurrent environments to speed rollout. A lightweight harness layer is intended to support proactive service initiation and stateful workflows across mobile and computer.</p>
+<h3>Where Qwen-UI-Agent was evaluated</h3>
+<p>Across a broad evaluation suite, Qwen-UI-Agent is reported to set state-of-the-art results on mobile-use benchmarks and to perform competitively on computer- and browser-use tasks against frontier models including Opus 4.8, Gemini 3.1 Pro, and GPT-5.6 Sol. On browser use and GUI grounding, the report gives scores of 73.6% on WebArena and 81.5% on ScreenSpot-Pro.</p>
+<p>The strongest mobile results come from real-device settings. Qwen-UI-Agent reaches 92.2% on MobileWorld-Real, a Chinese real-device mobile benchmark with more than 400 tasks across over 100 apps, and 97.5% on AndroidDaily. It also reports 82.1% on MobileWorld, where the model is said to outperform Opus 4.8, GPT-5.6 Sol, and Seed 2.1 Pro. On computer-use tasks, Qwen-UI-Agent scores 79.5% on OSWorld-Verified and a 40.0% partial score with 13.9% binary completion on OSWorld-v2. For browser tasks, it gets 64.1% on BrowseComp and 75.0% on BrowseComp-ZH.</p>
+<p>The report also says Qwen-UI-Agent preserves broad general and agentic capabilities alongside GUI performance. Its table lists results on benchmarks including MMMU-Pro, RealWorldQA, CharXiv-RQ, MathVision, AI2D, MMLU-Pro, IFEval, Tau2-Bench, Terminal-Bench 2.0, Claw-Eval, BFCL-v4, SkillsBench, and QwenClawBench.</p>
+<h3>How it behaves in practice</h3>
+<p>The report’s behavioral analysis says Qwen-UI-Agent’s execution is shaped by hybrid GUI+CLI coordination and batched actions. On OSWorld-Verified and OSWorld-v2, it reports substantial CLI use, frequent batched actions, and mixed GUI+CLI batches. In one example, the agent uses a CLI script to stitch candidate images into a montage before returning to GUI actions for compositing and presentation editing. This kind of combined execution makes some workflows more efficient than GUI or CLI alone.</p>
+<p>It also describes a shift after online RL in a browser-based dinosaur game task that required a score of at least 100 without browser developer tools or CDP. After training, the policy uses more GUI actions, more trajectories combine GUI and Bash, and execution–verification transitions become more common, with a state-changing Bash action followed by a read-only GUI inspection.</p>
+<p>The report’s failure analysis is equally tied to real-device conditions. It groups failures into execution capability limitations, such as exploration failure, erroneous action loops, and lost execution state, and real-world scenario challenges, including UI misreading, pop-up interference, and physical widget control problems. It says these issues reflect the scarcity of real interaction experience during training and the difference between clean simulators and messy real interfaces.</p>
+<p>Overall, the report presents Qwen-UI-Agent as a step toward GUI agents that can work across devices and domains, but it also keeps the focus on the same unresolved tension that motivates the project: benchmark progress is clear, while dependable real-world utility still depends on broader environments, stronger recovery, and less costly execution.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.28227v1" target="_blank" rel="noopener noreferrer" title="arXiv / Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Metis: Memory Foundation Model</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from MemTensor (Shanghai) Technology Co., Ltd. and several universities introduced Metis, a prototype memory foundation model that tries to build memory into a model’s own computation instead of relying mainly on external modules.</p>
+<h3>Native memory inside the backbone</h3>
+<p>The paper formalizes “native memory” in two ways: as a persistent, dynamically evolving memory state inside the backbone, and as native memory procedures that store and use information through model computation. On that basis, Metis uses a new architecture with a native memory state that can compress historical information into the model and retrieve it through memory attention.</p>
+<p>To train those procedures, the authors say they built large-scale memory-specific training data and multiple optimization objectives during mid-training. They also say Metis’s online memory maintenance is gradient-free and needs only a forward pass. At inference time, the learned weights stay frozen while the memory state changes through standard forward computation.</p>
+<p>The model is described as the first prototype of “memory foundation models,” built with Metis blocks inside Transformer blocks. Those blocks include a local memory block and a hyper memory block. The paper says this setup offers advantages in architecture, end-to-end optimization, and efficiency.</p>
+<p>Early results and release.</p>
+<p>The reported experiments cover memory operation tasks and memory-based question-answering tasks, using Qwen3.5 backbones trained on 8 × 8 H100 GPUs. The authors say Metis shows native memory capabilities and provide a detailed analysis of its strengths, limitations, and behaviors. They also say they tested out-of-distribution memory tasks and found that the approach transferred to benchmarks not used in building the training data, including ATM-Bench.</p>
+<p>Metis is still presented as an early step toward memory foundation models, but the team has released its project and model checkpoints for future research.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.26760v1" target="_blank" rel="noopener noreferrer" title="arXiv / Metis: Memory Foundation Model">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>PhiZero: A World Model Built Around Physical Language</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">PhiZero is a preprint world model for researchers building video simulators: it tries to predict physical change by turning in-the-wild videos into a compact “physical language” first, then rendering those inferred transitions back into video, leaving open how well that abstraction captures real-world dynamics.</p>
+<p>The paper describes PhiZero as a physical world model built around physical language, which it calls a compact discrete representation of world-state transitions. Its basic complaint is that existing physical world models usually predict future video directly in pixel space, so the underlying dynamics stay implicit inside high-dimensional visual predictors.</p>
+<p>PhiZero takes a different route. The researchers say they learn physical language from in-the-wild videos through self-supervision and use it to reason explicitly about how the physical world evolves. They call this a “reason-then-render” setup: the model first infers future evolution as a physical-language sequence, then renders the inferred transitions into video.</p>
+<p>The preprint also says physical language can serve as a general interface for representing, controlling, and transferring state transitions in the physical world. In that framing, PhiZero supports interactive rollouts under sequential control inputs, fine-grained action-conditioned world modeling, and zero-shot motion transfer.</p>
+<p>The reported experiments span generation and understanding benchmarks, including PhyGround, WorldModelBench, IntPhys2, and LikePhys. The authors say PhiZero performs competitively across these tests and better captures physical consequences such as collision-induced object displacement, gravity-driven deformation, chain reactions, and dynamically changing shadows.</p>
+<p>The paper also gives details on its tokenizer. In one reconstruction test on 500 four-second real-world videos sampled at 8 FPS and evaluated at 512 × 896, the Physical Language Tokenizer represented future state transitions with 256 discrete physical-language symbols and, the authors say, achieved the best reconstruction quality among the highly compressed tokenizers they compared.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.28624v1" target="_blank" rel="noopener noreferrer" title="arXiv / PhiZero: A World Model Built Around Physical Language">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering presents OpenMLE, an open full-stack system for recursive self-improvement research in machine learning engineering. The stack includes OpenMLE-Gym for verifiable task environments with execution feedback, OpenMLE-RL for operator learning, and OpenMLE-Evo for long-horizon search. On top of that stack, the work post-trains Frontis-MA1, a 35B model, as a meta-evolution agent built around four program-evolution operators: Draft, Improve, Debug, and Crossover.</p>
+<p>On MLE-Bench Lite, under a 12-hour-per-task budget on one RTX 4090 capped at 12 GB VRAM, Frontis-MA1 raises Medal Average from 39.39% to 60.61% over its base model with OpenMLE-Evo, and to 71.21% with OpenMLE-Evo-Max. The preprint says this exceeds GPT-5.5 + Codex and approaches GPT-5.6 Sol and the 2.8T Kimi K3. On held-out NatureBench Lite, swapping in the trained model raises Match-SOTA from 50% to 70%, while swapping in OpenMLE-Evo raises it from 20% to 50%.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.28568v1" target="_blank" rel="noopener noreferrer" title="arXiv / Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>VideoCoCo: Code-as-CoT for Physically-Consistent Video Generation via an Agentic Dual-Engine System</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new video-generation framework called VideoCoCo tries to make text-to-video systems follow physical dynamics more faithfully by turning executable Blender code into an intermediate step, addressing the gap between vivid output and whether the motion actually makes sense.</p>
+<p>The paper says text-to-video models can make visually strong clips, but still struggle with physically consistent dynamics because they must infer a scene’s temporal evolution from a compressed prompt. It argues that existing chain-of-thought style approaches for video often use plans, keyframes, or intermediate visual states that are descriptive rather than executable. VideoCoCo is presented as a different approach: an agentic dual-engine system in which executable Blender code serves as the process-level chain of thought.</p>
+<p>In the first stage, a coding agent takes a text prompt and writes a self-contained Blender Python program that specifies the scene, its objects, and how the event evolves over time. Running that program in a sandbox produces a deterministic spatiotemporal draft. In the second stage, an instruction agent reads the prompt and the draft and writes an editing instruction focused on appearance, while a generative video engine turns the draft into a photorealistic final video. The paper describes this split as separating process-level reasoning from high-fidelity visual realization.</p>
+<p>To adapt the editor to these simulated drafts, the authors build VideoCoCo-3K, a curated set of 3,000 draft–instruction–target triplets. They evaluate the system on PhyGenBench and VBench-2.0. On PhyGenBench, adding VideoCoCo to the OmniWeaving baseline raises the average score from 0.475 to 0.558, with the paper saying that is the best overall result. On VBench-2.0, the same combination lifts the average from 52.18 to 77.88 and again reaches the best average score.</p>
+<p>The paper also reports that the gains are strongest in dimensions tied to physical behavior: on PhyGenBench, VideoCoCo improves mechanics, optics, thermal, and material scores, and on VBench-2.0 it posts the best mechanics and thermotics results while placing second on material. An ablation study says a tuning-free editor already improves over OmniWeaving, while LoRA tuning performs best overall, suggesting that the executable draft and editor adaptation work together.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.27380v1" target="_blank" rel="noopener noreferrer" title="arXiv / VideoCoCo: Code-as-CoT for Physically-Consistent Video Generation via an Agentic Dual-Engine System">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Memory Decoder at Scale: A Pretrained, Parametric Long-Term Memory</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The preprint *Memory Decoder at Scale: A Pretrained, Parametric Long-Term Memory* says decoder-only language models entangle long-term memory and reasoning in one parameter set, making memory hard to scale separately. It presents Memory Decoder at Scale, which scales memory models up to 6.9B parameters and pretrains them on 300B tokens. The work builds on a parametric long-term memory module and argues that independently scaling pretrained memory can improve language model performance more efficiently.</p>
+<p>At this data scale, the combined cost of indexing and search makes a standard Faiss pipeline infeasible, so the paper uses a distributed pipeline for Faiss indexing and retrieval plus sparse, batch-wise loading of kNN distributions. Across model scales, it finds that allocating more parameters to memory gives a better parameter-performance tradeoff than scaling the base model alone. On 17 benchmarks, pairing a 6.9B general memory with Pythia-410M raises the average score from 29.86 to 37.34, surpassing Pythia-12B at 37.24 with 39% fewer total parameters. For Qwen3 Base models from 0.6B to 14B, 1.7B domain memories improve the average score across three domains by more than 9 points at every scale.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.27919v1" target="_blank" rel="noopener noreferrer" title="arXiv / Memory Decoder at Scale: A Pretrained, Parametric Long-Term Memory">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Beacon: Knowing When and How to Perform Agentic Visual Reasoning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint from researchers at Peking University and partner institutions presents Beacon, a model for agentic visual reasoning that tries to decide not just how to use tools, but when to use them—because the authors say existing models often call tools at the wrong times or gain little from them.</p>
+<p>The paper frames the goal of agentic visual reasoning as improving multimodal large language models on complex tasks, not just adding a more elaborate reasoning style. It reexamines tool use through two dimensions: Mode Adaptiveness, meaning whether a model can tell when tools are truly needed, and Tool Effect, meaning whether tools actually help on problems that text-only reasoning cannot solve without making already-solved problems worse.</p>
+<p>To study that, the authors say they ran a comprehensive analysis and found that existing agentic visual reasoning models show limited Mode Adaptiveness. They also say the gains from tool use on hard examples are largely offset by harm introduced on easy examples the models could already solve without tools. Beacon is meant to fix that balance.</p>
+<p>The model uses an SFT-then-RL training setup. During inference, Beacon can generate Python code for visual and numerical operations such as image cropping, annotation, enhancement, rotation, stitching, pixel-level computation, and complex numerical calculations. In reinforcement learning, the paper says Beacon uses a Necessity-Aware Adaptive Reward to favor tool-free answers when they are sufficient, and a Hint-Guided Capability Expansion mechanism to strengthen tool use on the hardest problems. The authors say they collected data from 16 benchmarks and datasets spanning perception, chart understanding, OCR, STEM, spatial reasoning, and agentic reasoning.</p>
+<p>In experiments across 13 benchmarks, the paper says Beacon achieved the best average performance and stronger Mode Adaptiveness, with the largest gap between tool-induced gain and tool harm. Case examples in the paper show it using visual tools on tasks such as counting marbles, identifying cars, comparing cropped image parts, and matching a rotated number.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.28595v1" target="_blank" rel="noopener noreferrer" title="arXiv / Beacon: Knowing When and How to Perform Agentic Visual Reasoning">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Scientists using LLMs will ‘do more, less well’, modelling study predicts</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A modelling study predicts that scientists using large language models to help with research will spend less time refining their work and move more quickly to new projects, effectively doing “more, less well” rather than “the same amount, better,” the authors wrote. The study was posted on arXiv on 19 July and has not yet been peer reviewed. To make the prediction, the authors divided research into phases, starting with a discovery phase of brainstorming hypotheses and initial experiments, then a two-part development phase covering required work such as figures and drafting, and discretionary work such as follow-up experiments and polishing writing.</p>
+<p>They used methods from optimal-foraging theory to model how scientists might reallocate effort after adopting LLMs. The model assumed the tools were working at their best — cheap, fast and accurate — and found they could speed up every phase of the scientific process without producing better papers. Study co-author Carl Bergstrom, a biologist at the University of Washington in Seattle, said the results reflect a flawed incentive system in science that prioritizes quantity over quality, and that LLMs are “rarely the problem themselves” because they “hold up a mirror to problems that we already have.”</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02397-5" target="_blank" rel="noopener noreferrer" title="Nature / Scientists using LLMs will ‘do more, less well’, modelling study predicts">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Meat allergy is on the rise — what scientists want to know</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">α-gal allergy, a meat allergy linked to tick bites, is being diagnosed in more people in the United States and other countries, but scientists still do not fully understand why it is spreading or how to treat it.</p>
+<p>Thomas Platts-Mills, an immunologist at the University of Virginia in Charlottesville, develops a rash if he eats red meat. He is one of thousands of people diagnosed each year with tick-induced α-gal allergy, which can cause reactions hours after eating meat and, in some cases, life-threatening anaphylaxis. The main US cause is bites from the lone star tick, *Amblyomma americanum*, which lives on white-tailed deer.</p>
+<h3>Why it is hard to catch</h3>
+<p>People can develop the allergy after being bitten at least twice by ticks carrying the sugar molecule α-gal, or galactose α-1,3 galactose, in their saliva. When a tick bites, α-gal enters the blood and triggers IgE antibodies. Later exposures to α-gal — found in red meat and dairy products — can set off an allergic reaction.</p>
+<p>Diagnosis is difficult because symptoms are often vague, such as stomach pain or vomiting, and may appear months after a tick bite. For that reason, the allergy is probably under-diagnosed. There is currently no treatment or cure, and Benjamin Casterline, an immunology researcher at the University of Missouri School of Medicine in Columbia, said: “We’re still casting in the dark, but it is our responsibility to find something that works for people.”</p>
+<p>Cases are increasing in many countries. Researchers say climate change and rising deer populations are contributing factors. Australia has the highest rates, with more than 700 people out of 100,000 affected in some tick-prone regions, and suspected cases have risen by 22% each year since 2020. In the United States, the CDC has said as many as 450,000 people might have the allergy, and around 15,000 were newly diagnosed each year between 2017 and 2022.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02362-2" target="_blank" rel="noopener noreferrer" title="Nature / Meat allergy is on the rise — what scientists want to know">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="semantic_scholar">
+  <summary>Platelet Count as a Predictive Biomarker for Schizophrenia</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The study examined whether platelet count, along with demographic variables, could help predict schizophrenia using machine learning and explainable artificial intelligence. It used a structured dataset of 151 observations with gender, age, platelet count, and diagnostic class, then applied a stratified train-test split. Nine classification algorithms were compared, including Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, AdaBoost, K-Nearest Neighbors, Support Vector Machine, XGBoost, and LightGBM. Performance was measured with accuracy, precision, recall, F1-score, and receiver operating characteristic metrics. XGBoost performed best overall, with accuracy of 0.652, recall of 0.773, F1-score of 0.680, and ROC value of 0.643.</p>
+<p>To improve interpretability, SHAP and LIME were used to examine feature contributions at both global and local levels. Both methods identified platelet count and age as the most influential predictors, while gender contributed less. The study said these results point to explainable machine learning as a possible transparent framework for schizophrenia prediction and for identifying potentially relevant biological markers, but it also said larger, clinically diverse datasets are still needed before practical clinical deployment.</p></div>
+  <div class="source-list"><a href="https://www.semanticscholar.org/paper/e2701228a2899bf18894d83aec71e73a92488da9" target="_blank" rel="noopener noreferrer" title="Semantic Scholar / Platelet Count as a Predictive Biomarker for Schizophrenia">SS #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="openalex">
+  <summary>ENNORY introduces Transition Intelligence, a computational framework designed to model, analyse, and preserve continuity as complex systems transition between evolving states.</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">ENNORY introduces Transition Intelligence, a computational framework meant to model, analyse, and preserve continuity as complex systems move between evolving states. It is described as a unified transition architecture that can become specialised computational engines while keeping a common mathematical and structural foundation. The foundation monograph says those engines adapt their computational reasoning to different target domains, and it presents examples in Formula One engineering, structural heart intervention, and artificial intelligence.</p>
+<p>The monograph frames Transition Intelligence as a computational paradigm that goes beyond analysing outcomes by modelling the structure of transitions themselves. Across the examples, it examines continuity, transition behaviour, structural reorganisation, and adaptive system intelligence. It also says the shared transition framework establishes a basis for future computational modelling, software development, simulation, and empirical validation across engineering, healthcare, artificial intelligence, and other complex systems.</p></div>
+  <div class="source-list"><a href="https://doi.org/10.5281/zenodo.21710598" target="_blank" rel="noopener noreferrer" title="OpenAlex / ENNORY introduces Transition Intelligence, a computational framework designed to model, analyse, and preserve continuity as complex systems transition between evolving states.">OpenAlex #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="openalex">
+  <summary>A Hybrid Grey Verhulst Modeling framework for accurate tea yield forecasting in variable environmental conditions</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced a novel Hybrid Grey Verhulst (HGV) Modeling framework to forecast tea production in Sri Lanka, focusing on the Ceylon tea industry’s need for short-term yield and income forecasting amid economic, structural, and climate conditions. The study says very few analytical tools have been used to forecast tea production and market trends in Sri Lanka, and that accurate forecasting is difficult because monthly yield patterns are irregular and nonstationary, with environmental vulnerability, plant health conditions, and fertilizer management all playing a role.</p>
+<p>The framework combines the Grey Verhulst Hybrid Method for linear domains with a backpropagation neural network-based artificial neural network approach for nonlinear domains. It uses field-level data from 12 randomly selected tea plots in the upcountry plantations of the Haputale region in Badulla District, Uva Province, at 1,695 meters above sea level. For validation, the dataset was split into 75% training and 25% testing, with training data from January 2013 to December 2022 and testing data from January 2023 to March 2024. The proposed HGV model showed the best prediction performance among the time series models tested, with the lowest root mean squared error values.</p></div>
+  <div class="source-list"><a href="https://doi.org/10.1108/gs-12-2025-0183" target="_blank" rel="noopener noreferrer" title="OpenAlex / A Hybrid Grey Verhulst Modeling framework for accurate tea yield forecasting in variable environmental conditions">OpenAlex #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="semantic_scholar">
+  <summary>Evolution of causality assessment in drug-induced liver injury: From RUCAM to RECAM and emerging Artificial Intelligence applications</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A review on drug-induced liver injury (DILI) traces how causality assessment has changed over the past four decades. It says DILI is difficult to diagnose because its clinical presentation is heterogeneous and there is no definitive diagnostic test, making accurate causality assessment important for patient management, pharmacovigilance, and regulatory decision-making. The review describes the shift from subjective expert judgment and general adverse drug reaction algorithms to structured liver-specific methods, highlighting the 1993 introduction of the Roussel Uclaf Causality Assessment Method (RUCAM) as the first standardized, quantitative algorithm for suspected DILI.</p>
+<p>The review says RUCAM remains the most widely accepted and extensively validated tool, but its manual scoring, inter-observer variability, and limited compatibility with electronic health records helped drive development of the Revised Electronic Causality Assessment Method (RECAM). It says RECAM uses clearer definitions, better standardization, and electronic implementation to improve reproducibility and fit modern clinical practice. The review also discusses artificial intelligence as a promising adjunct for predictive modelling, automated data extraction, and clinical decision support, while saying these tools still need further validation and should complement, not replace, structured causality assessment and clinical expertise.</p></div>
+  <div class="source-list"><a href="https://www.semanticscholar.org/paper/f91a972251559d8fb6de6b5caf683abcb5891497" target="_blank" rel="noopener noreferrer" title="Semantic Scholar / Evolution of causality assessment in drug-induced liver injury: From RUCAM to RECAM and emerging Artificial Intelligence applications">SS #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
