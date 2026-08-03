@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-03</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-03</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="bbc,scmp,telesur_en">
+  <summary>Israeli strikes kill 18 in Gaza, minister says no deal to halt attacks</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli strikes on Gaza kept going for a second night, with Palestinian officials and medical staff citing death tolls ranging from at least 13 to at least 18, while Israeli officials said they were targeting Hamas operatives and insisted there was still no deal to stop the attacks.</p>
+<p>The strikes hit Gaza City, Khan Younis and Deir al-Balah, and the fighting landed only days after a US-backed disarmament plan was presented as a route toward ending the war. Instead, the latest bombing sharpened the gap between Palestinian casualty reports, Israeli military claims and the political arguments over whether the ceasefire process can still hold.</p>
+<h3>Death tolls rise across several districts</h3>
+<p>Gaza’s Civil Defence Authority said Israeli military aircraft carried out strikes on Gaza City, Khan Younis and Deir el-Balah. Palestinian health officials said two people, including a child, were killed in a strike on a residential building in Gaza City, while another person was killed near Jabalia in northern Gaza.</p>
+<p>Another account said a father, mother and their nine-year-old son were killed in a strike on a house in Khan Younis, and a man and woman died when an apartment block was hit in Deir el-Balah. In parallel, medical staff said at least 18 Palestinians had been killed in strikes from dawn across Gaza City, Deir al-Balah and Khan Younis, describing the day as one of the deadliest in weeks.</p>
+<p>The accounts did not line up on the exact toll, but they pointed to the same pattern: repeated strikes across the strip, with casualties reported in both northern and southern Gaza and in residential buildings, homes and apartment blocks.</p>
+<h3>Israel said it was hitting Hamas operatives</h3>
+<p>The Israel Defense Forces said it was targeting military operatives in Gaza. In one account, the IDF said two Hamas militants were killed. In another post on X on Sunday, it said it had killed two Hamas commanders, one from the elite Nukhba force and one from the Maghazi Battalion, and another Hamas militant from the Jabalia Battalion in a separate attack last week.</p>
+<p>The IDF said all three were planning to attack Israeli targets. The military also said a strike on a flat in Deir al-Balah was targeting two commanders from Hamas’ elite Nukhba force, and that the Gaza City and Jabalia strikes also targeted military operatives, though it said it was still reviewing the situation.</p>
+<p>That military account sat alongside Palestinian reports that included children and other civilians among the dead. The latest strikes were also described as the second successive night of Israeli attacks on the territory.</p>
+<h3>A ceasefire roadmap is still unsettled</h3>
+<p>The strikes came days after Hamas accepted a disarmament plan, according to one report, which would see the Palestinian group hand over its weapons to US President Donald Trump’s Board of Peace. Last week Trump said the Board of Peace had reached an agreement for the “complete disarmament” of Hamas and other armed groups in Gaza, and on Friday he said Israel was “very happy” with the proposed agreement and called it a “big step for the Middle East.”</p>
+<p>A 15-point road map published on Friday sets out final steps for implementing the agreement, but it has not yet been put into effect. It says a process should begin to inventory and store heavy weapons, military production sites, weapons depots and tunnels, but the handover method is still unclear. The plan also says this depends on Israel meeting its commitments under the initial ceasefire deal.</p>
+<p>Hamas has said it would hand over weapons only after Israel stops military operations and pulls back its forces under the ceasefire terms. Israel, meanwhile, remains deeply sceptical about Hamas giving up its weapons or its control in Gaza. Far-right Israeli National Security Minister Itamar Ben Gvir dismissed the draft as “not acceptable.”</p>
+<h3>Cohen said there was no deal to halt the attacks</h3>
+<p>On Sunday, Israeli Energy Minister Eli Cohen said there was no deal to stop attacks on the Gaza Strip and said he saw a need for the territory to be placed under full Israeli control if Hamas did not disarm. He said Israel already controls 70% of the enclave. Reuters reported that he made the comments despite the Board of Peace plan for Israel to withdraw from Gaza.</p>
+<p>A spokesman for Prime Minister Benjamin Netanyahu’s office later told Reuters that Israel had expressed concerns to the US on the disarmament plan, saying that “nothing can happen before Hamas completely and truly disarms.” That left the political track unresolved even as bombs were still falling.</p>
+<p>The wider death toll under the ceasefire framework also remained grim. One report said more than 1,100 Palestinians had been killed since a supposed ceasefire came into effect last October; another put the number at at least 1,230 since a ceasefire was reached in October. However it is counted, the latest strikes showed that the ceasefire and disarmament process remains far from settled.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/czjlvvkzj20o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / At least 13 killed in Israeli strikes on Gaza after Hamas agree disarmament deal">BBC #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3362722/israeli-strikes-kill-9-gaza-cabinet-minister-says-no-deal-stop" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israeli strikes kill 18 in Gaza, minister says no deal to halt attacks">SCMP #1</a><a href="https://www.telesurenglish.net/gaza-ceasefire-violation" target="_blank" rel="noopener noreferrer" title="Telesur English / Deadly Signs of Gaza Ceasefire Violation as Israel Kills 18">TE #1</a><a href="https://www.telesurenglish.net/israel-kill-eight-gaza-peace-plan-stalls" target="_blank" rel="noopener noreferrer" title="Telesur English / Israeli Strikes Kill Eight as Gaza Peace Plan Stalls">TE #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="cnn,el_pais">
+  <summary>The dead at the border continue filling Ceuta’s large improvised morgue</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ceuta’s shops and terraces reopened as most of the migrants who entered the Spanish enclave this week moved back toward Morocco, but the city remained defined by the dead, a disputed toll and a question that still divides residents: who caused the surge and who is responsible for its aftermath?</p>
+<p>By Sunday, the streets no longer looked like a city on edge. Most of the 60,000 migrants who swam, scrambled and then charged into the tiny Spanish exclave in North Africa had walked back to Morocco, though some remained in the hills around the city. At the same time, Spanish civil guard ships continued searching for bodies in the waters near the stretch of urban beach that had been breached days earlier.</p>
+<h3>A city reopening, but not at ease</h3>
+<p>Shops had reopened, and the usual mix of residents and tourists in the city of 84,000 were filling the open-air terraces, restaurants and cafes. Even so, the mood stayed unsettled. Ceuta, which prides itself on being home to four cultures, was still grappling with the aftermath of the border surge, and locals were disagreeing about what caused it and who exactly should be blamed.</p>
+<p>That argument ran through everyday conversations in town. Mohamad Abdelkader Driss, a 44-year-old waiter at a fried fish restaurant, said: “It’s not the young men’s fault.” He added: “If you open the border, of course everyone comes in, but the young men aren’t to blame. The authorities are responsible.” Some migrants who returned to Morocco told a similar story, describing a border that was effectively open and saying authorities did little as they watched thousands of people cross.</p>
+<h3>The improvised morgue keeps filling</h3>
+<p>While the city reopened above ground, bodies continued to arrive at Ceuta’s provisional morgue in the old military hospital. The facility was installed after the massive influx of migrants last Thursday and is now equipped to hold up to 200 bodies. It continues receiving the dead from those who crossed the Tarajal pier or tried to swim along the border.</p>
+<p>The figures around the death toll do not match. Spanish authorities said Sunday that at least 72 migrants died, including some who drowned and others who were killed in a stampede to cross a breakwater barrier. Ceuta’s autonomous city government, led by the Popular Party’s Juan Vivas, has counted 88 fatalities. On the Moroccan side of the border, Morocco’s Interior Ministry said 11 deaths had been recovered, including 10 by drowning, while details were not released about the other.</p>
+<p>The old military hospital remains sealed. Access is blocked to unauthorized people, and Guardia Civil officers, Army personnel and forensics workers are kept out of view behind a wall. Guardia Civil officers have continued working at sea to recover bodies. Funeral home sources said many of the deceased are teenagers, some women, Moroccans and sub-Saharans.</p>
+<p>The bodies are not all from the pier stampede on Thursday. Some appear more deteriorated because arrivals at Ceuta’s coast had been ongoing for more than two weeks, and the swim across can leave victims submerged for a time. Currents carry them to different points of the city, where they are found later.</p>
+<h3>Blame, claims and the political backlash</h3>
+<p>The surge also pushed the dispute far beyond Ceuta. Morocco’s Interior Ministry said Sunday in a televised statement that around 40,000 people headed toward Ceuta last week during the crossing. The ministry said those who entered the exclave were misled by online misinformation, human trafficking networks and incorrect interpretations of legal and administrative information.</p>
+<p>Rabat’s account is not the only one shaping the debate. Spanish authorities described unauthorized arrivals on Thursday and Friday of 50,000 to 60,000, mostly young men, saying they swelled Ceuta’s population by more than half. The humanitarian crisis caused by the sudden rush of people has reignited immigration debates in Europe and beyond.</p>
+<p>That argument was visible in the streets as far-right Spanish politicians and well-known right-wing influencers arrived in Ceuta over the weekend. Their presence sparked counterprotests, including from members of the city’s large Muslim population, many of whom are of Moroccan descent. On Saturday evening, Alvise Pérez, a far-right Spanish politician and member of the European Parliament, called for migrants to be expelled. He later had to shelter in a bar as residents banged on the windows, before police escorted him away.</p>
+<p>A 20-year-old Ceuta resident and student, Noor Ahmed, said the protest and the arrival of figures like Pérez were opportunistic. “They just want to take advantage of the humanitarian crisis Ceuta is currently experiencing,” she said. Santiago Abascal, the leader of the far-right Vox party, visited Ceuta on Sunday and called the arrivals “an invasion.” He accused the Spanish government of failing to protect the border and demanded “drastic” measures.</p>
+<h3>Returns and a border still under watch</h3>
+<p>Even as the city tried to settle, the border remained in motion. The Government delegate, Miguel Ángel Pérez Triano, said authorities would work to speed up files for people who entered irregularly in recent days so returns could be carried out “as soon as possible.” Ceuta has almost 3,000 security and armed forces personnel deployed “for as long as necessary.”</p>
+<p>Detentions continued in the streets, unsettling residents who spent Sunday on restaurant terraces. People who were caught were taken to police cars and are likely to be moved to police stations for identification and expulsion proceedings. Others had moved to Benítez beach and toward the Center for Temporary Migrant Stay, while some slept on the hillside by the wetlands to avoid detection.</p>
+<p>The border itself stayed tense. Tarajal’s fog returned on Sunday, and the Guardia Civil officers patrolling the pier introduced a 500-meter buoy rope and a submerged mesh to hinder swimming crossings and allow denial of those who arrive by sea, in line with the Supreme Court’s recent ruling. During the night, several returns reportedly took place, and the Army controlled about ten people trying to enter by sea.</p>
+<p>Ceuta still had not returned to normal. The dead were still being brought in, the returns were still being processed, and the city’s residents were left with a crisis that had changed the streets as quickly as it had emptied them.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/02/europe/ceuta-migrant-surge-aftermath-latam-intl" target="_blank" rel="noopener noreferrer" title="CNN / Ceuta grapples with aftermath of border surge after most migrants leave the Spanish territory">CNN #1</a><a href="https://elpais.com/espana/2026-08-02/los-fallecidos-en-la-frontera-siguen-llenando-la-gran-morgue-improvisada-en-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / The dead at the border continue filling Ceuta’s large improvised morgue">El Pais #1</a><a href="https://elpais.com/espana/2026-08-02/marruecos-impone-la-ley-del-silencio-sobre-el-drama-de-las-decenas-de-muertos-en-la-frontera.html" target="_blank" rel="noopener noreferrer" title="El País / Morocco admits 11 deaths on its territory after the Ceuta stampede and presents itself as a &#x27;reliable and responsible&#x27; partner">El Pais #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="la_jornada">
+  <summary>With more than 170 victims, sexual predator pretends to be a psychologist</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Perla says her brother Ulises Portillo Barroso abused her for years, and that more than 170 people may be among the victims he left behind while posing as a psychologist in El Salto, near Guadalajara. The case now includes a Jalisco prosecutor’s investigation, protection measures for Perla, and her claim that his brief time in prison points to corruption.</p>
+<h3>A family secret that Perla says lasted for years</h3>
+<p>Perla, a 36-year-old professional makeup artist who is married and has two children, says the abuse began when she was four and continued through childhood and adolescence. In the interview with *La Jornada*, she described years of “manipulation, fear, threats and silence,” and said incest was something she did not even understand as a child.</p>
+<p>She said the secrecy around the abuse damaged her self-esteem, mental health and worldview, and that she could not speak about it for a long time because of fear, guilt, shame and lack of support. “Incest is grotesque and normalized,” she said, adding that she had many suicide attempts.</p>
+<p>Perla said the trauma returned in recent months, when she suffered an emotional and psychological relapse. She said she learned through the media about complaints against her brother, who had a clinic while usurping the profession of psychologist.</p>
+<h3>The complaints, the clinic and the prosecutor’s file</h3>
+<p>The Jalisco prosecutor’s office opened investigation file 89856/2024 for sexual abuse, human trafficking, distribution of child pornography, usurpation of professional functions and improper use of uniforms and insignias, prosecutor Eduardo Guevara González said. The file seen by the newspaper also shows that second control judge Arturo González Santana asked the Office for the Protection of Girls, Children and Adolescents to assign staff for the “proper representation of the victims.”</p>
+<p>Perla said she had spent months looking for other affected people and that there are “more than 170 victims” of her brother, along with around 20 criminal complaints from women, men and minors. She said he was arrested but stayed in prison only six days, before being released on May 7, and suggested money and corruption were behind it, saying her parents were told to have given money.</p>
+<p>She also said Ulises continued to abuse women, men and minors, and that some of the victims were not patients but friends, classmates and former girlfriends. In her account, some were vulnerable patients with trauma, and she said he also committed digital abuse by providing online therapy and masturbating in front of patients.</p>
+<h3>Perla says other victims have come forward</h3>
+<p>Perla said the search for justice has brought victims together over time, with affected people identified since 2010. She said her sister is among those affected, and that her own family long kept quiet even after learning of some of the abuse. She described a 2008 moment when one brother showed her a video of the abuse, and said her mother told her to erase it and keep silent so her father would not know.</p>
+<p>She said the silence shaped her life at home and that no one took her to a psychologist. Later, she said, she married at 20 in November 2010 because her mother asked her to after learning of the abuse, though she wanted to study instead. She said her husband and children witnessed her many suicide attempts.</p>
+<p>Perla said she filed her own complaint against her brother on June 1, and that the El Salto prosecutor’s office, District V, Chapala, assigned file 2738/2026. She also said the Office of the Public Prosecutor Jovany Alonso Siordia Moya granted her protective measures under file 426/2026 because he considered her brother an imminent risk to her safety.</p>
+<p>She said she has returned to therapy, now suffers from anxiety and depression, and has separated from her brother since 2021. For her, the case is not only about her own abuse, but about the wider circle of women, men and minors she says Ulises Portillo Barroso harmed while pretending to be a mental health professional.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/02/politica/010n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / With more than 170 victims, sexual predator pretends to be a psychologist">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Burnham to focus on keeping child rapists in prison as release scheme talks enter final day</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham is trying to keep child rapists and other serious sexual abusers out of the government’s early release scheme as ministers race toward a Monday deadline that could ease prison overcrowding without widening the risk to victims.</p>
+<p>Ministers are understood to have 24 hours to work out which criminals can be released early to free up prison space, with every possible exemption weighed against the threat of the criminal justice system’s collapse. The prime minister halted plans in September to release thousands of killers, rapists and sex offenders during his second week in the role, but is keen to make as many exceptions as the small headroom in the prison estate will allow.</p>
+<h3>Child sexual abuse cases at the centre</h3>
+<p>Burnham wants child rapists and other perpetrators of serious sexual abuse to stay behind bars, after ministers heard concerns from victims’ representatives and support services. Those groups warned that failing to put safeguards in place for abuse victims would leave them at particular risk.</p>
+<p>A review of the scheme is expected to conclude by the end of Monday, giving the Prison Service time to prepare, but a final decision on exemptions has still to be made. The immediate question is how far ministers can go in carving out exclusions without making the overcrowding problem worse.</p>
+<h3>The prison-space squeeze</h3>
+<p>Ministers are also conscious that doing nothing could leave prisons with nowhere to put new arrivals. Sources told the Guardian that if no action is taken, prisons will run out of space, while exempting some criminals is likely to trigger fresh demands for others to be kept behind bars too.</p>
+<p>The former justice secretary David Lammy, who brought forward the act that paved the way for the releases, had already warned that failing to implement it could leave no capacity across jails in England and Wales in November. The new justice secretary, appointed by Burnham on 20 July, is Alex Norris.</p>
+<p>The early release scheme is still expected to go ahead this autumn, alongside a significant expansion in electronic tagging of offenders. The first group is expected to include about 700 people, despite warnings from probation officers that the move could cause chaos. The changes are part of the Sentencing Act 2026, which passed in January and from September will let some serious offenders leave halfway through their sentences instead of after two-thirds, while less serious offenders may be released after serving a third rather than 40%. Short prison sentences are also being restricted and replaced with probation and community orders.</p>
+<p>A government source said: “If we don’t take any action, we will run out of room – it’s not sustainable at all.”</p>
+<h3>Victims’ anger and political fallout</h3>
+<p>The scheme has already drawn anger from the family of PC Andrew Harper, whose killers may be eligible for early release. His mother, Debbie Adlam, called the proposed inclusion of two of her son’s killers, Jessie Cole and Albert Bowers, “another letdown” for the family.</p>
+<p>Jess Phillips, the former safeguarding minister and a critic of the plan, said it was right that exemptions were being considered, but added that there needed to be “a whole system change with how victims and risk is managed as the sentencing review goes forward”, done with victims’ agencies, probation officers and police.</p>
+<p>Claire Waxman, the victims’ commissioner for England and Wales, met Norris on Wednesday and said she welcomed his acknowledgment that victims had been let down and was “cautiously more hopeful” about progress. A Ministry of Justice spokesperson said the government was taking action to fix the prisons crisis, which it said was caused by “14 years of Conservative neglect”, and said the pause on September changes was intended to make sure the policy works for victims without running out of prison spaces.</p>
+<p>The issue is also likely to land on the new prime minister’s desk as he faces the Conservative leader, Kemi Badenoch, in the House of Commons for the first time.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/aug/02/andy-burnham-child-rapists-prison-release-scheme-talks" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham to focus on keeping child rapists in prison as release scheme talks enter final day">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,scmp">
+  <summary>Death toll from migrant rush into Spain’s Ceuta rises to 72</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The death toll after the mass crossing from Morocco into Spain’s Ceuta reached at least 72 on Sunday as five more bodies were found along the enclave’s coastline, while officials tried to restore order after an influx that overwhelmed health services and border controls.</p>
+<p>Spanish government representative in Ceuta Miguel Angel Perez said more than 1,000 people had been treated by health services since Thursday. He said the situation in the city had improved markedly, but “more remained to be done to re-establish normality.”</p>
+<p>The surge began Thursday at one of the European Union’s only two land borders with Africa. More than 50,000 people crossed into Ceuta by land and sea, and Spanish authorities said more than 48,000 returned to Morocco within 48 hours, with more going back over the weekend.</p>
+<p>Some migrants drowned and others were crushed while trying to climb a breakwater and border fence. Many had been driven to migrate by economic hardship and encouraged by social media rumours.</p>
+<p>Karima Abenaz, a French national in Ceuta with family in Morocco, said it pained her deeply that young people were dying at sea. She said it was not right that women with children as young as two months old should be crossing the sea only to die, and added: “In Morocco, there’s food, there’s everything we need.”</p>
+<h3>The counts and the bodies</h3>
+<p>Ceuta leader Juan Jesus Vivas told El País that the city’s morgue had received 88 corpses, including some who had died in earlier, smaller attempts to reach the territory in hazardous nighttime swims over the previous two weeks. He said Moroccan authorities were also recovering bodies from the sea, but no official information was available.</p>
+<p>As background, El País reported that Morocco’s Interior Ministry later said it had recovered 11 corpses in its waters after the border episode, including one person who fell from a rocky area beside Ceuta and 10 who drowned.</p>
+<h3>Barriers, patrols and political fallout</h3>
+<p>Authorities reinforced police and army patrols and installed a 500-metre floating barrier off Ceuta on Saturday. After the incident, 22 EU member states wrote a letter asking for coordinated action to protect external borders and other measures.</p>
+<p>Italy suspended passport-free Schengen travel arrangements with Spain for one month. Spain rejected suggestions that its more open stance on migrants encouraged the rush, saying people who entered Ceuta irregularly could not travel on to mainland Spain or elsewhere in the Schengen zone.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/2/migrant-deaths-in-ceuta-rise-to-72-after-border-surge-from-morocco?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Migrant deaths in Ceuta rise to 72 after border surge from Morocco">AJ #1</a><a href="https://www.scmp.com/news/world/africa/article/3362727/death-toll-migrant-rush-spains-ceuta-rises-72" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Death toll from migrant rush into Spain’s Ceuta rises to 72">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="cnn">
+  <summary>What we know so far about the plane crash that killed 11 European tourists near one of Peru’s most popular sites</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Peru temporarily suspended the sightseeing airline Aerodiana after one of its planes crashed in the country’s Ica region on Saturday, killing 11 European tourists and two Peruvian crew members. The flight was taking tourists to view the Nazca Lines, a UNESCO world heritage site near Nazca airfield, and the dead included travelers from Spain, Italy and Germany. The plane was a Cessna 208B Grand Caravan, which can carry 12 passengers.</p>
+<p>The Ministry of Transportation and Communications said Aerodiana must suspend all operations until investigations are completed to verify its compliance with aviation regulations, procedures and operating requirements. Officials said the crew reported a mechanical problem before radio contact was lost, and Peru’s Aviation Accident Investigation Commission is reviewing the call, the plane’s flight path and wreckage evidence. Authorities have not said whether the reported problem caused the crash.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/02/americas/nazca-plane-crash-dead-intl-latam" target="_blank" rel="noopener noreferrer" title="CNN / What we know so far about the plane crash that killed 11 European tourists near one of Peru’s most popular sites">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>Palestinian ‘doctor of the poor’ says he faces abuse, medical neglect in Israeli prison</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Dr Mazen Rantisi, a 71-year-old Palestinian physician popularly known as the “doctor of the poor,” says he has suffered physical abuse and medical neglect since Israeli authorities detained him more than a month ago. He was arrested in a pre-dawn raid on his home in Ramallah in the occupied West Bank on 21 June, and prosecutors later indicted him for serving as chairman of the board of the Union of Health Work Committees, a Palestinian non-profit that provides medical care to thousands of Palestinians each year. Rantisi, known for waiving fees, supplying medicines and running a clinic that serves low-income Palestinians, is being held in Ofer prison.</p>
+<p>Rantisi told a lawyer from the Public Committee Against Torture in Israel that prison authorities withheld his regular medication for the first 10 days and are still denying him one medicine. He said requests to see a doctor were ignored, that a medic checked his pulse only once through a small opening in the cell door, and prison units raided his cell several times a week and beat detainees. Saja Mishraki-Baransa said he had rapidly lost weight and described poor food, overcrowding and filthy conditions. The Israel Prison Service rejected his account, saying it held all prisoners in accordance with the law.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/palestinian-doctor-poor-says-he-faces-abuse-medical-neglect-israeli-prison" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Palestinian ‘doctor of the poor’ says he faces abuse, medical neglect in Israeli prison">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>5 Urgent Facts About Chile Flood Emergency as Deadly Storm Hits</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Chile’s flood emergency has deepened after a new frontal system left two people dead, more than 2,000 isolated and 180,000 users without power, while evacuations spread across several regions as authorities brace for more rain.</p>
+<p>The National Disaster Prevention and Response Service said the storm swept across central-northern and southern Chile and intensified an already serious winter emergency. Emergency crews were working to restore access and reach affected communities, while officials also kept monitoring river levels and blocked roads.</p>
+<h3>Deaths, isolation and power cuts</h3>
+<p>The Ministry of the Interior said the two fatalities occurred in the Los Ríos region when a large tree fell onto the vehicle carrying the victims. Alongside those deaths, authorities said more than 2,000 people were isolated and about 180,000 users were left without electricity.</p>
+<p>The damage has also reached homes and shelters. The emergency has left around 350 people affected, dozens of them in temporary shelters, and more than 1,000 homes damaged by wind, rain and flooding. Authorities said the situation has put pressure on already saturated terrain and vulnerable infrastructure.</p>
+<h3>Evacuations across several regions</h3>
+<p>In response to the rising risk, authorities ordered evacuations in several communes in Bío Bío, La Araucanía, Ñuble and Coquimbo. The move came as river overflows and infrastructure damage threatened local populations.</p>
+<p>Emergency teams remained deployed to assist stranded families and reopen blocked roads. Officials were also coordinating evacuations and keeping watch on river conditions as the storm system continued to move through the country.</p>
+<h3>A wider winter pattern still unfolding</h3>
+<p>Officials said this emergency is part of a broader winter pattern that has already caused 13 deaths in recent weeks and serious damage to roads, bridges and essential services. Chile’s meteorological service warned that rainfall could stay above historical averages in the coming months because of the persistence of El Niño.</p>
+<p>That outlook has kept disaster managers on alert, with brigades active to respond to new landslides, floods and transport interruptions. For now, the immediate focus remains on rescue work, restoring electricity and reconnecting communities cut off by the storm.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/chile-flood-emergency" target="_blank" rel="noopener noreferrer" title="Telesur English / 5 Urgent Facts About Chile Flood Emergency as Deadly Storm Hits">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>&#x27;They almost killed my child&#x27;: Women in Syria&#x27;s Roj camp describe night of gunfire and fear</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Women detained in Syria’s Roj camp say Kurdish-led forces opened fire on Friday evening during a confrontation that put children in the line of fire and deepened fear inside the facility, where protests over alleged abuse and demands for repatriation had already been building for days.</p>
+<p>No one was reported killed or wounded, but women inside the camp said bullets tore through tents and that the night turned into chaos that left them and their children severely traumatised. Videos, images and voice recordings obtained from sources inside Roj appear to show the aftermath, including the sound of gunfire and scenes of panic among women and children.</p>
+<h3>How the confrontation unfolded</h3>
+<p>Several women told Middle East Eye that the incident began around 6pm when Syrian Democratic Forces personnel entered the camp in armoured vehicles and set up what they described as a “human shield” on the main road. Detainees said women gathered to ask why the forces had come in, then were ordered back to their tents.</p>
+<p>Hoda Muthana, a woman detained in the camp, said the situation escalated after women challenged the soldiers’ presence. “The Kurds provoked the women for their own propaganda,” she said. “The women then reacted, and the Kurds began to shoot in the air, but one soldier shot through the tent.” She said bullets tore through a neighbouring tent belonging to an Indonesian family before passing dangerously close to where her son was sheltering.</p>
+<p>Muthana said her child had been lying there for about half an hour before the shots went through. “If the shot had been one or two feet lower, it would have hit my child,” she said. “I couldn’t move from fear. We were only a few feet apart. They almost killed my child.” She said the stand-off lasted about four hours and that several women nearest the guards were beaten.</p>
+<p>Another woman, speaking on condition of anonymity, said many of those who confronted the guards were unwell, unarmed and had gathered only to protect their children. She said her seven-year-old daughter ran and hid under a plastic chair when gunfire erupted, while other children screamed. “It’s a moment you can’t control,” she said, adding that years of detention had left families physically and psychologically exhausted.</p>
+<h3>What the protests were about</h3>
+<p>The shooting followed several days of protests that women in the camp described as peaceful and aimed at ending alleged abuses and securing repatriation to their home countries. One detained woman, Dalal, said the protests were triggered by a violent beating of a Russian detainee during a night raid earlier that week after the woman refused to hand over her money and mobile phone.</p>
+<p>Dalal said the assault echoed through the camp and marked a turning point after months of alleged night-time raids, beatings and confiscation of personal belongings. “That night the women gathered their courage for the first time, and everyone came out to see what was happening,” she said. “Since then we haven’t let them enter the camp.” She said the confrontation on Friday was a direct consequence of that resistance.</p>
+<p>Dalal, a Bosnian woman whose name has been changed for safety reasons, said she had travelled to Syria in 2015 and later ended up detained by Kurdish forces before being transferred to Roj, where she remains with her two children. “I want deportation,” she said. “I do not want to stay in Syria.”</p>
+<h3>A camp under pressure</h3>
+<p>The incident comes as rights groups have raised concerns about conditions inside Roj and renewed calls for international intervention. In June, Middle East Eye reported on a Repatriate the Children report that said violations inside the camp had increased “significantly in both frequency and severity” since January, based on testimony from more than 40 women held there between January and May.</p>
+<p>Roj, near the Iraqi border in Hasakah province, is administered by the Democratic Autonomous Administration of North and East Syria and guarded by the Kurdish-led SDF. It holds around 2,300 people, mostly foreign women and children, and became Syria’s last major detention camp for relatives of suspected Islamic State fighters after the collapse of al-Hol in January.</p>
+<p>Middle East Eye said it contacted the SDF for comment but had received no reply by the time of publication. Several women inside the camp said they now hope the Syrian government will eventually take control of Roj and allow them to go home.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/they-almost-killed-my-child-women-syrias-roj-camp-describe-night-gunfire-and-fear" target="_blank" rel="noopener noreferrer" title="Middle East Eye / &#x27;They almost killed my child&#x27;: Women in Syria&#x27;s Roj camp describe night of gunfire and fear">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,cnn">
+  <summary>Suicide bomber strikes antimilitant rally in northwestern Pakistan, killing at least 14</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A suicide bomber struck an antimilitant rally near a police station in Kabal, in Pakistan’s Swat Valley, killing at least 14 people and wounding more than two dozen, as officials and witnesses described a crowd demanding peace while the question of who carried out the attack remained open.</p>
+<p>Officials said the blast hit on Sunday in Kabal, a town in Khyber Pakhtunkhwa province, where demonstrators had gathered near a police station chanting antimilitant slogans. District police chief Omar Khan said at least 14 people were dead, and police said the toll included nine civilians and five officers. Bilal Faizi, a spokesman for the provincial emergency service, said the attacker struck dozens of people who were calling for peace.</p>
+<p>Witnesses said speakers at the rally had told the crowd that ensuring security and eliminating militancy was the state’s responsibility. They also accused authorities of failing to act decisively against militants, saying residents wanted to live without fear after years of violence that devastated the region.</p>
+<h3>Swat’s militant past has returned as a live fear</h3>
+<p>The attack landed in a valley that has long carried the memory of earlier militant rule. The Swat Valley was once a stronghold of Islamic militants who imposed a strict interpretation of Sharia before the Pakistani military launched a major operation in 2007 that drove them out and restored government control.</p>
+<p>That history has not stayed in the past. Officials said militants have resurfaced in the valley in recent months, fueling fears that the Pakistani Taliban are trying to regain a foothold. In response, residents have repeatedly staged anti-Taliban rallies across the valley to protest the militants’ presence.</p>
+<p>Pakistan has also faced a wider rise in militant violence in recent years, particularly attacks targeting police and security forces. The rally in Kabal took place against that backdrop, with the crowd gathering to press for protection rather than confrontation.</p>
+<h3>No immediate claim of responsibility</h3>
+<p>No group immediately claimed responsibility for the bombing, though suspicion is likely to fall on the Pakistani Taliban, known as Tehrik-e-Taliban Pakistan, or TTP. The TTP is separate from, but allied with, Afghanistan’s Taliban rulers. Many of its leaders and fighters have found sanctuary in Afghanistan since the Taliban returned to power there in 2021, and Pakistan has long accused Afghanistan’s Taliban government of harboring TTP militants, an allegation Kabul denies.</p>
+<p>A related report said the Pakistani Taliban later claimed responsibility. But in the immediate aftermath, the attack remained unclaimed while the political response in Pakistan centered on condemnation and grief.</p>
+<p>President Asif Ali Zardari and Prime Minister Shehbaz Sharif condemned the bombing, expressing deep sorrow over the loss of life. In separate statements, they offered condolences to the families of those killed, prayed for the recovery of the wounded and directed authorities to ensure the wounded receive the best possible medical treatment. They also said Pakistan’s fight against terrorism would continue until it is eradicated. Interior Minister Mohsin Naqvi also condemned the attack and offered condolences to the families of those killed, along with prayers for the speedy recovery of the wounded.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/2/suicide-bomber-kills-14-outside-police-station-in-pakistans-swat?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Suicide bomber kills 14 outside police station in Pakistan’s Swat">AJ #1</a><a href="https://www.cnn.com/2026/08/02/asia/suicide-bomber-in-northwestern-pakistan-kills-at-least-14-intl-latam" target="_blank" rel="noopener noreferrer" title="CNN / Suicide bomber strikes antimilitant rally in northwestern Pakistan, killing at least 14">CNN #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="axios,bbc,middle_east_eye,nyt,politico,scmp">
+  <summary>Trump cancels Iran strikes subject to deal being made &#x27;rapidly&#x27;</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">public_health</span><span class="badge">major supplement</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump said he has put planned strikes on Iran on hold for now, but only if a deal can be reached quickly, leaving the conflict at a tense pause while talks, regional pressure and rival claims over who asked for restraint remain unsettled.</p>
+<h3>Trump ties the pause to a fast deal</h3>
+<p>On Saturday night, Trump wrote on Truth Social that he had agreed to “cancel the attack” for “the future benefit of the WORLD” and “the survival of a successful and prosperous Iran,” but only “subject to being able to rapidly make a DEAL.” He said Iran and “other Middle Eastern Countries” had asked the U.S. to hold off because “the perimeters of a deal had been agreed to.”</p>
+<p>He said the deal would include the “Immediate, Complete, and Total OPENING OF THE HORMUZ STRAIT” and “an end to Iran’s nuclear threat.” The statement came after reports that the U.S. and Israel were considering new, intense strikes on Iran, including on energy and infrastructure targets.</p>
+<h3>Pressure built around the strike threat</h3>
+<p>The threat to attack had been circulating before Trump’s post. Some U.S. officials had indicated that strikes on Iran’s infrastructure were possible as Washington sought to push Tehran toward U.S. terms in ceasefire negotiations. Trump’s comments also followed a Friday cabinet meeting at Camp David in which the issue was discussed.</p>
+<p>Regional pressure was building at the same time. Trump spoke on Saturday with Saudi Crown Prince Mohammed bin Salman, who expressed concern over the strike plans. Other powers in the region, including Qatar, the United Arab Emirates, Turkey and Pakistan, had also pressed the U.S. and Iran to de-escalate.</p>
+<p>The stakes centered on the Strait of Hormuz and Iran’s nuclear programme. Trump has repeatedly threatened escalation, then pulled back when diplomacy appeared to open up. In this round, he framed the pause as part of a deal that would reopen the strait and end what he called Iran’s nuclear threat.</p>
+<h3>Iran pushes back, while talks stay uncertain</h3>
+<p>Iranian Foreign Minister Abbas Araghchi warned the U.S. and Israel against further action. In a post on his Telegram channel, he said any hostile action by the U.S. or Israel — or by regional countries cooperating with them — would be met with a “decisive and proportionate response” from Iran’s armed forces. He said this to Saudi Arabia’s Foreign Minister Prince Faisal Bin Farhan Bin Abdullah Al Saud.</p>
+<p>Iran also disputed Trump’s claim that it had asked Washington to stand down. Its semi-official Mehr news agency denied that Tehran had made such a request, calling Trump’s claim “nothing but a new lie.” Iran’s acting defence minister, Majid Ibn al-reza, said Tehran would “neither be caught off guard nor remain passive.”</p>
+<p>What remains open.</p>
+<p>Trump said the pause depends on making a deal “rapidly,” and one report said he later told reporters that negotiations with Iran would begin on Monday. But Iran had not confirmed that an agreement had been reached, and the gap between Trump’s account and Tehran’s denial left the status of any deal unresolved.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/02/trump-iran-attack-cancelled" target="_blank" rel="noopener noreferrer" title="Axios / Trump cancels Iran attack, citing progress in negotiations">Axios #1</a><a href="https://www.bbc.co.uk/news/articles/cjwx74qgld2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Trump cancels Iran strikes subject to deal being made &#x27;rapidly&#x27;">BBC #1</a><a href="https://www.middleeasteye.net/news/trump-cancels-iran-strikes-israeli-attacks-gaza-continue" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Trump &#x27;cancels&#x27; Iran strikes as Israeli attacks on Gaza continue">MEE #1</a><a href="https://www.nytimes.com/2026/08/02/world/middleeast/trump-iran-cancels-attack-deal.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Trump Says He Canceled Strikes on Iran, Claiming Progress on Outlines of a Deal">NYT #1</a><a href="https://www.politico.eu/article/donald-trump-says-he-is-cancelling-strikes-on-iran-pending-a-deal" target="_blank" rel="noopener noreferrer" title="POLITICO / Trump cancels strikes on Iran, says deal imminent">POLITICO #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3362682/trump-holds-iran-strikes-after-middle-east-allies-outline-deal" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump holds off Iran strikes after Middle East allies outline deal">SCMP #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3362732/trump-says-new-talks-iran-begin-monday-after-calling-strikes" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump says new talks with Iran to begin on Monday after calling off strikes">SCMP #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Sudan army drone attack on Darfur kills 35, rights group says</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Emergency Lawyers said Sudanese army drones struck a traditional court in the village of Garra al-Zawaya in North Darfur state on Sunday at about 1pm local time, killing at least 35 people and wounding several others. The group said civilians had gathered to attend hearings on local cases and disputes when the attack happened, and that the court building was also damaged.</p>
+<p>A witness told AFP the session was being held under a tree with local community leaders present, and said those killed included four tribal leaders and two RSF commanders. Garra al-Zawaya is near Kabkabiya, about 150km west of el-Fasher. The strike came amid the war that has raged since April 2023 between RSF commander Mohamed Hamdan Dagalo and army chief Abdel Fattah al-Burhan; tens of thousands have been killed in that conflict, according to the account.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/2/sudan-army-drone-attack-on-darfur-kills-35-rights-group-says?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Sudan army drone attack on Darfur kills 35, rights group says">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian,scmp">
+  <summary>Suspect in Idaho restaurant shooting died of self-inflicted gunshot wound, police say</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Police in Twin Falls say a Saturday shooting at a newly opened In-N-Out left multiple people dead and injured, while investigators now say the suspect died of a self-inflicted gunshot wound; the exact toll at the scene was still being described differently in reports.</p>
+<p>Police responding to the restaurant found the suspected gunman’s body near the building, Twin Falls public information officer Josh Palmer said. On Sunday, police chief Matthew Hicks said investigators were confident that 24-year-old Chad Williams carried out the attack alone and that he died from a self-inflicted gunshot wound.</p>
+<p>The violence erupted around 2pm at the restaurant in Twin Falls, a southern Idaho city of about 56,000 people, in a busy shopping plaza where hundreds of people were nearby when gunfire broke out. One witness, Haley Dodaro, said she and her mother were waiting in the drive-thru line when they saw people running across the road and workers bolting out of the restaurant. She said she first thought there might have been a fire before a man in a reflective vest told her there was a shooter.</p>
+<h3>Return fire and the immediate toll</h3>
+<p>Hicks said an off-duty state trooper and an armed citizen, whose names have not been released, returned fire and caused the suspect to move away from the restaurant. “We believe their actions helped drive the suspect away from the scene, preventing further casualties,” he said, adding that he wanted to commend their “heroic action” to stop the incident.</p>
+<p>Officials said on Sunday that two of the wounded had been treated and released from hospital, three remained in stable condition and two were still in critical condition. One report said three people were killed and seven others injured, while Palmer said on Saturday he did not know whether the suspect was included in the fatality count. The owner of the fast-food chain, Lynsi Snyder, later confirmed that one of those killed was an employee, saying in a statement that the company would mourn with the families and pray for them through a “very painful season.”</p>
+<h3>Investigators are still piecing together what happened</h3>
+<p>Detectives are still trying to determine what led to the attack, Hicks said, and he added that Williams’ family has been fully cooperating with investigators. The FBI is also asking anyone with photos or video from Saturday’s shooting to submit the material as investigators continue to piece together the sequence of events.</p>
+<p>Hicks also pushed back on false claims circulating online that wrongly identified another person as the gunman, stressing that the individual had “no involvement in this incident whatsoever.” For now, police have focused on confirming the identity of the suspect, accounting for the wounded, and sorting through accounts from the scene as the investigation continues.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/02/idaho-shooting-suspect-gunshot-wound-death" target="_blank" rel="noopener noreferrer" title="The Guardian / Suspect in Idaho restaurant shooting died of self-inflicted gunshot wound, police say">Guardian #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3362670/gunman-among-several-dead-shooting-idaho-n-out-burger-restaurant" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Gunman among several dead in shooting at Idaho In-N-Out Burger restaurant">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Partial Grid Failure Leaves Five Western Cuban Provinces Without Power</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A transmission fault split Cuba’s national electricity grid on Saturday evening, leaving five western provinces without service and sending restoration crews into a race to bring Havana and the wider region back online while officials warned more interruptions could not be ruled out.</p>
+<p>The Cuban Electric Union said the disruption began at 6:07 p.m. local time, when two 220-kilovolt lines tripped at the same time and divided the National Electric System (SEN). In one account, the utility identified the lines as linking Matanzas with Cienfuegos and Matanzas with Santa Clara; a later restoration notice referred to the second line as Matanzas and Villa Clara. In either case, the failure knocked out the western section of the system and left Pinar del Río, Artemisa, Mayabeque, Havana and Matanzas without electricity.</p>
+<p>The outage temporarily affected millions of residents across five of western Cuba’s six most populous provinces. The Havana Electric Company said restoration efforts began immediately in the capital, and authorities reported that three substations and eight distribution circuits had been returned to service, restoring electricity to 24,217 customers. The utility urged consumers to conserve electricity and remain patient during the restoration process.</p>
+<p>By early Sunday, UNE said the National Electric System had been restored across western Cuba. It said the system was fully restored at 1:10 a.m. local time, several hours after the outage began, and noted that Units 1 and 3 of Energas Varadero had been synchronized with the grid. UNE also said Unit 5 of the Máximo Gómez thermoelectric plant in Mariel, Units 1 and 2 of the Ernesto Guevara thermoelectric plant in Santa Cruz del Norte, and the combined-cycle unit at Energas Boca de Jaruco were in the startup phase.</p>
+<p>Authorities said recovery operations remained underway during the restoration and cautioned that further outages could not be ruled out while technicians worked to stabilize the system. They also said Cuba’s electricity infrastructure has been strained by restrictions on fuel, spare parts, technology and international financing, which they attribute to the United States’ blockade, and that contingency measures remained in place to prioritize hospitals, healthcare facilities, water supply systems and civil defense operations.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/grid-failure-western-cuban-without-power" target="_blank" rel="noopener noreferrer" title="Telesur English / Partial Grid Failure Leaves Five Western Cuban Provinces Without Power">TE #1</a><a href="https://www.telesurenglish.net/western-cuba-restores-power-grid" target="_blank" rel="noopener noreferrer" title="Telesur English / Western Cuba Restores Power Grid After Partial Outage">TE #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Mexico Sends More than 718 Tons of Supplies to Venezuela in 2 Navy Ships</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mexico sent more than 718 tons of humanitarian aid to Venezuela aboard the Navy ships *Papaloapan* and *Huasteco*, La Jornada reported. The Mexican Navy (Semar) and the Secretariat of Foreign Affairs (SRE) said the surface units departed yesterday from the port of Veracruz under President Claudia Sheinbaum Pardo’s instruction. The shipment was loaded and transported with support from the Secretariat of the Interior, the Administration of the National Port System Veracruz, and other federal authorities. La Jornada said the *Papaloapan* carries about 684 tons of supplies and the *Huasteco* about 34.5.</p>
+<p>The aid is being sent in response to the needs caused by the 7.2 and 7.5 magnitude earthquakes that struck central Venezuela on June 24, according to the same report. La Jornada said the quakes caused 4,490 deaths and left more than 17,000 families homeless. The institutions said the effort reflects Mexico’s humanitarian vocation and cooperation with peoples in Latin America and elsewhere facing situations of need.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/02/politica/005n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Mexico Sends More than 718 Tons of Supplies to Venezuela in 2 Navy Ships">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Trump&#x27;s on-again-off-again war against Iran: in his own words</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump’s public remarks about the US war against Iran have shifted sharply since the conflict erupted on February 28. The 80-year-old Republican has repeatedly made aggressive threats, then walked many of them back. He has declared victory and said Iran’s military capabilities were “utterly defeated,” only to later change the timeline or threaten Tehran with more strikes. On June 17, he praised Iran’s new leaders as “very smart” and “far less radicalised” than their predecessors. By July 8, he sounded frustrated, saying: “I don’t want to deal with them anymore, they’re scum.”</p>
+<p>One of the clearest examples came on March 21, when he warned that if Iran did not open the Strait of Hormuz within 48 hours, the United States would “hit and obliterate” Iranian power plants. Two days later, he extended the deadline by five days, citing “very good and productive conversations” with Iran, and then paused the “period of Energy Plant destruction” until April 6. He later posted more threats, including a message on April 7 about a “whole civilisation” dying, before saying hours later that he would “suspend the bombing and attack of Iran for a period of two weeks.” On June 11, he again threatened to hit Iran very hard, then said five hours later that he had cancelled the strikes because of progress in negotiations.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2020163/trumps-on-again-off-again-war-against-iran-in-his-own-words" target="_blank" rel="noopener noreferrer" title="Dawn / Trump&#x27;s on-again-off-again war against Iran: in his own words">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc,guardian">
+  <summary>Prolonged drought could cause shortage of some foods, farmers&#x27; union head says</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Prolonged drought across England and Wales is squeezing farms and raising the risk of shortages, with the National Farmers’ Union warning that some food products could become harder to find if dry conditions continue and Tom Bradshaw saying water shortages are already cutting output and pushing up costs.</p>
+<p>Bradshaw said yields of wheat and oats were “very, very poor” this year, while livestock farmers have had to use their winter feed rations because they have not been able to grow grass. He told the BBC that high temperatures and drought conditions had put “all areas of farming under increasing pressure,” and said vegetable producers were running low on water. “It does feel like there is going be some shortages of [food] products,” he said.</p>
+<p>The warning came as drought was declared across large parts of England and the whole of Wales after successive heatwaves strained water supplies, with more than 20 million people under hosepipe bans. Amber heat health alerts were also issued for large parts of England, including the Midlands, the south-east and south-west, until Wednesday.</p>
+<p>Bradshaw said water security had to be treated as part of food security. He called on the government to invest more heavily in reservoirs, saying too much water that could be collected during winter was being pumped out into the North Sea. He also suggested tax breaks for farmers to build water storage systems on their land, arguing that the country had “taken our food supply for granted for far too long.”</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cq89e771jqlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Prolonged drought could cause shortage of some foods, farmers&#x27; union head says">BBC #1</a><a href="https://www.theguardian.com/environment/2026/aug/02/britain-food-shortages-drought-continues-farmers" target="_blank" rel="noopener noreferrer" title="The Guardian / Britain could face food shortages as drought continues, farmers warn">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Demand for entrance to the Faculty of Medicine grows, but available spots decrease</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Demand for admission to UNAM’s Faculty of Medicine has risen over the past 17 years even as available places have fallen, according to an analysis by researcher Axel Meléndez. Demand grew 40 percent while the number of spots decreased by the same proportion, and the score needed on the entrance exam to be accepted rose 13 percent over the same period.</p>
+<p>Based on data from UNAM’s General Directorate of School Administration, the study says there were 11,274 applicants in 2009 and that demand rose almost continuously, though with ups and downs between 2017 and 2024. It also says the number of students trying to enter the program in 2026 was 16,441, a 40.2 percent increase from 2009, when 11,724 candidates were recorded. The study says UNAM offered 293 places in 2009, briefly raised them to 1,000 in 2013 and 2014, and then cut them to 176 by 2026; the entrance threshold rose from 103 correct answers in 2009 to 117 in 2026.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/02/politica/004n4pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Demand for entrance to the Faculty of Medicine grows, but available spots decrease">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc">
+  <summary>Massive Attack respond after Singapore ban over Palestine display</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Massive Attack said they were “surprised and disappointed” by Singaporean authorities after a 29 July show in the city-state, where Robert Del Naja and Grant Marshall held up a Palestinian flag and shouted “free Palestine” with members of the audience. The band said on Instagram on Sunday that its members were “detained by the police, isolated and separately questioned,” with some subject to hotel room searches and temporary passport confiscation.</p>
+<p>Singapore then said it had indefinitely banned Massive Attack from returning to the country. A police spokeswoman said on Friday that the two band members would not be allowed to re-enter Singapore and were barred from performing there. The group said the situation was a “surreal experience” and that it had not expected “merely holding up the flag of a sovereign state recognised by 157 countries” to violate any law; it also said large sections of the audience had led chants of “Free Palestine” before and after the show.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cr59qe86yj4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Massive Attack respond after Singapore ban over Palestine display">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>Farmer shot dead, 5 hurt in Narsingdi clash</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A farmer was shot dead and five others were injured in a gun attack in Raipura upazila of Narsingdi yesterday, around 9:00am in Sadagarkandi, a riverine area of the upazila. The dead man was Momen Mia, 60, of Sadagarkandi village in Chanpur union. According to police and locals, supporters of Chanpur union parishad Chairman Momen Sarkar and followers of former UP member Abul Kashem had long been in conflict over dominance in the area. They said a group of 20 to 25 armed men, allegedly led by Abul Kashem and another group leader, Farid Uddin, attacked Momen Mia’s home, opened fire and fled.</p>
+<p>Locals took the injured to Raipura Upazila Health Complex, where doctors declared Momen Mia dead. Raipura Upazila Health and Family Planning Officer Jannatul Naim said he was dead on arrival and had bullet injury marks on his head and legs. Momen Sarker said Momen Mia was his cousin and was shot after being held at gunpoint. Farid Uddin denied involvement, saying he was at his workplace in Noakhali. Police said they rushed to the spot and brought the situation under control.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/crime-justice/news/farmer-shot-dead-5-hurt-narsingdi-clash-4238856" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Farmer shot dead, 5 hurt in Narsingdi clash">TDSB #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="scmp">
+  <summary>China floods: large parts of country remain on alert as Gansu province death toll rises</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China raised the death toll from last week’s flash floods in Gansu province as heavy rainfall and swollen rivers continued to affect large parts of the country. State news agency Xinhua reported on Sunday that fatalities in Weiyuan county rose from 10 to 25 after the July 26 floods, which also injured 23 people. The National Commission for Disaster Prevention, Reduction and Relief had asked the provincial government to respond.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/article/3362695/china-floods-large-parts-country-remain-alert-gansu-province-death-toll-rises" target="_blank" rel="noopener noreferrer" title="South China Morning Post / China floods: large parts of country remain on alert as Gansu province death toll rises">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="scmp">
+  <summary>7 face arrest after Inner Mongolia fatal blast report exposes string of failings</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Seven people face arrest after an official report on a fatal blast at Baotou Steel Group’s plant in Baotou, Inner Mongolia, blamed a string of failures, including poor maintenance, design and oversight. Released on Sunday, the report from the Inner Mongolian emergency management department said the explosion, which killed 10 people and injured 84 earlier this year, resulted from a leak caused by corrosion on the inner wall of a steam storage pressure vessel.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/article/3362707/7-face-arrest-after-inner-mongolia-fatal-blast-report-exposes-string-failings" target="_blank" rel="noopener noreferrer" title="South China Morning Post / 7 face arrest after Inner Mongolia fatal blast report exposes string of failings">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China cotton association opposes U.S. suppression of firms over forced labor claims</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The China Cotton Association said on Saturday it strongly opposed the United States’ decision to add 43 Chinese companies, including cotton textile firms, to the “Uyghur Forced Labor Prevention Act Entity List.” The association said the allegations of “forced labor” have no factual or legal basis and argued that China’s cotton industry has followed a market-oriented and modern development path. It also said that in Xinjiang, more than 90 percent of cotton harvesting is now done by machines, with highly automated operations across planting, harvesting, processing and textile production.</p>
+<p>The association said the labor rights and interests of cotton farmers and industry workers are protected by Chinese law and that employment choices are completely voluntary. It called the U.S. move a “presumption of guilt,” said it disregards facts, and accused Washington of politicizing and weaponizing human rights issues to contain China’s cotton and textile industries. The CCA also said the sanctions would undermine global cotton supply chains and infringe on Chinese companies’ rights, while pledging continued support for Chinese cotton and textile enterprises.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260802/3e700d82041840179360808586cf6c3d/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China cotton association opposes U.S. suppression of firms over forced labor claims">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China&#x27;s central bank to enhance financial support for real economy in H2</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s central bank said on Sunday it will continue to implement a moderately loose monetary policy in the second half of 2026, strengthen counter-cyclical adjustment, and take steps to promote sustained and improved economic development. The People’s Bank of China said in a statement released after its work conference for the second half of the year that it was aiming to enhance financial support for the real economy.</p>
+<p>The PBOC said it will make comprehensive use of monetary policy tools and adjust them in a timely manner, while maintaining ample liquidity. It also said it will guide financial institutions to improve the balance of credit supply and keep the growth of social financing and money supply aligned with expected targets for economic growth and overall price levels. Other measures include promoting the high-quality development of a “technology board” in the bond market, steadily implementing risk-sharing instruments for technological innovation and private-enterprise bonds, improving the credit enhancement system for private enterprises and small and medium-sized enterprises, and strengthening financial service capabilities for SMEs.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260802/86ded05a83e94c24afeddbeee4d579de/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China&#x27;s central bank to enhance financial support for real economy in H2">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Artists, writers and scientists urge UK government to save Jodrell Bank Observatory</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">More than 100 artists, writers and scientists have called on the UK government to save Jodrell Bank Observatory after funding for the e-Merlin network of radio telescopes was slashed. The letter, sent to the new prime minister, Andy Burnham, business secretary Jonathan Reynolds and the head of UK Research and Innovation (UKRI), says it would be “foolish and shortsighted” to shut it down to save £2.8m a year. Among those backing the appeal are New Order, the Canadian astronaut Chris Hadfield and the poet laureate, Simon Armitage. Jodrell Bank in Cheshire includes the Grade I-listed Lovell telescope, and the letter says closing the home of e-Merlin would mean losing “some of the world’s clearest eyes on the sky”.</p>
+<p>UKRI said last week it would withdraw funding for e-Merlin when the current agreement ends in March 2028. Scientists said observations at Jodrell Bank could end completely unless other funding is found. The move threatens 28 jobs at the observatory and affects nearly 3,000 researchers who work within the facility. The Lovell telescope tracked the Sputnik launch in 1957 and sits at the centre of a global project mapping the first billion years of the universe.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/science/2026/aug/03/jodrell-bank-observatory-artists-writers-scientists-letter" target="_blank" rel="noopener noreferrer" title="The Guardian / Artists, writers and scientists urge UK government to save Jodrell Bank Observatory">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Iran says negotiations with Oman over Strait of Hormuz in final stages</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran’s foreign minister said negotiations with Oman over the Strait of Hormuz were in their “final stages.” In a Telegram post on Sunday, Abbas Araghchi said that in a report to the cabinet he described talks between Tehran and Muscat as “on the way to being finalised.” Foreign Ministry spokesman Esmail Baghaei said Iran and Oman were close to a deal on a new maritime route through Hormuz, separate from existing corridors, and said it would be a route acceptable to both sides that respects their sovereign rights and national interests. Muscat did not immediately comment.</p>
+<p>The Strait of Hormuz borders both countries’ territorial waters and is a key waterway through which about 20 percent of global oil consumption is normally shipped. Details of the proposed route were not immediately clear, and Baghaei earlier said an understanding on a new route had nothing to do with whether the strait is reopened or remains closed. The comments came after Donald Trump said the US and Israel had agreed to halt new attacks on Iran if a deal could be reached rapidly.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/2/iran-says-negotiations-with-oman-over-strait-of-hormuz-in-final-stages?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Iran says negotiations with Oman over Strait of Hormuz in final stages">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="nikkei_asia">
+  <summary>Anutin&#x27;s Indonesia visit, Japanese carmaker earnings, Taiwan drills</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Thai Prime Minister Anutin Charnvirakul is scheduled to make a two-day official visit to Indonesia starting Aug. 3. During the trip, Thailand and Indonesia are set to announce the Roadmap on Strategic Partnership 2026-2030 after agreeing last year to upgrade ties. The plan focuses on security, the economy and culture, and Anutin and Indonesian President Prabowo Subianto are expected to discuss security, transnational crime, trade and investment, food and energy security, and people-to-people relations.</p>
+<p>The week’s other major Asia items include Japanese automakers reporting earnings as they face disruptions from the U.S.-Iran war and rising competition from Chinese companies. Taiwan is also set to begin its Han Kuang defense drills on Wednesday, a 10-day exercise that will test the island’s readiness for a possible attack and include scenarios such as Chinese forces using their own drills as cover for an assault. Indonesia’s Financial System Stability Committee is due to announce the outcome of its quarterly meeting on Monday.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/spotlight/your-week-in-asia/anutin-s-indonesia-visit-japanese-carmaker-earnings-taiwan-drills" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Anutin&#x27;s Indonesia visit, Japanese carmaker earnings, Taiwan drills">NA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>DA claims victory after court overturns Tshwane city manager’s suspension</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The DA has won an interim order letting Johann Mettler return as Tshwane city manager after the Gauteng High Court found the council speaker had unlawfully set aside votes in the 9 July suspension, leaving the legality of that meeting for later review.</p>
+<p>On Friday, 31 July, Acting Judge Karin Pillay ruled that Tshwane Council Speaker Mncedi Ndzwanana had gone beyond his powers when he discarded 13 votes before declaring the outcome of the suspension vote. The court said the speaker had no authority to decide which councillors’ votes counted, and found that if those votes had been included, Mettler would not have been suspended.</p>
+<p>According to the judgment, 92 councillors voted to suspend Mettler and 82 voted against. But 13 votes cast by councillors who had been granted leave of absence were removed before the result was announced. The DA had gone to court last week arguing that those councillors still attended the meeting and voted, and that the speaker acted unlawfully by refusing to count their votes.</p>
+<p>Pillay said the speaker’s powers “do not, and cannot, include the power to exclude a clear constitutional mandate,” and rejected the idea that councillors on leave had lost the right to vote simply by being granted absence. The judge said that a councillor’s presence at a council meeting was enough to take part in the meeting, including voting, and that there was no legal basis for the speaker to decide otherwise.</p>
+<p>The court therefore suspended the council’s decision to place Mettler on precautionary suspension and ruled that he “is entitled to resume and continue in the office of city manager” until the review application is decided. The court did not make a final ruling on whether the 9 July council meeting itself was lawful.</p>
+<p>Mettler was removed after a motion by the EFF’s Tshwane leader, Obakeng Ramabodu, who accused him of maladministration, making irregular appointments and failing to carry out mandatory vetting for some officials appointed to the Tshwane Metro Police Department. He was appointed city manager in 2022 under then mayor Randall Williams of the DA, and had previously served as city manager of Nelson Mandela Bay.</p>
+<p>Tshwane mayor Nasiphi Moya said the city would respect the court’s order, while saying the disciplinary process would continue. The review application that will decide the legality of the council meeting has not yet been heard.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-02-da-claims-victory-after-court-overturns-tshwane-city-managers-suspension" target="_blank" rel="noopener noreferrer" title="Daily Maverick / DA claims victory after court overturns Tshwane city manager’s suspension">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="rappler">
+  <summary>Bong Revilla’s sister bags almost P5-billion DPWH contracts in family’s Cavite bailiwick</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Graia Construction, led by Bong Revilla’s sister Rebecca Bautista-Ocampo, received 67 DPWH projects worth P4.72 billion over nine years, mostly in Cavite, and the distribution has raised possible conflict-of-interest questions as Revilla relatives held legislative posts tied to the national budget.</p>
+<p>The company’s contracts were heavily concentrated in the Revillas’ home province. Of the 67 projects, all but two were in Cavite: 55 in Bacoor alone, with a combined value of more than P4 billion. Another four were in Kawit, two in Noveleta and one in Cavite City, all in the province’s 1st District. Those projects were worth P611 million in total.</p>
+<p>Graia also won three national road projects in Cavite — one along the Tagaytay-Amadeo road and two along the Tanza-Indang highway — totaling P49.4 million. The only projects outside Cavite were two road dike jobs in Obando, Bulacan, awarded in 2016 and worth P19.2 million. The contracts ran from 2016 to 2025, spanning the Duterte administration and the early years of Ferdinand Marcos Jr.’s term.</p>
+<p>The company got these awards while Rebecca’s two brothers and a nephew were lawmakers who had a hand in crafting the national budget, including DPWH’s. Bong Revilla served as Senate public works committee chairman until 2016 and returned to the post from 2019 to 2025, while his brother Strike represented Cavite’s 2nd District from 2016 to 2019 and his son Jolo won the 1st District in 2022. Rappler said that arrangement gives rise to a possible conflict of interest, which is punishable under the anti-corruption law.</p>
+<p>Rappler also said the infrastructure questions are not just about paperwork. Two Graia projects it visited in Bacoor were unfinished or in bad condition. In Barangay Habay, the DPWH said a revetment wall along the Bacoor River was only 39.83% complete even after the contract expired in March 2026. Another wall along Daang Bukid River, built in 2020, was already damaged, with steel exposed and an excavator left idle.</p></div>
+  <div class="source-list"><a href="https://www.rappler.com/philippines/luzon/bong-revilla-sister-graia-construction-dpwh-contracts-cavite" target="_blank" rel="noopener noreferrer" title="Rappler / Bong Revilla’s sister bags almost P5-billion DPWH contracts in family’s Cavite bailiwick">Rappler #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,axios,guardian,nyt">
+  <summary>Republican calls for Max Miller to resign from Congress amid abuse allegations</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Bernie Moreno, the Ohio Republican senator and Max Miller’s ex-father-in-law, publicly urged the congressman to step down on Sunday after Miller denied domestic and child abuse allegations and said he would stay in his reelection race, turning a private family dispute into a very public political rupture just before a ballot deadline.</p>
+<p>Miller made his case in a livestream on X, saying he was “not getting out of this race” and that he was “winning in November.” He said no court or government agency had substantiated an abuse allegation against him, that he had never faced criminal charges over the accusations, and that a child-welfare agency had deemed two reports about abuse involving his daughter unsubstantiated. He also denied assaulting his ex-wife, Emily Moreno.</p>
+<p>Shortly after the livestream, Moreno said Miller was a “danger” to his daughter and unfit for office. In a post on X, he wrote that if there were “any basic standards of character required to hold elected office, Max Miller fails them” and that he should not serve in the House of Representatives. He said he had tried to keep the matter private, but that Miller’s “increasingly erratic and dangerous behavior” had made that impossible.</p>
+<p>The clash came days before Wednesday’s deadline to replace Miller on the ballot if he were to leave the race, adding pressure to a contest Republicans and Democrats are already watching closely. President Trump was asked aboard Air Force One on Sunday whether Miller should resign; he said, “I’m gonna look at it,” and added, “so far, it’s accusations.”</p>
+<p>Emily Moreno has accused Miller in court filings of abusing her, and Miller has sued her for defamation. The allegations have also drawn in another former partner: Miller previously faced abuse claims from former Trump White House press secretary Stephanie Grisham, which he denied before that case ended in a 2023 settlement.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/2/republican-senator-says-former-son-in-law-should-resign-from-us-congress?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Republican senator says former son-in-law should resign from US Congress">AJ #1</a><a href="https://www.nytimes.com/2026/08/02/us/elections/max-miller-ohio-republican-moreno-election.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Ohio Senator Calls Former Son-in-Law Accused of Abuse Unfit for Office">NYT #1</a><a href="https://www.axios.com/2026/08/02/max-miller-moreno-abuse-allegations" target="_blank" rel="noopener noreferrer" title="Axios / Rep. Max Miller not dropping out after domestic abuse allegations">Axios #1</a><a href="https://www.theguardian.com/us-news/2026/aug/02/max-miller-domestic-abuse-allegations-calls-to-resign" target="_blank" rel="noopener noreferrer" title="The Guardian / Republican calls for Max Miller to resign from Congress amid abuse allegations">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Israeli finance minister calls for building settlements near Gaza amid ongoing offensive</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel’s far-right Finance Minister Bezalel Smotrich on Sunday called for the construction of three new Israeli settlements along the northern fence of Gaza, and urged Prime Minister Benjamin Netanyahu to approve the plan in a post on X. Smotrich, who heads Israel’s Settlements Administration, wrote that the body was “prepared to establish 3 settlements in the northern sector of the Gaza Strip” and asked for “the green light” for the move, as Israeli military attacks continued in Gaza and the occupied West Bank despite a ceasefire agreement announced in October.</p>
+<p>Smotrich also said Israelis were “returning” to settlements evacuated in 2005 and said Israel would establish additional settlements in the occupied West Bank. He said, “Alongside the four settlements to which we are returning, we will establish a long line of new settlements in northern Samaria,” adding: “On Mount Ebal, in the Dothan Valley, and in more than 10 additional points, we will strengthen and fortify the settlement.” Separately, the Palestinian health ministry in Gaza said six Palestinians were killed and 23 wounded in Israeli attacks over the last 24 hours, bringing its totals to at least 73,356 killed and 174,185 wounded since October 2023.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/smotrich-calls-building-settlements-near-gaza-amid-ongoing-israeli-offensive" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israeli finance minister calls for building settlements near Gaza amid ongoing offensive">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Healey’s profiteering warning on food and fuel risks row with retailers</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">John Healey warned that the government was ready to stop the public “being taken for a ride at the pump or the till” as the Iran war kept pushing up prices. In a weekend column, the chancellor said there was “no significant evidence of so-called price gouging” during the crisis, but told big retailers that ministers were “watching closely” for any signs of profiteering. He said the conflict was affecting national security and also “the family finances of millions of British people,” while businesses were under pressure from rising costs.</p>
+<p>The remarks risk a fresh row with retailers. The British Retail Consortium said ministers should focus on the effect of tax increases, including employers’ national insurance and business rates, on inflation. Andrew Opie, for the group, said supermarkets operate in a “highly competitive environment” and that the Competition and Markets Authority had repeatedly found that fierce competition, not government action, had kept food prices as low as possible. Earlier this year, Rachel Reeves raised the prospect of a cap on food prices, prompting a backlash from supermarket bosses.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/2026/aug/02/john-healey-profiteering-warning-retailers-backlash" target="_blank" rel="noopener noreferrer" title="The Guardian / Healey’s profiteering warning on food and fuel risks row with retailers">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>‘Unique in our jurisprudence’: The price of the state’s refusal to pay Fred Daniel</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The state’s refusal to settle Fred Daniel’s court costs has turned a R306-million judgment into a fresh clash at the Mpumalanga Tourism and Parks Agency, with repeated attempts to remove attached vehicles raising the question of how long the government can delay compliance.</p>
+<h3>Repeated visits to the MTPA</h3>
+<p>After Judge Neil Tuchten’s September 2025 ruling found Daniel had been the victim of a violent campaign led by former deputy president David Mabuza to bury his revelations of state capture in Mpumalanga, the dispute moved from judgment to enforcement. Zwane, the deputy sheriff of the Mbombela district, first went to the MTPA on 22 April 2026, then again on 11 May, and returned just after 8am on 25 May for a third attempt.</p>
+<p>The first two visits came to nothing because the vehicles he was meant to remove could not be found. On 25 May, the vehicles were on the premises, but staff from the MTPA’s legal department, identified in the affidavit as Mr Lubanga and Ms Hlapathi, would not allow the tow-trucks to take them away. Zwane said Mr Lubanga demanded to see a court order authorising removal, while Zwane maintained that no additional order was needed because the goods had already been attached under a warrant issued by the court.</p>
+<p>The confrontation sat inside a wider legal fight over the state’s non-payment. Daniel had secured a ruling that made the MTPA and the Regional Land Claims Commissioner jointly and severally liable for the R306-million award, and the evidence says the government had also failed to pay about R700,000 in cost orders from earlier interlocutory applications. An appeal followed, but on 29 July 2026 the Supreme Court of Appeal registrar said the latest record was non-compliant.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-02-unique-in-our-jurisprudence-the-price-of-the-states-refusal-to-pay-fred-daniel" target="_blank" rel="noopener noreferrer" title="Daily Maverick / ‘Unique in our jurisprudence’: The price of the state’s refusal to pay Fred Daniel">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,el_pais,politico,scmp">
+  <summary>Two helicopters collide while extinguishing a fire in Greece</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two firefighting helicopters collided over Greece as crews battled a major wildfire west of Athens, killing two people and leaving two others alive, while the country’s fire services grounded Bell helicopters and kept pressing on with evacuations and firefighting.</p>
+<p>The Greek Fire Service said the two leased Bell helicopters collided on Sunday while helping tackle a large blaze on the Attica-Boeotia border. Video of the crash site, about 65 km west of Athens, showed one helicopter striking the other’s propellers before bursting into flames and crashing into a ravine; the second aircraft made an emergency landing. Reports identified the dead as a Danish pilot and a Greek fire service liaison officer, while a British pilot and another Greek crew member survived. Some reports differed on the exact role of the Greek survivor.</p>
+<p>According to a source from the civil protection ministry, all Bell helicopters across Greece were grounded as a precaution. The British survivor was a private pilot hired for the wildfire season and that both survivors were conscious and admitted to hospital for observation.</p>
+<p>Prime Minister Kyriakos Mitsotakis said he felt “deepest sorrow” over the accident and said the loss “fills us all with grief.” The collision came as wildfires broke out across Greece this week, prompting mass evacuations. In Attica, the fire had spread through areas west of the capital, with reports describing flames still threatening communities near Athens.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c1417713ve6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Two crew killed after firefighting helicopters collide in Greece, as British pilot survives">BBC #1</a><a href="https://elpais.com/internacional/2026-08-02/dos-pilotos-mueren-al-chocar-dos-helicopteros-que-participaban-en-la-extincion-de-un-incendio-en-grecia.html" target="_blank" rel="noopener noreferrer" title="El País / Two helicopters collide while extinguishing a fire in Greece">El Pais #1</a><a href="https://www.politico.eu/article/greece-fire-helicopter-collision" target="_blank" rel="noopener noreferrer" title="POLITICO / Choppers collide, killing 2, as fires and foreboding grip Greece">POLITICO #1</a><a href="https://www.scmp.com/news/world/europe/article/3362725/greece-firefighting-helicopters-collide-battle-contain-wildfires-continues" target="_blank" rel="noopener noreferrer" title="South China Morning Post / 2 crew members dead, 2 found alive after firefighting helicopters collide in Greece">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,scmp">
+  <summary>Man admits transporting Scottish woman&#x27;s body in suitcase, Greek police say</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Greek police say a 26-year-old man has confessed to transporting Elisabeth-Jane Ross’s body in a suitcase to an abandoned building in Athens, while investigators still seek to establish how she died and to finalise the case under Greek law.</p>
+<p>Ross, 38, was found on 18 July in the Kypseli district, days after she was reported missing. Police said she had arrived in Greece on 26 June and stayed in the Piraeus area until 10 July, when she left for an unknown destination in Attica. Her family knew her as Lisa. They said she had later told friends she would go to Kypseli, where her “American friends” or acquaintances were.</p>
+<p>Police said they launched an investigation with help from authorities in the US, the UK and Scotland. After analysing video footage, they identified a 26-year-old man connected to the case and brought him to police headquarters on Thursday, where the force said he “confessed to his actions”. He was arrested on suspicion of manslaughter, robbery and weapons offences, but the exact charges have yet to be finalised under the Greek legal system.</p>
+<p>The police also said he transported Lisa’s body to the abandoned site in a suitcase and later used her bank cards to withdraw money. During searches at his home, officers said they found and seized a replica pistol and a knife.</p>
+<h3>What investigators are still checking</h3>
+<p>Police said on Saturday they were fast-tracking toxicology reports to determine the cause of death, saying results could come “in the coming days”. They were also trying to trace Lisa’s American friends, whom they said were staying in Kypseli.</p>
+<p>The case has drawn wider official attention in Scotland. First Minister John Swinney called it an “absolutely appalling case”, while a Scottish government spokesperson said the family was going through an “extremely distressing time” and that officials were in contact with the family and the Foreign, Commonwealth and Development Office.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c89ndd4g0gjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Man admits transporting Scottish woman&#x27;s body in suitcase, Greek police say">BBC #1</a><a href="https://www.scmp.com/news/world/europe/article/3362728/greek-police-arrest-suspect-over-british-womans-body-found-suitcase" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Greek police arrest suspect over British woman’s body found in suitcase">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="cnn">
+  <summary>‘The time is now’: Investors gear up to enter Venezuela despite enormous risks</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In central London, around 200 people from the energy industry gathered in a ballroom at The Langham hotel on Thursday evening to discuss something that, eight months earlier, seemed unthinkable: investing in Venezuelan oil. Greig Gilbert, chief executive of Apertura Energy, told the crowd, “The time is now,” and said his company hopes to make big-ticket investments in Venezuela’s dilapidated oil sector. Apertura was among investors, trading houses, and oil and gas companies at the event, which was described as a preview of Venezuela Energy Week, scheduled for October in Caracas.</p>
+<p>Speakers also acknowledged the obstacles facing foreign companies in Venezuela, including decaying infrastructure, political uncertainty, and instability after June’s devastating earthquake. Even so, Gilbert urged the audience to seize the moment, saying there is “a window opening” and “an opportunity right now.” The event came as a handful of foreign oil companies and investment firms move to invest or expand under acting President Delcy Rodríguez, after reforms dropped a longstanding requirement that PDVSA hold a majority stake in joint projects. Claire Jungman of Vortexa said private companies can now operate fields directly, hold bigger stakes, and keep more of the profit.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/02/business/venezuelan-oil-foreign-investor-event" target="_blank" rel="noopener noreferrer" title="CNN / ‘The time is now’: Investors gear up to enter Venezuela despite enormous risks">CNN #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="el_pais">
+  <summary>The Exodus Message: &#x27;The border is open and you can cross without papers&#x27;</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A deleted TikTok message and a stream of social media posts pushed Moroccan youths toward Ceuta with promises of an open border and directions to Tarajal, while the origin of the online push and the force behind it remained unclear.</p>
+<p>Ahmed, a 23-year-old unemployed man, said on Saturday in Castillejos that the messages he saw on his screen had led him to Ceuta before he had to return. He described himself as desperate, saying he could not find his place in Morocco and that there was no room for him there.</p>
+<p>By midday Thursday, he said, the calls to head for Ceuta were already echoing through the networks. The message he received was blunt: “The Spanish border is open and you can pass without papers.” That slogan, the account said, helped mobilize a tide of youths along Morocco’s northern roads.</p>
+<h3>A deleted post that pointed north</h3>
+<p>One of the messages that circulated this week was a TikTok video later permanently deleted. It showed Ceuta imagery and included the line, “If you see these stairs, your dream will come true.” From there, the online trail turned into something closer to a map.</p>
+<p>Screenshots of Google Maps were shared to direct migrants to Ceuta’s Tarajal beach, at the border. The same networks also mentioned neoprene suits, fins, goggles, flotation devices and waterproof bags for documents and phones. They even steered people toward areas with lighter police presence.</p>
+<p>The dominant hashtag was hrig, a Dariya word that literally means “burn [the papers]” and is used in youths’ slang for clandestine emigration. The people drawn into the push were described as harraga, or burnouts, those leaving the country without a visa or work permit.</p>
+<p>“Hrig Sebta” was one of the communities formed across Facebook, TikTok, X, Instagram and other networks. The account had more than 20,000 followers before it was shut down, and Moroccan press cited it as one of the most active in pointing Fnideq, also known as Castillejos, as a meeting point.</p>
+<h3>The push spread faster than its source</h3>
+<p>The online mobilization was hard to trace back to a single origin because the accounts and groups behind it had already disappeared from the networks. The evidence also said message amplification may have relied on bots or automated accounts. For now, the trigger for the exodus of Moroccan youths remains to be located.</p>
+<p>There was, however, a clear precedent. Two years ago, Morocco’s National Security Intelligence Service detected a broad movement to incite irregular emigration on social networks. That effort was halted in September 2024, with dozens of detentions of bloggers and influencers accused of “issuing calls for collective illegal migration operations,” along with a preventive deployment of security forces at the Castillejos–Ceuta border.</p>
+<h3>A wider border crisis in the background</h3>
+<p>As background, the surge around Ceuta was also being linked to other developments and to a larger toll at the border. One account said a recent Supreme Court ruling excluding hot expulsions for irregular migrants arriving by sea had spread through mafias’ networks that traffic in human beings and produced “an avalanche” of arrivals in Ceuta. Pedro Sánchez attributed the pull effect to criminal human-trafficking organizations, matching Morocco’s official explanation.</p>
+<p>Another related account said bodies continued to arrive at Ceuta’s improvised morgue after the influx last Thursday, and that the death toll was still being counted differently on each side of the border.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-02/la-frontera-esta-abierta-y-se-puede-pasar-sin-papeles.html" target="_blank" rel="noopener noreferrer" title="El País / The Exodus Message: &#x27;The border is open and you can cross without papers&#x27;">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="cnn">
+  <summary>A top Mexican university used AI to prevent exam cheating. Now thousands of admissions are in doubt</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Daniel Fernando García Velázquez thought he had finally earned a place at UNAM after scoring 94 out of 120 on the university’s online admissions test, but a cheating scandal has since left his admission and thousands of others in doubt as the new semester nears.</p>
+<p>Velázquez took the exam four times before getting that result. On his first three attempts, he had to travel 400 km from Veracruz to Mexico City because UNAM required the test to be taken in person. This June, he traveled again for the university’s first online admissions exam, aimed at making access more equitable for applicants who otherwise had to come to the capital.</p>
+<p>UNAM later suspended enrolment while it dealt with suspected widespread cheating. The university annulled thousands of tests after results showed an unusually high number of perfect scores, suggesting some applicants may have used artificial intelligence tools or obtained questions in advance. Around 3,000 of roughly 150,000 tests have been invalidated, but all students have been left waiting for the outcome of the investigation. Some students who feel unfairly treated have blamed the AI surveillance system that was supposed to make the exam cheat-proof.</p>
+<p>The dispute has widened beyond the university. Mexican President Claudia Sheinbaum, a UNAM physics graduate, suggested on Tuesday that the university ask the attorney general to help get to the bottom of the matter. UNAM is a symbol of contemporary Mexico and a major route for social mobility, so competition for places is fierce.</p>
+<p>UNAM’s contractor for the exam, Territorium Life, defended its surveillance system, saying the platform “operated as planned” and that its integrity depended on both technological security and academic security. Later, UNAM said it had received the results of the technical commission’s investigation and found that some entrants had cheated using phones, companions and even identity theft. It said it would administer an in-person control exam to all applicants who got a passing mark this year or in the past five years, about 58,000 people, though it has not released the dates or locations.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/02/americas/mexican-university-unam-ai-cheating-scandal-intl-latam" target="_blank" rel="noopener noreferrer" title="CNN / A top Mexican university used AI to prevent exam cheating. Now thousands of admissions are in doubt">CNN #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-section="undercovered_watchlist" data-sources="mail_guardian">
+  <summary>#Aids2026: Bhekisisa analysed SA’s first LEN roll-out data. Here&#x27;s what it found</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Africa’s first six weeks of lenacapavir roll-out point to strong demand and a narrow rollout footprint, while officials are still trying to work out whether enough doses and return visits will be available to keep the HIV prevention programme moving.</p>
+<p>Bhekisisa analysed health department data showing that 31,297 of roughly 60,000 LEN users across Africa are in South Africa, more than half of the continent’s total through national roll-out programmes. The country began rolling out the twice-yearly HIV prevention injection on 5 June at 360 government clinics across six provinces, about 8% of public clinics.</p>
+<h3>Strong uptake, but uneven spread</h3>
+<p>By 19 July, the data showed 98.5% of HIV-negative people offered a choice between the daily pill and LEN chose the injection. Health Minister Aaron Motsoaledi said the department had worried that some people might hesitate because they associate jabs with Covid vaccines. “After the Covid pandemic, there was vaccine hesitancy and some people confuse LEN with a vaccine,” he said. “But our data tells us South Africans are realising lenacapavir’s value.”</p>
+<p>The roll-out has been concentrated in Gauteng and KwaZulu-Natal, which together account for just over two-thirds of South Africa’s LEN users and host the most clinics offering the injection: 129 in Gauteng and 94 in KwaZulu-Natal. The evidence also suggests the programme is reaching key groups, with women making up almost three-quarters of users and a quarter of users aged 15 to 24. Pregnant and breastfeeding women account for just over a quarter of users.</p>
+<p>The early figures also suggest LEN is bringing new people into prevention care. Around a third of users had never used HIV prevention medication before, while clinics gave an average of almost 4,200 injections a week since the rollout began.</p>
+<p>The unanswered question is whether supply can keep up. By 19 July, clinics had used 25,730 of the 115,320 doses that had arrived or were due to arrive by mid-June, leaving 18,083 in stock. At that pace, the stock would last until about mid-August, although more doses were expected to move into the supply chain. The Global Fund has pledged 974,450 doses over two years, and the health department said it is not expected to run out of donated LEN before phase 2 of the roll-out begins in April next year. South Africa also hopes to start buying generic versions once they are approved, with Sahpra saying at least one licensed manufacturer, India’s Hetero, has applied to register its product in the country.</p></div>
+  <div class="source-list"><a href="https://mg.co.za/news/health/2026-08-02-aids2026-bhekisisa-analysed-sa-s-first-len-roll-out-data-here-s-what-it-found" target="_blank" rel="noopener noreferrer" title="Mail &amp; Guardian / #Aids2026: Bhekisisa analysed SA’s first LEN roll-out data. Here&#x27;s what it found">Mail &amp; Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Mathematicians prove perfectly fair elections are impossible</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A University of Cambridge and University of Copenhagen study argues that no voting system can always satisfy three goals at once — local winners turning into local seats, national seat totals matching vote shares, and a fixed-size parliament — a limit that has become more visible as party systems fragment in northern Europe.</p>
+<p>The researchers examined proportional representation and first-past-the-post systems and concluded that every method for choosing a national legislature involves trade-offs, usually among local representation, national proportionality and the total number of seats. The project began after Denmark’s 2022 national election, when votes and seats failed to correspond for the first time in 75 years.</p>
+<p>In Denmark, the left bloc won the 2022 election even though it received fewer votes than the right bloc. The country uses a two-tier proportional system in which voters first elect local representatives and then extra “leveling” seats are assigned to bring each party’s seat share closer to its national vote share. But as support spreads across more parties, more leveling seats are needed. Denmark had 40 such seats in 2022, and that was no longer enough to produce a fully proportional result. “Essentially, it almost broke the system,” said study co-author Dr Frederik Ravn Klausen, adding that the Social Democrats ended up with one seat more than their votes would have indicated.</p>
+<h3>The trade-offs in practice</h3>
+<p>The researchers said the same mathematical strain shows up in other systems too. In Germany, preserving both local representation and proportionality caused the Bundestag to expand sharply before reforms were introduced in 2023. In the UK, the 2024 general election produced the country’s least proportional result on record, with Labour winning 63% of the seats after receiving 33.7% of the vote.</p>
+<p>Klausen and Sebastian Tim Holdum of the University of Copenhagen described the result as an impossibility theorem: once the number of parties gets high enough, one of the three principles has to give. They argue that this is a mathematical constraint, not corruption or conspiracy, and that countries can still choose which compromise they prefer.</p>
+<p>The paper also proposes an alternative called “geographically ranked guaranteed proportionality.” Under that method, each party would get seats strictly in line with its national vote share, while constituencies would be ranked by how strongly candidates performed locally. The authors say that would preserve proportionality, but weaken regional representation, because a candidate could win locally and still miss out if the party had already filled its quota elsewhere.</p>
+<p>The findings are published in the *Annals of Operations Research*.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260801042812.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Mathematicians prove perfectly fair elections are impossible">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Mysterious Milky Way object accelerates protons beyond one quadrillion electron volts</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An international team led by Hiroshima University has pinned down a Milky Way source that can push protons beyond one quadrillion electron volts, a finding that strengthens the case for a “proton PeVatron” and raises a bigger question: what kind of object is driving the acceleration?</p>
+<p>Cosmic rays are made mostly of protons, with a smaller number of electrons, and some reach energies higher than human-built particle accelerators. Tsunefumi Mizuno, the study’s first and corresponding author at Hiroshima University’s Hiroshima Astrophysical Science Center, said the highest-energy galactic cosmic rays can exceed 10^15 electron volts, or one peta electron volt. The source identified by the team is LHAASO J1912+1014u, a previously known object in the constellation Aquila near Altair.</p>
+<p>The result was published in The Astrophysical Journal on July 16, 2026. LHAASO J1912+1014u had been discovered in 2024 and was initially classified as a supernova remnant, but that interpretation became less certain after emissions above 100 TeV were detected. Earlier gamma-ray data from Tibet AS gamma and LHAASO suggested it could be a PeVatron candidate, but those observations alone could not rule out electrons.</p>
+<p>The new analysis combined data from three observatories: Fermi-LAT, FUGIN radio observations with the Nobeyama 45-m telescope, and NASA’s Chandra X-ray Observatory. Together with LHAASO measurements, the multiwavelength picture pointed to proton acceleration. The team said the gamma-ray spectrum, the match between gamma rays and interstellar gas, and the weak X-ray emission all supported the proton explanation.</p>
+<p>Mizuno said the researchers now plan to examine dozens of other possible proton PeVatrons in the Milky Way.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260731034150.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Mysterious Milky Way object accelerates protons beyond one quadrillion electron volts">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Dark matter’s secret force does the opposite of what scientists expected</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers examined what would happen if dark matter felt an additional attractive force beyond gravity, and the result was unexpected: the force makes dark matter gather more efficiently, but in most cases it does not speed up cosmic structure formation. Instead, the study in the *Journal of Cosmology and Astroparticle Physics* found that it tends to slow that growth. Zachary Weiner of the Perimeter Institute for Theoretical Physics, the study’s corresponding author, said what is known about dark matter has so far come only from its gravitational effects, leaving open the possibility of additional interactions hidden from ordinary matter.</p>
+<p>The work looked at theoretical models in which dark matter particles interact through a long-range force and used calculations plus cosmological data to test how that hidden interaction would affect expansion and structure formation. Scientists are considering such a “dark force” because highly precise observations do not always line up neatly: some measurements of cosmic expansion and large-scale structure differ slightly, some distant-Universe observations suggest expansion was slower than standard cosmology predicts, and studies of the cosmic microwave background have suggested matter may be more tightly clustered than expected. The researchers said the mechanism may also affect models tied to DESI and other dark energy ideas.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260801042822.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Dark matter’s secret force does the opposite of what scientists expected">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Cancer may be breaking its own DNA to keep growing</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A study from the Hebrew University of Jerusalem suggests that the same DNA control regions that help cancers drive growth may also leave tumor genomes under strain, creating repeated breaks and repairs that can increase mutation and instability.</p>
+<p>Cancer cells multiply by activating some genes far more strongly than healthy cells normally would, and many of those genes help tumors divide, survive, and keep growth programs running. The research, published in *Science Advances* and led by PhD student Osama Hidmi under Prof. Rami Aqeilan, focused on powerful DNA control regions called super-enhancers, which intensify activity in nearby genes.</p>
+<p>Using a sensitive genome-mapping method, the team mapped where double-strand breaks occur. Those are among the most severe forms of DNA damage because both strands of the DNA molecule are severed. The breaks did not appear randomly. Instead, they clustered inside genes controlled by super-enhancers, the very regions cancer cells were driving most aggressively.</p>
+<p>The researchers also tracked a natural cellular “alarm” signal that marks damaged DNA and brings in repair machinery. Their results showed that cancer cells repeatedly damage and restore DNA in these high-activity regions. That repair helps tumor cells survive, but each cycle also creates an opening for small errors. Over time, those mistakes may allow mutations to accumulate in the same places, making the affected DNA increasingly unstable.</p>
+<h3>Why the finding matters</h3>
+<p>In the study’s framing, the intense gene activity cancer depends on may be doing more than fueling growth. It may also be creating break hotspots that help tumors change, adapt, and become more aggressive. The researchers said this could help explain why some cancers develop new traits, including the ability to spread, withstand stressful conditions, or become less responsive to treatment.</p>
+<p>The work also points to a possible weakness. Hidmi said cancer cells depend on these high-stress DNA regions to keep growing, which could make them vulnerable there. The study suggests future treatments might aim to disrupt the intense gene activity driven by super-enhancers or prevent tumor cells from repairing the damage they create.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/07/260731034204.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Cancer may be breaking its own DNA to keep growing">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
