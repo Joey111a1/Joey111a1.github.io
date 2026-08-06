@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-06</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-06</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>Ceuta migrant disaster death toll rises to 141, Morocco&#x27;s deadliest in recent history</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 141 people died after Moroccan authorities opened the border gates into the Spanish enclave of Ceuta, in what appears to be Morocco’s deadliest migration disaster in recent history. Migrant rights group Caminando Fronteras said hospitals in northern Morocco had received 63 bodies recovered from Moroccan waters by Tuesday, while Spanish officials told Cadena SER that another 78 bodies had been found in Spanish waters. The Moroccan government has not officially confirmed the toll. Moroccan hospitals in Tetouan, Tangier, Fnideq and M’diq are holding the bodies, and most of the victims were Moroccan men aged between 20 and 30, though sub-Saharan Africans, women and children were also among the dead.</p>
+<p>Tens of thousands of people entered Ceuta through the Tarajal crossing after the gates were opened on Thursday. Spanish authorities invoked the “multiple victims” protocol normally used for mass-casualty disasters such as train crashes and aviation accidents. The death toll far exceeds earlier border tragedies: the 2022 Melilla border crush killed at least 23 people in the official count, while rights groups recorded 37 deaths, and 15 people died at Ceuta’s Tarajal beach in 2014.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/ceuta-migrant-disaster-death-toll-rises-morocco-deadliest-recent-history" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Ceuta migrant disaster death toll rises to 141, Morocco&#x27;s deadliest in recent history">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc,cnn,nyt,scmp">
+  <summary>Russian strikes kill 17 in Kyiv region as Ukraine fails to stop missiles</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 17 people were killed and dozens more wounded in Kyiv and surrounding areas overnight after Russian missiles and drones hit warehouses, rail facilities and industrial sites that Ukraine’s air defenses failed to stop, sharpening pressure on Kyiv’s shortage of Patriot interceptors.</p>
+<p>Explosions were heard in Kyiv after midnight, and smoke hung over the capital at sunrise after fires broke out in several places across the region. Ukraine’s air force said it shot down 98 of 115 drones fired overnight, but it did not intercept any of the missiles. The strikes left rescue workers operating under high-risk conditions because the danger of further attacks remained.</p>
+<h3>A night when missiles got through</h3>
+<p>The attack was notable not just for the scale of the damage, but for what Ukrainian defenses could not stop. One account said Russia fired more than two dozen ballistic and anti-ship missiles, and Ukrainian defenses intercepted none of them. Authorities said at least 17 people were killed and dozens wounded in Kyiv and surrounding areas.</p>
+<p>That failure to stop the missiles landed in the middle of an air war that has increasingly put cities under pressure far from the front lines. The strikes came after Ukraine had already warned that it was running perilously low on the interceptor missiles used by Patriot systems, the defenses seen as key against some advanced ballistic missiles. Without those interceptors, Ukraine’s skies were described as “wide open” and civilians “fully exposed” to Russian missile barrages.</p>
+<h3>Warehouses, rail sites and factories were hit</h3>
+<p>The immediate damage was concentrated around civilian business and logistics sites. Ukrainian officials said the overnight strikes mainly targeted warehouses, with some hits on infrastructure and a railway station. A local official said eight people were killed in a strike on a railway station on the eastern edge of Kyiv. Other reported damage included a brewery, hardware store warehouses and industrial buildings in the Kyiv region.</p>
+<p>Prominent Ukrainian businesses also reported losses. Iryna Chechotkina, co-owner of Rozetka, said three ballistic missiles struck a warehouse complex. She wrote on Facebook that she had watched “the work of my entire life go up in flames.” Epicentr said its manufacturing infrastructure was hit in what it called a “devastating attack,” and said one of its male employees was killed. FOZZY group said shelling caused fires at two of its distribution centers and that six of its employees were killed, with more injured.</p>
+<p>From Moscow’s side, the Ministry of Defense said its forces launched a “massive strike” using ground-based precision-guided weapons and long-range strike drones. It said the targets were transport, logistics and distribution centers involved in storing and delivering weapons and military cargo, and in producing and distributing unmanned aerial vehicles.</p>
+<h3>Zelensky links the deaths to interceptor shortages</h3>
+<p>Volodymyr Zelensky used the aftermath to press the case for more air-defense support. He said delays in deliveries, or reluctance to provide anti-ballistic systems, lead to “horrific casualties and destruction.” He also said that partners unable to help more actively with interceptors could support Ukraine by imposing new sanctions.</p>
+<p>Later on Wednesday, Zelensky said he had spoken to NATO Secretary General Mark Rutte about securing more interceptor missiles. In a post on X, he said they had coordinated efforts with countries that have the necessary missiles and the capacity to help. The plea came against the backdrop of what Ukraine describes as a critical shortage of US-made interceptors for Patriots, the system relied on to stop certain ballistic missiles.</p>
+<p>The air-defense gap has become central to how the war is being felt in the capital. Ukraine can still intercept most drones, but the missile attacks that slip through are the ones causing the deadliest damage to buildings, warehouses and transport links in and around Kyiv.</p>
+<h3>What remains unresolved</h3>
+<p>The broad outline of the overnight attack is clear: deaths in Kyiv and the surrounding region, dozens of wounded, heavy damage to civilian infrastructure, and another Ukrainian appeal for more interceptor missiles. What remains contested is the framing of the targets. Zelensky said the main targets were warehouses belonging to civilian enterprises, while Moscow said it hit logistics and distribution centers tied to weapons, military cargo and drone production.</p>
+<p>For now, the immediate response is still centered on rescue work and on trying to close the air-defense gap before the next barrage. Ukrainian rescue crews were still working under dangerous conditions as authorities warned that further strikes could follow.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cyvlgq2gp2eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / After deadly Kyiv strike, Ukraine warns interceptor shortage is costing lives">BBC #1</a><a href="https://www.cnn.com/2026/08/05/europe/russia-ukraine-kyiv-attack-intl-hnk" target="_blank" rel="noopener noreferrer" title="CNN / No Russian ballistic missiles shot down by Ukraine in night of attacks that killed 17">CNN #1</a><a href="https://www.nytimes.com/2026/08/05/world/europe/ukraine-war-kyiv-russia-missile-attack.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Deadly Missile Attack on Kyiv Exploits Ukraine’s Depleted Air Defenses">NYT #1</a><a href="https://www.scmp.com/news/world/europe/article/3363015/least-15-killed-russian-strikes-around-kyiv-both-sides-intensify-long-range-attacks" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Russian strikes kill 17 in Kyiv region as Ukraine fails to stop missiles">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Us iran israel oman strait of hormuz latest news updates</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Israeli military told people in the southern Lebanese village of Mansouri to leave their homes and move at least 1km north of the village, which it said is inside an area of southern Lebanon occupied by the Israeli military. The warning was issued ahead of an imminent strike, and the IDF said this was the first such order in more than a month. It claimed Hezbollah had breached the ceasefire agreement signed by Israel and Lebanon in June, and said that had compelled it to “act forcefully against it”.</p>
+<p>Since the start of the war in March, the IDF has repeatedly ordered people in several towns and villages in southern Lebanon to head north, including after the ceasefire was announced. The war has displaced more than one million people, many of them multiple times. The warning in Mansouri came as the UN said more than 800,000 people displaced by the war had begun returning home, while officials from Lebanon and Israel continued US-sponsored talks in Rome aimed at ending the fighting.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/aug/05/us-iran-israel-oman-strait-of-hormuz-latest-news-updates?page=with%3A6a732fec8f0821d9ede5b040#6a732fec8f0821d9ede5b040" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran israel oman strait of hormuz latest news updates">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp,xinhua_en">
+  <summary>China Focus: China rolls out countermeasures against U.S. restrictive measures</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China rolled out a series of countermeasures on Wednesday after recent U.S. restrictive measures, widening the dispute to imported office equipment, drone exports, six U.S. entities and certification bodies, while Beijing and analysts framed the moves as part of a broader exchange that could deepen if the U.S. keeps tightening pressure.</p>
+<p>A Ministry of Commerce spokesperson said the U.S. measures taken by the Federal Communications Commission and the Department of Homeland Security “seriously violated” the important consensus reached by the two heads of state and infringed on China’s legitimate rights and interests, leaving China “no choice but to respond.” The spokesperson also said China hoped the U.S. would revoke the relevant measures and return to “friendly consultation and cooperation.”</p>
+<h3>Office equipment probe and drone export curbs</h3>
+<p>Among the steps, the ministry launched what it called China’s first national security investigation into foreign trade, targeting imported office equipment with printing and copying functions that features foreign system software. Preliminary information, the ministry said, indicates that such equipment may affect national security interests in foreign trade.</p>
+<p>The ministry said foreign system software refers to driver software and embedded software developed, tested or maintained by foreign individuals or entities. The investigation will examine the products under probe, their impact on national security interests, domestic demand and reliance on foreign goods, technologies or services, the state and capacity of relevant domestic industries, and the impact of foreign government policies and other matters affecting national security interests in foreign trade.</p>
+<p>China also said exports of drones, key components and related technologies on its dual-use export control list will face rigorous case-by-case review when destined for the United States, and will not be eligible for license facilitation measures.</p>
+<h3>Sanctions on U.S. entities and certification bodies</h3>
+<p>Beijing also added Compliance Testing LLC to its countermeasure list, saying the company assisted and supported FCC actions that endanger China’s sovereignty, security and development interests. It separately imposed countermeasures on six other U.S. entities: Applied DNA Sciences, Stratum Reservoir, Altana Technologies, Responsible Business Alliance, Verite Group and Human Rights in China.</p>
+<p>Under the ministry’s decision, organizations and individuals within China are prohibited from engaging in transactions, cooperation or other related activities with Compliance Testing LLC or any of the six entities.</p>
+<p>Separately, China’s National Certification and Accreditation Administration said it would suspend the authorization of U.S.-based certification bodies to conduct follow-up factory inspections for products certified under the China Compulsory Certification system, effective immediately. The CCC system is part of China’s market access regime and is used, among other things, to safeguard national security and prevent market fraud.</p>
+<h3>A widening dispute and Beijing’s warning</h3>
+<p>The ministry said the FCC had repeatedly stretched the concept of national security and introduced restrictive measures against China covering telecom operations, testing laboratories, drones, consumer routers, submarine cables and other fields. It also said the U.S. Department of Homeland Security added more than 40 Chinese entities to the Uyghur Forced Labor Prevention Act Entity List on July 31, one day after a video call between the Chinese and U.S. lead persons for economic and trade affairs.</p>
+<p>In that setting, analysts said China’s latest export controls and sanctions against American companies underscore Beijing’s expanding economic toolkit and its willingness to use it. Wendy Cutler, senior vice-president at the Asia Society Policy Institute, said the multiple actions China undertook “underscore the breadth and depth of China’s retaliatory toolbox.”</p>
+<p>The spokesperson said China’s countermeasures were generally restrained and that China cherishes the stability in bilateral trade and economic ties. But the warning was explicit: if the United States keeps introducing new restrictive measures against China, Beijing said it will take further countermeasures in response.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/diplomacy/article/3363101/chinas-retaliation-against-us-shows-depth-its-trade-war-strategy-analysts-say" target="_blank" rel="noopener noreferrer" title="South China Morning Post / China’s retaliation against US shows depth of its trade war strategy, analysts say">SCMP #1</a><a href="https://english.news.cn/20260805/131a0a1df6014585abbf11ebaaf1b79e/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China Focus: China rolls out countermeasures against U.S. restrictive measures">XNAE #1</a><a href="https://english.news.cn/20260805/4a9c53c2aa3e41668e2cce5deb0a87ad/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China announces countermeasures against six U.S. entities">XNAE #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,bbc,el_pais,guardian,nyt,scmp">
+  <summary>Iran says it has agreed Strait of Hormuz shipping route with Oman</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran said it has agreed the coordinates of a new shipping route through the Strait of Hormuz with Oman, but it also warned that the waterway would not necessarily be safe for all vessels while US pressure and a naval blockade remain in place.</p>
+<h3>A route agreed in principle</h3>
+<p>Iran’s foreign ministry said on Wednesday that talks with Oman over future transit routes through the strait had been “moving forward” for the past two months, with the aim of “determining a safe transit route for commercial shipping through the strait”. Foreign ministry spokesperson Esmaeil Baghaei said the “geographical coordinates” of the route proposed by the two sides had been agreed, and that a joint statement was in the final stage of review and drafting if “certain third parties” did not obstruct the process.</p>
+<p>Kazem Gharibabadi, Iran’s deputy foreign minister for legal and international affairs, said an understanding had been reached on almost all issues, including the location of entry and exit routes for maritime traffic. He said large parts of the route would pass through Iran’s territorial waters and some parts through Oman’s waters. He also said the existing temporary routes would be closed, and that the new route would be used for two to four months or potentially longer.</p>
+<p>The ministry did not give specific details on the proposed route. But the broad outline points to a deal that would redirect shipping through a planned corridor rather than reopening the strait in a simple return to previous conditions.</p>
+<h3>The wider standoff over Hormuz</h3>
+<p>The talks are taking place against the backdrop of Iran’s near-total closure of the Strait of Hormuz after Tehran and Washington called an end to a June 17 memorandum of understanding and resumed strikes in the war that began when the US and Israel attacked Iran on February 28. Al Jazeera said resumed strikes have disrupted about 20 percent of the world’s oil and liquefied natural gas exports, leading to price increases.</p>
+<p>The strait has become the central point of dispute over shipping and control. US officials, including President Donald Trump, have said Tehran is keen for a deal to reopen the waterway, while US officials have repeatedly said they would not accept any arrangement that left Iran in control. Baghaei said the closure of the waterway was due to “US military aggression and the Zionist regime’s aggression against Iran”, and stressed that any understanding with Oman by itself could not mean the strait had become secure for transiting vessels.</p>
+<p>He said the factors making the strait insecure “still exist on the part of the United States”, especially “the naval blockade and other aggressive and threatening actions against Iran and its interests”. In the same account, a Tehran-based researcher at the Center for Strategic Studies, Ali Akbar Dareini, said Iran was aiming to “stabilise” its control over the strait, which he called its “biggest military achievement of the war”. He said the negotiations were aimed at “stabilising those achievements”.</p>
+<h3>What remains unsettled</h3>
+<p>Even with the route agreement described by Iranian officials, the end point is not clear. Baghaei said any joint statement would only follow if outside parties did not interfere, and he warned that a deal with Oman would not, on its own, make the strait safe for every vessel.</p>
+<p>That leaves the wider political question unresolved: whether a route arrangement with Oman can move shipping forward while the dispute with the United States over control, blockade and security remains in place.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/5/iran-says-hormuz-talks-with-oman-in-final-stages-as-route-approved?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Iran says Hormuz talks with Oman in ‘final’ stages as route approved">AJ #1</a><a href="https://www.theguardian.com/world/live/2026/aug/05/us-iran-israel-oman-strait-of-hormuz-latest-news-updates?page=with%3A6a73602f8f0821d9ede5b324#6a73602f8f0821d9ede5b324" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran israel oman strait of hormuz latest news updates">Guardian #1</a><a href="https://www.bbc.co.uk/news/articles/ckg9d3eyeggo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Iran says it has agreed Strait of Hormuz shipping route with Oman">BBC #1</a><a href="https://elpais.com/internacional/2026-08-05/iran-insiste-en-mantener-el-control-del-estrecho-de-ormuz-mientras-trump-amenaza-con-abrirlo-por-la-fuerza.html" target="_blank" rel="noopener noreferrer" title="El País / Iran insists on maintaining control of the Strait of Hormuz while Trump threatens to open it by force">El Pais #1</a><a href="https://www.theguardian.com/world/live/2026/aug/05/us-iran-israel-oman-strait-of-hormuz-latest-news-updates?page=with%3A6a738ee08f08086f525bbf8b#6a738ee08f08086f525bbf8b" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran israel oman strait of hormuz latest news updates">Guardian #2</a><a href="https://www.theguardian.com/world/live/2026/aug/05/us-iran-israel-oman-strait-of-hormuz-latest-news-updates?page=with%3A6a736e488f0821d9ede5b3b8#6a736e488f0821d9ede5b3b8" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran israel oman strait of hormuz latest news updates">Guardian #3</a><a href="https://www.theguardian.com/world/live/2026/aug/05/us-iran-israel-oman-strait-of-hormuz-latest-news-updates?page=with%3A6a73542f8f0821d9ede5b264#6a73542f8f0821d9ede5b264" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran israel oman strait of hormuz latest news updates">Guardian #4</a><a href="https://www.nytimes.com/2026/08/05/world/middleeast/iran-oman-strait-of-hormuz.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Iran Says It Is Nearing Final Agreement With Oman on Strait of Hormuz">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3363094/iran-and-oman-agree-new-hormuz-route-tehran-says" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Iran and Oman agree on new Hormuz route, Tehran says">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="cnn">
+  <summary>‘Black widows’: Women accused of marrying Russian army recruits to claim death payouts</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russian families are confronting claims that some women marry recruits just before deployment to secure military death payouts, a practice officials and state media call “black widows,” while Maria says her father’s new widow became his legal next of kin just days before he was killed.</p>
+<h3>Maria’s shock after a wartime death and a sudden marriage</h3>
+<p>Maria said the Russian military told her that her 59-year-old father, Yury, had been shot on the front lines of the Ukraine war and later died of his wounds. She said she had not known he had enlisted at all, and was stunned again when she was informed that he had married just two days before being sent to fight.</p>
+<p>Sitting at the kitchen table in her small St. Petersburg apartment, Maria said, “I’m still in shock and still can’t accept what happened.” She added that it first felt like a dream, and that she sometimes still woke up thinking she must have imagined it. “But it is really happening,” she said tearfully.</p>
+<p>Maria said the bride, whom she had never met or even heard her father mention, was 22 years his junior. Because the woman became Yury’s legal next of kin, Maria said she was entitled to official compensation. “I’ve never even spoken to this woman,” said Maria, 37. “I don’t know what to say to her because I immediately suspected it was a scam.”</p>
+<h3>The payout system at the center of the scandal</h3>
+<p>When a Russian soldier is killed in battle, the military pays lump sums to the next of kin starting from 5 million rubles, or about $64,000. The compensation is meant to reassure recruits that if they die, their loved ones will be looked after.</p>
+<p>But there are mounting concerns in Russia that the benefit is being exploited by scammers. Russian officials and state media dub them “black widows,” saying they persuade vulnerable men to enter sham marriages before sending them to war, then claim the money if the men are killed and cut out other relatives.</p>
+<p>The issue has become especially sensitive as Russians hear more stories of recruits allegedly being married off shortly before they die, or even on their deathbeds. In one widely reported case last year, a nurse working at a military hospital was accused of marrying five soldiers in her care before they succumbed to their injuries in order to collect their death benefits; she was fired.</p>
+<h3>A wider backlash around war, money and marriage</h3>
+<p>The allegations have touched a nerve in a country where the war in Ukraine, which the Kremlin still calls a “special military operation,” is increasingly felt at home. The pressure comes amid a worsening economy, fuel shortages, the growing human cost of the war, and damaging Ukrainian strikes on Russian soil.</p>
+<p>Criticism of the supposed scammers has grown louder, and there have been public calls for an official crackdown. Leonid Slutsky, a prominent lawmaker in Russia’s usually uncritical parliament, said the families of “Special Military Operation” participants need protection from “brazen criminals,” including so-called “black widows,” financial scammers and telephone predators targeting people who receive payouts. He said such crimes were reaching “serious proportions.”</p>
+<p>At the same time, after Russia’s full-scale invasion of Ukraine in February 2022, the Kremlin encouraged Russian recruits to get married, a push that could strengthen family support and fit Vladimir Putin’s promotion of “traditional values” amid demographic decline. The authorities also tried to speed up marriages for newly enlisted soldiers by avoiding the usual notice period, and state television showed mass wedding events arranged by local officials.</p>
+<p>Disputed marriages, overturned claims and an open investigation.</p>
+<p>Some of the most public cases have ended in conflict over who should receive the money. One involved Georgy Kostyrko, a soldier from Ryazan who met Angelina Varyukhina online, married her 10 days later and then rejoined his unit. According to Kostyrko’s mother, Varyukhina later posted photos and videos of herself with other men online, and her son filed for divorce. He was killed before the paperwork was finalized, leaving Varyukhina as the legal recipient of the compensation.</p>
+<p>Varyukhina denied the accusations, saying they were meant to “blacken” her reputation and that she and Georgy had reconciled after a falling out. She said the images were posted to make him jealous. Her next-of-kin status was eventually overturned in court, but the case still caused widespread outrage.</p>
+<p>There have also been reports of security-force involvement in alleged “black widow” scams. Russian media reported an investigation in Primorsky Krai, in the far east, into a scheme allegedly involving a warrant officer, a sergeant and a military accountant. They were accused of recruiting vulnerable men, including orphans and people with no close relatives, arranging marriages for them and then sending them to high-risk front-line positions where they were more likely to be killed. There have been no public updates on that case.</p>
+<p>Back in St. Petersburg, Maria said she took CNN to her father’s old apartment, which has now been sold. She said she believes he was also scammed out of his home. The new owners insisted it was a legitimate sale and said they had never met the seller. Maria said that after the money and the widow are now gone, “There is absolutely nothing left, and that is incredibly painful.”</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/05/europe/russia-black-widows-marrying-army-recruits-intl-cmd" target="_blank" rel="noopener noreferrer" title="CNN / ‘Black widows’: Women accused of marrying Russian army recruits to claim death payouts">CNN #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Nigeria announces rescue of 308 kidnapped citizens</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nigeria said it had rescued 308 kidnapped citizens in an intelligence and security operation across Niger and Kwara states. Special adviser Bayo Onanuga said President Bola Ahmed Tinubu welcomed the rescue of people abducted in different attacks, including 163 taken from the Woro Community in Kaiama Local Government Area in Kwara State and 145 taken from Niger State. The statement said the victims were recovered from the Kainji Lake National Park Forest in New Bussa Local Government Area of Niger State in a “coordinated, intelligence-driven operation” carried out by the National Counter Terrorism Centre with members of the armed forces, the police force and the Department of State Services.</p>
+<p>The statement called it the largest same-day rescue operation ever carried out by Nigeria’s joint security team. The Kwara government also welcomed the rescue in a social media post, saying the release covered people abducted during the February 3 attack on local communities in Kaiama. The Nigeria-based Punch website said at least 200 people were killed in that attack, which it said involved suspected Boko Haram-linked fighters.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/5/nigeria-announces-rescue-of-308-kidnapped-citizens?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Nigeria announces rescue of 308 kidnapped citizens">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp,telesur_en">
+  <summary>Guatemala on volcano alert after Fuego erupts</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Guatemala kept a red alert in place after Fuego’s eruption forced evacuations, closed schools and a nearby highway, and left officials warning that the next 72 hours were critical as shelter counts and the scale of displacement were reported differently in official updates.</p>
+<h3>Evacuations and the widening alert</h3>
+<p>The eruption began Monday morning, when clouds of gas and ash rose above Fuego as lava and pyroclastic flows moved down the slopes. By Tuesday, Guatemala remained on alert after evacuating villages around the volcano, and CONRED said about 1,700 people were still in shelters while the evacuations would stay in place until conditions improved.</p>
+<p>Officials raised the alert level to red in Sacatepequez, Escuintla and Chimaltenango, where about 29,000 people are affected by ashfall and schools remain closed. In one update, CONRED executive secretary Claudinne Ogaldes told residents in the three municipalities to cover water deposits and wear face masks for protection from ash. Among those evacuated were around 250 people from El Porvenir and the hamlet of Las Lajitas.</p>
+<p>The situation remained active on Tuesday, with more mud and ash emitted from the volcano. Authorities warned the next 72 hours were critical as mudflows up to 7km long continued descending from Fuego, and incoming rain was expected to raise the risk of additional volcanic mudflows. CONRED said the mudflows had not reached villages and no structures had been reported damaged or at risk.</p>
+<p>A major highway near the volcano, National Route 14, was closed, and the Education Ministry suspended classes in nearby towns. CONRED also warned of ash spreading to nearby towns.</p>
+<p>A separate update said the red alert covered Sacatepéquez, Chimaltenango and Escuintla because of a critical explosive phase at the volcano, and that evacuations were urgent. That account said five shelters in Escuintla and Sacatepéquez were housing 1,400 evacuated people. It also said the official tally included 29,000 affected residents, 18 directly affected communities, 618 towns, 488 schools, 65 health centers and about 389,000 people at risk.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/americas/article/3363001/guatemala-volcano-alert-after-fuego-erupts" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Guatemala on volcano alert after Fuego erupts">SCMP #1</a><a href="https://www.telesurenglish.net/guatemala-declares-red-alert-as-fuego-volcano-enters-critical-explosive-phase" target="_blank" rel="noopener noreferrer" title="Telesur English / Guatemala Declares Red Alert as Fuego Volcano Enters Critical Explosive Phase">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Venezuelan Acting President Rodriguez Oversees Repairs to Thermoelectric Plants</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Tuesday, Venezuelan Acting President Delcy Rodriguez traveled to Carabobo state to inspect the Planta Centro and Termocarabobo thermoelectric plants, which were affected by the June earthquakes. She monitored work to restore installed capacity and strengthen the stability of the National Electric System in the country’s central-western region. The engineering work cited included restoration of Unit VI, with an additional 600 megawatts planned through technical upgrades, replacement of critical components and rehabilitation of turbines, along with maintenance of boilers, turbogenerators, turbine halls and distribution systems, repairs to the seawater canal for the condensation cooling system, and evaluations for mixed-investment schemes with private business owners.</p>
+<p>Rodriguez also supervised recovery work on homes affected by the earthquakes in Los Bloques de Moron, in Juan Jose Mora municipality. The community has 236 families living in five buildings, and none of the buildings sustained severe structural damage except for one structural support wall in a building. She met with those families to ensure they receive comprehensive assistance from the institutions supporting people affected by the June earthquakes.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuelan-acting-president-rodriguez-oversees-repairs-to-thermoelectric-plants" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuelan Acting President Rodriguez Oversees Repairs to Thermoelectric Plants">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="kompas">
+  <summary>&quot;Not even reaching the workplace yet, already out of breath&quot; Residents complain Lift at Polda Metro Jaya Transit Station dead</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sejumlah warga mengeluhkan matinya dua unit lift di Jembatan Penyeberangan Orang (JPO) Halte Transjakarta Polda Metro Jaya, Sudirman, Jakarta Pusat, pada Rabu (5/8/2026). Maya, pekerja asal Malaysia yang baru enam bulan tinggal di Indonesia, mengatakan ia kewalahan karena harus naik-turun tangga manual yang tinggi. Opi juga mengeluh lift yang mati membuatnya lelah dan menilai fasilitas itu penting untuk aksesibilitas, terutama bagi penyandang disabilitas, lansia, dan ibu hamil. Pejalan kaki lain, Feby, menilai lift tersebut perlu segera diperbaiki.</p>
+<p>Di lokasi, kedua lift tampak tidak beroperasi; akses masuk bagian bawah dipasangi tali pembatas biru dan lampu di dalam lift masih menyala. Teknisi yang ditemui Kompas.com mengatakan operasional lift sengaja dimatikan demi keselamatan masyarakat karena ada gangguan kelistrikan. Ia juga menyebut kelistrikan kedua lift saling terhubung, sehingga ketika satu bermasalah, lift satunya ikut tidak beroperasi.</p></div>
+  <div class="source-list"><a href="http://megapolitan.kompas.com/read/2026/08/06/06470051/-belum-sampai-tempat-kerja-sudah-ngos-ngosan-warga-keluhkan-lift-jpo" target="_blank" rel="noopener noreferrer" title="Kompas / &quot;Not even reaching the workplace yet, already out of breath&quot; Residents complain Lift at Polda Metro Jaya Transit Station dead">Kompas #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="mail_guardian">
+  <summary>Ntombi Maphosa</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ntombi Maphosa, 33, is an attorney in the Centre for Environmental Rights’ Pollution and Climate Change Programme, where she uses the law to protect communities facing industrial pollution and the climate crisis. She holds an LLM in international economic law from the University of the Witwatersrand and combines strategic litigation with advocacy to hold polluting industries accountable for violating air quality laws. Working alongside community organisations, she focuses on environmental justice for people whose health and livelihoods are most affected.</p>
+<p>She played a leading role in the landmark Deadly Air litigation, in which the Supreme Court of Appeal upheld that the state has an immediate constitutional obligation to protect people from harmful air pollution. She is also leading litigation challenging Eskom’s exemption from complying with air pollution laws at eight coal-fired power stations.</p></div>
+  <div class="source-list"><a href="https://mg.co.za/2026-08-05-ntombi-maphosa" target="_blank" rel="noopener noreferrer" title="Mail &amp; Guardian / Ntombi Maphosa">Mail &amp; Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="kompas">
+  <summary>Malaysia Police Dispatch Narcotics Investigators and Intelligence to Jakarta Following Pilot Carrying Ecstasy, Reveals Target of Operation</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Malaysia’s Royal Malaysia Police (PDRM) will send a narcotics investigations and intelligence team to Jakarta next week, with Datuk Hussein Omar Khan of Bukit Aman’s Narcotics Criminal Investigation Department saying the team will be there from 11 to 15 August 2026. Hussein said the visit is meant to gather more information on a syndicate believed to be behind a drug-smuggling attempt linked to a Malaysian pilot who was arrested in Indonesia, and to trace the wider drug-trafficking chain, from the supply source to possible links in Indonesia.</p>
+<p>Hussein said Malaysia will not seek extradition for the 39-year-old pilot, and that the suspect must go through the legal process in Indonesia. He also said PDRM and Polri will share case developments. The pilot was previously arrested by Indonesian authorities at Terminal 3 of Soekarno-Hatta International Airport in Tangerang after allegedly trying to smuggle drugs. Police said they found 15 packages containing 70,114 ecstasy capsules and methamphetamine, with an estimated value of 45 million ringgit, or about Rp 173 billion, based on Indonesian market prices. Indonesian police initially suspected the drugs were brought from Kuala Lumpur via Kota Kinabalu before arriving in Jakarta.</p></div>
+  <div class="source-list"><a href="http://www.kompas.com/tren/read/2026/08/06/064500265/polisi-malaysia-kirim-penyidik-dan-intelijen-ke-jakarta-buntut-pilot-bawa" target="_blank" rel="noopener noreferrer" title="Kompas / Malaysia Police Dispatch Narcotics Investigators and Intelligence to Jakarta Following Pilot Carrying Ecstasy, Reveals Target of Operation">Kompas #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China allocates 330 mln yuan from central relief fund to 8 flood-hit provinces</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Ministry of Finance and Ministry of Emergency Management allocated 330 million yuan, about 48.61 million U.S. dollars, from the central natural disaster relief fund to eight provincial-level regions affected by flooding on Wednesday. The regions are Heilongjiang, Liaoning and Jilin in the northeast, Chongqing, Sichuan, Guizhou and Yunnan in the southwest, and Shaanxi in northwest China.</p>
+<p>The funds are for emergency rescue and relief operations, including search and rescue, relocation and resettlement of affected people, emergency response, hazard removal and risk reduction, inspection and rectification of secondary disaster risks, and repair of damaged homes. China is in its main flood season from late July to early August, and persistent heavy rainfall has triggered floods and geological disasters that have caused casualties and left homes damaged or destroyed.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260805/0187a0f615024ff9affa194a62841001/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China allocates 330 mln yuan from central relief fund to 8 flood-hit provinces">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>Chongqing leverages strategic location to develop integrated logistics network</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Chongqing, the city’s strategic location at the intersection of the Belt and Road Initiative and the Yangtze River Economic Belt has been used to develop an integrated logistics network linking the New International Land-Sea Trade Corridor, the China-Europe Railway Express and the Yangtze River. Building on its role as a major transport hub, Chongqing has also improved multimodal transportation systems and trade and investment services. The city’s logistics advantages have helped Chongqing-made products, including automobiles, electronic information products and manufacturing equipment, reach global markets, while also facilitating imports of more high-quality products from overseas.</p>
+<p>In 2025, Chongqing’s national logistics hubs handled 120 million tonnes of cargo, and logistics-related business revenue exceeded 40 billion yuan, or about 5.9 billion U.S. dollars. The accompanying images showed new energy vehicles at a Seres super factory, vehicles transferring containers at the dry port of the New International Land-Sea Trade Corridor in Chongqing International Logistics Hub Park, and a freight train of the corridor departing from Tuanjiecun Station.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260805/6c5ad0d6685f4b72994072dde4d243ac/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Chongqing leverages strategic location to develop integrated logistics network">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Morocco prosecutes 86 people for organizing irregular crossings into Ceuta and Melilla</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Moroccan courts have begun prosecuting 86 people over irregular crossings into Ceuta and Melilla, after the entry last Thursday and Friday of more than 70,000 clandestine migrants from Morocco toward Ceuta and a smaller flow toward Melilla. The Tetouan Prosecutor’s Office indicted 34 people, including five minors, and the courts of Nador indicted another 52. Eleven detainees have already been sentenced to up to six months in prison. The charges include organizing irregular crossings, assaults on security forces, transporting passengers without a license, facilitating clandestine exits, exceeding the permitted number of passengers, illegal stay after visa expiration, disobedience, and deliberate destruction of public property and installations.</p>
+<p>Achraf Maimoun, head of AMDH’s Tetouan section, told Efe that the minors were detained for acts of violence and vandalism and transferred to a child protection center on the outskirts of Rabat. AMDH said 11 youths were placed before the Penal Chamber of the Nador Court of Appeal and another 41, including two minors, before the Tetouan Court of First Instance, with all in preventive detention and details of the charges not yet disclosed. AMDH called for procedural guarantees for the defendants.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-05/la-fiscalia-de-tetuan-procesa-a-25-personas-por-organizar-los-cruces-irregulares-hacia-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / Morocco prosecutes 86 people for organizing irregular crossings into Ceuta and Melilla">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,cnn,el_pais,guardian,politico,scmp">
+  <summary>The Leipzig drone bomb marks a dangerous escalation for Europe</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A drone carrying an explosive device was found in a restricted cargo area at Leipzig/Halle Airport near Ukrainian aircraft, and a second unidentified object later struck a cargo plane, raising fresh questions about airport security and who was behind the incident.</p>
+<p>An airport worker discovered the drone just before midnight near the south runway, according to state police in Saxony. Police deployed a bomb disposal robot and removed the detonator from the device. Flight operations were temporarily suspended, the north runway reopened later after an inspection, and the south runway stayed closed into Wednesday. Several aircraft, including a passenger plane, were diverted to other airports.</p>
+<p>The separate mid-air strike happened after a cargo aircraft aborted its landing because the runway was closed. Police said a second unidentified flying object collided with the plane, which sustained minor damage but landed safely at Hannover instead. The drone was found near Ukrainian cargo planes, and the airport has hosted Ukraine’s Antonov Airlines transport aircraft since Russia’s full-scale invasion of Ukraine in 2022 destroyed their home base.</p>
+<h3>Investigators look at a possible wider threat</h3>
+<p>German authorities have launched an investigation involving counter-terrorism police and state prosecutors, with German state prosecutors later taking over alongside the Central Office for Extremism Saxony and the Police Terrorism and Extremism Defense Center. Saxony’s interior minister, Armin Schuster, called the overnight events a “very serious security incident.”</p>
+<p>The incident also sharpened concern because Leipzig/Halle is one of Europe’s top cargo hubs and a major logistics base. Germany has been on heightened alert in recent months over unauthorized drone activity near airports, military sites and other sensitive infrastructure.</p>
+<p>Interior Minister Alexander Dobrindt said the case did not appear to be the work of amateurs and that investigators were treating it as a “professional hybrid threat scenario.” He said foreign powers could be part of the inquiry. The Guardian reported that suspicion has pointed toward Russia because of Leipzig’s role as a Nato and German military logistics hub and as a base for Ukraine-linked cargo operations, but that attribution remains part of the investigation rather than a settled conclusion.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cyvlg4q48l3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Drone carrying explosives found at German airport, police say">BBC #1</a><a href="https://www.cnn.com/2026/08/05/europe/cargo-plane-leipzig-disruption-intl" target="_blank" rel="noopener noreferrer" title="CNN / Flying object hits plane at German airport as drone discovered carrying explosive device">CNN #1</a><a href="https://elpais.com/internacional/2026-08-05/la-policia-alemana-desactiva-un-dron-bomba-que-cayo-junto-a-un-avion-de-carga-ucranio-en-el-aeropuerto-de-leipzig.html" target="_blank" rel="noopener noreferrer" title="El País / German police deactivate a drone bomb that fell beside a Ukrainian cargo plane at Leipzig airport">El Pais #1</a><a href="https://www.theguardian.com/world/2026/aug/05/the-leipzig-drone-bomb-marks-a-dangerous-escalation-for-europe" target="_blank" rel="noopener noreferrer" title="The Guardian / The Leipzig drone bomb marks a dangerous escalation for Europe">Guardian #1</a><a href="https://www.theguardian.com/world/2026/aug/05/drone-german-airport-dhl-cargo-plane-collides-object-leipzig" target="_blank" rel="noopener noreferrer" title="The Guardian / Drone carrying explosives at German airport marks ‘new level of danger’, says interior minister">Guardian #2</a><a href="https://www.politico.eu/article/germany-police-investigation-explosive-drone-leipzig-airport" target="_blank" rel="noopener noreferrer" title="POLITICO / German anti-terror police investigate explosive drone found at Leipzig airport">POLITICO #1</a><a href="https://www.scmp.com/news/world/europe/article/3363050/german-airport-diverts-flights-after-security-alert-over-unidentified-object" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Explosive drone found near Ukrainian plane at German airport">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Adapting to global heating: which UK public services are struggling in hot weather?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">UK public services are already feeling the strain of hot weather. The NHS has been told it must become more resilient to increasingly frequent heatwaves, London bus drivers plan to go on strike later this month over working conditions, rail services have been disrupted in the south of England, and the RAC says breakdowns have risen by a fifth. In buses, drivers have reported cab temperatures close to 40C, while most London buses still use air-flow cooling systems rather than air conditioning.</p>
+<p>Farming is also under pressure. Analysis published on Wednesday said this year’s harvest could be the worst on record after a third year of drought in England left farmers with dry soil and damaged crops. The Energy and Climate Intelligence Unit thinktank said cereals and oilseed yields could be down by as much as 2.5m tonnes across the UK, worth £390m in lost revenue for arable farmers. It also said grass growth has halved for livestock farmers, forcing some to use feed they had been saving for winter.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/2026/aug/05/global-heating-public-services-struggling-heatwaves" target="_blank" rel="noopener noreferrer" title="The Guardian / Adapting to global heating: which UK public services are struggling in hot weather?">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,guardian">
+  <summary>New Mexico sues US Justice Department for impeding Epstein probe</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">New Mexico has taken the Justice Department to court, accusing it of blocking access to unredacted Epstein records that state investigators say are critical to their probe of alleged abuse at Zorro Ranch and to identifying victims, witnesses and other possible crimes.</p>
+<p>In Wednesday’s filing in US District Court in Washington, DC, Attorney General Raul Torrez accused the department and acting Attorney General Todd Blanche of “stonewalling” the state’s criminal investigation into Jeffrey Epstein’s activities at the New Mexico property. Torrez said the federal government had unlawfully withheld materials he считает necessary for the state’s work, and the lawsuit says federal inaction has stalled the case and prolonged survivors’ suffering.</p>
+<p>The complaint comes after months of friction. In early July, Torrez released a letter he had sent to the department the previous month, saying that despite “verbal assurances of cooperation” the government had not provided the relevant documents. He had also warned Blanche in a 14 July letter that he would “pursue all available legal remedies without further notice” if a 31 July deadline passed.</p>
+<p>The Justice Department has argued that privacy law prevents it from handing state officials unredacted documents from its Epstein file. Last month, the department said, “To capitulate to their demands would be to break federal law. Is that what the [New Mexico Attorney General] is suggesting?”</p>
+<p>The dispute is tied to New Mexico’s reopened investigation into Zorro Ranch, the sprawling property Epstein owned from 1993 until his death in 2019. Torrez said the state wanted to establish what took place there, and the filing says federal law enforcement failed to search the ranch or preserve evidence of Epstein’s crimes there. The Guardian reported that the ranch, about 30 miles south of Santa Fe, was mentioned thousands of times in recent releases of the Epstein files, and that the state reopened its investigation in February after those releases.</p>
+<p>New Mexico first opened an investigation into the ranch in February 2019, then reopened it in February this year. Torrez said the latest Epstein files included more than 13,000 references to Zorro Ranch and roughly 5,000 references to New Mexico as a place where victims were trafficked, groomed and assaulted.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/5/new-mexico-sues-us-justice-department-for-impeding-epstein-probe?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / New Mexico sues US Justice Department for impeding Epstein probe">AJ #1</a><a href="https://www.theguardian.com/us-news/2026/aug/05/new-mexico-sues-doj-epstein-investigation" target="_blank" rel="noopener noreferrer" title="The Guardian / New Mexico sues justice department for ‘stonewalling’ Epstein investigation">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="axios">
+  <summary>DOJ&#x27;s voter roll crusade hits a courthouse wall</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Federal judges have repeatedly blocked the Justice Department’s effort to obtain sensitive voter information, and the DOJ has sued 30 U.S. states plus D.C. after officials rebuffed its demands. The latest setback came Monday, when U.S. District Judge Philip Brimmer, a George W. Bush appointee, sided with Colorado and dismissed the DOJ’s case against the Democratic secretary of state with prejudice.</p>
+<p>The administration argued that provisions in the Civil Rights Act of 1960 gave the attorney general “sweeping power” to seek voter records, including registrants’ driver’s license numbers and the last four digits of their Social Security identifier. Brimmer said compelling the release of the state’s voter lists did not fall under that authority. Judges in 20 cases, per the Brennan Center for Justice’s tracker, have rebuked the DOJ; one judge in California called the request “unprecedented and illegal,” and a Trump appointee in Rhode Island called it a “fishing expedition.” In June, a U.S. appeals court handed the administration its first appellate-level loss in the campaign.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/05/trump-doj-voter-roll-lawsuits-fail" target="_blank" rel="noopener noreferrer" title="Axios / DOJ&#x27;s voter roll crusade hits a courthouse wall">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>Parliament backs amended WP motion on Singapore’s future economy after 9-hour debate; WP MPs record dissent</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Parliament approved an amended motion on Singapore’s future economy after a nine-hour debate, but all 12 opposition MPs voted against it, keeping alive a core dispute over whether the Workers’ Party’s vision should be framed as aligned with the government’s Economic Strategy Review.</p>
+<p>The motion had been tabled by Workers’ Party MPs Kenneth Tiong of Aljunied and Jamus Lim of Sengkang, who wanted Parliament to back an economy “of the future” that works for all Singaporeans. Mr Edward Chia of the People’s Action Party proposed amendments that would tie the motion to the Economic Strategy Review and explicitly recognise the role of global enterprises in Singapore’s future economy. The amended version said the House believed in a more equal and inclusive economy, with room for entrepreneurs, workers, households and businesses, and in an economy powered by local companies, global enterprises, domestic and external demand, and Singaporeans and Singaporean capital venturing abroad.</p>
+<p>The motion passed after 24 MPs spoke, including four political office holders and nine WP MPs. The Nominated MPs present voted in favour, with five of them speaking during the debate. The opposition MPs, however, opposed both the amendment that aligned the motion with the Economic Strategy Review and the motion as amended.</p>
+<p>Trade and Industry Minister Tan See Leng said the amended motion “captures the full combination Singapore needs” and described the different elements as “mutually reinforcing parts of one united economic strategy.” He said the government would maintain a trusted and open economy, invest for the long term, address capability, financing and market-access gaps, and help workers prepare for change. He added that businesses must transform and invest in people, workers must keep learning, investors must take informed risks, and entrepreneurs must build and compete.</p>
+<p>The debate also exposed a sharper disagreement over what the Economic Strategy Review represents. In his closing speech, Mr Tiong said the WP could not accept the amendment that changed the wording to “in line with” the review’s suggestions. He argued that the review was “short of report cards and targets” and said there had not been a consolidated report card for past PAP economic blueprints. He added that the WP’s motion asked Parliament to commit to principles, while the amendment asked it to commit to one set of operational plans.</p>
+<p>Transport Minister Jeffrey Siow, who is also Second Minister for Finance and co-chairs the Economic Strategy Review committee on global competitiveness, said he found agreement with many of the WP’s economic ideas, including better support for SMEs and startups and a stronger base of local companies. But he said he disagreed with the WP’s characterisation of Singapore’s economic model and did not hear a “great big idea” from the opposition that would replace the review.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/parliament-wp-motion-economic-review-6301206" target="_blank" rel="noopener noreferrer" title="CNA / Parliament backs amended WP motion on Singapore’s future economy after 9-hour debate; WP MPs record dissent">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>El Chapo persists in seeking his extradition to Mexico</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Joaquín El Chapo Guzmán is still seeking extradition to Mexico, and his lawyer filed a new amparo lawsuit against the federal government’s refusal to process his repatriation. The suit was filed July 7 before the Twelfth Administrative District Court in Mexico City, but judge Rosa María Cervantes Mejía did not grant the suspension and asked the defense to precisely identify the acts it is challenging. Guzmán was extradited to the United States on January 19, 2017, and sentenced there on July 17, 2019 to life imprisonment plus 30 years and forfeiture of $12,666,191,704.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/05/politica/012n3pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / El Chapo persists in seeking his extradition to Mexico">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>China competition looms large in 2027 US defence bill</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The 2027 US defence bill puts China competition at the centre of debate. Even as Congress remains divided over the latest defence legislation, lawmakers from both parties are united on China. The National Defence Authorisation Act, which sets US defence policy and authorises annual military spending, reflects bipartisan support for expanding Washington’s military, technological and economic rivalry with Beijing. The House and Senate versions differ on several provisions, but both include new measures on Taiwan.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/us/politics/article/3363095/china-competition-looms-large-2027-us-defence-bill" target="_blank" rel="noopener noreferrer" title="South China Morning Post / China competition looms large in 2027 US defence bill">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="atlantic,axios,guardian,middle_east_eye,scmp">
+  <summary>Progressive Abdul El-Sayed wins Michigan primary in jolt to Democrats</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Abdul El-Sayed’s narrow Michigan Senate primary win gave Democrats a high-profile progressive nominee, but it also sharpened the party’s dispute over coalition-building, message and whether a left-leaning candidate can hold the line into November.</p>
+<p>El-Sayed, a progressive, eked out a victory over the more moderate Haley Stevens in a historically expensive and closely watched contest between the party’s insurgent and centrist wings. The Associated Press called him the victor with about a one-point edge, and Axios put the race at 48.5% to 47.5% with 99% of estimated votes counted. The result surprised many observers because polls had shown the 41-year-old doctor with a double-digit lead, and Axios said Stevens and her allies outspent him 9 to 1, including through AIPAC’s political arm.</p>
+<h3>The fight over what comes next</h3>
+<p>The result immediately set off arguments over what Democrats should learn from it. One Democratic operative said El-Sayed should focus on broadening his coalition, while Joel Payne, a Democratic strategist whose group MoveOn endorsed him, said the messy process is still necessary for a party trying to redefine itself after traumatic losses in 2024. El-Sayed, though, has suggested he does not plan to moderate. He ended a news conference by calling for a “movement to get money out of politics” and to “finally guarantee the promise of health care through Medicare for all.”</p>
+<p>He also made the customary call for unity after a hard-fought primary, telling supporters that “however much we might disagree with our Democratic opponent, there is so much more that unites us than divides us.” Minutes earlier, one of his better-known endorsers was pushing a much blunter message to El-Sayed’s online supporters. The broader Michigan night was also a strong one for other progressives: Will Lawrence won a battleground House nomination, and Donavan McKinney threatened to oust Rep. Shri Thanedar.</p>
+<p>For Democrats, the immediate next step is clear. El-Sayed is set to face Republican Mike Rogers for Michigan’s open Senate seat, and party leaders now have 13 weeks to try to keep the coalition together as they pursue a November win.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/politics/2026/08/el-sayed-michigan-rogers-senate/688195" target="_blank" rel="noopener noreferrer" title="The Atlantic / What El-Sayed Does Next Matters">TA #1</a><a href="https://www.axios.com/2026/08/05/michigan-elections-dsa-wfp-uaw-progressives-win" target="_blank" rel="noopener noreferrer" title="Axios / Three Michigan races put the progressive movement&#x27;s reach on display">Axios #1</a><a href="https://www.axios.com/local/detroit/2026/08/05/donavan-mckinney-defeats-shri-thanedar-in-michigans-13th-district-democratic-primary" target="_blank" rel="noopener noreferrer" title="Axios / Rep. Thanedar loses to socialist McKinney in Democratic primary for congress">Axios #2</a><a href="https://www.axios.com/2026/08/05/democrats-senate-michigan-el-sayed-stevens" target="_blank" rel="noopener noreferrer" title="Axios / Left turn in Michigan: Tuesday&#x27;s primary takeaways">Axios #3</a><a href="https://www.theguardian.com/us-news/2026/aug/05/top-democrats-embrace-abdul-el-sayed" target="_blank" rel="noopener noreferrer" title="The Guardian / Top Democrats set aside qualms and embrace progressive Abdul El-Sayed">Guardian #1</a><a href="https://www.middleeasteye.net/news/after-major-upset-aipac-michigan-group-looks-back-republican-candidate-against-abdul-el-sayed" target="_blank" rel="noopener noreferrer" title="Middle East Eye / After Michigan upset, Aipac looks to back Republican candidate against Abdul El-Sayed">MEE #1</a><a href="https://www.middleeasteye.net/news/michigan-missouri-democratic-primaries-deliver-mixed-bag-israel-and-gaza" target="_blank" rel="noopener noreferrer" title="Middle East Eye / From Michigan to Missouri: Democratic primaries deliver mixed bag on Israel and Gaza">MEE #2</a><a href="https://www.middleeasteye.net/news/abdul-el-sayed-wins-michigan-democratic-senate-primary" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Abdul El-Sayed defeats Aipac-backed rival in Michigan Democratic Senate primary">MEE #3</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3363097/progressive-abdul-el-sayed-wins-michigan-primary-jolt-democrats" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Progressive Abdul El-Sayed wins Michigan primary in jolt to Democrats">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>National Court asks the Guardia Civil if it had any information that could have alerted to the mass entry into Ceuta</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The National Court has asked the Guardia Civil to report whether it had any indication in the days before the irregular and mass entry of migrants into Ceuta that could have alerted it to what happened. Judge María Tardón took the step after a complaint by Iustitia Europa, which asked the court to investigate crimes including “against state security,” “fostering illegal immigration,” human trafficking, organized crime and omission of the duty to prosecute crimes. The judge also wants the Information Directorate of the armed forces to provide details on July 30 and 31, especially about rescue operations in Spanish territorial waters and the identity and location data of survivors and the dead. The provisional death toll on the Spanish side is 77.</p>
+<p>Interior Minister Fernando Grande-Marlaska said this Wednesday that the National Intelligence Center (CNI) did not alert to a massive arrival of migrants in Ceuta, though he acknowledged warnings in the preceding days that there could be “an expansion, an increase” in irregular sea entries in summer and that the situation could be “promoted” by the Supreme Court ruling at the beginning of July prohibiting hot returns of people who entered by swimming. The bodies recovered after the entry of more than 70,000 people are being kept in a refrigerated hangar in the old military hospital of the autonomous city, and autopsies are nearly finished.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-05/la-audiencia-nacional-pregunta-a-la-guardia-civil-si-tuvo-alguna-informacion-que-pudiese-alertar-de-la-entrada-masiva-en-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / National Court asks the Guardia Civil if it had any information that could have alerted to the mass entry into Ceuta">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Students dissociate themselves from damages at Canal Once; &#x27;they gave access to strangers&#x27;</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">IPN strike students, mainly from the National School of Biological Sciences, resumed talks with university authorities over the Canal Once occupation, but the dialogue table ended again without agreements to resolve the conflict. After more than seven hours of negotiation, IPN Secretary General Ismael Jaidar Monter closed the table without saying whether the talks would continue. The students said that on Sunday unidentified people were allowed onto the campus of the Higher School of Trade and Administration to reach Canal Once and recover its facilities, and they also dissociated themselves from damage to the broadcaster’s videoteca, saying they had only occupied the parking lot, kitchen and bathrooms near the entrance.</p>
+<p>The students insisted the recovery was not “peaceful” because they were not allowed to properly hand over the site or tour the building to check its condition, and they said water and electricity cuts were continuous during the occupation. Jaidar Monter later said there is still willingness to talk, but any return to classes at the National School of Biological Sciences, the interdisciplinary professional unit in Engineering and Advanced Technologies, and Vocational 6 will depend on the students reaching agreements.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/05/politica/010n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Students dissociate themselves from damages at Canal Once; &#x27;they gave access to strangers&#x27;">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Trump team pushes to block court order giving BBC access to financial records</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump’s legal team is making an 11th-hour attempt to block a court order that would give the BBC access to the president’s financial records as part of his multibillion-dollar lawsuit against the broadcaster. In July, a Miami-based judge ruled that Trump would have to start handing over detailed financial records to the BBC by 6 August. The records would reveal details about the hundreds of businesses owned by the US president’s family trust.</p>
+<p>On Wednesday, Trump’s attorneys asked the court to temporarily pause enforcement of the order, saying the BBC had demanded a “shockingly broad amount of information based on clearly political motivations.” They also asked to amend the lawsuit so it focuses on the “reputation harm” they say was caused by the BBC documentary, which they argued would keep disclosures “proportional to the needs of the case.” The suit centers on the BBC’s 2024 documentary, *Trump, A Second Chance*, which spliced lines from Trump’s 6 January 2021 speech in a way that made it appear he directly urged supporters to attack the US Capitol.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/05/trump-bbc-lawsuit-financial-records" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump team pushes to block court order giving BBC access to financial records">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Netanyahu says Israel didn’t agree to US-backed Gaza plan as far-right pressure grows</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Prime Minister Benjamin Netanyahu said Israel did not agree to the US-backed plan for Gaza, even after receiving assurances that an Israeli pull-out would only happen after Hamas disarms. In a video posted to his social media accounts on Tuesday night, he said the US President Donald Trump team “believes that they can bring about the disarmament of Hamas and the demilitarisation of Gaza,” adding: “We are checking this. They sent us a draft – we did not agree to it, it is not our draft. We sent our comments.”</p>
+<p>Netanyahu met with the US-backed Board of Peace on Monday and, received guarantees that the Israeli army would only leave its current positions in Gaza after Hamas disarms. At the same time, pressure has been growing on him from the right flank of his ruling coalition to reject the deal. Two far-right ministers requested a new vote on Tuesday, saying the plan did not reflect what had originally been discussed, even though Israel’s security cabinet had already voted in favor of it. The proposal would include the deployment of international peacekeeping troops in the Gaza Strip, and Netanyahu’s planned security cabinet meeting was postponed to Thursday amid Likud primary voting ahead of October 27 elections.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/middle-east/article/3363077/netanyahu-says-israel-didnt-agree-us-backed-gaza-plan-far-right-pressure-grows" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Netanyahu says Israel didn’t agree to US-backed Gaza plan as far-right pressure grows">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="yonhap">
+  <summary>(LEAD) Lee stresses addressing public concerns over exclusive police investigative authority</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Lee Jae Myung on Wednesday pressed officials to address public concerns over giving police sole investigative authority, as a recent legal revision stripped prosecutors of direct investigative powers and raised questions about whether the police can handle the expanded role.</p>
+<p>Lee made the remarks during a session receiving policy briefings from the justice and interior ministries and other government agencies in Seoul. He spoke a day after the Cabinet, which he presided over, approved the promulgation of the revision to the Criminal Procedure Act, after it passed the National Assembly last week. The bill removes prosecutors’ authority to conduct direct investigations, including supplementary investigations, and leaves investigative authority solely with the police.</p>
+<p>“The public is worried about whether police capabilities are sufficient and trustworthy,” Lee said, adding that the government was checking whether proper measures were being prepared to address those concerns. He also said the situation would not be resolved completely even if prosecutors kept their existing authority to conduct supplementary investigations, but that removing it was increasing the concerns.</p>
+<p>Justice Minister Jung Sung-ho echoed that view during the meeting, saying prosecutors may pay less attention to cases that police decide not to refer even after police records of such cases are forwarded to the public prosecution service. He said those are not cases assigned to prosecutors and that they would have little reason to review them closely, especially in investigations that do not involve victims or complainants.</p>
+<p>The revision was pushed by the ruling Democratic Party after prosecutors were accused of abusing their investigative powers and, at times, intervening in high-profile political cases. It also drew concern that exclusive police investigative powers could undermine the overall quality of investigations. The public prosecution service, along with the serious crimes investigation agency, is set to be launched in October under the broader reform.</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20260805009800315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Lee stresses addressing public concerns over exclusive police investigative authority">YNA #1</a><a href="https://en.yna.co.kr/view/AEN20260805009851315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (LEAD) Lee stresses addressing public concerns over exclusive police investigative authority">YNA #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>UK charity regulator to investigate donations to illegal Israeli settlements</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UK’s Charity Commission has launched an investigation into several British charities that donated funds to illegal Israeli settlements in Palestine. The commission said the probe will examine how the money was used in those settlements, the purpose of the funds and whether the spending fits charitable purposes. Stephen Roake, the commission’s assistant director of high-risk compliance, said it would begin by investigating eight unnamed charities. He said “serious allegations” had been made and that the first step was to establish the facts before deciding whether regulatory action is required.</p>
+<p>Abtisam Mohamed, a Labour MP for Sheffield Central and member of the Foreign Affairs Select Committee, welcomed the investigation but said it should go beyond the eight charities. She said evidence concerning at least 32 charities showed the scale of the problem, and argued that every organisation implicated should be investigated urgently. Mohamed added that, because the government recognises Israeli settlements as illegal, “British money must not be allowed to sustain them.”</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/uk-charity-regulator-investigate-donations-illegal-israeli-settlements" target="_blank" rel="noopener noreferrer" title="Middle East Eye / UK charity regulator to investigate donations to illegal Israeli settlements">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Israeli army launches large-scale assault in East Jerusalem refugee camp</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli forces launched a large-scale operation in the Qalandiya refugee camp in occupied East Jerusalem on Wednesday. The Jerusalem Governorate said dozens of military vehicles stormed the camp before dawn, carrying boxes, equipment and maps, while soldiers deployed across several neighbourhoods as home raids and searches continued. Palestinian sources said troops raided the headquarters of the camp’s Popular Committee and forcibly removed several residents from their homes. One family was ordered to leave its house completely, and dawn prayers were prevented in all of the camp’s mosques. A Palestinian man was wounded after being struck by a military vehicle near the camp, and the Palestinian Red Crescent said a 53-year-old man was injured after being beaten.</p>
+<p>Soldiers also severely beat journalist Muhammad Sumrin while he was covering the raid and fired stun grenades at other journalists, according to the evidence. The army carried out a wave of arrests, with several Palestinians reportedly assaulted during detention. Eyewitnesses said soldiers breached the wall near the camp to allow bulldozers to enter, and the machinery later demolished a car wash on Almatar Street. Cogat said in a Facebook post that the military had launched a large-scale operation targeting “terrorist elements, terrorist infrastructure, and the phenomenon of weapons possession and trafficking,” while leaflets warned residents against “harming the security and lives of Israelis.”</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israeli-army-launches-large-scale-assault-east-jerusalem-refugee-camp" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israeli army launches large-scale assault in East Jerusalem refugee camp">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Mexican Ambassador to the U.S. to Meet Family of Migrant Shot Dead by ICE in Texas</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mexico’s ambassador to the United States, Roberto Lazzeri, is set to meet this Wednesday in Texas with the family of Lorenzo Salgado, a Mexican migrant shot dead by ICE agents during a traffic stop in Houston. Salgado died on July 7 at age 56 after being shot by immigration agents, according to the evidence, and was a construction worker who had lived in the United States for more than three decades. His family said he was a father of three and was in the process of regularizing his immigration status.</p>
+<p>The Department of Homeland Security, which oversees ICE, said Salgado tried to run over the agents with his vehicle. Witnesses and family members deny that account and are calling for an independent investigation. The case has also drawn civil society outrage, alongside the death of Colombian national Joan Sebastián Durán in Maine on July 13. Separately, Sheinbaum’s government has filed 20 complaints with state and county prosecutors in the United States over the deaths of 17 Mexican nationals since May during operations or while in ICE custody.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/mexican-ambassador-to-the-u-s-to-meet-family-of-migrant-shot-dead-by-ice-agents-in-texas" target="_blank" rel="noopener noreferrer" title="Telesur English / Mexican Ambassador to the U.S. to Meet Family of Migrant Shot Dead by ICE in Texas">TE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="la_jornada">
+  <summary>Delivery begins of 4,566 million pesos in aid to 26,000 corn producers in Sinaloa</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Mexican government began distributing financial support to 26,000 corn producers in Sinaloa, with a total of 4,566 million pesos. The aid is part of an agreement to compensate for the drop in international grain prices, which the evidence says has been happening since last year. The support is being delivered through Welfare cards, and buyers will pay a price “slightly higher” than the market.</p>
+<p>President Claudia Sheinbaum said the agreement involves around 100,000 farmers, including some in Sinaloa, which she described as the country’s main producer of white corn. She also said growers in the Bajío region of the state and elsewhere cultivate hybrid corn, buy seed that is not genetically modified, and plant and harvest it. In a broadcast from Sinaloa, Columba López Gutiérrez, head of the Secretaría de Agricultura y Desarrollo Rural, and governor Yeraldine Bonilla said the support in the state will cover the equivalent of 3.5 million tons of corn grown on 348,045 hectares, for the autumn-winter 2025-2026 agricultural cycle.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/05/politica/012n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Delivery begins of 4,566 million pesos in aid to 26,000 corn producers in Sinaloa">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="middle_east_eye">
+  <summary>Social media platform X says it is challenging block of jailed Istanbul mayor&#x27;s account</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">X said on Wednesday that it is challenging in court a Turkish order blocking the account used to support jailed Istanbul mayor Ekrem Imamoglu’s presidential bid. The account was first blocked in Turkey late last month after a government request, and X said Turkish laws force it to comply with the order or risk Turkey’s Information and Communication Technologies Authority, BTK, throttling access to the site in the country. The company also said it shared the court order for transparency.</p>
+<p>The move drew scepticism from Yaman Akdeniz, founder of Turkish freedom of expression organisation IFOD, who said he doubted X’s willingness to challenge the Turkish authorities. He said X sometimes appeals decisions and files applications with the Constitutional Court, but that this is selective and the company does not give full details. Imamoglu’s main X account, with nearly 10 million followers, was blocked in Turkey in May 2025 in a similar case, which X also said it challenged.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/x-challenges-request-block-account-jailed-istanbul-mayor" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Social media platform X says it is challenging block of jailed Istanbul mayor&#x27;s account">MEE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>MerchantBench: Benchmarking LLM Agents for Long-Term Coherence in E-Commerce Operations</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">MerchantBench introduces a 365-day e-commerce benchmark for LLM agents, testing whether they can keep coherent seller-side decisions over time as delayed order outcomes and supplier events force them to revisit earlier choices.</p>
+<p>The preprint frames long-term coherence as the ability to preserve purposeful behavior across extended horizons while adapting to accumulated evidence. It argues that most existing benchmarks focus on bounded tasks with immediate success criteria, while real deployments need agents that can keep operating when feedback arrives late and one action affects later options.</p>
+<h3>Why seller-side e-commerce was chosen</h3>
+<p>The authors say seller-side e-commerce is a useful setting because it involves recurring, interdependent decisions in four areas: Product Sourcing, Listing and Pricing Control, Cash-Flow Management, and Mixed-Latency Feedback Adaptation. In that environment, agents face promptly observable Upstream Supplier Events alongside delayed Downstream Order Outcomes, so they have to follow individual order lifecycles and revisit earlier decisions.</p>
+<p>MerchantBench is built as a 365-day order-level simulation grounded in 98,843 real e-commerce product records and equipped with 26 tools for agent interaction. The environment is grounded in data from 1688 and covers 365 days from June 1, 2025 through May 31, 2026. It includes product and supplier attributes, daily demand histories, and platform quality and fulfillment signals, with 10 first-level product categories selected for the catalog.</p>
+<p>The simulation follows a single-item drop shipping model in which merchants hold no inventory in advance. It models Normal Fulfillment together with six abnormal Downstream Order Outcomes: Cancellation, Stockout, Late Shipment, Returnless Refund, Return and Refund, and Bad Review. The merchant interface is partially observable, exposing current public and realized operational evidence while keeping future demand, event hazards, and presampled outcomes hidden until they become observable.</p>
+<h3>How the benchmark was run</h3>
+<p>MerchantBench advances hourly over the 365-day horizon, but the agent receives a decision window only once every 12 steps. The objective is terminal net assets, combining cash balance, security deposit, funds in transit, and receivables. The authors say this setup makes the environment persistent: actions constrain later choices, and incoherent behavior can produce cumulative effects.</p>
+<p>To evaluate the benchmark, the paper runs eight LLMs under two agent frameworks, ReAct and Hermes, for 48 runs spanning 365 simulated days. The evaluated models are GPT-5.6 Sol, Claude Opus 4.8, Qwen3.7-Max, Qwen3.7-Plus, GLM-5.2, DeepSeek-V4-Pro, DeepSeek-V4-Flash, and Kimi K2.6. The comparison also includes a rule-based baseline and three human participants without prior e-commerce operating experience.</p>
+<p>Each run begins with RMB 2,000 in cash, a RMB 1,000 security deposit, and capacity for 50 active listings. The paper says Hermes adds built-in code execution, planning, memory, and skill management on top of the same 26 MerchantBench tools used by ReAct.</p>
+<h3>What the results showed</h3>
+<p>Across the runs, the authors report a substantial gap between the latest LLMs and human participants. The best LLM configuration reached only 27.3% of the mean final net assets achieved by the human participants. In the table of results, GPT-5.6 Sol records the highest final net assets under ReAct, while Qwen3.7-Max ranks first under Hermes; Qwen3.7-Max with Hermes achieves the highest final net assets among all 16 configurations.</p>
+<p>The paper also says Hermes outperforms ReAct on average across the eight models, producing 53.3% higher final net assets, 71.5% higher GMV, and 71.2% more orders. But the gains are uneven: Kimi K2.6 is the one model that does slightly worse under Hermes than under ReAct. The authors also note variation in stability, with some configurations showing much larger run-to-run swings than others.</p>
+<p>Their trace analysis says two forms of long-term coherence failure help explain the performance gap. One is Operational Coherence, where some agents progressively reduce store intervention and stop following up on earlier decisions or delayed outcomes. The other is Strategic Coherence, where agents lose consistency in sourcing, pricing, or inventory decisions over the year.</p>
+<p>In the examples the paper gives, some agents adjust after bad outcomes by replacing risky listings or lowering prices on proven products, while others fail to revise affected listings after refunds or stop filling vacant slots too early. The authors also point to shifting monthly sourcing performance and store activity as evidence that long-horizon business operation remains difficult for the models they tested.</p>
+<p>The code is available at https://github.com/KhanCold/merchantbench.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.28956v2" target="_blank" rel="noopener noreferrer" title="arXiv / MerchantBench: Benchmarking LLM Agents for Long-Term Coherence in E-Commerce Operations">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">JoyAI-Video-Edit is a 16B-parameter autoregressive diffusion system for real-time, open-ended video editing that tries to keep up with incoming footage without future frames or a fixed clip length, while preserving source fidelity and long-term temporal consistency.</p>
+<p>The model is described as a unified autoregressive diffusion framework built from an MLLM-based condition encoder, a causal video VAE, and a multimodal diffusion transformer. To make streaming editing practical, the system combines chunk-wise autoregressive adaptation, Source-Anchored Distribution Matching Distillation (SA-DMD), and Long-Horizon Autoregressive Distillation. The authors say SA-DMD reduces the diffusion process to two steps, while the long-horizon training is meant to limit accumulated temporal drift.</p>
+<h3>Reported speed and evaluation</h3>
+<p>In the reported deployment setup, JoyAI-Video-Edit reaches end-to-end 720p editing at about 30 FPS on a single Nvidia B200 GPU. The paper says the complete system can do this with bounded-history KV caching, FP8 quantization, and an optimized VAE pipeline. It also says the code is available on GitHub.</p>
+<p>The evaluation compares the system with streaming and offline editors. On OpenVE-Bench, JoyAI-Video-Edit posts an overall score of 3.60. On the one-minute LongV2VBench, which the authors built with 229 tasks across background change, global style editing, local addition, local modification, and local removal, it reaches 30.19 FPS at 720 × 1280 and an overall score of 3.30. The paper says it ranks first in all five editing categories there. In pairwise human judgments, it receives 90% of votes against LiveEdit, 87% against SANA-Streaming, 81% against XMax-X2.0, and 87% against StreamDiffusionV2, while Bernini-R slightly leads it in one comparison.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.03974" target="_blank" rel="noopener noreferrer" title="arXiv / JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced AURORA-LM, a continuous-latent diffusion language model that aims to move writing beyond the discrete-token setup still used in most language systems. The model separates building a decodable text representation from modeling its distribution: a Query-based Encoder-Decoder organizes text into a high-capacity, prefix-aligned latent sequence, and a Block-causal Diffusion Transformer learns that distribution through flow matching, generating blocks left to right while denoising positions within each block in parallel.</p>
+<p>To handle the harder latent space, AURORA-LM restricts only the noisy-input pathway while keeping the full clean-latent prediction target, calibrates the noise-level distribution to latent width, and adds self-trajectory consistency to connect training noise with iterative denoising at inference. It achieved the strongest performance among the evaluated continuous and diffusion-based language models on OpenWebText free generation and XSum summarization. Scaling the model to 1B parameters with about 1500 EFLOPs of total compute brought further gains, surpassing a larger publicly released latent-diffusion language model under a matched evaluation protocol. All experiments were conducted on Ascend NPUs.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.02602" target="_blank" rel="noopener noreferrer" title="arXiv / Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Hunyuan3D-Buffalo 1.0 brings 3D understanding, text-to-3D generation, instruction-guided editing, and text-grounded part generation into one framework, addressing a bottleneck the authors identify in unified 3D modeling: the lack of large-scale, geometrically consistent editing data.</p>
+<p>The model is built around a large training corpus and a two-part architecture. To scale training, the researchers assembled an 87M-sample 3D multimodal dataset: 25M understanding samples, 50M text-to-3D pairs, and 12M editing pairs generated with Nano3D-v2. On the model side, Hunyuan3D-VLM handles semantic, structural, and spatial understanding, while Hunyuan3D DiT handles high-fidelity 3D synthesis. The VLM supplies multimodal semantic conditions for generation, and editing plus part generation also condition the diffusion process on the source object representation so the model can preserve overall structure and unedited regions.</p>
+<p>The paper says the framework unifies these tasks within a single architecture rather than treating them as separate systems. It also connects Hunyuan3D-VLM with a generative 3D-DiT backbone initialized from Hunyuan3D-2.1, and describes the system as combining autoregressive modeling with diffusion-based generation. According to the authors, this setup supports 3D understanding, text-to-3D generation, instruction-guided 3D editing, and text-grounded part generation together.</p>
+<p>In evaluation, the authors report that Hunyuan3D-Buffalo 1.0 reaches state-of-the-art or leading performance on text-to-3D generation and 3D editing benchmarks, while also showing strong understanding and part-generation capabilities. They also say their analysis shows that both generation and understanding improve editing, which they present as evidence for unified 3D multimodal training. The same report includes detailed understanding results for Hunyuan3D-VLM and edit-benchmark comparisons showing large gains over earlier methods, including a stronger average F1 score on Edit3D-Bench.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.02711v1" target="_blank" rel="noopener noreferrer" title="arXiv / Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Video-DeepResearch aims to push multimodal agents from static images into continuous video streams, arguing that current systems still avoid visual tools and fall back on memorized knowledge instead of doing the cross-frame grounding and web exploration these tasks require.</p>
+<p>The preprint says preliminary evaluations found two bottlenecks in existing models: modality bias, where agents skip visual tools in favor of textual search, and parametric knowledge leakage, where they rely on internal memory rather than tool-augmented execution. To address that, the authors propose a decoupled perception-exploration pipeline with stage-wise tool unlocking, designed to force exhaustive visual grounding across frames before any web retrieval begins.</p>
+<p>The framework is paired with a two-stage training recipe: supervised fine-tuning followed by Group Relative Policy Optimization, which the paper says enables more autonomous exploration than imitation learning alone. It also introduces VideoDR-Bench, a human-AI collaborative benchmark with 200 complex, multi-hop VQA instances, intended to test whether an agent truly needs both visual search and external knowledge reasoning.</p>
+<p>On its reported benchmarks, Video-DeepResearch-35B-A3B reaches 64.0% average accuracy, which the preprint describes as a new state of the art. The paper says that score tops Claude-4.5-Sonnet at 59.0% by 5.0 points and outperforms GPT-5 at 52.5% and Gemini 2.5 Pro at 57.5%. A smaller 30B-A3B variant scores 59.3%, which the authors say is competitive with Claude-4.5-Sonnet and shows the training approach can still work at a more compact scale.</p>
+<p>The preprint frames the work as part of the broader rise of deep research agents and says the next step is not just answering questions from text, but handling noisy, dense video environments where visual evidence and open-web search have to work together.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.03979v1" target="_blank" rel="noopener noreferrer" title="arXiv / Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Knowledge-Geometry Decoupling: Refreshable Pretrained Transfer for Streaming Recommendation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new recommendation method aims to keep streaming systems learning from fresh behavior without erasing what they already know, tackling the tension between continual refresh and downstream adaptation when user patterns keep drifting.</p>
+<p>The authors say industrial recommenders increasingly use a pretrain-then-transfer setup, but behavioral distribution drift leaves two open questions: what to learn from behavior sequences, and how to transfer that knowledge while the pretrained model is continuously refreshed. They propose Knowledge–Geometry Decoupling, or KGD, to separate those jobs.</p>
+<h3>Splitting knowledge from geometry</h3>
+<p>For pretraining, KGD replaces conventional next-token prediction with Behavioral Multi-Token Prediction, which keeps only collaboratively or semantically related future items as supervision. The goal is to avoid encoding spurious transitions across unrelated sessions and to produce cleaner, more transferable behavioral knowledge.</p>
+<p>For transfer, KGD gives the pretrained encoder and the task learner separate parameter ownership. The refreshable encoder keeps behavioral knowledge, while the task learner reads contextualized encoder states through read-only cross-attention and writes task-specific geometry through Anchored Calibration Residual, which is designed to stay orthogonal to the pretrained embedding. The authors say this setup lets the model refresh continually without task-gradient interference or invalidating downstream adaptation.</p>
+<p>On evaluation, KGD is said to beat strong pretrain-transfer baselines by 4-12% on eight public benchmarks and to keep its advantage across a 90-day production stream where the baselines show no gains. The paper also says KGD has been fully deployed in Shopee. In a live A/B test on Shopee Homepage Search, it increased GMV per user by 1.75% and advertising revenue by 1.53%.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.02738" target="_blank" rel="noopener noreferrer" title="arXiv / Knowledge-Geometry Decoupling: Refreshable Pretrained Transfer for Streaming Recommendation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>PCSD: Persistent Consistency for Self-Distillation in Agentic Reinforcement Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">PCSD is a new on-policy self-distillation framework for agentic reinforcement learning that tries to stabilize token-level teacher guidance when long, multi-turn tasks like ALFWorld and WebShop only provide sparse outcome-level rewards, a tension the authors say can weaken standard training.</p>
+<p>The preprint argues that dense supervision is useful, but not every teacher signal should count equally. It says on-policy self-distillation can help because it gives token-level feedback, yet isolated discrepancies can be noisy and step-level weights can miss positional variation. PCSD addresses that by deriving weights from the local persistence of teacher-favoring signals rather than from a single token decision.</p>
+<h3>What PCSD changes</h3>
+<p>PCSD combines adaptive windows with exponentially decayed aggregation to measure persistent teacher support, then adds trend-aware modulation to reduce weight when support is locally declining. It turns those signals into continuous weights through sigmoid gating. The resulting objective is optimized together with GRPO, so the model learns from both dense teacher guidance and sparse environmental feedback.</p>
+<p>The authors evaluate PCSD on ALFWorld and WebShop with Qwen2.5-3B-Instruct and Qwen3-1.7B-Instruct. Without inference-time skills, PCSD reports the best ALFWorld Overall results among the baselines on both backbones, exceeding GRPO by 15.6 and 13.3 points and SDAR by 6.2 and 5.5 points. It is also described as competitive on WebShop and as gaining 15.8 points over GRPO on the unseen ALFWorld split.</p>
+<p>The paper also presents component ablations and sensitivity checks. On ALFWorld, the authors report that removing trend modulation or decay lowers performance, and that the distillation coefficient is not monotonic: λ = 0.01 gives the best Overall result, while a larger value of 0.05 reduces it. In a perturbation analysis, PCSD is said to stay comparable to SDAR under light perturbation and to preserve rank better under 5% and 10% perturbations, with weak but nonnegative Spearman correlations under skill removal and shuffled skills.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.01837" target="_blank" rel="noopener noreferrer" title="arXiv / PCSD: Persistent Consistency for Self-Distillation in Agentic Reinforcement Learning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Quo Vadis, World Modeling?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The authors of *Quo Vadis, World Modeling?* recast world modeling from predicting the next physical state into an agent-facing proxy system, arguing that continually improving agents need lower-cost, more controllable feedback than repeated direct action in the real environment.</p>
+<h3>From state prediction to agent-usable feedback</h3>
+<p>The paper starts from a simple problem: agents that improve over time need more than static supervision. Real-environment interaction can provide the most faithful feedback, but the authors say it is costly, risky, after-the-fact, and hard to parallelize when an agent must try many possibilities and reason several steps ahead. On that basis, they present world modeling as an intermediate proxy between the agent and the real environment.</p>
+<p>In the classical formulation, a world model predicts future physical state. Here, the authors say that is useful but too narrow for agents that need actionable feedback beyond raw state transitions. They propose “Agent-Centric Interactive World Proxies,” shifting the focus from physical state transitions to “agent-usable information transitions” such as execution outcomes, retrieved experiences or skills, and verification signals. In their framing, a world proxy can simulate, retrieve, guide, and verify rather than only forecast.</p>
+<p>To organize that space, they divide proxies into six functional forms: dynamics, spatial, execution, memory/experience, skill, and reward/verification proxies. They then describe three levels of how these proxies can help agents. At L.1, inference-time guidance, proxy outputs add context for better decisions without changing the agent’s parameters. At L.2, training-time optimization, proxy outputs provide rewards, critiques, or synthetic rollouts for policy learning. At L.3, Agent-Proxy co-evolution, real-environment evidence updates both the proxy and the agent over time.</p>
+<p>The paper’s broader claim is that this shift turns world modeling into a roadmap for agents that can plan better, learn faster, and keep evolving. It also links the idea to a “worldbench.github.io/awesome-agentic-world-model” project page and a GitHub repository, while presenting the work as an arXiv preprint.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.02713v1" target="_blank" rel="noopener noreferrer" title="arXiv / Quo Vadis, World Modeling?">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>ZFP36L2 orchestrates stress-adaptive plasticity in regeneration and cancer</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A stress-responsive RNA-binding protein, ZFP36L2, appears to control whether intestinal cells stay differentiated or revert to stem-like states, tying wound healing to colorectal cancer metastasis and raising the question of how the same switch can aid regeneration in one setting and spread in another.</p>
+<p>The study focuses on a cell-state program already known to matter in the intestinal epithelium: during wound healing, differentiated cells can dedifferentiate into an intestinal stem cell, or ISC, state to help restore the tissue, and in colorectal cancer the same kind of reprogramming can support metastatic outgrowth. In mouse colon regeneration models, ZFP36L2 ablation inhibited dedifferentiation, reduced ISC gene expression and function, and impaired intestinal regeneration. In human CRC, loss of ZFP36L2 function abrogated metastatic seeding and the outgrowth of LGR5-positive canonical metastases, while promoting lineage plasticity and non-canonical differentiation into heterogeneous cell states.</p>
+<p>The work also links ZFP36L2 to a concrete molecular mechanism. The protein binds stress-associated mRNAs with AU-rich 3′ untranslated regions, and this binding is associated with the formation of dynamic biomolecular condensates, mRNA degradation, and termination of the stress response. The authors describe ZFP36L2 as a molecular switch that couples stress sensing with phenotypic plasticity, and say this drives the dedifferentiation needed to re-establish the ISC state during wound healing and metastasis.</p>
+<p>The cancer angle is especially sharp because the protein is mutated in 5% to 10% of CRC. The study says loss-of-function mutations in ZFP36L2 are enriched in metastatic CRC relative to non-metastatic tumours and are associated with decreased recurrence-free survival and overall survival in patients with CRC. It also notes that in ZFP36L2-deficient CRC, the inability to re-enter the LGR5-positive state during metastatic outgrowth promotes non-canonical lineage plasticity, which is associated with poor clinical outcomes.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10890-0" target="_blank" rel="noopener noreferrer" title="Nature / ZFP36L2 orchestrates stress-adaptive plasticity in regeneration and cancer">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>A dependency map enhanced with next-generation 3D cancer models</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers expanded the Cancer Dependency Map with 147 genome-scale CRISPR screens in 3D organoids and spheroids across 10 cancer types, trying to close the gap between precision oncology and the many patients with cancer who still lack treatments matched to tumour biology.</p>
+<p>DepMap has already profiled more than 1,300 models and helped uncover targets that moved into clinical trials, but the study says its reach has been limited by underrepresentation of many cancer subtypes and by reliance on monolayer cultures with serum-containing media. The new work turns to next-generation, or NextGen, models: 3D patient-derived organoids and spheroids that can support harder-to-grow subtypes and may better reflect features of the tumour microenvironment that are lost in traditional 2D cultures.</p>
+<h3>What the 3D models added</h3>
+<p>The researchers collected 314 NextGen models, including 237 carcinoma organoids and 77 central nervous system tumour spheroids. They generated whole-genome sequencing and RNA-seq profiles from 291 and 309 models, respectively, and used the dataset to expand DepMap beyond the cell lines it had previously emphasized.</p>
+<p>Those models captured mutations not represented in traditional systems, including NRAS in colorectal cancer and ESR1 in breast cancer, and they broadened prostate cancer coverage with alterations in SPOP, RB1, APC and CTNNB1. The study also says the new models preserved transcriptional programs that are silenced in traditional cell lines, which helped reveal specific gene dependencies tied to those programs.</p>
+<p>Comparisons between NextGen models and traditional cell lines also exposed differences linked to growth format and culture medium. In the study’s framing, that matters because gene essentiality can look different in 3D versus 2D systems, and those differences can change which vulnerabilities appear useful for therapy.</p>
+<p>The integrated dataset combines both model types as a resource for exploring cancer vulnerabilities and identifying biomarker-associated dependencies, and it is accessible through the DepMap portal.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10843-7" target="_blank" rel="noopener noreferrer" title="Nature / A dependency map enhanced with next-generation 3D cancer models">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>An expanded codebook of human transcription factor DNA-binding specificity</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A systematic effort called Codebook has mapped DNA-binding specificity for 332 poorly characterized human transcription factors, filling in motifs for 177 of them and revealing tens of thousands of previously unknown binding sites, while also addressing how well in vitro motifs match binding in living cells.</p>
+<p>Gene expression is regulated by transcription factors, which recognize specific DNA sequence motifs. The work was aimed at a gap that has persisted for years: several hundred putative human TFs, identified mainly by an apparent DNA-binding domain, still lacked known binding motifs, and even for better studied TFs it remained controversial how closely motifs reflect cellular binding. A 2018 survey had concluded that over one-quarter of the estimated 1,600 human TFs lacked established binding motifs.</p>
+<p>To close that gap, the researchers analyzed 393 proteins in total, including 332 putative Codebook TFs and 61 controls, using up to five assays spanning in vitro and living-cell contexts: HT-SELEX, SMiLE-seq, protein binding microarrays, ChIP-seq with inducible tagged transgenes in HEK293 cells, and GHT-SELEX. Across 4,804 experiments, they found motifs for just over half of the 332 Codebook TFs: 177 proteins, or 53%. Most of those motifs were associated with only a single protein, and the resulting set added about 130 distinct motifs to the known vocabulary of human TF sequence recognition.</p>
+<p>The study also found that motifs identified in vitro were strongly enriched in cellular binding sites. In the paper’s summary, the data reveal tens of thousands of previously unknown, conserved and direct TF-binding sites across the human genome, concentrated in promoter regions and predictive of gene expression. The 177 successful TFs were dominated by the C2H2 zinc finger class, though the analysis also included proteins with other DNA-binding domain types and a smaller group without a well-established domain.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10798-9" target="_blank" rel="noopener noreferrer" title="Nature / An expanded codebook of human transcription factor DNA-binding specificity">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Amygdala astrocyte primary cilium mechanisms contribute to stress behaviours</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Amygdala astrocytes contribute to stress-related behaviours through primary cilium-linked signalling, after researchers found stress changes these cells in mice and human tissue and that restoring cilium-related pathways improved both molecular and behavioural measures.</p>
+<p>The work focuses on the basolateral amygdala, a region described as integral to emotion and stress responses. The researchers said the role of non-neuronal cells such as astrocytes has been incompletely explored, even though stress-related behavioural disorders remain a major unmet clinical need. They reported that amygdala astrocytes are altered during stress at the protein and gene expression level, with reduced expression of molecules related to primary cilia and morphologically short primary cilia.</p>
+<h3>Cilia, GPCRs and stress responses</h3>
+<p>To probe that link, the study examined mice under chronic restraint stress, water avoidance stress and spared nerve injury, and identified amygdala astrocyte GPCRs as regulators of responses following stress. G protein-coupled receptors were described as central to astrocyte and primary cilia function, and the researchers said this led them to test whether activating GPCR signalling could help.</p>
+<p>Their experiments found that chemogenetics and targeting of the native sphingosine-1-phosphate receptor 1, or S1PR1, restored astrocyte primary cilia length, corrected molecular alterations and improved stress-related behaviours. In a separate result, selective genetic disruption of amygdala astrocyte primary cilia in mice altered some stress-related behaviours and changed gene expression in astrocytes and parenchymal cells.</p>
+<p>The study also extended to human tissue. Cilium-related genes were abundantly expressed in human amygdala astrocytes, and many showed disrupted expression in stress-related brain disorders. S1PR1 was also highly expressed in human amygdala astrocytes.</p>
+<p>In summary, the researchers said amygdala astrocytes and their primary cilia are disrupted during stress, and that restoring them is accompanied by stress-related molecular and behavioural improvements in mice. They argued that astrocyte primary cilium-related mechanisms may provide new treatment strategies for stress-related and other brain disorders.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10874-0" target="_blank" rel="noopener noreferrer" title="Nature / Amygdala astrocyte primary cilium mechanisms contribute to stress behaviours">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Ubiquitous Kelvin–Helmholtz instabilities driving plasma mixing on the Sun</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Using the Daniel K. Inouye Solar Telescope, researchers found small-scale magnetized Kelvin–Helmholtz instabilities at the edges of solar magnetic flux concentrations, revealing a far more dynamic photosphere and experimentally backing a long-standing theory about how plasma mixes in magnetized regions.</p>
+<p>The observations were taken on 14 April 2025 in the solar photosphere, near active region NOAA 14060 close to a sunspot. The paper says the Sun’s magnetic field and turbulent convection shape the magnetized atmosphere, but that much of this interaction happens at or below the resolution of many modern observations. With DKIST’s 4-m aperture, the team captured time-sequence images at 416 nm and reconstructed data with an effective cadence of 2.7 seconds and spatial resolution of about 19 km.</p>
+<h3>Vortices at the edges of magnetic elements</h3>
+<p>In those images, the authors say they saw ubiquitous vortices forming along the interfaces of magnetic elements, including at the edges of magnetic flux concentrations. They identify these as magnetized Kelvin–Helmholtz instabilities, a phenomenon long predicted in theory but not previously observed in the Sun’s photospheric layers. The paper says the smallest vortices were near DKIST’s theoretical diffraction limit at that wavelength.</p>
+<p>The study also compares the observations with high-resolution numerical radiation magnetohydrodynamics simulations using the MURaM code. The reported instability wavelengths and growth rates in the simulations were comparable to those measured in the observations, and the authors say the simulated structures reproduced the observed evolution of the vortices. In the observed field, they analyzed 47 vortices; the characteristic spacing between them was 65 km, with sizes ranging from 25 km to 170 km.</p>
+<p>The authors argue that these small-scale KHIs may matter well beyond a single active region. They describe them as an efficient way to transport mass, energy, momentum and magnetic flux in magnetohydrodynamic systems, and say the phenomenon has implications for how magnetic fields are created and dissipated, including through vortex motion and flux braiding. They also say their results support a picture in which disjoint magnetic field concentrations below the visible solar surface connect to monolithic flux regions seen as facular concentrations and pores.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10871-3" target="_blank" rel="noopener noreferrer" title="Nature / Ubiquitous Kelvin–Helmholtz instabilities driving plasma mixing on the Sun">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Editorial Expression of Concern: Tumour exosome integrins determine organotropic metastasis</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nature has published an editorial expression of concern over *Tumour exosome integrins determine organotropic metastasis*, warning readers that concerns have been raised about some of the data in the 2015 paper and pointing to possible overlap in images used in two figures.</p>
+<p>The notice says the paper was published online on 28 October 2015 and was later flagged by the editors. It identifies two specific issues: the Fig. 1g LuT exo and Extended Data Fig. 2c PBS images “appear to overlap,” and in Extended Data Fig. 6d “the bottom two images appear to overlap.” Nature frames the notice as an addendum to the original article.</p>
+<p>The expression of concern names Ayuko Hoshino, Bruno Costa-Silva, Tang-Long Shen and colleagues as the authors of the paper, which carried correspondence to Hector Peinado, Jacqueline Bromberg or David Lyden. The notice also lists the many affiliated institutions involved in the work, including Weill Cornell Medicine, Memorial Sloan Kettering Cancer Center, the Rockefeller University, the University of Tokyo, Karolinska Institutet, Lawrence Berkeley National Laboratory, Princeton University, the University of Nebraska Medical Center, Oslo University Hospital, and others.</p>
+<p>The editorial notice leaves readers with a narrow but important question: the paper remains in the record, but Nature is now alerting readers to concerns about the presentation of some data.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10977-8" target="_blank" rel="noopener noreferrer" title="Nature / Editorial Expression of Concern: Tumour exosome integrins determine organotropic metastasis">Nature #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
