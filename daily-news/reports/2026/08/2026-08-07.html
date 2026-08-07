@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-07</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-07</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="el_pais">
+  <summary>Juan Jesús Vivas before the European Parliament: Ceuta&#x27;s security is in the hands of a third country, Morocco, which does not recognize our sovereignty</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Juan Jesús Vivas told the European Parliament that the July 30-31 mass entry into Ceuta was not, in his view, a migration crisis but a threat to the city’s integrity, as he pressed for reinforcements and blamed Ceuta’s security on relations with Morocco, a country he said does not recognize Spanish sovereignty.</p>
+<h3>Ceuta’s leader put sovereignty at the center of the hearing</h3>
+<p>Vivas, the president of Ceuta’s autonomous city government, made his remarks this Thursday in an extraordinary session of the European Parliament’s Internal Affairs Committee, held by videoconference. He said the events of July 30 and 31 put “our integrity” at risk: “Ceuta’s, Spain’s, Europe’s.”</p>
+<p>He told MEPs that the city has still not returned to normal and needs reinforcements to deal with what he described as the “collapse of migrant reception centers.” He also opened by saying it was “one of the most difficult moments in the recent history of the city,” and he used the word “invasion” to describe what happened.</p>
+<p>Vivas tied that description to the scale of the arrivals he said occurred over those two days. He said 80,000 people entered Ceuta between Thursday and Friday, a figure he compared to the city’s entire population. At another point, he likened it to “50 million people” entering Spain.</p>
+<h3>Parliament heard competing messages about responsibility</h3>
+<p>The hearing was called by the committee’s chair, Spanish conservative Javier Zarzalejos. Conservative MEPs complained that Interior Minister Fernando Grande-Marlaska and Minister of Security, Social Affairs and Migration Elma Saiz did not appear, although their attendance was not mandatory.</p>
+<p>Magnus Brunner, the EU Interior Commissioner, did attend. He said that “the situation in Ceuta is, first and foremost, a matter for Spanish authorities, who are in charge of managing the reception system.” Brunner also said the Commission was in close contact with Spanish authorities to assess their needs quickly and provide support when needed.</p>
+<p>He added that Spanish authorities, working with Moroccan authorities, were expected to fulfill commitments so that measures taken in response to the situation would not have repercussions in the Schengen area. That frame left the immediate management of the crisis with Spain, while also pointing to coordination with Morocco and concern about spillover beyond Ceuta.</p>
+<h3>Calls for more security and a figure still in flux</h3>
+<p>Inside the committee room, Vivas said the city still needed help to cope with the aftermath. He called for the “immediate expulsion” of irregular migrants who crossed the border and remained in the autonomous city, saying the number still there was between 3,000 and 6,000 according to the figures he presented in Parliament.</p>
+<p>He also said the fact that the exact number of people still in the city was not known showed “the precariousness of the means with which we are still acting.” That uncertainty over how many migrants remained in Ceuta ran alongside his broader demand for stronger resources and a faster response.</p>
+<p>Asked about rumors of another possible mass entry on August 15, Vivas urged stronger security. “Given the experience on July 30 and 31, we have full confidence in our security forces and in the armed forces to prevent another massive entry of that character,” he said. His warning left open the question of whether Ceuta could face another surge.</p>
+<h3>A royal audience followed the Brussels appearance</h3>
+<p>Also on Thursday, Vivas met King Felipe VI at Marivent Palace in Palma. After the audience, Vivas said the King had committed to visiting Ceuta, although he gave no date for that trip.</p>
+<p>Vivas said he left the meeting “comforted” by the King’s words, and reported that Felipe VI sent “a message of affection, support, and encouragement” to the people of Ceuta. He also said the King would visit the city, while stressing that the timing was still unknown.</p>
+<p>The audience was one of the last items on the King’s schedule before his trip to Colombia for the inauguration of the new head of state in Cali on Friday. For Vivas, the encounter came amid a week in which he said Ceuta remained far from normal and still lacked the resources to deal with the aftermath of the surge.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-06/juan-jesus-vivas-ante-el-parlamento-europeo-la-seguridad-de-ceuta-esta-en-manos-de-un-tercero-marruecos-que-no-reconoce-nuestra-soberania.html" target="_blank" rel="noopener noreferrer" title="El País / Juan Jesús Vivas before the European Parliament: Ceuta&#x27;s security is in the hands of a third country, Morocco, which does not recognize our sovereignty">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>&#x27;Morocco has given me nothing&#x27;: The young migrants risking everything to reach Ceuta</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ceuta is facing a mass migrant crisis after tens of thousands crossed from Morocco, at least 141 people were reported dead, and the central question remains why the surge happened and who is responsible for it.</p>
+<p>The crossing began on 31 July, King Mohammed VI’s Throne Day, and it has left the Spanish enclave trying to process a wave that, according to the latest figures, brought 72,000 people into the territory irregularly from Morocco last week. The Spanish government says 70,000 have since been returned.</p>
+<h3>A crossing with no clear explanation</h3>
+<p>Speculation about the trigger has spread quickly, but no clear answer has emerged. Some commentators have said it was a kneejerk reaction from Morocco after Spanish Prime Minister Pedro Sanchez’s recent visit to Algeria. Others have claimed Israel or the US was involved because of Spain’s stance against the genocide in Gaza and the war on Iran.</p>
+<p>Morocco’s Association for Human Rights said the “harrowing scenes” on the border reflected despair among young people, driven by lack of prospects, endemic corruption, the rise of authoritarianism, the absence of social justice, and poor employment and living conditions. The group said full responsibility lay with the Moroccan state and compared the situation to what would be expected in war and conflict zones.</p>
+<p>Morocco’s Ministry of the Interior said on 1 August that the surge was caused by a misinterpretation of data spread on social media and by human trafficking networks that exploited the Spanish Supreme Court’s 8 July decision banning the immediate return of migrants arriving by sea.</p>
+<h3>Young people, children and families at the border</h3>
+<p>What is clear is that many of those who crossed were young Moroccans who said they felt they had no choice. Around 8,000 children were among them, and at least 141 people died in the crossing, with the figure expected to rise.</p>
+<p>Hamza, 19, from Kenitra, said he walked about 41 kilometres from Tetouan to Ceuta. He said Moroccan border security “stood back and watched us cross” and told people to hurry into the water. He said police used sticks if migrants hesitated. Hamza said he would not go back: “Morocco has not given me anything.” Even with diplomas, he said, the country does not value them and wages are too low.</p>
+<p>Asmae, 23, from Casablanca, said she hitchhiked to Ceuta after seeing Instagram posts about the crossing. She said the Moroccan police were passive and did not beat migrants unless there were fights or problems. “People leave of their own free will,” she said.</p>
+<p>Another young Moroccan, Younes, said he crossed because there was nothing for him in Morocco despite having a bachelor’s degree and speaking multiple languages. He said he thought Ceuta would give him an opportunity in life. While swimming the final stretch, he saw three teenagers die in the water. When he reached Ceuta, he said he felt “unmatched happiness,” but that changed after he was beaten by the authorities and saw closed stores, no water, and people collapsing.</p>
+<h3>Competing claims and the search for missing people</h3>
+<p>Carla Hobbs, head of the Madrid office and policy fellow at the European Council on Foreign Relations, disputed the Moroccan ministry’s explanation. She said it would have been very hard for the crossing to happen without Moroccan complicity. She pointed to reduced border controls, migrants’ own accounts that authorities encouraged them to cross, and what she described as a broader pattern of Moroccan migration coercion.</p>
+<p>Hobbs said the immediate trigger appeared to be a viral online campaign after the Spanish court ruling, but she also pointed to the timing of Sanchez’s trip to Algeria 10 days earlier. She said the latest episode would not be forgotten by the Spanish government, especially with elections approaching, while noting that Morocco may see migration pressure as a lever that produces little unified European response.</p>
+<p>For families, the crisis has become a desperate search for missing children. Najaat, a mother of six, said three of her children tried to reach Ceuta. Two daughters, aged 12 and 13, took their birth certificates and wrote down her phone number before leaving. She said she has not heard from them and wants to know whether her son, aged 14, is dead or alive.</p>
+<p>No Name Kitchen, an NGO on the ground, said it has seen irregular return processes and has filmed police beatings. Its coordinator, Ric Fernandez, said the team has had to scale up from four people in Ceuta to 18, while also trying to reach vulnerable people hiding in the mountains and warehouses and documenting cases of people who may be entitled to international protection.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/morocco-has-given-me-nothing-young-people-risking-everything-reach-ceuta" target="_blank" rel="noopener noreferrer" title="Middle East Eye / &#x27;Morocco has given me nothing&#x27;: The young migrants risking everything to reach Ceuta">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Congo Ebola Death Toll Tops 1,800 as Cases Near 4,000</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Democratic Republic of the Congo’s Ebola outbreak has killed 1,801 people and infected 3,973, authorities said Thursday, while health officials warned the epidemic remains in a phase of “sustained transmission” with the virus still circulating at a high level. The latest government bulletin, based on data collected through Aug. 4, put the case fatality rate at 45.3%. Health authorities said 674 patients are in isolation or hospitalized, 776 people have recovered, and contact tracing has reached 75.3%.</p>
+<p>The outbreak was declared on May 15 and has spread across five provinces: Ituri, North Kivu, South Kivu, Haut-Uélé and Tshopo, with Ituri identified as the epicenter. The National Institute of Public Health said no new areas reported infections during the latest 24-hour period, but the epidemic remains in sustained transmission. Last Friday, the current outbreak became the second-largest Ebola epidemic on record by confirmed infections and the largest ever recorded in the Democratic Republic of the Congo, surpassing the 2018-2020 outbreak. The virus also spread to neighboring Uganda, which declared itself Ebola-free on July 28 after confirming 20 cases, including 15 imported from the DRC.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/congo-ebola-death-toll-1800-cases-4000" target="_blank" rel="noopener noreferrer" title="Telesur English / Congo Ebola Death Toll Tops 1,800 as Cases Near 4,000">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Israeli attacks wound eight in Lebanon despite Rome talks</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli strikes in southern Lebanon wounded at least eight people as residents faced fresh displacement orders and destruction, even while Lebanese and Israeli officials held another round of ceasefire talks in Rome that have still not produced a clear breakthrough.</p>
+<h3>Strikes hit towns around Tyre</h3>
+<p>The Lebanese Health Ministry said Israeli air strikes on Burj Shemali injured eight people on Thursday, while Israeli drones struck the al-Malaab neighbourhood in Burj al-Shamali, about 5km from Tyre. Three more strikes hit the area between al-Mansouri and Majdal Zoun, and Al Jazeera’s Lebanon correspondent Zeina Khodr said one air strike destroyed a civilian home.</p>
+<p>The violence followed a deadly incident a day earlier in Majdal Zoun, where a booby-trapped explosion killed two Israeli soldiers and injured four during a search operation. The soldiers had entered a civilian home when the device detonated, and their deaths were described as the first Israeli casualties since Israel and Hezbollah announced a truce two months ago.</p>
+<p>The scale of the wider fighting remains severe. Since March 2, Lebanon’s Health Ministry says Israel’s latest military escalation in Lebanon has killed 4,333 people and injured more than 12,000. The United Nations Interim Force in Lebanon said the Israeli army fired 113 projectiles into southern Lebanon on Wednesday, the highest number it has recorded since June 21.</p>
+<h3>Rome talks continue as residents face new displacement orders</h3>
+<p>The latest attacks came on the third and final day of the seventh round of US-brokered direct negotiations between Lebanon and Israel in Rome. On the table were Hezbollah’s disarmament and Israel’s withdrawal from Lebanese territory. A Lebanese official told Anadolu earlier that Lebanon had not received an answer from Israel on its commitment to a ceasefire.</p>
+<p>After the talks, US State Department spokesman Tommy Pigott said the negotiations were “fruitful” at the technical level and that Lebanon and Israel were “much closer to reaching an agreement on advancing and expanding the pilot zones process.” But a senior Lebanese official said the day’s meetings began about an hour late for what he called “US-related reasons,” were split into three parallel tracks, and had not produced a breakthrough on the proposed “model areas” for Israel’s phased withdrawal.</p>
+<p>On the ground in south Lebanon, anger was rising over the gap between the talks and the fighting. Residents said a forced evacuation order for Mansouri on Wednesday was the first displacement directive in weeks, and families who fled were still waiting on Thursday at the town’s outskirts for permission to return. Yousef Shehemi, mayor of nearby Majdal Zoun, said, “Mansouri is not part of Israel’s occupation zone,” but added that “Israel has no red lines.”</p>
+<p>Abu Rached, a resident of Majdal Zoun, said the destruction had gone unanswered by Lebanese officials. “Can’t you see what they did to south Lebanon? They’re destroying it, displacing people—even the [Lebanese] army can’t stay in Mansouri,” he said.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/6/israeli-attacks-wound-eight-in-lebanon-despite-rome-talks?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Israeli attacks wound eight in Lebanon despite Rome talks">AJ #1</a><a href="https://www.aljazeera.com/news/2026/8/6/south-lebanon-people-speak-out-as-israel-launches-attacks-ceasefire?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / ‘No red line’: South Lebanon residents outraged as Israel resumes strikes">AJ #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>DR Congo tests over 300 passengers after suspected Ebola death on boat</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Congolese health authorities were screening more than 300 people travelling on a river boat intercepted near Kinshasa on Thursday after the death of a passenger suspected of having Ebola raised fears the virus may have spread on board. Officials deployed a mobile laboratory after the vessel was stopped in Maluku, about 65km upstream from the capital on Wednesday. Body Ilonga Bompoko, the health ministry’s secretary general, said all passengers were undergoing temperature checks and clinical screening, and samples had been taken from four passengers with fever and sent for testing, with results expected on Friday.</p>
+<p>Officials also gave differing accounts of the dead man’s movements and where he may have contracted the virus. Africa CDC director general Jean Kaseya said the boat came from Mongala province, where no Ebola cases have been recorded, rather than Tshopo province, where the outbreak has spread, while Congolese authorities had earlier identified Kisangani, the capital of Tshopo, as the vessel’s point of origin. Kaseya said the man fell ill while travelling on the vessel, but Health Minister Samuel Roger Kamba said on Wednesday that he developed symptoms only after disembarking. Mongala health chief Eustache Bibala Faray said authorities had not established where he boarded.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/africa/article/3363217/dr-congo-tests-over-300-passengers-after-suspected-ebola-death-boat" target="_blank" rel="noopener noreferrer" title="South China Morning Post / DR Congo tests over 300 passengers after suspected Ebola death on boat">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc,cnn">
+  <summary>Boxer charged with killing aid worker in Greece after his wife gave police &#x27;key&#x27; details</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Greek court case over the death of Scottish aid worker Elisabeth Ross has centred on evidence said to come from the suspect’s wife, with police and the defence offering different accounts of what that material shows and how the accused says Ross died.</p>
+<p>Sharif Ahmadzai, a 26-year-old Afghan boxer, has been charged with homicide with intent, along with robbery and weapons offences, after Ross, 38, was found in a suitcase in a derelict building in Athens’s Kypseli area on 18 July. Police also say he was initially detained over illegal weapons possession, and faces allegations that he stole more than €10,000 (£8,500) from Ross’s bank accounts using her bank cards.</p>
+<h3>Police say his wife supplied the key break in the case</h3>
+<p>The most important lead, according to Greek police, came from Ahmadzai’s wife, Alaina Hall. The police union said officers arrested him after she gave them “key” and “decisive” details, including location information from a sharing app that placed Ahmadzai and Ross at the same apartment on 15 July, the day Ross is thought to have been killed.</p>
+<p>Court documents and police accounts also describe Ross’s phone being used after her death. The BBC was told Hall gave police information that included location data, and police said this helped them link Ahmadzai to the apartment where Ross had been. CNN reported that the app showed him in the flat where Ross died on the night of 15 July and into the early hours of 16 July.</p>
+<p>Ross, who was from Edinburgh and known to family and friends as Lisa, had been volunteering in Greece with a refugee support group. Police said her body was discovered by a homeless man in a suitcase inside a derelict building, and that the investigation was handled by Greece’s organised crime directorate.</p>
+<h3>In court, Ahmadzai said little and his lawyer attacked the file</h3>
+<p>When he appeared in court, Ahmadzai asked for an English translator and did not respond to the charges. His lawyer, Christos Erdas, said his client had exercised his right to remain silent and argued that his rights had been “violated” by leaks of evidence and documents from the case file, including the presumption of innocence.</p>
+<p>Erdas said the defence wanted the forensic medical report, plus the “toxicological and histological examinations of the deceased,” added to the file before Ahmadzai set out his full defence. He also said Ahmadzai’s stance was not one of denial, but of reservation until those documents were available.</p>
+<p>The BBC also quoted Erdas as saying Ross had no injuries when she was found and that any apparent cause of death was “entirely absent”. That account sits alongside police comments that the medical findings were not yet settled.</p>
+<h3>The cause of death remains disputed in the case material</h3>
+<p>The medical evidence in the case has not pointed in one direction. The Greek police union said the coroner’s initial report cited an undetermined cause of death because the body showed no signs of external trauma. It said a later autopsy and post-mortem examination listed asphyxiation as the probable cause of death.</p>
+<p>CNN quoted George Kalliakmanis, head of the Union of Police Officers of Southeast Attica, as saying the suspect had denied killing Ross in his first testimony and claimed he found her dead in the bathroom before panicking and removing the body. Kalliakmanis also said police had found no evidence that Hall was involved in Ross’s death.</p>
+<p>Ahmadzai was remanded in custody until his trial, which could take up to 18 months. He is therefore set to remain in detention while the case file is completed and the medical evidence is added to the record.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cj6390k0e26o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Boxer charged with killing aid worker in Greece after his wife gave police &#x27;key&#x27; details">BBC #1</a><a href="https://www.cnn.com/2026/08/06/europe/elisabeth-ross-death-greece-scli-intl" target="_blank" rel="noopener noreferrer" title="CNN / Afghan boxer accused of killing aid worker whose body was found in suitcase">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>‘He should resign’: unease in Republican Max Miller’s Ohio district amid domestic abuse allegations</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Republican Max Miller’s Ohio district is watching its congressman’s future narrow fast, as domestic abuse allegations, a public plea for him to resign and uncertainty inside local GOP organizations raise the question of whether he can keep the seat.</p>
+<p>In Wooster, David Griffith, who had been a registered Republican for years, said he watched Miller stumble through an 18-minute statement on Sunday evening and came away convinced the lawmaker did not resemble the party he had backed. Griffith, who sat in a community park in the town of 26,000, said, “What I saw was a person who needs help,” and said he would vote a straight Democratic ticket at the midterm election for the first time.</p>
+<p>Miller is facing accusations from his ex-wife, Emily Moreno, the daughter of Ohio senator Bernie Moreno, who has alleged that he pointed a gun at her head, poured hot water on her and may have broken their two-year-old daughter’s collarbone. Emily Moreno has also alleged that Miller attacked her attorney and another legal representative, and she filed for a restraining order on her lawyer’s behalf. The case has become a bitter custody battle, and on Sunday Bernie Moreno called for Miller to resign in an X post, saying: “He is a danger to my daughter, and I hold my breath every minute he has custody of my granddaughter.”</p>
+<p>Miller has denied any allegations of domestic abuse. In his statement on Sunday, he blamed the leftwing media and his former wife for trying to sully his name. On Tuesday, he defended himself further on CNN and likened his fight to Donald Trump’s when the president faced sexual assault allegations.</p>
+<h3>Local Republicans sound the alarm</h3>
+<p>Inside Miller’s district, local Republicans are openly uneasy, even if not all of them are saying so publicly. Bill Heck, vice-chair of the Republican party of Medina county, said many party members were worried and told the Guardian, “I think a lot of our members and our steadfast Republicans are concerned.”</p>
+<p>Heck said he could not say whether Miller should step down. “There is so much stuff flying around that we have not been able to decipher what’s real and what’s not,” he said. “What we’re trying to determine right now is how much of this is credible and how much he can refute and recover from.” Other county organizations and groups across the district, including the women’s branch of the Republican party of Cuyahoga county, did not respond when asked whether they thought he should resign.</p>
+<p>The unease is sharper because time is short. Heck said that with 92 days left before the election, it would be “really difficult for anybody to come in and take over the position” if Miller were appointed out. He also said the president would not want to lose the seat.</p>
+<h3>A seat that once looked safe</h3>
+<p>Before the allegations were made public and before Bernie Moreno’s call for Miller to resign, Miller was expected to keep his seat easily. Pollsters in June suggested the district leaned Republican by five points, and Miller, 37, had previously served as a presidential aide during Trump’s first administration. Trump endorsed him in 2021 during his first campaign.</p>
+<p>The district is still competitive enough that local concern matters. Miller won his 2024 congressional election by 15%, but a Democrat and an independent split the vote between them. In November, he faces Democrat Brian Poindexter, a union ironworker from Brook Park, a Cleveland suburb. Justin Buchler, an associate professor of political science at Case Western Reserve University in Cleveland, said the district leans Republican but is not so overwhelmingly Republican that a Democrat could never win.</p>
+<p>If Miller is weakened, Buchler said, that could help Poindexter; and if Miller withdraws without a strong replacement, that could also help Poindexter.</p>
+<h3>The replacement deadline</h3>
+<p>If the Ohio Republican party decides to replace Miller, it has until 12 August to do so. For now, though, the immediate story in his district is the same one Republican voters in Wooster and beyond are wrestling with: whether the allegations, the family split and the public calls for resignation will force Miller out, or whether he can still recover before November.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/aug/06/senators-anthony-fauci-contempt-of-congress-michiganu-democrats-republicans-trump-politics-latest-news-updates?page=with%3A6a74a12b8f0821d9ede5be01#6a74a12b8f0821d9ede5be01" target="_blank" rel="noopener noreferrer" title="The Guardian / Senators anthony fauci contempt of congress michiganu democrats republicans trump politics latest news updates">Guardian #1</a><a href="https://www.theguardian.com/us-news/2026/aug/06/ohio-voters-reconsider-republican-max-miller" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘He should resign’: unease in Republican Max Miller’s Ohio district amid domestic abuse allegations">Guardian #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian,nyt">
+  <summary>Iran oman strait of hormuz yemen houthis israel lebanon gaza us donald trump middle east crisis live news</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Houthi military spokesman Yahya Saree said the Houthis were behind Thursday’s attacks on Yemeni military camps, which he said killed dozens. Saree said on X that the group deployed ballistic missiles and drones against what it described as Saudi mobilisation in the Al-Ruwyk, Al-Abr and Al-Thaniyah areas of Yemen. He said the attacks were a response to “large Saudi military buildups in their final stages, aimed at escalating the aggression against the liberated provinces,” and added: “We will continue the ‘siege for siege’ equation until the siege on our country is lifted.”</p>
+<p>The New York Times said the Iranian-backed militia said it had targeted the armed forces in two resource-rich provinces, as escalating violence in Yemen imperils a fragile truce.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/aug/06/iran-oman-strait-of-hormuz-yemen-houthis-israel-lebanon-gaza-us-donald-trump-middle-east-crisis-live-news?page=with%3A6a74a8728f0851f2bc6ed0d4#6a74a8728f0851f2bc6ed0d4" target="_blank" rel="noopener noreferrer" title="The Guardian / Iran oman strait of hormuz yemen houthis israel lebanon gaza us donald trump middle east crisis live news">Guardian #1</a><a href="https://www.nytimes.com/2026/08/06/world/middleeast/houthi-yemen-strikes.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Houthi Strikes on Yemeni Military Threaten to Reignite Civil War">NYT #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Trump’s Gaza Board of Peace issues first building contract – for a military base</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Trump’s Gaza Board of Peace has issued its first construction contract in the territory, but the work is for a small military outpost rather than a civilian rebuilding project, and the wider plan for Gaza remains unfinished and politically contested.</p>
+<p>The contract, which has not yet been finalised, was awarded to Arkel International, a Louisiana-based firm that has previously carried out work with the US government in countries such as Iraq, according to a source familiar with the matter. The project is described as a rudimentary outpost for 150 people, intended to house Moroccan troops.</p>
+<h3>The board’s first contract is a military outpost</h3>
+<p>Donald Trump’s Board of Peace was set up in January to oversee the reconstruction of Gaza. Instead of a visible civilian rebuilding project, its first construction award is for a military facility linked to the international stabilisation force, or ISF.</p>
+<p>In an email, a Board of Peace official said the board and a group of Palestinian technocrats installed to oversee Gaza, known as the National Committee for the Administration of Gaza, “are in the final stages of preparing several contract awards. None have been finalised.” The official said “one prospective contract concerns facilities to support the international stabilisation force (ISF), which will assist in implementing the roadmap’s security and governance arrangements”.</p>
+<p>The official added: “This contract will be one of many that are essential for the future of Gaza.” Even so, the award currently in view is not complete, and the contract itself has not been finalised.</p>
+<h3>A small base in a tightly controlled area</h3>
+<p>The base now being planned is just 100 metres by 120 metres, and is intended to house a contingent of Moroccan troops who would rotate from a base in Israel. It would lie in the 60% of Gaza’s territory that the Israeli army directly controls, and Israeli forces have also created a buffer zone beyond that area.</p>
+<p>The base would be about a mile from the Israeli border and would have a “quick extraction route” in case the small force came under attack. In earlier contract plans seen by the Guardian, the 150-person base was the first phase of a larger plan for a 5,000-person military base in Gaza for the ISF. Those earlier plans included “vehicle fighting positions”, a perimeter berm, and rudimentary facilities suitable for short-term deployments, along with “tents and cots for forces to sleep, as well as chemical toilets and handwashing stations.”</p>
+<p>The latest contract therefore points to a scaled-back version of the original vision, focused on a small military presence rather than a broader build-out.</p>
+<h3>Reconstruction plans remain narrow and unresolved</h3>
+<p>The award comes just days after Trump announced that Hamas had agreed to disarm, though the evidence says there are considerable questions about how the group would give up its guns. Israel has opposed the plan, and increased airstrikes in Gaza after Trump’s announcement.</p>
+<p>There are still wider uncertainties around the force the base is meant to support. The UN resolution authorising the Board of Peace approved establishing an “international stabilisation force” for Gaza, but reports have varied on which country would provide the troops. Morocco has promised a small contingent, yet the legal framework for the ISF has not been finalised, and it is not clear when deployment would begin.</p>
+<p>The board’s reconstruction agenda also appears much smaller than the one first floated. In July, the original Gaza rebuilding plan had already shrunk from an ambitious blueprint to rebuild the whole territory to a small pilot project in the south of the strip. The new contract fits that pattern: it is real movement, but it is movement toward a limited military facility, not a full-scale reconstruction of Gaza.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/aug/06/iran-oman-strait-of-hormuz-yemen-houthis-israel-lebanon-gaza-us-donald-trump-middle-east-crisis-live-news?page=with%3A6a747c828f08086f525bc649#6a747c828f08086f525bc649" target="_blank" rel="noopener noreferrer" title="The Guardian / Iran oman strait of hormuz yemen houthis israel lebanon gaza us donald trump middle east crisis live news">Guardian #1</a><a href="https://www.theguardian.com/world/2026/aug/06/trump-gaza-board-of-peace-first-building-contract-military-base" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump’s Gaza Board of Peace issues first building contract – for a military base">Guardian #2</a><a href="https://www.theguardian.com/us-news/live/2026/aug/06/senators-anthony-fauci-contempt-of-congress-michiganu-democrats-republicans-trump-politics-latest-news-updates?page=with%3A6a74b77a8f0821d9ede5bf54#6a74b77a8f0821d9ede5bf54" target="_blank" rel="noopener noreferrer" title="The Guardian / Senators anthony fauci contempt of congress michiganu democrats republicans trump politics latest news updates">Guardian #3</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="cnn">
+  <summary>Unpaid wages and deadly risk: Why health workers are threatening to abandon the Ebola response</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Unpaid government wages are pushing health workers in eastern Democratic Republic of Congo toward a boycott even as they work inside a rapidly expanding Ebola outbreak, raising the risk that the response could lose the staff holding it together.</p>
+<p>Every morning, Micheline Kayimpa puts on layers of protective gear before entering an Ebola isolation ward, knowing that one small mistake could cost her life. At the Elikya Ebola Treatment Center in Bunia, she spends her day caring for patients with Ebola, administering medicine and helping those too weak to feed themselves. Because Ebola spreads through bodily fluids, even routine care carries constant danger, from treating patients to cleaning contaminated spaces. “I am very afraid for my safety,” she said. “Sometimes, a small detail we overlook can prove fatal.”</p>
+<p>But Kayimpa says the virus is not the only thing wearing workers down. After months of treating Ebola patients, she says she still has not received a single government paycheck. She is among dozens of health workers who have protested delayed wages and threatened to stop work. MSF provides bonuses, she said, but those payments do not replace the government wages she relies on. Kayimpa said she stopped work for three days in protest and has resumed only in the hope that her case will be resolved. If nothing changes, she says she is ready to walk out again.</p>
+<h3>A response already under strain</h3>
+<p>The wage dispute is unfolding while the outbreak is growing fast. The World Health Organization says this is now “the largest Ebola outbreak ever reported” in the DRC. Since the virus emerged in mid-May, the Congolese health ministry said Wednesday that it has infected at least 3,874 people and killed 1,751. The outbreak was jointly detected in the DRC and neighboring Uganda, but Uganda has since declared itself Ebola-free while transmission has continued to accelerate in eastern Congo.</p>
+<p>Bunia, where Kayimpa works, is the capital of northeastern Ituri province and the epicenter of the outbreak, where more than 90% of confirmed cases have been recorded. The flare-up has reached this scale in just over two months, surpassing the country’s last major Ebola epidemic, which lasted nearly two years between August 2018 and June 2020. Only the 2014–16 Ebola epidemic in West Africa was larger and deadlier.</p>
+<h3>Conflict, mistrust and attacks on treatment centers</h3>
+<p>The response is also operating in a difficult setting. This outbreak is caused by the less common Bundibugyo strain, for which there are no proven vaccines and treatment options remain limited. Ongoing fighting in eastern DRC has made it harder for health workers to reach affected communities, and aid agencies say mistrust, misinformation about Ebola and resistance to restrictions on traditional burial practices have fueled hostility toward health workers.</p>
+<p>That hostility has already turned violent. In late May, demonstrators seeking the bodies of two relatives forced their way into an Ebola treatment facility, the third such attack since the outbreak began. Health workers had to move patients to safety as gunfire erupted nearby. Similar attacks were reported in June and July, and the United Nations said last month that “at least a dozen facilities have been attacked, largely due to fear, misinformation and deep community mistrust of outside authorities.”</p>
+<p>Inside Elikya, the pressure is immediate. The 90-bed isolation ward, run by Médecins Sans Frontières, is already full, and many patients arrive only when they are critically ill. Kayimpa said there are too few nurses for the number and severity of cases. “We’re sacrificing our lives for the people,” she said. She also said some of the earliest health workers infected in the outbreak did not know it was Ebola and treated patients without protection, and that some died.</p>
+<h3>Officials say payments are being processed</h3>
+<p>DRC communications minister Patrick Muyaya Katembwe acknowledged that delayed payments had triggered staff protests at several Ebola treatment centers, but said the outstanding wages were now being processed. He said the delays were largely due to administrative verification of which workers had been deployed to the Ebola response and making sure payments reached the correct recipients. “Anyone officially listed will be paid,” he said.</p>
+<p>MSF said the protests were about government compensation, not payments from the humanitarian group. It said it was continuing to meet its obligations to staff in the response and that health workers should be compensated in time for work done under “extremely challenging conditions.”</p>
+<p>An aid worker familiar with the response said the outbreak cannot be fought without the people risking their lives in treatment centers and in communities. “Every interruption gives the virus more time to spread,” he said. For Kayimpa, the decision is simpler: “As long as I don’t receive my wages, I will boycott work until I’m paid,” she said.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/06/africa/congo-ebola-payroll-crisis-health-workers-intl" target="_blank" rel="noopener noreferrer" title="CNN / Unpaid wages and deadly risk: Why health workers are threatening to abandon the Ebola response">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Supreme Court approves employers&#x27; obligation to provide housing and meals to field workers</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">general_news</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Supreme Court of Justice of the Nation upheld employers’ obligation to provide field workers with decent and free housing, healthy food, medical care, childcare and training, among other rights, by declaring constitutional the January 2024 reforms to the Federal Labor Law and the Social Security Law. In a unanimous ruling, the full court approved three draft opinions by Justice Yasmín Esquivel and denied amparo to Agrícola Alerco, Agriexport and Agrícola Reyes Pesqueira, which had challenged articles 283 and 284 of the Federal Labor Law on the grounds that housing benefits belong to the state, not private employers. Esquivel said the measures are not disproportionate burdens and that Infonavit contributions do not replace the duty to provide decent housing during the employment relationship.</p>
+<p>Court president Hugo Aguilar said the issue has a major impact because it affects thousands of people, especially Indigenous workers. Lenia Batres cited federal government figures saying 3.4 million people work in agriculture and more than 80% do so informally. Loretta Ortiz said the 2024 reform, far from imposing arbitrary burdens on employers, addressed a social reality that has left jornaleros in a situation of special vulnerability.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/06/politica/005n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Avala la Corte obligación de patrones de dar casa y comida a los jornaleros">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>‘We stay in shit’ — Soweto awash in raw sewage as ageing system crumbles</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Soweto is being repeatedly flooded with raw sewage as manholes burst across the township, contaminating streets, rivers and school routes and leaving residents asking why repairs keep failing to stop the flow or protect communities from the smell, sludge and health risk.</p>
+<p>A four-week look at the township’s failing infrastructure documented human waste spewing from at least 25 manholes, with spillages affecting communities from Mofolo to Chiawelo. Residents described a daily grind of foul water, blocked streets and children forced to move through sewage, while the city said its ageing network is under pressure.</p>
+<h3>Overflow across the township</h3>
+<p>In Senaoane, Thenjiwe Ngcobo, 37, said the conditions had become unbearable. “We stay in shit, we smell shit, and our children are playing in shit,” she said. “What is human about us when we are subjected to such disgust by the people we vote for?” She called the situation “an indictment” on officials and said, “They must be voted out this time.”</p>
+<p>The spillages are not confined to one area. In Chiawelo, five manholes were overflowing, sending raw sewage onto Chris Hani Road and forcing motorists into what amounted to a standoff with the sludge. Sewage from another manhole flowed all the way to the railway tracks near Midway Station. Justice Vukeya, 69, said he could not recall “a single walk past this park without one of these two manholes spilling over,” adding: “When one rests, the other erupts.”</p>
+<p>In Meadowlands, several manholes were overflowing, and Philip Magazi, 71, of Zone 5, said residents report the spillages but Joburg Water “either takes too long to respond or doesn’t respond at all.” In Pimville, zones 2 and 3 looked clean at the time of observation, but an elderly woman from Zone 2 said the problems were only a street away and pointed residents toward the manholes they “are always complaining about” on a local WhatsApp group. In Dobsonville, sewage gushed from a manhole near the Forte Secondary School gates and flowed toward the Dobsonville Mall, pushing commuters and schoolchildren onto detours around the waste.</p>
+<h3>Repairs that do not last</h3>
+<p>Some residents said the worst part was not just the overflow, but how long it had been going on. Rachel Maswangani, 68, from Diepkloof Zone 2, said residents had been unable to walk freely for two years after digging began in the area for what they were told were bigger new pipes. “The sewage is still spilling over two years later,” she said. “It is reported daily, and when they do come to fix it, it erupts again a day or two later and starts spilling over.”</p>
+<p>Her companion, who did not give her name, said the spillages were affecting everyday life and described the situation as “very painful.” Residents across Soweto said the fixes were temporary, even when crews did come out. On Monday, 27 July, a high-pressure jet truck unblocked three manholes along a 200m stretch in Diepkloof, briefly clearing the foul streams. By Tuesday, 4 August, all three were overflowing again, and residents said the short-lived intervention felt performative.</p>
+<p>Joburg Water’s Nombuso Shabalala said maintenance teams sweep and clean the sewerage network to reduce blockages. But the evidence from Soweto points to a system that keeps breaking down again soon after it is cleared, with residents left to live alongside the same spillages day after day.</p>
+<h3>What the city says is going wrong</h3>
+<p>Joburg Water said the city’s population has increased substantially over the years while the sewerage infrastructure has not kept pace. Shabalala also blamed widespread blockages on vandalism and on residents flushing inappropriate objects down toilets, and warned against items such as “wipes, sanitary products, toys or other solid materials.”</p>
+<p>The wider damage is not limited to the streets. Daniel Masemola, director of water management and biodiversity in the City of Johannesburg, said the foam in the Klipriver showed E. coli levels were very high. He said sewage spills must be reported immediately and that workers should attend to them within 24 hours, but added that the turnaround time was “greatly concerning.” In his view, the core problem is the infrastructure itself: it has become inadequate, mainly because it is ageing, and needs urgent expansion if the spillages and pollution are to stop.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-06-we-stay-in-shit-soweto-awash-in-raw-sewage-as-ageing-system-crumbles" target="_blank" rel="noopener noreferrer" title="Daily Maverick / ‘We stay in shit’ — Soweto awash in raw sewage as ageing system crumbles">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>U.S. Sanctions Endanger Patient Lives In Cuba</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Wednesday, Deputy Health Minister Julio Guerra said Cuba’s long-running U.S. economic blockade and a recent fuel blockade are causing power outages and shortages that threaten patients’ lives, speaking at a ceremony in Havana marking a donation of medicines to the Hermanos Ameijeiras Clinical Surgical Hospital. Guerra said that when stable power is lacking, the preservation of medications is affected and “every blackout and every restriction translates into a risk to the lives of our patients.” He also denounced the “genocidal blockade” and said Cuba’s health sector suffered losses of up to US$288 million between March 2024 and February 2025, with cumulative losses from more than six decades of sanctions reaching nearly US$4.2 billion.</p>
+<p>Reynaldo Denis de Armas, the hospital’s deputy director, said the embargo had undermined Cuba’s economy for more than six decades and the fuel blockade had left the country “practically being strangled.” The hospital was described as a national referral center that treats patients from across Cuba, and the evidence says more than 100,000 Cubans are waiting for surgeries because of supply shortages and the energy crisis, including over 5,000 cancer patients and 12,000 children.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/u-s-sanctions-endanger-patient-lives-in-cuba" target="_blank" rel="noopener noreferrer" title="Telesur English / U.S. Sanctions Endanger Patient Lives In Cuba">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc,cnn">
+  <summary>New Mexico judge orders Meta to pay $567 million into a child mental health fund</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A New Mexico judge ordered Meta to put $567 million into a fund for child mental-health harms, escalating a case over the company’s platforms and adding to an earlier $375 million penalty that Meta had already said it would appeal.</p>
+<p>Judge Bryan Biedscheid said Meta was a “public nuisance” and compared it to a factory, with advertising and content as its product and “the psychological harm and sexual exploitation of children” as pollution that must be abated. He said the money must go into a fund aimed at reducing future harms.</p>
+<p>The ruling came on top of the $375 million in damages already ordered in the case. In court, the judge also said Meta must delete accounts and personal information collected from accounts belonging to users under 13 years of age.</p>
+<h3>How the case reached Thursday’s ruling</h3>
+<p>The case had already gone through a March jury trial on child safety, where Meta was found liable on all counts, including willfully engaging in “unfair and deceptive” and “unconscionable” trade practices, CNN reported. That earlier phase of the case led to the $375 million damages award.</p>
+<p>New Mexico Attorney General Raúl Torrez first sued Meta in 2023. He had alleged the company created a “breeding ground” for child predators on Facebook and Instagram, a claim Meta denied. The company owns and operates Instagram, Facebook, WhatsApp and Threads.</p>
+<p>The judge’s Thursday decision followed a second phase of the trial, which was focused on whether Meta’s platforms were a public nuisance. The order came as the company faced more child-safety litigation and after Meta had said it intended to appeal the earlier $375 million verdict.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cd7lz3wr2rlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Meta fined $567m in largest child safety ruling against social media giant">BBC #1</a><a href="https://www.cnn.com/2026/08/06/business/meta-new-mexico-child-health" target="_blank" rel="noopener noreferrer" title="CNN / New Mexico judge orders Meta to pay $567 million into a child mental health fund">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Protests by IMSS retirees continue at the Supreme Court; demand to recover their savings</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">For the second day in a row, a large group of retirees and pensioners of the Mexican Institute of Social Security (IMSS) protested yesterday in front of the Supreme Court of Justice of the Nation (SCJN) to demand a ruling that would let them recover their severance and old-age savings. They said the resolution could benefit more than 130 thousand former workers and extend to another 100 thousand who are about to retire. With banners from the national retirees movement Pie de Lucha, they waited for hours to be received by the ministers, especially the court president, Hugo Aguilar Ortiz, and asked him to modify the direct amparo project 65/2025, which maintains jurisprudence 185/2008 and blocks access to those resources.</p>
+<p>A group of protesters was later received by Aguilar Ortiz and ministers Giovanni Figueroa Mejía, Irving Espinosa Mejía and Sara Irene Herrerías Guerra. Laura Patricia Varela Cabrera, national coordinator of press and publicity for the movement, said they were told the matter would be studied in depth. She said jurisprudence 185/2008 affects former workers and active IMSS employees because it prevents them from receiving 65% of the total amount of their Afore account, deducting resources corresponding to severance, old age and retirement. Pie de Lucha and Uncimiss estimate each former worker is owed 350,000 pesos, for nearly 50 billion pesos in total.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/06/politica/012n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Protests by IMSS retirees continue at the Supreme Court; demand to recover their savings">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Germany jails man for life over deadly Munich car-ramming</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A German court on Thursday sentenced an Afghan man to life in prison for a car-ramming attack in Munich last year that killed a two-year-old girl and her mother and left dozens injured. The Munich court found Farhad N. guilty of two counts of murder, 23 counts of attempted murder, and 22 counts of bodily harm, including 19 serious cases. It also said the offences carried a “particular gravity of guilt.”</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/europe/article/3363194/germany-jails-man-life-over-deadly-munich-car-ramming" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Germany jails man for life over deadly Munich car-ramming">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Venezuelan Government Begins National Dialogue With Opposition Members in Caracas</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Venezuela’s government and former opposition deputies of the dissolved 2015-2020 National Assembly began national dialogue in Caracas this Thursday, opening a plenary session that set the negotiation methodology, work cycles and agenda for the talks. Jorge Rodríguez, who is coordinating the conversations for the executive and serves as president of the National Assembly, said the dialogue table had been formally installed.</p>
+<p>Rodríguez said the delegations would remain in permanent session until Wednesday, August 12, when the continuity of the plenary will be defined. He also said the process is meant to be “inclusive and effective,” with mutual recognition, respect, political equality and equal treatment at the negotiating table. The government delegation is led by Rodríguez and includes Ana María San Juan, Jorge Arreaza, América Pérez, Genesis Garvett and Pedro Infante, while Dinorah Figuera leads a sector of the opposition and heads a technical political commission that also includes Marco Aurelio Quiñones, Ramón López, Jorge Millán, Juan Miguel Matheus and Sergio Vergara. The agenda also includes cooperation on aid for victims of the double seismic event of June 24.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-national-dialogue-opposition" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuelan Government Begins National Dialogue With Opposition Members in Caracas">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Iran’s Ghalibaf accuses Trump of conducting show diplomacy ‘on loop’</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran’s parliament speaker and chief negotiator Mohammad Bagher Ghalibaf accused Donald Trump of “theatre diplomacy on loop” in a social media post on Thursday, days after Trump said he had called off planned strikes on Iran and claimed that “the perimeters of a deal” had already been agreed with Tehran. Ghalibaf said Washington keeps shifting between military threats and negotiation offers as a failed pressure tactic, writing: “Massive attack coming…wait, never mind, they want to negotiate.” He added that using “bullying + broken promises + fake news as leverage” was a failed strategy and called on the US to “acknowledge the facts” and fulfill its commitments.</p>
+<p>Trump said on Saturday that he cancelled a planned large-scale military attack on Iran because Tehran and other countries in the region had asked him to call off the strikes as a diplomatic breakthrough was close. He said the agreement would bring the “ommediate, Complete, and Total OPENING OF THE HORMUZ STRAIT” and end what he called Iran’s nuclear threat. Iran has also been holding talks with Oman to reopen the Strait of Hormuz, with Tehran saying a deal is “on the verge of being finalised” after both sides agreed on route coordinates.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/6/irans-ghalibaf-accuses-trump-of-conducting-show-diplomacy-on-loop?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Iran’s Ghalibaf accuses Trump of conducting show diplomacy ‘on loop’">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>UK: Dozens of MPs urge Shabana Mahmood not to block evacuation from Gaza</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">More than 85 British MPs have written to Home Secretary Shabana Mahmood to express concern over reports that the government is blocking the evacuation of dozens of women and children from Gaza. The letter was sent on Thursday by Labour MP Kim Johnson and signed by MPs from across different parties. It says Palestinians in the UK have been told by the Foreign Office that their families had agreed to be evacuated from Gaza, and asks Mahmood not to block that process.</p>
+<p>The letter links the current situation to the Home Office’s suspension of refugee family reunion applications last September, pending new stricter rules that have still not been announced. It says families in Gaza who had applied to join an immediate family member in Britain before the suspension have been prevented from doing so. Johnson said family reunification should not be treated as a political bargaining chip and called it a lifeline for families in Gaza. The signatories include dozens of Labour MPs, among them Richard Burgon, Diane Abbott, Clive Lewis, John McDonnell and Abtisam Mohamed, as well as Green MPs Sian Berry, Carla Denyer and Hannah Spencer, members of the parliamentary Independent Alliance, and some Liberal Democrat and Scottish National Party MPs.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/85-mps-urge-uk-not-block-evacuation-women-and-children-gaza" target="_blank" rel="noopener noreferrer" title="Middle East Eye / UK: Dozens of MPs urge Shabana Mahmood not to block evacuation from Gaza">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>UN Works with Several Countries to Send Fuel to Cuba</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The United Nations is working with several countries to send fuel to Cuba for humanitarian reasons, after fuel shortages in the country worsened following the oil blockade imposed by the United States in January 2026. On Tuesday, the UN Office of the Secretary-General confirmed the effort, and UN Deputy Spokesperson Farhan Haq said the aim was to ensure Cuba had the fuel needed to meet humanitarian needs. He did not name the countries involved or say how much progress had been made. The evidence also notes a March shipment on the Russian tanker *Anatoly Kolodkin*, which carried 730,000 barrels of fuel.</p>
+<p>UN Resident Coordinator in Cuba Francisco Pichon said negotiations were underway with the U.S. to obtain fuel and mobilize stored humanitarian aid, although no solution had yet been reached. He said small quantities had been obtained through the private sector, allowing aid containers to move, but broader action was still needed. Separately, the Cuban Electric Union said electricity bill payments were suspended until Thursday because of technical problems linked to outages in the National Electric System.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/un-works-with-several-countries-to-send-fuel-to-cuba" target="_blank" rel="noopener noreferrer" title="Telesur English / UN Works with Several Countries to Send Fuel to Cuba">TE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="scmp,xinhua_en">
+  <summary>News Analysis: Experts say China&#x27;s first national security investigation in foreign trade marks governance upgrade</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China has launched its first national security investigation in foreign trade and added new countermeasures against U.S. entities, a move experts say widens Beijing’s trade-security toolkit even as the latest escalation is still being judged against the possibility of a Xi-Trump summit.</p>
+<p>On Wednesday, the Ministry of Commerce sanctioned seven U.S. entities and tightened export controls on drones and related technologies, citing the need to “safeguard national security.” It also opened a national security investigation into imported printing and copying equipment with foreign system software. The measures came alongside a broader exchange of tit-for-tat actions between Beijing and Washington that observers described as more of a “speed bump” than a stop sign for ties.</p>
+<p>Xinhua quoted experts as saying the investigation marks an important step in upgrading China’s economic and trade governance framework and a new stage in enforcing its legal regime for safeguarding national security in foreign trade. Zhang Monan, a researcher at the China Center for International Economic Exchanges, said national security investigations are a common institutional arrangement used by major economies, adding that the United States and the European Union have mature trade security investigation mechanisms.</p>
+<p>Zhang said the approach is meant not only as a response to unfair trade practices, but also to safeguard national security, strengthen the resilience of industrial and supply chains, and support high-quality foreign trade development. She said China is building a more systematic and institutionalized trade security framework, pointing to two probes into U.S. trade barriers in March and new measures on industrial and supply chain security investigations published in June.</p>
+<p>Shi Xiaoli, director of the WTO law research center at the China University of Political Science and Law, said the new investigation further enriches China’s foreign trade policy toolkit. Xinhua said imported office equipment with printing and copying functions account for roughly half of China’s domestic market by both sales volume and value, while domestic producers with fully independent intellectual property rights hold less than one-quarter. Shi said the probe will help assess import conditions and their impact on domestic industries and markets, especially the effect of imported products and relevant foreign government policies on China’s national security interests in foreign trade.</p>
+<p>If the investigation concludes that imports have harmed those interests, Shi said, related government departments would be justified in taking necessary measures according to law.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/diplomacy/article/3363156/will-latest-trade-speed-bump-slow-china-us-ties-or-even-stop-xi-trump-summit" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Will latest trade ‘speed bump’ slow China-US ties, or even stop Xi-Trump summit?">SCMP #1</a><a href="https://english.news.cn/20260806/66c635bcd91f40ee8542009c6bd7fd5f/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / News Analysis: Experts say China&#x27;s first national security investigation in foreign trade marks governance upgrade">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="scmp">
+  <summary>Argentina renews US$19 billion China currency swap, brushing off Washington’s pressure</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Argentina has extended its China currency swap for five years, keeping a US$19 billion credit line in place despite more than a year of pressure from Washington and renewed uncertainty over whether President Javier Milei would let it lapse.</p>
+<p>The Argentine central bank and the People’s Bank of China signed the extension of the 130 billion yuan line on Wednesday, a day before the existing deal was due to expire. The new term runs to 2031, two years longer than any previous renewal since the two countries first signed the swap in 2009. The central bank said the longer term would provide “greater predictability over the continuity of this tool.”</p>
+<p>A currency swap is a standing credit line between two central banks. Argentina can draw yuan from the PBOC and hand over pesos in exchange, then repay the money later with interest. The full 130 billion yuan counts towards Argentina’s foreign reserves, but none of it can be spent until a tranche is activated, at which point it becomes debt. Under the renewed deal, the US$5 billion tranche remains activated and can be used “without additional authorisations.”</p>
+<p>The swap matters because Argentina has been chronically short of dollars and has come to rely on the line heavily. It accounts for about 40 per cent of the country’s gross reserves, down from nearly 60 per cent in 2023. Yuan drawn from it have paid for Chinese imports, propped up the peso during currency runs and covered payments to the International Monetary Fund.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/article/3363219/argentina-renews-us19-billion-china-currency-swap-brushing-washingtons-pressure" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Argentina renews US$19 billion China currency swap, brushing off Washington’s pressure">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,scmp,telesur_en">
+  <summary>US diplomat Rubio targets Cuban military officials, companies in sanctions</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">public_health</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The United States has widened its pressure campaign on Cuba by sanctioning companies and military-linked officials accused of helping the island obtain weapons and other military equipment, deepening the standoff over Cuba’s ties with Russia, China and Iran.</p>
+<p>Marco Rubio, the top US diplomat, said on Thursday that the sanctions were meant to protect US national security and target people and entities that facilitate Havana’s military relationships and arms shipments. In a social media post, he repeated Donald Trump’s description of the Cuban government as a “state sponsor of terrorism” and said the United States would not tolerate hostile military, intelligence and terror operations “on our doorstep.”</p>
+<p>The targeted businesses include Tecnoimport, which the US State Department says imports military equipment from Russia and China on behalf of Cuba’s armed forces, along with the Union de Industria Militar, which manufactures and repairs weapons systems, and EMI Yuri Gagarin, which the US says repairs and maintains Cuba’s Russian-made military aircraft. The sanctions also hit officials including Defence Minister Alvaro Lopez Miera and Chief of the General Staff Roberto Legra Sotolongo.</p>
+<p>Among the individuals singled out by Washington was Waldo Perez Cortes, Cuba’s military, naval and air attache in Beijing. The State Department said he had been involved in procuring military-related equipment from China for Cuba’s armed forces, though it did not identify the equipment or the transactions involved. Telesur also said the sanctions covered Tecnotex, Duna S.A., and military officials in Russia and China.</p>
+<p>The measures freeze any assets the targeted entities hold in the United States and bar Americans from doing business with them. Foreign banks and companies with ties to the US could also face sanctions if they continue dealing with the designated parties.</p>
+<p>The action comes as Trump has tightened restrictions on Cuba since returning to office in 2025, part of his “maximum pressure” campaign. He reinstated Cuba as a state sponsor of terrorism, a label he first applied in 2021, and since January has suggested he could take military action against the island. Washington has also said Cuba has strengthened its defences, including by buying drones, while it accuses Havana of deepening military links with Russia, Iran and China.</p>
+<p>The latest sanctions are the newest move in a broader US effort to squeeze Cuba’s military and state-linked sectors. Havana has said the campaign is economic coercion that worsens shortages and harms ordinary Cubans.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/6/us-diplomat-rubio-targets-cuban-military-officials-companies-in-sanctions?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US diplomat Rubio targets Cuban military officials, companies in sanctions">AJ #1</a><a href="https://www.scmp.com/news/us/article/3363216/us-sanctions-cubas-military-representative-beijing-over-china-procurement" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US sanctions Cuba’s military representative in Beijing over China procurement">SCMP #1</a><a href="https://www.telesurenglish.net/u-s-sanctions-five-cuban-state-entities-and-eight-officials" target="_blank" rel="noopener noreferrer" title="Telesur English / U.S. Sanctions Five Cuban State Entities and Eight Officials">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Sira Rego, Minister of Childhood: “It is lamentable that PP and Vox are using Ceuta for propaganda and elections”</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sira Rego arrived in Ceuta on Thursday to oversee the response to a surge in unaccompanied minors, saying transfers to Spain’s autonomous communities should begin “in a few weeks” while officials still lack a definitive count of the children involved.</p>
+<p>The Minister of Youth and Childhood said her team was still identifying the minors who have reached the autonomous city and checking their individual circumstances. “Right now we are not in a position to provide a definitive figure,” she said, adding that some children had been “hidden” or were not previously known to be in Ceuta. Local press reports have put the number at between 5,000 and 6,000, but Rego said she did not think the total would reach that range.</p>
+<p>She said the group includes “a significant number of 12-year-old boys and also girls,” and described the situation as diverse in age and gender, which is forcing child-care services to adapt. Rego said Ceuta would make a “huge effort” to carry out age-determination tests there, while very young children would be moved immediately into emergency reception.</p>
+<p>For now, she said, the first option is family reunification, based on individualized interviews with each child and coordination with Morocco. Children who cannot return to their families would be integrated into Spain’s reception system. Rego also said there are minors arriving from conflict zones such as Sudan, alongside children from Morocco.</p>
+<p>She criticized PP and Vox for using the situation for “propaganda” and said they were treating childhood as a “cash cow” at a moment of “very high tension” and “extraordinary human tragedy,” saying more than 140 people had died.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-06/sira-rego-ministra-de-infancia-es-lamentable-que-pp-y-vox-hagan-un-uso-propagandistico-y-electoral-de-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / Sira Rego, Minister of Childhood: “It is lamentable that PP and Vox are using Ceuta for propaganda and elections”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>&#x27;We&#x27;ve run out of earthly solutions&#x27;: Inside Libya&#x27;s electricity crisis</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tripoli businesses and households are facing hours-long blackouts across Libya, with restaurants, water plants and families improvising around the outages while the bigger question remains why a hydrocarbon-rich country still cannot keep the power on.</p>
+<p>Earlier this month, Al Robyan, one of Tripoli’s most popular seafood restaurants, offered a table laden with seafood in exchange for “some fuel for the generator.” The restaurant posted on Facebook that it had “run out of earthly solutions,” and the message drew thousands of responses, including jokes that the fuel would cost more than the food.</p>
+<p>Over the summer, Libyans across the country have endured almost daily power cuts lasting six to 10 hours. That has hit ordinary life and business alike. Alaeddin Muntasser, a retired businessman in Tripoli, said “every business in Libya has been affected” and described the situation as an “electricity disaster.” He pointed to one water-bottling plant that was badly affected: “We had a shortage of drinking water for a couple of weeks. If they can’t pump or filter, they can’t bottle,” he said. He also said many small restaurants had shut down, while only some with generators were able to stay open. People facing the worst outages lost food in freezers and fridges.</p>
+<p>The strain is hard to square with Libya’s energy wealth. The country produces more than 1.3 million barrels of oil a day and has a population of just over 7.5 million, yet its grid has been running under severe pressure. Blackouts have sparked protests in Tripoli, Zawiya, Misrata and elsewhere, and demonstrators have demanded a more reliable electricity supply and the resignation of Prime Minister Abdul Hamid Dbeibah.</p>
+<p>Libya generates roughly 70 percent of its electricity from natural gas, which leaves the grid exposed when gas production falls or fields and pipelines are disrupted. Oil makes up almost all the rest. Hamish Kinnear, a principal Middle East and North Africa analyst at Verisk Maplecroft, said the problem will not go away until Libya’s government can implement a longer-term strategy for more reliable electricity, whether through refined fuels or renewable energy. He noted that Libya has the largest oil reserves and the fifth largest gas reserves in Africa, plus strong solar potential, making the blackouts a particular source of frustration.</p>
+<p>The crisis also has older roots. Libya has not recovered since the 2011 uprising that toppled Muammar Gaddafi, and rival administrations still govern east and west. Years of underinvestment, this year’s heatwave, and what analysts describe as slow decision-making and deferred maintenance have all added to the pressure.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/weve-run-out-earthly-solutions-inside-libyas-electricity-crisis" target="_blank" rel="noopener noreferrer" title="Middle East Eye / &#x27;We&#x27;ve run out of earthly solutions&#x27;: Inside Libya&#x27;s electricity crisis">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>US presses China over alleged scam bosses despite growing police cooperation</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A senior State Department official said on Thursday that President Donald Trump has personally pressed Chinese President Xi Jinping over transnational criminal organisations involved in Southeast Asia’s online scam industry. Michael DeSombre, assistant secretary of state for East Asian and Pacific affairs, told the Senate Foreign Relations Committee that Washington is also raising concerns about fentanyl trafficking and scam centres “at the highest levels” with Beijing.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/us/article/3363222/us-presses-china-over-alleged-scam-bosses-despite-growing-police-cooperation" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US presses China over alleged scam bosses despite growing police cooperation">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cnn">
+  <summary>US-backed democracy talks start in Venezuela without Nobel laureate Machado</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Venezuela’s government and opposition figures met in Caracas on Thursday after days of delay, launching US-backed democracy talks that exclude María Corina Machado and Edmundo González Urrutia and reopen a familiar question: whether this round can produce elections and reforms where many previous efforts failed.</p>
+<p>The government delegation is being led by Jorge Rodríguez, president of the current National Assembly and brother of acting president Delcy Rodríguez. The opposition bloc is led by former congresswoman Dinorah Figuera and made up of former members of the 2015 National Assembly, which the US considers the last legitimate legislature. Figuera arrived in Venezuela Wednesday night and said the process would take time, adding that the “full product” of the talks could be presented in December.</p>
+<p>Machado and González, both in exile, are not taking part. Both have said they will monitor the talks and hope they lead to elections. Machado has said the process is not about her personally but about Venezuelans, and that she maintains direct contact with senior US officials.</p>
+<p>The talks are part of the United States’ three-phase plan for stabilization, economic recovery, political reconciliation and democratic transition, with the aim of eventually holding new elections. Both sides say the agenda includes responding to the deadly earthquakes in June, strengthening democracy and guaranteeing political rights. Figuera also said the parties would discuss restructuring the body that oversees elections so it is “credible and reliable,” along with reforms to the Supreme Court of Justice.</p>
+<p>Negotiators have tried and failed to reach concrete results in more than a dozen meetings since 2013. Experts said this round could be different because it is the first one promoted and partly led by the US.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/06/americas/venezuela-democracy-talks-opposition-latam-intl" target="_blank" rel="noopener noreferrer" title="CNN / US-backed democracy talks start in Venezuela without Nobel laureate Machado">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>US law enforcement gave false information in case against woman charged in anti-ICE protest</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Georgia Fort’s lawyers asked a federal judge on Thursday to dismiss criminal charges over an anti-ICE protest in St Paul, saying law enforcement gave false information while building a case against the independent journalist and that the prosecution is punishing her reporting.</p>
+<p>Fort was one of nearly 40 people charged after demonstrators interrupted a service at Cities Church in St Paul, Minnesota, after learning an ICE official was a pastor there. Trump administration officials vowed to arrest anyone involved in the protest. Fort and the former CNN anchor Don Lemon were charged with conspiring to interfere with the religious rights of parishioners at their house of worship, and both have strongly denied the charges.</p>
+<p>Her lawyers said an investigator with Homeland Security Investigations claimed in at least 15 search-warrant applications that Fort had been chanting with protesters when they entered the church. The Justice Department later conceded that claim was false, though its lawyers later argued the mistake was not significant because it did not appear in the indictment.</p>
+<p>The disputed warrant language was one of several issues raised in three motions seeking dismissal. Fort’s lawyers said the case violates the First Amendment, fails to state an actual crime and is vindictive. They wrote that “the government is punishing Fort for entering a church open to the public (after being invited in, no less) to document a protest, and then filming and disseminating that footage.”</p>
+<p>At a 24 July hearing, Fort’s lawyers asked magistrate judge Douglas Micko to examine whether prosecutors misled grand jurors about her conduct when they secured the indictment earlier this year. Micko ordered prosecutors to turn over all grand jury proceedings related to Fort and Michael Beute, another journalist who was arrested.</p>
+<p>Her lawyers also said a judge twice rejected efforts by investigators to obtain her journalistic work product, after they allegedly failed to tell the court about the Privacy Protection Act. They said officials also tried to obtain subscriber information from social media platforms and then used an administrative customs process when that was blocked.</p>
+<p>The filings said the broader prosecution has been marked by other mistakes, including a search-warrant claim that a congregant broke her arm when she had not, and charges filed against a woman who had nothing to do with the protest because she had been in a supermarket parking lot. Fort said the case has already chilled her reporting, and prosecutors have offered misdemeanor pleas to 29 of those charged, none of which have been accepted.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/06/law-enforcement-false-information-anti-ice-protest" target="_blank" rel="noopener noreferrer" title="The Guardian / US law enforcement gave false information in case against woman charged in anti-ICE protest">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>US stresses Ceuta is Spanish territory but slams Sánchez for not defending it</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The United States moved on Thursday to allay fears that it was questioning Spain’s sovereignty over Ceuta and Melilla, while sharply criticizing Prime Minister Pedro Sánchez’s government for what State Department spokesperson Tommy Pigott called a refusal to defend the North African exclaves from a “migrant invasion.” Pigott said, “The United States unequivocally supports Spain’s sovereignty over Ceuta and Melilla,” and argued that the Spanish government was to blame for the crisis. He said 72,000 unauthorized migrants surged into Ceuta last week, after tens of thousands of migrants poured in from Morocco.</p>
+<p>The dispute came as Spanish politicians and media raised concerns about Morocco’s claims to Ceuta and Melilla and about a recent U.S. Congress report that described the cities as being in “Moroccan territory” and supported negotiations on their “future status.” The State Department said the report did not represent U.S. law, and Pigott said there had been no change in U.S. policy on the exclaves.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/us-ceuta-spain-territory-pedro-sanchez-defense" target="_blank" rel="noopener noreferrer" title="POLITICO / US stresses Ceuta is Spanish territory but slams Sánchez for not defending it">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Netanyahu&#x27;s ultra-Orthodox alliance shows signs of fracture before crucial election</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Benjamin Netanyahu’s reliance on ultra-Orthodox parties is showing unusual strain as a conscription fight collides with one of his toughest election battles, raising questions over whether two longtime allies can stay in his camp or look elsewhere.</p>
+<p>For nearly three decades, Netanyahu has leaned on ultra-Orthodox parties as a pillar of his political survival. Now his governing alliance is under pressure over the long-running dispute about military conscription for ultra-Orthodox Jewish men, a row that has exposed deep divisions inside his right-wing bloc and unsettled the future of United Torah Judaism and Shas, both of which have backed him since he first became prime minister in 1996.</p>
+<h3>Conscription is driving the split</h3>
+<p>The issue has grown sharper since Israel launched its war on Gaza. While hundreds of thousands of reservists have been mobilized, ultra-Orthodox men have historically been exempt from compulsory service so they can pursue full-time religious study in yeshivas. Netanyahu’s coalition has repeatedly failed to pass legislation regulating enlistment, leading to the detention of dozens of young men accused of evading service and triggering mass protests backed by UTJ and Shas.</p>
+<p>Last year, ministers from both parties resigned from government posts in protest over the failed conscription law, though they continued cooperating with the government on key legislation. The dispute has also deepened tensions inside Netanyahu’s Likud, where some lawmakers saw a new draft law as an unacceptable concession. Dan Illouz, who left Likud last month over the issue, told Ynet that the right-wing bloc “has become idolatry” and said it was undermining right-wing economic and security policy.</p>
+<p>Ultra-Orthodox leaders, meanwhile, have increasingly questioned their partnership with Netanyahu. In May, Rabbi Dov Lando, the spiritual leader of Degel HaTorah, said “we no longer have trust in Netanyahu” and that the party was no longer “committed to him.” A senior Degel HaTorah official later told Ma’ariv that “there’s no such thing as a bloc anymore,” and said the party would negotiate with any camp willing to meet its demands.</p>
+<p>Pnina Pfeuffer, director general of the Ultra-Orthodox Public Organisation, said there was “disappointment and anger” within the ultra-Orthodox public and said it was no longer “far-fetched” that UTJ and Shas could join a government led by Gadi Eisenkot, whom she said is not seen as anti-ultra-Orthodox. Israeli historian and human rights activist Avi-ram Tzoreff said the divide had opened new political possibilities, adding that “the alliance between the ultra-Orthodox parties and the right is not a given.”</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israel-netanyahu-ultra-orthodox-alliance-shows-signs-fracture" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Netanyahu&#x27;s ultra-Orthodox alliance shows signs of fracture before crucial election">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,axios">
+  <summary>US ends cap on local TV station owners amid concerns of media consolidation</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Federal Communications Commission voted 2-1 on Thursday to lift the national TV ownership cap, opening the door for local broadcasters to grow through mergers while critics warned it could concentrate control of the public airwaves and the move’s legality remains disputed.</p>
+<p>The rule the FCC rescinded had barred local broadcast station owners from reaching more than 39 percent of US TV households. Under the new approach, the agency said it will review mergers that would go above that level on a case-by-case basis to decide whether they serve the public interest. The FCC has limited ownership of local broadcast stations since 1941, and the cap was last raised to 39 percent in 2004.</p>
+<p>Chairman Brendan Carr said the change is meant to help local broadcasters survive and to remove restrictions he called outdated. He pointed to the decline in local newspapers and said he does not want local broadcast TV to follow the same path. The FCC said the new rule would remove “artificial restrictions” on opportunities for broadcast television to attract capital and generate revenue.</p>
+<h3>Critics warn of consolidation</h3>
+<p>Anna Gomez, the commission’s sole Democrat, voted against the measure and said it was illegal, arguing that only Congress can lift the cap. She said the decision is “an invitation to bring in a lot of transactions” and warned that it hands more control of the public airwaves to a small number of companies. Other critics said the move could give station owners excessive market power.</p>
+<p>The change is especially relevant to larger broadcasters that could benefit from looser ownership limits. Nexstar has been described as the clearest example. Its $6.2 billion takeover of Tegna is on pause while a federal judge considers an antitrust lawsuit filed by DirecTV and several state attorneys general. The FCC’s Media Bureau approved Nexstar’s application to transfer Tegna’s broadcast licenses in March, and the agency had said it was waiving the 39 percent rule in approving that deal.</p>
+<p>The Thursday vote does not resolve the antitrust lawsuit or the separate debate over whether the FCC has the authority to change the cap without Congress. Free Press said it plans to appeal, and Reporters Without Borders North America said it was evaluating legal avenues to challenge the decision.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/8/6/us-ends-cap-on-local-tv-station-owners-amid-concerns-of-media-consolidation?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US ends cap on local TV station owners amid concerns of media consolidation">AJ #1</a><a href="https://www.axios.com/2026/08/06/fcc-broadcast-ownership-cap-vote" target="_blank" rel="noopener noreferrer" title="Axios / FCC votes to lift broadcast ownership cap">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Senators anthony fauci contempt of congress michiganu democrats republicans trump politics latest news updates</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Senior Democrats accused Donald Trump’s administration of giving a green light to violent Israeli settlers in the occupied West Bank, saying its policies created “a climate of impunity and unbridled violence” that endangers Palestinians and US citizens. In a letter, 19 Democratic senators and representatives called for sanctions against extremist settlers to be restored and for independent US investigations into the deaths of nine US citizens killed in the West Bank since 2022. The letter was signed by Massachusetts senator Elizabeth Warren among others and was addressed to Todd Blanche, the acting attorney general, Marco Rubio, the secretary of state, and Scott Bessent, the treasury secretary.</p>
+<p>The Democrats said Trump’s promise last year that “I will not allow Israel to annex the West Bank” had been undermined by events on the ground. They wrote that “violent settlers and the [Benjamin] Netanyahu government have proceeded to rapidly extend Israeli control over civilian populations in the region.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/aug/06/iran-oman-strait-of-hormuz-yemen-houthis-israel-lebanon-gaza-us-donald-trump-middle-east-crisis-live-news?page=with%3A6a745ba88f08086f525bc48a#6a745ba88f08086f525bc48a" target="_blank" rel="noopener noreferrer" title="The Guardian / Iran oman strait of hormuz yemen houthis israel lebanon gaza us donald trump middle east crisis live news">Guardian #1</a><a href="https://www.theguardian.com/us-news/live/2026/aug/06/senators-anthony-fauci-contempt-of-congress-michiganu-democrats-republicans-trump-politics-latest-news-updates?page=with%3A6a745e3c8f0851f2bc6ecc83#6a745e3c8f0851f2bc6ecc83" target="_blank" rel="noopener noreferrer" title="The Guardian / Senators anthony fauci contempt of congress michiganu democrats republicans trump politics latest news updates">Guardian #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="peoples_daily_en">
+  <summary>No need to show courtesy to the enforcers and accomplices of US sanctions against China</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China has put six U.S. entities under countermeasures and barred organizations and individuals inside China from doing business with them, escalating a dispute over U.S. sanctions on Chinese companies and leaving open how far both sides are prepared to go next.</p>
+<p>China’s Ministry of Commerce announced the decision on Wednesday, and the measures took effect the same day. The ministry said the move was a response to U.S. sanctions against Chinese companies under the pretext of so-called “forced labor,” and said the U.S. action “seriously violates international law and the basic norms of international relations” and undermines China’s sovereignty, security and development interests.</p>
+<p>The six entities named by the ministry are Applied DNA Sciences, Inc., Stratum Reservoir, LLC., Altana Technologies, Inc., Responsible Business Alliance, Verite Group, Inc., and Human Rights in China. The ministry said they “assisted and supported” what it called the United States’ unlawful Xinjiang-related sanctions. Under the decision, organizations and individuals within China are prohibited from engaging in any transactions, cooperation or other related activities with them.</p>
+<p>A commentary accompanying the announcement said China values stability in bilateral economic and trade ties, but that goodwill must be mutual and commitments must be honored by both sides. It said China’s countermeasures are “generally restrained,” but warned that if the U.S. keeps introducing new restrictive measures against China, China’s response will be “even more resolute.”</p>
+<p>The commentary also spelled out why the entities were targeted. It said Applied DNA Sciences and Stratum Reservoir had long conducted presumption-of-guilt screening of products exported from China to the U.S., with Applied DNA Sciences’ executives even saying they wanted to reduce U.S. imports of Xinjiang cotton to “zero.” It said Altana Technologies used AI to track China’s industrial chains and provide “precise navigation” for U.S. Customs enforcement, while Verite Group fabricated a report on forced labor in cotton production in China with a specific focus on Xinjiang. It described Human Rights in China as a habitual offender in issues related to Xinjiang, Xizang and Hong Kong.</p>
+<p>The same commentary said the measures are aimed at holding accomplices accountable and making clear that entities cannot help enforce sanctions against China while still benefiting from the Chinese market.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0806/c90000-20485794.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China announces countermeasures against six U.S. entities">PDE #1</a><a href="https://en.people.cn/n3/2026/0806/c90000-20485962.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / No need to show courtesy to the enforcers and accomplices of US sanctions against China">PDE #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="peoples_daily_en">
+  <summary>Commentary: New defense white paper lays bare Japan&#x27;s neo-militarist ambitions</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Japan’s Defense Ministry on Tuesday released “Defense of Japan 2026,” a white paper that the commentary said distorts the regional security landscape and plays up so-called “external threats.” The piece says the document cloaks an agenda of expanding military capabilities and moving away from Japan’s “exclusively defense-oriented policy.” It also says Japan is “fanning regional tensions,” pointing to Prime Minister Sanae Takaichi’s remarks on China’s Taiwan, heightened warnings about the “Indo-Pacific region,” and the March deployment of the Type 25 surface-to-ship guided missile and Type 25 hypervelocity gliding projectiles in Kumamoto and Shizuoka prefectures, as well as July’s first test-firing of U.S.-made Tomahawk cruise missiles from a destroyer.</p>
+<p>The commentary says the white paper also lays out further expansion, including air-launched and ship-launched variants of the Type 25 missile, research on hypersonic missiles, and foreign-made stand-off missiles. It adds that the paper’s new chapter on “trends in new ways of warfare,” along with expanded coverage of defense production and technological bases and calls for collaboration from all of Japanese society, amounts to an attempt to mobilize the country for “comprehensive remilitarization.”</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0806/c90000-20485795.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Commentary: New defense white paper lays bare Japan&#x27;s neo-militarist ambitions">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Former AHMSA employees consider filing complaint against the bankruptcy syndic</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Former AHMSA employees in Monclova, Coahuila, are considering filing a complaint against the bankruptcy syndic over alleged irregularities in the hiring of legal and administrative services, which they believe could affect the assets they expect to recover after the auction. Julián Torres Ávalos, head of the Workers’ Defense Group, said the Second District Court in Bankruptcy Matter authorized publication of the AHMSA auction, but he said there is still discontent with how the process is being handled by syndic Víctor Manuel Aguilera. He said the judge rejected changes Aguilera intended to make because they affected the process and the workers, and that the workers have doubts about whose interests he is serving.</p>
+<p>Torres Ávalos also said Aguilera wants to use money from the sale of AHMSA’s assets to cover expenses the workers consider opaque, including a proposed $200,000 payment for a lawyer whose identity and duties they do not know and $2 million for an external firm. He said Aguilera first said those costs would be paid by secured creditors, but later asked that they come from AHMSA’s assets. The judge, Ruth Haggi Huerta, rejected that request. Former workers also accused the syndic of allowing coal and slag sales without transparent revenue and questioned maintenance expenses, saying they may ask the judge to dismiss him.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/06/politica/012n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Former AHMSA employees consider filing complaint against the bankruptcy syndic">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>TEPJF ruling supports indigenous norms in Cosoltepec</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Supreme Chamber of the Electoral Court of the Federal Judiciary (TEPJF) approved the principles governing elections through indigenous normative systems in Cosoltepec, saying this basis must be harmonized with the community’s right to define and preserve its own political organization. It unanimously confirmed rulings from the Oaxaca Electoral Court and the TEPJF’s Xalapa regional chamber that validated the call for an extraordinary assembly to ratify or modify the Cosoltepec mayor’s office for 2026-2028. Dissatisfied individuals had appealed the requirement to be enrolled in the community registry to take part in the assembly.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/06/politica/007n3pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / TEPJF ruling supports indigenous norms in Cosoltepec">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="dawn">
+  <summary>&#x27;Enough is enough&#x27;: Jamaat-i-Islami announces 510 nationwide sit-ins against the petroleum levy</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jamaat-i-Islami Pakistan Emir Hafiz Naeemur Rehman on Thursday announced peaceful sit-ins against the petroleum levy at 510 locations across the country on Friday. Addressing a protest rally by the JI Women’s Wing on Wahdat Road in Lahore, he said major roads linking districts across Pakistan would be blocked from 4pm onwards, while ambulances would be allowed to pass without interruption. He warned that if authorities tried to stop the protests, the campaign would turn into a movement to overthrow the government, and he demanded that petrol be reduced to Rs225 per litre.</p>
+<p>Rehman also urged the government to accept the public’s demands and said it would bear full responsibility for any consequences if it did not respond. He called the petroleum levy “extortion” rather than a tax, claimed the government was collecting Rs125 in taxes on every litre of petrol, and alleged that Rs8 trillion had been collected through the levy without being invested in oil refineries or petroleum infrastructure. He added that Friday’s demonstrations would remain peaceful and called on people from Punjab, Sindh, Balochistan, Khyber Pakhtunkhwa and Azad Jammu and Kashmir to take part.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2021043/enough-is-enough-jamaat-i-islami-announces-510-nationwide-sit-ins-against-the-petroleum-levy" target="_blank" rel="noopener noreferrer" title="Dawn / &#x27;Enough is enough&#x27;: Jamaat-i-Islami announces 510 nationwide sit-ins against the petroleum levy">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="nikkei_asia">
+  <summary>Australian unions to escalate strikes at BHP iron ore export hub</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Australian unions are set to escalate strikes at BHP’s iron ore export hub in Australia, with workers due to stage a 48-hour stoppage this weekend, according to Nikkei Asia. The workers are seeking pay increases and a clearer path to career progression, and they say they want compensation that reflects long shifts, sweltering heat and time away from family. BHP management said it has been “frustrated” with union negotiations over wages and working conditions.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/business/markets/commodities/australian-unions-to-escalate-strikes-at-bhp-iron-ore-export-hub" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Australian unions to escalate strikes at BHP iron ore export hub">NA #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="cnn,el_pais,politico">
+  <summary>Germany warns of ‘new threat’ after explosives-packed drone targets airport</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Flights at Leipzig/Halle Airport were briefly suspended after German authorities found an explosives-laden drone near the south runway, prompting Interior Minister Alexander Dobrindt to call it a “new threat scenario” and leaving investigators to determine who planned the incident and whether foreign actors were involved.</p>
+<p>Authorities said the drone carrying an explosive device was found near the part of the airport where cargo flights operate, and a bomb disposal robot was deployed to remove the detonator attached to it. Images from the scene showed the robot close to a Ukrainian cargo plane. Police said a second, unidentified flying object then collided with a cargo plane after the aircraft aborted its landing because the runway was closed. The plane sustained minor damage but later landed safely at Hannover Airport.</p>
+<p>Dobrindt said the case was different from earlier unauthorized drone sightings near airports. “Drone sightings, drone threats including in a hybrid context, are something we know from the past,” he told reporters on Wednesday. “That a drone armed with explosives is at an airport is a new threat scenario.” He said it remained unclear who was behind the incident, but added, “We are dealing with a competition here which may also include foreign powers.” He also said the operation did not appear to be the work of amateurs and seemed professionally planned and executed.</p>
+<p>Leipzig/Halle Airport is one of Europe’s top cargo hubs and has hosted Ukraine’s Antonov Airlines transport aircraft since Russia’s full-scale invasion of Ukraine in 2022 destroyed the carrier’s home airport. That makes the airport especially sensitive as officials try to understand whether the drone incident was an isolated security breach or part of something more deliberate.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/06/europe/germany-explosives-packed-drone-airport-intl" target="_blank" rel="noopener noreferrer" title="CNN / Germany warns of ‘new threat’ after explosives-packed drone targets airport">CNN #1</a><a href="https://elpais.com/internacional/2026-08-06/alemania-admite-su-vulnerabilidad-ante-el-nuevo-nivel-de-peligro-que-representan-los-drones-bomba.html" target="_blank" rel="noopener noreferrer" title="El País / Germany Admits Its Vulnerability to the &#x27;New Level of Danger&#x27; Posed by Bomb Drones">El Pais #1</a><a href="https://www.politico.eu/article/leipzig-drone-incident-fuels-fears-russia-election-meddling" target="_blank" rel="noopener noreferrer" title="POLITICO / Leipzig drone incident fuels fears of Russian election meddling">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="kompas">
+  <summary>KKI Goes to the Mountains to Investigate Uninspiring Comment by BPJS Patient Yurizal Tri Chaerawan: Mostly Doctors</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Indonesian Health Council, or KKI, is investigating alleged insensitive comments on social media directed at BPJS patient Yurizal Tri Chaerawan, following criticism of a Threads post in which he complained about waiting eight hours for a treatment room. KKI is carrying out the inquiry together with the Indonesian Medical Association (IDI), the Indonesian Dental Association (PDGI), the Indonesian National Nurses Association (PPNI), and the Indonesian Association of Medical Record and Health Information Professionals (PORMIKI). KKI member Mohammad Syahril said at a press conference in Kebayoran Baru, South Jakarta, on Thursday, 6 August 2026, that the organizations were reviewing the case according to their respective authority. Yurizal died on 31 July 2026, one week after the post went viral.</p>
+<p>KKI said it had identified 10 health workers and medical personnel who made the comments. Syahril said most of the 10 are doctors, adding that the group includes a doctor, a dentist, and nurses. He also said some of those identified include public servants, PPDS participants, general practitioners, private doctors, private nurses, and private dentists.</p></div>
+  <div class="source-list"><a href="https://nasional.kompas.com/read/2026/08/07/05091481/kki-turun-gunung-investigasi-komentar-nirempati-ke-pasien-bpjs-didominasi" target="_blank" rel="noopener noreferrer" title="Kompas / KKI Goes to the Mountains to Investigate Uninspiring Comment by BPJS Patient Yurizal Tri Chaerawan: Mostly Doctors">Kompas #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">ABSeeker proposes a new way to train long-horizon search agents by turning sparse final-answer feedback into step-level credit, aiming to reward useful moves even inside failed trajectories and suppress redundant or mistaken ones inside successful searches.</p>
+<p>Researchers at Shanghai Jiao Tong University say the problem with existing supervised fine-tuning and reinforcement learning for these agents is that they often treat every step in a trajectory the same. That makes it hard to tell which actions helped recover evidence, verify a clue, or move toward the answer, and which ones were wrong or unnecessary.</p>
+<h3>How the credit assignment works</h3>
+<p>The proposed framework, called Answer-Backtracked Credit Assignment, starts from a query and its verified answer and then works backward to recover intermediate clues needed to solve it. The paper describes these clues as entities, facts, attributes, or relationships that anchor the search process.</p>
+<p>Those clues are then used in Clue-Anchored Step Scoring, which evaluates each search step against the recovered evidence. The score can rise when a step discovers or verifies a correct clue, or when it rules out an incorrect candidate, and it can fall when a step dismisses a correct clue or submits an incorrect answer. The authors say this turns a sparse answer-level signal into dense step-level rewards.</p>
+<p>On top of that scoring, they build two training methods: ABC-SFT, which reweights the loss of each turn, and ABC-GRPO, which uses the step scores as rewards in GRPO. They then train ABSeeker on Qwen3.5-4B with 8.5k examples.</p>
+<p>The reported results show ABSeeker reaching 37.3% on BrowseComp and 39.1% on BrowseComp-ZH. With context management, those scores rise to 55.3% and 52.9%. The paper says that puts the 4B model ahead of same-scale agents and competitive with larger search agents of roughly 30B parameters.</p>
+<p>The authors say the results support answer-backtracked step-level credit assignment as a way to train long-horizon search agents more effectively. They also provide code and a model release for ABSeeker-4B-RL.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.05102" target="_blank" rel="noopener noreferrer" title="arXiv / ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>ToolArtist: Tool-Using Unified Multimodal Models for Agentic Image Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">ToolArtist is a new post-training approach for open-world image generation that tries to give one Unified Multimodal Model control over reasoning, tool use, and image creation, addressing a gap that leaves current text-to-image systems struggling with knowledge-heavy requests.</p>
+<p>The paper says text-to-image models can make visually strong images, but they remain limited when a prompt depends on complex semantic understanding, multi-step reasoning, or outside world knowledge. It argues that earlier agentic image-generation methods either force a fixed workflow or let only part of the process sit under agent control, so reasoning, tool invocation, and image generation are not coordinated by a single policy. ToolArtist is presented as a fully agentic image-generation model built by post-training a Unified Multimodal Model, with the goal of letting the model decide when to search, when to use tools, and when to generate or revise the image itself.</p>
+<p>To build that behavior, the researchers use supervised fine-tuning with a teacher agent equipped with search tools and an image-generation tool. They then convert the collected trajectories into a UMM-compatible format in which the image-generation tool is hidden while the generated images are kept. The paper says this transfers tool-using behavior into a setting where the UMM performs generation natively. It also says this SFT stage used 7,132 high-quality trajectories and established the model’s basic ability to reason, invoke search, use retrieved evidence, and generate images within one policy.</p>
+<p>The second stage is reinforcement learning. The authors say they built an agentic RL infrastructure for UMMs and introduced Reason-Act-Draw GRPO, or RAD-GRPO, which combines intent rewards and quality rewards to optimize the model. The intent reward checks whether the final generation description properly turns the request and evidence into a visual plan, while the quality reward checks whether the resulting image matches that plan and the original request while preserving visual quality.</p>
+<p>In the paper’s experiments, placing the full open-world image-generation process under an agent policy outperformed approaches with fixed pipelines or only partially agent-controlled components. The results were reported on WISE and WorldGenBench-Humanities. The authors also say they are releasing the training data and the complete post-training infrastructure.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.04436" target="_blank" rel="noopener noreferrer" title="arXiv / ToolArtist: Tool-Using Unified Multimodal Models for Agentic Image Generation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new preprint from Junlin Han, Shengbang Tong, David Fan, Minghao Chen, Philip Torr, Filippos Kokkinos and Mike Lewis argues that multimodal pretraining works best when language and vision are unified early, and that the central question is when the two modalities reinforce each other before they start competing.</p>
+<p>Using controlled experiments on synthetic and large-scale real-world datasets, the authors say they studied multimodal pretraining through the Transfusion framework, combining next-token prediction for text with flow matching for visual generation. They report four main findings: knowledge flow is asymmetric, with language and visual understanding acting as strong priors for visual generation; task complexity helps determine when modalities are synergistic or competitive; early joint training outperforms late alignment or sequential training; and efficient recipes can preserve strong generative performance with only 5% of the compute budget.</p>
+<h3>How the paper frames multimodal training</h3>
+<p>On knowledge flow, the authors say influence runs mainly from language and visual understanding toward visual generation. On synergy, they say simple tasks can act as cross-modal boosters, while shared attention and normalization with modality-specific feed-forward layers reduce competition. They also say those behaviors generalize across different vision tokenizer designs.</p>
+<p>On timing, they argue that unifying modalities from the start is more effective than waiting. In their account, delayed integration produces a “vision laziness” bias, where the vision pathway stays underdeveloped and the model relies more heavily on language priors. They describe early joint training as critical for multimodal co-evolution.</p>
+<p>The recipe section turns those observations into a scaling strategy: an asymmetric data mix, MoE-style architectures, and early unification. The authors say this combination scaled efficiently, and that their 13.5B MoE models trained on 2T tokens validated the findings at larger scale.</p>
+<p>What the results showed at scale.</p>
+<p>In comparisons with late-fusion and other baselines, the authors say early unified pretraining produced higher language accuracy, higher visual understanding, and lower visual generation diffusion loss. They report 52.86% versus 51.78% for language accuracy, 41.42% versus 40.66% for visual understanding average, and 0.261 versus 0.269 for visual generation diffusion loss.</p>
+<p>The paper presents those results as evidence that multimodal pretraining is governed by asymmetric knowledge flow, architecture choices that can either promote or hinder synergy, and the timing of when vision enters training.</p>
+<p>What remains open, the authors say, is how far these principles extend to more complex modalities such as video and to frontier-scale models above 1T parameters.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.05000" target="_blank" rel="noopener noreferrer" title="arXiv / Towards Physics of Multimodal Pretraining: Knowledge Flow, Modality Synergy, Early Unification, and Recipes">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new benchmark for personalized LLMs finds that models routinely invent user traits beyond the evidence they are given, and that their own self-checks can make the safest-sounding systems look less reliable than they are.</p>
+<p>Researchers call this problem “over-inference” (OI): when an LLM fabricates user attributes that the not support. To test it, they introduced MirageBench, a setup with 150 personas split across stereotypical, counter-stereotypical and neutral profiles, plus 6 personalization tasks that range along an “imagination gradient.” The benchmark uses a four-way faithfulness taxonomy — Grounded, Reasonable, Stereotype and Fabricated — and an independent judge whose labels were validated against a blind human annotator on 400 claims.</p>
+<h3>What MirageBench found</h3>
+<p>Across 12 models from 7 families, OI showed up in every case. The models over-inferred on 35% to 49% of their claims, with a cross-model mean of 41.6% and a claim-weighted mean of 41.8%. The preprint says the issue is not confined to one system: no model in the evaluation escaped it.</p>
+<p>The study also found that the task matters. OI ranged from 27% to 59% depending on the prompt, with the apartment-description task producing the highest rate because the models had to imagine physical details they had not been told. By contrast, gift recommendations were easier to ground in the user’s stated interests. In a multi-turn pilot, inferred attributes also accumulated over time: starting from just 3 facts, frontier models built profiles with more than 120 inferred attributes by Round 8, and the authors say they did not observe a case where a later contradiction caused an earlier inference to be retracted.</p>
+<p>Why self-monitoring misleads.</p>
+<p>The most striking result was what the researchers call a “Self-Monitoring Inversion.” At the model-selection level, a model’s self-assessed OI was negatively rank-correlated with judge-measured OI, with ρ = -0.60 and p = 0.044 in an exploratory analysis across 12 models. In plain terms, the models that said they over-inferred the least were often the ones the external judge flagged as fabricating the most.</p>
+<p>That makes self-reported confidence a poor way to compare models against one another, even though self-audit still did a moderate job of ranking a single model’s own claims, with AUROC values from 0.58 to 0.83. The preprint argues that external verification, not model self-report, is the more reliable basis for trustworthy personalization.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.04570" target="_blank" rel="noopener noreferrer" title="arXiv / The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>OneDayAgent: Towards a Long-Horizon Harness for Autonomous Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">OneDayAgent is a new harness for autonomous agents that turns open-ended everyday requests into managed, multi-step workflows, and its first benchmark run suggests it can improve results across different LLM backends without tuning, while leaving open how far one framework can generalize across models and task styles.</p>
+<p>Researchers from Zhejiang University, Ant Group, and an independent researcher present OneDayAgent as a way to handle the long-horizon, cross-environment, multimodal requests that span work, study, and life. The system breaks an open-ended request into bounded subtasks, keeps execution memory under context pressure, and then verifies and repairs the final deliverable. The paper frames this as a response to failure modes such as goal drift, state loss, and context overflow, which can make a single uninterrupted trajectory brittle over long tasks.</p>
+<h3>What OneDayAgent changes</h3>
+<p>Instead of relying on one long ReAct-style run, OneDayAgent inserts explicit decomposition, memory, and verification stages into the workflow. The tool and environment setup includes web access, academic search, computation, file workspace, and multimodal processing. In the reported execution behavior, most AgentIF-OneDay tasks were split into two to four subtasks, and only 16 of 104 tasks were handled as one subtask.</p>
+<p>The authors also say the same harness runs stably across five backend LLMs from three model families, even though different models produce different execution styles under the same workflow. In their framing, that suggests the harness is transferable across backends rather than being tuned to one model.</p>
+<p>Benchmark results.</p>
+<p>The evaluation uses AgentIF-OneDay, a task-level benchmark for daily-life instruction following, across 104 tasks. With the GLM-5.2 backend, OneDayAgent reaches an overall score of 0.821 and is described as setting a new state of the art. The paper says this score leads all dimensions in its main results table.</p>
+<p>The backend comparison shows the harness running on GLM-5.2, Gemini-3.1-Pro-Preview, Qwen3.5-397B-A17B, Qwen3.6-27B, and Qwen3.5-9B. Under the same harness, the results vary by backend, and the paper describes the pattern as a weak parameter-scaling trend rather than a strict scaling law. The authors also note that backend choice changes execution style and operational profile, not just final score.</p>
+<p>The paper says it will open-source the harness and trajectories.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.05013" target="_blank" rel="noopener noreferrer" title="arXiv / OneDayAgent: Towards a Long-Horizon Harness for Autonomous Agents">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>GDPevo: Evaluating Agent Self-Evolution on Real Business Tasks</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at PrismShadow and New York University presented GDPevo, a benchmark for testing whether agents can learn from earlier real business tasks and reuse that experience on later ones, after arguing that existing evaluations are vulnerable to contamination and do not cleanly tie test-time gains to training experience.</p>
+<h3>How GDPevo is built</h3>
+<p>GDPevo is grounded in GDP-related enterprise workflows and uses a fully automated data pipeline. Its core method, called rule hybridization, breaks each workflow into atomic business rules, spreads subsets of those rules across five training tasks, and then recombines them in five held-out test tasks so that later gains can be attributed to prior experience. The benchmark spans CRM, ERP, finance, healthcare, legal, and data-centric workflows.</p>
+<p>The initial V1 release contains 120 tasks in 12 groups, with 5 training and 5 held-out test tasks per group. Because the pipeline is fully automated, the suite was expanded to 240 tasks in 24 groups within two days in V2, which the paper presents as a practical response to data contamination. The authors also say the benchmark can be regenerated as public tasks become exposed.</p>
+<p>Using GDPevo, the researchers evaluated four agents under four supervision types. They report that self-evolution improved held-out accuracy by up to 16.44 percentage points. Even so, the best evolved agents stayed far below a fully informed oracle ceiling of 91.6%, which the paper says shows current agents’ self-evolution ability remains far from fully realized.</p>
+<p>The team publicly released the pipeline, benchmark, and full evaluation results on GitHub.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.03764" target="_blank" rel="noopener noreferrer" title="arXiv / GDPevo: Evaluating Agent Self-Evolution on Real Business Tasks">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers proposed a way to measure and train long-horizon reasoning in LLMs by scoring how hard it is for a model to switch between skills inside one reasoning chain, then using that score to build a benchmark and a reinforcement-learning signal.</p>
+<p>The preprint, posted by a Princeton-led group on arXiv, says long-horizon reasoning often requires a model to move from one skill to another, such as doing a math derivation and then using the result to plan a schedule. It calls these cross-skill long-horizon tasks: multi-step problems whose steps depend on earlier outputs and require different reasoning skills. To capture that difficulty, the researchers introduce Skill Entropy, a directional measure of how hard it is to switch from one skill to another.</p>
+<p>They then build Skill 2-Bench, a benchmark of cross-skill long-horizon tasks spanning 558 skills across nine domains: math, coding, science, planning, logic, information extraction, instruction following, context retrieval, and creative writing. Each task gets a task-level skill-entropy score and is grouped into low, medium, or high difficulty. In their evaluation, 8 frontier models and 4 open-source models showed a skill-switching gap: accuracy fell as task entropy rose, and performance dropped when the same skill appeared inside a cross-skill task rather than as a single-skill question.</p>
+<p>The paper also turns skill entropy into a training signal through Skill-Entropy RL. In that setup, the model predicts both the answer at each step and the skill used to produce it, and the reward combines step-level correctness with a skill-entropy term that compares the predicted skill sequence with the gold sequence. The authors say this framework improved Qwen3-4B-Instruct’s Skill 2-Bench score from 34.4% to 68.4%, and that the method also transferred to open-ended domains and to off-the-shelf training data such as OpenR1-Math.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.05139" target="_blank" rel="noopener noreferrer" title="arXiv / Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="nature">
+  <summary>AI agents are checking the scientific literature — and spotting decades-old errors</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">AI agents are beginning to audit scientific knowledge at scale, and in the process they are surfacing errors that have sat in papers, books and databases for years, including wrong boiling-point values that chemists had long treated as reliable.</p>
+<p>Sebastian Pios, a theoretical chemist at Zhejiang Lab in Hangzhou, China, was using an AI system to predict boiling points for several molecules when its results clashed with entries in a 75-year-old reference database. He first assumed the model was wrong, but after checking the original literature manually, he found the database values were the problem. In two other cases, Pios’s model flagged mistakes in older papers and reference books: one was a typo in a paper, and another involved incorrect values for century-old boiling-point measurements. Pios says both errors were likely to have caused researchers using the database “a lot of trouble”.</p>
+<p>The episode is part of a broader shift in which researchers are using AI to audit the scientific record. Some tools are being aimed at databases, while others scan journal and conference papers for objective errors.</p>
+<p>In one analysis posted online on 22 July, researchers at SAI Labs used AI agents to assess 168 papers selected for oral presentation at the 2026 International Conference on Machine Learning. The agents extracted each paper’s central claims, downloaded supporting resources, reran experiments when possible and compared the results with the authors’ reports. Of the 92 papers with at least five claims available for assessment, the agents reproduced more than two claims from 34 papers, and more than 80% of claims from only eight papers.</p>
+<p>Odd Erik Gundersen, a computer scientist at the Norwegian University of Science and Technology in Trondheim, says such tools still make mistakes and need human oversight. James Zou, a computer scientist at Stanford University in California, says their main advantage is speed: they can scan scientific literature at a scale that was not possible before.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02235-8" target="_blank" rel="noopener noreferrer" title="Nature / AI agents are checking the scientific literature — and spotting decades-old errors">Nature #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Heat waves have killed millions. Here’s how scientists tally lives lost</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Extreme heat is killing hundreds of thousands of people each year, but the true toll is hard to count because death certificates rarely name heat as the cause, pushing scientists to estimate hidden deaths with statistical methods that can guide prevention.</p>
+<p>An estimated 210,000 more people died of heat-related causes each year from 2012 to 2021 than from 1990 to 1999, on average. Researchers have also linked about 75,000 deaths per hot season to heatwaves in Asia from 1990 to 2019, and nearly 14,000 deaths in Europe during a record-breaking heatwave in June. In Spain, a 2022 heatwave killed more than 300 people in five days.</p>
+<p>Scientists say an accurate tally is not straightforward because heat can trigger heart attacks and worsen many serious conditions without being recorded as the direct cause. Kristie Ebi, a climate epidemiologist at the University of Washington in Seattle, said: “Nobody needs to die in a heatwave.” If deaths are not counted, she said, preventive action is harder to take.</p>
+<h3>Two ways researchers estimate heat deaths</h3>
+<p>Most public-health agencies use the “excess deaths” method, which compares total deaths during a heatwave with a baseline period without extreme heat. The difference is treated as heat-related mortality. Antonio Gasparrini, a biostatistician and epidemiologist at the London School of Hygiene and Tropical Medicine, said the approach is fast and straightforward, but it cannot separate heat deaths from deaths caused by other factors, and it only works after the heatwave has passed.</p>
+<p>A more complex method uses exposure-response functions, which describe how death rates change as temperatures rise. These models can be used in real time or for future scenarios, but they depend on accurate temperature forecasts and can be affected by other changes in mortality.</p>
+<p>The two methods can converge. Last week, the UK Health Security Agency estimated 2,877 heat-related deaths in England during May and June heatwaves using excess deaths.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02430-7" target="_blank" rel="noopener noreferrer" title="Nature / Heat waves have killed millions. Here’s how scientists tally lives lost">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Scientists up in arms about cuts to UK physics and astronomy</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Lovell Telescope at Jodrell Bank faces closure if alternative funding is not found, after UK Research and Innovation said it will end all annual support for e-Merlin in 2028, triggering calls from scientists and public figures to restore the money.</p>
+<p>UKRI, the main UK funding agency, announced on 27 July that it would cut £2.8 million a year from e-Merlin, the seven-telescope radio network funded through the Science and Technology Facilities Council. Lovell depends on e-Merlin for its only scientific funding, so the telescope will stop operating unless another source is found. An open letter calling to save it says closing Lovell would be like “pok[ing] out some of the world’s clearest eyes on the sky” and calls the move “foolish and short-sighted.”</p>
+<p>The letter has been signed by figures including astronaut Tim Peake, physicist and musician Brian Cox, and poet laureate Simon Armitage. Lovell is used not only to study the cosmos but also to track human-made objects, including modern space debris and the rocket that launched Sputnik-1 in 1957.</p>
+<h3>Part of wider UK science cuts</h3>
+<p>The funding threat comes amid broader cuts in the STFC’s portfolio. The wider Jodrell Bank site, owned by the University of Manchester, will remain open for scientific outreach and as headquarters of the Square Kilometre Array, but the Lovell telescope itself is at risk. The STFC is investing £327 million in the SKA between 2021 and 2030.</p>
+<p>The cuts are part of a prioritization exercise under the previous prime minister, Keir Starmer, and the Department of Science, Innovation and Technology. UKRI says its overall budget is rising, with new money mainly going to artificial intelligence and quantum technologies, while STFC funding has stayed flat and costs have risen.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02460-1" target="_blank" rel="noopener noreferrer" title="Nature / Scientists up in arms about cuts to UK physics and astronomy">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Levitating sensor for magnetic fields could detect ultrafaint brain activity</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Scientists at Peking University have turned a levitating magnet into a magnetometer that can measure magnetic fields closely enough to detect the faint signals of the brain’s electrical activity. The technique is reported in Science and is described as simpler than existing approaches. A laser beam tracks the motions of the tiny magnet in a vacuum chamber as it wobbles in response to magnetic fields, and the device is said to be sensitive enough for ultrafaint signals while bringing the sample to within a few hundred micrometres of the sensor.</p>
+<p>Some of the most sensitive magnetometers use superconducting quantum interference devices, or SQUIDs, which work only near absolute zero and require complex cryogenics. Another state-of-the-art device, the spin-exchange relaxation-free, or SERF, magnetometer needs near-perfect shielding from external magnetic interference. Wei Ji and collaborators suspended the sensor magnet between a lifting magnet above it and a diamagnet underneath it, which pushes the sensor magnet up and stabilizes it. The whole setup sits in a vacuum chamber about the size of a Tupperware box, and Ji says its accuracy relied on noise-reduction techniques.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02458-9" target="_blank" rel="noopener noreferrer" title="Nature / Levitating sensor for magnetic fields could detect ultrafaint brain activity">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A drug already used for osteoporosis blocked spinal damage in a new study</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from the Universities of Edinburgh and Bristol reported that altered gene activity may contribute to neck and back pain by damaging spinal discs, and that a drug already used for osteoporosis blocked spinal mineral buildup in zebrafish. In fish bred without a functioning copy of a collagen IX-related gene, the spine developed abnormalities that resembled disc disease in people: vertebrae fused, mineral deposits formed, and the tissue between the bones became abnormally hard.</p>
+<p>The team said the mineralization began only after a supportive scaffold layer in the developing spine started to deteriorate. Their gene-activity analysis pointed to problems with fat processing, the mTOR pathway, phosphate control and vitamin A signaling. They also said a bisphosphonate, which is used to treat osteoporosis, prevented minerals from accumulating, while reduced food intake or drugs that suppressed fat metabolism also reduced spinal fusion. The researchers said the findings highlight biological processes that could become targets for future back pain treatments and suggest zebrafish may be a useful model for testing potential therapies.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260806051943.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A drug already used for osteoporosis blocked spinal damage in a new study">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Forget the sperm race: Fertilization may depend on teamwork</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A study of arthropod reproduction suggests fertilization may depend as much on sperm teamwork as on sperm competition, challenging the familiar race-to-the-egg picture and raising a new question about how cooperative behavior shapes reproductive success.</p>
+<h3>Cooperation inside the reproductive tract</h3>
+<p>Evolutionary biologists at Syracuse University, the University of Siena in Italy and the University of Szeged in Hungary examined arthropods — the group that includes insects, spiders, crabs and centipedes — and traced cases in which sperm joined into organized groups or structures that may help them reach and fertilize an egg. The behavior, known as sperm conjugation, was first documented more than 100 years ago and was generally considered uncommon. The new study, published in *Nature Communications*, says it occurs widely among arthropods and has evolved many separate times.</p>
+<p>Steve Dorus, a professor of biology at Syracuse University and a co-author, said fertilization is often viewed as competition among individual sperm, but in many species cells work together in ways that can influence reproductive success. In many species, that cooperation involves sperm-associated material, or SAM: a membrane-enclosed substance that can attach sperm to one another or form structures around them.</p>
+<p>The researchers suggest SAM may have helped sperm conjugation emerge, possibly starting as a way to package or protect sperm. They also found a repeated pattern of gain and loss across evolutionary history, including the conclusion that the common ancestor of all insects possessed conjugated sperm. The team compared sperm structures across hundreds of species and placed those traits on an evolutionary family tree covering major animal lineages over the past 600 million years.</p>
+<p>The study leaves one central question open: why cooperation develops at all. The researchers say future work will need to observe sperm groups inside actual reproductive systems and sort out the benefits and costs of working together.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260805082455.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Forget the sperm race: Fertilization may depend on teamwork">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Cell-inspired nanoreactor turns sunlight into hydrogen peroxide</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers led by Prof. LI Can at the Dalian Institute of Chemical Physics of the Chinese Academy of Sciences, with Prof. Jian Liu’s team at Inner Mongolia University, created a hollow CdS@polydopamine nanoreactor that imitates two important features of living cells and turns sunlight into hydrogen peroxide. The work, published in the *Journal of the American Chemical Society*, is presented as a new way to reproduce some of the highly organized chemical functions of cells inside synthetic nanomaterials.</p>
+<p>The nanoreactor has two biomimetic elements: a dynamic catechol/o-benzoquinone redox pair in the polydopamine shell that acts as a proton relay, and a compartmentalized structure with a hollow cavity and porous shell that helps reactants accumulate, supports molecular diffusion, and traps incoming photons. Under visible-light illumination in water, it produced H2O2 at 3.24 mmol gcat.-1 h-1 and reached a solar-to-chemical conversion efficiency of 1.2%. The researchers used in situ spectroscopy, photochemical analysis, finite element simulations, and theoretical calculations to study the mechanism, and also embedded the nanoreactors in sodium alginate hydrogel to make recyclable photocatalysts that could synthesize H2O2 under natural sunlight.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260804034642.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Cell-inspired nanoreactor turns sunlight into hydrogen peroxide">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
