@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-08</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-08</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="bbc">
+  <summary>Police failings revealed as sex offender left free to murder and attack women</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Simon Levy’s conviction for murdering two women and raping another has triggered scrutiny of how police, prosecutors and courts handled a man who was already on bail and kept attacking women in London.</p>
+<h3>The convictions and the victims</h3>
+<p>A jury at the Old Bailey found Levy guilty on Friday of murdering Carmenza Valencia-Trujillo, 53, and Sheryl Wilkins, 39, in London last year, and of violently raping another woman in a car park. He was remanded into custody ahead of sentencing on 12 August.</p>
+<p>The case also laid out a wider pattern of sexual violence. Levy attacked the three women while on bail for sex assaults on trains in London, and went on to carry out further assaults on public transport. By the time of the murders, he had already been convicted in February of sexual assaults on women in public transport incidents.</p>
+<h3>How Levy stayed free</h3>
+<p>Levy had first come to police attention in 2017, when a woman reported him for sexually assaulting her at an event in south London. In 2021, he received a three-year prison sentence for sexually assaulting two women in separate attacks at public events in London in summer 2018.</p>
+<p>When he was first released on licence in 2023, he was classed as a high-risk sex offender. He was briefly returned to prison in May 2024 after being accused of rape and breaching his licence conditions. When he was finally released in August 2024, the Metropolitan Police took over responsibility for managing his risk and immediately downgraded him from high-risk to medium-risk.</p>
+<p>The Met had already downgraded him as a risk to women before the attacks that followed. Levy was being monitored and risk-managed by the force while he continued to offend. BBC reporting said he was also freed on bail multiple times between late 2024 and summer 2025, even after charges and breaches of bail conditions.</p>
+<h3>Police, prosecutors and courts under pressure</h3>
+<p>The failures were not limited to one agency. In the same period, Levy kept moving through the system while continuing to attack women. The Met told the BBC it accepts that Wilkins’s life could have been saved, and the force said it had apologised to her family.</p>
+<p>Deputy Assistant Commissioner Kevin Southworth said there had been a “collective system failure” and described the case as a “tragedy beyond words”. He also said there were opportunities to save some of the victims. Det Ch Supt Pete Fulton of British Transport Police said delays in his force’s enquiries were “absolutely wasn’t good enough” and were down to “incompetence” by two officers who have since been moved to other roles.</p>
+<p>The Crown Prosecution Service also said its handling fell short. Lisa Ramsarran, the chief crown prosecutor, said: “Our actions fell short of the standards that victims, families and the public are entitled to expect.” She said there were points where prosecutors could and should have taken a more robust approach to bail.</p>
+<p>Watchdog investigation and continuing questions.</p>
+<p>Two Metropolitan Police officers are now being investigated by the Independent Office of Police Conduct over their handling of Levy. The watchdog said a police constable is under a gross misconduct investigation and a detective sergeant is under a misconduct investigation.</p>
+<p>The IOPC said its inquiry began in January after a voluntary conduct referral from the Met and is still ongoing. It added that misconduct notices do not automatically lead to disciplinary proceedings.</p>
+<p>The case has also drawn attention because Levy’s violence unfolded over years: on London public transport, in a car park, and while he was already known to police as a serial offender. One woman who was assaulted on public transport said learning that he had been on bail was worse than the assault itself, and said the attacks could have been prevented.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c8jnrk4xlvdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Police failings revealed as sex offender left free to murder and attack women">BBC #1</a><a href="https://www.bbc.co.uk/news/articles/c70g18vpwxvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Police officers investigated over handling of sex offender who murdered two women">BBC #2</a><a href="https://www.bbc.co.uk/news/articles/c5y3ddgjjzeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / The papers: &#x27;Sex predator let out to kill&#x27; and &#x27;net zero plans rolled back&#x27;">BBC #3</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian,korea_herald">
+  <summary>Will weekend rain ease Korea&#x27;s heat wave? - The Korea Herald</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Korea’s heat wave is expected to ease only slightly over the weekend, with rain reaching the east coast but western regions still forecast to stay sweltering. Seoul has already hit 40 C for the first time in eight years, and the bigger question is whether the showers will bring relief or just more humidity.</p>
+<h3>Rain moves in, but the heat does not fully break</h3>
+<p>Friday’s temperatures were still climbing toward 39 C in Seoul and Jeonju, with Incheon and Gwangju forecast to reach 38 C and Daejeon and Daegu 37 C. By 8 a.m., several major cities had already risen to around 30 C after another tropical night, and Friday — Ipchu, traditionally seen as the beginning of autumn — could become the hottest Ipchu ever recorded in Seoul. The previous record was 35.9 C in 2018.</p>
+<p>The Korea Meteorological Administration has kept its highest-level heat warnings in effect for Seoul, parts of Gyeonggi Province, inland Gangwon Province and some southwestern areas. That warning reflects what the forecast suggests for the weekend: temperatures may dip a little, but there will be no real break from the heat.</p>
+<p>Saturday should bring some clouds, with daytime highs still around 35 C in many places. Rain is expected before dawn along the east coast of Gangwon Province and in nearby mountain areas before spreading to parts of the North Gyeongsang coast and Jeju. Scattered afternoon showers of 5 to 40 mm are also forecast across Seoul, Incheon, Gyeonggi Province and inland areas nationwide.</p>
+<h3>Heavy rain on the east coast, sweltering air in the west</h3>
+<p>Sunday’s rain is expected to be concentrated along the east coast, in parts of the southeast and on Jeju Island. The Gangwon coast and mountain areas could receive 30 to 100 mm from Saturday through Sunday, with more than 150 mm possible in some locations. Northern coastal areas of North Gyeongsang Province may get 30 to 80 mm, while 20 to 60 mm is expected farther south.</p>
+<p>That rain could bring flooding, landslides and swollen streams. It may also briefly cool conditions, but the forecast says the air could feel just as uncomfortable afterward because of higher humidity.</p>
+<p>Western Korea is set to remain hot. Easterly winds crossing the Taebaek Mountains are expected to turn warmer and drier, keeping apparent temperatures near 35 C. Tropical nights are also expected to continue through the weekend, meaning overnight lows will stay above 25 C in many areas.</p>
+<h3>Seoul’s 40-degree reading and the growing toll</h3>
+<p>Seoul’s heat has already reached a new level. An automatic weather station in Nowon-gu, in northeastern Seoul, recorded 40.2 C at around 3:30 p.m. on Friday, according to the Korea Meteorological Administration. That was the first reading above 40 C at a Seoul observation point since Aug. 1, 2018, when Gangbuk-gu recorded 41.8 C.</p>
+<p>The figure from Nowon-gu is not Seoul’s official temperature, which is measured at the weather station in Jongno-gu. That official reading reached 38 C on Friday, while the city’s record official high remains 39.6 C, set in 2018. Temperatures were even higher elsewhere in the country, with Hanam in Gyeonggi Province reaching 40.7 C, Gwangyang in South Jeolla Province hitting 40.2 C and Yeongwol in Gangwon Province reaching 39.8 C.</p>
+<p>The prolonged heat has also taken a health toll. A total of 208 heat-related illness cases were reported Wednesday, bringing the cumulative number to 2,665, including 23 deaths, according to the Central Disaster and Safety Countermeasures Headquarters.</p>
+<p>For now, the forecast points to only modest easing: rain in the east, lingering heat in the west, and another weekend of tropical nights for much of the country.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/aug/07/extreme-heat-breaks-temperature-records-central-eastern-europe" target="_blank" rel="noopener noreferrer" title="The Guardian / Extreme heat breaks temperature records in central and eastern Europe">Guardian #1</a><a href="https://www.koreaherald.com/article/10834464" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Seoul hits 40 C for first time in 8 years - The Korea Herald">TKH #1</a><a href="https://www.koreaherald.com/article/10833928" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Will weekend rain ease Korea&#x27;s heat wave? - The Korea Herald">TKH #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="atlantic">
+  <summary>Iran Goes Looking for Love in Jordan</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran’s attack on a U.S. military base in Jordan, which killed three American service members, was followed by an unusual Iranian outreach to Jordanians that paired threats, flattery, and blame-shifting as Tehran tried to recast itself in Arab eyes.</p>
+<h3>A strike, then an appeal</h3>
+<p>In late July, Iran struck a U.S. military base in Jordan and then the Islamic Revolutionary Guard Corps issued a series of messages to the Jordanian people. “You know well that we have no hostility toward your country,” the IRGC said in a statement published on Iran’s Fars News Agency. “Rather, we love you, noble people who understand the suffering and injustice endured by the Palestinian people more than any other nation.”</p>
+<p>A second message thanked unnamed Jordanians for providing targeting information for the Iranian strikes. A third appeared to answer Jordanian criticism of the operation by saying the United States, not Iran, had “violated your territorial integrity and sovereignty.” The turn from bombardment to affection was striking enough to stand out on its own, and it came after Iran had already shown it was willing to hit U.S.-linked targets across the region.</p>
+<p>Iran has demonstrated that willingness through missile strikes on seven different Arab countries that host U.S. bases. At least three of those strikes were aimed at Jordan, including a surprise attack on July 28. The new outreach, then, was not a replacement for force so much as a parallel message: pressure first, persuasion second.</p>
+<h3>Why Jordan mattered</h3>
+<p>Tehran’s appeal to Jordanians fits a broader effort to convince Arab publics that an alliance with the United States is not worth the cost. That campaign, the evidence says, has been under way since the Islamic Republic’s founding in 1979, but the current push reflects what Iranian officials call a “new equation of power” in the Middle East, including Iranian control over the Strait of Hormuz.</p>
+<p>Jordan is an unusual place for that campaign. Unlike Iraq, Lebanon, Bahrain, Kuwait, and Saudi Arabia, it has no significant Shiite minority that could serve as a social base for Iranian influence. But the calculation is not purely social. The evidence says Jordan houses radar and anti-missile systems that help Israel detect and deter incoming Iranian fire, while Jordan lacks the military capacity to retaliate against Iranian strikes.</p>
+<p>Tehran also seems to be looking for a country where it can exploit tensions inside society. Jordan depends on the protection and patronage of the United States, yet some Jordanians have recently called for the expulsion of the U.S. military, a movement fueled in part by deep sympathy for the Palestinian cause. Some 60 percent of Jordan’s population is of Palestinian origin, and since the start of the Gaza war in 2023, street protests have regularly erupted in Jordan.</p>
+<h3>A split audience in Jordan</h3>
+<p>Those protests were supported by Jordan’s king and queen and by prominent government officials, whether out of conviction or because the public needed to let off steam. Queen Rania gave an interview to Christiane Amanpour two weeks after the Hamas massacre on October 7 in which she described Israeli actions as a “genocide,” a gesture that was widely seen in Jordan and Israel as setting a new tone of fury over Gaza.</p>
+<p>At the same time, Jordanian demonstrators did more than protest. They pledged support for Hamas, and Islamist networks in Jordan began gaining strength. That helped lead the government to ban the local chapter of the Muslim Brotherhood last year. In late 2024, two Jordanians who were members of the Brotherhood carried out two cross-border terrorist attacks in Israel.</p>
+<p>The Palestinian question has also shaped Jordan’s view of the wider conflict. Violence in Gaza has ebbed since a cease-fire took hold late last year, but Israel’s gradual, de facto annexation of the West Bank has become a deep concern in Jordan. The prospect of a fuller or even formal annexation raises fears in Jordan of a flood of Palestinian refugees that could upset the country’s fragile demographic balance and amplify anger at Israel.</p>
+<p>For now, Iran’s effort to win over Jordanians looks more like a test than a breakthrough. A Jordanian security expert and columnist, Amer al-Sabaileh, said, “The Iranians believe they know what’s going on in Jordan. This could be a multilayered strategy—missiles, then propaganda, then maybe activating cells.” But the evidence also shows resistance to that pitch: Jordanian officials have taken a firm line against “Iranian aggression,” and columnist Hussein al-Rawasdeh wrote that “Jordan is subjected to Iranian aggression, full stop.”</p>
+<p>The broader Arab audience may be even harder to sway. Michael Robbins, the director of the Arab Barometer, said recent polling in Arab countries suggests sympathy Iran gained earlier in the war evaporated after Tehran’s recent airstrikes on Arab countries. Ahmad Sharawi, a senior analyst at the Foundation for the Defense of Democracies, said Arab states face limited options and that their main response will remain “diplomatic condemnations.”</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/international/2026/08/iran-appeals-jordan-alliance/688205" target="_blank" rel="noopener noreferrer" title="The Atlantic / Iran Goes Looking for Love in Jordan">TA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Ebola cases top 4,000 in DRC as WHO urges Ervebo vaccine trial</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Confirmed Ebola cases in the Democratic Republic of the Congo have surpassed 4,000, and a Ministry of Health situation report put the outbreak at 4,053 cases and 1,850 deaths since it was declared in mid-May. The outbreak has spread across 53 health zones in five provinces — Ituri, North Kivu, South Kivu, Haut-Uele and Tshopo — with 87 percent of cases in Ituri and 11 percent in neighboring North Kivu.</p>
+<p>On Friday, World Health Organization vaccine experts recommended full-scale human trials of Ervebo, the only licensed Ebola vaccine, to see whether it could provide cross-protection against the Bundibugyo strain spreading in DRC. WHO experts said early data, including animal studies, suggested possible protection, while the United Nations’ Technical Advisory Group on Candidate Vaccine Prioritization said a specific Bundibugyo vaccine is still the preferred option and cautioned against immediate action without the necessary findings.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/7/ebola-cases-top-4000-in-drc-as-who-urges-ervebo-vaccine-trial?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Ebola cases top 4,000 in DRC as WHO urges Ervebo vaccine trial">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="daily_maverick">
+  <summary>Farewell Estelle Ellis, who chased broken lifts, broken hospitals and broken promises</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Estelle Ellis, the Eastern Cape reporter who made a career out of chasing broken lifts, broken hospitals and broken promises, died suddenly at 51, leaving colleagues and the families she wrote about with a sharp sense of loss after years of hard-edged reporting.</p>
+<p>Ellis died on Wednesday evening, 5 August 2026, while she was with her parents in Jeffreys Bay. She would have turned 52 on 19 October. Four days earlier, on 1 August, she filed what turned out to be her last Daily Maverick story, about the Organisation Undoing Tax Abuse, or Outa, asking the high court for an urgent interdict to stop the rollout of the new Administrative Adjudication of Road Traffic Offences system, known as Aarto.</p>
+<h3>A life built in courtrooms and hospital corridors</h3>
+<p>Ellis grew up in Somerset West, went to primary school there and matriculated from Hottentots-Holland High School before studying at Stellenbosch University, where she earned a law degree, an honours degree in journalism and a diploma in future studies. She later completed further studies at the Stellenbosch University Business School.</p>
+<p>That mix of law and reporting shaped the way she worked. She began as a court reporter at Die Burger, then moved to the Cape Argus, The Star and The Herald in what was then Port Elizabeth, now Gqeberha. In the Western Cape Division of the High Court, colleagues remember a reporter who was first to the printer, first to the affidavits and often better briefed than the lawyers in the room. She was also, by several accounts, generous with her copies and with her time.</p>
+<p>Her legal training never left her, and her reporting did not stop at taking notes from the sidelines. When she could not get clear answers about broken lifts at a government hospital, she tested them herself. On one occasion, a lift stopped between floors with Ellis inside, trapped with a hospital porter and a corpse. That was the kind of reporting she became known for: she wanted to see the thing, not just hear about it.</p>
+<h3>Reporting on the people behind the numbers</h3>
+<p>Ellis eventually returned to the Eastern Cape, where she built a reputation as a persistent reporter on health, courts and municipal failures. She joined Daily Maverick in 2019 and ran its Eastern Cape coverage from a bureau she helped build almost from nothing. Colleagues said her work often began with a tip-off or complaint and ended as a major investigation because she kept asking what was really happening and who was responsible.</p>
+<p>Her reporting on paediatric oncology drug shortages in the Eastern Cape, malnutrition, staffing shortages in the neonatal ward at Dora Nginza Hospital, the closure of frail care facilities and clinics, and the provincial medical scooter programme all followed the same pattern: she refused to move on until the people affected were seen and the failures were named. During the Covid-19 pandemic, her coverage recorded more than 300 deaths and neonatal staffing shortfalls in Eastern Cape hospitals.</p>
+<p>She also helped launch Baywatch in 2019 with Angela Daniels, a Daily Maverick bureau focused on Nelson Mandela Bay. The project turned local problems in water infrastructure and municipal finance into national news. Ellis wrote that it had always been her dream to build a fully fledged bureau in the metro, and thanked colleagues for helping bring it to life.</p>
+<p>Her work won multiple awards, including four Discovery Health Journalist Awards, the Discovery Community Builder of the Year Award, several Vodacom Journalist of the Year Awards and several Standard Bank Sikuvile Awards. But people who worked with her said she cared more about accuracy than speed, and more about getting it right than being first.</p>
+<h3>The person behind the bylines</h3>
+<p>Ellis’ colleagues and friends describe a reporter who was exacting, funny and deeply loyal. Angela Daniels said Ellis cared so much that she could not simply let things slide, while Karyn Maughan said Ellis took her to court as a young reporter and taught her to keep asking questions until she understood the story properly. Journalist Biénne Huisman remembered her as brave, bold and deeply empathetic, with a love of home life that included updates about her ginger cat, Finn.</p>
+<p>She was also involved beyond the newsroom. Ellis served on the executive committee of Siyavuka for Kids, worked on efforts to establish a dedicated children’s hospital for the Eastern Cape, and stayed active in hunger relief work. She described her own mission around child nutrition as making sure children had enough to eat during the first thousand days of life.</p>
+<p>Daily Maverick management called her death a devastating loss and said she told stories of the Eastern Cape “that almost nobody else was telling: the hospitals, the courts, the water crisis, the people the state forgot.” She is survived by her parents, Kobus and Engela Ellis, her sisters Tersia Ellis and Rene Hedderwick, her brother-in-law Richard Hedderwick, and her niece and nephew, Leah and Jacques.</p>
+<p>For colleagues, the loss is not just of a skilled journalist but of someone who walked younger reporters into court, shared documents, asked the extra questions and kept going when officials wanted the story to stop. The work she left behind was built on that refusal to look away.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-07-farewell-estelle-ellis-who-chased-broken-lifts-broken-hospitals-and-broken-promises" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Farewell Estelle Ellis, who chased broken lifts, broken hospitals and broken promises">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>DRC Ebola Outbreak Surpasses 4,000 Confirmed Cases Amid Lethal Strain</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Democratic Republic of the Congo said its Ebola outbreak had surpassed 4,053 confirmed cases as of Friday, after the Ministry of Communication said in an August 7 health bulletin that the country recorded more than 1,000 new infections in two weeks. Authorities put the lethality rate at 45.7%. Official registries compiled from May 15 to August 5 showed 694 patients still in isolation or hospitalized in specialized centers, while 793 people had recovered.</p>
+<p>Health officials said the virus was spreading through five provinces: Ituri, North Kivu, South Kivu, Haut-Uélé and Tshopo, with Ituri remaining the epicenter. Despite logistical challenges, epidemiologists said contact tracing was running at 77.7%. The evidence also said the outbreak became the second-largest Ebola outbreak in the DRC on July 31, and that the World Health Organization warned it was the fastest-growing Ebola outbreak in the country’s history.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/drc-ebola-outbreak-surpasses-4000-cases" target="_blank" rel="noopener noreferrer" title="Telesur English / DRC Ebola Outbreak Surpasses 4,000 Confirmed Cases Amid Lethal Strain">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>ICC body urges Chad and Venezuela to reverse course on withdrawal</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Assembly of States Parties, which oversees the International Criminal Court, urged Chad and Venezuela to abandon their withdrawals in a statement from The Hague on Friday, saying it had noted both moves “with concern” and warning that leaving could weaken the global fight against impunity. It called on the two countries to remain committed members and to raise grievances through dialogue within the assembly rather than by leaving the court.</p>
+<p>The appeal came as the ICC faces what it described as its most serious wave of departures since its founding in 2002. Five countries have announced plans to exit since last year. Chad said on July 27 that the court’s record was uneven and skewed against Africa, while Venezuela’s foreign minister, Felix Plasencia, told the United Nations three days earlier that the decision, ordered by Interim President Delcy Rodriguez, was “firm and irrevocable” and accused the court of geographic bias against Africa and Latin America. Under the Rome Statute, a withdrawal takes a year to formally register and does not stop cases already under way.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/7/icc-body-urges-chad-and-venezuela-to-reverse-course-on-withdrawal?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / ICC body urges Chad and Venezuela to reverse course on withdrawal">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Donald trump ohio republican max miller domestic abuse allegations birthright citizenship us politics latest</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Progressive Democratic proposals including “Medicare for all” and new taxes on billionaires have helped insurgent candidates win primary victories this year, unsettling the party establishment and raising worries about how Democrats will perform in November’s midterm elections. Early this week, a Reuters/Ipsos poll found that some of those ideas have support among independent voters who could help decide whether President Donald Trump’s Republican Party keeps its congressional majorities for the next two years.</p>
+<p>In the six-day nationwide poll, 64% of independent registered voters said they support increasing taxes on corporations and billionaires, while 15% oppose it. The poll also found that 60% of independents support government-provided healthcare coverage for all Americans, a proposal progressives including Michigan US Senate nominee El-Sayed have pitched as “Medicare for all,” meaning expanding the government-run health insurance program to cover all Americans.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/aug/07/donald-trump-ohio-republican-max-miller-domestic-abuse-allegations-birthright-citizenship-us-politics-latest?page=with%3A6a75b43f8f0821d9ede5c5ca#6a75b43f8f0821d9ede5c5ca" target="_blank" rel="noopener noreferrer" title="The Guardian / Donald trump ohio republican max miller domestic abuse allegations birthright citizenship us politics latest">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye,nyt,scmp">
+  <summary>Houthi missile and drone attacks kill dozens of Yemeni government troops</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Houthi missile and drone strikes on Yemeni government positions on Thursday killed dozens of troops and wounded many more, according to competing tolls from AFP, military sources and local officials, deepening fears that the 2022 truce is fraying again.</p>
+<h3>What the attacks hit</h3>
+<p>Houthi military spokesman Yahya Saree said the group targeted government military positions with ballistic missiles and drones, naming al-Ruwaik, al-Thaniyah and al-Abr among the areas struck. The Houthis said the attacks were retaliation for what they called a “Saudi-backed military buildup,” and Saree said, “We are prepared to confront any escalation.”</p>
+<p>In one account, a missile struck troops during their morning formation at a military camp in the al-Ruwaik area of Marib province, killing and wounding at least 45 personnel. AFP also quoted military sources as saying other attacks hit camps in al-Abr and al-Wadiah in Hadramawt province near the border with Saudi Arabia.</p>
+<h3>The tolls differ</h3>
+<p>The casualty count was not consistent across the available reporting. Two medical sources told AFP that at least 38 government troops were killed and 29 others were injured. Middle East Eye also reported that at least 38 members of Yemen’s government forces were killed and 29 others were wounded.</p>
+<p>South China Morning Post, citing a military source, put the death toll higher, saying the attacks killed at least 58 government troops. In the evidence provided, Yemen’s defence ministry condemned the strikes and said its armed forces “will respond to the missile and drone attacks at the appropriate place and time.”</p>
+<h3>Why the strikes matter</h3>
+<p>Military officials said the assault was the deadliest on forces of Yemen’s internationally recognised government since the 2022 United Nations-brokered truce. The New York Times said recent escalating tensions between the Iran-backed group and the Yemeni government have prompted fears that that truce is nearing collapse.</p>
+<p>The Houthis have stepped up military operations since the outbreak of the US-Iran war earlier this year, according to the evidence provided, and the renewed hostilities escalated after the group declared the end of the country’s de-escalation phase on 12 July. The group said then that Saudi Arabia had carried out air strikes on Sanaa International Airport as it received an Iranian aircraft in the capital, Sanaa.</p>
+<h3>What remains unresolved</h3>
+<p>The immediate question is how far the fighting will spread and whether either side carries through on its threats. The Houthis said they were acting in retaliation and signalled readiness for escalation, while Yemen’s defence ministry said it would answer “at the appropriate place and time.”</p>
+<p>The evidence also shows a broader pattern of rising pressure: the Houthis have been fighting Yemen’s government since seizing Sanaa in 2014, and the front lines had remained largely static after the 2022 truce even after its formal expiry. This attack suggests that the period of relative calm is under strain again.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/houthi-missile-and-drone-attacks-kill-dozens-yemeni-government-troops" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Houthi missile and drone attacks kill dozens of Yemeni government troops">MEE #1</a><a href="https://www.nytimes.com/2026/08/07/world/middleeast/yemen-houthis-attack-military-camp.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Houthis Claim Attack on Yemeni Military Camp">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3363241/houthi-attacks-kill-dozens-troops-yemen-wound-civilians-saudi-arabia" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Houthi attacks kill dozens of troops in Yemen, wound civilians in Saudi Arabia">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc,cna,cnn,nyt">
+  <summary>Teen kills five teachers in Thailand’s deadliest school shooting in years</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 14-year-old student’s shooting at Debsirin Nonthaburi School in Thailand left teachers, students and families reeling, and it has reopened the country’s gun debate after the death toll shifted and Prime Minister Anutin Charnvirakul promised tighter restrictions.</p>
+<p>The boy killed his grandparents at the home they shared in Nonthaburi before going to the school, where he was a student, and opening fire. BBC reported eight dead and 22 injured, while CNN said five teachers were killed and more than 30 people were injured, with an earlier toll later revised down. Thai media also later reported that a student died of injuries.</p>
+<h3>How the attack unfolded</h3>
+<p>Police said the teenager is believed to have shot his 73-year-old grandfather and 74-year-old grandmother at their two-storey flat around 5am local time on Friday. He then boarded a school bus carrying the firearm and dozens of bullets, attended his first class at 8:30am and his second at 9:20am, and began shooting about half an hour into that lesson.</p>
+<p>He first fired on teachers on the sixth floor, then walked down the stairs and shot the school’s deputy director and the director’s secretary as they went up to check what was happening, according to Police Major General Dejrapee Kongdee. Police later found the attacker after he had shot himself, around 10:40. Students described locking classroom doors, hiding between tables and running for safety while emergency workers treated the wounded outside.</p>
+<p>CNA said the dead included a maths teacher, a Thai language teacher, a guidance counsellor, a student affairs administrator and a secretary. Students and parents gathered outside the school in shock as news spread across Nonthaburi province, just north of Bangkok.</p>
+<h3>The gun, the laws and the blame</h3>
+<p>Police Colonel Thadsakorn Konthong said the gun and bullets used in the attack belonged to the teen’s grandfather, and an initial inspection found signs that the firearm had been searched for inside the grandfather’s bedroom. International and local media reported that the gun was legally registered and had a permit.</p>
+<p>The shooting also put Thailand’s gun laws back under scrutiny. The country has one of the highest rates of civilian gun ownership in South East Asia, with around 10.3 million firearms in civilian possession and around four million believed to be illegally owned. It already has strict laws punishing illegal possession with up to 10 years in jail, but enforcement has been a problem.</p>
+<p>Anutin, who earlier served as interior minister, had already introduced gun-control measures including a short-term ban on new gun licenses and import restrictions. After the shooting, he said he plans to introduce laws restricting the carrying of firearms in public, with only government officials on duty allowed to carry guns. He said the tragedy “shouldn’t have happened”.</p>
+<h3>What changes now</h3>
+<p>The government has already pointed to tighter security in schools and more support after the attack. CNN said the Ministry of Education pledged a fresh review of school security procedures, especially ways to prevent weapons and other dangerous items from being brought onto campuses, and promised compensation of 20,000 Thai baht for each person killed and 5,000 baht for each injured victim.</p>
+<p>Deputy Prime Minister Yodchanan Wongsawat also said a new mental health action plan for teachers and students would be announced. UNICEF said the suspect’s young age raised “difficult questions” and called for better mental health services for children and for schools to be made free of all forms of violence.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cdewx6rew04o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Thai PM vows to introduce stricter gun laws after eight killed in shooting">BBC #1</a><a href="https://www.channelnewsasia.com/asia/thailand-school-shooting-debsirin-nonthaburi-students-6306466" target="_blank" rel="noopener noreferrer" title="CNA / Thai students in disbelief after deadly school shooting">CNA #1</a><a href="https://www.cnn.com/2026/08/07/asia/thailand-bangkok-school-shooting-gunman-latam-intl" target="_blank" rel="noopener noreferrer" title="CNN / Teen kills five teachers in Thailand’s deadliest school shooting in years">CNN #1</a><a href="https://www.nytimes.com/2026/08/07/world/asia/thailand-school-shooting.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Boy Kills Grandparents and Then Five Teachers, Thai Authorities Say">NYT #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cnn">
+  <summary>How Russian ballistic missiles are exploiting holes in Ukraine’s air defenses</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russia’s latest ballistic-missile barrages are exposing a gap in Ukraine’s air defenses, with high-speed strikes reaching cities before warning systems can help much and Kyiv still short of the US-made Patriot interceptors that can stop them.</p>
+<p>On one night this week, more than two dozen ballistic and anti-ship missiles hit the Ukrainian capital region, and all of them slipped past Ukrainian defenses, killing at least 17 people and wounding dozens more. A separate attack on the night of June 30, concentrated on the Kyiv and Lviv regions included four anti-ship missiles, nine ballistic missiles, 61 cruise missiles and close to 300 strike drones, according to the Ukrainian Air Force.</p>
+<p>That mix matters because Russia’s air campaign is not just one kind of weapon. Ukraine has also been hitting Russia’s oil refining capacity, causing long lines at fuel stations and setting commercial logistics centers alight, but Moscow has kept up long-range attacks on Ukrainian cities. The strikes that worry Ukrainian leaders most appear to be the ballistic ones, which can arrive with little or no warning.</p>
+<h3>Why ballistic missiles are so hard to stop</h3>
+<p>Ballistic missiles are different from the cruise missiles and drones Ukraine has spent much of the war learning to counter. Drones are relatively cheap and plentiful, and Ukraine has built a layered defense against the slower ones. Cruise missiles can fly close to the ground to avoid detection. Ballistic missiles, by contrast, boost upward on rocket power, follow a high arc, and then plunge toward their target at extreme speed.</p>
+<p>The short-range Russian Iskander ballistic missile can fly at six to seven times the speed of sound and carry up to 700 kilograms of explosives. Russia has also fired the Oreshnik missile, an intermediate-range hypersonic weapon, on a handful of occasions, and Ukrainian officials say Russian forces have repurposed S-400 air-defense missiles as ballistic missiles to hit Ukrainian targets.</p>
+<p>The difficulty for defenders is not new in warfare, but the tools to counter it have advanced. Nazi Germany’s V-2 rocket and the Scud missiles used in the Iran-Iraq war showed how such weapons can hit civilian areas. Today, the Patriot’s PAC-3 interceptor is one of the few systems that can knock down a ballistic missile, steering directly into its target and destroying it with kinetic energy — in other words, a bullet hitting a bullet.</p>
+<h3>Ukraine’s interceptor gap</h3>
+<p>Russia’s recent barrages are landing as Kyiv tries to replenish its supply of Patriot interceptors. Ukrainian President Volodymyr Zelensky said in a statement Wednesday that ballistic-missile interceptors could have saved the lives of those killed in the latest attack. He said delays in supplying them, or a refusal to provide anti-ballistic systems, “lead directly to such horrific casualties and destruction.”</p>
+<p>Zelensky also said partners that cannot yet send interceptors can help by imposing new sanctions, arguing that a significant share of Russia’s ballistic-missile production is still not under sanctions.</p>
+<p>The shortage is shaping how Ukraine thinks about the wider air war. The country’s cities face three broad threats — ballistic missiles, cruise missiles and drones — and Russian attacks often combine all three. In recent strikes, air-raid sirens have sounded at the same time as impacts, underscoring how little time some weapons leave for civilians and air defenses.</p>
+<h3>What Kyiv is trying to do next</h3>
+<p>Kyiv has been pressing Washington to co-produce the Patriot system in an effort to rebuild its stock of interceptors. US President Donald Trump signaled on the sidelines of the NATO summit last month in Ankara that he might be willing to license Ukrainian co-production of the Patriot, but he later said, “We’re talking about it, but it’s a hard thing to give away that kind of technology.”</p>
+<p>Ukraine’s concern is not only the pace of Russian attacks but also the shape of the threat. Russian short-range systems such as the Iskander have become the workhorse of the campaign, and Ukrainian officials say Russia is also augmenting its arsenal with North Korean ballistic missiles. In one cited case, a North Korean KN-23 missile — described as a counterpart to the Russian Iskander — demolished a house in Radushne in rural Dnipropetrovsk region, killing six people, including three children, with five more children still missing after the attack.</p>
+<p>As Russia continues building its missile campaign, the practical problem for Ukraine is whether its air defenses can catch up fast enough. The latest attacks show that when ballistic missiles get through, the cost can be immediate and severe.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/07/europe/ballistic-missiles-russia-ukraine-explained-intl" target="_blank" rel="noopener noreferrer" title="CNN / How Russian ballistic missiles are exploiting holes in Ukraine’s air defenses">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,cnn,middle_east_eye,nyt,scmp">
+  <summary>Turkey, Saudi Arabia and Pakistan sign defence pact</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Turkey, Saudi Arabia and Pakistan have signed a mutual defence pact in Mecca, raising questions over whether the deal will remain a limited security umbrella or grow into a wider regional bloc shaped by conflict with Iran, Israel and other adversaries.</p>
+<h3>What the pact says</h3>
+<p>The agreement was signed on Friday by Turkish President Recep Tayyip Erdogan, Saudi Crown Prince Mohammed Bin Salman and Pakistani Prime Minister Shehbaz Sharif in Mecca. It builds on a similar Saudi-Pakistan arrangement signed last year, and the joint statement says the pact is meant to strengthen collective security and collective deterrence.</p>
+<p>Its core clause says an armed attack on any one of the three states shall be considered an attack on all of them. The statement also says the deal is meant to develop defence cooperation “in all its dimensions.” CNN said the official rationale is to strengthen collective deterrence against aggression and deepen defence cooperation.</p>
+<p>Even so, officials have been careful about how they describe it. A Turkish official told CNN the agreement is not directed against any specific actor, and the Saudi foreign ministry said it does not represent an effort to establish a military axis or a sectarian bloc. The same official also said other regional countries could join later.</p>
+<h3>Why it matters now</h3>
+<p>The pact arrives at a moment of heightened regional strain. Al Jazeera said experts have speculated that the deal could be the beginning of a broader alliance sitting between Israel and Iran, while the signatories have tried to project strength and unity without openly presenting the pact as a deterrent against any one foe.</p>
+<p>The three countries each face different security pressures. Al Jazeera said Pakistan has been in a border conflict with Afghanistan since February and exchanged fire with India in May 2025. Saudi Arabia has repeatedly come under attack from Iran and its allies since the outbreak of the United States-Israeli war against Iran in late February. Turkiye, meanwhile, has fought Kurdish armed groups inside and outside the country for years, and tensions with Israel have also increased.</p>
+<p>CNN said Saudi Arabia has drawn in two of the Muslim world’s most formidable military powers as the Iran war moves closer to the kingdom. It also said the pact gives Riyadh a new layer of protection beyond its longstanding security partnership with the United States, at a time of growing doubts over whether Washington can still be relied on to protect Gulf allies.</p>
+<h3>What remains unclear</h3>
+<p>The biggest unanswered question is how far the pact would force the three countries to act for one another. Al Jazeera said it remains unclear the extent to which the agreement would require members to defend alliance partners, and Harlan Ullman of the Killowen Group said the phrasing matters because “should be” does not necessarily mean automatic action.</p>
+<p>CNN made the same point, saying the statement did not give specifics on the commitments each country accepted and that it is unclear how far the agreement would bind them to military action in each other’s defence. Ullman also said it is not yet clear how the pact might pull the three signatories into conflicts involving the Houthis in Yemen, or into other regional confrontations.</p>
+<p>That uncertainty is central to the pact’s significance. The signatories have described it as a defensive agreement, and one Ankara-based source quoted by Middle East Eye said it would not alter or undermine other alliance commitments. But the same source said it could change the balance of power in the region if it is successfully implemented.</p>
+<p>For now, the deal has created a new collective-security framework on paper, but the regional test will be whether it changes behaviour when one of the three comes under attack.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/7/new-regional-order-pakistan-turkiye-saudi-arabia?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Will Pakistan-Saudi-Turkiye alliance actually create a new regional order?">AJ #1</a><a href="https://www.cnn.com/2026/08/07/middleeast/saudi-arabia-turkey-pakistan-pact-intl" target="_blank" rel="noopener noreferrer" title="CNN / Saudi arabia turkey pakistan pact intl">CNN #1</a><a href="https://www.middleeasteye.net/news/turkey-saudi-arabia-pakistan-sign-defence-pact-sources-say" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Turkey, Saudi Arabia and Pakistan sign defence pact">MEE #1</a><a href="https://www.nytimes.com/2026/08/07/world/middleeast/saudi-turkey-pakistan-joint-defense-pact.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Saudi Arabia, Turkey and Pakistan Sign Joint Defense Pact">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3363340/saudi-arabia-turkey-and-pakistan-sign-joint-defence-deal-amid-regional-turmoil" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Saudi Arabia, Turkey and Pakistan sign joint defence deal amid regional turmoil">SCMP #1</a><a href="https://www.middleeasteye.net/news/saudi-arabia-warns-imminent-attacks-iraqi-groups-and-houthis" target="_blank" rel="noopener noreferrer" title="Middle East Eye / War on Iran: Saudi Arabia warns of imminent attacks by Iraqi groups and Yemen&#x27;s Houthis">MEE #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Labour government people working illegally arrested deported uk andy burnham politics latest</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Shadow work and pensions secretary Helen Whately spent the morning on the media round for the Conservatives, talking about her party’s pledge to ban foreign nationals from social housing. On BBC Breakfast, she was asked whether people who had fled war in Ukraine would be made to leave their social housing home under a Tory government. Whately said: “We’re not attempting to change people’s migration status, if people have come here and sought refuge … Britain is a welcoming country for that and we’re not about to change it.”</p>
+<p>When asked to clarify whether Ukrainian refugees would be “thrown out” under the policy, Whately said: “We’re making sure people have six months to find another place to live.” On Sky News, she was asked what would happen after that grace period and said people should find their own accommodation, “for instance, private rented accommodation.” She later told Times Radio that it would take “years and years” to provide homes for everyone on the waiting list, and argued that the policy was a faster way to free up homes.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/blog/live/2026/aug/07/labour-government-people-working-illegally-arrested-deported-uk-andy-burnham-politics-latest?page=with%3A6a75aa9f8f0821d9ede5c526#6a75aa9f8f0821d9ede5c526" target="_blank" rel="noopener noreferrer" title="The Guardian / Labour government people working illegally arrested deported uk andy burnham politics latest">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="rappler">
+  <summary>Only 14 hospitals offer PhilHealth package for children with disabilities</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Access to PhilHealth’s Z Benefit package for Filipino children with disabilities remains limited in Manila, with EDCOM 2 data showing that only 14 hospitals nationwide offer the coverage. Seven regions have no accredited facility at all, and of the 14 hospitals, 10 are in Luzon, two are in the Visayas and two in Mindanao. Half of the Luzon facilities are concentrated in the National Capital Region, while the Philippine General Hospital in Manila is the only facility offering coverage for all four types of disabilities as of June 2026.</p>
+<p>The package covers developmental disabilities, hearing impairment, mobility disorders and visual disabilities. EDCOM 2 said there are 5.1 million children with disabilities in the Philippines. PhilHealth data also showed 841 Z Benefit paid claims nationwide in December 2025, amounting to P6.8 million.</p></div>
+  <div class="source-list"><a href="https://www.rappler.com/philippines/philhealth-z-benefit-package-children-with-disabilities-lack-accredited-hospitals" target="_blank" rel="noopener noreferrer" title="Rappler / Only 14 hospitals offer PhilHealth package for children with disabilities">Rappler #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Iguala&#x27;s Darkest Night Touches the Old Regime</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">general_news</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On September 26, 2014, at 9:40 p.m., 20 of the 43 missing normal students were traveling in bus 1531 in front of the Guerrero state courthouse when five municipal police patrols intercepted them. At 10:05 p.m., the students were violently subdued. A 2016 investigation report from the then-Procuraduría General de la República says officers threatened them with gunfire, stones, and tree branches, and sprayed them with tear gas.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/07/politica/004n3pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Iguala&#x27;s Darkest Night Touches the Old Regime">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Medics among six Palestinians injured in Israeli attacks across West Bank</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli forces and settlers injured six Palestinians, including two paramedics, in attacks across the occupied West Bank governorates of Nablus and Bethlehem on Friday, according to authorities. In Bethlehem, three Palestinians were wounded after settlers attacked vehicles in the Abu Njeim area, and an ambulance crew responding in nearby Khalayel al-Louz was pelted with stones, injuring two paramedics and damaging the vehicle.</p>
+<p>In Beit Furik, east of Nablus, the Palestine Red Crescent Society said its crews treated a man beaten by Israeli forces and were coordinating with the International Committee of the Red Cross to secure access to him after his arrest. The organisation also said settlers vandalised a Palestinian-owned vehicle in the same town. The same account said Palestinian monitors have documented more than 11,000 attacks across the West Bank since January.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/7/medics-among-six-palestinians-injured-in-israeli-attacks-across-west-bank?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Medics among six Palestinians injured in Israeli attacks across West Bank">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="axios">
+  <summary>&quot;No escape:&quot; Inside Rubio&#x27;s Cuba pressure campaign</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Marco Rubio is intensifying a broad pressure campaign on Cuba, telling Axios there are “no escape valves” as sanctions, visa restrictions and other measures pile onto an island economy already in slow-motion collapse and uncertain about how much worse the pressure could get.</p>
+<p>Since last year, the Trump administration has taken two dozen separate actions against Cuba, including sanctions on 40 entities, from foreign companies operating on the island to Cuba’s state-run fuel, banking and mining conglomerates. It has also targeted at least 38 people with economic sanctions, U.S. visa limits and residency revocations, while pressing other countries to stop backing Cuba’s doctor-export program, which the State Department calls “human trafficking.”</p>
+<p>Rubio also said the administration is using reports to hit Cuba on its human rights record, its failure to fight terrorism and its role in amplifying anti-capitalist and anti-U.S. political activity. In his telling, the goal is to keep closing off any way the government might try to evade the squeeze. “Every time they create a new mechanism in which they try to get out of the noose, we just close it off,” he said.</p>
+<p>The pressure is landing on an economy that Cuba’s leaders are trying to stabilize. Cuba relies on the United States for most of its food, fuel, medicine and currency, all of which are scarce on the island, and Rubio said the government is trying to buy time with reforms while looking for workarounds. On Tuesday, Cuba’s prime minister announced the government would allow more private-sector activity than at any time since the Revolution of 1959.</p>
+<p>The sanctions campaign is also reshaping business on the ground. Foreign companies are leaving Cuba under the threat of penalties, while U.S. companies — especially fuel distributors — are moving in as Cuba’s state oil company and other enterprises struggle. In the first six months of the year, U.S. fuel exports to Cuba rose to $96 million, with more than half of that in June, according to the U.S.-Cuba Trade and Economic Council.</p>
+<p>Rubio said the administration is not rushing. “Certainly this isn’t going to go away for the next 2½ years,” he said, adding that the aim is to force Cuba into “a very tough spot.”</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/07/marco-rubio-cuba-pressure-campaign" target="_blank" rel="noopener noreferrer" title="Axios / &quot;No escape:&quot; Inside Rubio&#x27;s Cuba pressure campaign">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Lebanon points to ‘positive progress’ on borders, prisoners in Israel talks</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Lebanon’s President Joseph Aoun said the latest Lebanon-Israel meetings in Rome this week made “positive progress” on borders and prisoners, even as the Israeli military kept up strikes in Lebanon. During a cabinet session on Friday, Aoun said the talks covered the ceasefire, the demolition and bulldozing of homes, borders, prisoner exchanges and “pilot zones,” according to a statement from the Lebanese presidency. He said he hoped “practical steps will soon emerge,” and also cited meetings last month with US President Donald Trump and Secretary of State Marco Rubio, saying the US administration understood Lebanon’s situation.</p>
+<p>The US State Department echoed that tone, calling the discussions “fruitful” and saying Lebanon and Israel are “much closer to reaching an agreement on advancing and expanding the pilot zones process.” But Lebanon’s National News Agency reported new Israeli attacks on Friday, including shelling and machinegun fire on Meiss el-Jabal, drones over Beirut and its suburbs, and strikes on a water utility repair team in Bint Jbeil and near a mosque in Zawtar al-Sharqiyah. The Lebanese army said a soldier was “slightly injured” after an Israeli attack on a bulldozer in al-Mansouri, Tyre, and Tyre was also attacked on Wednesday, when at least eight people were wounded.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/7/lebanon-points-to-positive-progress-on-borders-prisoners-in-israel-talks?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Lebanon points to ‘positive progress’ on borders, prisoners in Israel talks">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="el_pais,scmp">
+  <summary>Abelardo de la Espriella&#x27;s possession as president of Colombia, live | “The time for restoring order, authority and freedom has begun”: the president&#x27;s first speech</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Abelardo de la Espriella was sworn in as president of Colombia on Friday in a ceremony moved to Cali, breaking with the usual Capitol setting and ending a tense transfer of power from Gustavo Petro that already showed the distance between the outgoing and incoming governments.</p>
+<h3>A ceremony split between Congress and a military battalion</h3>
+<p>The legislative session began around 2:40 p.m., and De la Espriella arrived at about 4:15. He took the oath at 4:30 and left less than an hour later, in the middle of the ceremony, for the nearby Pichincha battalion. From there he delivered his first speech to Congress remotely, accompanied by soldiers rather than lawmakers.</p>
+<p>Members of Congress had traveled to the capital of Valle del Cauca for the oath, while legislators from Petro’s Historical Pact were notably absent. Delegations from several countries were also in Cali, including the presidents of Argentina, Javier Milei; Ecuador, Daniel Noboa; Chile, José Antonio Kast; and Paraguay, Santiago Peña. King Felipe VI attended as head of state of Spain. Petro did not attend.</p>
+<p>In his speech, De la Espriella said one of his first acts would be to sign the Shield of the Americas and repeated his promise of a harder line on security and crime. South China Morning Post said he vowed to wage war on drug-running guerrillas, bomb jungle cocaine labs, build “mega prisons” and seek closer ties with the United States. He also said his government would work to restore Colombia’s “greatness” and begin a new stage of restoring the country’s confidence in its own fate.</p></div>
+  <div class="source-list"><a href="https://elpais.com/america-colombia/2026-08-07/la-posesion-de-abelardo-de-la-espriella-como-presidente-de-colombia-en-vivo.html" target="_blank" rel="noopener noreferrer" title="El País / Abelardo de la Espriella&#x27;s possession as president of Colombia, live | “The time for restoring order, authority and freedom has begun”: the president&#x27;s first speech">El Pais #1</a><a href="https://www.scmp.com/news/world/americas/article/3363371/trump-ally-abelardo-de-la-espriella-sworn-colombia-president" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump ally Abelardo de la Espriella sworn in as Colombia president">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>South African minister courts China for R2.2 trillion energy investment opportunities</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Africa is seeking to deepen cooperation with China as Electricity and Energy Minister Kgosientsho Ramokgopa highlights the opportunities in the country’s R2.2 trillion ($122 billion) energy investment program. The program is part of South Africa’s Integrated Resource Plan (IRP) 2025, which envisions adding 105 gigawatts of new electricity generation capacity between now and 2039. The plan is meant to strengthen energy security while gradually moving the country toward a cleaner and more diversified electricity mix.</p>
+<p>According to the government, South Africa needs about R2.2 trillion for new generation capacity, and another R440 billion for about 14,500 kilometers of new transmission infrastructure. The evidence says potential cooperation with China could go beyond individual renewable energy projects and include solar photovoltaic manufacturing, wind power, battery storage, transmission infrastructure, smart-grid technologies and skills development. Ramokgopa has previously described China as a dominant player in global renewable energy and said its experience modernizing its electricity system could provide valuable lessons for South Africa.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0807/c98649-20486544.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / South African minister courts China for R2.2 trillion energy investment opportunities">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>Middle route of China&#x27;s mega water diversion project hits new service milestone</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The middle route of China’s South-to-North Water Diversion Project has delivered more than 80 billion cubic meters of water as of Friday, benefiting nearly 118 million residents in 27 cities, the project operator announced. An aerial drone photo taken on Aug. 7, 2026 showed the trunk canal in Nanyang, central China’s Henan Province.</p>
+<p>After operating for nearly 12 years, the middle route has helped rebalance water resources, secure drinking water supplies, restore aquatic ecosystems and reinforce national water security, according to the China South-to-North Water Diversion Corporation. The operator said diverted water now accounts for nearly 80 percent of Beijing’s urban water supply, while in neighboring Hebei Province the combined population of the water recipient areas accounts for about 70 percent of the province’s total. It also said the route has maintained surface water quality at Class II or above and continued to improve river and lake ecosystems in north China.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260807/d07418b0d86949858be631e275191d7b/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Middle route of China&#x27;s mega water diversion project hits new service milestone">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="scmp">
+  <summary>Chinese exam fraud ring helped candidates cheat their way to government-funded jobs</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An organised ring in Henan that helped people cheat their way to government-sponsored jobs has been exposed. State broadcaster CCTV reported Friday that an official investigation concluded a province-wide exam held last month had been compromised by “large-scale, organised cheating,” with suspects paying officials overseeing the exam to obtain test papers and the correct answers in advance. The case was described as the latest in a string of similar crimes.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/politics/article/3363354/chinese-exam-fraud-ring-helped-candidates-cheat-their-way-government-funded-jobs" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Chinese exam fraud ring helped candidates cheat their way to government-funded jobs">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China refines exit-entry management to support growing global exchanges</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Guangzhou on Aug. 7, Chen and her family paused at Guangzhou Baiyun International Airport to watch a short video on overseas travel safety, then asked an immigration officer about border inspection procedures and travel precautions. China has also unveiled new exit-entry administration regulations, set to take effect on Sept. 15, that refine procedures, strengthen protection of travelers’ lawful rights and interests, improve risk warning mechanisms, and regulate intermediary services.</p>
+<p>Official data showed China’s border inspection agencies handled a record 369 million inbound and outbound crossings in the first half of 2026, up 10.8 percent year on year. Mainland residents accounted for 176 million trips and foreign nationals 45.9 million, both up by double digits. At major gateways, Shanghai Pudong International Airport had recorded 3.29 million inbound trips by foreign nationals this year by July 19, while Guangzhou Baiyun International Airport handled more than 1.61 million inbound and outbound passenger trips in the summer travel rush, with inbound foreign travelers up 50.4 percent.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260807/8c80da3b3c8a4f75b409ce29362ba60d/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China refines exit-entry management to support growing global exchanges">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="el_pais,telesur_en">
+  <summary>Moroccan NGOs raise Ceuta border death toll to 141 across both sides of the fence</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Moroccan human-rights groups said the death toll from the mass crossings into Ceuta and Melilla had climbed to 141, while Rabat still had not accepted the Spanish counts and families were waiting for news of missing relatives.</p>
+<p>The Moroccan Association for Human Rights (AMDH) presented what it called its first report on the crisis in Rabat on Friday, drawing on official material, media coverage and its own observers after the irregular entry of thousands of young people about a week earlier. The group said the tragedy exposed not only the border crossing itself but also a wider failure in migration management.</p>
+<h3>Bodies counted on the Moroccan side</h3>
+<p>The figures the AMDH gave for Moroccan territory varied across the two accounts. In one version, it said there were 31 bodies in the morgue in Tetuán, including 10 foreigners, and 17 more in Tangier, all linked to the mass crossing at the border. In another account, AMDH Tetouan president Achraf Mimoune said the Tetouan morgue held 21 bodies — 11 Moroccans and 10 foreign nationals — and that there could be another 17 in Tangier.</p>
+<p>Morocco’s government has officially acknowledged 11 deaths on its territory so far, including one person who died after falling from a rocky area near Ceuta and 10 who drowned. The Interior Ministry has also said it is still verifying the Spanish figures through official channels with its counterpart in Spain, including the number of affected people and their identities and nationalities.</p>
+<h3>A demand for answers</h3>
+<p>AMDH president and lawyer Suad Brhama said the Ceuta tragedy reflected a deep social and political crisis and showed failures in Morocco, Spain and the European Union. She also said the exodus toward Ceuta and Melilla expressed a crisis of trust caused by the state’s inability to offer real social protection.</p>
+<p>The group blamed the government for not guaranteeing the safety and physical integrity of the people who crossed the frontier in a rush. Brhama asked how the tragedy could happen without state measures to stop it, and the group said many families were still waiting for news about missing relatives.</p>
+<h3>Pressure for an investigation</h3>
+<p>The AMDH said the official response in Morocco had been mainly judicial and security-based. It said the crackdown was being used to criminalize migrant movements, including those of minors, and argued that Morocco had become a “gendarme” for the European Union. The group also accused Spain of largely disengaging from the reception of migrants and from the way returns to Moroccan territory were organized.</p>
+<p>Moroccan justice has already moved against dozens of people. The AMDH said 111 people were in pretrial detention over the crossings: prosecutors in Tetouan had charged 51 people, including five minors, and courts in Nador had charged another 52, including 18 minors, over attempts to break into Melilla. The group called for an independent, complete and transparent investigation, and said about 3,500 young Moroccans still remained in Ceuta after crossing illegally.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-07/las-ong-de-marruecos-elevan-a-141-la-cifra-de-muertos-a-ambos-lados-de-la-frontera-de-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / Las ONG de Marruecos elevan a 141 la cifra de muertos a ambos lados de la frontera de Ceuta">El Pais #1</a><a href="https://www.telesurenglish.net/death-toll-in-ceuta-and-melilla-migrant-surges-to-141" target="_blank" rel="noopener noreferrer" title="Telesur English / Death Toll in Ceuta and Melilla Migrant Surges to 141">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Meta ordered in US to pay US$567 million to address child safety harms</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A New Mexico judge on Thursday ordered Meta to pay more than half a billion dollars over the state’s claims that the social media company created a “public nuisance” and harmed children. The ruling came after Meta had previously been ordered to pay US$375 million in March, when a jury found it liable for endangering children by making them vulnerable to predators on its platforms, among other harms. Meta said, “We disagree with the ruling and will appeal.”</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3363233/meta-ordered-us-pay-us567-million-address-child-safety-harms" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Meta ordered in US to pay US$567 million to address child safety harms">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Judge approves Trump effort to end South Sudan TPS protections</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Temporary protected status for hundreds of South Sudanese nationals in the United States is set to end after a federal judge ruled that the Trump administration can move forward with stripping their protections, reopening a dispute over who has the authority to end TPS and what that means for people already living and working in the US.</p>
+<h3>Saris clears the way for the end of TPS</h3>
+<p>On Friday, US district judge Patti Saris of the district of Massachusetts rejected an attempt by immigrant rights organizations, including the New York-based African Communities Together, to keep TPS in place for South Sudanese nationals in the US. Her ruling follows a June Supreme Court decision that allowed the Trump administration to strip TPS from hundreds of thousands of Haitians and Syrians.</p>
+<p>TPS is a designation for people from countries facing crises such as civil war or environmental disasters. It lets eligible people remain in the US temporarily, protects them from deportation, and allows them to work legally. In South Sudan’s case, the Department of Homeland Security moved in November to end the designation, saying the country no longer met the conditions for TPS.</p>
+<p>That move would have ended protections for more than 232 South Sudanese nationals and at least 73 others with pending applications. Saris had previously blocked the termination from taking effect, but after the Supreme Court’s ruling she was asked again to intervene on new legal grounds.</p>
+<h3>The fight over who can end TPS</h3>
+<p>The latest challenge centered on whether DHS had the power to terminate South Sudan’s TPS designation at all. Lawyers for the South Sudanese nationals and African Communities Together argued that the statute creating the TPS program in 1990 referred only to the attorney general as the official who could extend and terminate the protections.</p>
+<p>They also pointed to the fact that DHS was created later, in 2002, after the September 11 attacks, when most of the Justice Department’s immigration-related functions were transferred to it. Saris, who was appointed by Bill Clinton, concluded that Congress had also transferred TPS authority to DHS.</p>
+<p>In her 15-page ruling, Saris said the plaintiffs’ argument rested on “a self-contradictory, self-defeating foundation.” She wrote that if DHS lacked authority to terminate South Sudan’s TPS designation, then it also would have lacked authority to issue it in the first place. “South Sudan’s original TPS designation would thus be invalid by the same token as its termination,” she wrote.</p>
+<h3>What the ruling means now</h3>
+<p>The decision leaves South Sudanese nationals in the US facing the end of a protection that had allowed them to live and work legally while their home country remained in crisis. The Trump administration’s November move had been blocked before Saris’ latest ruling, but the judge’s decision now clears the way for the termination to proceed.</p>
+<p>The case also fits into a broader legal shift after the Supreme Court’s June ruling. That decision, issued by the court’s 6-3 conservative majority, curtailed lower-court judges’ ability to review DHS efforts under Trump to end TPS for about a dozen countries. It also overturned lower court rulings in New York and Washington, DC, that had blocked the administration from ending TPS for more than 350,000 Haitians and about 6,100 Syrians.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/aug/07/donald-trump-ohio-republican-max-miller-domestic-abuse-allegations-birthright-citizenship-us-politics-latest?page=with%3A6a76067e8f0851f2bc6edcc0#6a76067e8f0851f2bc6edcc0" target="_blank" rel="noopener noreferrer" title="The Guardian / Donald trump ohio republican max miller domestic abuse allegations birthright citizenship us politics latest">Guardian #1</a><a href="https://www.theguardian.com/us-news/2026/aug/07/judge-trump-south-sudan-tps" target="_blank" rel="noopener noreferrer" title="The Guardian / Judge approves Trump effort to end South Sudan TPS protections">Guardian #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>US Senate passes Russia sanctions bill championed by Lindsey Graham</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US Senate approved a bipartisan Russia sanctions bill on Friday, reviving Lindsey Graham’s push to punish Moscow and its oil customers while setting up a House debate over how much new tariff power the measure would give Donald Trump.</p>
+<p>The measure, renamed the <strong>Lindsey O Graham Sanctioning Russia Act</strong> in honor of Graham’s work on the issue, passed <strong>86-11</strong>. It would impose new sanctions and visa bans on <strong>Vladimir Putin</strong> and top Russian military commanders, and add tariffs of up to <strong>500%</strong> on Russia’s exports. It would also allow Trump to impose levies of up to <strong>100%</strong> on goods from countries that are among the top five importers of Russian oil and gas.</p>
+<p><strong>Rand Paul of Kentucky</strong> was the sole Republican to oppose the legislation, joined by <strong>10 Democrats</strong>. The bill was a top priority for Graham, a Republican senator from South Carolina, who spent the final days of his life working to advance it. The effort had been mired in months of negotiations between the White House and Senate leadership before Graham’s sudden death last month at <strong>71</strong>, after a trip to <strong>Kyiv</strong>. After that, party leaders said they had reached an agreement to move it through the chamber and honor his legacy as an ally of Ukraine.</p>
+<p>The Senate took an earlier step toward the bill last month, on the day of Graham’s funeral, with <strong>Volodymyr Zelenskyy</strong> watching from the chamber. After Friday’s vote, Senate leaders framed the measure as a way to pressure Russia and its trading partners. Graham, presiding over the chamber, said the legislation told Russia’s customers that the US would not sit by while they funded Putin’s assault.</p>
+<p>Some Democrats, however, warned that the bill gives Trump too much discretion over tariffs at a time when he has made them central to his trade policy. <strong>Ron Wyden</strong>, who opposed the bill, said it lets Trump decide what countries to tariff or exempt and modify tariffs at will. He and Paul had offered an amendment to strip some of the new tariff authority, but the Senate rejected it.</p>
+<p>The bill now goes to the <strong>House of Representatives</strong>, which may consider it once it returns from recess at the end of August.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/aug/07/donald-trump-ohio-republican-max-miller-domestic-abuse-allegations-birthright-citizenship-us-politics-latest?page=with%3A6a761ce88f0851f2bc6eddb5#6a761ce88f0851f2bc6eddb5" target="_blank" rel="noopener noreferrer" title="The Guardian / Donald trump ohio republican max miller domestic abuse allegations birthright citizenship us politics latest">Guardian #1</a><a href="https://www.theguardian.com/us-news/2026/aug/07/russia-sanctions-senate-passed-petroleum" target="_blank" rel="noopener noreferrer" title="The Guardian / US Senate passes Russia sanctions bill championed by Lindsey Graham">Guardian #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Kemi Badenoch’s weird week: defence of ex-neo-Nazi raises questions over Tory direction</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Kemi Badenoch’s defence of Joshua Bonehill-Paine, a former neo-Nazi activist and convicted harasser of Luciana Berger, has deepened questions about the Conservatives’ direction after a week in which she also pushed the party further to the right on policy.</p>
+<p>On Monday it emerged that Bonehill-Paine had been selected as a Conservative candidate for a local election in Somerset. A little over 48 hours later, he withdrew his candidacy, saying Badenoch had instead asked him to become an adviser to the party’s culture and integration commission, focusing on how young men become radicalised. The row intensified as pressure mounted on Badenoch to explain why she was standing by him.</p>
+<p>Badenoch said she was “sad” that Bonehill-Paine felt he “won’t be given the space to explain his position and represent his community”, and she chided those who had questioned her judgment. “Piling on [people who have changed] and trying to get them cancelled may be sport for other parties,” she wrote on social media. “But this is a different Conservative party.” Her response left some Conservatives pleased by what they see as her combative style, while others were left “scratching their heads and looking to the door.”</p>
+<p>The episode landed at a sensitive moment for Badenoch. In recent weeks she has been accused of aping Reform UK on policy and purging centrists from the party. Last month she wrote in the Telegraph that the Conservative parliamentary party was “not a retirement home for failed politicians” and said anyone who supported net zero targets or Britain’s membership of the European convention on human rights would be blocked from standing as a candidate in the next election. Gavin Barwell lost the whip, Grant Shapps was blocked from standing again, and sources said multiple Reform members had been blocked from joining.</p>
+<p>Opponents quickly seized on the Bonehill-Paine row. Reform said her support “beggars belief”, while Liberal Democrats mocked Badenoch’s insistence that as a councillor he would only have been “looking at parking, sorting out bins.” Meanwhile, Badenoch also announced that a Conservative government would evict foreign nationals with leave to remain from social housing, drawing accusations from Reform’s Zia Yusuf that she was copying his party’s policy and a warning from Shelter that it would drive up homelessness.</p>
+<p>The result is a Tory leader trying to project firmness while facing a party split over whether her rightward push is clarification or confusion.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/aug/07/kemi-badenoch-joshua-bonehill-paine-conservatives-weird-week" target="_blank" rel="noopener noreferrer" title="The Guardian / Kemi Badenoch’s weird week: defence of ex-neo-Nazi raises questions over Tory direction">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="xinhua_en">
+  <summary>China says military exercises in South China Sea respond to Philippine provocations</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s military exercises and law enforcement training around Huangyan Dao and its surrounding waters were described by a Chinese defense spokesperson on Friday as a serious warning against what Beijing called violations and provocations by the Philippines. Chen Xi, spokesperson for China’s Ministry of National Defense, made the remarks in Beijing on Aug. 7 in response to a media query about drills in the territorial waters and airspace of Huangyan Dao and surrounding areas, after the Philippines deposited its so-called official nautical chart of Huangyan Dao and nearby maritime zones with the UN.</p>
+<p>Chen said Huangyan Dao is China’s inherent territory and that China has continuously, peacefully and effectively exercised sovereignty and jurisdiction over it. He said China is the only country entitled under international law to declare the baselines of Huangyan Dao’s territorial sea. He also said the Philippines’ move seriously violated China’s territorial sovereignty, international law and the basic norms of international relations. Chen urged the Philippines to stop what he called illegitimate acts, provocations and propaganda, and said the Chinese military would take firm and effective countermeasures against any provocative attempts in the South China Sea.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260807/24fa85e8675a4f75a020a2b4372bacfa/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China says military exercises in South China Sea respond to Philippine provocations">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,bbc,cnn,politico">
+  <summary>Madrid threatens retaliation if Italy keeps border controls on travelers from Spain</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Spain and Italy escalated a dispute over migration and Schengen travel as Madrid imposed border checks on travelers from Italy and warned of “proportional measures” if Rome did not end its own controls, leaving a Sunday deadline and an unresolved clash over Ceuta at the center of the fight.</p>
+<p>Spain’s government said the new checks covered all air and sea travel from Italy and began at midnight, lasting for a month. The move came after Italy introduced similar restrictions following the influx of migrants into the Spanish exclave of Ceuta. BBC reported that migrants were pictured lined up on a beach in Ceuta to collect aid, and said the influx was about 78,000 people, while CNN cited 72,000.</p>
+<p>Madrid had already demanded that Italy reverse its checks by Sunday. Rome replied that it would keep them in place until at least August 15. Italy said the temporary suspension of the Schengen arrangement was meant to stop migrants who had entered Ceuta from travelling onward to Italy. Madrid dismissed that explanation as based on “spurious arguments,” saying the migrants in Ceuta had no way of entering the Schengen area.</p>
+<p>The exchange has also become a political dispute between Spain’s socialist leader Pedro Sanchez and Italy’s conservative leader Giorgia Meloni. Italy said it would not accept “ultimatums,” and added that it did not intend to reconsider the suspension of Schengen for third-country nationals arriving from Spain until at least August 15, and in any case until security and terrorist risks for Italy had been eliminated.</p>
+<p>Spain’s government said its countermeasures would include passport, nationality and visa checks for Italian passengers and for visitors from other countries arriving from Italy, citing “persistent irregular migratory pressure.” Italy said local authorities carrying out checks were trying to ensure maximum comfort for Spanish and other European citizens arriving from Spain.</p>
+<p>The standoff comes despite the fact that Italy does not share a land border with Spain. It also leaves both sides publicly holding to their timelines: Spain has set a Sunday ultimatum, while Italy says its controls will stay until at least August 15.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/7/italy-vows-to-maintain-border-checks-despite-spains-countermeasures-threat?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Spain imposes border checks on Italy as countermeasure in Ceuta spat">AJ #1</a><a href="https://www.bbc.co.uk/news/articles/c5yv5l6yr5ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Spain imposes border controls against Italy as row over Ceuta migrant influx intensifies">BBC #1</a><a href="https://www.cnn.com/2026/08/07/europe/spain-italy-migration-intl-latam" target="_blank" rel="noopener noreferrer" title="CNN / Spain to establish border controls on travelers from Italy amid migration dispute">CNN #1</a><a href="https://www.politico.eu/article/spain-retaliation-italy-border-controls-travelers-ceuta-migrants" target="_blank" rel="noopener noreferrer" title="POLITICO / Madrid threatens retaliation if Italy keeps border controls on travelers from Spain">POLITICO #1</a><a href="https://www.politico.eu/article/italy-rejects-spain-border-control-ultimatum-ceuta-migrants" target="_blank" rel="noopener noreferrer" title="POLITICO / Italy says it won’t take orders from Spain on border checks">POLITICO #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>279 promoters and brigadistas deployed in the country to reduce adolescent pregnancy</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">general_news</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Secretaría de las Mujeres allocated 39.9 million pesos to deploy 279 promoters and brigadistas across the country to help prevent and eradicate pregnancy in girls aged 10 to 14 and reduce adolescent motherhood. The strategy is led by María Elvira Concheiro Bórquez, undersecretary of Structural Equality, and it reaches areas where institutional presence has historically been lower. The promoters and brigadistas work in rural communities, ejidos, rancherías and coastal areas, including roads where progress is sometimes possible only on horseback.</p>
+<p>The money comes from the Fondo para el Bienestar y el Avance de las Mujeres and is channelled through donations transferred to the Instances of Women in the Federal Entities, within the budget program Política de Fortalecimiento de la Igualdad Sustantiva entre Mujeres y Hombres. In a first call, 25.4 million pesos were assigned to hire 150 professionals: 50 promoters and 100 brigadistas, who will work in 50 municipalities across 19 entities. Ingrid Gómez Saracibar said the activity is deployed especially in municipalities and communities where the problem persists most and where there is also greater violence.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/07/politica/012n3pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / 279 promoters and brigadistas deployed in the country to reduce adolescent pregnancy">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>Millions in England face longer waits for mental health care as NHS providers plan cuts</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Millions of adults and children in England are facing longer waits for mental health care as NHS providers plan service cuts and job losses, raising a sharp tension between promises to expand access and trusts trying to close financial gaps.</p>
+<p>A national survey conducted by the NHS Alliance found that 68% of NHS trusts providing mental health services are likely to reduce or shut some services in 2026-27. Of those responding, 59% said they expect to freeze vacancies, while 57% said they are likely to cut the number of clinical staff they employ this year.</p>
+<p>The pressures are landing on services that are already stretched by rising demand. The proposed cuts were drawn up by trusts to plug holes in their finances, and experts warned they could have “significant” consequences for the wider NHS, the economy and public services. Services that may be affected include child and adolescent mental health care, talking therapies, addiction support, help for adults in mental health crisis and community programmes, including those for ethnic minorities and low-income groups.</p>
+<p>One affected trust, East London foundation trust, plans to cut a wide range of services and axe hundreds of jobs to close a £25m hole in its finances. NHS mental health professionals at other trusts said similar plans were being drawn up where they work. An NHS consultant psychiatrist, speaking on condition of anonymity, said this was “not an isolated example in east London” and that many trusts were in a similar, if not worse, position. A mental health service manager at another trust said many were facing declining funding and cost reduction targets.</p>
+<p>Alex Stewart, assistant director of the NHS Alliance’s mental health network, said mental health services were under extraordinary pressure from rapidly rising demand and very tough financial conditions. He said the trade-offs over jobs and services were “making their mark” and warned that mental health leaders face particular pressures because a higher proportion of their spending goes on staff.</p>
+<p>The survey also found concerns that balancing the books would slow progress on care outside hospital settings and on preventive mental health care. Stewart said the share of national NHS spend on mental health is expected to reduce for the third year in a row, and that underfunding would have consequences for the wider NHS, the economy and public services.</p>
+<p>Mental health charities welcomed the ambition behind plans announced earlier this week by the prime minister, Andy Burnham, to create nearly 200 community mental health centres and mental health A&amp;Es by 2029. But they said meaningful improvements would be “impossible” if funding for staff and services is cut.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/aug/07/millions-in-england-face-longer-waits-for-mental-health-care-as-nhs-providers-plan-cuts" target="_blank" rel="noopener noreferrer" title="The Guardian / Millions in England face longer waits for mental health care as NHS providers plan cuts">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="nikkei_asia">
+  <summary>Japan&#x27;s inflation rate dips 0.1 point after CPI revision</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Japan on Friday released recalculated monthly inflation data in Tokyo that took 0.1 percentage point off consumer price index growth between January and March, extending a streak of undershooting the Bank of Japan’s 2% target to six months. The revision followed a new formula, and Japanese households are spending more on food as prices rise. Nikkei Asia dated the item August 8, 2026, at 06:03 JST.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/economy/japan-s-inflation-rate-dips-0.1-point-after-cpi-revision" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Japan&#x27;s inflation rate dips 0.1 point after CPI revision">NA #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="telesur_en">
+  <summary>Caracas Inspects Over 22,000 Buildings After June Earthquakes</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Caracas carried out 22,241 structural inspections after the June 24 earthquakes, Mayor Carmen Meléndez said, to assess damage across the city. Under the Semáforo classification system, 88% of the reviewed structures received green or yellow certification, meaning they are habitable or need only partial repairs, while 12% were classified red and require deeper structural evaluation. The inspections are being supervised by the Presidential Commission for the Evaluation of Habitability and Infrastructure, and officials said red-level buildings will receive priority in the reconstruction schedule.</p>
+<p>At the same time, Venezuela activated a temporary ban on exporting construction materials and supplies to support national reconstruction. The measure, issued after publication in Official Gazette No. 43.409 under Decree No. 5.376, covers goods including cement, steel, glass and other inputs used for rebuilding. The decree says the restriction is intended to guarantee supply, availability and access to those materials in the domestic market, and it will remain in force until December 31, 2026.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/caracas-inspects-22241-buildings-quake" target="_blank" rel="noopener noreferrer" title="Telesur English / Caracas Inspects Over 22,000 Buildings After June Earthquakes">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="axios">
+  <summary>Summer jobs report is a double whammy for workers</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">U.S. workers got a weaker July jobs report, with the economy shedding 23,000 jobs — the first negative month since February — and revisions wiping more than 100,000 payrolls from May and June. The three-month average of monthly job gains fell from about 111,000 in the June report to just 20,000 in July, making the spring rebound look much less convincing.</p>
+<p>The headline drop was heavily distorted by a 50,000-job decline in local government education, a sector that can swing with the school calendar, but even adding those jobs back would not have offset weakness elsewhere. Leisure and hospitality lost another 40,000 jobs, financial employment fell by 14,000, and health care added 22,000, below its recent average. The report also left the Federal Reserve with an awkward dilemma: further labor market weakening could push rate hikes later, even as stubborn inflation keeps pressure on policymakers to act.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/07/bls-jobs-report-rates-july" target="_blank" rel="noopener noreferrer" title="Axios / Summer jobs report is a double whammy for workers">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>The latest Household Survey Data, just released, also shows what’s going on in the US labor market.</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">July’s Household Survey Data showed mixed movement in the US labor market: unemployment rates for teenagers fell to 12.1 percent and for Hispanic people to 4.6 percent, while the rates for adult men (3.9 percent), adult women (3.7 percent), and people who are White (3.6 percent), Black (6.3 percent), or Asian (4.0 percent) changed little or not at all over the month.</p>
+<p>Among the unemployed, the number of people on temporary layoff rose by 153,000 to 921,000 in July. The number of permanent job losers stayed little changed at 1.7 million. People jobless for less than 5 weeks edged down to 2.0 million, down 344,000 over the year, while the long-term unemployed, defined as jobless for 27 weeks or more, edged down to 1.8 million and made up 25.5 percent of all unemployed people in July.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/live/2026/aug/07/rail-passengers-disruption-power-outage-uk-house-prices-stagnate-us-jobs-unemployment-latest-news-updates?page=with%3A6a75d2818f0821d9ede5c782#6a75d2818f0821d9ede5c782" target="_blank" rel="noopener noreferrer" title="The Guardian / The latest Household Survey Data, just released, also shows what’s going on in the US labor market.">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>Rail passengers disruption power outage uk house prices stagnate us jobs unemployment latest news updates</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US private sector added jobs in July, according to consultancy Capital Economics, with private payrolls rising by 30,000. Gains came in construction, up 22,000, and healthcare and social assistance, up 22,600, though growth there continued to slow relative to its average. Those increases were partly offset by declines in retail trade (-19,400), nondurable goods manufacturing (-13,000) and financial activities (-14,000). Capital Economics said the underlying picture in the private sector was somewhat better, but still far from strong.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/live/2026/aug/07/rail-passengers-disruption-power-outage-uk-house-prices-stagnate-us-jobs-unemployment-latest-news-updates?page=with%3A6a75dbb58f08086f525bd2f9#6a75dbb58f08086f525bd2f9" target="_blank" rel="noopener noreferrer" title="The Guardian / Rail passengers disruption power outage uk house prices stagnate us jobs unemployment latest news updates">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="axios">
+  <summary>Voters face uneven AI deepfake protections</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Americans could face very different AI deepfake protections before Election Day because state election rules are patchwork, while AI-generated attack ads and campaign content are widespread in the run-up to the midterms. The National Conference of State Legislatures says 29 states have AI election deepfake laws in effect, while California and Hawaii have had theirs permanently enjoined.</p>
+<p>The state rules vary widely: Minnesota and Texas ban political deepfakes for a set number of days before an election, Maryland’s ban is year-round, and other states require disclosures when AI is used in political ads. Colorado and Utah require more detailed disclosures, including the deepfake’s creator, when it was created and how it was edited. California and Hawaii are pressing ahead with alternative approaches that do not specifically regulate election AI deepfakes, even as lawmakers at the federal level have not set a baseline standard for election deepfakes.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/07/election-ai-deepfake-rules-states" target="_blank" rel="noopener noreferrer" title="Axios / Voters face uneven AI deepfake protections">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="scmp">
+  <summary>Is Japan eyeing Ukraine-style asymmetric warfare against China in defence shift?</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Japan’s latest defence white paper, a 610-page document released on Tuesday, emphasizes adaptivity and the scale of drones, and highlights the need to integrate unmanned systems, artificial intelligence and other advanced technologies across the Japan Self-Defence Forces as Tokyo faces an increasingly complex security environment. According to experts, that focus signals Japan’s intention to seek asymmetric capabilities against China in the event of a conflict, while drawing lessons from Ukraine.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/military/article/3363287/japan-eyeing-ukraine-style-asymmetric-warfare-against-china-defence-shift" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Is Japan eyeing Ukraine-style asymmetric warfare against China in defence shift?">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="cnn">
+  <summary>Danish high schoolers will have to verbally defend written assignments, in government move to combat AI cheating</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Danish high school students will have to verbally defend written assignments under emergency measures aimed at combating AI cheating. Denmark’s Ministry of Education said Thursday that a verbal defense will be needed for all exams written at home, and that the rule takes effect immediately. It applies to students in upper secondary education, which typically begins around age 16, including the roughly 9,000 students in the country’s two-year Higher Preparatory Examination program, who submit major written assignments each year.</p>
+<p>The ministry also called on high schools to use tools to monitor students’ screens during exams and a firewall to filter content they can access during exams and in class. It encouraged schools to move more assignments into supervised, in-school settings. Education Minister Magnus Heunicke said there is a problem with students using AI to cheat in upper secondary school and that the ministry is starting with “three initiatives.” Upper secondary school organizations welcomed the moves but said more long-term solutions are needed because of the rapid pace of technological development.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/07/europe/ai-cheating-measures-schools-denmark-intl-scli" target="_blank" rel="noopener noreferrer" title="CNN / Danish high schoolers will have to verbally defend written assignments, in government move to combat AI cheating">CNN #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from Tsinghua University, Zhejiang University, and Meituan propose AgentOPSD, a critic-free reinforcement-learning method that tries to turn sparse outcome rewards into turn-level credit for long-horizon agents, so the model can better identify which decisions actually drive success.</p>
+<p>The problem it targets is familiar to agentic reinforcement learning: a trajectory may end in success or failure, but the learning signal often arrives only at the end, making it hard to tell which intermediate turns mattered. The paper says that even when recent self-distillation methods give denser supervision, it is still unclear how a local signal should express sequential credit across a multi-turn interaction.</p>
+<h3>Recursive belief updates</h3>
+<p>AgentOPSD, short for Recursive Self-Distillation for Agentic Reinforcement Learning, treats each turn as new evidence about whether the trajectory will eventually succeed. It aggregates token-level teacher-student log-probability gaps into turn-level evidence, then recursively updates a Bayesian belief state in log-odds space. In the authors’ framing, that lets the method transform sparse outcome supervision into turn-level credit signals and highlight pivotal turns by the marginal revision between consecutive belief states.</p>
+<p>The method is designed to work with standard policy optimization and does not require additional rollouts or a learned critic. The paper describes the approach as a principled reweighting scheme that aligns credit assignment with environment turns rather than broadcasting the same trajectory-level signal everywhere.</p>
+<p>The researchers evaluate AgentOPSD on ALFWorld, WebShop, and Search-QA with Qwen model scales of 3B and 7B. They say it improves over GRPO and strong self-distillation baselines, reaching 89.1% success on ALFWorld with Qwen2.5-7B. Ablations attribute the gains to turn-level aggregation and history-dependent recursive belief updates.</p>
+<p>The paper also says the code is available on GitHub.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.05987v1" target="_blank" rel="noopener noreferrer" title="arXiv / AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new benchmark called OSReward tests whether vision-language models can reliably judge computer-using agents across web, mobile, Ubuntu, and Windows, after the paper finds that even strong judges often call failed runs successful. The work also turns that finding into open reward models meant to be cheaper than frontier commercial judges.</p>
+<h3>Building OSReward across four platforms</h3>
+<p>The paper says computer-using agents are now a de-facto setting for vision-language model judges because a trajectory records actions, states, and reasoning, and the judge has to decide whether the environment actually reached the instructed goal. To study that at scale, the authors introduce OSReward, built from fresh, human-gold trajectories rather than reused benchmark runs.</p>
+<p>OSReward contains 1,019 trajectories spanning four platforms, with instructions executed by agents from four model families. The benchmark is split into three views: the full set, OSReward-Hard, which concentrates genuinely hard cases, and OSReward-Multi, which adds alignment and efficiency labels to successful runs. The paper says the gold labels came through multi-stage human annotation, with three independent annotators per trajectory and senior reviewer meta-review for disagreements.</p>
+<h3>The judge study found a shared leniency bias</h3>
+<p>The study benchmarks 27 vision-language model judges on OSReward. On the full set, the strongest closed models came closest to the paper’s rough 90% working bar for reward modeling: Claude-Opus-4-8 scored 89.7% and GPT-5.5 scored 89.5%. But the harder split exposed a much larger problem. On OSReward-Hard, Claude-Opus-4-8 fell to 69.7%, GPT-5.5 to 67.3%, and the paper says the best judge on the hard set stayed below 70%.</p>
+<p>The authors describe a shared bias across judges: they are too lenient and tend to mislabel failed runs as successes. The hard set was designed to surface that failure mode, and the paper says the false-success problem is especially visible on long trajectories and in unverifiable application domains. Open models lagged further behind; for example, Kimi-K2.5 scored 85.9% on the full set and 54.8% on OSReward-Hard, while Qwen3.5-397B-A17B scored 85.8% and 58.5%.</p>
+<h3>OS-Shepherd turns the benchmark into a cheaper reward signal</h3>
+<p>To close the gap between reliability and cost, the authors release OS-Shepherd-100K, an open corpus of reasoning-annotated trajectory judgments, and train OS-Shepherd-9B and OS-Shepherd-35B-A3B on it. The paper says the training corpus is disjoint from the evaluation benchmark and was built to target the false-success error directly.</p>
+<p>On OSReward, OS-Shepherd-9B scored 86.1%, and on OSReward-Hard it scored 60.2%. OS-Shepherd-35B-A3B scored 85.6% on the full set and 62.7% on the hard set. The paper says these models come near the reliable judges at 30–60 times lower cost. It gives one example: a modest online RL run would cost about $4,000 with Claude-Opus-4-8 or $2,300 with GPT-5.5, versus about $68 with OS-Shepherd-9B.</p>
+<p>The result the paper pushes is simple: reliable CUA reward signals do exist, but the frontier judges that deliver them are too expensive to use at training scale, while the new open models aim to make that scale affordable.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.28609v2" target="_blank" rel="noopener noreferrer" title="arXiv / OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Interpretable MEG Decoding of Perceived Speech: Cortical Sources and the Stimulus Features That Drive Retrieval</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Short segments of perceived speech can be retrieved from non-invasive MEG with a compact decoder that the authors say is interpretable at the level of cortical sources and stimulus features, but the same work also shows that the model is tied to speech structure in the input rather than to words alone.</p>
+<h3>A constrained decoder for perceived speech</h3>
+<p>The model follows a CLIP-style retrieval setup against wav2vec 2.0 audio embeddings, using 3-second, 208-channel MEG segments paired with audio recorded 150 ms earlier to match auditory latency. The front end is built to stay close to the physics of MEG and the physiology of its sources: spherical-harmonic spatial attention maps the sensors into 270 virtual channels, a subject-specific block reduces that to 25 interpretable branches, and trainable temporal filters are added so each branch carries both spatial and temporal information.</p>
+<p>On the cleaned MEG-MASC dataset, the main configuration reaches 39.75 ± 0.34% Top-1 accuracy among 1005 candidates across six trained solutions, with about 20 times fewer trainable parameters than the cited brain decoder it is compared with. The authors also report that adding convolutional depth helps, but the gain saturates once the decoder has two or more convolutional blocks.</p>
+<h3>Where the model points in cortex</h3>
+<p>Using the branch weights, the authors project the learned patterns back into source space. The dominant cortical maps are described as having bilateral temporal activity consistent with auditory cortex engagement, along with frontal and central patterns that could reflect motor preparation or attention-related processes. A recursive source-localization step then groups the recovered maps into clusters that the paper says line up with standard speech-perception anatomy.</p>
+<p>The largest cluster is located bilaterally along the superior temporal gyrus and superior temporal plane. The authors also say some branches localize to the left and carry higher-frequency rhythmic components that are not evident on the right. In the discussion, they connect this pattern to the speech-envelope tracking and dual-stream accounts already cited in the paper, but the main result is narrower: the learned decoder’s weights can be mapped back to plausible cortical sources instead of remaining a black box.</p>
+<h3>Which speech features matter for retrieval</h3>
+<p>To test what in the stimulus actually supports decoding, the authors used paired MEG occlusion. They replaced feature-marked speech intervals with matched donor MEG from feature-present and feature-absent segments, then compared the retrieval ranks. By that test, 15 of 19 stimulus features had a positive effect after familywise-error correction.</p>
+<p>The strongest effects came from silence, sound intensity, vowels, and acoustic onsets. Smaller but still positive effects were also reported for fricatives, stops, and sibilants, alongside some contextual and lexical features. The authors caution that the ordering of effect sizes is confounded by interval duration, because long events such as silence require larger substitutions than brief ones such as word onsets. So the test is presented as evidence of which features the decoder uses, not as a clean estimate of how much each feature contributes.</p>
+<p>A notable contrast appears when the speech structure is broken. The paper says that random word lists behave oppositely: narrative MEG substituted into them improves retrieval, which the authors interpret as evidence that activity evoked by words stripped of narrative structure contains less recoverable information than coherent speech. That contrast remained negative across all six trained models.</p>
+<p>The same line of work also suggests that the decoder does not need the full audio target space. The wav2vec target can be reduced from 768 features to about 12 learned dimensions without losing retrieval accuracy, while heavy temporal compression hurts performance. Retrieval improves as paired MEG-audio segment duration increases, and the effect of temporal filtering appears to saturate at roughly 150 ms, even though the best single result is reported with a longer filter. The authors read this as evidence that the model is aligned to a compact, task-selected subspace rather than to the full wav2vec geometry.</p>
+<p>The preprint’s main limitation is that it uses a single MEG corpus with 27 participants. The reported occlusion contrasts are therefore framed as evidence that the trained decoder uses MEG information distinguishing feature-present from feature-absent states, not as directly comparable measures of neural encoding strength across all features.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.01481v1" target="_blank" rel="noopener noreferrer" title="arXiv / Interpretable MEG Decoding of Perceived Speech: Cortical Sources and the Stimulus Features That Drive Retrieval">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>WorldClaw: Agentic 3D Open-World Generation at Scale</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">WorldClaw introduces a fully agentic system for generating explorable 3D worlds from open-ended text, aiming to keep global terrain coherent while still producing rich local detail and editable assets that can be reused or changed later.</p>
+<p>The preprint says the challenge is that a generated 3D world has to do more than look plausible: it has to stay walkable, structurally consistent, and editable across a continuous space. WorldClaw tackles that with a coarse-to-fine pipeline built around three stages: intent analysis and planning, global terrain generation, and regional object generation and placement. The planning agent turns a prompt into a structured specification covering regions, terrain requirements, object categories, appearance attributes, and spatial relationships. From there, the system builds a region-aware terrain foundation using semantic layouts, reusable assets, generative or procedural materials, and a height field tied to the planned regions.</p>
+<p>For more detailed areas, WorldClaw generates terrain-conditioned compositions, reconstructs editable textured meshes, and recovers their placement on the terrain. It also uses render-based agents to refine terrain, objects, appearance, and object-terrain contacts. Across diverse open-world prompts, the authors say the system produces large-scale scenes with coherent spatial organization, visually compelling local content, and editable instance-level assets while preserving a consistent global terrain structure. The implementation uses Claude Opus 4.8 as the underlying agent model, with task-specific skills built around GPT-Image-2, SAM3, SAM3D, Hunyuan3D, and Blender 5.1.1.</p>
+<h3>Limits and next steps</h3>
+<p>The authors say the approach still depends on multiple heterogeneous models working together: large language models handle planning and procedural design, image generation models produce semantic layouts and regional object compositions, and 3D generation models reconstruct individual assets. Several stages also rely on LLM-generated programs for terrain construction, procedural material generation, asset placement, and local refinement.</p>
+<p>They argue that this points to a broader direction for the work: combining WorldClaw’s planning and code-generation capabilities with procedural generation, level editing, shader authoring, physical simulation, and runtime interaction systems in engines.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.05248v1" target="_blank" rel="noopener noreferrer" title="arXiv / WorldClaw: Agentic 3D Open-World Generation at Scale">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>GST-Bench: Can VLMs Develop Global Spatial Awareness from Video?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced GST-Bench to test whether vision-language models can build global spatial awareness from long video streams, and their first evaluation found a wide gap between the strongest models and humans on tasks that require seeing beyond the current view.</p>
+<p>The benchmark is aimed at a problem the authors say existing spatial benchmarks miss: models often handle local spatial perception from one or a few viewpoints, but not global scene understanding across time. GST-Bench is a VQA benchmark built from 6,790 minutes of synthetically generated video and human-verified questions. It asks models to reason from novel viewpoints unseen in the input video and to map egocentric observations onto global top-down images.</p>
+<p>The tasks are organized around three competencies: self localization, object localization, and scene structure understanding. The benchmark uses 12 subtasks and multiple question formats, including distance prediction, angle prediction, point prediction, and multiple-choice questions. In the paper’s setup, a model gets an egocentric exploration video plus a novel query view and must localize itself, identify targets that are not visible in the current frame, and connect the video to a global scene representation.</p>
+<p>On evaluation, the authors tested 22 state-of-the-art VLMs, including proprietary, open-source, and embodied-understanding models. The strongest zero-shot model, Gemini-3-Pro, scored 42.68, while the human baseline was 79.08. Across the benchmark, the paper says the gap was especially large on orientation and global position estimation, and that many open-source models performed near random.</p>
+<p>To understand why models struggled, the authors built GST-Bench-Local, which keeps the task form but makes the target visible in the current view. They report that proprietary models improved a lot in this easier setting, with Gemini-3-Pro gaining up to 39 points, which they interpret as evidence that the main weakness is cross-frame spatial integration rather than single-image perception. Open-source models, by contrast, often failed to improve consistently even when the task was simplified.</p>
+<p>The paper also introduces GST-Train, a dataset for global spatial reasoning. Fine-tuning Qwen3-VL-8B on GST-Train raised its GST-Bench score from 25.89 to 53.52, which the authors present as evidence that targeted supervision can narrow the gap.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.05747v1" target="_blank" rel="noopener noreferrer" title="arXiv / GST-Bench: Can VLMs Develop Global Spatial Awareness from Video?">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced EnvACE, an agentic reinforcement learning method for training large language model agents without relying on external environment interaction, aiming to make tool-use learning less dependent on costly environment construction and harder-to-ground simulators.</p>
+<h3>World rehearsal inside the policy</h3>
+<p>EnvACE replaces external environment interaction during training with what the paper calls world rehearsal. The policy alternates between two roles: it first generates a tool call, then plays the environment to produce the response that action would induce, and then conditions its next decision on that rehearsed response. The authors say this lets the policy internalize the relationship between actions and environment responses in its parameters, creating an agent world model that directly supports decision making.</p>
+<p>The method trains a single shared policy to do both jobs end to end with task-success rewards. In the paper’s framing, that is a change from conventional agent rollouts, where the policy acts and an outside system supplies observations. EnvACE instead unfolds the trajectory itself, so acting and environment modeling happen in one process.</p>
+<p>The paper says the approach is meant for long-horizon tool use, where training often depends on real or synthesized executable environments that are costly to build and verify, or on external simulators that are difficult to ground. It also says the same learned model can rehearse candidate actions privately at test time before committed execution, without extra external interaction.</p>
+<p>On BFCL-v4, τ²-Bench, VitaBench, and FinMCP-Bench, the authors say EnvACE achieved strong and transferable performance and outperformed environment-scaling baselines in the overall evaluation. Controlled studies further showed that world rehearsal improved policy learning across model scales. The paper also says a moderate rehearsal budget at test time brought further gains.</p>
+<p>The authors make the code publicly available at https://github.com/Within-yao/EnvACE and present world rehearsal as a path toward scaling LLM agent training beyond the constraints of external environments.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.06197v1" target="_blank" rel="noopener noreferrer" title="arXiv / EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Learning from Failures: Retrieval-Centric CoT via Hard Negatives for Unified Multimodal Retrieval</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces UniME-R1, an embedder-adviser framework for unified multimodal retrieval that is meant to find candidates matching complex user intent from heterogeneous inputs. The work says Large Vision-Language Model-based retrievers are efficient and scalable, but direct encoding of raw multimodal inputs can miss fine-grained discriminative cues and confuse semantically similar candidates. It also argues that Chain-of-Thought rationales built from the query alone explain what the query describes, but not what the retriever misunderstands.</p>
+<p>UniME-R1 shifts the reasoning to retrieval feedback. Its adviser examines initially retrieved candidates one by one to identify the cues the embedder confused, then either reranks the top-k set if the target is already present or generates Retrieval-Centric Chain-of-Thought to refine the retrieval direction and re-retrieve from the full corpus with a dual-mode embedder. The framework is trained with hard negatives to simulate retrieval failures, joint optimization of direct and RC-CoT-augmented retrieval, and supervised plus retrieval-oriented reinforcement learning. Experiments on MMEB-V2 and other multimodal retrieval benchmarks reportedly show consistent gains over strong baselines.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.06060v1" target="_blank" rel="noopener noreferrer" title="arXiv / Learning from Failures: Retrieval-Centric CoT via Hard Negatives for Unified Multimodal Retrieval">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>From Economic Agents to Agentic Economies: A Systems Blueprint for Economic World Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Economic World Models are being framed as a systems blueprint for building “agentic economies” in which heterogeneous agents, markets, and institutions co-evolve inside a generative simulation, while the paper says the field still lacks higher-level systems that are empirically aligned and institutionally dynamic.</p>
+<p>The paper argues that Economic World Models, or EWMs, should be treated as generative economic engines rather than static forecasting tools. In that framing, the model does not just explain the economy from the outside; it simulates how an economy evolves from within by modeling agents’ beliefs and actions, and the market and institutional mechanisms that turn those actions into aggregate outcomes. The authors say the goal is to move from isolated “economic agents” to full “agentic economies,” where next-action prediction on the agent side and next-state prediction on the world-model side reinforce each other in a closed loop.</p>
+<h3>A blueprint for economic world models</h3>
+<p>The paper lays out an implementation roadmap built around a simple idea: an EWM should map a current economic state and an intervention into the next economic state. It describes the system as containing heterogeneous agents who observe, reason, act, interact, adapt, and co-evolve under economic institutions and constraints. To make that concrete, it separates the runtime into four layers: an agent layer with objectives, information, constraints, memory, tools, and feasible actions; an environment layer with economic states, market mechanisms, contracts, accounting identities, and institutional rules; a co-evolution layer where agents, strategies, mechanisms, and institutions adapt over repeated rollouts; and a real-world alignment layer that compares simulated trajectories with empirical observations and corrects drift.</p>
+<p>That architecture is tied to a broader distinction the paper draws between physical and economic worlds. Physical state changes, it says, are governed by external laws, while economic state transitions are generated by interacting agents through markets, institutions, and evolving rules. The paper uses that contrast to justify why economic simulation needs more than ordinary machine-learning prediction: it needs a structure that can represent beliefs, actions, mechanisms, and institutional change at the same time.</p>
+<h3>Six levels, but most work stays low on the ladder</h3>
+<p>To organize the field, the paper introduces a six-level capability ladder. It runs from fixed rule-based agent worlds, to adaptive rule-based worlds, to LLM-based autonomous agents, then to self-evolving agents, evolving institutional worlds, and finally sim-to-real economic twins aligned with real observations. The ladder is meant to describe implementation maturity, not to guarantee that a system already has the equilibrium discipline the paper associates with counterfactual consistency.</p>
+<p>The literature survey in the paper says existing work is still clustered at the lower levels. In particular, it says work remains concentrated in agent and simulation environments, while systems with self-evolving agents, endogenous institutions, persistent empirical alignment, and validated economic mechanisms are still rare. The paper also says the field has made visible progress in building more capable agents, but has not yet solved the harder systems problem of combining self-evolving agents, evolving institutions, and online real-world alignment inside the same economic world.</p>
+<p>The authors position that gap as the main reason for the blueprint. They argue that current systems can model parts of economic behavior, but the next step is to build environments that can support richer interaction, adaptation, and correction over time. In that sense, the paper is less a report on one finished model than a map of where EWM systems could go and what capabilities would need to appear at each stage.</p>
+<h3>What the paper says these systems are for</h3>
+<p>The paper says EWMs should serve three roles: a sandbox for human decision-making, a tool for LLM agents, and an RL training environment for LLMs. It describes them as high-fidelity sandboxes for testing choices, as planning and reasoning substrates for AI agents, and as interactive environments in which agents learn through economic interaction rather than static examples alone.</p>
+<p>It also says the authors released a curated paper list and related resources to support future research. More broadly, the paper tries to turn “Economic World Models” into an engineering agenda: define the system components, build reusable interfaces for agents and environments, add co-evolution and alignment modules, and push toward economic simulation environments that are closer to real economies than the lower-level systems now common in the literature.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.06020v1" target="_blank" rel="noopener noreferrer" title="arXiv / From Economic Agents to Agentic Economies: A Systems Blueprint for Economic World Models">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>New autism therapy shows surprising benefits even in adult mice</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers led by Director Eunjoon Kim of the IBS Center for Synaptic Brain Dysfunctions identified a potential new way to treat autism spectrum disorder by restoring NMDA receptor function through a glycine transporter, Slc6a20a/SLC6A20. They used antisense oligonucleotides to reduce Slc6a20a expression and tested the approach in mouse models with SHANK2 and SHANK3 mutations. In those mice, the treatment restored NMDAR activity and improved social interaction, social communication, and repetitive behaviors. The benefits were seen in adult mice, suggesting the dysfunction may still be treatable after major brain development stages.</p>
+<p>The team also tested the strategy in human cortical organoids made with SHANK2 or SHANK3 mutations. An ASO targeting human SLC6A20 restored NMDAR function to levels close to normal. The researchers said one administration stayed effective for at least eight weeks, and they reported no detectable adverse effects in the treated mice during that period. They also said the treatment changed phosphorylation patterns in proteins tied to synaptic signaling and NMDA receptors more than it changed total protein amounts.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260805082508.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / New autism therapy shows surprising benefits even in adult mice">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Earth’s molten core suddenly reversed direction — and scientists don’t know why</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Earth’s liquid outer core appears to have flipped a major flow pattern beneath the Pacific, with molten iron shifting eastward in 2010 after years of mainly westward movement, and scientists still do not know what triggered the change.</p>
+<p>The study says the outer core lies about 2,200 km below Earth’s surface, where electrically conducting liquid iron helps generate the geomagnetic field. For years, researchers reading small variations in that field had concluded that much of the outer core was flowing westward. Using ground-based observations alongside satellite measurements collected from 1997 through 2025, the researchers traced a large region of iron-rich fluid below the equatorial Pacific that changed direction abruptly.</p>
+<p>ESA satellite data, including measurements from Swarm and CryoSat, and observations from Germany’s CHAMP mission and the Ørsted mission, helped the team build a more detailed picture of the shift. The analysis found that the broad area moved from a weak westward flow to a strong eastward flow in 2010, challenging the idea that large-scale outer-core circulation is relatively stable. The findings also point to possible links between the outer core and changes deeper inside the planet.</p>
+<h3>What scientists still want to know</h3>
+<p>Lead author Frederik Dahl Madsen of the University of Edinburgh said the reversal raises new questions about whether it was a short-lived fluctuation, part of a repeating oscillation, or a new stable equilibrium for core circulation. He said continued monitoring will be essential.</p>
+<p>Madsen also said the model suggests the strong eastward flow beneath the Pacific has weakened since 2020. That leaves the reversal unresolved: it may have been temporary, or part of a longer natural cycle inside Earth’s outer core.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260806050713.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Earth’s molten core suddenly reversed direction — and scientists don’t know why">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Wearable ultrasound patch boosts REM sleep without drugs or surgery</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers led by the University of Texas at Austin created a soft wearable patch called NEUSLeeP that improved REM sleep in real-world testing without medication or surgery. The device combines gentle ultrasound stimulation with electrodes that track brain activity as it happens, and the study involved 28 people. Published in Nature Communications, the results showed that participants entered REM sleep 43 minutes sooner on average and stayed in that stage about 16 minutes longer. The benefits were seen in both healthy sleepers and people with some sleep difficulties.</p>
+<p>Users described the patch as comfortable and safe, and the study reported minimal adverse effects. Among healthy participants, NEUSLeeP stimulation also increased heart rate variability, a measure commonly used as an indicator of the body’s ability to respond to stress. Brain imaging showed changes in circuits associated with emotion, and the researchers said they plan larger studies to test whether the device could help with PTSD, depression and chronic insomnia.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260806050709.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Wearable ultrasound patch boosts REM sleep without drugs or surgery">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists tracked 12 people in Antarctica for 10 months—what happened could shape future Mars missions</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An international research group studied a 10-month overwintering mission at Concordia Station in Antarctica, tracking 12 crew members with questionnaires at four points during the period and wearable sensors that measured when people were physically close to teammates and how long those encounters lasted. The study was led by Jan Schmutz, a professor in the Department of Psychology at the University of Zurich, and Andrea Cantisani, a psychiatrist and research associate at the University of Bern. Concordia Station’s extreme isolation and winter temperatures as low as minus 80 °C (-112 °F) made it a stand-in for future extended missions to the Moon or Mars.</p>
+<p>The researchers found that spending more time near other crew members was not consistently linked to better social outcomes. Participants with more frequent contact were also more likely to report increased conflict, greater mistrust, and lower performance. The crew gradually split into smaller subgroups over time, often spending more time with colleagues who shared their language or nationality. The researchers cautioned that the study showed correlations and could not establish cause and effect.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260806050722.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists tracked 12 people in Antarctica for 10 months—what happened could shape future Mars missions">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover a hidden brain shift that begins around age 50</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from the University of California, San Diego, the New York Genome Center and the University of California, Irvine found a major shift in the immune environment of the hippocampus, using NIH-funded research on postmortem tissue from 40 neurologically healthy adults ages 20 to 95. The team reported that the change appears to begin in midlife: microglia, the brain’s main immune cells, gradually decline from about age 50 to age 75 and appear to be replaced by cells with stronger inflammatory signals and traits similar to immune cells from peripheral blood. The finding challenges the long-standing assumption that microglia simply remain in the brain and renew themselves throughout life.</p>
+<p>To reach that result, the researchers combined standard gene-activity measurements with methods that map the genome’s 3D structure and chemical modifications, or epigenome. First author Nathan Zemke said epigenetic signatures can show where a cell came from, not just what it is doing now. The study also found signs of age-related decline in cells that help maintain the blood-brain barrier, and widespread coordinated changes in genome organization across many kinds of brain cells.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260806050700.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover a hidden brain shift that begins around age 50">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>The key to colonizing Mars may be hidden inside asteroids</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at EPFL in Switzerland have calculated how asteroid mining could supply metals directly to Mars. Their focus is the supply problem facing a Mars colony: beyond food, water, and oxygen, a settlement would need large amounts of metal for habitats, machinery, and tools, plus replacement parts as equipment wears down. The source argues that regularly shipping all of that from Earth would not be a practical long-term solution, and says the researchers examined whether asteroids could help build a system to deliver those materials instead.</p>
+<p>The team used a computer program to test thousands of supply-chain combinations, including the energy needed to travel between Mars and different asteroids, how much metal could be collected, and the fuel required for the trip. They identified some M type asteroids as sources of iron, nickel, and other useful metals, and included carbonaceous asteroids that could provide carbon and water ice to make rocket propellant in space. The study says the results point to specific asteroids that could be reached with existing spacecraft technology, but that success would depend on choosing the right target.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260805082504.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / The key to colonizing Mars may be hidden inside asteroids">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
