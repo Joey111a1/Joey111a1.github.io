@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-12</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-12</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,bbc,cnn,el_pais,nyt,xinhua_en">
+  <summary>Colombia scrambles to find survivors after deadly earthquake</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A magnitude 7.4 earthquake that struck western Colombia on Monday left rescue teams digging through collapsed buildings in Cali and Pereira, with death tolls still shifting and hundreds of people reported missing or trapped as families waited for word from the rubble.</p>
+<p>The quake hit at 7:34am local time on Monday and was felt across a wide area of western Colombia. In Cali, Colombia’s third-largest city, rescue crews used hammers, shovels and heavy machinery to reach people beneath thick slabs of concrete, while volunteers formed human chains to clear debris. In Pereira and other hard-hit places, people spent the night outdoors after homes were destroyed or left unsafe, and aftershocks were still being felt on Tuesday.</p>
+<h3>Searching the wreckage</h3>
+<p>In Cali, the collapse of the seven-storey Vanessa Building became one of the most urgent rescue sites. Residents and volunteers described the structure as reduced to wreckage, with rescuers trying to reach an estimated 20 people trapped underneath. A local volunteer coordinating the effort, Maximiliano Herrera, said there were “approximately 17 children trapped under the rubble,” and said two children, Samuel and Sara, had shown signs of life but were in “the most out-of-reach corner of the entire site.”</p>
+<p>Maria Isabel Cumbal, watching the rescue operation at the site in the south of the city, said, “I never thought I would see my city like this.” Nearby, the collapsed apartment block had fallen onto a neighbouring building that housed a nursery, according to volunteers at the scene. Samir Valencia, who lived in the building until 2022, later said he had watched a mobile-phone video from a friend’s apartment inside the Vanessa Building, and that his own new home had also been severely damaged.</p>
+<p>Luis Saenz, a 22-year-old journalism student from Cali, said the quake felt “eternal” and recalled being at home with morning coffee when it struck. He remembered his cat darting under the bed before his family fled into the street. Saenz later joined other survivors wearing a hard hat and face mask to sift through the destruction.</p>
+<h3>Death tolls, damage and emergency measures</h3>
+<p>Reported death tolls differed across the accounts. Al Jazeera cited government figures saying at least 254 people had died nationwide, most of them in Pereira and Cali. BBC News said more than 180 people had been confirmed dead, while an aggregated figure gathered from local officials put the toll higher, potentially above 240. In Cali alone, local government statistics cited by Al Jazeera put the death toll at least 95, with 45 structures fully or partially collapsed.</p>
+<p>The earthquake also damaged about 5,000 homes, according to the United Nations Office for the Coordination of Humanitarian Affairs, while BBC News reported that more than 1,100 homes had been destroyed and almost 8,000 damaged. In Cali, officials set up a unified command post to coordinate the rescue effort. BBC News said Mayor Alejandro Eder imposed a curfew from 8pm to 6am to guard against looting, and Al Jazeera reported that he announced the “militarisation” of the city with an exemption for rescue teams, medical staff and other essential workers.</p>
+<p>President Abelardo de la Espriella declared a state of emergency and visited affected areas, including Pereira and Quibdo, according to the reports. He said almost 2,600 people had been injured and nearly 200 remained missing, while rescue operations continued across the hardest-hit cities. Support also arrived from firefighters, rescue teams, volunteers and private companies, with some of the heavy machinery at the Vanessa Building donated by construction firms.</p>
+<h3>What still hangs in the balance</h3>
+<p>The main uncertainty remains how many people are still trapped or missing, and how high the final death toll will be. In Cali, officials said 239 people remained trapped, while rescuers at the Vanessa Building kept working through the night and into Tuesday morning. In Pereira, BBC News reported 79 deaths according to the city’s fire department, and in Manizales the mayor said five people had been killed.</p>
+<p>Search efforts were also complicated by fears of looting, the strain on local agencies and fresh aftershocks. Even as rescue workers and volunteers kept clearing rubble, some residents said the response felt disorganised. Others said they were still waiting for names to be answered from beneath the debris.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/features/longform/2026/8/11/colombia-scrambles-to-find-survivors-after-deadly-earthquake?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Colombia scrambles to find survivors after deadly earthquake">AJ #1</a><a href="https://www.bbc.co.uk/news/articles/c20dqd9qwq4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Rescuers scramble for survivors with 180 dead in Colombia earthquake">BBC #1</a><a href="https://www.cnn.com/2026/08/11/world/how-to-help-those-affected-by-the-colombia-earthquake" target="_blank" rel="noopener noreferrer" title="CNN / How to help those affected by the earthquake in Colombia">CNN #1</a><a href="https://elpais.com/america-colombia/2026-08-11/colombia-se-vuelca-en-el-rescate-de-los-supervivientes-del-terremoto-no-se-desgasten-aqui-la-unica-senal-de-vida-es-en-el-otro-lado.html" target="_blank" rel="noopener noreferrer" title="El País / Colombia turns to rescuing earthquake survivors: &#x27;Don’t tire here, the only sign of life is on the other side&#x27;">El Pais #1</a><a href="https://www.nytimes.com/2026/08/11/world/americas/colombia-earthquake-cali-medellin-deaths.html" target="_blank" rel="noopener noreferrer" title="The New York Times / What We Know About the Earthquake in Colombia">NYT #1</a><a href="https://www.nytimes.com/2026/08/11/world/americas/colombia-earthquake-survivors-search.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Shouting Names, Hoping for Replies and Digging for Survivors of Colombian Quake">NYT #2</a><a href="https://english.news.cn/20260811/de2e1ddc36b5466d9f01c2fc42831944/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Xi extends condolences to Colombian president over deadly earthquake">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Fishermen face deadly dangers as Yemen’s Red Sea becomes a warzone</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Fishermen along Yemen’s Red Sea coast are being forced to choose between hunger and the danger of gunfire, sea mines and disappearances as the shoreline becomes a contested front line, with no clear answer over who is restricting access to the water.</p>
+<p>In al-Makha, also known as Mocha, Mazhar says he has struggled to make a living since war arrived in the region in 2015. Fuel is expensive, renting a boat is expensive, and his family depends entirely on fishing income. But the bigger problem, he said, is that every trip offshore carries the risk that he will not come back.</p>
+<p>Mazhar said a fishing boat in al-Khawkhah was recently fired on and two colleagues were lost. “No one knows why, and the authorities haven’t announced the cause of the incident,” he said. He also described fishermen disappearing without a trace. Even so, when there is no food left at home, he said he still goes out.</p>
+<h3>A coast where fishing and war overlap</h3>
+<p>Yemen’s Red Sea coast is one of the main hubs of the country’s fishing industry, and before the war it was Yemen’s second-largest source of export earnings after oil. But the industry has been hit hard since the early years of the conflict. A 2018 study cited in the report found fish exports from the region had fallen by about 70 percent.</p>
+<p>The coastline is also strategically important for reasons beyond fishing. Yemen’s principal port of Hodeidah sits about 160 kilometres up the coast from al-Makha, and the Bab al-Mandeb Strait lies at the southern entrance to the Red Sea, controlling access to one of the world’s most vital waterways. That has made the area heavily contested since the early days of the war. The Houthis control most of the territory from Yemen’s border with Saudi Arabia down to Hodeidah, while pro-government forces, largely the Guardians of the Republic force, operate south of the port city.</p>
+<p>The front line was quiet in recent years, but recent Houthi attacks against pro-government forces across the country have also targeted al-Makha. At sea, the risks have become even more visible: the Houthis began regularly striking shipping in the Red Sea after the beginning of Israel’s war on Gaza in October 2023, and have also recently attacked Saudi shipping. Those attacks prompted the United States, the United Kingdom, Israel and Saudi Arabia to strike Houthi targets in Yemen at various times, including on the Red Sea.</p>
+<h3>Fishermen trapped between armed actors and shrinking options</h3>
+<p>Mazhar said fishermen now face strict boundaries they cannot cross, not only in al-Makha but also in neighbouring al-Khawkhah district and much of the Red Sea coast. He said fishermen spend money on scrap barrels and car bodies to make artificial reefs, but with each escalation they are denied access to those reefs for military reasons and forced to fish near shore.</p>
+<p>He said he cannot name the party restricting them now because speaking out could put him at risk, but added that both sides in the war have blocked fishermen at different times. Before 2018, local fishermen say the National Resistance Force, which later gave rise to the Guardians of the Republic forces, kept them from venturing into deep waters and reaching their reefs. Restrictions were later eased, but fishermen say both the Houthis and pro-government forces have imposed new limits since 2023.</p>
+<p>The dangers are not only from armed men. Akram, another fisherman in al-Makha, said a sea mine exploded under a boat near the shore in al-Khawkhah after he left home with two neighbours. “I can say with certainty that the Red Sea is no longer safe,” he said. He is thinking about moving to Aden, where he believes fishing on Yemen’s southern coastline will be safer.</p>
+<p>Fouad Doubla, head of the Fishermen’s Association in al-Khawkhah, said more than 30,000 fishermen have been affected along the Red Sea coast and are struggling to provide basic necessities for their families because fishing is their only income. He said 113 fishermen have gone missing in the Red Sea since 2023, with families receiving no information about where they are. He also said sea mines have killed 264 fishermen and maimed 215 others, and fishermen have been detained by pirates in the Red Sea.</p>
+<p>Some have left the profession altogether. Ismail, a 48-year-old fisherman from a family of fishermen, sold gear he had collected over 20 years and used the money to buy a minibus. His wife sold some jewellery to help him start the business, he said, relieved that he no longer has to face the fear each time he goes to sea. Mazhar, still fishing close to shore, said he has thought about leaving too. “As soon as I find one, I won’t hesitate for a second,” he said, referring to an alternative.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/features/2026/8/11/yemen-red-sea-fishermen?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Fishermen face deadly dangers as Yemen’s Red Sea becomes a warzone">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc">
+  <summary>Woman assaulted by double murderer says nightmare became &#x27;real life&#x27; when police let him attack again</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Laura, who says Simon Levy sexually assaulted her in 2018, says his later murders and attacks made the nightmare she had feared feel like “real life” and left her blaming police, prosecutors and courts for letting him keep harming other women.</p>
+<p>She says she reported Levy then because she was trying to protect other women, but now feels betrayed by what he was later allowed to do after being released from jail. “I feel really let down by the police,” she said, and described Levy as “evil” after saying his attack “completely changed my life.”</p>
+<p>Laura, whose surname is not being used, encountered Levy in August 2018 while travelling with a friend to the Notting Hill Carnival on the London Underground. She says he latched onto them, followed them to the carnival and then subjected her to a serious sexual assault. After she forced him off, she became “hysterical” and was crying while she and her friend tried to get away.</p>
+<h3>How Laura says the 2018 case unfolded</h3>
+<p>Laura says a group of men eventually chased Levy off after she told people what had happened, but when she tried to report the assault to police officers she was turned away. She says two Met officers told her they were busy with “other, more urgent, things”. A third officer later took her details, but Laura says she was not made safe and police did not look for Levy that day, even though she and her friend had a photo of him.</p>
+<p>The Met Police said it was sorry the victim felt unsupported and did not underestimate the impact the incident had on her. It said a crime report was created the following day, enquiries were carried out, Levy was identified, arrested and later convicted.</p>
+<p>After police later contacted her, Laura gave a statement 15 days after the attack and attended an ID parade the next year. It took three years for Levy to go to court. In 2021, he was convicted of sexually assaulting her and another woman he had assaulted a month earlier. He was jailed for three years, but later released on licence despite sexually assaulting a prison officer.</p>
+<h3>Levy’s later convictions</h3>
+<p>Levy was convicted on Friday of murdering Carmenza Valencia-Trujillo and Sheryl Wilkins and raping another woman in London in 2025. He will be sentenced on Wednesday at the Old Bailey.</p>
+<p>He was also convicted earlier this year of sexually assaulting 11 other women, 10 of them on trains and the Tube in London between 2023 and 2025. The BBC said he attacked 14 more women before being taken off the streets, despite being a sex offender monitored by the Met Police.</p>
+<p>Laura said she later found out Levy was going on trial for the two murders when she searched his name online. “My heart dropped in my stomach when I read that,” she said. She was also shocked to learn he had already been investigated for allegedly sexually assaulting another woman in 2017, but was not charged at the time.</p>
+<h3>“I thought I was doing it to protect other women”</h3>
+<p>Laura says she feels betrayed by the whole criminal justice system, including the Met Police, the courts and judges who bailed Levy, as well as the Crown Prosecution Service. She said: “I feel like when I reported it, I was doing the right thing and I thought I was doing it to protect other women.”</p>
+<p>She added that she feels devastated for the women affected by Levy and for their families. She also said she hoped future victims would be believed straight away and dealt with differently. “They could have prevented so many women from being hurt,” she said.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/czjlwlkw1m4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Woman assaulted by double murderer says nightmare became &#x27;real life&#x27; when police let him attack again">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc,korea_herald,politico,scmp">
+  <summary>Ukraine says Russia fired North Korean missiles in deadly attack</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russian strikes that Ukraine says used North Korean missiles killed civilians in Zaporizhzhia and other regions overnight, and Volodymyr Zelenskyy used the attack to warn that Moscow is deepening military ties with Pyongyang while preparing for more escalation.</p>
+<h3>Zaporizhzhia became the focus of the overnight attack</h3>
+<p>Officials said Russia attacked Ukrainian cities with missiles, drones and glide bombs on Tuesday, and Zelenskyy said Russian forces used ballistic missiles supplied by North Korea in the overnight strike on the southeastern city of Zaporizhzhia.</p>
+<p>The casualty toll there was reported differently. Metinvest said seven of its steel plant employees were killed and 21 were injured as they tried to reach shelters after an air alert. Zaporizhzhia mayor Rehina Kharchenko said six people were killed and at least 19 injured, while local authorities were also reported as saying seven were killed and 24 wounded. BBC News said the strike in Zaporizhzhia killed seven people and involved ballistic missiles from Russia’s ally.</p>
+<p>Russia’s Defense Ministry gave its own account, saying its forces hit “military industrial facilities and transport and logistics centers” in Kyiv and Zaporizhzhia with “ground-based precision weapons.” It said it struck civilian storage facilities housing drones in Kyiv and a metallurgical plant in Zaporizhzhia.</p>
+<p>Russia also struck Kyiv and other regions. In Kyiv, emergency officials said one strike hit the grounds of a children’s hospital, leaving two craters and shattered windows, though children and medical workers were in shelters and nobody was hurt there. Authorities said three more people, including a 15-year-old boy, were killed by Russian drones and artillery in the central Dnipropetrovsk region. Ukraine’s air force did not say in its daily report how many missiles Russia launched overnight.</p>
+<h3>Zelenskyy tied the attack to North Korea’s growing role</h3>
+<p>Late Monday, Zelenskyy said North Korea is preparing to deploy more troops to Russia in addition to the ballistic missiles. He also said Russia is scaling up production of ballistic missiles, aiming to exploit Kyiv’s critical shortage of Patriot air defense interceptors, and that Moscow was preparing to recruit more troops for a new push on the front line stretching 1,250 kilometers along eastern and southern Ukraine.</p>
+<p>In a social media post, he said Russia’s steps showed it was preparing “not for peace, but for escalation.” The same account said Russia and North Korea signed a strategic partnership agreement in 2024, pledging mutual aid if either country faces aggression, and that Kim Jong-un has sent thousands of troops and huge supplies of weapons to support Putin’s invasion of Ukraine.</p>
+<p>Zelenskyy said the battlefield experience would help Pyongyang menace other countries in its region. The report also said some experts believe North Korea’s engagement with Moscow is helping improve its military capabilities.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c151dpzwnvxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Russia using North Korean missiles to strike Ukraine, Zelensky says">BBC #1</a><a href="https://www.koreaherald.com/article/10838165" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Zelenskyy says Moscow is getting more North Korean missiles - The Korea Herald">TKH #1</a><a href="https://www.politico.eu/article/vladimir-putin-russia-used-north-korean-ballistic-missiles-lethal-attack-ukraine-zelenskyy-says" target="_blank" rel="noopener noreferrer" title="POLITICO / Putin used North Korean ballistic missiles in lethal attack on Ukraine, Zelenskyy says">POLITICO #1</a><a href="https://www.scmp.com/news/world/russia-central-asia/article/3363705/ukraine-says-russia-fired-north-korean-missiles-deadly-attack" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Ukraine says Russia fired North Korean missiles in deadly attack">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>South Africa mine dump collapse kills at least 14 suspected illegal miners</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 14 suspected illegal miners were killed and eight injured when a mine dump collapsed in South Africa’s North West province on Monday night, police said. Search and rescue operations were under way for an unknown number of people who may still be trapped at the site near Rustenburg, provincial police commissioner Arthur Peter Adams said. Adams said the collapse happened as the miners were digging for platinum group metals at a disused dump on a private company’s site.</p>
+<p>The injured miners are from Lesotho, while the nationality of those killed has not yet been confirmed. The collapse came against the backdrop of illegal mining in South Africa, which has long ranged from small-scale theft to operations run by organised criminal networks. According to the evidence, undocumented miners often enter abandoned commercial mines to extract remaining deposits, sometimes under the control of violent gangs, and the practice costs the government and mining industry hundreds of millions of dollars each year in lost sales, taxes and royalties.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/africa/article/3363691/south-africa-mine-dump-collapse-kills-least-14-suspected-illegal-miners" target="_blank" rel="noopener noreferrer" title="South China Morning Post / South Africa mine dump collapse kills at least 14 suspected illegal miners">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="nyt,scmp">
+  <summary>Russia frees ailing ex-US marine after Putin’s ‘goodwill’ pardon</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russia released Robert Gilman, a former U.S. Marine held since 2022, after Vladimir Putin approved a pardon that U.S. officials and Donald Trump described as humanitarian, putting his health and the next stage of his return to the United States in focus.</p>
+<p>The Kremlin’s decision came after the White House and the State Department urged Moscow to let Gilman go so he could receive medical treatment in the United States. Trump said on Truth Social that after his discussions with Putin, Russia had agreed to release Gilman “very much on a Humanitarian Basis,” and added that “Russia asked for no one in return.” U.S. officials said the release followed intense negotiations over the weekend.</p>
+<h3>A prisoner whose health had become part of the case</h3>
+<p>Gilman had been held in a prison in Voronezh, about 550km south of Moscow, after his arrest there in January 2022 while he was traveling by train. Russian state media said he had been detained for allegedly kicking a police officer while drunk. His father, Vladimir Gilman, wrote in an October 2024 *Boston Globe* op-ed that the charges were false, saying his son had fallen ill and accidentally kicked the officer, who was uninjured, dropped the charges and did not present evidence at trial.</p>
+<p>He was later sentenced to four-and-a-half years in prison. The exact circumstances of his health were unclear, but Eric Lebson, chief strategy officer of Global Reach, the advocacy group representing his family, said last week that Gilman had been moved in late June from the prison hospital to the psychiatric ward of a civilian emergency hospital in a catatonic-like state assessed as “dissociative stupor.” The New York Times said the Kremlin released him after his family and an advocacy group said he was in dire physical condition.</p>
+<h3>On the way to the United States</h3>
+<p>U.S. officials said Gilman was on a State Department plane on Tuesday carrying him from Russia to Washington Dulles Airport. His mother, Nina, was also on board. One U.S. official who spoke to Gilman said he was walking and talking, and added: “All things considered he seems to be in good shape.” Officials said he would be evaluated on the flight by four doctors.</p>
+<p>On arrival at Dulles, Gilman was expected to be greeted by U.S. envoy Steve Witkoff and deputy national security adviser Sebastian Gorka, both of whom had sought his release along with Secretary of State Marco Rubio, President Donald Trump’s son-in-law Jared Kushner, U.S. special envoy for hostage response Adam Boehler and other officials. U.S. officials said he was likely to be flown next to a rehabilitation centre in San Antonio, Texas, for medical treatment.</p></div>
+  <div class="source-list"><a href="https://www.nytimes.com/2026/08/11/world/europe/russia-robert-gilman-release.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Russia Releases Former U.S. Marine After 4 Years in Prison">NYT #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3363694/russia-frees-ailing-ex-us-marine-after-putins-goodwill-pardon" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Russia frees ailing ex-US marine after Putin’s ‘goodwill’ pardon">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Truck crash in Egypt kills 18, many of them child labourers</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 18 people, many of them children, died when a pick-up truck carrying agricultural labourers crashed in Egypt on Tuesday, in the Al-Dawawis area of Ismailia governorate. Egypt’s Ministry of Health said there were 47 casualties, including about 30 injured, and victims were taken to hospital in the nearby town of El-Kassasin. A medical source at the hospital told AFP that most of the dead were children aged 13 and 14, and a local security source said the youngest victim was 10. The workers were mostly from two villages in Sharqiya governorate and were employed on a farm in Ismailia.</p>
+<p>President Abdel Fattah el-Sisi ordered an investigation into the accident, and the Ministry of Social Solidarity and the Ministry of Labour said they would provide financial assistance to the families of those killed and to injured workers. The report also said pick-up trucks are a common way for Egypt’s informal workers to reach their jobs, and that official figures put child labour at at least 1.3 million minors.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/11/truck-crash-in-egypt-kills-18-many-of-them-child-labourers?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Truck crash in Egypt kills 18, many of them child labourers">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="vanguard_ng">
+  <summary>NANS calls for release of student leader arrested over political crisis in Osun</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">NANS Southwest has demanded the immediate release of student leader and activist Alalade Bukola Felix, known as “Machiavelli,” after his arrest by police over alleged involvement in violence at a political event in Osun, turning the case into a dispute over detention, evidence and due process.</p>
+<h3>Arrest and the police allegation</h3>
+<p>The association said Alalade was arrested over an allegation that he took part in violence that erupted during a political event in the state. In a statement signed by Coordinator Comrade Adeyemo Josiah, Public Relations Officer Comrade Olugbemi T. Timothy and Gen-Secretary Comrade Ojetola Babatunde Y, NANS said it had taken note of a police press release on his arrest and continued detention.</p>
+<p>NANS said it had personally visited the Osun State Police Command in Osogbo and found parts of the command’s explanation troubling. The group said that, according to the account given by Alalade’s wife, police operatives arrived at their residence at about 1:00 a.m., forced their way into the house and took him away without the family being properly informed of where he was being taken. It said he was first traced to the Area Command in Ilesa before being transferred to the State Criminal Investigation Department in Osogbo.</p>
+<p>The association also said police had alleged that Alalade was connected to a violent incident during a political procession and claimed that video evidence exists. NANS responded that if such evidence exists, it should be placed before a competent court and used to prosecute him according to law.</p>
+<h3>NANS pushes for court action or release</h3>
+<p>NANS said Alalade should be released or taken to court within the next 24 hours so the police can prove their allegation. It said it would not allow the indefinite detention of one of its members and that an allegation is not a conviction.</p>
+<p>The group said the burden of proving the allegation rests with the police, not with the detainee. It added that during its engagement with the police command, it sought clarity and credible material supporting the allegation, but no such material was presented. In its view, an allegation cannot become a substitute for judicial scrutiny or an excuse for prolonged detention.</p>
+<p>NANS said it recognizes the responsibility of the Nigeria Police Force to investigate crime and arrest people where there is reasonable suspicion of an offence, but said it would not accept a situation where an allegation becomes punishment through continued detention without a court’s intervention. It repeated that “an allegation is not a conviction” and “an investigation is not a sentence.”</p>
+<p>The association also called on the Inspector-General of Police to urgently take interest in the matter and ensure that the Osun State Police Command and all officers involved act within the law, professionally and without political influence. It said this was especially important because Osun State is approaching a sensitive election and public confidence in the neutrality of security agencies must not be allowed to deteriorate.</p>
+<p>NANS added that it has worked with security agencies for peace, saying the student leadership had recently partnered with the police through POCACOV in advocacy against electoral violence and social vices. It said such cooperation depends on mutual trust, transparency, professionalism and fairness.</p>
+<p>The group also said its intervention had nothing to do with Alalade’s employment, political association or relationship with any government official. It described him as one of its own, saying he is a former NANS JCC Osun PRO, a former Convention Planning Committee Chairman, an alumnus of the University of Ilesa and an active stakeholder in the student movement.</p>
+<p>If the matter is not resolved through lawful judicial intervention, NANS said it would consult its structures and begin lawful, peaceful and organized mass action to demand respect for due process and the fundamental rights of its member. It said it remained non-partisan and would neither defend wrongdoing nor obstruct a legitimate criminal investigation, but would not stay silent while political tension is used as a reason to disregard student leaders’ rights.</p></div>
+  <div class="source-list"><a href="https://www.vanguardngr.com/2026/08/nans-calls-for-release-of-student-leader-arrested-over-political-crisis-in-osun" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / NANS calls for release of student leader arrested over political crisis in Osun">VN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Record-breaking El Capitan climber dies in Sierra Nevada fall</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">general_news</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jacob “Jake” Whisenant, a 30-year-old California climber from Mammoth Lakes known for breaking speed records, died after falling in the Sierra Nevada wilderness, according to authorities. The Tulare county sheriff’s office coroner unit and the National Park Service said he died in the Sequoia and Kings Canyon wilderness on 3 August. The NPS said personnel responded to a “climbing-related incident” there on 2 August, and rescue and recovery operations continued for two days before rangers found him dead.</p>
+<p>Whisenant was well known in the climbing community for record-setting speed ascents in Yosemite national park. Among his listed achievements was a 2024 El Capitan climb with Brant Hysell on a 2,000ft route in 2 hours, 55 minutes and 32 seconds, which Whisenant described online as “a truly magical day that I’ll never forget.” In May, he and another climbing partner completed the Nose route twice in a single day. On Tuesday, his fiancée Emma London wrote in an online obituary that she had “received the call that no one ever wants to get about the love of their life.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/11/record-breaking-climber-jacob-whisenant-dies" target="_blank" rel="noopener noreferrer" title="The Guardian / Record-breaking El Capitan climber dies in Sierra Nevada fall">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="cnn,scmp">
+  <summary>Hungary parliament approves Orban-critic judge as president</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Hungary’s parliament has chosen Andras Baka, a former Supreme Court chief and longtime Viktor Orban critic, as president, giving Prime Minister Peter Magyar a symbolic win while leaving open how far he can push through the institutional overhaul he has promised.</p>
+<h3>Parliament backs a largely ceremonial president
+Baka was elected on Tuesday to the largely ceremonial post with the votes of the governing center-right Tisza party. Members of the opposition Fidesz party did not take part in the election, and the vote ended 140 in favor and six against, according to the figures given for the parliamentary tally.</h3>
+<p>The post had been vacant after the contested removal last month of the previous president, Tamas Sulyok, who was described as an Orban ally. Magyar’s reform push included a constitutional amendment that cut short Sulyok’s mandate, and the change has been presented as part of an effort to loosen Viktor Orban’s lingering hold over state institutions.</p>
+<h3>A judge with a history of fighting Orban’s system
+Baka’s nomination carried a clear political message. Magyar said Baka’s life served “as an example of commitment to the democratic rule of law and constitutional principles” and that Hungary needed to be “guided back onto the path of the rule of law and constitutional governance.”</h3>
+<p>Baka’s own career gives that symbolism weight. He had been a head of the Supreme Court, served 17 years as a judge on the European Court of Human Rights, and was later fired during Orban’s time in power. He was nominated to lead the Supreme Court in 2009, then ousted in 2012 after he condemned Orban’s move to reduce the mandatory retirement age for judges from 70 to 62, which he called a judicial purge. The European Union and the United States both said that age-limit change was illegal, and in 2016 the ECHR ruled that Baka’s dismissal violated his freedom of expression.</p>
+<p>After taking the oath of office, Baka used his speech to attack the previous government. He said that under Orban’s rule “one party captured the state,” that the branches of power were not separate and that there was no functioning system of checks and balances. He then added that building a new future for Hungary “demands both justice and self-restraint,” and said the president’s role was to represent citizens who hold differing views.</p>
+<h3>What Magyar says comes next
+The presidency is only one part of Magyar’s wider project. He has said the new president would serve only part of the current term, until a process is completed to replace the Orban-era Basic Law with a constitution drafted through wide public participation. Magyar has estimated that rewriting the constitution would take one year or one and a half years, and he said consultations on it would begin next month.</h3>
+<p>That makes Baka’s election less an endpoint than a step inside a larger political reset. Magyar’s party won the April elections, ending Orban’s 16 years in power and promising “system change.” For now, though, the presidency has gone to a figure whose career has already been defined by a clash with Orban’s judiciary reforms.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/11/europe/hungary-andras-baka-president-intl" target="_blank" rel="noopener noreferrer" title="CNN / Hungary parliament elects former supreme court head Andras Baka as president">CNN #1</a><a href="https://www.scmp.com/news/world/europe/article/3363690/hungary-parliament-approves-orban-critic-judge-president" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Hungary parliament approves Orban-critic judge as president">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="atlantic">
+  <summary>Disunion</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">By February 2045, Natalie is still arguing with her husband over what to call the violence that began in 2036, even as the United States is nearly through a negotiated split into two countries. The larger question underneath their marriage is whether the country’s break, and the war that preceded it, should be remembered as a civil war, an insurgency, or something else.</p>
+<h3>When Oklahoma City made the war feel real</h3>
+<p>Natalie says she took longer than some people to start calling it the war; by “some people,” she mainly means her husband, Asher. He reached that point on a first Friday in June 2036, after three hours of news coverage from Oklahoma City and headlines that read, in part, “siege: more than 300 killed and 400 wounded in terrorist military attacks.” Asher told her, “This is it, Natalie. It’s started. The civil war.”</p>
+<p>She says he claims she rolled her eyes. She does not think she did. What she remembers saying was, “these idiots in Oklahoma obviously want us to think that’s what it is.” That moment sits inside a longer pattern: Asher, whom she met in 2021, had long expected a political nightmare just around the corner, while she thought his alarm often came mixed with a doomer’s relish. He thought she was too disengaged from politics, sometimes guilty of “willful obliviousness,” “toxic positivity,” and denial about the “inevitable American apocalypse.”</p>
+<p>Even after the insurgency ended, the argument did not. Seven years later, he still says she is too quick to move on. During a call last November, on their first Thanksgiving apart in 23 years, he asked: “You know people are still getting killed, right?” She answered by pointing out that people were still dying from Nipah and COVID, and that not even most of his fellow San Franciscans wore masks.</p>
+<h3>The argument over names</h3>
+<p>For Natalie and Asher, the fight was never only about events; it was also about language. During the summer of the first attacks, she tried out “the hillbilly intifada” for the violence, meaning it ironically and disparagingly. Asher objected to comparing the Plains Patriot Militia to Palestinian terrorists. She then called the early bombings and shootings “the Troubles,” because she thought the attacks might resemble the decades of organized violence in Northern Ireland. That term bothered him too.</p>
+<p>Asher’s complaint was that “rebellion,” “insurgency,” or “uprising” — unless modified by “Christian-fascist,” “white-nationalist,” or “neo-Nazi” — romanticized the “anti-tyranny” delusions of people he considered mass-murdering fascists. At one point he referred to the attackers as “your psycho friends,” which triggered a big fight because Natalie grew up in Tennessee and called them “my friends” in that sense. She resisted the label Civil War II, or even “Civil War 2,” because she thought it reduced catastrophe to something game-like.</p>
+<p>Over time, though, she says she gave up the resistance. When Asher asked, “So you’re happy to call the big one that didn’t succeed a civil war, but not this smaller one that did?” she finally conceded: if history repeated itself and this counted as their second civil war, then the first was tragedy and this one was “farce plus tragedy.” Her preferred older phrase for the first conflict remains Walt Whitman’s “the War of Secession.”</p>
+<p>The scale of the violence is part of why the labels matter to her. She describes “mass shootings and bombings and assassinations and kidnappings and disappearances,” and says the war killed 28,000 Americans, half of them innocent civilians, and wounded another 45,000. It lasted 18 months. Still, she argues against treating it as some all-encompassing apocalypse, saying that “could be worse” remains a true way to think about what happened.</p>
+<h3>What Disunion left behind</h3>
+<p>By 2045, the country itself is nearly finished with the aftermath. Natalie says an improbable plan for “Disunion” was agreed to, then supported by large majorities on both sides, and negotiated and renegotiated over seven years. Disunion Day is set for June 30, which made last year’s Independence Day weekend — from June 30 to July 4 — the opening of a new era, with the United States of America and the Free American Republic independent of each other.</p>
+<p>She says the name Disunion feels too clinical and wonky, while “the breakup” seems more exact to her: mutual, broad, idiomatic, and plain. To her, Americans had grown apart like spouses in a failing marriage. Even so, she also says the country is still using the same air-traffic-control and interstate-highway systems, eating the same food, sharing the same digital life, and watching the same Super Bowl.</p>
+<p>What has changed most for her is not only the fading of war trauma but the fading of the compulsive politicization that came before it. She says the active contempt has become less salient, including in rural Middle Tennessee, where she has stayed rather than moving to San Francisco with Asher. That distance, and the call on a screen, help her avoid the fights that once filled their life. Her biggest regret is missing months of their daughter Logan’s life after Logan chose to live with her father. Even now, Natalie is still trying to figure out how much of the past to carry forward, and how much to let go.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/books/2026/08/disunion-shot-story-kurt-andersen-excerpt-the-breakup-novel/688190" target="_blank" rel="noopener noreferrer" title="The Atlantic / Disunion">TA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,cna,scmp">
+  <summary>US military says it has fired on ship in Gulf of Oman to enforce blockade of Iranian ports</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US military said it fired two Hellfire missiles at a Panama-flagged cargo ship in the Gulf of Oman, disabling its steering gear as the vessel headed toward an Iranian port, while leaving unclear whether anyone aboard was wounded.</p>
+<h3>The Vela Nova was hit after warnings to stop</h3>
+<p>US Central Command said a Navy helicopter fired on the M/V Vela Nova after the ship’s civilian crew ignored repeated warnings from American forces. CENTCOM said the missiles hit the vessel’s engine room and that it was “no longer transiting to Iran in violation of the US blockade.” The statement did not say whether any crew members were wounded.</p>
+<p>The strike was described as part of a blockade on Iranian ports that the United States has been enforcing at sea. CENTCOM said on Tuesday that US forces had disabled 55 commercial vessels under that blockade, disabled three “non-compliant vessels” and boarded two. The attack on the Vela Nova was presented as another attempt to stop a ship from moving toward an Iranian port.</p>
+<h3>A wider maritime standoff</h3>
+<p>The firing came during a period that had been relatively quiet in the US-Israeli war with Iran, with attacks mostly paused since a 13-day escalation in July, according to the reporting. That pause followed a ceasefire under a memorandum of understanding signed by the US and Iran in June that later appeared to collapse. The June deal was meant to open renewed negotiations on a more lasting peace and on the future of sanctions on Iran and its nuclear programme.</p>
+<p>The same reporting said the US reimposed its naval blockade amid the return to fighting, while Iran again asserted control over the Strait of Hormuz. It also said the conflict has been complicated by Houthi attacks on ships in the Bab al-Mandeb Strait, another key trade route in the region. Iran has largely focused its diplomacy on direct talks with Oman over shipping lines in the Strait of Hormuz, and efforts to return to an agreement have so far made little progress.</p>
+<p>The broader dispute has also sharpened over what the blockade means for shipping and diplomacy. The Vela Nova strike was presented by CENTCOM as an enforcement action, while the wider reporting described a standoff in which the US blockade, Iran’s demands over sanctions, and the status of the Strait of Hormuz remain unresolved.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/11/us-military-fires-on-cargo-vessel-it-said-sought-to-break-iran-blockade?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US military fires on cargo vessel it said sought to break Iran blockade">AJ #1</a><a href="https://www.channelnewsasia.com/world/red-sea-attack-yemen-houthis-gulf-6312561" target="_blank" rel="noopener noreferrer" title="CNA / Four crew, two rescuers killed in Red Sea attack; US strikes ship in Gulf of Oman">CNA #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3363706/us-military-says-it-has-fired-ship-gulf-oman-enforce-blockade-iranian-ports" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US military says it has fired on ship in Gulf of Oman to enforce blockade of Iranian ports">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Palestinian medics in Israel face incitement over unproven patient abuse claims</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Palestinian citizens’ representatives in Israel condemned what they called an “obsessive campaign of incitement” against Arab medical staff after Defence Minister Israel Katz and National Security Minister Itamar Ben Gvir called for an investigation into allegations that Arab medical workers mistreated a wounded Israeli soldier at Rambam Health Care Campus in Haifa. The claims came from relatives of the soldier, who was wounded in Lebanon. Yehoshua Shani, chairman of a forum that opposes the Gaza ceasefire and supports continuing the war, said his nephew was mistreated by Arab staff, and on Sunday he posted on X that the nurses on duty were all “Arabic speakers” who ignored the patient’s request for water and turned him in bed “like a sardine,” hitting his head.</p>
+<p>David Chesterman, the soldier’s brother, made similar claims on Instagram. He said the family had been denied entry to the room and described breaking down the door to check on his brother, who he said begged for water and had been turned over roughly in bed. Rambam said after reviewing the incident that it “rejects the claims that the patient was treated inappropriately,” while the hospital’s director later sent staff an internal message of support saying attempts to divide staff by language, background or identity were unacceptable.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/palestinian-medics-israel-face-incitement-over-unproven-claims-patient-mistreatment" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Palestinian medics in Israel face incitement over unproven patient abuse claims">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cnn,nyt,scmp">
+  <summary>Former Syrian President Assad sentenced to death in absentia</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Syrian court has sentenced ousted president Bashar al-Assad to death in absentia, along with his younger brother and a cousin, as the question of whether Russia will hand the family over remains open.</p>
+<p>The Fourth Criminal Court in Damascus handed down the sentence on Tuesday for crimes against humanity and war crimes during Syria’s 14-year conflict, which left about half a million people dead. Judge Fakhareddine al-Aryan said during a session aired live on state TV that “Bashar Assad used state agencies to commit war crimes and crimes against humanity.” The ruling was the first against Assad or members of his inner circle since the Assad family’s five decades in power ended 20 months ago.</p>
+<h3>Inside the Damascus courtroom</h3>
+<p>The same case also led to a death sentence for Assad’s maternal cousin Atef Najib, who was convicted of overseeing a crackdown in the southern province of Daraa that helped trigger the uprising and later the civil war. Amid tight security, Najib stood inside a cage wearing a prisoner’s uniform as the judge read the sentence. Outside the courthouse in central Damascus, a crowd gathered to hear the verdict.</p>
+<p>Najib was a former Syrian army brigadier general and head of the Political Security Branch in Daraa province under Assad in 2011. He had been sanctioned by the U.S. Department of the Treasury in April 2011 and later detained. During his tenure, more than a dozen teenagers who had scrawled anti-government graffiti on a school wall in Daraa were arrested and tortured. That episode became a catalyst for mass protests against Assad’s security forces, followed by a brutal crackdown and a 14-year civil war.</p>
+<h3>The Assads in Russia</h3>
+<p>Assad and his brother Maher fled to Russia after the government’s fall in December 2024 and received political asylum. Syria’s new rulers have asked Russia to hand the Assads over.</p>
+<p>The ruling therefore lands while Assad remains خارج the country and while the Syrian state that prosecuted him is now under new rulers. For the people gathered outside the courthouse, and for those connected to the Daraa crackdown, the verdict tied together the start of the war, the fall of Assad’s rule, and a court sentence issued years after the conflict began.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/11/middleeast/syria-assad-death-sentence-absentia-intl" target="_blank" rel="noopener noreferrer" title="CNN / Former Syrian President Assad sentenced to death in absentia">CNN #1</a><a href="https://www.nytimes.com/2026/08/11/world/middleeast/syria-bashar-al-assad-death-sentence.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Syrian Court Sentences Bashar al-Assad to Death in Absentia for War Crimes">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3363672/syrian-court-sentences-ousted-leader-bashar-al-assad-death-absentia" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Syrian court sentences ousted leader Bashar al-Assad to death in absentia">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="el_pais">
+  <summary>Moroccan official body accuses Spanish police of mistreatment and assaults on migrants in Ceuta</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preliminary report from the Moroccan National Human Rights Council accused Spanish police of mistreatment and assaults on migrants who arrived in Ceuta on July 30 and 31, saying about 72,000 people surged into the city within 48 hours. Presented on August 8, the report also said Ceuta authorities failed to provide enough care, especially for children and youths, and described cases of physical integrity violations and inadequate protection against racist and xenophobic attacks inside the city.</p>
+<p>The council said it collected testimonies from returnees to Morocco describing repeated mistreatment by Spanish security forces, especially outside camera range. It also blamed local authorities in Ceuta for not providing necessary assistance and for ordering the closure of restaurants, cafes and commercial establishments, although the closures were actually voluntary and followed a recommendation from the Ceuta Confederation of Employers. The report further said misleading migration-related posts first appeared on July 8 on a Facebook page with more than 90,000 followers, and that the council monitored 23 Facebook groups with more than 1,086,000 members.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-11/un-organismo-de-marruecos-acusa-a-la-policia-espanola-de-propinar-malos-tratos-y-agresiones-a-los-emigrantes-en-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / Moroccan official body accuses Spanish police of mistreatment and assaults on migrants in Ceuta">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cna">
+  <summary>Bali tightens scrutiny of foreign content creators, prompting calls for clearer visa rules</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Bali has stepped up scrutiny of foreign content creators who film and promote the island, while immigration officials, tourism experts and creators themselves argue over where online travel storytelling ends and commercial work begins under Indonesia’s visa rules.</p>
+<h3>What Bali is targeting</h3>
+<p>Authorities have established a special task force called Dharma Dewata to patrol areas with high concentrations of foreign nationals across Bali as part of tighter oversight of their activities. Felucia Sengky Ratna, head of the Bali Regional Office of the Directorate General of Immigration, said the policy’s main aim is to minimise misuse of residence permits, including using holiday or tourist visas for employment or commercial purposes.</p>
+<p>The crackdown comes as foreign creators continue to fill YouTube, Instagram and TikTok with Bali travel videos that show beaches, rice terraces and local food. Officials say the focus is not on one type of creator in particular, but on suspected misuse of visas more broadly. Asked how many deportations involved illegal commercial work, the immigration directorate said supervision is “not specifically or narrowly focused” on a category such as “content creator,” but on the general misuse of residence permits by foreign nationals in Indonesia.</p>
+<p>Between January and June 2026, the immigration directorate deported 342 foreign nationals from 60 countries. It said they were sanctioned for violations including overstaying visas, misusing residence permits, disrupting public order and breaching other Indonesian laws and regulations.</p>
+<h3>Where the line is being disputed</h3>
+<p>The tougher enforcement has won broad support from some experts CNA spoke to, but several said the government needs to explain more clearly when travel content becomes commercial activity. Content creators, meanwhile, are asking for more clarity on the stricter measures and questioning how consistently they are being applied on the ground.</p>
+<p>That uncertainty matters because Indonesia’s Ministry of Immigration and Corrections says foreign nationals who plan to create content in Indonesia must obtain a Content Creator Visit Visa, or C5A, introduced in May 2025. The visa allows holders to create content for personal social media accounts, travel within Indonesia and stay as long as they can support themselves financially. But it does not allow journalistic content, commercial films without special permission, work for local employers or earning income in Indonesia, or overstaying the visa.</p>
+<p>Some creators say those boundaries are still too blurry. Luke Martin of Chopstick Travel, a YouTube channel focused on gastronomy and cultural travel, said he understands that barter arrangements, complimentary accommodation or receiving products or expensive meals in exchange for promotional content are no longer permitted for foreign nationals without the proper visa. But he said the rules remain unclear for foreign creators who are not paid by local businesses. Martin said he finances his own content and earns income only through advertising served by Google on YouTube.</p>
+<p>He also questioned whether independent creators should be treated the same as large commercial productions, saying he sees a difference between documenting local businesses and promoting major hotel or resort brands. In his view, the new rules are not clear enough on what is and is not allowed.</p>
+<h3>Tourism benefits, local competition and what comes next</h3>
+<p>The debate has also exposed different views on how foreign creators fit into Bali’s tourism economy. Azril Azhari, chairman of the Indonesian Tourism Scholars Association, said content produced by overseas creators has helped introduce Bali, its local businesses and other domestic destinations to global audiences. Tourism expert Taufan Rahmadi said many international tourists first learn about Bali through social media and that tighter oversight supports Indonesia’s push for quality tourism by improving governance.</p>
+<p>At the same time, local creators say enforcement should be fair. Putu Reza, a Bali-based content creator, said some businesses work with foreign creators to reach international tourists, but the playing field becomes uneven when foreigners do commercial work on visas that do not allow it. He said consistent enforcement could create fairer competition and encourage more businesses to work with local creators. Another Bali-based creator, Harival Zayuka, said Indonesian creators often have a stronger grasp of the island’s destinations, culture, language and travellers.</p>
+<p>Felucia said any suspected violation would still go through investigation, clarification and further assessment before administrative action is imposed. But the wider dispute remains unresolved: Bali is tightening the rules, while creators and tourism figures are still asking how those rules should be applied to online travel content in practice.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/indonesia-bali-content-creators-influencers-visa-crackdown-6311031" target="_blank" rel="noopener noreferrer" title="CNA / Bali tightens scrutiny of foreign content creators, prompting calls for clearer visa rules">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,middle_east_eye,scmp">
+  <summary>Rights groups sue the Trump administration over ICC sanctions</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Four US-based human rights groups have sued the Trump administration over sanctions targeting the International Criminal Court, arguing that the measures are forcing them to cut back legal and advocacy work and infringing constitutional rights.</p>
+<p>The lawsuit, filed on Tuesday, was brought by the American Friends Service Committee, the Centre for Constitutional Rights, Human Rights Watch and the Open Society Institute. The groups say the sanctions against the court and organisations that cooperate with it are forcing them “to curtail a wide range of human rights and legal work” and are violating their freedom of speech and due process rights, as well as protections under the First and Fifth Amendments and the Religious Freedom Restoration Act.</p>
+<p>Human Rights Watch said the case also challenges Trump’s authority to impose the sanctions, arguing that he acted “based on a pseudo ‘national emergency’ that has no basis in fact.” Joyce Ajlouny, the general-secretary of the American Friends Service Committee, said the US government’s effort to dismantle the ICC and punish people seeking justice for grave human rights violations was “an affront to all victims and survivors of war crimes and genocide.” She added: “We are joining this lawsuit because we refuse to stay silent when the pursuit of justice is criminalised.”</p>
+<p>The groups say the sanctions have stopped them from representing victims of war crimes as legal counsel, making submissions to the ICC, and working with sanctioned Palestinian human rights groups on litigation, advocacy, research and humanitarian aid. The complaint says the restrictions also chill organisations outside the US because of the reach of American financial and technology companies.</p>
+<h3>Part of a wider legal push</h3>
+<p>The case adds to earlier challenges to Trump’s campaign against the ICC. According to the evidence, the administration escalated its approach after Trump took office last year, issuing a sweeping executive order in February 2025 that authorised sanctions against ICC prosecutors, judges, other officials, and people or groups supporting the court’s investigations.</p>
+<p>That order was linked to the court’s arrest warrants for Israeli Prime Minister Benjamin Netanyahu over war crimes in Gaza and to an investigation into possible abuses in Afghanistan, including by US military and intelligence personnel. Since then, several ICC judges and prosecutors have been sanctioned, along with Palestinian rights groups that evidence to the court, and UN Special Rapporteur Francesca Albanese was also sanctioned.</p>
+<p>Earlier lawsuits were filed by DAWN and the Taxpayers Alliance Against Genocide, while ICC judges and Albanese’s family also sued in response to the sanctions. Federal judges in Maine and New York ruled last year that Trump’s ICC executive order violated the constitutional rights of individual advocates and academics who work with the court.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/11/rights-groups-launch-new-legal-challenge-to-trump-campaign-against-icc?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Rights groups launch new legal challenge to Trump campaign against ICC">AJ #1</a><a href="https://www.middleeasteye.net/news/us-rights-groups-sue-trump-administration-icc-sanctions" target="_blank" rel="noopener noreferrer" title="Middle East Eye / US rights groups sue Trump administration over ICC sanctions">MEE #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3363699/rights-groups-sue-trump-administration-over-icc-sanctions" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Rights groups sue the Trump administration over ICC sanctions">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Lebanon becomes first Arab nation to abolish death penalty</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Lebanon’s parliament on Tuesday approved legislation abolishing the death penalty and replacing it with life imprisonment with aggravated hard labour, according to the state-run National News Agency. The vote makes Lebanon the first Arab country to formally abolish capital punishment. The measure passed by a majority of the 128-member parliament, and Justice Minister Adel Nassar, who attended the session, called it a “historic step” for Lebanon.</p>
+<p>According to government sources, Hezbollah’s parliamentary bloc opposed the measure. The draft legislation was submitted to parliament in October 2025 by MP Abdul Rahman al-Bizri and was backed by seven lawmakers from different political blocs before it was amended and approved. The abolition follows years of campaigning by Lebanese and international human rights organisations. Human Rights Watch had urged parliament in July to pass the bill, saying Lebanon had long retained death sentences despite an unofficial moratorium on executions since 2004.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/middle-east/article/3363687/lebanon-becomes-first-arab-nation-abolish-death-penalty" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Lebanon becomes first Arab nation to abolish death penalty">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Health workers reject the union leadership selection agreement</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Health workers from several hospitals protested yesterday outside the Federal Conciliation and Arbitration Tribunal (TFCA) to reject the National Union of Health Secretariat Workers’ (SNTSA) agreement to postpone elections in its 107 union sections until 2029. Reyna Ayala, a member of the Alliance of Health Workers and Public Employees, said the agreements from the SNTSA’s 49th Ordinary National Council, held last June in Ixtapa Zihuatanejo, Guerrero, contained irregularities because they delayed renewing local leadership, some of which had already expired in April.</p>
+<p>A four-member commission was received by Andrés Flores, deputy director of the TFCA general agreements secretariat, who initially said he would inform tribunal president Cristóbal Arias so the matter could be reviewed at the next session. Ayala said Flores later told them the issue could be addressed in about three months. Joined by employees from General de México and Juárez hospitals and the National Institute of Pediatrics, the protesters said union leaders have remained in power for decades. They cited Marco Antonio Sánchez, general secretary of section 17 at Fray Bernardino hospital, as an example, saying he has held the post for 37 years, and urged the TFCA to review the legality of the agreements.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/11/politica/006n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Health workers reject the union leadership selection agreement">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,daily_maverick,middle_east_eye,scmp">
+  <summary>Israel and Venezuela restore diplomatic relations after years of severed ties</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel and Venezuela have agreed to restore consular relations after a 17-year break, reopening a channel for services to citizens even as both governments frame the move as part of earthquake relief and a broader political realignment in Caracas.</p>
+<p>The announcement came on Tuesday in statements from both sides. Venezuela’s foreign minister, Felix Plasencia Gonzalez, said the decision followed Israel’s deployment of a team to Venezuela after twin earthquakes devastated the country. He said the two governments had agreed to continue bilateral technical cooperation linked to emergency and recovery efforts, and to set up a coordination mechanism for consular services for their citizens living in each country.</p>
+<p>Israel’s Spanish-language government account said the change reflected both governments’ recognition of the bond between Israel and the Jewish community in Venezuela, which it described as an important historical bridge between the two countries. The move does not amount to a full restoration of diplomatic ties, but consular relations typically allow joint services for citizens and travellers and can signal a warming of relations.</p>
+<p>The break dates back 17 years, when Caracas severed ties with Israel in response to Israeli attacks on Gaza. Under Nicolas Maduro, Venezuela had stayed closely aligned with Iran and opposed to Israel, but the latest thaw comes as interim President Delcy Rodriguez has moved Caracas closer to the United States since Maduro’s abduction in January. Sources also said Venezuela’s shift has been accompanied by a move away from Cuba.</p>
+<p>The restoration comes after months of contact between the two sides, including Israel’s relief and assistance after the June earthquakes. Both governments also highlighted the role of the Jewish community in Venezuela in their statements, suggesting that community ties were part of the basis for the agreement.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/11/venezuela-and-israel-restore-consular-ties-as-relations-warm?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Venezuela and Israel restore consular ties as relations warm">AJ #1</a><a href="https://www.dailymaverick.co.za/article/2026-08-11-venezuela-and-israel-resume-consular-services-after-17-year-diplomatic-break" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Venezuela and Israel resume consular services after 17-year diplomatic break">DM #1</a><a href="https://www.middleeasteye.net/news/israel-and-venezuela-restore-diplomatic-relations" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel and Venezuela restore diplomatic relations after years of severed ties">MEE #1</a><a href="https://www.scmp.com/news/world/americas/article/3363703/israel-and-venezuela-renew-consular-ties-after-17-years-no-diplomacy" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israel and Venezuela renew consular ties after 17 years of no diplomacy">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="mail_guardian">
+  <summary>Idac investigated Masemola without a complaint referral</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At the Madlanga commission, Idac prosecutor Drushanta Ramsamy said the directorate investigated national police commissioner Fannie Masemola in the Medicare24 matter without the required Section 27 complaint referral. She testified on Tuesday about the R360 million Medicare24 contract and attempts to link Masemola to it, saying Masemola cancelled the contract after an internal audit report found irregularities. Ramsamy said former Idac head advocate Andrea Johnson started an investigation into Masemola’s alleged involvement after a meeting with suspended police minister Senzo Mchunu on 22 January 2025.</p>
+<p>Ramsamy said there was no Section 27 referral affidavit at the time, and that Idac investigator Dylan Perumal instructed advocate Tilas Chabalala to prepare an authorisation to investigate despite no complaint referral. She said the authorisation had already been submitted to deputy director of public prosecutions Paul Louw before being sent to Johnson for final approval, and that a Section 28(1) application had already been submitted. Johnson has given a different account to parliament’s ad hoc committee, saying SAPS chief risk and integrity officer Charity Matlou referred the matter to Idac under Section 27 and deposed an affidavit.</p></div>
+  <div class="source-list"><a href="https://mg.co.za/news/south-africa/2026-08-11-idac-investigated-masemola-without-a-complaint-referral" target="_blank" rel="noopener noreferrer" title="Mail &amp; Guardian / Idac investigated Masemola without a complaint referral">Mail &amp; Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China eyes modern coal industry by 2030 for secure, green energy mix</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China set out a plan to establish a modern coal industry system by 2030 as it seeks to balance energy security with a green transition. The plan, released Monday by the National Development and Reform Commission and the National Energy Administration, says China will accelerate optimization and upgrading of the coal industry during the 2026-2030 period, when coal consumption is expected to peak. It calls for higher access standards for coal resource development, more advanced production capacity, the orderly phase-out of outdated and inefficient capacity, and a prudent approach to deep coal resources. By 2030, large modern coal mines are expected to account for 87 percent of total coal production capacity, and intelligent mines for 75 percent.</p>
+<p>The plan says the five major coal supply bases are expected to provide more than 80 percent of national output. It also says China aims to peak coal consumption by 2030 and raise non-fossil energy to 25 percent of total energy consumption. Qu Yang, a researcher with the Coal Industry Planning and Design Research Institute, said the coal industry is expected to become more concentrated in 2026-2030, with smaller mines prone to accidents and depleted-resource mines exiting faster. The plan also urges larger-scale development of coalbed methane and gives targets of 26 billion cubic meters of coalbed methane produced and 6.5 billion cubic meters of coal mine gas used by 2030.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260811/b629f941253841d890da7a28b15c905c/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China eyes modern coal industry by 2030 for secure, green energy mix">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China activates flood emergency response for four regions</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Ministry of Water Resources activated a Level-IV emergency flood response for Hubei, Henan, Hebei and Shandong on Monday, as heavy rainfall brought by Typhoon Dolphin and a cold air mass was expected in central and northern China. The ministry said the four provinces would see downpours from Aug. 10 to Aug. 16, with heavy rainstorms expected in some areas. China has a four-tier emergency response system, with Level I the most severe.</p>
+<p>To cope with the situation, the ministry told local authorities to strengthen monitoring and research, step up patrols, and deal with potential hazards. It said priority would go to flood defense along small and medium-sized rivers and to preventing mountain torrents, and it stressed timely evacuation of residents in high-risk areas. The ministry also maintained a Level-III emergency response in Zhejiang Province and a Level-IV response for six other provincial-level regions across eastern, central and northeastern China. On Monday, its information center renewed a blue flood alert and advised people in affected areas in northern, central and eastern China to take precautions.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0811/c90000-20487354.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China activates flood emergency response for four regions">PDE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="axios">
+  <summary>Trump admin cuts Medicaid funds for youth trans care</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Trump administration on Tuesday finalized a plan to cut off federal Medicaid funding for hormone therapy, puberty blockers and surgeries for transgender youths. Beginning Oct. 13, states will not be able to claim federal Medicaid funding for gender-affirming health services, which the administration refers to as “sex-rejecting procedures.” The rule includes a six-month period in which states can continue getting funding for beneficiaries taking gender-affirming hormone therapies. States may still use their own funds to cover gender-affirming care for youth in Medicaid or the Children’s Health Insurance Program, and the rule does not cut off federal funding for psychotherapy related to gender dysphoria. The rule says 17 states currently cover some degree of gender-affirming care for children under Medicaid and CHIP.</p>
+<p>The administration said it is adopting the policy to “help to protect these children” from procedures it sees as harmful, and the rule cites a 2025 HHS report that found weak evidence for pediatric gender-affirming medical interventions, along with a review from the United Kingdom. The American Academy of Pediatrics and other medical groups said the HHS report misrepresents the current medical consensus and realities of care. LGBTQ+ advocates called the policy a dangerous restriction on physician-prescribed care, and Rodrigo Heng-Lehtinen of the Trevor Project called it a “dangerous and unnecessary attempt” to block access to best-practice health care.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/11/trump-medicaid-youth-transgender-health-care" target="_blank" rel="noopener noreferrer" title="Axios / Trump admin cuts Medicaid funds for youth trans care">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Israel pursuing ‘undeclared annexation’ of West Bank, Peace Now says</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Peace Now accused the Israeli government of pursuing an “undeclared annexation” of the occupied West Bank through coordinated measures it said undermine the Oslo Accords. The group said the steps include broadening the powers of the Israeli Civil Administration, expanding settlements and weakening the Palestinian Authority. It pointed to a February move in which the security cabinet authorised the Civil Administration to enforce regulations and oversee environmental protection, water and archaeology in Areas A and B. The government said the move was aimed at preventing environmental hazards and damage to heritage sites.</p>
+<p>Peace Now said those environmental and archaeological definitions are broad enough to let Israeli civilian authorities intervene in Palestinian construction across much of the West Bank. It also said the government has not formally cancelled the Oslo Accords, introduced legislation to annex the West Bank or dismantle the Palestinian Authority, but argued the measures together amount in practice to undeclared annexation. The report also said Israeli Finance Minister Bezalel Smotrich called it a “certificate of achievement” for the government and said he was proud of the “settlement revolution” he had led.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israel-pursuing-undeclared-annexation-west-bank-peace-now-says" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel pursuing ‘undeclared annexation’ of West Bank, Peace Now says">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Households near new pylons to get £250 taken off annual energy bills</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Households living near new power pylons will get £250 a year taken off their energy bills as the UK government prepares to push ahead with more than 40 grid upgrade projects across the country. The promise covers hundreds of thousands of homes within 500 metres of new grid infrastructure, with savings of up to £2,500 over 10 years. The discounts are due to begin next year and will be applied automatically every six months through energy suppliers. Michael Shanks, the energy minister, said the multibillion-pound upgrades were “a vital part of how we deliver secure, homegrown energy and unlock economic growth across the country.”</p>
+<p>The government said the plan is part of one of the biggest grid upgrade drives since the 1960s, with grid companies expected to spend up to £77bn over five years. It confirmed the local bill discount after ruling out proposals to run new cables underground. The government also called on grid companies including National Grid, SSE and Scottish Power to contribute to a fund for community projects, with more than £4m earmarked for National Grid’s Bramford-to-Twinstead project and about £2.4m for communities near Scottish Power’s Chirmorie overhead line project.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/2026/aug/12/households-near-new-pylons-to-get-250-taken-off-annual-energy-bills" target="_blank" rel="noopener noreferrer" title="The Guardian / Households near new pylons to get £250 taken off annual energy bills">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Defense informs the Xunta that it will not raise objections to the Chinese factory in Ferrol</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Defense told the Xunta of Galicia that it will not object to the planned Chinese electric car factory in Ferrol, and doubts about the project dissipated within 48 hours. According to Xunta sources, Defense Minister Margarita Robles informed Galician president Alfonso Rueda on Tuesday that her department will issue a new report giving the plan the green light, “without prejudice to the operational conditions that may be necessary.”</p>
+<p>The concerns had followed reports that the Army and the CNI saw a possible risk of Chinese espionage at military facilities. The factory is planned for Ferrol’s outer port, about five kilometers in a straight line from the Navy arsenal and the Navantia shipyard. SAIC Motor intends the plant to serve its move into the European market under the MG brand, with an investment of 200 million euros and about one thousand jobs. The Galician Government has described it as a “strategic industrial project.”</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-11/defensa-comunica-a-la-xunta-que-no-pondra-objeciones-a-la-fabrica-china-en-ferrol.html" target="_blank" rel="noopener noreferrer" title="El País / Defense informs the Xunta that it will not raise objections to the Chinese factory in Ferrol">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Administrative Court Orders Defense to Release Military Reports on the Dirty War</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">general_news</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A collegiate administrative court ordered the Defense Ministry to create a special, impartial commission to make the military documents from the so-called Dirty War transparent and deliver them. The ruling came after the Secretariat of National Defense refused to provide the files from 1965 to 1990, which Alicia de los Ríos Merino had requested as part of her search for her mother, also named Alicia de los Ríos, who disappeared in 1978.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/11/politica/009n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Tribunal ordena a la Defensa ceder reportes militares sobre la guerra sucia">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,guardian">
+  <summary>Police chiefs call for PM to prevent early release of PC Harper&#x27;s killers</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Fifty police chiefs have urged Prime Minister Andy Burnham to use every legal option to stop the early release of Jessie Cole and Albert Bowers, saying the case of PC Andrew Harper raises wider questions about victims, public protection and confidence in sentencing.</p>
+<p>PC Harper, 28, died in 2019 after he was dragged behind the getaway car of three teenagers who had fled the scene of a quad bike theft in Berkshire. Cole and Bowers were convicted of manslaughter in 2020 and sentenced to 13 years; under changes to the Sentencing Act made this year, they will become eligible for release after serving half of those sentences.</p>
+<p>The letter, released on Tuesday evening, brought together police leaders from Scotland, England, Wales and Northern Ireland. It said the early release of Harper’s killers, and of anyone involved in the death of an officer, could cast doubt over the “value placed on their service and sacrifice when they put themselves in harm’s way to protect others”.</p>
+<p>The chiefs set out three requests. First, they asked Burnham to pursue “every lawful option” to determine whether the earlier release of those responsible for PC Harper’s death can be prevented. Second, they called for greater consideration of the crimes committed by prisoners when sentences are altered, saying that where an offender has caused a death, committed exceptionally serious violence, or poses an ongoing risk, there should be explicit consideration of public protection, victim impact and community safety before release arrangements are changed. Third, they said victims and bereaved families should be “properly considered” whenever significant changes are made to sentencing or release arrangements.</p>
+<p>The letter also argued that these concerns go beyond Harper’s case, touching on the early release scheme itself, which was designed to reduce prison overcrowding. Burnham had already said he was “confident” the early release of Cole and Bowers in January could be prevented, and Downing Street later pointed to his earlier promise to do “everything in his power” to stop it.</p>
+<p>Around 5,000 people are expected to be released under the scheme, although exemptions have already been announced for those convicted of the most serious crimes, including rape, child sex offences and grooming. Unions have warned that further changes could create confusion or lead to prisoners being freed by mistake.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cwyrkz9ryr5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Police chiefs call for PM to prevent early release of PC Harper&#x27;s killers">BBC #1</a><a href="https://www.theguardian.com/society/2026/aug/11/probation-staff-strike-vote-burnham-early-release" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham urged by 50 police leaders to prevent early release of PC Harper’s killers">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>Latvia discovers secret migrant tunnel at Belarus frontier</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Latvia’s border guards sent back 15 migrants who entered through an underground passage near the border fence with Belarus, and authorities said they had discovered a 10-meter-long tunnel used for illegal crossings. Interior Minister Jānis Dombrava said on Tuesday that the tunnel was detected on Monday and that this was the first case in which a tunnel had been used to cross illegally into Latvia.</p>
+<p>Authorities returned all 15 people to their “country of departure” and are continuing to inspect the area around the tunnel. Latvia also launched an operation on Tuesday to strengthen border security. Dombrava has described illegal crossings from Belarus as a “hybrid threat,” and the Latvian State Border Guard said in a press release that it has prevented more than 9,000 illegal attempts to cross the border from Belarus so far this year. Dombrava said no signs of violations had previously been detected at that exact location, and no detentions had occurred there before.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/latvia-migrant-tunnel-border-belarus" target="_blank" rel="noopener noreferrer" title="POLITICO / Latvia discovers secret migrant tunnel at Belarus frontier">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="kompas">
+  <summary>Mass withdrawal from civil service</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Badan Kepegawaian Negara (BKN) recorded 2,722 aparatur sipil negara (ASN) requests for resignation at their own request in semester 1 of 2026. The number is small compared with the 6.77 million ASN overall, but the write-up says the wave of departures still deserves policy attention. It also cites Survei Angkatan Kerja Nasional (Sakernas) data for May 2026 showing 7.22 million unemployed people, with more than 1 million of them graduates.</p>
+<p>The piece says resigning from ASN can be a bold move in a difficult labor market. It contrasts ASN and private-sector staffing, saying ASN recruitment is carried out simultaneously and cannot be done at any time, while private organizations can more easily find replacements for departing workers. It also says BKN has reported reasons for resignation such as salary mismatch, being far from family, and placement location, and notes those terms were disclosed during selection, including salary estimates on SSCASN and a commitment not to request transfers to another agency for at least 10 years.</p></div>
+  <div class="source-list"><a href="http://money.kompas.com/read/2026/08/12/063500726/ramai-ramai-keluar-dari-asn" target="_blank" rel="noopener noreferrer" title="Kompas / Mass withdrawal from civil service">Kompas #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>Mchunu violated protocol to share confidential report with Idac, inquiry hears</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At the Madlanga Commission on Tuesday, Idac prosecutor Drushantha Ramsamy said former police minister Senzo Mchunu later arranged for a confidential Inspector-General of Intelligence (IGI) report to be flown to Idac chief investigator Dylan Perumal in the Eastern Cape, even though Idac had been told in January 2025 that the report could not be shared while the IGI investigation was still under way. The report concerned allegations of Crime Intelligence procurement irregularities and the hiring of Brigadier Dineo Mokwele, and Ramsamy said Mchunu’s sharing of it “flouted protocol.”</p>
+<p>Ramsamy’s testimony also revived questions about Mchunu’s role in Idac’s actions against Crime Intelligence leaders, including former boss Dumisani Khumalo and national police commissioner Fannie Masemola. The evidence heard at the commission linked the IGI investigation and later charges to what was described as a campaign to sideline top cops, while charges against Khumalo over Mokwele’s appointment have been provisionally withdrawn. Ramsamy also said Perumal later shared the report with her via WhatsApp.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-11-mchunu-violated-protocol-to-share-confidential-report-with-idac-inquiry-hears" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Mchunu violated protocol to share confidential report with Idac, inquiry hears">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="nikkei_asia">
+  <summary>Japan considers internet voting for citizens overseas</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Japan’s government, along with lawmakers from both the ruling coalition and opposition parties, will explore ways to let Japanese citizens living abroad vote online in national elections. Nikkei Asia said the idea is being considered because postal issues and short campaign periods can lead to mail-in ballots being rejected. The discussion comes after a voter was seen at the Japanese Embassy in Beijing during the February lower house election in Japan.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/politics/japan-considers-internet-voting-for-citizens-overseas" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Japan considers internet voting for citizens overseas">NA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Wealthier areas must play their part in housing asylum seekers, Burnham suggests</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham suggested that wealthier areas of the UK should house more asylum seekers, telling GB News on Tuesday: “We cannot have a situation where it’s only the poorest communities in the country that receive all of the dispersal of refugees and asylum seekers.” He was answering a question about protests in Piddington, Oxfordshire, over plans to provide accommodation for asylum seekers on a nearby former military base. Shadow home secretary Chris Philp responded: “We shouldn’t be housing illegal immigrants anywhere – wealthy or not.”</p>
+<p>The Home Office has sought to use military sites across the country to house migrants instead, and in June announced plans to open three more, including a site in Bicester, Oxfordshire. Those plans prompted protests there, with residents of nearby Piddington voting to stage a symbolic referendum on leaving the UK. Burnham said he would listen to and address the concerns being raised, adding that he believed all parts of the country needed to “play their part.”</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c204d4z1gg8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Wealthier areas must play their part in housing asylum seekers, Burnham suggests">BBC #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="cnn">
+  <summary>‘Brand-new everything’: How data centers transformed this small town’s economy</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Quincy, Washington, has turned data-center tax revenue into brand-new schools, parks and utilities, but the same boom has also made the once-cheap farming town more expensive for many local workers.</p>
+<p>A few weeks ago, the city opened a $15 million aquatic center with a six-lane pool, waterslides and a lazy river, part of a public parks spending spree that will culminate next year with the Q-Plex, a 143,000-square-foot indoor sports complex. The town also has a $120 million state-of-the-art high school, along with improved hospital, library, police and fire stations, paved sidewalks, sewage systems and a wastewater treatment plant. Roughly 30 data centers now shoulder an estimated 57% of Quincy’s property taxes, helping pay for what city leaders describe as a civic overhaul.</p>
+<p>The change has been years in the making. Microsoft bought 75 acres of bean fields in 2006 to build a 500,000-square-foot data center, drawn by Quincy’s cheap power from two public hydroelectrical plants on the Columbia River. Yahoo, Dell and Intuit later clustered there too. The town’s data centers have created around 900 jobs for engineers, pipefitters and electricians, and Washington State analyses say each of those jobs generates four to six more in construction, retail and local services. Former city administrator Pat Haley called the result the “Quincy miracle,” saying the centers “opened up what could have been a low-opportunity town into this place with brand-new everything.”</p>
+<p>But Quincy is still a farming town, producing potatoes, apples and alfalfa, and food processors such as Lamb Weston remain among its biggest employers. For many mostly Hispanic agriculture and food-processing workers, the boom has not felt equal. Home prices have roughly doubled over the last decade, rising faster than incomes, and Quincy still lacks enough apartments and rentals. The city recently approved a zoning code change to make it easier to build rentals for low- and middle-income households. Nina Martinez of the Latino Civic Alliance said, “Families have been pushed out,” adding that “no average farmworker or agricultural worker can afford it.”</p>
+<p>The Quincy story comes as data centers for artificial intelligence face bans and pushback in other places, including nearby parts of Washington, over worries about electricity bills, pollution and jobs. In Quincy, officials say residential power rates have risen, but large industrial customers such as data centers are paying more, and the centers use about 8% of the city’s water supply.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/11/business/data-centers-ai-economy" target="_blank" rel="noopener noreferrer" title="CNN / ‘Brand-new everything’: How data centers transformed this small town’s economy">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="cna">
+  <summary>What happens when those who hurt their families seek help</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">When Andrew’s wife left their home a week before Chinese New Year, he was left caring for four children after years of shouting, fear in the car and escalating conflict — and then sought help, raising the question of whether harmful family behavior can be changed before relationships break for good.</p>
+<p>Andrew said the housework was never “up to standard” for him, and he grew unhappy when the home was “a little untidy”. He also blamed his wife when their children’s grades fell, and became angry about how she handled the family’s finances and rental property. Arguments in the car were worse: at times, he drove recklessly to frighten her, nearly crashing into another vehicle. When she left, he tried to get her to come back, but she told him he needed to change.</p>
+<p>At a loss, he went to social workers at the non-profit Fellowship of Men, where he learned to recognise his harmful behaviour and manage his emotions. Six months later, his wife had not moved back. The case sits within a broader pattern that family service centres and frontline specialists say they are seeing more often: parents and spouses coming forward for help over their own abusive or harmful behaviour.</p>
+<p>The Ministry of Social and Family Development said its latest domestic violence trends report showed 5,787 new low- to moderate-risk abuse cases in 2024, up 14 per cent from 2023. New spousal abuse cases rose from 2,008 to 2,136. The ministry said self-referrals made up a significant portion of cases handled by family service centres, though it does not track how many child abuse or spousal abuse cases involved people who voluntarily sought help for their abusive behaviour.</p>
+<p>Frontline workers said the point of contact is often a crisis, but not always the end of the story.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/domestic-abuse-family-violence-self-reporting-seeking-help-6311901" target="_blank" rel="noopener noreferrer" title="CNA / What happens when those who hurt their families seek help">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="scmp">
+  <summary>US faults China over opaque overseas lending, warns of emerging-market debt risks</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The United States stepped up scrutiny of China’s overseas lending, warning that a lack of transparency around Chinese loans could raise the risk of unexpected defaults and debt restructuring in emerging markets. In its 2026 Fiscal Transparency Report, released on Tuesday, the US State Department said China had failed to meet minimum transparency requirements, citing deficiencies in both its domestic finances and the disclosure of claims against foreign borrowers.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/diplomacy/article/3363707/us-faults-china-over-opaque-overseas-lending-warns-emerging-market-debt-risks" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US faults China over opaque overseas lending, warns of emerging-market debt risks">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="axios">
+  <summary>U.S. economy&#x27;s K-shaped gap narrows</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The gap between higher- and lower-income Americans’ spending is narrowing after years in which the U.S. economy was described as “K-shaped,” with richer households spending quickly while everyone else lagged. Bank of America calls the shift the “great convergence,” saying spending and wage growth among its customers have converged across income groups since May. Its data show spending growth among lower-income households at 5.4% year over year, slightly above the 4.9% rate for middle-income households. Lower-income Americans’ after-tax wages also rose 5.2% in July from a year earlier, surpassing the wage growth rate for higher-income households for the first time since December 2024.</p>
+<p>PNC said Monday that the gap between spending growth among its richest and poorest account holders narrowed to 0.1 percentage point in July, from a peak of 5 percentage points last year. The bank said the change largely reflects an improving labor market, with more lower-income households working and collecting paychecks. JPMorgan Chase chief financial officer Jeremy Barnum told investors last month that there was “not like that much there” to support the K-shape narrative, while Treasury Secretary Scott Bessent said last week that “the K-shaped economy is over.”</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/11/spending-growth-income" target="_blank" rel="noopener noreferrer" title="Axios / U.S. economy&#x27;s K-shaped gap narrows">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="yonhap">
+  <summary>(LEAD) S. Korea adds 108,000 new jobs in July; manufacturing employment remains weak</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Korea added 108,000 jobs in July from a year earlier, but the headline gain masked continued weakness in manufacturing and a sharp deterioration in youth employment, leaving the labor market with a split picture.</p>
+<p>Government data released Wednesday showed the number of employed people reached 29.13 million in July, up from 29.02 million a year earlier. Job growth had turned positive again in June, when employment rose by 63,000 after a decline of 40,000 in May, the first drop in 17 months. The country’s jobless rate stood at 2.6 percent in July, up 0.2 percentage point from a year earlier, while the number of unemployed people totaled 776,000, an increase of 50,000.</p>
+<p>The broader labor market was steadier for prime-age workers. The employment rate for people aged 15 to 64 came to 70.3 percent, up 0.1 percentage point from a year earlier. For South Koreans aged 65 and above, the employment rate rose 0.8 percentage point to 41.5 percent. But the picture for younger workers moved the other way: the employment rate for those aged 15 to 29 fell 1.6 percentage points to 44.2 percent, declining on-year for the 27th consecutive month. The number of employed people in that age group fell by 191,000, marking the 45th straight month of decline, while the youth unemployment rate rose 1.3 percentage points to 6.8 percent, the largest on-year increase in more than five years.</p>
+<p>Sector trends also diverged. Jobs in health and social welfare services increased by 173,000, arts, sports and recreation-related services added 48,000 jobs, and public administration gained 46,000. Manufacturing remained the weak spot: employment in the sector fell by 68,000 in July from a year earlier, marking the 25th consecutive month of decline, though the drop narrowed from 97,000 in June. The number of economically inactive people also rose by 99,000 to 16.1 million, while those who said they were not working and were simply resting fell by 62,000 to 2.51 million.</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20260812001551320" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (LEAD) S. Korea adds 108,000 new jobs in July; manufacturing employment remains weak">YNA #1</a><a href="https://en.yna.co.kr/view/AEN20260812001500320" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / S. Korea adds 108,000 new jobs in July; manufacturing employment remains weak">YNA #2</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="cnn">
+  <summary>Nvidia and Wall Street team up on $500 billion bet on AI infrastructure</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nvidia said on Monday it had signed a preliminary agreement with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to help raise more than $500 billion for lending tied to AI infrastructure. The plan is meant to let customers borrow more than half a trillion dollars to build out AI compute, with Nvidia CEO Jensen Huang calling AI compute an “investable asset class” and describing it as “AI factories.” Huang said the shift marks a move from companies buying chips and building data centers project by project to financing AI factories as productive infrastructure.</p>
+<p>The future financing platforms are partly intended to make it easier for smaller start-up AI companies to borrow money to buy compute, the processing power used to train and build their models. Apollo President Jim Zelter said “modern compute” had become a scarce, mission-critical asset class with compelling investment characteristics. Nvidia, which makes chips and other hardware used in many tech companies’ AI models, has seen its stock more than quadruple since the start of 2024 to a market valuation of $5.3 trillion, even as investors have grown nervous about heavy debt-financed investment in the sector and about circular deals that may artificially inflate AI demand.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/11/business/nvidia-wall-street-500-billion-financing-intl" target="_blank" rel="noopener noreferrer" title="CNN / Nvidia and Wall Street team up on $500 billion bet on AI infrastructure">CNN #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>In-Context Learning with Recurrent Latent Reasoning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">BDH-CQ, a reasoning model combining in-context learning with recurrent latent reasoning, was introduced in the preprint *In-Context Learning with Recurrent Latent Reasoning*. The model updates recurrent memory from inference-time inputs and solves queries through iterative computation in a high-dimensional latent space without verbalizing intermediate reasoning. It was evaluated on the public ARC-AGI-1 set and with controlled ARC-like interventions. A 150M-parameter configuration reached 29.5% pass@2 at a computed inference cost of $0.0007 per task, which the authors say sets a new cost-efficiency state of the art on that benchmark.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.09888v1" target="_blank" rel="noopener noreferrer" title="arXiv / In-Context Learning with Recurrent Latent Reasoning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Macaron-V1 preprint describes an open agent-model family for experiential intelligence, built to learn from experience in real environments and keep learning after deployment. It says the system is organized around two goals: adaptation through recursive improvement of versioned model-harness pairs, and collaboration through the Mixture-of-LoRA (MoL) architecture, which freezes a base model, composes specialist LoRA adapters, and selects one LoRA per user turn. The flagship Macaron-V1-Venti pairs a 744B GLM-5.2 base with four LoRAs for chat, agent, coding, and GenUI, while Macaron-V1-Tall uses a Qwen3.6-based 50B design for local deployment.</p>
+<p>The preprint presents Macaron-V1 as a co-designed system spanning architecture, algorithms, and infrastructure. It includes the UI4A component-native GenUI harness, a stateful action substrate, a versioned HCP contract, the agentic RL framework MindForge, the post-training platform MinT, the long-context RL method LongStraw, and stability techniques for sparse MoE and DSA base models. The authors say they evaluated Macaron-V1 on Personal Intelligence, GenUI, and general capability benchmarks against frontier baselines, and that the results validate the current system while leaving compounding gains from continual learning and collective intelligence as open questions.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.09819v1" target="_blank" rel="noopener noreferrer" title="arXiv / Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced SWE-Bench ProMax, a multilingual code refactoring benchmark with 170 instances drawn from real commits across seven programming languages: Python, Java, TypeScript, Go, C, C++, and Rust. The work is aimed at testing AI coding agents on larger, longer-horizon software engineering tasks, which the authors say are not well covered by current benchmarks. They report that the benchmark was built to make refactoring tasks more realistic and more difficult than existing sets.</p>
+<p>Each instance went through multi-stage curation: issue descriptions were rewritten from scratch for precise specifications, and test suites were manually reviewed to remove overly narrow and overly broad tests. Tasks with insufficient complexity or limited cross-file scope were filtered out, leaving problems that average 11.4 modified files and 261.6 lines of code per instance. In experiments with frontier models under two agent scaffolds, the best model reached a 41.2% resolve rate. The benchmark is available on Hugging Face.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.09802v1" target="_blank" rel="noopener noreferrer" title="arXiv / SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Ouroboros: A Self-Developing Frontier Coding Agent with Reviewed Core Evolution</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers presented Ouroboros, a self-developing coding agent harness whose tools, prompts, context assembly, and core implementation improve through reviewed commits that later become runtime for subsequent work. The system’s core evolution has two modes: recursive free evolution, where completing one evolution cycle can schedule the next, and experience-driven core evolution, where ordinary work and social interaction expose bugs, rough edges, and inefficient context construction that lead to reviewed structural changes. In reported benchmark runs, Opus 5 scored 86.74% on Terminal-Bench 2.1, reached 90.69% on OSWorld-Verified, and a five-rollout CL-Bench campaign achieved a normalized reward of 0.2301.</p>
+<p>Hope is described as the longest-running publicly documented Ouroboros deployment: a 161-day living agent experiment in free evolution under governed human communication across seven surfaces. The paper says human interaction surfaces faults and generates proposals, while the agent decides which changes to pursue. It also says operational safety is a primary design problem because a self-developing agent may rewrite its own code and select new model APIs, so guardrails must remain authoritative under evolutionary and public social pressure.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.08311v1" target="_blank" rel="noopener noreferrer" title="arXiv / Ouroboros: A Self-Developing Frontier Coding Agent with Reviewed Core Evolution">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>On-Policy Self-Distillation without Any Supervision</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced unsupervised on-policy self-distillation, or U-OPSD, for post-training large language models, arguing that on-policy self-distillation can be done using only a model’s own generations rather than ground-truth signals, environmental feedback, or guidance from larger models. The preprint says the method uses internal consistency to build a pseudo solution from multiple rollouts by majority vote under a self-consistency threshold, then distills on the completions that disagree with that pseudo solution.</p>
+<p>Across diverse benchmarks, base models, and training settings, the method is said to improve over the base models and to match or surpass supervised methods with ground truth such as OPSD and GRPO. On five mathematical reasoning benchmarks — AIME24, AIME25, HMMT25, MATH500, and AMC23 — U-OPSD is reported to improve over the base model by 8.5% and 10.7% on Qwen3 non-thinking mode at 4B and 8B scales, and to outperform OPSD by 3.2% and 2.3% on average, respectively. In thinking mode, it is said to stay on par with OPSD, ahead by 0.9% at 4B and level at 8B, while surpassing GRPO by 0.7% and 1.1%.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.06296v2" target="_blank" rel="noopener noreferrer" title="arXiv / On-Policy Self-Distillation without Any Supervision">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Motif 3: Technical Report</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Motif 3 is introduced as a decoder-only Mixture-of-Experts language model with 314 billion total parameters and 13.2 billion activated per token. Each sparse MoE layer contains 384 routed experts, with eight selected per token. The model is built around Grouped Differential Latent Attention (GDLA), which combines grouped differential attention with the compressed key-value representation of Multi-head Latent Attention. It also incorporates modified manifold-constrained hyper-connections, Expert Specific PolyNorm activations, and multi-token prediction.</p>
+<p>It is pretrained on approximately 12.5 trillion tokens covering web documents, STEM, code, mathematics, multilingual content, and domain-specialized corpora. Training uses expert-balancing and numerical-stabilization techniques, plus selective MXFP8 computation and communication, memory-efficient fused kernels, and window-aware context parallelism to support context lengths up to 256K tokens. The post-training pipeline combines general supervised fine-tuning, six specialist teachers trained with reinforcement learning, a software-engineering teacher trained with supervised fine-tuning, and Multi-teacher On-Policy Distillation. The resulting model is described as consolidating reasoning, coding, tool use, professional work, long-context understanding, calibrated abstention, and instruction following, with competitive results on leading open weight model benchmarks.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.09119v1" target="_blank" rel="noopener noreferrer" title="arXiv / Motif 3: Technical Report">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Stealing Reasoning Traces from Proprietary LLM APIs</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers described a vulnerability in proprietary large language model APIs that hide step-by-step reasoning, or chain-of-thought, by returning it to clients as encrypted text blocks that are sent back with later requests. They said those blocks were fully compatible and interchangeable across different sessions, users, and models within a provider’s ecosystem, and used that compatibility to build a scalable decryption jailbreak. By injecting an encrypted reasoning trace from one model into a weaker model from the same provider, they said they could make it decode and output the trace verbatim in plaintext without directly jailbreaking the stronger model.</p>
+<p>The preprint says the flaw creates four attack vectors. It said the method can bypass anti-distillation protections and extract proprietary reasoning across Anthropic, OpenAI, and Google; enable large-scale private data extraction; reveal hazardous information hidden in the reasoning process even when the visible answer refuses a malicious request; and support invisible prompt injections inside encrypted blocks. The authors said developers often share session logs publicly without knowing what the encrypted blocks contain, and that decoding 315,320 reasoning blocks from public repositories recovered 367 Personally Identifiable Information artifacts and 182 credentials. They said they disclosed the issue responsibly and proposed cryptographic and system-level mitigations.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.09867v1" target="_blank" rel="noopener noreferrer" title="arXiv / Stealing Reasoning Traces from Proprietary LLM APIs">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Agent Memory Distillation: Empowering Small LLM Agents with Hierarchical Teacher Memory</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Agent Memory Distillation (AMD) is a training-free framework for small LLM agents that transfers structured knowledge from a large teacher agent through hierarchical memory. The preprint says memory systems have shown promise for agent performance, but small language models still struggle to generate enough successful trajectories on their own. AMD builds three memory types from successful teacher trajectories: Workflow memory for task-level strategies, Subtask memory for intermediate behavioral examples, and Function memory for function-calling conventions and common pitfalls. Workflow and Subtask memories are injected at the start of each task, while Function memory is retrieved when tool-calling errors occur.</p>
+<p>The study evaluates AMD on three tool-use benchmarks with four student models sized 4B to 8B parameters and GPT-5-mini as the teacher. It reports average accuracy gains of 27.2%p on AppWorld, 11.2%p on BFCL V3, and 3.4%p on ToolSandbox, and says AMD consistently outperforms existing memory-based baselines. Further analysis says Subtask memory contributes the largest gains, teacher effectiveness depends on both teacher capability and student compatibility, and 4B-sized students benefit most from AMD.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.07169v1" target="_blank" rel="noopener noreferrer" title="arXiv / Agent Memory Distillation: Empowering Small LLM Agents with Hierarchical Teacher Memory">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>How escalating costs scuppered a radio telescope at Joddrell Bank</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">50 years ago Access Nature and 54 other Nature Portfolio journals Get Nature+, our best-value online-access subscription $32.99 / 30 days cancel any time Subscribe to this journal Receive 52 print issues and online access $199.00 per year only $3.83 per issue Rent or buy this article Prices vary by article type from $1.95 to $39.95 Prices may be subject to local taxes which are calculated during checkout Nature 656, 302 (2026) doi: https://doi.org/10.1038/d41586-026-02380-0 This article features text from Nature ’s archive. For architecture or training, china Shenzhen Institutes of Advanced Technology (SIAT), Chinese Academy of Sciences（CAS) Postdoctoral positions at University of California, San Francisco in the Ma lab are available for highly motivated candidates with PhD training in... A useful reading is that the contribution is strongest as a model-design claim, and its broader meaning depends on independent replication and comparison against strong baselines. The work carries weight because it makes a training or optimization claim that could change how comparable models are built and evaluated.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02380-0" target="_blank" rel="noopener noreferrer" title="Nature / How escalating costs scuppered a radio telescope at Joddrell Bank">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>The forgotten 20 million: why is the world neglecting Afghanistan’s girls and women?</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Five years after the Taliban returned to Kabul, Afghanistan’s girls and women are still being pushed out of education, work and public life, even as many governments deepen ties with the Taliban without demanding rights gains.</p>
+<p>Girls in Fayzabad can still go to primary school until they are 11 or 12, but they are barred from secondary school and university. Nearly four years after the bans on secondary and higher education and on most forms of employment, women are also barred from public-sector appointments. One female Afghan academic told researchers, “It’s like we’re at a crossroads; all the paths are dark.”</p>
+<p>When the Taliban took power in August 2021, its leadership verbally promised girls and women would not be excluded from education and workplaces. But the reality has moved in the opposite direction. Nature said the trend is now unmistakable: conditions for girls and women have worsened over the past five years, and the international community has let more than 20 million women and girls slip from view.</p>
+<p>The scale is large. Since 2021, around 2.4 million girls have been excluded from secondary education and more than 100,000 young women have been unable to access higher education, according to UNESCO. Some women still work in limited roles, including health care and humanitarian aid, but they do so at great risk. Restrictions have continued to mount: women were stopped from entering UN facilities last September, the Baran Health Sciences Institute in Bamiyan closed in May, and Afghan universities were told to stop teaching 680 books by women or by authors from Western countries or Iran and to drop subjects including gender studies, women’s rights and democracy.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02454-z" target="_blank" rel="noopener noreferrer" title="Nature / The forgotten 20 million: why is the world neglecting Afghanistan’s girls and women?">Nature #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
