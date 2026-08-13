@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-13</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-13</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="bbc">
+  <summary>Major Russian grain export terminals hit in Ukraine Black Sea port attack</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Ukrainian drone and missile barrage on Russia’s Black Sea port of Novorossiysk damaged two major grain export terminals, hit a key naval hub and killed at least three people, raising fresh questions about how Russia will keep grain moving through a port now under repeated attack.</p>
+<p>The overnight strike also injured another 24 people, local officials said, and sent explosions across the city as air defences shot down aerial objects. An emergency situation was declared in Novorossiysk on Wednesday after the barrage damaged pipelines and suspended the city’s water supply.</p>
+<h3>Damage at Novorossiysk</h3>
+<p>Novorossiysk matters because it is one of Russia’s largest ports and now hosts most of Russia’s Black Sea fleet after the ships were moved from Sevastopol, in Russia-occupied Crimea, which Moscow had judged too exposed to Ukrainian attacks. Reports said the strike damaged two major grain export terminals and hit the last big Russian naval base on the Black Sea.</p>
+<p>A major grain trading company confirmed to Russia’s TASS news agency that its terminal had been hit, while another told Reuters and Russian outlet RBK the same. Repeated explosions reportedly rang out over Novorossiysk throughout the night as air defences shot down aerial objects, and regional governor Veniamin Kondratyev said a man was also killed by drone debris elsewhere in Krasnodar region.</p>
+<p>Kondratyev added that several locations in the surrounding region were struck by “several hundred drones” overnight, with dozens of buildings damaged, including homes. He said the attack damaged areas around the port and pipelines, and forced the suspension of water supply in the city.</p>
+<h3>Competing claims over the strike</h3>
+<p>Volodymyr Zelensky said Kyiv had launched rockets, jet and naval drones in a “unique operation” to strike the Russian base, though he did not mention grain terminals being hit. In a post on social media, he said: “The occupying fleet and all the infrastructure that supports it will not be safe as long as Russian aggression continues.”</p>
+<p>Ukraine’s military later said four Russian warships, including two frigates, were hit. Russia, meanwhile, has not commented on the issue.</p>
+<p>The claims underline how the strike touched both military and commercial infrastructure. The port is not only a naval foothold but also a major grain-export hub, and the reported damage to terminals adds pressure on a trade route that Moscow relies on for shipments from one of the world’s biggest wheat exporters.</p>
+<h3>Grain exports and the wider Black Sea fight</h3>
+<p>On Wednesday, the Russian agriculture ministry said it was working to redirect cargo flows to ports in the Baltic and Caspian Seas as well as land routes. It did not mention Ukraine’s attacks, but said it was “taking into account current logistical constraints.”</p>
+<p>The timing is significant because the Black Sea has again become a contested route for grain and shipping. After a period of relative calm, Kyiv and Moscow have resumed striking one another’s ports and shipping over the course of this summer. The last remaining sea route out of Ukraine has also been badly affected by Russian strikes on cargo ships and the port of Odesa.</p>
+<p>The wider economic stakes are substantial. In July, the Ukrainian Agribusiness Club said exports had fallen 23%. A Moscow-based analytics company said Russian exports for August could fall by more than half compared with the same month over the last five years because of disruption in the Black and Azov seas. Russian foreign ministry spokeswoman Maria Zakharova accused Ukraine of striking Russian grain and agricultural infrastructure and said this was driving up global food prices and grain shortages.</p>
+<p>Russia and Ukraine together account for a significant share of global grain trade, especially for buyers in North Africa, the Middle East and parts of Asia. That is why damage to terminals, ports and shipping routes around Novorossiysk is more than a local security issue: it also feeds directly into the struggle over whether grain can keep moving across the Black Sea.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Major Russian grain export terminals hit in Ukraine Black Sea port attack">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="cnn,scmp">
+  <summary>Colombia quake death toll hits 265, as rescuers race against the clock</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">major supplement</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 7.4-magnitude earthquake in western Colombia has killed at least 265 people and set off a race to find survivors, with rescuers still pulling people from collapsed buildings while a dramatic rescue in Cali showed how thin the margin between life and death remains.</p>
+<h3>A whisper under the rubble</h3>
+<p>Brian Osorio Zuluaga was riding home on his motorbike after the quake struck on Monday when he stopped at the sight of a collapsed five-story residential building in Cali. He described the site as “a large complex, covering an entire block,” and said residents and neighbors of La Torres del Limonar fled into the street, some in sleepwear or pajamas, others crying or in shock.</p>
+<p>Osorio said he went toward the rubble and shouted for survivors despite warnings about a possible gas leak. Then he asked everyone around him to be silent. A faint sound came from the debris — “I’m with a baby,” a man’s voice replied. Osorio said he and several others began moving debris by hand, but a large concrete slab blocked the way. “On the first attempt, we couldn’t lift it,” he said. They lifted it together on a second try, making a path to the baby.</p>
+<p>Osorio said the infant’s head looked purplish because he could not breathe, but his color began to return once the rubble was cleared. The baby was then handed to a police officer and taken to an ambulance. A man, still half-trapped under a concrete plank, remained in the wreckage as rescuers shifted to freeing him. Osorio said the rescue was possible because many people acted together: “Unity is strength,” he said. “It’s better to act than to stand still.”</p>
+<h3>Search teams race through the hardest-hit cities</h3>
+<p>The wider rescue effort entered its third day on Wednesday as emergency crews kept digging through the remains of buildings in Cali, Pereira, Manizales and Quibdo. In Pereira, rescuers pulled Daniela Largo alive from the rubble late on Tuesday after what was described as a complex 12-hour operation, with crews carving a small opening to free her pinned arm and a doctor giving her IV fluids before she was carried to an ambulance. In the same city, another man was pulled out lifeless, covered with a white blanket.</p>
+<p>Authorities said the earthquake has caused enormous human loss and continuing uncertainty. President Abelardo de la Espriella said at least 265 people had died. He also said nearly 500 people were reported missing, though civilian-run databases put the number at more than 4,100. De la Espriella said more than 25,800 families were affected, and told journalists in Bogotá, “Our efforts are focused on the disappeared.”</p>
+<p>The search is taking place under pressure from time and damage. Aid agencies consider the first 48 to 72 hours crucial for finding survivors, and Cali mayor Alejandro Eder said rescue teams were still finding signs of life under the rubble. “The next 20 hours are the most critical to find and rescue people alive,” he said. “Every minute is vital.”</p>
+<h3>Aid arrives, but some places are still out of reach</h3>
+<p>Tonnes of aid from regional partners began rolling into Colombia on Wednesday as the destruction widened beyond collapsed buildings to buckled roads and crushed cars. Authorities converted sports arenas, schools and other public buildings into shelters for thousands of displaced people. In Pereira and Cali, families were sleeping in parks, some because they feared aftershocks or the collapse of damaged homes, others because they had nowhere to return.</p>
+<p>The earthquake also exposed how uneven the response is in the country’s remote areas. In Chocó, which was described as the epicenter, an indigenous leader told CNN that help had not yet reached the area. Victor Chamapuro, leader of the Wounaan Indigenous Reserve “Buenavista” in Chocó’s Litoral del San Juan, said, “All our houses are on the ground.” He said people were sleeping outside and asked authorities for food and medicine. The reserve can only be reached by boat in a five-hour journey from the port of Buenaventura.</p>
+<p>Colombia’s geological service has documented 130 aftershocks since the quake, adding to the anxiety in damaged areas. While aid from abroad continued to arrive and rescue workers kept searching, the main question remained whether more people could still be found alive in the rubble — and how long the most isolated communities would have to wait for help.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/12/americas/colombia-earthquake-baby-rescue-intl-hnk" target="_blank" rel="noopener noreferrer" title="CNN / A whisper from the rubble led to baby’s rescue after Colombia earthquake">CNN #1</a><a href="https://www.scmp.com/news/world/americas/article/3363836/colombia-quake-death-toll-hits-265-rescuers-race-against-clock" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Colombia quake death toll hits 265, as rescuers race against the clock">SCMP #1</a><a href="https://www.scmp.com/news/world/americas/article/3363727/colombian-woman-pulled-alive-rubble-earthquake-death-toll-tops-200" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Colombian woman pulled alive from rubble as earthquake death toll tops 200">SCMP #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="cnn">
+  <summary>Millions of adults in the US should be taking blood pressure-lowering medication</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Millions of U.S. adults with untreated high blood pressure could qualify for medication under updated heart-disease risk guidelines, and a new analysis says the change could prevent thousands of deaths, though how many people are affected depends on which risk tool doctors use.</p>
+<p>Published July 29 in the *Journal of the American Heart Association*, the study analyzed National Health and Nutrition Examination Survey data from 2009 to 2018 and asked how death rates might have changed if the 2025 hypertension guidelines had been applied during those years, lead author Dr. Mustafa Al-Jarshawi said.</p>
+<p>At the center of the finding is a broader definition of who should be treated. Nearly 1 in 3 adults in the United States with untreated high blood pressure would benefit from treatment and are not getting it, the study found. Nearly 10 million Americans now meet newly updated guidelines by the American Heart Association and American College of Cardiology that redefine an adult’s cardiovascular risk.</p>
+<h3>How eligibility is shifting</h3>
+<p>Doctors have traditionally wanted blood pressure below 120 mmHg systolic and 80 mmHg diastolic. When readings are around 130/80, they have typically advised lifestyle changes such as increasing exercise. But the new American Heart Association PREVENT tool goes further, considering blood sugar, kidney function and a person’s decade-long risk for heart disease as well as blood pressure.</p>
+<p>Using that tool, some 81 million Americans would be eligible for blood pressure medications. Dr. Andrew Freeman, director of cardiovascular prevention and wellness at National Jewish Health in Denver, said that means “people who have traditionally not been at very high risk are now eligible to be treated with medications more aggressively.” He added that when people have additional risk, “blood pressure is really the silent killer.”</p>
+<p>The study’s numbers narrow the issue further. Among 81 million adults with high blood pressure and no cardiovascular disease, nearly 23 million may be newly eligible under the new guidelines. Of those 23 million, 9.7 million were untreated.</p>
+<h3>What the study estimated</h3>
+<p>Al-Jarshawi said the study estimated that about 200,900 all-cause deaths and 162,600 cardiovascular deaths could be prevented over the next 10 years. It also found that becoming eligible to receive blood pressure medication was associated with a 23% lower risk of dying compared with no treatment, and a 50% lower risk of dying from a heart-related issue.</p>
+<p>Adults with diabetes appeared to benefit the most from treatment. The study said that was because diabetes and high blood pressure often occur together, which significantly increases cardiovascular risk.</p>
+<p>The researchers also framed the work as a look at what might happen if the 2025 hypertension guidelines had been used during the years covered by the survey data. Newer data is available, but the most up-to-date version of the survey has not been available long enough for researchers to know participants’ cause and time of death.</p>
+<p>Al-Jarshawi said eligible people should not hesitate to start medication along with lifestyle changes to reduce long-term risks. Freeman said the findings highlight the need for physicians to watch for early signs of disease and consider blood pressure treatment even in younger people, because “we’re seeing a lot more young people now who have chronic disease and diabetes and other things that may be relatively mild, but still at risk.”</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/12/health/untreated-high-blood-pressure-wellness" target="_blank" rel="noopener noreferrer" title="CNN / Millions of adults in the US should be taking blood pressure-lowering medication">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,scmp">
+  <summary>Israeli air strike kills one in northern Gaza</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An Israeli air strike on Wednesday killed one person and wounded five others in northern Gaza, but the target of the strike remains disputed: Gaza’s civil defence said it hit civilians in a tuk-tuk, while the Israeli military said it was aimed at a Hamas commander planning attacks on Israeli forces.</p>
+<p>The strike hit a three-wheeled tuk-tuk near the Western Roundabout in Beit Lahiya, according to Gaza’s civil defence agency. The dead man was identified as Mohanad Saada, and his body was taken to al-Shifa Hospital in Gaza City along with five injured people. The central question in the accounts is whether the vehicle carried civilians or an armed target.</p>
+<h3>Competing accounts of the Beit Lahiya strike</h3>
+<p>Civil defence spokesperson Mahmoud Basal told AFP that Saada was part of a municipal maintenance team returning from repairing a water well damaged in earlier military operations. He also said that Israeli airstrikes and assassinations had “almost completely ceased for over a week,” before, as he put it, “the occupation resumed its aerial bombardment.”</p>
+<p>The Israeli military gave a different account. It said the operation targeted a Hamas commander who was actively planning attacks against Israeli forces, and said it had tried to reduce harm to civilians. South China Morning Post described the strike as Israel’s first air strike in Gaza in more than a week, after a relative lull.</p>
+<h3>More attacks in Gaza on the same day</h3>
+<p>The Beit Lahiya strike was not the only violence reported on Wednesday. Al Jazeera journalists in Gaza reported at least two other Israeli attacks: a quadcopter drone strike in Khan Younis in southern Gaza that wounded a father and critically wounded his son, and an artillery shelling attack near the Bureij refugee camp in central Gaza.</p>
+<p>The father of the critically wounded 13-year-old boy said his son suffered shrapnel wounds. He described walking after buying falafel when “something like a bomb” exploded. “People scattered. I found my son thrown on the ground, bleeding from his head,” he said, adding that there was shrapnel in the boy’s head and leg.</p>
+<p>The attacks came days after Israel said it rejected the latest version of US President Donald Trump’s plan to end the war in Gaza. Trump had announced a 15-point plan drafted by the Board of Peace, including the complete disarmament of Hamas and other armed groups in Gaza. Hamas said it backed the plan, but Israeli Prime Minister Benjamin Netanyahu formally rejected it on Sunday.</p>
+<p>Al Jazeera also said Israeli forces have continued ground-level shelling and drone attacks despite a recent reduction in heavy air raids following international diplomatic talks.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/12/israeli-air-strike-kills-one-in-northern-gaza?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Israeli air strike kills one in northern Gaza">AJ #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3363827/1-killed-israels-first-gaza-strike-over-week" target="_blank" rel="noopener noreferrer" title="South China Morning Post / 1 killed in Israel’s first Gaza strike in over a week">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Israeli militants besiege two Palestinian families in their West Bank homes</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two Palestinian families in Qusra, in the West Bank, have been trapped in their homes since the weekend as settlers and soldiers block access, cut off utilities and medical care, and Israeli forces say they are moving to lift the siege but have not yet removed the settlers.</p>
+<h3>The siege in Qusra</h3>
+<p>On Sunday afternoon, a group of settlers and soldiers set up a tent outside the home of Yousef Hassan, trapping him inside with his wife and two young daughters. Hassan’s mother, brother and sister, and three neighbours were also blockaded inside, and their power and water were cut off.</p>
+<p>Hassan said the settlers threw stones, used obscene language and shouted through the night. “We are living in a state of terror,” he said. The family also lost access to medical care: when his younger daughter, who is two, fell ill with vomiting and a high fever on Monday, settlers blocked an ambulance from reaching the house. The girls and their mother were eventually evacuated on Tuesday, but Hassan said they were short on food and relying on water and juice delivered by the ambulance.</p>
+<p>The blockade took place just metres from the spot where 28-year-old Amir Moatasem Odeh was killed by a settler in March. Another attacker stabbed his father. No one has been arrested over the murder and assault.</p>
+<h3>A wider pattern around nearby homes</h3>
+<p>Hassan said settlers have used the same pressure in Qusra before. They had also used similar tactics to take another Palestinian home in neighbouring Jalud village, driving the al Tubasi family out in July after a months-long siege.</p>
+<p>In Qusra, the settlers cut off water and electricity to the homes, though Hassan said a solar panel still allowed him to keep some devices charged. The military also blocked journalists from approaching the homes, while Israeli settlers were subject to the same orders but were not removed.</p>
+<h3>Israeli military moves, but the siege continues</h3>
+<p>On Wednesday morning, Gen Avi Bluth, the commander of Israeli forces in the region, visited the families and promised to lift the siege, according to an Israeli military spokesperson. Hassan confirmed the visit, but said it had not yet produced tangible results.</p>
+<p>Soldiers took the tent but not bedding and other possessions and withdrew after brief clashes with the settlers. “The settlers are still there in front of the house, and we are still unable to leave,” Hassan said. The military spokesperson said commanders were “gravely concerned” about the settlers’ actions and that soldiers who supported them would face disciplinary action, but gave no timeline for ending the siege.</p>
+<p>Later on Wednesday evening, chief of staff Eyal Zamir met senior commanders over the situation in Qusra and ordered a battalion of infantry reservists back from leave to reinforce troops in the West Bank. The military said it was working with police to bring “those responsible for the disturbances to justice.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/aug/12/israeli-militants-besiege-two-palestinian-families-in-their-west-bank-homes" target="_blank" rel="noopener noreferrer" title="The Guardian / Israeli militants besiege two Palestinian families in their West Bank homes">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="nikkei_asia">
+  <summary>Takaichi&#x27;s populist tax cut draws pushback from ruling party</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Japanese Prime Minister Sanae Takaichi is facing growing pushback within her ruling Liberal Democratic Party over her plan to slash the consumption tax on food. Opponents say the move is populist and argue there has been insufficient discussion of how the tax cut would be funded. The dispute comes as Takaichi, speaking in Tokyo, is under pressure from within her own party over the proposal.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/politics/takaichi-s-populist-tax-cut-draws-pushback-from-ruling-party" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Takaichi&#x27;s populist tax cut draws pushback from ruling party">NA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Andy burnham early prisoner release cobra meeting heatwave climate crisis labour conservatives reform latest news updates</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Yvette Cooper said NHS England should start planning for summer heatwaves in the same way it prepares every year for winter pressure, as she attended a Cobra emergency committee meeting this afternoon to discuss the extreme heat. In comments published in the Mirror, the health secretary said global heating means Britain will face heatwaves “with increasing frequency and increasing intensity,” and said the NHS faces extra pressure because of the heat. She also said some of the £6.75bn being spent on improving NHS buildings will fund air conditioning.</p>
+<p>Cooper said a report had put the death toll from the May and June heat at almost 3,000 excess deaths, and she said “more than 2,800 lives” were lost during those heatwaves. She said this year is on track to see the highest ever number of heat-related deaths, adding that the people most at risk in severe cold are also at risk in extreme heat, including older people, the youngest children and people with existing conditions.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/live/2026/aug/12/andy-burnham-early-prisoner-release-cobra-meeting-heatwave-climate-crisis-labour-conservatives-reform-latest-news-updates?page=with%3A6a7c74198f088792503ea9b0#6a7c74198f088792503ea9b0" target="_blank" rel="noopener noreferrer" title="The Guardian / Andy burnham early prisoner release cobra meeting heatwave climate crisis labour conservatives reform latest news updates">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,middle_east_eye">
+  <summary>US strikes in Yemen killed 153 civilians in 2025, says Pentagon review</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Pentagon review sent to Congress says US strikes on Yemen’s Houthis killed 153 civilians and wounded 243 last year, with all recorded civilian harm tied to three April attacks and the final toll still able to rise.</p>
+<p>The unclassified assessment was disclosed by a US official on Tuesday, and it marked a sharp jump from 2024, when the Pentagon assessed that US military operations killed two civilians and injured two others. The wider US campaign against Houthi targets began in 2023 under former President Joe Biden after the group started launching drones and missiles at commercial ships in the Red Sea.</p>
+<h3>The April strikes behind the figures</h3>
+<p>The review pointed to three strikes in April as the source of the year’s civilian deaths and injuries. One account said the targets were Houthi forces in and around the rebel-held capital, Sanaa, as well as the Ras Isa fuel port. Another account described a 6 April strike on Sanaa that killed five civilians and wounded 25, a 17 April attack on Hodeidah that killed at least 80 civilians, and a late-April strike in Saada that killed at least 68 African migrants.</p>
+<p>The supplied accounts do not use the same place name for the deadliest strike. One says the Ras Isa attack was the worst, with 80 killed and 171 injured; another says the deadliest mid-April attack was on Hodeidah, with at least 80 civilian deaths. The aftermath was described as huge fireballs in the sky, tanker trucks burning at the port, and later footage on the Houthis’ Al-Masirah channel showing bodies scattered across the site.</p>
+<h3>CENTCOM’s justification and the review’s conclusion</h3>
+<p>US Central Command said at the time that the April attack was meant to cut off a source of fuel and revenue for the Houthis. “The strike was not intended to harm the people of Yemen,” CENTCOM said, adding that US forces were acting to deprive the group of “illegal revenue” that had funded its efforts for years.</p>
+<p>The Pentagon review nevertheless said the three strikes “more likely than not” caused civilian harm, based on US intelligence, imagery and open-source reporting. It also said condolence payments to victims or their families were not appropriate, though it did not explain why.</p>
+<h3>More incidents are still under review</h3>
+<p>The assessment did not close out the issue. As of February, CENTCOM was reviewing another 15 incidents after nongovernmental organisations reported possible civilian casualties, so the overall toll from the US campaign in Yemen could still change.</p>
+<p>The review was also described as part of the Pentagon’s annual report on civilian casualties, with a Pentagon official saying the department would formally submit it in the coming months.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/12/us-strikes-in-yemen-killed-153-civilians-in-2025-says-pentagon-review?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US strikes in Yemen killed 153 civilians in 2025, says Pentagon review">AJ #1</a><a href="https://www.middleeasteye.net/news/pentagon-tells-congress-us-killed-153-civilians-yemen-air-strikes" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Pentagon tells Congress US killed 153 civilians in Yemen air strikes">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Morocco says working to prevent potential new Ceuta crossings surge</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Morocco said it is stepping up security to stop more people from crossing into Spanish-administered Ceuta after what officials described as a new social media disinformation campaign calling for mass attempts to enter. On Wednesday, Morocco’s Ministry of Interior said it had increased security along its borders with the Spanish exclaves Ceuta and Melilla, and said legal proceedings would be taken against people spreading online posts encouraging irregular migration. The ministry said it had detected publications and anonymous messages online “inciting the organisation of collective, illegal crossing attempts” towards Ceuta, and spokesman Rachid El Khalfi said “all the necessary measures were taken” to counter illegal passage and intercept anyone seeking to take part.</p>
+<p>The ministry said the posts had circulated over the past week and claimed the Fnideq-Ceuta crossing would be open on August 15, a public holiday in Spain. The warning follows a late-July surge in which approximately 72,000 people from Morocco crossed into Ceuta irregularly, most of them by sea over a few days. On August 7, Morocco sentenced seven Moroccan taxi drivers to up to six months in prison and fined each $1,070 for driving people to the border.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/12/morocco-says-working-to-prevent-potential-new-ceuta-crossings-surge?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Morocco says working to prevent potential new Ceuta crossings surge">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Former Mexican governor charged in case of 43 students who vanished in 2014</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Former Guerrero governor Ángel Aguirre was formally charged on Wednesday over his alleged role in the disappearance of 43 students in 2014. A judge said Mexico’s attorney general had presented enough evidence to charge him with forced disappearance and ordered him held in a maximum security prison awaiting trial. The accusations include obstruction of justice and ordering the destruction of surveillance tapes that may have shed light on what happened to the Ayotzinapa teacher-training college students on the night of 26 September 2014. Aguirre’s lawyer denied wrongdoing.</p>
+<p>The case remains unresolved more than a decade later: only three students’ remains have been identified, and it is still not known what happened to the other 40. The students had commandeered several buses in Iguala to travel to a protest in Mexico City when they were attacked by a local criminal gang working with municipal police. A years-long international investigation also determined that federal police and military forces were involved either by participating directly or by failing to intervene. Aguirre’s indictment is described as the biggest breakthrough in the Ayotzinapa case since the 2022 arrest of Jesús Murillo Karam.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/aug/12/former-mexican-governor-charged-in-case-of-43-students-who-vanished-in-2014" target="_blank" rel="noopener noreferrer" title="The Guardian / Former Mexican governor charged in case of 43 students who vanished in 2014">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Colon cancer is increasingly common in Mexico: experts</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Colon and rectal cancer has grown substantially in Mexico over the last 15 years, and experts said it is already among the five most frequent malignant tumors in the country, with about 15,000 new cases a year and more cases in people under 40. Specialists who took part in the Surgical Excellence Forum organized by Medtronic in Guadalajara said the disease is a challenge for the national health system, but that there are technological alternatives to prevent it or detect it early. The meeting brought together 300 specialist surgeons from seven Latin American countries.</p>
+<p>Margarita Murphy, a surgeon at the Institute of Health of Colon and Rectum in Orlando, said colonoscopy has been the standard method for decades and should be done even without symptoms. Juan Antonio Delgado Vázquez, a surgeon-oncologist at Ángeles Andares hospital in Guadalajara, said innovative devices can raise polyp detection in the digestive tract and intestines by 25 to 30 percent, especially flat or embedded lesions. He said these abnormalities can be precursors of cancer. Murphy also noted that modifiable habits can help lower risk, but “no one is free from CRC risk,” and Édgar Alemán said up to 95 percent of CRC cases occur in people with no family history.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/12/politica/012n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Colon cancer is increasingly common in Mexico: experts">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Four ways the water crisis plan could change how you receive water</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Africans facing dry taps, long walks for water and week-long outages may see delivery change under the government’s new National Water Action Plan, which aims to cut losses and tighten control of a failing system, though activists say it still lacks the detail to deliver real change.</p>
+<p>President Cyril Ramaphosa released the plan on 23 July 2026, and it will be managed by the National Water Crisis Committee, or Watercom. Its members include the Department of Water and Sanitation, the National Treasury, the departments responsible for cooperative governance, human settlements, public works and the environment, the South African Police Service and the South African Local Government Association. The plan rests on five actions: responding to interruptions in priority areas, reforming municipal institutions and financing, unlocking infrastructure investment, strengthening legal and regulatory mechanisms, and tackling corruption and criminal activity in the water sector.</p>
+<h3>Four ways the plan could change water delivery</h3>
+<p>One major change is a push to separate oversight from operations. South Africa is described as a global outlier because 144 municipalities act both as water services authorities and water services providers. The plan’s related Water Services Amendment Bill would require providers to be licensed on technical and financial competence, and if a municipality is “not willing or able” to meet those standards, national government could appoint expert public or private entities to take over operations. But the bill is still before Parliament’s Portfolio Committee on Water and Sanitation and in public consultation, so implementation is still months away.</p>
+<p>A second shift is how the plan treats communities without reliable supply. It identifies 2,688 communities that lack access to reliable water, and splits the response between rural and densely populated areas. In rural or sparsely populated places, the plan prioritises boreholes, protected springs and rainwater harvesting. In denser areas, it aims to use national grants to extend existing networks to people on the periphery.</p>
+<p>Third, the plan targets the tanker economy. It says so-called water tanker mafias have taken advantage of collapsing piped supply and municipal procurement, and it frames the problem as a national security issue. The stated goal is to regain control over tanker provision and move back toward a “fixed pipe” model.</p>
+<p>The fourth and biggest promise is to reduce non-revenue water — water lost through leaks, theft or faulty meters — from 47% to 39.5% by 2031. The plan treats leak repair as a “catalytic action” that could recover nearly 10% of national supply without building a new dam.</p>
+<p>Water activist Dr Ferrial Adam called the plan “uninspiring”, saying it lacks timelines, budgets and enforcement mechanisms, and warning that it leans too heavily on private contractors.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-12-four-ways-the-water-crisis-plan-could-change-how-you-receive-water" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Four ways the water crisis plan could change how you receive water">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Palestinian students and staff sue Columbia University over discrimination</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Current and former Palestinian students and staff have sued Columbia University in New York State Supreme Court this week, accusing the Ivy League school of discriminating against Palestinians and targeting pro-Palestinian activism on campus. The filing says Columbia subjected Palestinian students, faculty and staff to unequal treatment after the Hamas-led attacks on southern Israel on 7 October 2023 and the ensuing genocide against Palestinians in Gaza perpetrated by Israel. It also alleges the university “actively participated in and amplified” racially, ethnically and politically motivated targeting of Palestinians.</p>
+<p>According to the complaint, Columbia failed to protect Palestinian members of its community from harassment, subjected pro-Palestinian activists to “unfair and biased disciplinary hearings,” hired private investigators to surveil students involved in the March 2024 “Resistance 101” event, and later suspended and evicted six students from university housing. The filing also accuses Columbia of not adequately responding to alleged attacks, including keffiyehs being forcibly removed and a foul-smelling substance sprayed at a January 2024 demonstration, and of calling New York City police onto campus to clear protest encampments and arrest demonstrators. Columbia declined to comment on the pending litigation, according to local media, and did not respond to a Reuters request for comment.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/palestinian-students-and-staff-sue-columbia-university-over-alleged-discrimination" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Palestinian students and staff sue Columbia University over discrimination">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>ConCourt blocks ATM’s direct bid to revive Ramaphosa’s impeachment inquiry</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Constitutional Court refused the African Transformation Movement and other applicants direct access to challenge an interim interdict over Cyril Ramaphosa’s Phala Phala impeachment inquiry, leaving the inquiry on hold for now. In an order handed down on Wednesday, 12 August 2026, the court said it would not hear the matter at this stage and refused leave to file a replying affidavit and leave to appeal. It said Ramaphosa’s review application was due to be determined by the Western Cape Division of the High Court, and that the outcome of that review could render the interim interdict moot.</p>
+<p>The decision leaves in place the interim interdict granted by the Western Cape high court on 24 July, which stopped Parliament’s Section 89 impeachment committee from proceeding with public hearings while Ramaphosa’s review is pending. Ramaphosa is challenging the Section 89 panel report that forms the basis of the impeachment process. The court order said it was not in the interests of justice to hear the matter now because of the imminent High Court determination.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-12-concourt-blocks-atm-s-direct-bid-to-revive-ramaphosa-s-impeachment-inquiry" target="_blank" rel="noopener noreferrer" title="Daily Maverick / ConCourt blocks ATM’s direct bid to revive Ramaphosa’s impeachment inquiry">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Removed from Key Institutions, 40% of Mexicans aged 15 to 29</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Mexico, youths aged 15 to 29 are going through a process of “disaffiliation” from central institutions, including family, school, employment, and even romantic relationships and friends. In the Jóvenes en México 2026 survey, prepared by the Youth Observatory in Ibero-America with Fundación SM, José Antonio Pérez Islas said at least 40 percent “report that they simply do not find themselves in any of these spaces that traditionally provided support, belonging, and development opportunities.” He also pointed to 31.3 percent who, even with friends, feel “very alone and sad,” along with 39.2 percent who feel anxious about problems and 43.2 percent who said what they are taught in school does not interest them.</p>
+<p>Pérez Islas said family is the only institution that has adapted to social changes and still shelters them. He said school, the labor market and politics “do not work for them,” and noted that 76 percent still live with their family of origin. The survey also found that 41.1 percent feel they do not have someone to talk to about their problems, while 39.6 percent work exclusively and 12.8 percent combine work and studies.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/12/politica/007n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Removed from Key Institutions, 40% of Mexicans aged 15 to 29">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>All-out relief efforts underway as Typhoon Dolphin sweeps vast regions in eastern, central China</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Torrential rains and flooding caused by Typhoon Dolphin have swept vast regions in eastern and central China, with local authorities saying they are exerting all efforts to eliminate potential risks and put people’s lives back to normal. On Aug. 11, 2026, staff members drained floodwater from a water-logged road in Weishi County of Kaifeng in Henan Province, while teams in Nanyang set up caution tape and traffic cones around flooded road sections. Electricians were also checking power lines in Luoyang, and workers were pumping out floodwater near a bridge in Xiangyang, Hubei Province.</p>
+<p>The scenes also showed drainage pipes being laid on Minzu Road in Luoyang’s Chanhe District, fallen utility poles being repaired in Qianfeng Town of Huai’an City in Jiangsu Province, and overhead high-voltage power lines being fixed in Jiangyan District of Taizhou, Jiangsu Province. As background, Xinhua reported that Henan Province had relocated over 65,000 residents and ramped up emergency response efforts as Typhoon Dolphin, the 13th typhoon of the year, continued to batter large swathes of the province.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0812/c90000-20487738.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / All-out relief efforts underway as Typhoon Dolphin sweeps vast regions in eastern, central China">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China&#x27;s central bank to strengthen financial support for key areas</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Beijing on Aug. 12, the People&#x27;s Bank of China said it will strengthen financial support for key areas, including expanding domestic demand, promoting technological innovation and supporting small and micro enterprises. In its second-quarter 2026 monetary policy report, the central bank said it has continued this year to implement an appropriately accommodative monetary policy and to use structural monetary policy tools to improve the financing structure.</p>
+<p>By the end of June, the growth rates of loans to the technology, green, inclusive finance, elderly care and digital economy sectors all exceeded the growth rate of total loans. It also said supply and demand in the foreign exchange market remained broadly balanced, while the RMB exchange rate stayed largely stable at a reasonable and equilibrium level. Going forward, the central bank said it will continue the monetary policy, calibrating the intensity, pace and timing of implementation based on domestic and international economic and financial conditions, while working to guard against exchange-rate overshooting, maintain stable financial market operations and prevent systemic financial risks.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260812/0232efdd81744ed3a6bf6e0fc240694f/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China&#x27;s central bank to strengthen financial support for key areas">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>How China&#x27;s grid powers through peak summer demand</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s grid is leaning harder on long-distance transmission, storage and flexible demand to keep up with record summer electricity use, with Chongqing showing both the pressure of peak heat and the payoff from new supply lines.</p>
+<p>In the southwest megacity of more than 30 million, sweltering summers put air conditioners, automotive factories and electronics assembly lines under strain. A key change came in June last year, when the 2,260-kilometer Hami-Chongqing transmission line using ultra-high-voltage technology went into operation. It carries electricity generated in Hami, in northwest China’s Xinjiang Uygur Autonomous Region, to Chongqing, and more than 70 percent of that power comes from clean energy sources. Shuai Hong, deputy chief engineer of the power dispatch and control center of State Grid Chongqing Electric Power Company, said it is the city’s “strongest source of confidence” for coping with summer peak demand. He said electricity purchased from outside the municipality now accounts for about one-third of Chongqing’s total grid load this year, and the line can transmit up to 6 million kilowatts at peak, or roughly one-fifth of the city’s maximum power load.</p>
+<p>The Chongqing line is one of more than 40 UHV lines in China, built to move power from energy-rich western regions to places where demand is heaviest. Other parts of the grid are using different tools to do the same job. In Shandong, 172 energy storage power stations discharged simultaneously on Aug. 3 as midday and evening demand hit record highs, while Beijing was supplied with green electricity through a “solar-wind relay.” Wuhan has also been piloting a vehicle-to-grid pricing mechanism since July 1, letting eligible electric vehicles feed power back into the grid during peak periods.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260812/26b0f9f049dd456181f50b9b7f235ff7/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / How China&#x27;s grid powers through peak summer demand">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>Xinhua Headlines: &quot;China Cool&quot; trends globally with unique cooling getaways</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A summer heatwave has turned China’s cool-weather escapes and air-conditioned urban spaces into a new draw for overseas visitors, with inbound bookings up more than 20 percent by late July and the bigger question now whether the trend is just social-media buzz or part of a deeper tourism shift.</p>
+<p>In Chongqing, where the thermometer was nearing 40 degrees Celsius, Michael Shedd, a Chicago native, went to a hotpot restaurant hidden inside a former air-raid shelter. He said it felt “cool” inside “just like there are air conditioners,” while the restaurant’s marketing director said the temperature in the shelter stays around 25 degrees Celsius all year. The city carved thousands of air-raid shelters into its mountainous terrain in the late 1930s and early 1940s, and those spaces now serve as hotpot restaurants, tea houses and Sichuan Opera venues. On summer weekends, the restaurant serves more than 300 tables a day, with about one in six diners from overseas.</p>
+<p>The same pull is visible in China’s natural and urban cooling spots. Huangshizhai, a scenic area in Zhangjiajie National Forest Park in Hunan Province, sits at more than 1,200 meters above sea level, where dense forests and mountain winds keep summer temperatures between 16 and 25 degrees Celsius. French tourist Isabelle Sala Jaboule said the trip felt “great” because France was very hot and she could breathe fresh air in China. Local authorities said Zhangjiajie National Forest Park recorded more than 100,000 inbound tourist arrivals in July, up 46.78 percent year on year, with travelers from 148 countries and regions.</p>
+<h3>Beyond the heat relief</h3>
+<p>Trip.com data showed that among the top 20 source markets for inbound travel to China this summer, European countries accounted for 30 percent, with orders up 275 percent year on year and ticket sales rising by more than 2,000 percent. In the northeast, Changbai Mountain Scenic Area in Jilin Province has also been drawing visitors, with daily arrivals topping 30,000 since July and overseas tourists up 38 percent from the same period last year.</p>
+<p>The trend fits a broader inbound tourism boom. Data from the National Immigration Administration showed 22.91 million inbound foreign visits in the first half of this year, up 20.4 percent year on year, and 77.7 percent of foreign travelers used visa-free entry facilitation. For many visitors, the appeal is not only lower temperatures, but also what one traveler called “a whole new kind of cool, one that’s packed with discovery.”</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260812/5351a687e30d4536879f59e9d3bd1916/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Xinhua Headlines: &quot;China Cool&quot; trends globally with unique cooling getaways">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Turkey&#x27;s cross party Kurdish peace coalition makes history with PKK clemency law</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Turkey’s parliament has approved a first-ever clemency framework for former members of the Kurdistan Workers’ Party, drawing ruling-party lawmakers, pro-Kurdish MPs and opposition figures into the same vote while leaving open whether the long conflict can actually be brought to an end.</p>
+<p>The PKK has fought the Turkish state since the early 1980s, and the violence has killed thousands of civilians and members of the security forces. The group first sought independence and later greater autonomy for Turkey’s Kurds. This vote marked the first time in Turkey’s modern history that the government brought forward legislation setting out a framework for resolving that conflict.</p>
+<h3>The vote that brought rivals together</h3>
+<p>The path to the law followed two years of negotiations with imprisoned PKK leader Abdullah Ocalan, after President Recep Tayyip Erdogan’s government and its coalition partner, the Nationalist Movement Party, led by Devlet Bahceli, decided to pursue an end to the fighting. Bahceli set the process in motion in an October 2024 speech, when he emerged as an unexpected advocate of peace. In that address, he said he would tolerate Ocalan appearing before parliament, even though he had previously called for Ocalan’s execution and his party, the MHP, had long been among the fiercest opponents of what the PKK stood for.</p>
+<p>After months of work by a parliamentary committee on the Kurdish question, and hours of negotiations with Ocalan, PKK commanders in northern Iraq’s Qandil Mountains and leaders in exile in Europe, the legislation was introduced in parliament last week. It was quickly ratified on Monday. The scale of support was striking: alongside the ruling Justice and Development Party and the MHP, the law was backed by the secular Republican People’s Party, smaller right-wing and Islamist parties including New Welfare and the Felicity Party, the liberal Democracy and Progress Party, the Islamist Kurdish Huda Par, and socialists in the Workers’ Party of Turkey and several smaller left-wing parties.</p>
+<p>Imprisoned Istanbul Mayor Ekrem Imamoglu backed the legislation in a statement, while Ozgur Ozel, who leads the New Party after splitting from the CHP, also said he supported it. Ozel allowed his party’s lawmakers to vote as they wished, and many opposed the measure, but the overall result was still overwhelming: 468 of parliament’s 592 members voted in favour.</p>
+<h3>What the law allows</h3>
+<p>The legislation creates a partial clemency route for former PKK members. Those who did not commit violent crimes, including intentional homicide, can receive pardons. Prisoners convicted of nonviolent offences can also be released.</p>
+<p>The law is tied to a sequence of conditions. The PKK would first have to lay down its weapons and show Turkish authorities that it was meeting its side of the agreement. The group and its affiliated organisations would also be expected to end illicit activities, including smuggling counterfeit goods and drugs. Only then could the repatriation of eligible members begin.</p>
+<p>According to the plan described in the legislation, that repatriation could start in September and would open a six-month implementation period. Former PKK members who fail to apply within that window would no longer be able to benefit from the law. Turkish intelligence would monitor the process and prepare a report confirming that the PKK had disarmed before it is sent to the National Security Council, which would formally trigger the next stage.</p>
+<h3>What remains unresolved</h3>
+<p>The law covers PKK members in all locations, including Europe, and any sentences based only on PKK membership would be dropped on the grounds that membership ended when the organisation dissolved. Some convicted PKK members who have already served 25 years in prison could also become eligible for release.</p>
+<p>Even so, it is still unclear which parts of the PKK — whether in Europe, Iraq, Syria or the Qandil Mountains — will try to use the law. Ocalan is not given a formal role, though officials expect that once the law is enacted and implemented he will receive greater freedom in his living arrangements on Imrali Island, including more comfortable accommodation and broader access to journalists and opinion leaders.</p>
+<p>Ozel also warned that settling the Kurdish question could open the way for a new alliance between Erdogan and the pro-Kurdish Peoples’ Equality and Democracy Party, potentially helping Erdogan pursue another term. He said the opposition would not stand in the way of peace: “We have not, and will not, put our anger before the future of the nation.”</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/turkeys-cross-party-kurdish-peace-coalition-makes-history-pkk-clemency-law" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Turkey&#x27;s cross party Kurdish peace coalition makes history with PKK clemency law">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Trump’s Childhood Vaccine Policy is Sparking Controversy</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Monday, U.S. President Donald Trump signed an executive order seeking to narrow the list of vaccines recommended for all American children, drawing sharp criticism from medical groups and public health experts. The administration called the new schedule “Gold Standard Childhood Vaccine Recommendations,” under which 11 vaccines, rather than the 18 recommended by the American Academy of Pediatrics, would be recommended for all children. The 11 include vaccines against measles, mumps, rubella, diphtheria, tetanus, pertussis, polio, Haemophilus influenzae type B, pneumococcal disease, human papillomavirus and varicella.</p>
+<p>The order says some other vaccines, including those against respiratory syncytial virus, hepatitis A and B, meningococcal disease and dengue, would be recommended for certain high-risk groups or in some cases subject to shared clinical decision-making. It also calls for childhood vaccines to be given at separate medical visits where feasible and directs HHS to develop options for giving measles, mumps and rubella shots separately. Health experts said there is no scientific evidence supporting the changes, while the White House said they are based on scientific evidence, international comparisons and parental choice.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/trumps-childhood-vaccine-policy-is-sparking-controversy" target="_blank" rel="noopener noreferrer" title="Telesur English / Trump’s Childhood Vaccine Policy is Sparking Controversy">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>US strengthens military presence in breakaway Puntland amid battle for Red Sea</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In early August, Major General Claude Tudor, the commander of US Special Operations Command Africa, signed a deal with Puntland president Saeed Abdullahi Deni to expand the American military base in Bosaso, a port city on the Gulf of Aden. The Puntland Government of Somalia said the expansion was essential to “improve operations against terrorism and to help protect maritime security,” and said Puntland remained committed to fighting terrorism and threats to “the security, stability, and development of Puntland, Somalia, and the Horn of Africa.”</p>
+<p>Middle East Eye said it had investigated the Bosaso Air Base in October, next to Bosaso International Airport, and identified UAE military equipment there, including a radar facility, fortified ammunition depots, a dedicated cargo area for IL-76 heavy transport aircraft, a field hospital, vehicle storage, aircraft hangars, and the original hangar of the Puntland Maritime Police Force. It also said the US had previously used the UAE-built base mainly for the PMPF, which it described as a UAE-backed regional force trained in part by Xe, formerly known as Blackwater.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/us-strengthens-military-presence-breakaway-puntland-amid-battle-red-sea" target="_blank" rel="noopener noreferrer" title="Middle East Eye / US strengthens military presence in breakaway Puntland amid battle for Red Sea">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>&#x27;This isn&#x27;t the Britain I grew up in&#x27;: The activists raided by police over Palestine Action videos</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Elderly activists who posted videos backing the banned Palestine Action group are bracing for dawn raids across the UK, after police already searched homes and seized devices in at least 19 cases, leaving some frightened to sleep elsewhere.</p>
+<p>Marji Mansfield, a 70-year-old grandmother of seven, said she has been waiting for British counterterrorism police to appear at her door. She said the fear is worst between 5am and 7am, when dawn raids usually happen, and that she has been so anxious she and others have gone to sleep elsewhere. “It’s been really, really quite scary not knowing when there’s going to be the knock at the door,” she told Middle East Eye.</p>
+<p>The pressure follows a wider wave of arrests and raids around support for Palestine Action. The government proscribed the organisation in July 2025, and Middle East Eye says more than 3,000 people have since been arrested under the Terrorism Act for silent vigils in support of the group. In June, after the Court of Appeal quashed a High Court ruling and found the ban lawful, Defend Our Juries called for an “escalation” in activism. Around 100 people, including Mansfield, responded by uploading videos declaring: “Saving lives is not terrorism, I support Palestine Action, and I think you should too.”</p>
+<p>Some 19 people, many of them retired, have since been raided by counterterrorism police across the UK, including in London, the West Midlands, Somerset, Wales, Cornwall and Scotland. Those interviewed said officers searched whole homes, took personal devices and items bearing the Palestinian flag, and looked through diaries. Two people said they were handcuffed. Mansfield said the uncertainty has left activists unable to sleep and afraid to leave home in case police arrive.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/this-is-not-britain-grew-up-activists-raided-police-palestine-action" target="_blank" rel="noopener noreferrer" title="Middle East Eye / &#x27;This isn&#x27;t the Britain I grew up in&#x27;: The activists raided by police over Palestine Action videos">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Hegseth cautions that ICC may investigate US boat strikes in Latin America</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Pete Hegseth warned in Panama that the International Criminal Court could investigate US military actions in Latin America, including strikes on alleged drug-smuggling boats in the Caribbean. Speaking as he pledged to strengthen a military coalition launched in March with several Latin American countries, the US defense secretary said Colombia would become the 19th member of the Shield of the Americas, also known as the Americas Counter Cartel Coalition or “A triple C.” He urged coalition members to reject the ICC and said the Trump administration was working to “disable” the tribunal.</p>
+<p>Rights groups have decried the boat strikes as extrajudicial killings, and a Washington Office on Latin America report in July said at least 221 people had been killed in the US strikes since September 2025. The report’s authors described the killings as “murder under domestic law and extrajudicial killings under international human rights law,” while monitors said civilians, including fishermen, passengers and victims of human smuggling, may have been among the dead. The evidence also says the ICC has not announced any investigation into US military actions in Latin America.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/12/hegseth-cautions-that-icc-may-investigate-us-boat-strikes-in-latin-america?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Hegseth cautions that ICC may investigate US boat strikes in Latin America">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,cnn,guardian">
+  <summary>Trump sued over $100,000-a-month early-access offer to Truth Social posts</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">technology_and_ai_society</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Intercept and the Freedom of the Press Foundation have sued Donald Trump in federal court to stop a paid Truth Social feed from giving subscribers early access to his posts, arguing that the service blocks equal access to public presidential announcements and lets him profit from official information.</p>
+<p>The lawsuit was filed Wednesday in the US District Court for the Southern District of New York and names Trump in an official capacity, along with White House aide Natalie Harp and Deputy Chief of Staff Daniel Scavino. It centres on Truth API, a paid data feed launched on August 1 by Trump Media and Technology Group, which the complaint says charges between $60,000 and $100,000 a month for real-time access to posts from Trump and other prominent accounts on Truth Social.</p>
+<p>According to the complaint, more than 10 customers had already subscribed by an August 10 earnings call. The filing calls the arrangement “profoundly corrupt” and says the president stands to gain financially by giving “market-moving” government information to people willing to pay his personal company. It also argues that the service would restrict access to matters of public interest.</p>
+<p>The plaintiffs say the plan violates the First Amendment’s implicit guarantee of “equal access to the President’s public announcements” and cites the constitutional right to a free press. They also say the service would run afoul of the Fifth Amendment by allowing arbitrary sums to be charged for access to government information.</p>
+<p>The case comes as critics have pointed out that Trump uses Truth Social to announce policy changes that can affect the economy. His comments, including on the US-Israel war on Iran, have reportedly sent ripples through global oil markets. Trump also holds the largest stake in Trump Media and Technology Group, worth roughly $1 billion.</p>
+<p>Trump Media said in a statement that presidential communications already flow through “countless platforms and news outlets, many of which offer subscription APIs.” The White House has not commented. The lawsuit is set to be heard in federal court in the Southern District of New York.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/8/12/media-groups-sue-trump-over-paid-access-to-public-social-media-posts?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Media groups sue Trump over paid access to public social media posts">AJ #1</a><a href="https://www.cnn.com/2026/08/12/business/truth-social-lawsuit" target="_blank" rel="noopener noreferrer" title="CNN / Trump sued on First and Fifth Amendment grounds over paid Truth Social access">CNN #1</a><a href="https://www.theguardian.com/us-news/2026/aug/12/truth-social-suit-trump-early-access-offer" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump sued over $100,000-a-month early-access offer to Truth Social posts">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Exclusive: UK to announce raft of new policies on Israel including settlement goods ban</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UK is set to announce a raft of new policies on Israel in September, including a ban on goods from illegal Israeli settlements, according to multiple Whitehall and civil society sources. The measures are still under discussion, but sources said the Foreign Office is also looking at legal sanctions for companies and organisations with business or other links to settlements in occupied Palestinian territories. Foreign Secretary Ed Miliband is said to be pushing for stronger measures and has been consulting civil society organisations.</p>
+<p>Sources with knowledge of the matter also said the Foreign Office is considering new sanctions on individuals and organisations involved in the settler movement in the occupied West Bank, with internal discussions continuing over possible sanctions on more Israeli ministers. The Charity Commission is investigating several British charities accused of sending money to settlements, and Keir Starmer said in June that “no UK charity should be supporting [settlements]” while declining to commit to a ban on charitable donations. Arms sales are another issue under discussion, with no concrete decisions yet made.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/uk-ban-israeli-settlement-goods-next-month-government-mulls-further-sanctions-and-arms-sales" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Exclusive: UK to announce raft of new policies on Israel including settlement goods ban">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="atlantic">
+  <summary>A Silver Lining in Afghanistan</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Five years after the U.S. withdrawal from Afghanistan, the country has not become the global terrorist hub many American policymakers feared, and the Taliban has ended up helping Washington against Islamic State Khorasan Province even as the costs of that cooperation remain stark.</p>
+<p>That reversal looks especially striking against the chaotic exit at Kabul International Airport, where an ISKP suicide attack killed 13 U.S. service members and about 170 Afghan civilians trying to flee Taliban rule. For years, the warning from Washington was that a Taliban-run Afghanistan would again become a haven for terrorists, as it had been before the 2001 invasion.</p>
+<p>That fear was rooted in the Taliban’s record in the 1990s, when it sheltered al-Qaeda and like-minded networks that trained thousands of fighters and helped plan the 1998 embassy bombings, the 2000 attack on the USS Cole, and 9/11. Those concerns helped keep the United States fighting a war its officials knew they were losing. In April 2021, William Burns, President Biden’s CIA director, warned that a withdrawal would create a “significant risk” of an al-Qaeda resurgence; four months later, when Biden pulled out, experts said he had given terrorists a leg up.</p>
+<p>But the outcome since then has been different. Under Taliban rule, Afghanistan has not become the global terrorist hub feared in Washington. Al-Qaeda, still far weaker than in 2001, has not carried out an attack from Afghanistan on the U.S. or Europe since the withdrawal. The group has also been hit hard by U.S. drone strikes, including one in 2022 that killed Ayman al-Zawahiri, and it has still not named a replacement. Its de facto leader, Saif al-Adel, is hiding in Iran.</p>
+<p>The Taliban remains no friend to the United States, and it continues to brutalize Afghans, especially women. It also still shelters militants including al-Qaeda, which has begun training more members in Afghanistan since the U.S. left. Even so, the Taliban has become a counterterrorism partner of a sort: it has arrested and killed ISKP fighters and leaders, and sometimes persuaded them to surrender. Because it now controls the whole country and has networks everywhere, Washington has used its intelligence to warn Iran and Russia about ISKP threats and help European states disrupt plots.</p>
+<p>The uneasy result is that staying in Afghanistan looks like a mistake, but so does assuming that old enemies cannot sometimes be useful against worse ones.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/international/2026/08/afghanistan-withdrawal-taliban-terrorism/688251" target="_blank" rel="noopener noreferrer" title="The Atlantic / A Silver Lining in Afghanistan">TA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,guardian">
+  <summary>Trump administration arrests Southern Poverty Law Center expert for fraud</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Justice Department’s arrest of Heidi Beirich has pushed a long-running fraud case against the Southern Poverty Law Center into a new phase, with prosecutors accusing the civil rights nonprofit of misusing donor money and her lawyer calling the case politically motivated.</p>
+<p>On Wednesday, the Justice Department served an arrest warrant on Beirich, 59, whom Al Jazeera identified as the SPLC’s former director of intelligence and The Guardian described as the group’s former chief financial officer. It also issued a superseding indictment adding her to the government’s ongoing prosecution of the SPLC, based in Montgomery, Alabama. Prosecutors say the case centers on an alleged scheme that used donor money to secretly pay confidential informants.</p>
+<p>The charges against Beirich include wire fraud, conspiracy to submit false statements to a bank and conspiracy to commit money laundering, FBI Director Kash Patel said. Patel wrote on X that Beirich “was at the center” of the investigation. The superseding indictment accuses the SPLC and Beirich of directing more than $4 million in donations to “individuals associated with various violent extremist groups” between 2007 and 2023. The Justice Department says the money was routed through bank accounts opened under fictitious company names. The Guardian also reported that the indictment alleges Beirich was in a romantic relationship with one of the informants and that $140,000 of donor money went into a joint bank account they shared.</p>
+<p>The SPLC has denied the accusations and says it no longer uses confidential informants. It has said it shared information gathered from informants with local and federal law enforcement in the past. The group has also been a frequent target of conservative critics, while critics of the Trump administration have questioned why it is pursuing criminal charges against an organization that has historically worked with the FBI to track alleged far-right hate groups.</p>
+<p>Beirich’s lawyer, Michael Proctor, said she is innocent and described the case as politically motivated. He said prosecutors were trying to punish her for her “decades-long record of success dismantling hate groups” and argued that “a free and fair society does not use the justice system to silence its political opponent.”</p>
+<p>The case builds on an initial indictment filed in April. Last week, a federal judge in Alabama allowed the case to proceed, rejecting the SPLC’s argument that it was a vindictive prosecution.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/12/trump-administration-arrests-southern-poverty-law-center-expert-for-fraud?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Trump administration arrests Southern Poverty Law Center expert for fraud">AJ #1</a><a href="https://www.theguardian.com/us-news/2026/aug/12/doj-arrests-far-right-expert-splc" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump’s justice department arrests expert on far right as part of SPLC crackdown">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian,vanguard_ng">
+  <summary>Full list: UK shuts 13 more asylum hotels</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Home Office has stopped using 13 more hotels in England to house asylum seekers, bringing the total it says have closed this year to 44 and leaving fewer than 160 still in use, as ministers press ahead with a shift away from hotel accommodation.</p>
+<p>Among the hotels now no longer being used is the Grand Metropole Hotel in Blackpool. The full list also includes the Ramada Jarvis Hotel in Loughborough, Chimney House Hotel in Sandbach, Britannia Ashley Hotel in Hale, Gold Thorn Hotel in Wolverhampton, Nottingham Hotel in Nottingham, Grosvenor Hotel in Stratford-upon-Avon, Staycity Apartments Deptford Bridge in Lewisham, Needham House in Hitchin, Holiday Inn in Bridgwater, Holiday Inn Express in Dunstable, Dubrovnik Hotel in Bradford and Best Western Brook Hotel in Norwich.</p>
+<h3>What the government says the closures mean</h3>
+<p>The government says the hotels can now return to normal commercial use or be repurposed to serve local communities. It said the move would allow them to once again take paying visitors and support local jobs and nearby businesses such as restaurants, cafés, shops and tourist attractions.</p>
+<p>Anna Turley, the immigration minister, said: “For too long, communities have watched hotels at the centre of their towns and cities become symbols of a broken asylum system. We are turning that around by ending the use of asylum hotels for good and moving people into larger, basic accommodation like former military sites.”</p>
+<p>The closures are part of a wider government effort to reduce pressure on the asylum system, cut taxpayer-funded accommodation costs and speed up the processing and removal of people who have no legal right to remain in the country. Vanguard Nigeria said the latest 13 closures follow 11 hotel closures in April and another 20 in June. It also reported that the government says the closures are expected to save taxpayers £51 million, taking total expected savings from asylum hotel closures this year to £224 million.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/live/2026/aug/12/andy-burnham-early-prisoner-release-cobra-meeting-heatwave-climate-crisis-labour-conservatives-reform-latest-news-updates?page=with%3A6a7c2be98f088792503ea6b9#6a7c2be98f088792503ea6b9" target="_blank" rel="noopener noreferrer" title="The Guardian / Andy burnham early prisoner release cobra meeting heatwave climate crisis labour conservatives reform latest news updates">Guardian #1</a><a href="https://www.vanguardngr.com/2026/08/full-list-uk-shuts-13-more-asylum-hotels" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / Full list: UK shuts 13 more asylum hotels">VN #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>‘The right to stay’: Albania’s Italian diaspora sails back to support the Flamingo Revolution</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Activists from Italy’s Albanian diaspora are preparing a cross-Adriatic sail from Brindisi on 20 August to join Albania’s “Flamingo Revolution,” turning a protest over luxury development and protected land into a symbolic return journey shaped by migration, memory and political solidarity.</p>
+<p>The mission is being organised by Mesdhe, the Albanian collective Palestina e Lire and the Italian branch of the Global Sumud Flotilla. The flotilla is expected to use three boats and travel to Vlora, where activists are protesting projects linked to US President Donald Trump’s son-in-law Jared Kushner, including a luxury resort plan on Sazan Island and another development near Zvernec in the protected Vjosa-Narta landscape. The organisers launched the action on social media on 8 August.</p>
+<h3>Memory across the Adriatic</h3>
+<p>Brindisi was chosen for its symbolism. In the 1990s, Puglia became the main arrival point for one of the largest waves of Albanian migration after the collapse of Albania’s communist regime. On 8 August 1991, the merchant ship Vlora docked in Bari carrying an estimated 20,000 Albanians, and more than 17,400 were later deported in one of Italy’s largest repatriation operations. Migrants at Bari’s Stadio della Vittoria were left without enough food, water or medical care, hundreds were hospitalised for dehydration, and clashes with police ended with officers firing shots at refugees trying to escape.</p>
+<p>Now, organisers say they want to make the journey in reverse. Mesdhe said the trip is about “the right of people to remain on their land,” while Tony La Piccirella said the boats, recovered after damage during spring attacks on the Global Sumud Flotilla, connect the Albanian protest to broader struggles over land, tourism and dispossession across the Mediterranean.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/right-stay-albanias-italian-diaspora-sails-back-support-flamingo-revolution" target="_blank" rel="noopener noreferrer" title="Middle East Eye / ‘The right to stay’: Albania’s Italian diaspora sails back to support the Flamingo Revolution">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Zambia Goes to the Polls as Hichilema Seeks Reelection</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Thursday, Zambians will vote in general elections in which President Hakainde Hichilema hopes to win a second term. About 8.7 million voters out of a population of roughly 22 million are eligible to cast ballots at around 13,500 polling stations, open from 6:00 a.m. to 6:00 p.m. local time, according to the Zambian Electoral Commission. Voters will choose the next head of state for a five-year term, along with the National Assembly and municipal governments, in Zambia’s eighth general election since the return to a multi-party system. Fourteen candidates are running for president.</p>
+<p>The main race has tightened in recent months. Hichilema is running for the ruling United Party for National Development, backed by about fifteen other parties. The Tonse Pamodzi Alliance, led by lawyer Brian Mundibile of the National Reconciliation, Unity and Prosperity Party, is also competing. Hichilema is presenting his economic record as his main achievement, including the March 2024 agreement to restructure more than $3.5 billion in Eurobond debt. His critics say he has not addressed the high cost of living, unemployment or energy shortages, while civil society organizations and UN experts have denounced an increasingly hostile environment for the opposition, dissidents and journalists.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/zambia-goes-to-the-polls-hichilema-seeks-reelection" target="_blank" rel="noopener noreferrer" title="Telesur English / Zambia Goes to the Polls as Hichilema Seeks Reelection">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="dawn">
+  <summary>AJK polls: Rathore’s LA-17 Haveli victory disputed, local PML-N announces indefinite strike</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A returning officer’s decision to declare PPP’s Faisal Mumtaz Rathore the winner in LA-17 (Haveli) has deepened a disputed AJK election result, prompting PML-N workers to announce an indefinite shutter-down strike and putting the Election Commission under pressure to revisit the count.</p>
+<p>The controversy emerged on Wednesday in Muzaffarabad after the RO issued Form 27 naming Rathore, the sitting AJK prime minister, as the winner, despite PML-N candidate Engineer Mohsin Aziz being told the form would not be issued until his complaint was taken up by the Election Commission. In Haveli district, PML-N workers announced a complete shutter-down strike and protest from Thursday, August 13, for an indefinite period.</p>
+<p>At a meeting in Forward Kahuta chaired by PML-N Haveli president Syed Abid Bukhari, participants demanded that the commission open all polling bags from LA-17, order a recount and decide the result on the basis of the original figures issued by presiding officers. They warned the protest would widen if the demand was not accepted.</p>
+<p>The dispute had already escalated after Monday’s polling, which was marked by rigging allegations and counter-allegations from Rathore, Aziz and independent candidate Khawaja Tariq Saeed. Late Monday, thousands of Aziz supporters gathered at the district courts, claiming Form 24 results showed Aziz ahead by more than 8,000 votes, and saying the RO was later preparing a different result. There were also reports of some people being injured in the demonstration.</p>
+<p>Aziz said the protest ended on Tuesday after he received a written undertaking that Form 27 would not be issued until the Election Commission decided his claim. The chief election commissioner also said on Tuesday that a decision would come after the polling bags and records reached the commission’s office. The Election Commission later said it would take up the matter at 10am on Thursday.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2022397/ajk-polls-rathores-la-17-haveli-victory-disputed-local-pml-n-announces-indefinite-strike" target="_blank" rel="noopener noreferrer" title="Dawn / AJK polls: Rathore’s LA-17 Haveli victory disputed, local PML-N announces indefinite strike">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>SCJN Prevents Administrative Judicial Body from Losing Case Against ICA Construction Firm</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Supreme Court of Justice of the Nation (SCJN) prevented the Administrative Body of the Judicial Power (OAJ) from losing a lawsuit against El Cajón, a subsidiary of ICA, over breach of contract for the construction of the Federal Penal Justice Center in Los Mochis, Sinaloa. The plenary voted seven to two to reject a lack-of-personality challenge raised by the company, after the case had been put at risk by a legal gap created during the transition that transformed the organs of the Federal Judicial Power.</p>
+<p>The dispute centered on whether Sergio Navarro Loubet, then legal director of the extinct Federal Judicial Council, still had authority to respond to the lawsuit filed on September 5, 2025. The company argued his term ended on August 31, but the OAJ appointed Adrián Chávez Dosal as head of Legal Affairs on September 2, with retroactive effect to September 1, and notified that appointment only on September 9. The majority held Navarro’s actions valid and kept the defense going. Ministers Giovanni Figueroa Mejía and Loretta Ortiz Ahlf voted against the project and warned it could set a precedent for legal certainty.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/12/politica/010n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / SCJN Prevents Administrative Judicial Body from Losing Case Against ICA Construction Firm">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="kompas">
+  <summary>Australia Sets Overtime Pay for Gig Workers at AU$395,000 per Hour, Includes Accident Insurance</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Australia’s Fair Work Commission set a minimum hourly rate of AU$31.30, or about Rp394,900, for food and grocery delivery workers in Australia and added accident-insurance protection under a new rule that starts on 17 August. The rate applies to “engaged time,” meaning the period from when a worker accepts a delivery job until the order is completed, and it is higher than Australia’s AU$26.44-per-hour minimum wage.</p>
+<p>The Transport Workers Union called the decision a “historic moment” for Australia’s gig economy and said it was a “world-leading standard.” The rule does not spell out the exact level of insurance coverage, and workers still remain responsible for third-party insurance on the vehicles they use for deliveries. The new measure is expected to affect about 250,000 workers.</p></div>
+  <div class="source-list"><a href="http://www.kompas.com/global/read/2026/08/13/050000770/australia-tetapkan-upah-ojol-rp-395.000-per-jam-dapat-asuransi-kecelakaan" target="_blank" rel="noopener noreferrer" title="Kompas / Australia Sets Overtime Pay for Gig Workers at AU$395,000 per Hour, Includes Accident Insurance">Kompas #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="cna">
+  <summary>Johor probing 9 Malaysian firms for allegedly dumping construction waste from Singapore: Official</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Johor is investigating nine Malaysia-registered companies over allegations that they transported construction waste from Singapore into the state and illegally dumped it at three sites near villages in Pontian district, a senior enforcement official said on Wednesday (Aug 12). Zainal Fitri Ahmad, director of the Johor chapter of the Solid Waste and Public Cleansing Management Corporation (SWCorp), said authorities had gathered sufficient evidence linking the nine firms to the dumping and that further action would likely be taken. He said the companies and their representatives could face fines of up to RM100,000 (US$24,447) and jail terms of up to five years if charged and convicted.</p>
+<p>Zainal said the waste was believed to have moved from Singapore via the Tuas Second Link before being discarded on at least three plots of land in Pontian. The Johor state government had already announced on Tuesday that it would set up a multi-agency task force to conduct a comprehensive investigation, involving SWCorp, police and the Pontian district office. CNA also reported that the waste it saw at the sites included concrete slabs, metal pipes, reinforcement bars, helmets and safety vests, and that the areas had been cordoned off with notices saying investigations were underway.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/malaysia-9-firms-probe-illegal-dumping-construction-waste-johor-singapore-6314451" target="_blank" rel="noopener noreferrer" title="CNA / Johor probing 9 Malaysian firms for allegedly dumping construction waste from Singapore: Official">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="agencia_brasil">
+  <summary>Congress approves tax reduction for fuels and other sectors</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">general_news</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Chamber of Deputies approved on Wednesday (12) PLP 114/2026, which lowers federal tax rates on the import, production and sale of road diesel, biodiesel, gasoline, ethanol and aviation kerosene. The bill passed by 318 votes to 113, with one abstention, and now goes to the Senate.</p>
+<p>The text says the loss of revenue will be offset by extra federal revenue from higher oil prices, which increased royalties and other state participations since the start of the year. Relator Marussa Boldrin (Republicanos-GO) said federal revenue reached R$28 billion between January and March 2026, compared with R$9 billion in the same period in 2025. She also presented a substitute for the original text by deputy Paulo Pimenta (PT-SP), expanding the proposal beyond petroleum fuels to include ethanol, agricultural fertilizers, research into critical minerals and rare earths, and tax relief for the 2027 Women’s World Cup.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/politica/noticia/2026-08/camara-aprova-reducao-de-impostos-para-combustiveis" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Congress approves tax reduction for fuels and other sectors">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="cna">
+  <summary>Former HUDC estates hopeful about hitting en bloc thresholds under proposed collective sale measures</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Former HUDC estates in Singapore are watching proposed lower en bloc thresholds closely, hoping the rules will make collective sales easier for ageing developments that have repeatedly fallen short of the current 80 per cent bar.</p>
+<p>Pine Grove is pressing ahead with its fourth attempt, due to conclude in mid-September, while Ivory Heights and Laguna Park have already ended attempts earlier this year after failing to secure enough signatures. These former Housing and Urban Development Company estates, built in the 1970s and 1980s for middle-income households and later privatised, sit on large sites and have yet to be sold collectively, alongside Lakeview Estate and Braddell View. Analysts have said the developments are reaching the midpoint of their 99-year lease and could yield many more homes if redeveloped. PropNex CEO Kelvin Fong said the 516-unit Laguna Park plot could reportedly yield about 1,700 new units, while the 660-unit Pine Grove may be redeveloped to offer over 2,000 new homes.</p>
+<p>Owners and committee members at the estates said they were optimistic that proposed changes would improve their chances, especially as maintenance needs become more pressing. “This is about the best time. Everything has come into place,” said Mrs Cheryn Liew, Pine Grove’s MCST chairperson. She pointed to the proposed measures, along with recently revised additional buyer’s stamp duty rules that would give developers of large en bloc projects more time to sell units. “We are really too big, and the asset is really too old - 42 years old,” she said.</p>
+<p>The Ministry of Law tabled a Bill on Aug 4 to lower the consent threshold for older developments aged 40 to 59 years from 80 per cent to 70 per cent, and from 80 per cent to 65 per cent for those aged 60 years and above. At the same time, other proposed measures would tighten rules for en bloc attempts, including raising the threshold to convene a general meeting to form a collective sale committee and cutting the timeline for committees to secure signatures from 12 months to six months. National University of Singapore real estate professor Sing Tien Foo said the changes could reduce the “hold-up” problem faced by larger estates, while still protecting owners who want to stay.</p>
+<p>For the former HUDC estates, the immediate question is whether the lower thresholds will help them get over the line. Laguna Park ended its fifth attempt in early April with about 49 per cent of signatures, while Ivory Heights finished its third official attempt in June with about 60 per cent. Pine Grove has gathered 64 per cent of signatures at its reserve price of S$1.78 billion, and Mrs Liew said the estate needs fewer than 100 more signatures to meet the current threshold by Sep 20, pending the law. The Bill will be debated next, and if it is passed and assented to, the amendments will take effect later.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/proposed-en-bloc-measures-former-hudc-estate-collective-sales-6314416" target="_blank" rel="noopener noreferrer" title="CNA / Former HUDC estates hopeful about hitting en bloc thresholds under proposed collective sale measures">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="dawn">
+  <summary>Govt cuts petrol price by Re0.94, raises high-speed diesel by Re0.54</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The government on Wednesday cut petrol by Re0.94 per litre and raised high-speed diesel (HSD) by Re0.54 per litre, setting the new retail prices at Rs324.98 for petrol and Rs382.79 for HSD. The Petroleum Division’s notification said the new rates will apply from August 13, Thursday. The government is still charging Rs114 per litre in taxes and duties on petrol and Rs100 per litre on HSD.</p>
+<p>The fuel changes come as prices have moved sharply in recent months. HSD had reached a peak of Rs520.35 on April 3 after rising from Rs281 per litre following the outbreak of the US-Iran war on February 28, while petrol peaked at Rs458.41 on April 3 after starting its rise from Rs266 in the first week of March. Petroleum Minister Ali Pervaiz Malik said fuel prices would be fixed on a daily basis because of international market fluctuations, and the cabinet and prime minister had decided to give the Oil and Gas Regulatory Authority the responsibility for daily pricing. The All Pakistan Dealers Association rejected the daily pricing decision and said it would consider a protest plan.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2022398/govt-cuts-petrol-price-by-re094-raises-high-speed-diesel-by-re054" target="_blank" rel="noopener noreferrer" title="Dawn / Govt cuts petrol price by Re0.94, raises high-speed diesel by Re0.54">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="daily_maverick">
+  <summary>Pikitup in deep financial distress as trucks, staff and money run short</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Johannesburg’s waste collector Pikitup is under severe financial and operational strain, with ageing trucks, staff shortages and unpaid bills feeding rubbish backlogs across the city and raising fresh questions about how long services can keep running.</p>
+<p>In the latest quarterly report tabled before council in July, managing director Bukelwa Njingolo said Pikitup faced fiscal and operational constraints, including low supplier invoice payment, high critical vacancy levels, underfunded waste diversion efforts and reduced fleet availability because maintenance budgets are tight. Pikitup provides waste services to 908,208 households, communities and businesses, plus 207 informal settlements, and it operates 12 depots across Johannesburg’s seven regions.</p>
+<p>The numbers in the report are stark. Pikitup spent R800-million year-to-date on rentals because the city does not have enough trucks to collect rubbish. It also reported a 56% vacancy rate, fuel costs of R47-million year-to-date against a budget of R36-million, and 98.2% of the annual budget already spent by the third quarter. Collection rates fell from 70.9% to 65.0% in the quarter, and stood at 61.0% year to date, down from 62.5% in the previous financial year.</p>
+<p>The strain is also hitting infrastructure. Landfill sites are almost at capacity, with no money for interventions to extend their life cycle or for surveys to monitor air quality. It said none of 12 capital projects planned for 2025/26 had been completed, and infrastructure projects had been stalled for almost a year because of non-payment.</p>
+<p>Pikitup also said more than R61-million is owed by seven state hospitals, including Chris Hani Baragwanath, Helen Joseph and Sizwe Tropical Diseases Hospital. Last week, most depots were not operational because of labour disputes, and by Monday the backlog from the protests had still not been cleared.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-12-pikitup-in-deep-financial-distress-as-trucks-staff-and-money-run-short" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Pikitup in deep financial distress as trucks, staff and money run short">DM #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="politico">
+  <summary>Putin threat pushes Germany to give spies major new powers</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Germany’s cabinet adopted an intelligence reform in Berlin on Wednesday that would give the Bundesnachrichtendienst, or BND, far broader powers, including sabotage, offensive cyber operations and more aggressive espionage. The plan is part of Friedrich Merz’s government push to strengthen the foreign intelligence agency, but it still needs approval from both chambers of parliament before it can take effect, with implementation expected by 2027.</p>
+<p>The government says the move responds to growing threats from Russia and to Germany’s heavy reliance on U.S. intelligence sharing. Interior Minister Alexander Dobrindt said Germany is “daily” targeted by espionage, sabotage, cyberattacks and covert actions by foreign powers, and said the state must adapt to those threats. Nina Warken, who is overseeing the BND reforms, said Germany has relied too heavily on foreign partners for intelligence work it has long been unable to do itself. The reforms would also loosen data-protection limits on the BND, including wider use of AI and facial recognition, and allow the agency to store data longer.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/germany-to-give-spies-bnd-new-powers-to-counter-russia-threat" target="_blank" rel="noopener noreferrer" title="POLITICO / Putin threat pushes Germany to give spies major new powers">POLITICO #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>ComBodied Agents: a New Paradigm of Human-Centric Agentic AI</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint on arXiv proposes <strong>ComBodied Agents</strong>, a human-centric paradigm for agentic AI that focuses on a person’s evolving state and agency rather than only software or physical tasks. It uses the example of an older adult who misses a medication dose: a software agent can send another reminder, and an embodied agent can bring the medication, but neither explains whether the person forgot, is confused, has side effects, or deliberately refused, or what support is appropriate.</p>
+<p>The paper says this exposes a structural gap in Agentic AI and defines Combodied Agents as systems that perceive, model, predict, and support individual human-state trajectories over time. It describes software tools, sensors, wearables, robots, and human services as action channels rather than end goals, and outlines a closed loop built from event-based multimodal perception, longitudinal correctable memory, Personal World Models, and an admissible intervention policy guided by consent, uncertainty, safety, reversibility, and user control. The framework also uses purpose-bounded, uncertainty-aware, user-correctable representations, and proposes scenario-centered evaluation, agency-preservation metrics, benchmark requirements, edge-native personal models, and governance directions.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.10915" target="_blank" rel="noopener noreferrer" title="arXiv / ComBodied Agents: a New Paradigm of Human-Centric Agentic AI">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Co-Evolution in Agentic Systems: Toward Self-Directed Evolution Beyond Human Design</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An arXiv survey examines co-evolution in agentic systems, arguing that agentic systems are increasingly expected to improve after deployment even though single-entity self-evolution is often limited by static learning contexts such as fixed tasks and feedback. The paper focuses on co-evolution as a multi-component form of self-evolution in which multiple agents and their environment impose adaptive pressure on one another, and it proposes a progressive three-stage taxonomy to organize existing work.</p>
+<p>The three stages are Agent--Agent Co-Evolution, where agents adapt through dynamic peers including adversarial, collaborative, and organizational settings; Agent--Environment Co-Evolution, where adaptive tasks, feedback, and interaction spaces change with the agents; and Meta Co-Evolution, where the evolution mechanism itself may become evolvable. The survey also discusses open challenges in evaluating such systems, scaling them across multiple components, and keeping increasingly autonomous evolutionary processes safe and controllable.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.10299" target="_blank" rel="noopener noreferrer" title="arXiv / Co-Evolution in Agentic Systems: Toward Self-Directed Evolution Beyond Human Design">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Beyond Pixels: From Video Priors to 4D Worlds</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Latent-to-4D proposes a direct latent-to-4D generation method for synthesizing dynamic 3D scenes from conditions such as text or images. The work argues that existing approaches either reconstruct generated RGB videos with a separate 4D model or adapt a particular video generator to predict geometry directly; it says the first approach can suffer from distribution mismatch and error propagation, while the second can tie 4D prediction to one generator and require retraining when the generator or conditioning regime changes. The new approach asks whether the final denoised latents of video models that share a variational autoencoder can serve as a reusable interface for explicit 4D prediction.</p>
+<p>Latent-to-4D is instantiated by aligning a video latent with the token grid of a pretrained 4D decoder and refining it with frame-wise and global spatiotemporal attention. Trained on roughly 1K existing reconstruction clips, a single checkpoint transfers unchanged across multiple video diffusion transformers within the same VAE family. On Text4D-200 and I4D-200, it surpasses matched same-latent Wan+4RC cascades in projection-based DINO-F1 by 2.88--3.45 and 5.81 points, respectively, and human raters preferred it for geometry, temporal stability, and overall quality.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.10744" target="_blank" rel="noopener noreferrer" title="arXiv / Beyond Pixels: From Video Priors to 4D Worlds">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Articulated Object Reconstruction from Rest-State Observation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers proposed a rest-state formulation for articulated object reconstruction that aims to recover 3D geometry and kinematic structure from a single closed configuration, rather than from observed motion across multiple states. The framework uses an explicit mesh to reconcile noisy outputs from vision-language and segmentation models into spatially consistent part structures, and it uses a video diffusion model to synthesize articulation hypotheses and check them with geometric consistency. In the preprint, the approach is reported to achieve accurate part decomposition and physically plausible articulation, competitive with several baselines.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2607.27749" target="_blank" rel="noopener noreferrer" title="arXiv / Articulated Object Reconstruction from Rest-State Observation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Mendel G&quot;odel Machine: Recursive Self-Improving Coding Agents via Comparative Evolution</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mendel Gödel Machine (MGM) proposes a way to improve self-modifying coding agents that rewrite their own source code by using comparative signals from an expanding archive of past attempts, rather than relying on a single failure trajectory. The preprint says existing approaches have shown strong coding performance, but generally update from one trajectory at a time. MGM adds a single-trajectory clonal mutation plus two new self-modification methods: reaction-norm mutation, which edits an agent using its trajectories on multiple tasks simultaneously, and cross-lineage hybridization, which uses the trajectory of a reference agent from another lineage on the same task.</p>
+<p>The authors say that, under an additive fitness landscape model, they prove the new strategies should converge faster and better than single-trajectory baselines, and they also demonstrate this in controlled surrogate simulation. They report experiments on SWE-bench and Polyglot, where MGM showed consistent improvement in performance, efficiency, and generalizability.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.07645" target="_blank" rel="noopener noreferrer" title="arXiv / Mendel G&quot;odel Machine: Recursive Self-Improving Coding Agents via Comparative Evolution">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="nature">
+  <summary>Agentic profiles for effective AI governance</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Nature paper in volume 656, pages 320–328 (2026), says effective governance mechanisms for artificial intelligence agents require a deeper understanding of their core properties and what they mean for deployment. It characterizes AI agents across four dimensions: autonomy, efficacy, goal complexity and generality. The authors propose different gradations for each dimension and argue that each one raises distinct questions for the design, operation and governance of these systems.</p>
+<p>Using that framework, the paper constructs “agentic profiles” for different kinds of AI agent. Those profiles are meant to clarify cross-cutting technical and non-technical governance challenges across a range of systems, from narrow task-specific assistants to highly autonomous general-purpose systems. By mapping key axes of variation and continuity across the four dimensions, the authors say the profiles can give developers, policymakers and members of the public guidance for effective AI governance.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10805-z" target="_blank" rel="noopener noreferrer" title="Nature / Agentic profiles for effective AI governance">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>DSAgentBench: Can Agents Automate End-to-End Data-Science Workflows in Real Computer Environments?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new benchmark, DSAgentBench, was introduced to test whether agents can automate full data-science workflows inside real computer environments. The benchmark targets long-horizon data-science work that spans data wrangling, exploration, modeling, visualization, and validation, using tools such as notebooks, IDEs, terminals, browsers, and databases. It was created because existing benchmarks do not include real-computer interaction or test complete end-to-end workflows in realistic computing environments. DSAgentBench contains 275 diverse tasks covering the full data-science life-cycle, and each task uses a deterministic evaluator that checks analytical correctness, visual outputs, and model performance rather than code-only execution.</p>
+<p>In experiments with 15 closed- and open-source models, the strongest agent, Claude-4.6-Sonnet, reached 56.70% task success. All open-source agents stayed below 1%, with frequent failures in tool orchestration, OS grounding, and multi-step reasoning. The benchmark is presented as a foundation for building grounded, verifiable, autonomous data-science agents, and it was released at https://github.com/vis-nlp/DSAgentBench.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.10366" target="_blank" rel="noopener noreferrer" title="arXiv / DSAgentBench: Can Agents Automate End-to-End Data-Science Workflows in Real Computer Environments?">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Decoding-Level Taboo: A Diagnostic Stress Test for LLM Robustness</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Decoding-Level Taboo is a zero-prompt diagnostic stress test for large language models that intervenes directly in logit space at runtime, forcing models off their nominal paths. It dynamically masks primary candidate tokens at word boundaries so the model has to rely on circumlocution rather than its most likely next words. Evaluated across several open-weight model families, the method found that off-path robustness depends heavily on parameter scale and post-training instruction alignment, with robustness generally improving as models get larger and more aligned.</p>
+<p>The preprint frames the tool as a way to probe a gap between nominal benchmark performance and the conditions models face in deployment, where system prompts, safety guardrails, and structural constraints can push them away from the narrow generation corridor they are tuned for. It also says Taboo could be used beyond the paper’s results as a primitive for generating diverse synthetic datasets, stress-testing runtime safety guardrails, and auditing model reliability before real-world deployment.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.09900" target="_blank" rel="noopener noreferrer" title="arXiv / Decoding-Level Taboo: A Diagnostic Stress Test for LLM Robustness">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Reply to: Dataset artefacts can partially drive the measured decline in disruption</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Park et al. replied in *Nature* to Holst et al.’s claim that the decline in disruptiveness documented in Park et al. was an artefact of including works with zero backward citations. The reply appeared in *Nature* volume 656, pages E14–E21 (2026), and it says that using the dataset, metric and method advocated by Holst et al., the authors still find declines equivalent to benchmark transformations in science.</p>
+<p>They also say Holst et al.’s own regression model, designed to address concerns about works with zero references, yields large, significant declines for papers and patents (P &lt; 0.01), which they say is shown in the supplementary tables but left unaddressed. The reply argues that Holst et al.’s critique is undermined by data-quality problems, including three times as many works with zero references as in Park et al.’s data, heavy inclusion of non-research material such as editorials, obituaries, comments, books, proceedings, and product and artistic reviews, and sample items like 456 For Dummies guides, 50 Dr. Seuss and Curious George books, and the Captain Underpants series.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10788-x" target="_blank" rel="noopener noreferrer" title="Nature / Reply to: Dataset artefacts can partially drive the measured decline in disruption">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists find evidence for two origins of life on Earth</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An international team led by biologists in Düsseldorf has reported evidence that free-living cells may have arisen independently twice, a finding that pushes the earliest history of bacteria and archaea back to a time when metabolism still depended heavily on metals and other environmental chemistry.</p>
+<p>The work, published in *Science Advances*, addresses a basic question in research at the Institute of Molecular Evolution at Heinrich Heine University Düsseldorf: where and how life first emerged on Earth. The researchers say that about 4 billion years ago, Earth was very different from today, and the earliest cells may have looked like “two very different kinds of cells emerging,” as Natalia Mrnjavac put it, with pioneer bacteria and pioneer archaea taking shape outside hydrothermal vents.</p>
+<p>To reach that conclusion, Mrnjavac and colleagues examined genomes, protein structures and chemical reactions from some of the earliest stages of microbial evolution, including the period before fully free-living cells existed. They focused on the complete set of reactions cells use to make key biological components such as amino acids, RNA bases and vitamins from materials available on the early Earth, including hydrogen gas, ammonia and CO2. In all, they mapped 420 chemical reactions in the metabolic network.</p>
+<p>What surprised the team, William Martin said, was that the reactions themselves are extremely ancient and conserved across life, but the enzymes that carry them out are not equally conserved between bacteria and archaea. The researchers say the last universal ancestor of all cells, LUCA, had enzymes for only about half of metabolism’s reactions. The rest, they concluded, were catalyzed by metals in the environment where LUCA arose.</p>
+<p>That picture led the team to propose four stages in the early evolution of biological catalysis: first, reactions driven entirely by metals; then a phase in which metals and enzymes worked together in LUCA; then a split as bacteria and archaea followed separate evolutionary paths; and finally, within each lineage, enzymes gradually replaced inorganic catalysts.</p>
+<p>The team also reports examples in which bacteria and archaea appear to have independently evolved different enzymes for the same essential metabolic task. Martin said those parallel inventions could have paved the way for the independent emergence of free-living bacteria and archaea. In his words, the data support “one origin of the genetic code, but two origins of life.”</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260811011134.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists find evidence for two origins of life on Earth">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover a hidden brain rhythm that could improve Parkinson’s treatment</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Deep brain stimulation for Parkinson’s disease may work through a specific brain network that communicates mainly in a faster beta rhythm of 20 to 35 Hz. The study, published in *Brain* as “The Deep Brain Stimulation Response Network in Parkinson’s Disease Operates in the High Beta Band,” says the benefits of deep brain stimulation appear to depend on stimulating that network. The work came from neuroscientists and clinicians at the University Hospitals of Cologne and Düsseldorf, Harvard Medical School and Charité Berlin.</p>
+<p>The researchers said this is the first study to combine electrophysiology and brain imaging, two approaches that had largely been studied separately. They studied 50 patients and 100 brain hemispheres, recording brain activity through implanted DBS electrodes and with magnetoencephalography (MEG). Their analysis mapped connections between the subthalamic nucleus and frontal brain areas and found that the strength of this connection was associated with how much patients’ motor symptoms improved after electrode implantation. The authors said the findings could help make DBS settings more precisely tailored in future.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260811011148.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover a hidden brain rhythm that could improve Parkinson’s treatment">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A strange crystal made of electrons just revealed its hidden motion</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the University of Basel and the Technical University of Munich found a new way to examine how electrons move together inside a Wigner crystal, using light to probe a single atomic layer of tungsten diselenide cooled to only a few degrees above absolute zero. In a study published in Nature Physics, experimental researchers led by Professor Tomasz Smoleński analyzed the reflected light and found previously unseen optical features that contain information about the collective behavior of electrons inside this elusive form of matter.</p>
+<p>The signals arise from interactions between the ordered electrons and excitons created by the light, forming hybrid quasiparticles called Wigner crystal polarons. A theoretical team led by Professor Michael Knap at TUM developed a model for how those quasiparticles form. The researchers also said the strength of electron interactions affects the optical signatures, which could make the method useful for studying strongly correlated systems and the hidden dynamics of electronic crystals.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260812015156.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A strange crystal made of electrons just revealed its hidden motion">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>3,500-year-old skeletons challenge what scientists thought they knew about syphilis</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Skeletons from prehistoric Vietnam are pushing researchers to rethink how ancient syphilis is identified, after a study found congenital treponemal disease in three children but evidence that points away from venereal syphilis.</p>
+<p>A Charles Sturt University researcher, Dr. Melandri Vlok, led an international team from Australia and Vietnam that analyzed skeletal remains from archaeological sites in northern and southern Vietnam dating to about 4,000 to 3,200 years ago. The researchers examined 309 individuals from 16 sites across Vietnam, covering a span from 10,000 to 1,000 years before the present time. Only three young children showed diagnostic signs of congenital treponematosis, with teeth and bones showing abnormalities and lesions linked to treponemal infection dating back at least 3,500 years. Two of the children came from Man Bac, where earlier work had already found unusually high rates of treponemal disease.</p>
+<p>The key tension is that congenital infection has long been treated as strong evidence of venereal syphilis. Here, though, the overall pattern of infection points away from that diagnosis. The researchers say the children were more likely affected by a nonvenereal treponemal disease such as yaws, which can also spread from mother to child. Yaws is a tropical disease that affects more than 150,000 people around the tropical world and can cause permanent disability.</p>
+<p>That distinction matters because, as Dr. Vlok said, some cases previously labeled congenital syphilis may represent different diseases. The findings also highlight how hard it is to use ancient DNA in tropical regions and why future work may need to focus on how treponemal diseases evolved alongside human populations.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260811011143.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / 3,500-year-old skeletons challenge what scientists thought they knew about syphilis">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists turn sheep’s wool into a material that helps regrow bone</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Scientists at King’s College London found that keratin extracted from sheep’s wool could help repair damaged bone. In tests first done with human bone cells and then in rats with skull defects, the wool-based material supported bone regeneration, helped direct new bone growth across damaged areas, and produced tissue that more closely resembled healthy, natural bone than tissue formed with the current gold standard material. Dr. Sherif Elsharkawy said the team had “successfully tested” a wool-based material in a living animal to repair bones.</p>
+<p>The researchers also framed wool as a potentially sustainable source for bone repair because it is naturally derived and often discarded as farm waste, giving it possible renewable and scalable value. Their work contrasted keratin scaffolds with collagen, which has long been used in regenerative medical and dental applications but can be relatively weak, may degrade too quickly, and can be difficult and costly to extract. In the animal tests, collagen produced more bone overall, but the keratin scaffolds formed bone that was more organized, better aligned, and more structurally secure.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260812015210.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists turn sheep’s wool into a material that helps regrow bone">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
