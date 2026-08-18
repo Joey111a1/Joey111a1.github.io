@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-18</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-18</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>At least 92 dead in Zimbabwe after Lake Kariba ferry disaster</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Police in Zimbabwe said they had recovered eight more bodies after a ferry capsized on Lake Kariba six days earlier, bringing the death toll to at least 92. The national police service confirmed the latest count in a social media post on Monday after saying on Sunday that 84 bodies had been found. Search efforts for the remaining victims were still underway, with police saying they had deployed four boats and more than 40 divers.</p>
+<p>The ferry capsized during high winds on the lake near the Zambian border and was travelling from Kariba in northern Zimbabwe to rural and fishing communities in the northwest. Authorities said the ferry’s capacity was 90 people, but they had not confirmed how many were on board; earlier reports said it may have been overloaded with as many as 153 passengers and crew. Local media video on Saturday showed hundreds of people waiting outside a hospital to identify loved ones. At least 18 children died, and President Emmerson Mnangagwa called the incident “tragic” and said it exposed serious deficiencies that needed to be addressed immediately.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/17/death-toll-from-capsized-ferry-in-zimbabwe-rises-to-92?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / At least 92 dead in Zimbabwe after Lake Kariba ferry disaster">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Earthquake Leaves Thousands of Colombian Children Out of School</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Thousands of Colombian children are still out of class after the Aug. 10 magnitude 7.4 earthquake, with Pereira alone reporting more than 58,000 temporarily sidelined and only 15 of its 165 schools able to reopen after urgent repairs, while rain keeps worsening conditions for displaced families and the question of safe return remains unresolved.</p>
+<p>Authorities have recorded varying degrees of damage at more than 3,200 schools across the country, and the disruption is most severe where buildings, power, water and internet access were already fragile. In Pereira, the capital of Risaralda, Interior Minister Rodrigo Lara said on Saturday that the city’s schools were in critical condition and called the situation “an educational tragedy on a national scale.”</p>
+<h3>Pereira’s classrooms are still unusable</h3>
+<p>The scale of the school closures is easiest to see in Pereira, where Lara said 165 schools were damaged and only 15 could resume operations after urgent repairs. The city alone has temporarily left more than 58,000 children out of school, and that figure captures only one part of the wider disruption caused by the earthquake.</p>
+<p>At Jesus Maria Ormaza School, students were beginning their second class period when the ground started shaking violently. Principal Luis Caicedo said the quake left the building badly damaged, with walls and roofs affected and the roof of the teachers’ room collapsed. He said there are “many damaged walls,” and the school is now setting up a relief and collection point for food, medicines and clothing while staff decide how to support students.</p>
+<p>Caicedo said the school has experience with virtual learning, but that option is limited because many children are at home without computers and without power in many areas. He also said up to 120 of the school’s 800 students lost their homes and are now staying in shelters.</p>
+<h3>Rural students are waiting on inspections, not online classes</h3>
+<p>The educational emergency is even harder to solve in remote places. In La Encharca, a rural village in the municipality of Medio San Juan in Chocó, the school can only be reached by boat along the Suruco River and has remained without electricity, potable water or connectivity since the earthquake.</p>
+<p>Community leader John Ibarbo said the children were able only to approach their teachers and hug each other “with that fear” after the shaking. He said some classroom walls and community halls have cracks, and the students have not had classes since then while they wait for a technical inspection by regional authorities to determine whether the building is safe and what repairs it needs.</p>
+<p>Ibarbo also rejected the idea of shifting classes online as a practical fix. He said it would not benefit most families because signal coverage is poor in the area and many households do not have computers or cellphones. The municipality lies in a region where the Clan del Golfo drug-trafficking group and the National Liberation Army, or ELN, have historically operated, adding another layer of difficulty to the response.</p>
+<h3>Rain has made the shelters harder to live in</h3>
+<p>The earthquake’s aftermath has been made worse by heavy rain. On Sunday night, downpours in Pereira worsened conditions for families staying in improvised camps after losing their homes, particularly at Olaya Herrera Park, one of the main refuge sites in the city.</p>
+<p>During the night, tents installed by the city government had to be covered with plastic so water would not soak the few belongings families managed to save from the earthquake. The park’s ground also became completely waterlogged, making it even harder for people who must spend the night there while waiting for a housing solution.</p>
+<p>The rain also affected San Jorge University Hospital in Pereira, where flooding occurred. Videos shared on social media showed leaks and damaged pipes in some areas of the medical facility, although the extent of the rainfall damage had not been reported as of now.</p>
+<p>For now, the people affected are waiting on inspections, repairs and housing decisions before school life can resume. In Pereira, that means classrooms remain shut even as emergency crews try to keep children and families in place; in La Encharca, it means children are still waiting to learn whether their school can safely reopen at all.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/heavy-rain-complicates-conditions-for-earthquake-survivors-in-colombia" target="_blank" rel="noopener noreferrer" title="Telesur English / Heavy Rain Complicates Conditions for Earthquake Survivors in Colombia">TE #1</a><a href="https://www.telesurenglish.net/choco-earthquake-lays-bare-decades-of-state-neglect" target="_blank" rel="noopener noreferrer" title="Telesur English / Choco Earthquake Lays Bare Decades of State Neglect">TE #2</a><a href="https://www.telesurenglish.net/earthquake-leaves-thousands-of-colombian-children-out-of-school" target="_blank" rel="noopener noreferrer" title="Telesur English / Earthquake Leaves Thousands of Colombian Children Out of School">TE #3</a><a href="https://www.telesurenglish.net/colombia-earthquake" target="_blank" rel="noopener noreferrer" title="Telesur English / Colombia Earthquake: 289 Dead as Devastating Rescue Operation Continues">TE #4</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="el_pais,scmp">
+  <summary>The ultra-right Israeli minister Ben Gvir advocates killing 30 or 40 people every night in Gaza</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Itamar Ben Gvir, Israel’s far-right national security minister, said in a podcast that Gaza should see 30 or 40 targeted killings each night, tying the claim to his broader push for settlement, emigration and harsher punishment as the death-penalty debate deepens.</p>
+<h3>The podcast remarks</h3>
+<p>Ben Gvir made the comments in a podcast called *8 October*, a title that refers to the day after the October 7, 2023 attack, when Hamas took hostage the radio host Rom Braslavski. Braslavski was later released two years later as part of the ceasefire. In the conversation, Ben Gvir said: “I think every day we should carry out targeted assassinations in Gaza, around 30 or 40 each night.”</p>
+<p>He added that this should apply “not only those who pose an immediate threat.” He went further, saying: “There are people there who do not deserve to live. They are not even people, I don’t want to call them people.” The remarks were made while speaking to Braslavski, who is also described in the evidence as a former Gaza-held hostage.</p>
+<h3>What he said Gaza should look like</h3>
+<p>Ben Gvir did not limit himself to calls for killings. He also described Gaza as a place where Israeli settlements should exist “all over the Strip” and “not only in Gush Katif,” the bloc evacuated unilaterally in 2005. He said he wanted as few Palestinians there as possible, by “promoting emigration,” and added: “As much as possible, push them back to their lands.”</p>
+<p>The evidence says this reflects an idea shared by the Israeli right: that Palestine does not exist, that its inhabitants are not a people, and that only Jews have the right, for biblical and historical reasons, to inhabit the area. Ben Gvir later clarified that there would be no emigration possible for “the terrorists,” because that would mean “kill them one by one.”</p>
+<p>The same line of thinking appears in other recent interviews cited in the evidence. On Sunday, in an interview with radio 103 FM, he spoke about “conquering all of Gaza,” “promoting emigration” and “eliminating” Hamas. “That is why we went to war […] It’s like football, you have to win 6-0, 7-0, 8-0,” he said. Three days earlier, on the right-wing channel i24, he responded to a Gazan man desperate to leave the territory by saying: “You’re right. Every day I slam Netanyahu and tell him: ‘Let’s promote emigration!’”</p>
+<h3>Death penalty politics around the interview</h3>
+<p>The podcast took place amid a broader push on punishment. During the conversation, both Ben Gvir and Braslavski wore a lapel pin shaped like a noose, which the evidence says is common for Ben Gvir and is meant to show support for the death penalty expansion approved by Parliament in March.</p>
+<p>That law makes hanging the default punishment, without the need for unanimity, for Palestinians in the occupied West Bank who kill Israelis in acts of violence related to the Middle East conflict. The law does not apply to Jewish Israelis. In the evidence, Ben Gvir is described as celebrating the measure by trying to open a bottle of champagne in Parliament and later marking his 50th birthday with a cake decorated with a drawing of the noose and the words: “Sometimes dreams come true.”</p>
+<p>At the start of the podcast, Braslavski asked Ben Gvir to let him be the one who kills “all the terrorists here, in the State of Israel.” “I don’t want a noose or a switch [the electric chair]. With my own hands,” he said. Ben Gvir replied that he would move “heaven and earth” to make it happen, though he later reminded him that there was already a decision to apply capital punishment by hanging.</p>
+<p>The evidence portrays the interview as part of a pattern rather than a one-off statement. It says Ben Gvir has repeated these ideas in recent days and that, if his party remains in power after the October elections, he expects to be able to carry out his plan. It also says his party, Jewish Power, is polling at around 10 seats in the 120-member Knesset, while he currently holds six.</p></div>
+  <div class="source-list"><a href="https://elpais.com/internacional/2026-08-17/el-ministro-ultra-israeli-ben-gvir-aboga-por-matar-cada-noche-en-gaza-a-30-o-40-personas.html" target="_blank" rel="noopener noreferrer" title="El País / The ultra-right Israeli minister Ben Gvir advocates killing 30 or 40 people every night in Gaza">El Pais #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3364239/far-right-ben-gvir-urges-israel-kill-30-40-every-night-gaza" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Far-right Ben-Gvir urges Israel to kill ‘30 to 40 every night’ in Gaza">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="ocha">
+  <summary>DRC: Families displaced by conflict now fight Ebola</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">humanitarian expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Families in Kigonze, a displacement site in Ituri, are confronting Ebola while trying to rebuild lives after conflict, and a red-roofed transit centre has become both a medical shield and a test of trust for the site’s 18,500 residents.</p>
+<h3>Esther’s illness began as stomach pain and vomiting</h3>
+<p>When 19-year-old Esther developed severe stomach pain and vomiting, she tried to treat herself but was not getting better. During a door-to-door visit in Kigonze, community health volunteers recognized her symptoms, called an ambulance and took her to the hospital. Her mother and younger sister were sick too.</p>
+<p>Esther says her mother died before she learned that they had tested positive for Ebola. Esther then spent more than three weeks in an Ebola treatment centre. She survived, and says she held on to hope because the treatment had already made her feel much better.</p>
+<p>Her experience came after years of displacement. Esther was 11 when she fled Drodro in Ituri with her family. She remembers homes on fire, hiding until the shooting stopped, and walking nearly 20 kilometres to reach safety. Years later, Kigonze became home, but the move brought a different kind of hardship: rebuilding a life while remaining vulnerable to new shocks. Esther’s father later died of illness at the site as the family struggled to rebuild.</p>
+<h3>A small centre became the first line of defence</h3>
+<p>Rising above hundreds of shelters in Kigonze, a red-roofed building has become a symbol of protection for the site’s residents. Since mid-May, eastern Democratic Republic of the Congo has been battling an Ebola outbreak that spread beyond its epicentre in Ituri, adding another layer of fear for communities already affected by conflict and displacement.</p>
+<p>The eight-bed transit centre at Kigonze, operated by International Medical Corps with funding from the U.S. Department of State, serves as the community’s first line of defence against Ebola. Suspected cases can be isolated and tested there before being referred to specialized treatment centres if they test positive.</p>
+<p>Dr. Sambo Sidikou, IMC’s Ebola treatment centre coordinator, said early response can help stop the virus before it spreads in a densely populated displacement site. He added that acceptance and trust are key, and said hygienists, nurses and even some doctors come from the displaced community. He also said isolation should not mean cutting people off from their families. Relatives can still visit if they follow infection prevention measures.</p>
+<p>For people in Kigonze, the centre is more than a medical facility. It is part of a response increasingly rooted in the community itself, where most people working there are displaced too. That includes Mbusi, who arrived in Kigonze in 2018 after armed groups looted Drodro. She said they killed her father and abducted her brother, and that the family felt it had no choice but to leave. Her two younger children were born at the site. Now a hygienist at the Ebola Transit Centre, she said: “There is no difference between war and Ebola.”</p>
+<p>Odette also found her way back to health care after displacement forced her to leave her village and lose her nursing job. She took market work, odd jobs and temporary hospital and pharmacy positions before joining the Kigonze Ebola Transit Centre. She said she wanted to help her community. She also recalled a time when people were afraid to seek care, saying they used to think Ebola was deliberately injected at the hospital. She believes health workers from the displaced community have helped build trust and encouraged earlier care-seeking.</p>
+<h3>Survival has become part of the response</h3>
+<p>The response in Kigonze is also shaped by people who know displacement from the inside. Dr. Moïse Lobho Ngaba, who trained in Goma and was recruited by IMC to help run the Ebola Transit Centre, also remembers fleeing conflict in Djugu. His great-uncle lives at the site, and he encourages neighbours to come to the centre and see his nephew when they are ill or afraid to seek care. He said these connections can make a difference when rumours, misinformation and fear discourage people from seeking treatment.</p>
+<p>That fear has had real consequences. In June alone, more than half of the attacks affecting humanitarian workers happened while they were supporting the Ebola response, according to the evidence. Nearly one million people in Ituri have been displaced by conflict, and many families have spent much of their lives in displacement sites where overcrowding and limited services increase vulnerability during outbreaks.</p>
+<p>Esther is now part of the response herself. After surviving Ebola, she works in the nursery unit of the Ebola treatment centre, caring for children who have tested positive for Ebola or are suspected of having it. The centre considered her an ideal candidate because she had survived the virus, and she accepted. She says she works “in the service of God.”</p>
+<p>Her role has brought her back through the same doors that once led her to treatment. Now she comforts frightened children and tells others not to wait when they become sick: “Don’t be afraid. Don’t stay in your shelter and die. If you feel unwell, go to the hospital.” In Kigonze, survival has become something shared — and, for families still living with displacement, a source of strength as well as hope.</p></div>
+  <div class="source-list"><a href="https://www.unocha.org/news/drc-families-displaced-conflict-now-fight-ebola" target="_blank" rel="noopener noreferrer" title="UN OCHA updates / DRC: Families displaced by conflict now fight Ebola">UN OCHA updates #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Civilians paying price as Israeli military raises stakes in Lebanon: UNIFIL</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Civilians in southern Lebanon are bearing the brunt of a rise in Israeli military activity over the past two weeks, United Nations peacekeepers said. In a statement issued Monday, the UN Interim Force in Lebanon (UNIFIL) said it recorded an average of 137 projectiles fired per day between August 5 and 16, with 208 on Saturday and 185 on Sunday. UNIFIL said the escalation is continuing despite the renewal of the June 26 ceasefire agreement between Lebanon and Israel. It said the deal, brokered by the United States, is tied to the disarmament of Hezbollah but does not specifically call for the withdrawal of Israeli forces, which occupy several parts of southern Lebanon.</p>
+<p>UNIFIL said civilians are “once again paying the highest price,” with many families displaced or forced to change daily routines because of insecurity and uncertainty. The force said its peacekeepers have stayed in place through patrols, monitoring, removing road obstacles, reducing explosives risks and helping humanitarian access. It also said UN Security Council Resolution 1701 remains the basic framework for restoring stability in southern Lebanon. On Monday, Lebanon’s President Joseph Aoun voiced support for extending UNIFIL’s mandate and keeping international forces in the area.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/17/civilians-pay-price-as-israeli-military-activity-rises-in-lebanon-unifil?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Civilians paying price as Israeli military raises stakes in Lebanon: UNIFIL">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>‘Like a battlefield’: How Yemen’s Mocha went from a town of fishermen to a city of fighters</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mocha’s shoreline economy has given way to a heavy military presence, with fighters, repeated Houthi strikes and displaced families reshaping a city once known for fishing and coffee, and residents now weighing security against the loss of their livelihoods.</p>
+<p>In Yemen’s coastal city of Mocha, the dominant dialect is no longer that of the native fishermen who grew up relying on the sea. Instead, it is the dialect of fighters who fled Houthi-controlled areas. Once a small fishing town, Mocha has become a busier place where almost all essential services are available, largely because fighters have settled there with their families.</p>
+<p>The city’s transformation sits on top of a much older history. Mocha is a centuries-old trading city on Yemen’s southwestern coast along the Red Sea, in Taiz governorate, and its port was once world-famous for exporting Yemeni coffee. That changed after the civil war erupted in 2014 between the Houthis and the internationally recognised government: the port was closed in 2015, then reopened in 2021 after being rehabilitated by the Republican Guard, a faction of Yemen’s former elite military units led by Tareq Saleh and backed by the UAE. Saleh had initially fought alongside the Houthis, but after his uncle, former President Ali Abdullah Saleh, was killed by the group in December 2017, he fled Sanaa and began building his own forces in Mocha. Since then, the city has served as the Republican Guard’s headquarters.</p>
+<h3>Fighters, families and a changing city</h3>
+<p>Mocha’s new role has drawn in more people than soldiers alone. Many Yemenis fleeing Houthi-controlled areas have joined the Republican Guard there, attracted by higher salaries paid in Saudi Riyals. The result is a city where the fighter population has become so visible that one resident said walking through Mocha can feel like being back in Dhamar because of all the familiar faces.</p>
+<p>The city’s growth has also pushed families outward. Ibrahim Salem, a fighter in his 40s who originally comes from Dhamar governorate, said he joined the Republican Guards in Mocha seven months ago after escaping Houthi-controlled areas, where he had previously served as a Houthi fighter. He said he decided not to keep his family in Mocha because of the danger, renting a home for them in a village in Taiz’s al-Maafer district instead. Another fighter, Ramez, said he had moved his family to a village away from Mocha from the start, arguing that it was safer and cheaper than a city close to military targets.</p>
+<p>Both men described a wider pattern of fighters moving relatives out of the city and into rural areas in Taiz and Lahj governorates. Salem said this was now his family’s second displacement, first from Dhamar to Mocha and then from Mocha to a rural locality.</p>
+<h3>A strategic port under repeated attack</h3>
+<p>Mocha’s location has made it militarily important and increasingly exposed. About 60km from the Bab al-Mandab Strait, the city holds a strategic position on the Red Sea. The Houthis have targeted it repeatedly in the last fortnight, and more than 25 Houthi attacks have struck the Port of Mocha over the past week.</p>
+<p>The strikes have brought direct civilian consequences. While the Houthis said they were targeting military reinforcements and positions, government officials said 16 civilians were killed and 22 others were injured in Friday’s strikes alone. As the attacks continued, operations at the seaport ground to a halt, leaving more than 1,500 port workers without a livelihood.</p>
+<p>For residents who once depended on the sea, that collapse has been devastating. Akram, a fisherman in his 40s, said local fishermen are no longer allowed to sail because of the escalation, and many believe choosing Mocha as the Republican Guards’ headquarters stripped them of their jobs. He said the town had gone from peaceful fishing life to a place where “the sea used to be our primary source of income, but today it feels more like a battlefield.”</p>
+<p>Akram also said some fishermen had abandoned their trade to join the Republican Guard because the fighters’ salaries, paid in Saudi Riyals, were as much as four times what a fisherman typically earned. But he said the city’s residents were still paying the price. Another resident, Zaher, who works as a driver for an international humanitarian organisation, said he was glad to see Mocha grow and attract aid groups and new investment, but argued that safety had to come first. “All we need is security,” he said, adding that people in the city wanted the Houthis to avoid targeting civilian infrastructure.</p>
+<p>For Mocha, the conflict has turned a port town once known for coffee and fishing into a place defined by fighters, displacement and repeated attack, with little agreement on whether the city’s new bustle is survival or ruin.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/battlefield-how-yemens-mocha-went-town-fishermen-city-fighters" target="_blank" rel="noopener noreferrer" title="Middle East Eye / ‘Like a battlefield’: How Yemen’s Mocha went from a town of fishermen to a city of fighters">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Reform’s Tice accused of misinformation after urging people to enjoy heatwaves</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Richard Tice faced accusations of spreading misinformation after urging people to enjoy the recent heatwaves and dismissing efforts to tackle the climate crisis, drawing criticism from nurses, medical experts and green campaigners as Britain went through a record-breaking summer of extreme heat.</p>
+<h3>What Tice said about the heat</h3>
+<p>At a press conference on Monday, Reform’s deputy leader said it was “arrogant” to think people could stop the climate emergency. Asked about the recent heat, he said: “Of course, the climate changes, but where is the evidence that net zero is going to stop it? Where is the evidence? There is no evidence.”</p>
+<p>He added: “Climate change has always happened. It always will. Maybe the smarter thing to do is to adapt to it than think arrogantly that you can stop it.” Tice went on to tell people, “When it’s a bit warm, let’s enjoy it,” and suggested warmer weather could mean “English wine and sparkling wine gets better and better,” adding: “That means we can take on the French – fantastic. Let’s celebrate some of these things rather than just be sort of doom and gloom about it.”</p>
+<p>He also called on the government to invest in desalination plants, saying they were used successfully in other parts of the world. He said the UK was surrounded by water and suggested it was too difficult to build more reservoirs.</p>
+<h3>Backlash from Labour, nurses and public health voices</h3>
+<p>Bridget Phillipson, the Labour party chair, said Tice’s comments were “tone-deaf”. She added: “With wildfires raging across the UK and drought threatening water supplies and food security, comments like these don’t just raise serious questions about his judgment – they also expose where his interests really lie.”</p>
+<p>The Royal College of Nursing took aim at the idea of enjoying the heat. A spokesperson said people making those calls should “say it to the nurses collapsing in hospitals where temperatures are hitting 36 degrees,” or to patients lining corridors as extreme heat causes severe illness. The spokesperson said climate change was “a public health emergency that’s getting worse in front of our eyes” and called for action to reduce emissions and make NHS and care facilities safe.</p>
+<p>Simon Williams, a public health researcher at Swansea University, said it was “concerning to see someone so high profile spreading misinformation around climate change and its impacts.” He said older people are less able to regulate body temperature during heatwaves and that even a few degrees can have a major impact. Caroline Abrahams, the charity director of Age UK, called new findings on the impact of heat on older people “alarming” and said there was “now no denying that extreme heat poses a very real health threat to our older population.”</p>
+<h3>Heat damage, fires and Reform’s wider position</h3>
+<p>The row came amid a record-breaking summer in which temperatures have risen above 35C several times, with the heat linked in the evidence to thousands of deaths, millions of hospital visits and an estimated £4bn hit to UK economic output. The government has estimated that 2,877 people died because of high temperatures during the May and June heatwaves, twice the figure for the whole of last summer.</p>
+<p>The same period has also seen a wider wildfire risk. The evidence says the climate breakdown has been linked to more frequent wildfires, and that the so-called firewave the UK experienced weeks ago was the most widespread the country has seen, with wet winters and prolonged heatwaves worsening the danger. The National Farmers’ Union has said farmers are facing “one of the worst ever” harvests, while firefighters have battled wildfires in Derbyshire, the Midlands, Wales and Northern Ireland.</p>
+<p>Tice’s comments also fit a broader Reform position. The party has long campaigned to scrap the government’s commitment to reach net zero by 2050 and has promised to end green subsidies if elected. It has also taken tens of millions of pounds in donations from people with connections to the fossil fuel industry since it was set up in 2019. Nigel Farage has questioned the role human activity has played in changing the climate, while Tice posted in 2024 that there was no climate emergency or climate crisis, saying climate change had happened for millions of years and would continue to do so.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/aug/17/reform-uk-richard-tice-stop-tackling-climate-crisis-enjoy-heat" target="_blank" rel="noopener noreferrer" title="The Guardian / Reform’s Tice accused of misinformation after urging people to enjoy heatwaves">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="la_jornada">
+  <summary>Iván Restrepo: Europe and the Unexpected Fifth Heat Wave</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iván Restrepo wrote that Europe is seeing its hottest summer on record, with an unexpected fifth heat wave last week and a drought of unprecedented dimensions. He said the conditions, which began in May, are helping drive major wildfires in France, Spain, Greece, England, Germany, Portugal and the Balkans. Health authorities have not yet reported deaths from the situation, but he said the toll will ultimately be several thousand.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/17/politica/014a2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Iván Restrepo: Europe and the Unexpected Fifth Heat Wave">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="daily_star_bangladesh">
+  <summary>Over 500 birds killed, man fined Tk 500</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Over 500 birds of different species were killed after poisoned bait was scattered in a rice field in Madna village in Darshana, Chuadanga’s Damurhuda upazila, on Sunday night. Rajon, 25, was fined Tk 500 under the Wildlife Conservation Act and made to sign an undertaking that he would not repeat the act. According to local residents and the mobile court, Rajon, from Uttar Parain Madna village, had scattered poisoned rice in his field, and at least 500 birds died after eating it.</p>
+<p>After angry locals informed the Damurhuda upazila administration, officials conducted a raid in the village that night. Shaheen Alam, assistant commissioner (land) of Damurhuda upazila and an executive magistrate, led the operation, with the upazila forest officer and members of law enforcement agencies assisting. Damurhuda Upazila Nirbahi Officer Lovely Yesmin said she sent a magistrate to the scene after receiving information from local residents, but many of the dead birds had already been removed before the magistrate arrived. She added that drives against wildlife killing and other activities harmful to the environment and biodiversity would continue.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/crime-justice/news/over-500-birds-killed-man-fined-tk-500-4250416" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Over 500 birds killed, man fined Tk 500">TDSB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,axios,guardian,nyt,scmp">
+  <summary>Netanyahu and Kushner talks make no breakthrough on stalled Gaza deal</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Benjamin Netanyahu and Jared Kushner ended a lengthy Monday meeting in Jerusalem without a breakthrough on Gaza, even as Washington pressed Israel to take “small steps” to test whether Hamas will really disarm and the two sides stayed divided over what must come first.</p>
+<p>Kushner arrived in Israel after Sunday talks in Egypt with Hamas leaders and with Egyptian, Qatari and Turkish mediators. He brought a delegation that included Nikolay Mladenov, former British prime minister Tony Blair, and Board of Peace advisers Aryeh Lightstone and Liran Tancman. The meeting came with Netanyahu skeptical of the U.S. Gaza plan and facing political pressure ahead of an October election.</p>
+<h3>Testing Hamas’s disarmament</h3>
+<p>A U.S. official said Kushner told Netanyahu the United States wants Israel to take “small steps” in Gaza to see whether Hamas’s commitment to start disarming is genuine. Netanyahu, however, expressed deep skepticism about Hamas’s promise to demilitarize and questioned why Kushner had met Hamas leaders in Egypt on Sunday.</p>
+<p>Kushner said it was important to hear directly from them on whether they are willing to move forward with demilitarization, according to a U.S. official. He also told Netanyahu, that official said, that his previous talks with Hamas leaders had led to the release of hostages, referring to the release last year of the remaining hostages taken in the Oct. 7, 2023 attacks.</p>
+<p>The broader problem was the same one that has stalled the Gaza plan for weeks: Israel wants disarmament first, while Hamas wants Israel to move first on withdrawal. Netanyahu has publicly rejected the latest U.S. plan and, in the meeting, again made clear there could be no Israeli withdrawal or reconstruction until Hamas is fully disarmed. One Israeli official said Netanyahu also asked for a U.S. general to supervise the group’s handover of weapons.</p>
+<h3>What the meeting put in motion</h3>
+<p>Even without a breakthrough, the meeting did produce a few concrete follow-ups. Netanyahu’s office said the sides agreed to set up two working groups, one on disarmament and demilitarization of Gaza and another on the humanitarian situation. It said demilitarization would need to be completed before reconstruction begins.</p>
+<p>A U.S. official said Netanyahu also committed to steps to improve Gaza’s humanitarian situation, especially on water and sanitation. The same official said Kushner and Netanyahu agreed to form a “deconfliction” mechanism in Gaza to monitor violations and deal with Israeli concerns about emerging threats, with Egyptian mediators involved. The official said that if Israelis saw Hamas doing something that could become an emerging threat, they would report it to the mechanism, which would then raise it with Hamas.</p>
+<p>There was still a gap over how that would work in practice. Axios reported that defining an “imminent threat” remained a key point of difference between the Board of Peace and the Israeli government, and the issue still needed to be addressed. Kushner also told Netanyahu that the U.S. does not expect Israel to refrain from acting against imminent threats by Hamas, while stressing that reconstruction would begin only after demilitarization is finished.</p>
+<h3>Politics still hangs over the talks</h3>
+<p>The timing of the talks made compromise harder. A U.S. official and another source familiar with the meeting said the political atmosphere in Israel ahead of the October election has created significant suspicion, especially because the Israeli opposition has attacked Netanyahu for making concessions in Gaza. Kushner showed Netanyahu two public opinion polls, according to a U.S. official: one said a majority of Israelis oppose rebuilding Gaza before it is demilitarized, and another said most want strikes to continue against imminent threats.</p>
+<p>Still, both sides described the meeting in positive terms. A U.S. official and the second source said much of the discussion focused on explaining the Board of Peace plan, clearing up misconceptions and addressing Netanyahu’s concerns. Netanyahu’s office called the talks “deep and constructive,” while a Board of Peace official said the Israelis would give the plan a chance and that it was now up to Hamas to show whether it truly intends to comply.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/17/kushner-netanyahu-hamas-gaza" target="_blank" rel="noopener noreferrer" title="Axios / Kushner urges Netanyahu to test Hamas disarmament in Gaza">Axios #1</a><a href="https://www.theguardian.com/world/live/2026/aug/17/trump-kushner-netanyahu-hamas-gaza-israel-blair-us-iran-hormuz-oil-latest-news-updates?page=with%3A6a832dbb8f08bd3e825451cf#6a832dbb8f08bd3e825451cf" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump kushner netanyahu hamas gaza israel blair us iran hormuz oil latest news updates">Guardian #1</a><a href="https://www.theguardian.com/world/live/2026/aug/17/trump-kushner-netanyahu-hamas-gaza-israel-blair-us-iran-hormuz-oil-latest-news-updates?page=with%3A6a82afc08f08d002b566c4bd#6a82afc08f08d002b566c4bd" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump kushner netanyahu hamas gaza israel blair us iran hormuz oil latest news updates">Guardian #2</a><a href="https://www.theguardian.com/world/2026/aug/17/netanyahu-kushner-talks-gaza-israel-us-board-of-peace" target="_blank" rel="noopener noreferrer" title="The Guardian / Netanyahu and Kushner talks make no breakthrough on stalled Gaza deal">Guardian #3</a><a href="https://www.nytimes.com/2026/08/17/world/middleeast/kushner-netanyahu-gaza-peace-deal.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Kushner Meets Netanyahu in Effort to Break Logjam Over Gaza">NYT #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3364309/us-envoy-kushner-meets-netanyahu-after-visiting-hamas-leader" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US envoy Kushner talks with Israel, Hamas end without breakthrough on Trump Gaza plan">SCMP #1</a><a href="https://www.aljazeera.com/news/2026/8/17/we-will-not-allow-gaza-to-be-rebuilt-until-hamas-disarms-kushner-says?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / ‘We will not allow Gaza to be rebuilt’ until Hamas disarms, Kushner says">AJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="vanguard_ng">
+  <summary>Ukum Attack: Aondoakaa demands urgent action, says Benue tired of counting bodies</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Chief Michael Aondoakaa, the 2027 Peoples Democratic Party governorship candidate in Benue State and a former Attorney-General of the Federation and Minister of Justice, called for urgent and sustained security operations in Ukum Local Government Area after a deadly attack on communities there in the early hours of Sunday, August 16, 2026. In a statement issued through his media assistant, James Ian, he said residents could no longer keep living in fear of armed attacks that, he said, had claimed lives, destroyed livelihoods and displaced communities.</p>
+<p>Reports from the area said armed men on motorcycles invaded Ayaba, Ukpen, Bom, Aboajio, Yina and other communities, shooting sporadically and reportedly killing several residents while injuring others. The attack reportedly lasted several hours and forced residents to flee into nearby bushes for safety. Aondoakaa urged the government and security agencies to launch a comprehensive operation in the affected areas, secure vulnerable communities, track down the attackers and ensure anyone responsible was arrested and prosecuted. He also called for improved intelligence gathering, rapid-response measures and support for displaced residents to return home and resume farming.</p></div>
+  <div class="source-list"><a href="https://www.vanguardngr.com/2026/08/ukum-attack-aondoakaa-demands-urgent-action-says-benue-tired-of-counting-bodies" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / Ukum Attack: Aondoakaa demands urgent action, says Benue tired of counting bodies">VN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>Shipbreaking tragedy: Ferdous Steel repeatedly broke labour law</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ferdous Steel Ship Recycling Industries in Chattogram has repeatedly run afoul of labour law. Department of Inspection for Factories and Establishments records show cases were filed against the yard in 2017, 2018 and again this year. The first two cases ended in convictions, with Chattogram Labour Court-1 fining the company Tk 5,000 in 2017 and Tk 2,000 in 2018. The latest case was filed shortly before the August 14 incident that killed nine workers. Mahabubul Hasan, deputy inspector general of DIFE Chattogram, said the yard had been found violating the law again despite the earlier convictions, and that was why another case was filed.</p>
+<p>Yousuf Ali, the yard manager and an accused in all three cases, said the earlier violations happened when the industry operated under the traditional system. He said the yard had only recently become a green shipyard and was still learning the requirements. The Hong Kong Convention became mandatory in Bangladesh on June 26, 2025, and 23 of 31 functioning yards are green-certified while eight are on the way to certification. An eight-member technical committee was formed Monday by the industries ministry to investigate the incident, but Mohinul Islam of Sitakunda Police Station said no case had yet been filed over the deaths.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/shipbreaking-tragedy-ferdous-steel-repeatedly-broke-labour-law-4250421" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Shipbreaking tragedy: Ferdous Steel repeatedly broke labour law">TDSB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>UAE billionaire questions normalisation with Israel after Ben Gvir calls for nightly killings of Palestinians</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Khalaf Ahmad al-Habtoor, a prominent Emirati billionaire and former member of the Federal National Council, questioned whether regional peace can be achieved with Israel after Israeli National Security Minister Itamar Ben Gvir called for Israeli forces to kill “30 or 40” men, women or children in Gaza every night. In a post on X on Monday, al-Habtoor said the minister had shown “dangerous moral decline” and asked, “What mind can accept this rhetoric?” Ben Gvir had made the call on Sunday and said Palestinians were “not worthy of life” and “not even people.”</p>
+<p>Habtoor wrote that if an Israeli official could speak “without shame or fear of accountability,” then it was hard to ask at the same time for “peace, negotiations, and coexistence.” The Dubai-based billionaire, who is close to the UAE’s ruling circles, did not call for the UAE to suspend relations with Israel, impose sanctions, or say how Arab and Muslim countries should respond. He had previously defended the Abraham Accords in 2020, saying Arab recognition would moderate Israel and encourage concessions to the Palestinians.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/uae-billionaire-questions-peace-israel-after-ben-gvir-calls-nightly-killing-palestinians" target="_blank" rel="noopener noreferrer" title="Middle East Eye / UAE billionaire questions normalisation with Israel after Ben Gvir calls for nightly killings of Palestinians">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>Bets: four in ten women bet or have bet online</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Forty-two percent of Brazilian women have already played or continue to play on online betting platforms, according to the study *Women and Bets: The Cost of Online Betting for Brazilian Women and Their Families*. The study says 20% are currently betting, with varying frequencies, and another 22% have bet before but are no longer betting. It also says that among the 58% of women who have never bet, 12% are affected by relatives or friends who bet, meaning 54% of women in Brazil feel the direct effect of bets, whether they bet or not. The research was conducted by Clarice Studio, Latina Strategy and Ideia Institute and was released this Monday (17).</p>
+<p>Clarice Studio founder and director Beatriz Della Costa said this is the first study on the impact of bets to include not only the bettor’s perspective but also the perspective of those affected by the bettor. She said the combined experiences offer a fuller view of the crisis, adding that the impact of bets goes beyond financial problems and affects family structures.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-08/bets-quatro-em-cada-dez-mulheres-apostam-ou-ja-apostaram-online" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Bets: four in ten women bet or have bet online">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>At the heart of the home, gogo Toti goes without so grandchildren can eat</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gogo Thozama Toti, 68, of Emaxelegwini near Ngcobo in the Eastern Cape, routinely skips meals so her grandchildren can eat. She lives in a dilapidated three-roomed mud house with her five adult children and six grandchildren, and says the family of 14 survives on R4,080 a month. The household depends mainly on her old-age grant of R2,400, along with child support grants for three of her youngest grandchildren. On a chilly weekday morning, she watched a granddaughter prepare noodles, knowing the food would not be enough for everyone.</p>
+<p>Toti says arthritis has made life a struggle since she moved from her village to the settlement in 2002 in search of work. She says she worked as a domestic worker until 2021, when she stopped working at age 63 because of arthritis. Today, all five of her adult children, aged 31 to 45, and her three oldest grandchildren, aged 18 to 23, are unemployed. Toti says she often borrows money to buy groceries and sometimes skips meals herself, while the grandchildren’s grant money goes to clothes and food.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-17-at-the-heart-of-the-home-gogo-toti-goes-without-so-grandchildren-can-eat" target="_blank" rel="noopener noreferrer" title="Daily Maverick / At the heart of the home, gogo Toti goes without so grandchildren can eat">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Venezuela Delivers 48 New Homes to Quake-hit Families in Caracas</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Venezuela’s Acting President Delcy Rodriguez led the allocation of 48 new apartments this Monday in the Tiuna City Housing Complex in Caracas, benefiting 177 people from 48 families affected by recent earthquakes. The housing units were built under industrialized infrastructure schemes and equipped with seismic-resistant technology, and the delivery was carried out within the Venezuela Rises Plan.</p>
+<p>The allocation was described as the third stage of deliveries planned in the urban development. With these 48 units added, the housing complex now totals 287 consolidated housing solutions, covering 897 inhabitants. The report also said the national government’s housing management has reached 335 homes assigned nationwide, as part of a plan aiming for 4,000 new homes to be completed and formally allocated before December 2026.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-delivers-48-new-homes-quake" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela Delivers 48 New Homes to Quake-hit Families in Caracas">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Gill nets galore in Kosi lakes, despite illegal fishing clampdown</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A recent string of arrests in northern KwaZulu-Natal has put illegal gill-netting in the Kosi Bay lakes back in the spotlight, but the scale of the nylon nets already pulled from the water and the persistence of fish sales after enforcement raids show how unresolved the problem remains.</p>
+<p>Kosi Bay is a chain of four clear-water lakes on the border between KwaZulu-Natal and southern Mozambique, and it has been legally protected as a nature reserve since 1987. The area has long supported marine and freshwater fish harvested in traditional wood-and-reed traps by the local community, but population growth, rising unemployment and a steady increase in illegal gill-netting have put growing pressure on those fish populations.</p>
+<p>Over the past year, anti-poaching officers have removed nearly 300 gill nets from the lakes. Together, the netting stretched for almost 23km. Unlike the traditional traps, the synthetic gill nets create a curtain that catches fish indiscriminately, including all species and sizes.</p>
+<p>The latest clampdown came last month in a joint operation involving nearly 60 police and other law enforcement officers. In eManguzi, a supermarket owner and at least one local resident were arrested as part of a government move against illegal fishing syndicates in the Kosi Bay area. The Department of Forestry, Fisheries and the Environment said it had “prioritised this issue for further investigation and targeted enforcement”, adding: “We can confirm that arrests were made but given that investigations are still ongoing, will not disclose further details at this stage.”</p>
+<p>The department said at least two arrests followed the operation, which involved the SA Police, the department, iSimangaliso Wetland Park Authority, Ezemvelo KZN Wildlife, the Border Management Agency, Customs Department and the SA Defence Force. One suspect from KwaMahlungulu village was arrested in central eManguzi after being found selling nearly 700 fish, including tilapia, stumpnose, catfish and silver bream; three chest freezers were confiscated and charges were brought under the Marine Living Resources Act. On the following day, a Chinese national identified as the owner and/or manager of One by One Supermarket in eManguzi was issued with an admission-of-guilt fine of R5,000, and she and her son were also arrested for alleged Immigration Act contraventions.</p>
+<p>The department also said large joint operations were “not sustainable due to cost implications”. Sources in the area reported that women were still selling fish in central eManguzi the day after the operation ended.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-17-gill-nets-galore-in-kosi-lakes-despite-illegal-fishing-clampdown" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Gill nets galore in Kosi lakes, despite illegal fishing clampdown">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>U.S. Ambassador Highlights Cooperation in Security and Relationship with García Harfuch</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">U.S. Ambassador Ronald Johnson highlighted bilateral security cooperation with Mexico after the detention in the United States of three people sought by Mexican authorities, an agreement that will let the Secretariat of National Defense acquire drones and counter-drone systems, and a social-media post featuring Security Secretary Omar García Harfuch. He said U.S. Immigration and Customs Enforcement detained the three fugitives, including a presumed member of the CJNG cartel, and added that the cooperation between President Donald Trump and President Claudia Sheinbaum “sends a clear message to criminals: they will be captured and held accountable.”</p>
+<p>Johnson also recalled that on August 11 the two countries signed a joint statement allowing Defensa to acquire the anti-drone technology to combat organized crime. In the same thread, he said U.S. authorities returned three fugitives to Mexico in one day: one linked to a weapons case in Guanajuato, one sought for homicide in Zacatecas, and a third sought for fraud. Separately, the U.S. embassy posted a “photo of the week” showing Johnson with García Harfuch during an August 8 meeting on combating extortion against avocado producers in Michoacán.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/17/politica/012n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / U.S. Ambassador Highlights Cooperation in Security and Relationship with García Harfuch">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israeli settlers paralyse Palestinian nurse in West Bank shooting</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli settlers shot and partially paralysed a Palestinian nurse in Sa’ir, a town northeast of Hebron in the occupied West Bank, on Saturday. Muhammad Mutoor, 26, suffered gunshot wounds that severed his spinal cord during the attack. Another Palestinian man was also shot in the shoulder with live ammunition. Khalil Mutoor, Muhammad’s uncle, said Muhammad went to the area after hearing about the attack because, as a nurse, he wanted to help the injured.</p>
+<p>Khalil said settlers spread through the area and fired live ammunition at residents. He said ambulances could not reach Muhammad because settlers had blocked access after establishing a new outpost in the al-Adisa neighbourhood, so residents drove him to Bani Na’im before he was transferred to hospital. Muhammad is preparing to transfer to Al-Makassed Hospital in Jerusalem for further consultations, and doctors have given little hope that he will regain function in his lower limbs.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israeli-settlers-paralyse-palestinian-nurse-west-bank-shooting" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israeli settlers paralyse Palestinian nurse in West Bank shooting">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cna">
+  <summary>Millions of guns, repeated shootings: Thailand confronts limits of firearm control</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Thailand’s latest shootings have revived promises of tighter gun control, but a country with millions of legal and illegal firearms, weak post-licensing oversight and easy access to weapons is still struggling to stop more violence.</p>
+<p>At a shooting range just outside Bangkok, 41-year-old mechanic Krisakorn Boonwan keeps training despite the killings in Nonthaburi province this month. He said shooting helps his “focus, composure, emotional control and physical readiness,” and added that he has already introduced his 10-year-old daughter to the sport.</p>
+<p>On Aug. 7, a 14-year-old student used a 9mm handgun to kill his grandparents, five school staff members and a fellow student at Debsirin Nonthaburi School before killing himself. Three days later, a former politician allegedly shot and killed a local official over a purported financial dispute.</p>
+<p>In the wake of those attacks, Thailand’s government is again promising tougher gun controls. Prime Minister Anutin Charnvirakul has promised sweeping changes to how firearms are bought, owned and monitored. Initial steps include a suspension of new firearm purchase permits, more weapon checkpoints and inspections, and tighter restrictions on carrying guns. Officials are also proposing reviews of existing weapons and licences, a possible firearm amnesty and broader legal reform.</p>
+<p>Experts, however, question whether the measures can reach the roots of the problem. Krisanaphong Poothakool, an independent criminologist, said Thailand’s firearm legislation is “outdated and requires a complete overhaul,” while Trynh Phoraksa, a criminologist and lecturer at Mahidol University, said authorities tend to act after high-profile incidents but stall once public attention fades.</p>
+<p>The scale of gun ownership is part of the challenge. Data from 2017, the most recent unofficial estimate cited, put Thailand’s firearms stock at about 10.3 million, including 6.2 million legal and 4.1 million illegal weapons. CNA’s checks also found multiple firearm models openly advertised online, with an account offering an unregistered weapon and ammunition for 5,500 baht.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/thailand-gun-violence-school-shooting-firearms-control-6323466" target="_blank" rel="noopener noreferrer" title="CNA / Millions of guns, repeated shootings: Thailand confronts limits of firearm control">CNA #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Burnham scraps restrictions on disabled people’s bus passes in England</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Disabled people across England will be able to use their free bus passes at any time of day from next April, as Andy Burnham expands a policy he introduced as mayor of Greater Manchester. The current weekday restrictions on disabled people’s bus passes are due to end on 1 April 2027, replacing the rule that they are only valid between 9.30am and 11pm on weekdays, although some councils pay to allow travel outside those hours. Burnham is putting up £60m for the change, with £40m from the Department for Work and Pensions and £20m from the Department for Transport.</p>
+<p>Government sources said the funding has no set end date and was not a one-off payment, and that the change would take seven months to introduce because it must be passed by parliament. Mencap welcomed the move, and Burnham said: “Disabled people will now have unlimited free bus travel 24/7.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/aug/17/burnham-scraps-restrictions-disabled-people-bus-passes-england" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham scraps restrictions on disabled people’s bus passes in England">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,scmp">
+  <summary>Kremlin critic jailed in Russia for 11 years for opposing the war in Ukraine</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russia’s Supreme Court upheld the ban on Yabloko’s federal list for September’s State Duma election while another court sentenced deputy leader Lev Shlosberg to 11 years and one month in a penal colony, deepening pressure on the only registered Russian party openly opposing the war in Ukraine.</p>
+<h3>Yabloko loses its appeal and stays off the ballot</h3>
+<p>The opposition party confirmed on Monday that its appeal had failed. The Supreme Court had handed down the ban last week, removing Yabloko from the ballot in September’s parliamentary vote, according to the evidence, and the party said the Appeals Chamber upheld the decision to revoke the registration of its federal list of candidates for the State Duma elections.</p>
+<p>Yabloko said it would seek a supervisory review. In its statement, the party rejected the case against it and said the ban effectively stripped away the only option for people opposed to the war in Ukraine. Opposition activists said the move showed the increasing erosion of Russia’s democracy and was an attempt to silence opposition to the war.</p>
+<p>The case was filed by Rodina, described in the evidence as a small pro-Kremlin nationalist party. Rodina accused Yabloko of being backed by Western countries and of seeking to undermine both the election process and Russia itself. Yabloko rejected those accusations, saying it represented the views of millions of Russians.</p>
+<h3>Shlosberg receives an 11-year sentence</h3>
+<p>On the same day, another court sentenced Yabloko’s deputy leader Lev Shlosberg to 11 years and one month in a penal colony for his opposition to the war in Ukraine. He was found guilty of harming the reputation of Russia’s armed forces and lying about them.</p>
+<p>The evidence says the conviction rests on legislation passed since Russia’s full-scale invasion of Ukraine in February 2022, which allows long prison terms for people found guilty of “discrediting” the military or deliberately spreading false information about the war. It also says that as a result, few groups have openly criticized the conflict.</p>
+<p>Shlosberg, who is identified as 63 and as Yabloko’s deputy chairman, had rejected the charges as unfounded, according to the evidence. In his final statement to the court, he described the war as a catastrophe for Russia and said the true death toll would one day be made public.</p>
+<h3>Pressure around the courthouse</h3>
+<p>The court decisions also triggered detentions outside the courtroom. Police detained dozens of supporters and journalists who had come to hear the ruling, and some were taken to nearby police stations. Kirill Goncharov, head of Yabloko’s Moscow branch, told Novaya Gazeta that there were “many detainees today” and said police officers seemed nervous. Inside the courtroom, party leader Nikolay Rybakov called the detentions “intimidation.”</p>
+<p>The overall result is that Yabloko faces both an electoral setback and a major criminal sentence against one of its senior figures. The evidence describes Yabloko as the only registered political party calling for an end to the Russia-Ukraine war, and the court rulings leave that position under heavier strain as the parliamentary vote approaches.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/17/russia-maintains-election-ban-on-opposition-yabloko-jails-deputy-head?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Russia maintains election ban on opposition Yabloko, jails deputy head">AJ #1</a><a href="https://www.scmp.com/news/world/russia-central-asia/article/3364340/kremlin-critic-jailed-russia-11-years-opposing-war-ukraine" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Kremlin critic jailed in Russia for 11 years for opposing the war in Ukraine">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>International Aid Cuts Threaten Programs for People with Disabilities</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Unprecedented cuts in international aid are leaving organizations serving people with disabilities without resources, according to a report released Monday by Handicap International. The survey, conducted in more than 35 countries, found that 14% of organizations working for people with disabilities could close if the trend continues. It also said 79% of organizations working directly with people with disabilities reported “severe” or “very severe” funding cuts in the last 18 months, and 72% were forced to cancel or suspend at least one program or activity. 2025 saw the largest annual decline in official development assistance, with a global drop of 23%, after the five largest donors — the United States, Germany, the United Kingdom, Japan and France — reduced their cooperation budgets.</p>
+<p>The most affected groups are children, women, girls and older people with disabilities, and 85% of organizations identified children as one of the most affected sectors. It said disruptions to rehabilitation, nutrition and education services can lead to school dropout, malnutrition and irreversible developmental delays, while exposure to gender-based violence rises for women and girls with disabilities. Handicap International said the dismantling of USAID is the main trigger of the crisis and warned that Switzerland might withdraw funding from international cooperation; it launched a petition asking Switzerland to explicitly include people with disabilities in its humanitarian aid.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/international-aid-cuts-threaten-programs-for-people-with-disabilities" target="_blank" rel="noopener noreferrer" title="Telesur English / International Aid Cuts Threaten Programs for People with Disabilities">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,axios,el_pais,guardian,nyt,scmp">
+  <summary>US supreme court again rejects Trump’s bid to overturn E Jean Carroll verdict</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US Supreme Court has rejected Donald Trump’s second bid to overturn a 2023 verdict finding him liable for sexually abusing and defaming E Jean Carroll, leaving the $5 million judgment intact while a separate $83.3 million appeal remains unresolved.</p>
+<p>In an unsigned order released on Monday, the justices refused Trump’s request to reconsider their June decision not to hear his appeal. The order gave no explanation, and it listed 33 rehearing requests in total, which is typical when the court denies rehearing during a recess. Carroll collected the $5 million judgment plus interest after the court first declined to hear the case in June, bringing the payout to about $5.8 million.</p>
+<p>Roberta Kaplan, Carroll’s attorney, said she was pleased that the Supreme Court had “declined again to hear this case.” She added that, as a result, the jury’s unanimous verdict that Trump sexually assaulted and then defamed Carroll is now final and cannot be challenged in any court.</p>
+<p>The dispute between Trump and Carroll has stretched back to 2019, when she published an excerpt from her memoir alleging that Trump raped her in a Bergdorf Goodman department store dressing room in Manhattan in 1996. Trump denied the allegation, calling her a “nut job” and saying she was “not my type.”</p>
+<p>Carroll has now won two separate defamation suits against Trump. In the other case, a jury awarded her $83.3 million in 2024, and Trump’s lawyers are still asking the Supreme Court to intervene, arguing that presidential immunity shields statements he made while in office.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/17/trump-loses-second-supreme-court-bid-over-e-jean-carroll-sex-abuse-case?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Trump loses second Supreme Court bid over E Jean Carroll sex abuse case">AJ #1</a><a href="https://www.axios.com/2026/08/17/supreme-court-rejects-trump-e-jean-carroll-verdict" target="_blank" rel="noopener noreferrer" title="Axios / Trump fails to undo E. Jean Carroll verdict at Supreme Court">Axios #1</a><a href="https://elpais.com/us/2026-08-17/el-tribunal-supremo-propina-otro-reves-a-trump-rechaza-la-peticion-para-anular-la-indemnizacion-millonaria-en-favor-de-e-jean-carroll.html" target="_blank" rel="noopener noreferrer" title="El País / The Supreme Court delivers another setback to Trump: rejects request to overturn million-dollar compensation in favor of E. Jean Carroll">El Pais #1</a><a href="https://www.theguardian.com/us-news/2026/aug/17/trump-e-jean-carroll-appeal" target="_blank" rel="noopener noreferrer" title="The Guardian / US supreme court again rejects Trump’s bid to overturn E Jean Carroll verdict">Guardian #1</a><a href="https://www.nytimes.com/2026/08/17/us/politics/supreme-court-trump-carroll.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Supreme Court Again Rejects Trump’s Appeal of $5 Million E. Jean Carroll Payment">NYT #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3364332/us-top-court-again-rejects-trump-push-toss-out-e-jean-carroll-verdict" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US top court again rejects Trump push to toss out E. Jean Carroll verdict">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Spain Grants Conditional Release to Convicted for the Massacre of Jesuits</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Monday, Spain’s National Court granted conditional release on health grounds to Inocente Montano, the former Salvadoran colonel and former Deputy Minister of Public Security who was sentenced in 2020 to 133 years in prison for the 1989 murders of five Spanish Jesuits, including Ignacio Ellacuría. The court accepted the proposal from Estremera prison in Madrid and authorized his early release because of his irreversible illness, frequent hospitalizations, advanced age, and significant cognitive decline. The court order said Montano will be under the care and supervision of the NGO Basida in Madrid, which accepted his guardianship. The Public Prosecutor’s Office did not oppose the measure.</p>
+<p>The ruling came after the National Court unsuccessfully tried to contact the victims’ families under the Victims’ Statute; some had died and others could not be located. The conviction covered the killings of the priests Ignacio Ellacuría, Segundo Montes, Ignacio Martín-Baró, Amando López and Juan Ramón Moreno. The evidence also says the Supreme Court later ratified the sentence and classified the events as a state crime.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/spain-grants-conditional-release-to-inocente-montano-convicted-for-the-massacre-of-jesuits" target="_blank" rel="noopener noreferrer" title="Telesur English / Spain Grants Conditional Release to Convicted for the Massacre of Jesuits">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="yonhap">
+  <summary>Russian FM lauds N. Korea&#x27;s troop deployment, pledges closer ties in Liberation Day letter</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russian Foreign Minister Sergey Lavrov praised North Korea’s military support for Russia’s war against Ukraine and vowed to deepen bilateral ties in a letter to North Korean Foreign Minister Choe Son-hui, according to state media in Pyongyang. The letter marked the 81st anniversary of Korea’s Aug. 15 liberation from Japan’s 1910-45 colonial rule. KCNA said Lavrov referred to North Korea’s troop deployment to the Kursk region as proof of the “militant friendship” between the two countries and said Moscow and Pyongyang were “now fighting on the same front” to build a new global order based on multipolarity and national sovereignty.</p>
+<p>KCNA also said North Korean leader Kim Jong-un and Russian President Vladimir Putin exchanged letters for the occasion. In his Friday message, Putin said bilateral relations had reached an unprecedented level as a “comprehensive strategic partnership” and said the two countries were “actively cooperating in all the sectors” to ensure regional security and stability. Kim replied the following day, vowing to carry forward the “history of common struggle for justice and precious traditions of friendship.”</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20260818001400315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Russian FM lauds N. Korea&#x27;s troop deployment, pledges closer ties in Liberation Day letter">YNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Ministers drop plan to relax affordable housing rules after negative response</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ministers in England dropped plans on Monday to relax affordable housing rules for private builders after a consultation drew an overwhelmingly negative response. The government said it would not proceed with proposals to end affordable housing quotas on sites with between 10 and 49 houses, which would have let developers make cash payments instead of building affordable homes on-site. The change had been included in the government’s 150-page planning reform document, and housing experts had warned it could sharply reduce the number of cheaper homes, especially in rural areas.</p>
+<p>Kate Henderson, the chief executive of the National Housing Federation, welcomed the decision, saying the government had listened to the social housing sector and would protect a key route for delivering social homes in rural areas. The government document said 910 people and groups responded to the consultation, with 41% strongly opposed to the measure and 18% strongly in favour. It added that the government decided not to proceed because the change could have a detrimental impact on its commitment to increase social and affordable housebuilding.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/aug/17/ministers-drop-plan-to-relax-affordable-housing-rules-after-rural-homes-backlash" target="_blank" rel="noopener noreferrer" title="The Guardian / Ministers drop plan to relax affordable housing rules after negative response">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Politics trump south korea military pentagon republicans democrats</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Republican senator Bill Cassidy denounced Donald Trump’s claims about the safety of the combined MMR vaccine on Sunday, saying the comments were undermining faith in immunization. Cassidy, a medical doctor who voted to confirm Robert F. Kennedy as federal health secretary in early 2025, objected after Trump recently ordered changes to the recommended childhood vaccination schedule and said the two-shot MMR approach should be replaced by six separate doses. Trump had called the combined vaccine “sort of like a nuclear weapon” and said it could be “quite lethal.”</p>
+<p>Asked about Trump’s claim that “nothing bad can happen” from advising parents to get six separate shots instead of two, Cassidy told CNN that the idea was “potentially tragic” and would mean more doctor visits, more jabs for children, and higher insurance costs that could drive up premiums. The senator, whose re-election bid ended in defeat to a Trump-backed challenger in Louisiana, has been at odds with Trump since 2021, when he voted to convict him of “incitement of insurrection” over the US Capitol attack. Critics have also faulted Cassidy for voicing misgivings about Trump while still voting to confirm his nominees.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/aug/17/politics-trump-south-korea-military-pentagon-republicans-democrats?page=with%3A6a82de888f08d002b566c632#6a82de888f08d002b566c632" target="_blank" rel="noopener noreferrer" title="The Guardian / Politics trump south korea military pentagon republicans democrats">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>Latvia wants €7B from EU to cope with fallout from Russia’s war</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Latvia is pressing the EU for €7 billion to help cover the military and economic costs of confronting Russia, but the request lands amid election-season pressure at home and an EU budget fight that could decide whether Riga gets anything close to it.</p>
+<p>Prime Minister Andris Kulbergs wants the money from the EU’s next seven-year budget, under a new Competitiveness Fund, to offset higher defense spending and the collapse in trade with Russia since Moscow’s full-scale invasion of Ukraine. He said the cash should come on top of other funds already earmarked for Latvia and would amount to almost half of the country’s projected €15.1 billion defense bill over the budget period.</p>
+<p>Kulbergs argues that Latvia deserves special treatment because it is borrowing to provide security for countries farther from the front line. “We are getting our budget deficit to the maximum […] and from that debt we’re paying […] the defense of the whole [of] Europe,” he said. He also said much of Latvia’s military spending flows back to richer Western European economies through arms purchases from Germany, France, Spain, Sweden and the Netherlands.</p>
+<p>The demand comes as Latvia heads toward an Oct. 3 national election and parties calling for Riga to demand more in return for sanctions and military support are gaining ground. Kulbergs’s center-right party leads the polls, while the far-right, pro-Russia Sovereign Power party is polling second and the populist Ainārs Šlesers is third. Šlesers says Latvia should get compensation when it backs EU sanctions on Russia. He told POLITICO that the country is “a victim” and said it should “get in return support” when sanctions come up for renewal.</p>
+<p>The timing also intersects with a broader EU budget debate. The European Commission has proposed substantially increasing EU-level defense funding in the 2028-2034 budget, including a €125.2 billion security, defense industry and space pot in the European Competitiveness Fund. But that money is meant to finance projects across the bloc, not to provide Latvia with a pre-agreed €7 billion allocation, and the budget still has to be negotiated by EU governments and the European Parliament.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/latvia-pm-andris-kulbergs-7b-eu-funding-over-russia-costs" target="_blank" rel="noopener noreferrer" title="POLITICO / Latvia wants €7B from EU to cope with fallout from Russia’s war">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Dialogues will be held on the law against femicide</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Senate will hold dialogue tables tomorrow to analyze the presidential նախաձեռնative to issue a general law to prevent, investigate and punish the crime of femicide. Families of victims, social defenders and legislators are set to take part, and Laura Itzel Castillo said the conclusions will be valuable inputs for drafting the committee report. The meeting will be held in the old Xicoténcatl house.</p>
+<p>The Senate’s Justice, First Legislative Studies, and Gender Equality committees called on local and federal lawmakers, academics, specialists, social groups, human-rights defenders, relatives of victims and government authorities to join the discussions. The agenda includes prevention of feminicide violence and public policy, investigation of femicide, due diligence and context analysis, the criminal offense, attempt, aggravating factors and legislative harmonization. It will also cover victim-related issues such as comprehensive reparation, children left orphaned, protection measures, institutional coordination, information systems, records, capacity-building and implementation of the general law.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/17/politica/008n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Dialogues will be held on the law against femicide">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Does Reform&#x27;s plan to cut £50bn in welfare spending add up?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Reform UK has set out plans it says will save more than £50bn a year from the welfare bill by 2030 if it gets into government. The party says much of that would come from stopping foreign nationals from getting most benefits and reforming disability payments while protecting the most “severely disabled”. The UK government will spend £353bn on welfare benefits this year, and just under half of that goes on the state pension, which Reform says it will not cut. That leaves £207bn, so cutting £50bn a year would amount to roughly 25% of the remaining welfare spending. Reform is also looking at Personal Independence Payments, a working-age benefit that helps people with the extra costs of a physical or mental health condition or disability; claims have risen from around 2.4 million before the pandemic to four million this year in England and Wales.</p>
+<p>Reform says around £21bn of the savings would come from changes to health and disability benefits, including PIP, and it says around 2.89 million PIP recipients would be “reassessed over time” under a proposed “Disability Needs Assessment”. Analysts warn the savings are not guaranteed, and the Institute for Fiscal Studies says there is “relatively little detail” about what the plan entails.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/crl76jkxel3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Does Reform&#x27;s plan to cut £50bn in welfare spending add up?">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Election denier Tina Peters to be hired as elections consultant in conservative California county</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Shasta County, California, is preparing to bring Tina Peters into its elections office, a move that places a convicted Colorado election denier in a county already known for election-denial activism and leaves unclear what role she will actually play.</p>
+<p>Clint Curtis, the county’s top election official, said he plans to hire Peters as a consultant to replace Brent Turner, his top deputy, who has been on medical leave. Curtis said Peters would not have access to the county’s voting system, and he did not directly answer when asked what her responsibilities would be.</p>
+<p>Peters is the former top election official in Mesa County, Colorado. She was convicted in 2024 of four felonies and three misdemeanors after she allowed an activist affiliated with Mike Lindell to impersonate a county employee and attend an upgrade of the county’s Dominion Voting Systems software. She was released from prison in June after Colorado governor Jared Polis commuted her nine-year prison sentence, and she is still on parole and must receive permission to travel outside Colorado.</p>
+<p>Shasta County, a conservative region home to 182,000 people, has emerged as a center of the US election denialism movement in recent years. In 2023, its governing body unsuccessfully tried to cut ties with Dominion Voting Systems and move to a hand-count system that experts warned would be costly and far less accurate, before the state blocked the plan. The county’s elections politics have remained volatile since then, with several local candidates embracing baseless election-fraud conspiracy theories and suing to overturn results.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/aug/17/politics-trump-south-korea-military-pentagon-republicans-democrats?page=with%3A6a8388678f08d002b566cc92#6a8388678f08d002b566cc92" target="_blank" rel="noopener noreferrer" title="The Guardian / Politics trump south korea military pentagon republicans democrats">Guardian #1</a><a href="https://www.theguardian.com/us-news/2026/aug/17/election-denier-tina-peters-shasta-county" target="_blank" rel="noopener noreferrer" title="The Guardian / Election denier Tina Peters to be hired as elections consultant in conservative California county">Guardian #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Lindsay Clancy had ‘thoughts of harming the children’, her mother testifies at trial</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The defense in the Lindsay Clancy filicide case called her mother, Paula Musgrove, as one of its first witnesses on Monday after three weeks of prosecution evidence in Plymouth, Massachusetts, over events surrounding Clancy’s killing of her three children. Under questioning from defense attorney David Reddington, Musgrove testified that her daughter’s statements and actions had unsettled her in the months before 24 January 2023, including a moment when Clancy said she wanted to tell her parents something and, Musgrove said, “she had thoughts of harming the children.”</p>
+<p>Musgrove’s account sits alongside other testimony the court has heard. Patrick Clancy has previously told the court that his former wife said she had no plans to hurt the kids, and jurors have also heard him say she later told him in hospital that she had heard a man’s voice telling her that if she didn’t do it then, she would lose her chance. Musgrove also said she received a text from her daughter on 20 October saying, “I’m really sick. Something is wrong,” adding that medicine had not helped and that she did not want to be alone.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/17/lindsay-clancy-trial-mother-witness-testimony" target="_blank" rel="noopener noreferrer" title="The Guardian / Lindsay Clancy had ‘thoughts of harming the children’, her mother testifies at trial">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Boy, seven, among four injured after crash in Ireland that killed five teenagers</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Five teenagers were killed and four other people were injured in a head-on crash on the M9 in County Kildare early on Sunday, including a seven-year-old boy; the circumstances remain in dispute, with police saying no pursuit was taking place while a police association gave a different account.</p>
+<p>The collision happened between junction 3 and junction 4 of the motorway at Moone at about 03:00 local time. The injured include two women in a critical condition, while another woman and the boy are in a serious condition in hospital. It is believed the injured family — two women in their 30s, one in her 20s and the boy — were travelling to the airport for a holiday, and RTÉ reported that the family is from the Carlow area.</p>
+<p>The five teenagers were named locally as Joe Carthy from Athy in County Kildare, Alex McCarthy from Carlow, Kamil Pustkowski from Limerick, Jeremy O’Brien and Jack Kennedy, according to RTÉ News. Micheál Martin said his thoughts and prayers were with the injured and that the deaths brought “untold grief”.</p>
+<p>Garda Commissioner Justin Kelly called it a “horrific incident” and condemned “irresponsible and dangerous driving,” saying some such behaviour is done for “social media likes.” Ireland’s Minister for Justice, Jim O’Callaghan, said on Monday he condemned the “reckless criminal behaviour” in the strongest possible terms and said the gardaí would get whatever resources they needed. He also said social media companies had responsibilities to stop posts that glorify criminal behaviour.</p>
+<p>The Garda Representative Association said tougher laws were needed and said the teenagers had been evading gardaí in a stolen car, but gardaí said no pursuit was under way when the crash happened. The Republic of Ireland’s police ombudsman, Fiosrú, is carrying out its own investigation, and Tusla said its staff were working with local families and communities affected by the crash.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/ce8lx172kero?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Boy, seven, among four injured after crash in Ireland that killed five teenagers">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>EU plans most far-reaching sanctions on Russia in coming months</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The European Union plans to significantly expand sanctions against Russia in the coming months over its war in Ukraine, the bloc’s foreign policy chief, Kaja Kallas, told the German newspaper Die Welt. She said EU sanctions had already cost Russia dearly, depriving its war machine of over €1 trillion (US$1.16 trillion), and said she would put forward “the most far-reaching sanctions listings since the start of the war” in autumn.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/europe/article/3364321/eu-plans-most-far-reaching-sanctions-russia-coming-months" target="_blank" rel="noopener noreferrer" title="South China Morning Post / EU plans most far-reaching sanctions on Russia in coming months">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>Huge number of children would fall into poverty under Reform’s benefits plans, say campaigners</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Campaigners say Reform UK&#x27;s welfare plan would push hundreds of thousands of children into poverty and destitution, as the party presses ahead with proposals to cut £50bn a year from the UK benefits bill and remake disability, sickness and unemployment support.</p>
+<h3>What Reform wants to change</h3>
+<p>Reform UK has unveiled a package that would drastically reduce disability payments, ban non-UK citizens from claiming benefits and introduce compulsory 20 hours a week unpaid workfare for thousands of long-term unemployed people. The plans also propose an overhaul of sick pay, under which employers would cover an employee’s benefit payments for the first two years of their illness.</p>
+<p>The party would also bring back the two-child benefit limit, which Labour scrapped last year. Another major change would be replacing personal independence payment, or Pip, and part of universal credit with a single flat-rate “health security allowance” of £429.80 a month.</p>
+<p>According to the plans, people who had been jobless for more than a year would have to do 20 hours of compulsory community work a week, with sanctions if they refused. Reform says the work would be unpaid but would come with £30 a week in expenses, and claimants would be sent to work gangs run by local authorities or charities.</p>
+<h3>Why campaigners say the impact would be severe</h3>
+<p>The warnings escalated after a leaked government analysis said cuts to disability benefits would be so steep that even people with terminal illness, blindness or profound learning disabilities could lose as much as £10,000 a year. The same analysis suggested some low-income households could face income cuts of up to £10,000 a year and that poverty rates would rise by about 250,000.</p>
+<p>Campaigners described the package as “cruel and dangerous”, and one poverty charity official said it would cause “horrific levels of destitution and hardship.” The Disability Benefits Consortium, which represents more than 100 charities, said the plans would “vastly increase poverty and worsen people’s health” by stripping disability benefits from millions of people, including those with multiple sclerosis.</p>
+<p>Disability Rights UK called Reform’s understanding of disability benefits “utterly breathtaking”, while Scope accused the party of “pushing disabled people into poverty and calling it compassion.” Reform, meanwhile, said its proposals would be paired with protections for the “severely disabled”, and said disabled people could claim for the genuine extra costs of their disabilities. Robert Jenrick, the party’s Treasury spokesperson, said on Monday that the most vulnerable needs would be protected, but he could not say how much those payments would be or how the costs would be assessed.</p>
+<h3>The political stakes, including in Reform’s own heartlands</h3>
+<p>The plans come after years of politically fraught attempts to change welfare spending. Last year, Keir Starmer’s government dropped relatively modest plans to cut £5bn a year from disability benefits after a backbench rebellion, and also abandoned its plans to keep the two-child limit. Reform’s version is far larger in scope and has already drawn scrutiny over its effects on people who would be directly affected by the cuts.</p>
+<p>That includes voters in Reform leader Nigel Farage’s own constituency. House of Commons figures show that one in six working-age adults in Clacton, or 15.3%, claim Pip, almost twice the England and Wales average. The party’s welfare plans would therefore affect the finances of people in its own electoral heartlands.</p>
+<p>Farage and Jenrick’s foreword to the plans said they were built on “commonsense principles”, adding: “A system intended as a safety net has become a way of life, including for foreigners who haven’t paid a penny.” Reform says that taken as a whole, the package would push an additional 241,000 British nationals into jobs by the end of the decade and cut about a quarter of the UK’s annual working-age benefits bill.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/aug/17/children-poverty-reform-uk-benefits" target="_blank" rel="noopener noreferrer" title="The Guardian / Huge number of children would fall into poverty under Reform’s benefits plans, say campaigners">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="xinhua_en">
+  <summary>Five years after Taliban&#x27;s return to power, Afghanistan moves from war to reconstruction</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Afghanistan has moved from war to reconstruction five years after the Taliban’s return to power, but major challenges remain as millions of returnees try to make a living amid fragile economic conditions. Xinhua said more than 1,200 major development projects have been launched since 2021 as the country works to rebuild its economy. The report also said the recovery comes as returnees face difficult livelihoods and ongoing economic fragility.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260817/2ceb7b9d6a484b63b53ff096e91f35d0/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Five years after Taliban&#x27;s return to power, Afghanistan moves from war to reconstruction">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="scmp">
+  <summary>Nvidia to provide up to US$105 billion guarantee for OpenAI’s Ohio data centre</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nvidia agreed to provide a guarantee of up to US$105 billion to help OpenAI lease a data centre in Ohio being developed by SoftBank-backed SB Energy, in one of the chipmaker’s largest infrastructure financing commitments. The company said on Monday it will also invest US$1.5 billion in SB Energy. Nvidia will be the exclusive chip provider for the facility in Pike County, Ohio, which is expected to have as much as 8 gigawatts of total capacity, with the first 800 megawatts due online in 2028. OpenAI is leasing the site for 20 years.</p>
+<p>Jensen Huang said the deal was not circular financing and that Nvidia is using “its scale and long-term visibility” to help. He said, “We are securing long-lived infrastructure for Nvidia compute so OpenAI can deploy the most productive AI factories that can be upgraded repeatedly with each new generation delivering more intelligence and better economics.” Nvidia said its guarantee covers part of the lease and power payments and a commitment to ensure the site retains a minimum value, rather than the full cost of the project or all of OpenAI’s obligations.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/tech/big-tech/article/3364341/nvidia-provide-us105-billion-guarantee-openais-ohio-data-centre" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Nvidia to provide up to US$105 billion guarantee for OpenAI’s Ohio data centre">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="cnn">
+  <summary>‘A million dollars over asking’: AI wealth is fueling housing market frenzy in San Francisco</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">AI wealth is reshaping San Francisco’s housing market, with tech workers and newly minted millionaires driving prices and cash offers higher while renters and would-be buyers struggle to keep up, and the question is how long the boom can run.</p>
+<p>San Francisco home prices are rising at their fastest pace in nearly a decade, with the median home selling for $1.7 million, according to Redfin, versus a national median of $440,600 in June, the National Association of Realtors said. Redfin also found that about one in three Bay Area home sales from April through June were all cash, a sharp increase from a few years ago.</p>
+<p>Local agent John DiDomenico said the market is being driven by “newly minted millionaires” in AI, competing with employees from and investors in Google, Apple and Meta. He described the city as “frothy” and “very hyper-competitive,” saying it has become common for high-demand homes to draw offers more than $1 million above the asking price. In one recent deal, a $6.5 million listing received multiple offers, including several hundreds of thousands of dollars above asking, and ultimately sold for more than $8 million.</p>
+<p>Redfin chief economist Daryl Fairweather said the spike in demand showed up in the data this spring. She said AI concentrates wealth among a smaller group of people, especially those working for or invested in AI companies that are not yet public.</p>
+<p>The pressure is spilling into rentals, too. Paul Belmonte, who moved to San Francisco for a biotech job, said he found a rent-controlled apartment for $3,250 a month, then started looking to buy and saw homes in his range selling far above list prices. “The prices being advertised are not the prices these places are selling for,” he said.</p>
+<p>Some sellers are already betting on more upside.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/17/economy/sf-real-estate-ai-wealth" target="_blank" rel="noopener noreferrer" title="CNN / ‘A million dollars over asking’: AI wealth is fueling housing market frenzy in San Francisco">CNN #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-section="undercovered_watchlist" data-sources="telesur_en">
+  <summary>Russia Delivers Humanitarian Aid to Cuba Amid Energy Crisis</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A delegation from the Russian Civic Chamber delivered humanitarian aid to Cuba during an official visit to Havana on Sunday. The donation was received by the leadership of the Cuban Institute of Friendship with the Peoples (ICAP) and included food, sweets, portable flashlights, USB memory drives, and first-aid kits. The aid was described as support for the Cuban population amid the country’s energy crisis.</p>
+<p>Nikita Anisimov, a member of the Russian Civic Chamber and the Public Council of Rossotrudnichestvo, said Russia stands in solidarity with Cuba and will continue to support it in international forums. ICAP First Vice-president Noemí Rabasa thanked the Russian support and said Cubans are facing shortages of basic products such as medicines, fuel, and food. During their stay, the Russian representatives also took part in the Solidarity Forum organized by ICAP as part of commemorative activities for the centenary of Fidel Castro.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/russia-delivers-humanitarian-aid-to-cuba" target="_blank" rel="noopener noreferrer" title="Telesur English / Russia Delivers Humanitarian Aid to Cuba Amid Energy Crisis">TE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Can We Defend Against AI-Generated Video Attacks on Real-World Crisis Events? A Systematic Evaluation of Detectors, Generators and Social Dissemination</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">RA-Bench is a benchmark for AI-generated video detection built with real videos as anchors, and it contains 17,886 videos: 1,830 real-video anchors across 10 social-risk categories and 16,056 generated clips from four open-source and five closed-source generators. The evaluation spans seven traditional detectors, ten zero-shot multimodal models under three review settings, and two MLLMs fine-tuned on AI-generated video detection. The work focuses on realistic video attacks tied to wars, disasters, public emergencies, and other real-world crises.</p>
+<p>The study finds that none of the three detector families generalizes consistently across RA-Bench instances. It also reports that detectability changes with generation quality, conditioning information, and sampling seeds, while source-level detection patterns stay stable across seeds. In tests of human authenticity judgments and detector reliability during social dissemination, videos that mislead people were also difficult for current detectors, and social dissemination made detection harder.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14391v1" target="_blank" rel="noopener noreferrer" title="arXiv / Can We Defend Against AI-Generated Video Attacks on Real-World Crisis Events? A Systematic Evaluation of Detectors, Generators and Social Dissemination">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Self-Supervised Visual On-Policy Distillation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Self-Supervised Visual On-Policy Distillation (S^2VOPD) proposes a way to create informative teacher-student asymmetry for visual on-policy distillation without privileged information. Instead of giving the teacher extra information, the method subtracts information from the student, using asymmetric augmented views to form an effective learning signal without ground-truth annotations, rewards, or a separate stronger teacher model. In S^2VOPD, the teacher’s distribution is conditioned on the original image, while the student learns from a strongly augmented view of the same image.</p>
+<p>The preprint says the method’s performance depends on the augmentation design. Across four augmentation families, asymmetry improved performance, symmetric self-distillation degraded it, moderate augmentation strength worked best, and removing all question-relevant evidence could create large but uninformative gaps. Across six fine-grained perception benchmarks, S^2VOPD improved Qwen3.5-4B from 70.7% to 77.4%, outperforming all open-source models compared, up to Qwen3-VL at 235B, and surpassing GPT-5.4. Holding training data fixed, it recovered 96% of the improvement achieved by methods with privileged information.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14144v1" target="_blank" rel="noopener noreferrer" title="arXiv / Self-Supervised Visual On-Policy Distillation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Beyond Final Scores: A Systematic Evaluation of Agents for Long-Horizon AI Research and Development</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint evaluates autonomous agents for long-horizon AI research and development, arguing that final scores alone do not show where progress is gained or lost or whether accumulated experience improves later decisions. It presents a systematic evaluation of seven frontier models on 36 long-horizon tasks using a new framework with rule-based metrics to track within-run behavior through Solution Framing, Execution, and Feedback Control, plus controlled comparisons to assess experience reuse within and across tasks.</p>
+<p>The results suggest current agents act more like engineering optimizers than fully autonomous researchers. They can formulate and implement practical solutions, but their performance varies substantially across runs, their strongest solutions mainly adapt or combine established techniques, and genuine methodological novelty remains rare. The analysis also says similar final outcomes can come from different process bottlenecks, that experience reuse can help or mislead later decisions, and that harness design affects performance stability.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.13417v1" target="_blank" rel="noopener noreferrer" title="arXiv / Beyond Final Scores: A Systematic Evaluation of Agents for Long-Horizon AI Research and Development">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Intern-S2-Mobius proposes Mobius-v0, a foundation model architecture with a globally shared Memory (FFN) that stores knowledge vectors and multiple Reasoners (Self-Attn) that iteratively perform compositional reasoning. Using hidden states as cache and carrier, the reasoners repeatedly query memory for needed knowledge and send it back to the reasoning operators. The preprint says this separation improves knowledge compression and reasoning efficiency. It reports that a 7B model trained from scratch matched a 7B Transformer baseline with 62.6% of the training data, and that Intern-S2-Mobius, continually pretrained from Qwen3.5-35B, delivered nearly 4x end-to-end inference speedup.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14290v1" target="_blank" rel="noopener noreferrer" title="arXiv / Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Apodex Discovery: Reality Benchmarks and Environments for Evaluating and Building Discoverative Artificial Intelligence</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Apodex Discovery proposes a framework for building and evaluating “discoverative AI” through a heavy-duty solver made up of a foundation model, harness, tools, and control policies for extended, stateful, verifiable investigations. The paper says it has three core components: a problem-scouting process that surveyed 561 industries across 16 sectors, assembled 423 high-value real-world problems, and selected 20 for the initial release; a common environment-task-episode abstraction with data, tools, constraints, feedback, trajectory recording, and verification; and HDS6, which evaluates Tools, Repair, Alternatives, Coherence, Evidence, and Scope independently of final-task success.</p>
+<p>It also reports benchmark results. In AAV capsid design, Apodex surpassed the published state of the art by 7% across viability, tropism, structure prediction, and generative design. In drug repurposing and reformulation, a task-specific biomedical environment improved the mean normalized prediction score of GPT-5.5 and GPT-5.6-sol by 2.5 and 7.6 points over the same closed-book backbone. The preprint says controlled ablations show that the fixed TRACES episode interface helps attribute performance differences to specific solver components.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.11341v1" target="_blank" rel="noopener noreferrer" title="arXiv / Apodex Discovery: Reality Benchmarks and Environments for Evaluating and Building Discoverative Artificial Intelligence">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>SimpleOPD: Simple Tokenizer-Agnostic On-Policy Distillation for Long-Context Reasoning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">SimpleOPD is a preprint on tokenizer-agnostic on-policy distillation for long-context reasoning. It transfers proof-reasoning ability from the long-context model SU-01 to short-context student models, while trying to handle tokenizer mismatch, teacher-student distribution mismatch, response length explosion, and training instability. The method runs OPD in a shared text space, aligning only tokens that occupy identical text spans under the student and teacher tokenizers.</p>
+<p>To curb excessive generation length and frequent truncation, it adds a student reference KL loss and masks the advantages of special termination tokens. In experiments on same-family and different-family students including Qwen3, Qwen3.5, Intern-S2, GLM-4.7, and Gemma-4, the approach showed consistent gains in mathematical reasoning, especially natural-language math proving. Intern-S2-Preview improved by 21.2 points on ProofBench to 55.2, surpassing Gemini-2.5-Pro, and it also improved on science benchmarks HLE and HiPhO.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14277" target="_blank" rel="noopener noreferrer" title="arXiv / SimpleOPD: Simple Tokenizer-Agnostic On-Policy Distillation for Long-Context Reasoning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Marionette: Predicting World States, Rendering Geometry, Painting Appearance</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In a preprint, Marionette proposes a world model for interactive games with articulated characters that predicts an explicit world state instead of autoregressing visual observations directly in pixel or latent space. The model uses a two-stage autoregressive dynamics system to predict a 276-dimensional 3D world state with multi-entity articulated skeletons, metric root trajectories, and rotations, then passes that state through a fixed, zero-parameter graphics bridge to make pose-control videos, while a control-conditioned video-diffusion observation model synthesizes photorealistic RGB observations.</p>
+<p>The authors say the setup produced two main results: the predicted world state was directly controllable, and long-horizon behavior could be repaired in state space. Forcing a mismatched action stream changed root-aligned joint error by 31% across 48 held-out segments. Left free, the two generated characters drifted to 21.2 m apart, with a third of frames showing ground penetration; adding a terrain collider and separation cap cut penetration by 66% and kept the pair engaged, with no change to the observation model. They also report no detectable fidelity loss from routing appearance through the predicted state, with FVD of 831 versus 799 for recorded pose.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14530v1" target="_blank" rel="noopener noreferrer" title="arXiv / Marionette: Predicting World States, Rendering Geometry, Painting Appearance">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mimir v1, a 1-billion-parameter language model based on the Hierarchical Reasoning Model (HRM), was trained from scratch using only permissible post-training data and is said to deliver highly competitive English performance while setting a new state of the art for Danish. The model was trained on 161 datasets and tested across 20 benchmarks covering English, Math &amp; Code, and Danish. It outperforms the original HRM-Text 1B and competes with larger frontier models such as Qwen 3.5 4B and Gemma 4 E2B. It is available on the Hugging Face Hub.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.13517" target="_blank" rel="noopener noreferrer" title="arXiv / DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>First-of-its-kind narcolepsy drug opens door to new therapies for the brain</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US Food and Drug Administration’s approval of oveporexton, sold as Orzeyful, has given people with narcolepsy a treatment aimed at the condition’s biological cause, while also raising hopes that orexin-based drugs could lead to more therapies for sleep disorders and possibly other brain disorders.</p>
+<p>Earlier this month, the approval marked the first drug designed to treat the root cause of narcolepsy, a condition that affects millions of people and causes extreme daytime sleepiness and wakefulness at night. Physicians test narcolepsy treatments by checking whether they help people fall asleep and stay asleep throughout the night. Researchers now see orexin agonists, the new class that includes oveporexton, as the start of a broader pipeline of treatments that could be approved in coming years. Some are also watching the market closely: pharmaceutical companies have moved into a field projected to top US$6.4 billion annually by the early 2030s.</p>
+<p>For Tyler Chapman, a 19-year-old University of Tennessee, Knoxville student who volunteered for one of the clinical trials that helped support approval, the drug has been life changing. He had previously spent long stretches sleeping, sometimes for 16 hours a day, struggled in school, relied heavily on coffee, and sometimes collapsed when he laughed even though he remained fully conscious, a symptom known as cataplexy. After joining a Takeda Pharmaceuticals America trial in Cambridge, Massachusetts, he says he can stay awake and alert all day and sleep restfully at night. Takeda enrolled 273 people with type 1 narcolepsy in two phase III trials, and across both studies participants who received the drug were able to stay awake during the day and fall, and stay, asleep at night. They also reported improvements in cataplexy, sleep paralysis and hallucinations.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02552-y" target="_blank" rel="noopener noreferrer" title="Nature / First-of-its-kind narcolepsy drug opens door to new therapies for the brain">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Universities must stop protecting bullies — or more people will leave science</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In 2019, after quitting a faculty job in response to bullying, the writer co-founded the Academic Parity Movement with environmental activist Saya Ameli Hajebi. After seven years and several thousand case reports, the writer says academic bullying is no longer just about institutions ignoring people affected by it; increasingly, it is about institutions overreacting to allegations. The result, the writer argues, is that universities may be pushing researchers out of science instead of protecting them.</p>
+<p>The writer says universities fear public exposure of staff misconduct, and that a single viral social-media post naming an alleged bully can damage a reputation built over decades. In that setting, the instinct is to act quickly: place the accused faculty member on leave, close the laboratory, and cut off students and funding before evidence has been closely examined. When investigations clear the accused academic, the writer says, there is rarely compensation, public correction, or repair of the professional and psychological damage. The piece also says early-career researchers and less-funded faculty tend to bear the brunt of the crackdown.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02526-0" target="_blank" rel="noopener noreferrer" title="Nature / Universities must stop protecting bullies — or more people will leave science">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Too hot to sleep? How heatwaves at night affect our health</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Night-time heatwaves are disrupting sleep and adding health risks from Lahore to Hong Kong, but scientists still do not fully know how hot nights turn into illness, hospital admissions and deaths.</p>
+<p>Bus drivers in Lahore, Pakistan, have been sleeping on the roofs of buses during a heatwave, a stark sign that global warming is not only about daytime temperatures. Nights are getting hotter too: in May, Delhi recorded an overnight minimum of 32.4 °C, while parts of India stayed 3–5 °C above normal after dark. Western Europe’s hottest June on record brought a record overnight low of 22 °C in France and a historic 29.4 °C in East Saxony, Germany. In July, night-time warmth above 27 °C added to the mugginess of cities on the US Gulf and Atlantic coasts.</p>
+<p>The sleep impact is immediate. In a UK survey, two-thirds of respondents said they struggled to sleep during the June heatwave, and almost half said they lost at least three hours of sleep each night. An analysis of more than 1,300 cities found that, during 2020–25, people lost nearly 56 hours of sleep per year on average because of night-time heat.</p>
+<h3>Why hot nights are different</h3>
+<p>The consequences go beyond lost sleep. Across 28 East Asian cities, intense heatwaves at night were associated with a 3% increase in deaths, excluding deaths from injuries and other external causes. In Hong Kong, long hot nights — around 30 °C for 12 hours — were linked to a 3.1% rise in emergency hospital admissions, rising to 5.3% among older and poorer people.</p>
+<p>Researchers say the biology matters as much as the temperature. Sleep is when the body and brain recover, and as people wind down, core body temperature falls. Blood vessels widen to move heat from the body’s centre to the skin, but when bedrooms stay too hot — especially if humid — cooling is harder and sleep quality drops. When people are awake, they can drink water, move around, open windows, use fans or find cooler places. Asleep, they cannot do those things as easily.</p>
+<p>Hot nights can also strain the body by raising heart rate and causing sweating and dehydration. Broken sleep can weaken cardiovascular, metabolic, immune, cognitive and emotional recovery, leaving people fatigued and less able to pay attention the next day.</p>
+<p>Scientists also say current night-time heat measures are not enough for medical use. Tropical-night and consecutive-hot-night counts help track climate trends, but they do not capture indoor temperatures, timing, duration or sleep quality. Researchers should measure bedroom conditions, sleep, physiological recovery and next-day functioning directly, including before, during and after hot nights, to understand when incomplete recovery becomes a health risk.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02532-2" target="_blank" rel="noopener noreferrer" title="Nature / Too hot to sleep? How heatwaves at night affect our health">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>How the story of life and our planet unfolded — together</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andrew H. Knoll’s *Earth &amp; Life* presents Earth’s history as a long exchange between physical, chemical and biological processes, using ancient rocks, microbes and geobiology to ask how life began, shaped the planet and might be recognized elsewhere.</p>
+<p>The book is framed against familiar reflections on Earth’s fragility, including NASA’s Voyager 1 image of the “pale blue dot” and Carl Sagan’s later writing about the planet as a lonely speck in cosmic dark. Knoll, a respected geobiologist, builds on his earlier *Life on a Young Planet* (2003) and writes for a general audience.</p>
+<p>At the center of the book are stromatolites, fossilized microbial mats that preserve some of Earth’s earliest life. Knoll uses them, and many other geological traces, to show how microorganisms helped transform the planet’s environment. He highlights the initial buildup of oxygen during the Great Oxidation Event and argues that those changes depended not only on biology, but also on physical processes such as plate tectonics and chemical ones such as weathering.</p>
+<h3>Reading a fragmentary record</h3>
+<p>Knoll also emphasizes how hard it is to reconstruct four billion years of history. The record preserved in ancient rocks is incomplete, and even possible biosignatures can be difficult to interpret: did they come from living organisms or from abiotic processes? Because Earth cannot be replayed, he treats the surviving evidence as pieces of a larger puzzle.</p>
+<p>The book ends by linking that deep past to the present, including modern climate change, and to the search for life beyond Earth.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02530-4" target="_blank" rel="noopener noreferrer" title="Nature / How the story of life and our planet unfolded — together">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A little-known protein may be fueling Alzheimer’s — and scientists found a way to block it</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Scientists studying Alzheimer’s have identified GRK2 as a possible new drug target and reported that a compound called Compound 10 blocked harmful protein clumping in mice, raising the question of whether the approach could move beyond preclinical testing.</p>
+<p>Ursula Quitterer, a professor of molecular pharmacology at ETH Zurich, said her team tested the experimental treatment only in mice so far. The work began nearly 20 years ago, when she received brain tissue samples from patients treated by a doctor and colleague at Ain Shams University Hospital in Cairo. Those samples, removed during tumor surgery from people with dementia and people without it, were used to investigate GRK2, an enzyme that helps cells respond to signals, stress and strain and is active in organs including the heart and brain.</p>
+<p>By analyzing the tissue at the molecular level and running mouse experiments, Quitterer and her colleagues found unusually large amounts of inactive GRK2 in brain tissue from people with dementia, and the same pattern in mice with Alzheimer’s disease. They also observed that inactive GRK2 can clump together inside brain cells and collect on mitochondria, where the aggregates block pores, reduce energy supply and create stress. In the mice, inactive GRK2 also appeared to increase amyloid beta production, reinforcing a vicious cycle linked to dementia progression.</p>
+<p>To interrupt that cycle, the team created several compounds and found that Compound 10 was especially effective. It prevented GRK2 from aggregating, improved mitochondrial function, reduced amyloid beta buildup and helped nerve cells avoid dying. The researchers also reported positive effects on heart function and aging signs in mice, including fewer grey hairs in older animals. The findings were published in Cell Reports Medicine, and the team has applied for a patent while searching for a company to help move the compound toward further drug development.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260814235856.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A little-known protein may be fueling Alzheimer’s — and scientists found a way to block it">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Webb’s mysterious little red dots may be hiding entire galaxies</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A team led by Pierluigi Rinaldi says Webb’s mysterious little red dots may not be a separate class of object at all, but distant-looking galaxies whose faint outer structure is simply too hard to detect.</p>
+<p>Since NASA’s James Webb Space Telescope first revealed little red dots in 2022, astronomers have been trying to pin down what they are. The compact, extremely distant red sources appear throughout the early universe, and one leading idea has been that they are supermassive black holes known as active galactic nuclei. But they do not behave quite like active galactic nuclei seen in the nearby universe, and their numbers fall sharply at lower redshifts. That left an open question about what these objects become as the universe ages.</p>
+<h3>Using the “Saguaro” galaxy as a test case</h3>
+<p>Rinaldi’s team, which published its study on July 29 in *The Astrophysical Journal*, examined a lower-redshift spiral galaxy called WISEA J123635.56+621424.2. They nicknamed it the “Saguaro” because its spiral arms resemble the cactus found in the Sonoran Desert. The galaxy sits at redshift 2, meaning astronomers see it as it appeared roughly 3.3 billion years after the Big Bang.</p>
+<p>The researchers combined archival observations from Hubble and Webb, along with weak X-ray emission detected by NASA’s Chandra X-ray Observatory. Webb’s microshutter array had been positioned directly over the galaxy’s core, letting the team collect spectroscopic data from the center. Hubble supplied ultraviolet imaging, while Webb provided infrared imaging and spectroscopy.</p>
+<p>That data showed the nucleus shines more strongly in ultraviolet and infrared wavelengths than in visible light, matching a key feature of distant little red dots. The X-ray result also fit the picture: the Saguaro appears to host an active galactic nucleus that is heavily obscured and X-ray weak.</p>
+<p>The team then digitally shifted the galaxy to higher redshift to mimic how it would look farther back in cosmic history. As they did, the surrounding spiral structure faded from view while the bright red nucleus remained visible. On that basis, the researchers suggest that some little red dots may look isolated only because their much fainter host galaxies are beyond current telescopes’ reach.</p>
+<p>The researchers caution that the Saguaro cannot stand in for every little red dot. But they say it may show one possible stage in the evolution of these compact red sources, and more observations will be needed to test that idea.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260815064808.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Webb’s mysterious little red dots may be hiding entire galaxies">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
