@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-20</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-20</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="daily_star_bangladesh">
+  <summary>Malnutrition fuels measles toll</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A study of 354 children treated for measles at Bangladesh Shishu Hospital and Institute found widespread malnutrition and poor breastfeeding histories among patients, highlighting how the outbreak has hit the most vulnerable children as Bangladesh faces a severe measles surge.</p>
+<p>Prof Mirza Md Ziaul Islam, the hospital director, and Mustafizur Rahman, senior director of icddr,b, disclosed the findings at an event at the hospital yesterday. The team from Bangladesh Shishu Hospital and icddr,b said it conducted the study between March and July, collecting nasopharyngeal swabs, blood samples, and demographic, clinical and vaccination information from children aged 0 to 14.</p>
+<h3>Malnutrition among the children admitted with measles</h3>
+<p>Among the children under five who were admitted with measles, about two-thirds were malnourished, according to the study. Looking only at the 308 children aged 0 to 5, 37 were severely underweight and 163 were moderately underweight, which meant 65 percent had severe or moderate malnutrition.</p>
+<p>The feeding history was also poor for many of the patients. The study found that 135 children, or 38 percent, had not been breastfed properly in the first six months of life. Eleven of the children died of measles, and nine of them, or 82 percent, had not been exclusively breastfed.</p>
+<h3>Many patients were too young for routine vaccination</h3>
+<p>The study also found that more than 40 percent of the patients were between three and nine months old, meaning they were not yet eligible for the routine measles vaccination schedule. Under the routine programme, children receive measles vaccines at nine and 15 months; during the emergency vaccination campaign, the eligibility age was lowered to six months.</p>
+<p>Among the 146 children under nine months, 142 tested positive for measles. Of the 126 children who were eligible for vaccination but had not received the shots, 122 tested positive. The study said 48 children had received one dose and 21 had received both doses, though 21 of those fully vaccinated children were admitted with measles-like symptoms and, the researchers said, should be investigated further.</p>
+<h3>The findings land in the middle of a major outbreak</h3>
+<p>The hospital study comes as Bangladesh is dealing with what health workers described as its worst measles outbreak in recent memory. The evidence cited 922 deaths among patients with measles or measles-like symptoms and 1.27 lakh hospitalisations so far.</p>
+<p>According to the Directorate General of Health Services, around 1.64 lakh measles and suspected measles cases had been reported till yesterday this year, while only 132 cases were reported in 2025. Health experts blamed disruptions in routine vaccination and the failure to mount a timely special campaign for creating an immunity gap, and said malnutrition among children made the situation worse.</p>
+<p>The researchers recommended ensuring measles-rubella vaccination for all children, improving vaccination strategies using immunological evidence, expanding clinical and epidemiological research, and turning that evidence into policy to support measles elimination.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/malnutrition-fuels-measles-toll-4252151" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Malnutrition fuels measles toll">TDSB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="el_pais">
+  <summary>The great European drought devours the continent&#x27;s heart: harvests at lows, historic restrictions, and a stagnant economy</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Europe’s drought has moved from scorched parks to a wider crisis that is hitting water supplies, farming, transport and power, while leaving officials in France, Britain, Italy and Hungary scrambling over how far the damage will spread.</p>
+<p>The water shortage has brought historic declines in river discharges and water resources, and millions of people are seeing restrictions for the first time in countries less used to scarcity. The heat has also become deadly: about 25,000 Europeans have died so far this summer, including more than 9,500 in Germany during the last week of June, while France has entered its fifth heatwave in a row.</p>
+<h3>Restrictions and shortages spread</h3>
+<p>France is one of the hardest-hit countries. According to the French Ministry of Ecological Transition, 70% of the country is under some form of water restriction, and 40,000 people in 80 municipalities already have supply cuts and must be served by tankers or bottled water. About 67 departments are at crisis level, where water is reserved for priority use and activities such as filling pools, watering sports fields or washing cars are banned.</p>
+<p>The drought has come alongside the hottest and driest summer since records began. Precipitation was 67% below average, July was the third driest since 1959, and 94% of groundwater reserves were below normal levels. The Geological and Mining Survey said the condition of aquifers is deteriorating, and more than a thousand watercourses showed interruptions in flow or were dry.</p>
+<p>France’s Minister for Ecological Transition, Monique Barbut, gathered the crisis cabinet last week to examine measures against the “particularly intense drought and the effects of climate change, which continue to worsen pressure on water resources.” She asked prefects to issue water-restriction orders without delay when needed and said containment must be the first response for individuals, agriculture and industry.</p>
+<h3>Rivers, shipping and power are under strain</h3>
+<p>The drought is also disrupting movement and energy. Cargo ships carrying essential goods to Rotterdam via the Rhine are traveling at 30% capacity to avoid running aground. In Hungary, the country’s only nuclear plant has been halted, with the cooling water in the Danube having disappeared. In Italy, authorities have already asked Switzerland for water to prevent losses in rice fields.</p>
+<p>The economic damage is spreading beyond the water sector. The crisis is affecting food prices, goods transport, energy production and growth forecasts for major economies, with the short-term hit to continental GDP put at at least 50,000 million euros. France’s minister said the combined impact of heatwaves, fires and drought would cost the country between 10,000 and 15,000 million euros, equal to 0.3 to 0.5 percentage points of GDP.</p>
+<p>Britain is facing its own severe strain. Authorities have formally declared drought in 71.3% of England after the driest July since records began in 1836. Only 14% of England’s rivers are at levels considered normal for this time of year, while 22% have “exceptionally low” flows, and reservoirs are falling, with five already at “exceptionally low” levels. The British prime minister, Andy Burnham, described the situation as a “powder keg.”</p>
+<h3>Agriculture is taking the hardest hit</h3>
+<p>The sharpest blow has fallen on agriculture. Wheat production in the EU and the United Kingdom is expected to fall by 24% this year, costing producers around 2,000 million euros. France has already promised aid to the sector, and Sébastien Lecornu said no farmer would be left alone to face the crisis.</p>
+<p>The pressure is even clearer in France, where the main agricultural union, FNSEA, forecasts a 40% fall in corn harvests, rising to 70% in some departments. It also warned of excessive mortality in poultry farms after the intense heatwave at the end of June. Lecornu promised urgent measures and aid for farmers in next year’s budget.</p>
+<p>Britain’s agriculture is also suffering. Production has been reduced because crops have had to be harvested at the earliest point in the season in 20 years, and the government has prepared contingencies for what it calls the “worst reasonable scenario,” including limits on non-essential uses such as watering sports fields, washing vehicles and filling private pools.</p></div>
+  <div class="source-list"><a href="https://elpais.com/clima-y-medio-ambiente/2026-08-19/la-gran-sequia-devora-el-corazon-de-europa-cosechas-en-minimos-restricciones-historicas-y-la-economia-estancada.html" target="_blank" rel="noopener noreferrer" title="El País / The great European drought devours the continent&#x27;s heart: harvests at lows, historic restrictions, and a stagnant economy">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>African families’ heartbreak as young men trapped on Russian battlefields</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Zimbabwean mother, Rodwin Chitewere, spent her son’s birthday praying for his body to be brought home from Russia, where he was reportedly killed fighting Moscow’s war against Ukraine. In Botswana and South Africa, women are also waiting for sons and husbands to return from the same conflict, which many say they were duped into joining, while authorities warn recruiters are still active. Chitewere’s son would have turned 23; he left with a cousin in April.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/africa/article/3364541/african-families-heartbreak-young-men-trapped-russian-battlefields" target="_blank" rel="noopener noreferrer" title="South China Morning Post / African families’ heartbreak as young men trapped on Russian battlefields">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Kosovo finds remains of at least 23 people in suspected mass graves</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Kosovo authorities found the remains of more than 20 people in three suspected mass graves in the Zubin Potok area in the north of the country, with forensic teams saying skeletal remains suspected to belong to at least 23 individuals were recovered on Wednesday. The graves are believed to contain victims of the region’s ethnic conflicts in the 1990s, and officials began excavations there two weeks ago while searching for ethnic Albanian victims who remain missing.</p>
+<p>Kosovo’s acting prime minister, Albin Kurti, said during the excavation that the remains most likely belong to “23 Albanians who were violently abducted in the town of Mitrovica and executed” in the spring of 1999. Prosecutors said all the remains have been sent for DNA testing, warning the process could take months, and police said they had arrested three local men in recent days. Wednesday’s statement said they are being investigated in connection with the case on suspicion of war crimes against the civilian population.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/19/kosovo-finds-remains-of-at-least-23-people-in-suspected-mass-graves?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Kosovo finds remains of at least 23 people in suspected mass graves">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="el_pais">
+  <summary>Gastroenteritis, tuberculosis, scabies: nurses denounce an unprecedented health system collapse in Ceuta</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ceuta’s nurses say they are facing a surge of acute gastroenteritis, scabies, impetigo and tuberculosis cases while working with too few staff, and they warn that overcrowding and poor access to basic resources are pushing the city’s health system toward collapse.</p>
+<p>Every day, they say they are dealing with more than 200 cases and having to double shifts and work overtime. The Ceuta Nursing College says the pressure is greater than the city can absorb, including in beach settlements where monitoring is “more complex,” while the Ministry of Defense has also acknowledged a scabies outbreak among military personnel stationed there.</p>
+<h3>Infections spreading in crowded conditions</h3>
+<p>The diseases being seen in Ceuta include more than 200 cases of acute gastroenteritis, 20 of scabies, 21 of impetigo and 4 of tuberculosis, according to the evidence provided by nurses. One of the nurses on the ground, Alejandro Artero, said the pattern has been predictable: first traumas and wounds, then skin infections such as scabies, and later respiratory diseases.</p>
+<p>Artero said other problems have followed, including worsening chronic illnesses such as diabetes and asthma, mental health disorders that cannot be treated normally, and more gastrointestinal cases linked to sanitation conditions. He also said some people are drinking irrigation water, and argued that infections were bound to appear.</p>
+<p>The nurses’ professional college says the workload has left health workers “physically and psychologically exhausted.” Rosa Fuentes, identified as the Ceuta president, said there are not enough means to address the crisis and called on the central government to declare a state of emergency.</p>
+<h3>Tracking patients has become part of the problem</h3>
+<p>Beyond the raw number of cases, Artero said one of the main difficulties is finding patients again to complete tests and follow up over several days. He said many are dispersed around the city and some avoid identifying themselves for fear of being located by authorities.</p>
+<p>“There are patients we know three times and all three times they give different names,” he said, adding that this makes it harder to monitor them properly. He used tuberculosis as an example, saying four cases have been diagnosed but that there may be many more because diagnosis requires tests and, in some cases, locating the patient later.</p>
+<p>The Ceuta Nursing College said the figures do not include cases from the beach settlements, where oversight is harder. The broader picture, as described by the nurses, is of a city where care is being provided under conditions that make both treatment and tracing more difficult.</p>
+<h3>Debates over migrants, the military outbreak and who should act</h3>
+<p>The Spanish Epidemiology Society has urged people not to stigmatize migrants. Its president, Maria João Forjaz, told EFE that “thinking they bring diseases is medically incorrect and, in addition, dangerous,” and said the underlying problem is the lack of basic resources. She said overcrowding helps spread skin and respiratory diseases, while lack of food and drinking water can drive gastrointestinal problems.</p>
+<p>Defense said the scabies cases detected among soldiers stationed in Ceuta were “a common infection in humid areas” and said all those affected were receiving the treatment recommended by health authorities after diagnosis. It also said measures had been taken to treat the infected and hygienize facilities. The ministry said the outbreak had nothing to do with the military’s intervention in the humanitarian crisis in the autonomous city.</p>
+<p>The Ministry of Defense said 24 soldiers had been diagnosed with scabies, including two cases that predated the mass migrant entry. Health Minister Mónica García, who visited Ceuta over the weekend, acknowledged that the system there is “stressed” but denied a collapse and warned against blaming migrants as disease carriers, calling that link “unfair and xenophobic.”</p>
+<p>Medical unions had already warned about the strain. CESM said reception and assistance resources in the city were “maxed out” and described the situation as one of “national emergency.” Florentino Pérez Raya, president of the General Council of Nursing, called for “a single command in Ceuta” to lead the response and for the resources and supplies that the territorial emergency requires to be allocated.</p>
+<p>In the first 15 days of the crisis, Ceuta’s health system treated 5,800 migrants, according to Health data. Of those, 3,500 were assisted in primary care and 2,300 in hospital, with pressure easing over time from 1,149 on the first day to around 300 in later days.</p></div>
+  <div class="source-list"><a href="https://elpais.com/sociedad/2026-08-19/las-enfermeras-denuncian-un-colapso-sanitario-sin-precedentes-en-ceuta-por-gastroenteritis-tuberculosis-y-sarna.html" target="_blank" rel="noopener noreferrer" title="El País / Gastroenteritis, tuberculosis, scabies: nurses denounce an unprecedented health system collapse in Ceuta">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>New study links cosmic radiation to higher cancer death risk in flight crews</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">general_news</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new study links cosmic radiation to a higher risk of dying from radiation-related cancers among flight attendants and pilots, even more than people who work with radioactive materials. Cosmic radiation comes from space, and only a small amount reaches Earth’s surface, but exposure is greater at high altitudes. The study adds to limited evidence from small studies suggesting frequent flying may raise cancer death rates, particularly for pilots and flight crews.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3364496/new-study-links-cosmic-radiation-higher-cancer-death-risk-flight-crews" target="_blank" rel="noopener noreferrer" title="South China Morning Post / New study links cosmic radiation to higher cancer death risk in flight crews">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="axios,middle_east_eye">
+  <summary>&#x27;Playing with fire&#x27;: Israel&#x27;s Syria strike tests Turkey after Mecca defence pact</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel&#x27;s strike on the Abu al-Duhur airbase in northern Syria has sharpened tensions among Syria, Turkey and Israel after Damascus denied any Turkish military buildup at the site and Ankara cast the attack as an election stunt.</p>
+<p>The early Tuesday morning attack hit the airbase, which lies about 45 miles, or 70km, from the Turkish border. Israel dropped at least eight bombs on runways and hangars, damaging runways that had recently been rebuilt. There were no casualties. Israel told the Trump administration the strike was meant to prevent a Turkish military buildup, and Prime Minister Benjamin Netanyahu later said Israel had warned Syria not to allow a Turkish presence there.</p>
+<h3>Syria says the airbase was being rebuilt, not militarized</h3>
+<p>Syrian Foreign Minister Asaad Al-Shaibani told Axios on Wednesday that he had made clear to Israel that Damascus was not working with Turkey to amass a military presence at the base. He said there was “no intention to establish a Turkish base there, nor to establish a permanent Turkish military presence or deploy Turkish forces at the site.”</p>
+<p>Al-Shaibani said the work at Abu al-Duhur was limited to repairing an airfield and facilities damaged during the war for use by the Syrian Air Force. He said the base was largely empty, had not yet become fully operational, and that Turkish military officers who visited days before the strike were there for training and exchange of expertise. He also said Syrian officials had told Israel the site would remain under Syrian sovereignty and control.</p>
+<h3>Ankara downplays the strike as tensions rise</h3>
+<p>Turkey has sought to downplay the attack, viewing it as an election stunt by Netanyahu, according to Middle East Eye. That report said the strike came just after the signing of the Mecca defence agreement between Turkey, Saudi Arabia and Pakistan, and added that Israeli messaging suggested concern over Turkey’s growing role in Syria.</p>
+<p>Middle East Eye also said the Israeli prime minister’s office claimed Syria was on the verge of breaching the status quo by allowing Turkish troops to deploy at an airbase near Aleppo, while Syrian officials said there was no military Turkish presence at Abu al-Duhur. Turkish officials said Israel did not use the military hotline established between the two countries last year, and Thomas Barrack, the US envoy to Turkey and Syria, warned of a real risk of rapid escalation.</p>
+<h3>Damascus keeps the door open to talks</h3>
+<p>Al-Shaibani said Syria and Israel were in contact before the strike, and that Damascus also spoke to the Trump administration before and after it in an effort to prevent escalation. He said Syria protested to Washington and other countries after the bombing and wanted to contain its effects.</p>
+<p>He said Syria still wanted an agreement with Israel to de-escalate on the border, and that political and security solutions remained the most sustainable path. Al-Shaibani said a year of negotiations mediated by the Trump administration had produced a security formula on paper, but that Israel later backed away from its commitments.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/19/syria-foreign-minister-israel-bombing-airbase" target="_blank" rel="noopener noreferrer" title="Axios / Syrian foreign minister to Axios: Israeli bombing of airbase was unjustified">Axios #1</a><a href="https://www.middleeasteye.net/news/playing-fire-israels-syria-strike-tests-turkey-after-mecca-defence-pact" target="_blank" rel="noopener noreferrer" title="Middle East Eye / &#x27;Playing with fire&#x27;: Israel&#x27;s Syria strike tests Turkey after Mecca defence pact">MEE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc,cnn,el_pais,guardian,middle_east_eye,nyt,scmp">
+  <summary>Israel confirms soldiers fired at car in which Hind Rajab was killed and opens criminal investigation</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel’s military has said for the first time that its soldiers fired on the car in which five-year-old Hind Rajab was killed in Gaza, and it has opened a criminal investigation into the case, reviving questions over the deaths of Rajab, her relatives and the paramedics sent to rescue her.</p>
+<h3>The shooting that left Rajab trapped in the car</h3>
+<p>The killing at the centre of the case happened on 29 January 2024, when Rajab was travelling in a vehicle in Gaza with six relatives. The Israeli military had previously denied that its troops were near the car, but its new statement said an internal review found troops opened fire on the vehicle.</p>
+<p>Rajab initially survived the attack and answered a phone call while pleading for help. Her voice was later heard in the Red Crescent operators’ accounts of the call, and she described seeing tanks directly in front of the car as they moved towards her. Hind’s body was recovered days later, along with the others killed.</p>
+<p>The case became one of the most widely known civilian deaths from the war. A film based on it, *The Voice of Hind Rajab*, was later nominated for an Oscar, and the UN cited her case in a commission of inquiry that accused Israel of war crimes, which Israel denies.</p>
+<h3>The ambulance and the military’s new investigation</h3>
+<p>After Rajab’s call, an ambulance was dispatched to reach her in a move coordinated with the Israeli army. The IDF said its review found “alleged failures in the co-ordination of the movement of the Palestine Red Crescent ambulance,” and said it had decided to initiate a criminal investigation by the Military Police Criminal Investigation Division.</p>
+<p>The Palestinian Red Crescent Society later confirmed that the two paramedics sent to the scene, Yusuf al-Zeino and Ahmed al-Madhoun, were killed when the ambulance was bombed by Israeli forces. The bodies of Rajab, her relatives and the paramedics were found 12 days after the attack.</p>
+<p>The IDF also said its findings “indicate that IDF troops fired at a vehicle” that was travelling contrary to an advance notice it had published for residents of the area. In earlier statements, the military had said none of its troops were in the area at the time, a claim that was later questioned.</p>
+<p>Following the announcement, the Hind Rajab Foundation, based in Brussels and focused on alleged Israeli violations in Gaza, said it had “no confidence” in the investigation. It said Israel’s internal investigations were “fundamentally flawed and cannot be regarded as credible mechanisms of accountability.”</p>
+<h3>Part of a wider set of wartime probes</h3>
+<p>The Rajab case was one of two high-profile incidents in which the IDF said it was opening criminal investigations. The other involved the killing of 15 Palestinians, including medics and a UN worker, in March 2025. In that case, the military said it would investigate the deaths after finding that the firing raised a “reasonable suspicion of criminal misconduct.”</p>
+<p>The IDF said the March 2025 case involved an emergency call-out in the Tal al-Sultan area of Rafah, where an IDF unit fired on ambulances, a fire engine and a marked UN vehicle. It later said that an earlier account of the incident was “mistaken” after video from the mobile phone of one of the dead paramedics showed the convoy was using emergency lights.</p>
+<p>In three other cases reviewed at the same time, the military said it did not find grounds for criminal investigations. Those included the killing of seven World Central Kitchen employees in Deir al-Balah in April 2024 and two separate incidents in which four Médecins Sans Frontières employees were killed.</p>
+<p>The new decisions came as the IDF said it had conducted its first comprehensive report on alleged war crimes since the start of the Gaza war in October 2023. But the broader question remains whether these investigations will lead to accountability. Israeli rights groups say criminal investigations of Israeli forces rarely end in convictions, and the Hind Rajab Foundation has said it does not trust the process.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/crl7yjlpx2po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Israel confirms soldiers fired at car in which Hind Rajab was killed and opens criminal investigation">BBC #1</a><a href="https://www.cnn.com/2026/08/19/middleeast/israel-military-idf-hind-rajab-firing-intl" target="_blank" rel="noopener noreferrer" title="CNN / Israeli military admits for first time to firing on car carrying 5-year-old Hind Rajab as it opens criminal probe">CNN #1</a><a href="https://elpais.com/internacional/2026-08-19/el-ejercito-de-israel-admite-que-disparo-contra-el-coche-de-la-nina-palestina-hind-rajab-en-gaza-y-abre-una-investigacion-penal-por-su-muerte.html" target="_blank" rel="noopener noreferrer" title="El País / El ejército israelí admite que disparó contra el coche de la niña Hind Rajab en Gaza y abre una investigación penal por su muerte">El Pais #1</a><a href="https://www.theguardian.com/world/2026/aug/19/israel-admits-it-soldiers-fired-at-car-in-which-hind-rajab-was-killed" target="_blank" rel="noopener noreferrer" title="The Guardian / Israel admits its soldiers fired at car in which Hind Rajab was killed">Guardian #1</a><a href="https://www.middleeasteye.net/news/israel-admits-it-fired-vehicle-carrying-five-year-old-hind-rajab" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel admits that it fired on vehicle carrying five-year-old Hind Rajab">MEE #1</a><a href="https://www.nytimes.com/2026/08/19/world/middleeast/israel-criminal-investigation-hind-rajab-gaza-workers.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Israel Opens Criminal Inquiries Into Killings of Hind Rajab, 5, and of Medics">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3364595/israel-opens-criminal-probes-over-killings-palestinian-girl-hind-rajab-aid-workers" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israel admits its troops killed 5-year-old Hind Rajab in Gaza, opens criminal probe">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israel kills nine in Gaza police station bombing</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli air strikes killed at least nine Palestinians at a police station in Gaza City on Wednesday, and paramedics said 15 others were wounded. Gaza’s Police Department said Israeli fighter jets dropped several bombs on the Gaza Governorate Municipalities Police Headquarters. Local media reported that several senior police officers were among those killed, including Colonel Faten al-Sahhar, the head of the Women’s Police Department. The police officials described the attack as a “brutal massacre,” and Gaza’s Ministry of Interior said Israel was seeking to spread chaos in the territory by targeting the police force.</p>
+<p>Hamas condemned the attack as a “war crime,” saying its timing showed Israel wanted to undermine mediators’ efforts to advance the Gaza ceasefire. The Israeli military said it targeted “Hamas operatives” who were planning attacks on Israeli troops, but provided no evidence to support the claim. The strike came amid other killings on Wednesday, including a separate Israeli air strike in central Gaza that killed another Palestinian, and followed Tuesday’s strike on a cafe in Gaza City that killed at least seven people, including a child.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/gaza-israel-kills-nine-gaza-police-station-bombing" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel kills nine in Gaza police station bombing">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israel’s Ben Gvir boasts of planned execution facility for Palestinian prisoners</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel’s national security minister Itamar Ben Gvir boasted on Tuesday about a facility under construction that he said would be used to execute Palestinian prisoners. In a video posted on Instagram, where he has around 150,000 followers, he said, “In this place, the terrorists will be executed,” and pointed to what appeared to be an active construction site. He said the complex would include “viewing chambers” where “crime victims” could come and watch Palestinians being hanged.</p>
+<p>Earlier this year, Israel’s parliament approved a bill regulating the execution of Palestinian prisoners convicted of involvement in deadly attacks. The law was sponsored by Ben Gvir’s Otzma Yehudit party, and the Israel Prison Service is set to be the agency in charge. Critics have described it as another discriminatory law, saying it can be applied only to Palestinians and not to Israeli Jewish citizens. The evidence also says three IPS volunteers are reportedly expected to carry out the executions, which would be conducted by hanging within 90 days of sentencing, and that the IPS had already begun preparing sites and personnel before the Knesset passed the law in March, according to Israeli media reports.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israels-ben-gvir-boasts-planned-execution-facility-palestinian-prisoners" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel’s Ben Gvir boasts of planned execution facility for Palestinian prisoners">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>After three years apart, a Gaza father returns to his wife - and six death certificates</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ahmed al-Siqali has finally returned to Gaza after nearly three years away, but the homecoming brought him back to his wife and daughter with six death certificates for the children he lost in an Israeli strike, leaving the reunion bound to grief as much as relief.</p>
+<h3>A return delayed by war and closure</h3>
+<p>Al-Siqali left Gaza to work in Israel a week before the genocide began in October 2023, planning to support his family as a father of seven. When the crossing closed, he says he was trapped in the occupied West Bank and unable to get back to his wife and children for more than two years.</p>
+<p>The separation became unbearable after December 2023, when an Israeli strike hit the home where his family was sheltering in Gaza City’s al-Sahaba neighbourhood. Six of his children were killed. Rosan was the only child to survive, and al-Siqali said that from then on the idea of returning home filled him with anguish rather than comfort.</p>
+<p>He described the weeks after the strike as a period of constant dread. He spent his days looking at photographs and videos of his children, and he recalled one family trip to al-Nour resort just days before he left. Before 7 October, he said, Palestinians regularly travelled to Israel and the occupied West Bank for work under permits issued by the Israeli authorities, taking jobs in construction, agriculture and services. What had once been a routine departure, he said, turned into the moment he would last see his children.</p>
+<h3>Arrest in Qalqilya and a forced journey back</h3>
+<p>Last month, Israeli forces raided a compound in Qalqilya in the West Bank where al-Siqali was staying with other Gaza labourers. He was detained for two weeks before being sent back to Gaza. He said that during his detention, he longed for the moment of reunion, but also feared it.</p>
+<p>“Returning to Gaza and embracing my family had been my dream, especially during my time in prison and after everything I was subjected to,” he told Middle East Eye. He added that “the torture and humiliation were so unbearable that every moment, I wished for death,” but said he was also terrified of seeing his wife and daughter without the six children who had been killed.</p>
+<p>The arrest came after a period in which, he said, he had repeatedly tried and failed to reach his family as communications across Gaza went down. On 8 December 2023, he managed to contact them briefly using an eSIM. He said he told his wife to write the children’s names on their hands in case something happened to them. Minutes later, a relative called to say the house had been bombed.</p>
+<p>Al-Siqali said he could not take in the news at first. “There are no words that can describe what I felt at that moment,” he said. “It was something no human being should have to endure.”</p>
+<h3>A reunion shadowed by loss</h3>
+<p>When the Red Cross bus brought him back, al-Siqali was transferred with 23 other workers after a four-hour journey to Kerem Shalom and then taken to Nasser Hospital. His wife, Hayat, 36, was waiting there. She said she had learned of his release at 2pm after two weeks without any information about him, but she also feared facing him without their children.</p>
+<p>Their reunion after nearly three years apart was silent and tearful. Hayat said she could not move when she saw him. When he approached, she told him: “Forgive me. I couldn’t protect what you entrusted to me.”</p>
+<p>Hayat said she had been recovering from her injuries while also living through repeated displacement and the loss of the children. The family now lives in a tent in al-Mawasi, Khan Younis. She said adjusting to that life has been another ordeal for her husband, especially in the summer heat.</p>
+<p>“When we returned from the hospital to our tent, I cannot describe the expression on my husband’s face,” she said. “He was shocked by the scale of the destruction and the broken roads. Now, inside the tent, he is facing another shock: the primitive conditions in which we are living.”</p>
+<p>Back in the tent, al-Siqali spends much of his time lying on a thin mattress and scrolling through photographs of his children on his phone. Their six death certificates lie beside him. He looks at them, holds them close, and repeats: “This is all I have left of them.”</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/after-three-years-apart-gaza-father-returns-his-wife-and-six-death-certificates" target="_blank" rel="noopener noreferrer" title="Middle East Eye / After three years apart, a Gaza father returns to his wife - and six death certificates">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>#CancelCoal court battle threatens future of young South Africans, say activists</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Youth climate activists and the South African government are locked in an appeal over a plan for 1,500MW of new coal-fired power, with activists arguing it threatens children’s constitutional rights and the state saying the case is premature and risks grid security.</p>
+<p>Outside the Supreme Court of Appeal in Bloemfontein on Wednesday, 19 August, activists from the African Climate Alliance, Vukani Environmental Justice Movement in Action and groundWork sang as the court heard the latest stage of the #CancelCoal case. The dispute began almost two years earlier outside the Gauteng High Court in Pretoria, where the same groups challenged the government’s plan under the 2019 Integrated Resource Plan to develop new coal-fired electricity generation.</p>
+<p>The High Court sided with the environmental groups. Judge Cornelius van der Westhuizen found that then minister of mineral resources and energy Gwede Mantashe and the National Energy Regulator of South Africa had not adequately considered the impact of new coal-fired generation on constitutional rights, particularly children’s rights. He later found the government’s plan inconsistent with the Constitution and “unlawful and invalid”.</p>
+<h3>What the state is trying to overturn</h3>
+<p>Energy and electricity minister Kgosientsho Ramokgopa is now asking the SCA to overturn that judgment. The government’s appeal argues that the High Court went too far, misapplied constitutional rights and threatened the separation of powers and South Africa’s energy security. It also says the challenge was premature because no specific plants, sites or developers had yet been chosen.</p>
+<p>Sibusiso Mazomba, advocacy coordinator at the African Climate Alliance, said the activists see the appeal differently. “The impression is that government is not just appealing the court case, but they are appealing our rights and our future as young people. It’s really an appeal against a liveable future for young people everywhere in South Africa,” he said.</p>
+<p>The case is complicated by a policy shift. The government’s appeal rests on IRP 2019, but Ramokgopa has published an updated Integrated Resource Plan, IRP 2025, which makes no mention of new coal-powered generation capacity. Mazomba said the original ministerial determination under IRP 2019 was never formally revoked or repealed, which means the Section 34 determination giving legal effect to procurement for 1,500MW of new coal capacity still remains active until it is overturned or formally withdrawn.</p>
+<p>The court has now adjourned, and the SCA will deliberate before delivering judgment. Activists say the outcome will shape both South Africa’s energy path and the legal protections available to young people.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-19-cancelcoal-court-battle-threatens-future-of-young-south-africans-say-activists" target="_blank" rel="noopener noreferrer" title="Daily Maverick / #CancelCoal court battle threatens future of young South Africans, say activists">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Siviwe Gwarube targets 7 million children in structured ECD programmes by 2030</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Africa’s basic education minister, Siviwe Gwarube, is pushing to expand structured early childhood development to seven million children by 2030, while the government tries to turn registration drives, subsidies and nutrition support into a system that can reach far more families.</p>
+<p>Gwarube has made early childhood development a central part of her agenda since taking office in 2024, arguing that quality learning in the early years is key to improving literacy and numeracy and, in her view, to lifting economic growth. In May 2026, she said more than 13,300 ECD centres had been registered in the past year and that more than 1.2 million children were already accessing registered early learning programmes across the country.</p>
+<p>Even so, she said there was still “significant work to be done.” Speaking about the sector, Gwarube said she could see “the direct correlation” between children who have access to the ECD subsidy and the Child Support Grant and better education outcomes. “Remember, the target is seven million children in structured ECD centres by 2030,” she said.</p>
+<h3>Registration, subsidy and red tape</h3>
+<p>Much of the effort is tied to the Department of Basic Education’s Bana Pele ECD Mass Registration Drive, launched in 2024. Gwarube said the focus has moved from getting centres registered at bronze level to helping programmes reach silver and gold status, which would allow them to access the ECD subsidy of R24 per child per day.</p>
+<p>She also said the department wants to remove barriers that keep centres from complying with bylaws and zoning requirements. Gwarube chairs the Inter-Ministerial Committee on ECD, which brings together basic education, home affairs, social development and Cogta, and she said the point is to “break down silos” between departments. “We can’t allow red tape to be the barrier to people being able to comply and do what they need to do,” she said.</p>
+<p>Funding is part of the plan. In 2025, National Treasury allocated an additional R10-billion to the Department of Basic Education over the medium term to increase the subsidy to R24 and support expanded access for about 700,000 more children under five. Gwarube said the key question is whether the department can spend that money effectively.</p>
+<p>Nutrition is another strand. A Department of Basic Education tender for an ECD Nutrition Support Programme was published in March 2026 and remains open, with a closing date of 11 September 2026. Gwarube said the programme will be piloted in the Eastern Cape and linked that work to hunger, child stunting and the country’s inequality gap.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-19-siviwe-gwarube-targets-7-million-children-in-structured-ecd-programmes-by-2030" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Siviwe Gwarube targets 7 million children in structured ECD programmes by 2030">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cna">
+  <summary>Indonesia’s renewed macaque export push pits research demand against conservation concerns</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Indonesia has renewed its push to supply long-tailed macaques for biomedical research, setting its first export quota in four years and opening a breeding facility in Lampung, as animal welfare groups and officials clash over conservation, demand and local conflict.</p>
+<h3>Conservation dispute and local stakes</h3>
+<p>The government set a 2026 export quota of 1,920 long-tailed macaques in June, according to CITES records, its first recorded quota for the species since 2022. A month later, on Jul 31, it formally opened a breeding facility in Mesuji regency in Lampung, run by private company PT Bio Medika Nusantara Indah. The facility can house up to 4,000 macaques, and its first-generation offspring are intended for export for research. Officials said the United States is currently the main market, while China could also become a destination, although export requirements are still being negotiated.</p>
+<p>The move has reopened debate over a species that the International Union for Conservation of Nature classifies as endangered. The conservation body says long-tailed macaques have declined because of habitat loss, hunting and capture from the wild, estimating a global fall of about 40% over the past 40 years and a possible further 50% drop in the next 40. Indonesia, however, classified the species as “least concern” in its 2024 national assessment. The Ministry of Forestry’s 2025-2029 conservation plan said the animals were found across much of Indonesia, with wild populations considered stable and even showing signs of overpopulation in some areas. Data collected from 2019 to 2024 put the surveyed population at nearly 49,000, with the largest counts in South Sumatra, Lampung and Jambi.</p>
+<p>Animal welfare groups have criticised the export push as undermining protection for the macaques and going against efforts in some countries to reduce primate use in research. Indonesian officials and local leaders have defended the breeding programme, saying strict controls govern breeding and exports and that the project could bring economic benefits. They also point to conflict with local communities, where macaques have attacked and injured people and destroyed crops before harvest. Barantin chief Abdul Kadir Karding said the breeding facility could help reduce those conflicts while generating economic benefits, and Mesuji regent Elfianah Khamamik said the site was using vacant land and could create jobs and a tourist attraction.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/indonesia-long-tailed-macaque-exports-research-6322256" target="_blank" rel="noopener noreferrer" title="CNA / Indonesia’s renewed macaque export push pits research demand against conservation concerns">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>UAE-funded mercenary targeted British activist in London, report says</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A covert surveillance effort in London targeting British activist and academic Anas al-Tikriti has been linked in an ITV News investigation to Abraham Golan, a UAE-paid mercenary, leaving open how far the operation went and whether it was meant to stop at monitoring.</p>
+<p>Golan, a dual Hungarian-Israeli citizen who ran the private security company Spear Operations Group, travelled to Britain in December 2016, ITV News reported on Wednesday. The broadcaster said Emirati financial records showed he was being paid by the UAE while carrying out the operation, including a six-figure annual retainer, substantial bonuses and a $1m payment weeks before a trip to London for an operation in Yemen.</p>
+<p>ITV said its findings were based on witness testimony, emails, WhatsApp messages and financial records. According to the broadcaster, Golan worked with a former US special forces operative to locate and monitor Tikriti, the chief executive of the London-based Cordoba Foundation think tank. Golan first contacted a British strategist identified by ITV as “Victor” in November 2016, asking whether he had any “channels” to Tikriti and the Cordoba Foundation.</p>
+<p>He later travelled to London and, offered Victor £50,000 ($68,000) to help locate Tikriti, then increased the offer to £100,000 ($136,000). ITV said Golan shared photographs of Tikriti’s home and car, maps and satellite images, and details of his movements between home and work. At one meeting, Golan allegedly discussed the possibility of physically eliminating Tikriti, while his associate, a former US Navy Seal, reportedly made a gesture across his throat when asked what could happen to the activist.</p>
+<p>Victor told ITV he became “increasingly worried” about what the operation meant and eventually withdrew after concluding it could involve an assassination. Golan later wrote to him that “War is coming to Europe and we are at the beginning of a huge program,” and said his “team” remained in London after he left for Washington. The extent to which the surveillance continued is unclear.</p>
+<p>Tikriti later told ITV he felt “physically sick” after being shown the messages and photographs. He said police officers visited him twice at his London home and warned that his life could be at risk, though they did not tell him the source or nature of the threat.</p>
+<p>The alleged operation came amid a long-running dispute between the UAE and the UK over the Muslim Brotherhood. Abu Dhabi designated the Cordoba Foundation, the Muslim Association of Britain and Islamic Relief as terrorist organisations in 2014, but a UK government review the following year found no evidence the Muslim Brotherhood was involved in terrorist activity in Britain.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/uae-funded-mercenary-targeted-british-activist-anas-altikriti-london" target="_blank" rel="noopener noreferrer" title="Middle East Eye / UAE-funded mercenary targeted British activist in London, report says">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Greyest village in Japan turns to Peru sister city to plug severe worker shortage</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nanmoku, a mountain village in Gunma prefecture and Japan’s most greying municipality, has turned to its sister city in Peru in search of help with its population decline and labour shortage. The village, where 65.2 per cent of residents were aged 65 or older in the 2020 census, signed a sister-city agreement with Belen in northern Peru in November. It hopes cultural exchanges under the arrangement will eventually bring young people to live and work there.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/asia/east-asia/article/3364497/greyest-japanese-village-turns-peru-sister-city-plug-severe-worker-shortage" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Greyest village in Japan turns to Peru sister city to plug severe worker shortage">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China allocates 60 mln yuan for disaster relief in Henan</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Chinese authorities on Tuesday allocated an additional 60 million yuan, or 8.84 million U.S. dollars, from the central natural disaster relief funds to support flood-control, emergency rescue and disaster relief work in Henan Province. The Ministry of Finance and the Ministry of Emergency Management said the money will go to relocation and resettlement of affected residents, hazard elimination and risk mitigation, temporary living assistance, and repair of damaged homes. Henan has recently been hit by widespread and persistent heavy rainfall linked to the remnant impact of Typhoon Dolphin.</p>
+<p>The same weather system brought downpours to several provinces after the typhoon made landfall earlier this month. In Henan, heavy rainfall swelled rivers and triggered a levee breach in Zhoukou City last week; officials said the breach was sealed after more than 2,000 personnel joined the emergency response. The State Flood Control and Drought Relief Headquarters and the Ministry of Emergency Management sent a work team to guide the response, and 13 emergency drainage teams were dispatched to Zhoukou to assist with urban waterlogging relief. Earlier, authorities had earmarked 80 million yuan for flood and geological disaster relief in Henan, Hubei and Anhui, including 40 million yuan for Henan.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0819/c90000-20490019.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China allocates 60 mln yuan for disaster relief in Henan">PDE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="xinhua_en">
+  <summary>Xinhua Headlines: Lives saved, lives changed -- Chinese doctors mark their days in Africa</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Chinese doctors working across Africa are being credited with saving patients and training local staff, while a long-running medical cooperation program continues to expand and still raises the question of how far it can keep building local capacity.</p>
+<p>One example is Seif Amour Rajab, who could barely open his mouth for three years after fracturing his jaw at 16 when he fell from a mango tree on Tanzania’s remote Pemba Island. The hospital there could do little, and the injury left him struggling to eat and speak. Last December, after a four-hour operation by Chinese doctors, he could open his mouth and talk with ease again.</p>
+<p>His case sits inside a much larger program. Since China sent its first medical team abroad in 1963, to Algeria, some 30,000 Chinese medical workers have served in 76 countries and regions and treated about 290 million patients, most of them in Africa. The cooperation is still expanding under the Forum on China-Africa Cooperation Beijing Action Plan (2025-2027), which plans to send 2,000 medical personnel and public health experts to Africa and support new joint medical, traditional medicine and disease-control centers.</p>
+<p>The story also points to a second strand of the program: training local health workers. Chinese teams in Tanzania and elsewhere have taught doctors to handle cases that once required outside specialists, while partnership clinics and specialty centers have spread across the continent. In Cameroon, Chinese medical teams have held nearly 200 free clinics since 1975 and treated more than 3.3 million patients over 50 years. In Senegal, a team spent a day at an orphanage where 84 children received consultations and their own health files.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260819/9ba2bad5913b48049e3740be9c761432/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Xinhua Headlines: Lives saved, lives changed -- Chinese doctors mark their days in Africa">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Salmonella outbreak: What we know so far</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">One person has died and hundreds more have fallen ill in a salmonella outbreak that the UK Health Security Agency has declared national, with investigators focusing on imported eggs or dishes containing them and on infections linked to eating out rather than food prepared at home.</p>
+<p>The latest figures in the evidence say 207 recent cases have been identified, with 199 in England, including 47 in London and 38 in Yorkshire and Humber. There have also been six cases in Scotland, one in Wales and one in Northern Ireland. Scientists used whole-genome sequencing and found the bacteria involved are closely related, suggesting the cases are part of the same outbreak and share a common source.</p>
+<p>UKHSA experts questioned 114 people with the infection, and their answers gave eggs the “strongest signal” as the likely source. The agency said 24 cases were linked to five businesses, which have not been named, and 11 people said they ate dishes containing eggs. Investigators believe some of those premises may use eggs from multiple sources, including imported ones. The evidence also says most infections in the current outbreak do not seem to come from food cooked at home, with catering and food services such as restaurants, cafes and takeaways likely to play a part.</p>
+<h3>What remains unclear</h3>
+<p>The source evidence says the eggs are still only a leading suspect, not a proven cause. UKHSA says there is no identified link to UK-produced eggs or poultry. Health experts still need to confirm the source, trace the exact country of origin and look through the whole supply chain, including where eggs or egg products were eaten, supplied, stored and farmed.</p>
+<p>Salmonella are bacteria that can live harmlessly in animals including cattle, pigs and chickens, which is why eggs and poultry are often associated with infection. People can catch it from contaminated food that has not been cooked properly, contaminated water, contact with infected animals or cross-contamination in the kitchen. Symptoms include stomach cramps, diarrhoea, vomiting and fever, usually beginning 12 to 72 hours after infection. Most people recover without further help, but older people, babies and those with weakened immune systems are at greatest risk of severe disease.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cp30gqnpqjqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Salmonella outbreak: What we know so far">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian,scmp">
+  <summary>Andy Burnham calls on wider society to help end rough sleeping by Christmas</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham has called on government, faith groups and other parts of wider society to help end rough sleeping by Christmas, saying public money alone may not be enough while experts press for a fuller response to the causes of homelessness.</p>
+<p>Burnham said he wanted a nationwide effort to get as many people as possible off the streets before Christmas, echoing what happened during the Covid pandemic. Speaking on a visit to the north-east of England, he said he felt “very passionately” about tackling rough sleeping and wanted wider society to play a part in “wiping it out”. He added that not every rough sleeper would take the offer “for their own reasons”, but said: “Let’s see if Britain can do this. Give everybody an offer to come inside before Christmas.”</p>
+<p>He also said the government money “may not fully get us there” and that he was asking “wider society, faith organisations” to help. As part of the effort, he said he would host a summit this autumn to bring together leaders from business, finance, charities, health and faith communities. Burnham said the aim was to make this a nationwide initiative over the Christmas period, and that people being left to sleep on the streets could end up costing the state more through repeated use of A&amp;E, hospital beds and police contact.</p>
+<h3>Funding, pledges and criticism</h3>
+<p>Burnham said on Tuesday that rough sleeping had become so common it now “feels like part of the scenery”, and he pledged another £100m to tackle the problem this winter. He also said he would donate 15% of his prime minister’s salary to homelessness causes, saying he wanted to “lead from the front”.</p>
+<p>The government said the funding package would provide immediate accommodation and support the creation of more than 1,000 permanent homes over the next three years. It said areas with the highest levels of homelessness and housing pressure would receive the largest share of a boosted £442m in funding. But council leaders and homelessness experts welcomed the ambition while calling for more action on the problems underlying rough sleeping, including mental health issues and addiction.</p>
+<p>Liam Robinson, leader of Liverpool city council, said there may need to be more funding, including for more than housing-related support. Ish Camp of St Mungo’s said giving people a bed for the night was not enough unless there was also support to help them stay in it, warning that money could be quickly swallowed up if there was nowhere permanent to move people on to.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/aug/19/andy-burnham-calls-on-wider-society-to-help-end-homelessness-by-christmas" target="_blank" rel="noopener noreferrer" title="The Guardian / Andy Burnham calls on wider society to help end rough sleeping by Christmas">Guardian #1</a><a href="https://www.scmp.com/news/world/europe/article/3364611/uk-pm-burnham-launches-bid-help-homeless-donating-15-his-wages" target="_blank" rel="noopener noreferrer" title="South China Morning Post / UK PM Burnham launches bid to help homeless, donating 15% of his wages">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Pentagon quizzes NATO allies on political loyalty, documents reveal</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Pentagon has handed NATO allies a three-page questionnaire asking whether they are aligned with President Donald Trump’s vision for the transatlantic alliance, according to documents obtained by Al Jazeera. The document, titled “Questions for NATO Allies &amp; Other Key Stakeholders,” asks whether allies have been “publicly supportive of US foreign policy priorities” and whether they have shown alignment with the US approach to be “strong, clear, and quiet,” a phrase Defense Secretary Pete Hegseth used in May. The markings and wording suggest the questions are meant to guide exchanges between US officials and NATO counterparts during an ongoing six-month Pentagon review of American forces in Europe.</p>
+<p>The final questions focus on political and military loyalty. One asks whether allies have placed restrictions on US access to bases and military flights over their countries, amid friction tied to the US-Israel war on Iran. Several European countries imposed such restrictions after the war began on February 28. The questionnaire also asks whether allies support the Trump administration’s “NATO 3.0” concept, which calls for Europeans to take on more responsibility for their own defence with more limited US support.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/19/pentagon-quizzes-nato-allies-on-political-loyalty-documents-reveal?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Pentagon quizzes NATO allies on political loyalty, documents reveal">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>The Government works on the urgent transfer of 500 migrant girls from Ceuta to the Peninsula</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Government is working on the urgent transfer of at least 500 migrant girls from Ceuta to the Peninsula. The Ministry of Youth and Childhood is trying to find a way to accommodate hundreds of unaccompanied minors who have been in the autonomous city since the mass entry at the end of July, as part of a shock plan coordinated between administrations. Ministry sources say the plan includes compliance with the royal decree-law for binding and solidary reception by all autonomous communities or family care, along with other formulas to speed up reception.</p>
+<p>There is also a clear mismatch over the transfer itself. On Wednesday, after meeting with PP leader Alberto Núñez Feijóo, Ceuta president Juan Jesús Vivas said he had not received “any request” from the central government to transfer the 500 minors. Ceuta Government sources said extraordinary measures are needed, while PP deputy secretary Juan Bravo questioned the Ministry’s plan and said the best interests of the child are to be with their family or “in their environment.”</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-19/el-gobierno-trabaja-en-el-traslado-urgente-de-500-ninas-migrantes-de-ceuta-a-la-peninsula.html" target="_blank" rel="noopener noreferrer" title="El País / The Government works on the urgent transfer of 500 migrant girls from Ceuta to the Peninsula">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Taxpayers to fund clear-up of illegal dumps in West Yorkshire, Surrey and Kent</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Illegal dumps in West Yorkshire, Surrey and Kent will be cleared using taxpayer money, Andy Burnham announced, while the prime minister promised a new drive against toxic waste. Ministers have identified dumps in Bradford, Runnymede and the Isle of Sheppey that collectively contain about 22,000 tonnes of illegal waste, to be tackled in the next phase of the government’s national clear-up effort.</p>
+<p>The government also said fines for rogue dumpers will rise, from £300 to £5,000 for people who dump waste illegally or fail to treat it correctly. Officials said AI-powered drones will be used to detect illegal activity while it is happening, and that 33 drones will be fitted with light detection and ranging technology to map illegal waste sites. Downing Street said the three new sites were chosen because of their scale, the risk to nearby communities, environmental damage and links to organised crime.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/2026/aug/19/taxpayers-to-fund-clear-up-of-dumps-in-west-yorkshire-surrey-and-kent" target="_blank" rel="noopener noreferrer" title="The Guardian / Taxpayers to fund clear-up of illegal dumps in West Yorkshire, Surrey and Kent">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>What has Burnham promised since he became PM, and when will it happen?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham has promised to scrap VAT on household electricity bills from October, cap single bus fares across England at £2 from January, and keep that bus-fare cap in place until the end of 2027, excluding London. He has also said disabled people in England will be able to use their bus passes at any time of day, seven days a week, from April 2027. On homelessness, he has made tackling rough sleeping a central policy and said everyone sleeping rough would be offered a route off the streets, with real progress expected by Christmas.</p>
+<p>The funding for some of these pledges is already disputed. Burnham said the electricity-bill tax cut would be paid for by ending Keir Starmer’s digital ID scheme, which he said would have cost £1.8bn over three years. But Darren Jones, Starmer’s former chief secretary, said the digital ID money was still unfunded and that Burnham would have to set out how he would pay for his new policies at the budget.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/aug/19/since-becoming-pm-what-has-burnham-promised-and-when-will-it-happen" target="_blank" rel="noopener noreferrer" title="The Guardian / What has Burnham promised since he became PM, and when will it happen?">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>‘Throwing students to the wolves’ Parliament slams CPUT over evictions after protests</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">CPUT has ordered students out of its residences after protests over a financial recovery plan, prompting Parliament to accuse the university of putting students’ lives at risk as many residents say they have no transport money or home to return to.</p>
+<p>Chairperson of the parliamentary committee on higher education Tebogo Letsie criticised the Cape Peninsula University of Technology after what he called a shocking email told students to evacuate all university residences and go home. The university had tried to introduce a financial recovery plan that would have required postgraduate and unfunded students to pay an upfront R7,000 fee covering registration and accommodation. CPUT later withdrew the plan pending further explanation, clarification and consultation with stakeholders, including student representatives, but students rejected that move and demanded an unconditional withdrawal.</p>
+<p>Letsie said the protest could have been avoided if the university and students had discussed the plan first. He said the institution’s decisions were expensive, argued that there would not have been a strike or destroyed buildings, and condemned the burning of infrastructure. He also said it was a risk to send students away at short notice when they had come from provinces across the country, saying: “if you remove them from res now, you are literally throwing them to the wolves.”</p>
+<p>The order to leave came in a CPUT management email sent on Tuesday morning, 18 August 2026, which said all academic activities would stop immediately, staff would work from home, and all residences had to be vacated within 24 hours, by Wednesday, 19 August at 4pm. The university said the protests had included the burning of the Old Education building at the Bellville campus and malicious attacks on infrastructure, and that campuses had been closed until further notice. CPUT spokesperson Lauren Kansley said the damage had reached more than R1.5 million and that sending students home was the only option available to de-escalate the violence and protect lives.</p>
+<p>Students have argued that the deadline is impossible. Some said they live far from Cape Town, are unfunded, and cannot afford flights or other travel costs at the end of the month. The CPUT SRC president, Liyabulela Gela, said the plan had not really been withdrawn because the university had only paused it for further consultation, while the students wanted it withdrawn unconditionally.</p>
+<p>On Tuesday, students marched to Parliament to submit their demands, and Letsie accepted them. Higher Education and Training Minister Buti Manamela also requested a team from the University Education Branch to work with CPUT and help urgent talks between management, council and student leadership.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-19-throwing-students-to-the-wolves-parliament-slams-cput-over-evictions-after-protests" target="_blank" rel="noopener noreferrer" title="Daily Maverick / ‘Throwing students to the wolves’ Parliament slams CPUT over evictions after protests">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Spain plans transfer of 500 migrant children from Ceuta to mainland</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Spain plans to transfer about 500 unaccompanied children from its North African enclave of Ceuta to the mainland after tens of thousands of migrants surged across the border by land and sea. Officials at the Ministry of Youth and Children told Spanish public broadcaster RTVE on Wednesday that the provisional figure covers the children it considers most vulnerable, following the mass crossing from Morocco on July 30. Migration Minister Elma Saiz told RNE that the children would be placed under the care of child protection organisations on the mainland.</p>
+<p>The move comes as Ceuta’s child-protection system is under heavy strain. The enclave’s government said the recent influx of more than 70,000 migrants left the system at more than 4,600 percent of its intended capacity. RTVE reported that Madrid assigns Ceuta an ordinary reception capacity of 29 places, while shelters are holding about 1,350 children. UNICEF has also warned that hundreds of children in Ceuta face “insecurity and unsanitary conditions.”</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/19/spain-plans-transfer-of-500-migrant-children-from-ceuta-to-mainland?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Spain plans transfer of 500 migrant children from Ceuta to mainland">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Young vapers ‘at risk of breathing problems and becoming smokers’</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Young people who start vaping risk breathing problems and may go on to smoke cigarettes, children’s doctors warned after a review by the Royal College of Child and Paediatrics Health. The review said child vaping is consistently linked with coughing, wheezing, bronchitis symptoms and asthma exacerbations, and that vapes have acted as a gateway to cigarette smoking. Published in *Archives of Disease in Childhood*, it looked at 14,000 published articles and 81 studies. It also found evidence linking vaping to nicotine dependence, poor oral and dental health, and negative mental health outcomes.</p>
+<p>Prof Will Carroll, a co-author, said vaping should not be seen as a harmless part of growing up. He urged the government to quickly implement measures announced in July under the Tobacco and Vapes Act, including plain packaging, keeping vapes out of sight in shops, and changing flavour names away from sweets, desserts and alcohol. Carroll also called for limits on the number of flavours available. The review said vaping has surged over the past decade, with experimentation and regular use among young people rising about tenfold, and estimated that one in five 11- to 17-year-olds in Britain have tried it.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/aug/20/young-vapers-at-risk-of-breathing-problems-and-becoming-smokers" target="_blank" rel="noopener noreferrer" title="The Guardian / Young vapers ‘at risk of breathing problems and becoming smokers’">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Chinese national charged with voter fraud during 2024 US presidential election</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Yupeng Sun, a Massachusetts resident, was arrested this week and charged in the United States on Wednesday with voter fraud in the 2024 presidential election. He is accused of impersonating another Chinese national and later submitting anonymous tips about him to immigration authorities. The case alleges that Sun submitted a fraudulent voter registration and ballot under the other man’s name in the 2024 election.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/us/diplomacy/article/3364618/chinese-national-charged-voter-fraud-during-2024-us-presidential-election" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Chinese national charged with voter fraud during 2024 US presidential election">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>International body votes to convene emergency meeting over Nicaragua</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Organization of American States voted to convene an urgent meeting of foreign ministers over Nicaragua, with the body declaring that representative democracy “no longer exists” in the country. On Wednesday, the OAS Permanent Council approved the resolution by 29 to 1, with one abstention and two countries absent, according to a post on X. The resolution called developments in Nicaragua “a problem of an urgent nature and of common interest to the American States,” invoked Articles 61, 62 and 63 of the OAS Charter, and instructed the council’s president to draft a meeting agenda “as soon as possible.”</p>
+<p>The vote came in response to developments under the co-presidency of Daniel Ortega and Rosario Murillo. The evidence says Ortega, who led Nicaragua from 1979 to 1990 and returned to power in 2007, has been accused in recent years of consolidating power at the expense of human rights. In July, his government unveiled constitutional reforms that would extend his presidential term from six to seven years, ban opposition figures from public elections if they are considered “traitors to the homeland,” and allow the electoral council to dissolve parties that receive funding from abroad. Nicaragua’s legislature is due to vote on those changes in September.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/19/international-body-votes-to-convene-emergency-meeting-over-nicaragua?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / International body votes to convene emergency meeting over Nicaragua">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>DA finance chief steps aside over conflict of interest concerns in R4bn forex probe</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Dr Mark Burke has stepped aside from Parliament’s financial oversight work while the SA Reserve Bank investigates Kastelo, the fintech company he co-founded, over alleged foreign-exchange control breaches, turning a Reserve Bank probe into a conflict-of-interest problem for the DA’s head of finance.</p>
+<p>Burke stepped down on Wednesday, 19 August, from his oversight roles as the party tried to contain the fallout from a revelation about his links to Kastelo. Deputy Finance Minister Ashor Sarupen, who is also DA Federal Council chairperson, initially defended Burke’s position, but later said the party and Burke had treated the conflict issue “very seriously” and that Burke had voluntarily agreed to step out of the finance cluster. Sarupen said the first response had been based on media reports that tried to attribute the acts to Burke personally.</p>
+<p>The Reserve Bank’s scrutiny of Kastelo is at the centre of the dispute. Business Day first reported that the bank had frozen the company’s accounts. By that account, Kastelo transferred R4-billion out of the country to trade crypto, using forex arbitrage and clients with access to foreign-exchange allowances. Burke co-founded Kastelo with his brother Nicholas, who is the company’s chief executive. The company’s application to have its account unfrozen also named Finance Minister Enoch Godongwana as a respondent, which widened the recusal question around Burke’s parliamentary work.</p>
+<p>Burke said he had declared the litigation against the Reserve Bank in October 2025 and had recused himself from meetings involving the central bank in Parliament. But Daily Maverick said a source in the DA caucus described internal debate about whether he should step down, and News24’s Carol Paton reported that Burke did not always recuse himself from all relevant meetings. Burke has denied wrongdoing and said he had distanced himself from the company.</p>
+<p>TimesLive reported that Burke was summoned to a meeting with DA leader Geordin Hill-Lewis on Tuesday ahead of a DA Federal Executive meeting on Wednesday that would consider the matter.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-19-da-finance-chief-steps-aside-over-conflict-of-interest-concerns-in-r4bn-forex-probe" target="_blank" rel="noopener noreferrer" title="Daily Maverick / DA finance chief steps aside over conflict of interest concerns in R4bn forex probe">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>The largest wave pool in Europe brings discord to a Madrid district: “It is a farce”</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The largest wave pool in Europe is already under construction beside Atlético de Madrid’s Metropolitano stadium, but the project has become a fight over water, public subsidies and a court ruling that opponents say should stop it.</p>
+<p>The complex, Gemswell Surf Madrid, is being built in San Blas-Canillejas on land adjacent to the stadium. The planned site covers about 23,000 square meters and would hold 30,000 cubic meters of drinking water. Construction began in 2024, and the opening is planned for 2027. The project has also received 15.7 million euros in public funds from the European Union, described as money for sustainable tourism.</p>
+<p>Environmental and neighborhood groups have pushed back hard. The Madrid Environmental Platform says annual evaporation would exceed the lagoon’s total capacity, and that in summer daily evaporation could reach 184,000 liters. Based on Spanish Meteorological Agency data, it puts annual evaporation loss at 32,200 cubic meters, more than 7% of the lagoon’s total capacity. María Ángeles Nieto, the platform’s spokesperson, called the project “a farce” and said it has not had the proper environmental assessment. She also said the plan includes a 5,500-square-meter artificial beach and other activities that would increase crowding, traffic and noise.</p>
+<h3>The legal fight over the land</h3>
+<p>The dispute sharpened after justice struck down the special urban plan the city council had sought to regularize land ceded years ago to Atlético de Madrid. The city council has appealed. While groups are demanding that work be halted because of the legal uncertainty, the project’s managers deny that the pool is affected by the ruling.</p>
+<p>A search of Madrid City Council’s planning viewer, however, shows that the plot is indeed affected, according to the same reporting. The court’s ruling, approved in October 2024 and overturned in 2025, said an environmental assessment was necessary for the modification of the special plan as carried out. Atlético de Madrid says the project has a positive validation of the European DNSH principle from an independent expert and that it includes measures to reduce leaks and splashing losses.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/madrid/2026-08-19/la-piscina-de-olas-mas-grande-de-europa-lleva-la-discordia-a-un-distrito-de-madrid-es-un-desproposito.html" target="_blank" rel="noopener noreferrer" title="El País / The largest wave pool in Europe brings discord to a Madrid district: “It is a farce”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>EU backs top international court against Rubio</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">European Commission President Ursula von der Leyen and European Council President António Costa backed the International Criminal Court on Wednesday after Washington announced sanctions against its president, Tomoko Akane, and senior trial lawyer Abdoulaye Seye. In a joint statement posted on X, they said they “stand firmly with the [ICC], President Tomoko Akane and the officials who uphold its mission,” and that judges and officials must be able to work “independently and without external pressure.”</p>
+<p>U.S. Secretary of State Marco Rubio imposed the sanctions on Tuesday, accusing the court of targeting officials from countries that reject its jurisdiction over the ICC’s pursuit of Israeli officials for alleged war crimes in Gaza. Commission Executive Vice-President Teresa Ribera called the sanctions “profoundly sad and unfair,” saying the EU stands with the court, its president and officials. The statements followed similar pushback from other U.S. allies: Germany said it stood by Akane and the court on Wednesday, while Dutch Foreign Minister Tom Berendsen said the Netherlands “disapproves” of the sanctions and that international courts must be able to freely carry out their mandates.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/eu-leaders-back-icc-president-tomoko-akane-after-us-sanctions" target="_blank" rel="noopener noreferrer" title="POLITICO / EU backs top international court against Rubio">POLITICO #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="cna">
+  <summary>Initiative to help rough sleepers find co-tenants for rental flats among pilot projects given MSF funding</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Singapore has started funding pilot projects that include a scheme to match rough sleepers with one another for shared public rental flats, as the Ministry of Social and Family Development tests new ways to help people move into stable housing.</p>
+<p>MSF said on Wednesday, Aug 19, that 17 community-led projects will be piloted under a new fund covering employment, housing, outreach, social reintegration and youth support. Of those, 11 are meant to provide more tailored support for rough sleepers. The projects are the first tranche under the S$450,000 (US$352,600) Partnership to Tackle Homelessness, or PATH, fund.</p>
+<p>MSF defines rough sleepers as people who sleep in public spaces, whether or not they have housing, including people without a home and those who have a home but cannot return to it. The ministry said the fund is meant to give community organisations room to test new approaches and shape ideas from their work on the ground. It added that helping someone leave rough sleeping is not only about temporary accommodation, but also about rebuilding stability, relationships, confidence, skills and support networks.</p>
+<h3>Matching co-tenants for public rental flats</h3>
+<p>One of the pilots is the Common Ground – Joint Singles Scheme Matching Programme, which matches single rough sleepers who want to apply for a public rental flat with compatible co-tenants. The aim is to help them access housing more quickly while reducing the risk of shared living arrangements breaking down.</p>
+<p>Dr Steven Tham, executive director of Good News Community Services, said his organisation held its first matching event last month, where rough sleepers could meet and get to know one another. Participants were given cards listing preferences and behaviours, such as whether they were comfortable with sleeping late or loud music, and could mark what they would or would not accept in a potential co-tenant.</p>
+<p>MSF also cited a January report saying 496 rough sleepers were counted in a single-night street count on Jul 18, 2025, slightly down from 530 in 2022. The next application window for the PATH fund will open in March 2027. The 17 projects were unveiled at the Partners Engaging and Empowering Rough Sleepers appreciation event, which was attended by Minister-in-charge of Social Services Integration Desmond Lee, Senior Minister of State of Social and Family Development Goh Pei Ming and Senior Parliamentary Secretary Eric Chua.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/homeless-rough-sleeper-msf-funding-jobs-housing-6328336" target="_blank" rel="noopener noreferrer" title="CNA / Initiative to help rough sleepers find co-tenants for rental flats among pilot projects given MSF funding">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="peoples_daily_en">
+  <summary>Pentagon&#x27;s &#x27;national security&#x27; audit deadline for US universities is also a countdown to a crisis for US scientific innovation</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Pentagon issued formal notifications on Monday to 30 US universities, giving them two weeks to complete comprehensive audits of their academic, financial and research collaboration with China, Russia, Iran and other countries. Where needed, the schools must end “problematic partnerships” or risk losing eligibility for future federal research funding. The names were not disclosed, though reports said the Massachusetts Institute of Technology and Harvard University are among the universities covered.</p>
+<p>The move stretches the “national security” label into ordinary academic ties and could put academic freedom and scientific exchange under “security lockdown.” It also linked the policy to US worries about talent loss in AI competition, citing a STAT and MassINC Polling Group survey that found 14 percent of biomedical scientists and postdoctoral researchers had turned down lab offers because of changes in immigration policies, while 13 percent had moved to other countries because of US research funding changes.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0819/c90000-20490126.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Pentagon&#x27;s &#x27;national security&#x27; audit deadline for US universities is also a countdown to a crisis for US scientific innovation">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="al_jazeera_en,nyt,scmp">
+  <summary>Trump announces ‘most crushing economic operation ever’ against Iran</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Trump said he was launching the “most crushing economic operation ever taken against any country” against Iran, widening pressure on Tehran and warning other governments, businesses and financial institutions that helping Iran could bring “tremendous” consequences even as talks remain deadlocked.</p>
+<p>In a post on Truth Social on Wednesday, the US president said Iran had “failed to take” the chance to make a deal and would be left with “economic warfare and isolation on an unprecedented scale.” He also said sanctions would be imposed on any country that does business with Iran, and told countries that allow their “financial institutions, businesses, airports, or government entities” to give Iran “any type of lifeline” that they would face consequences.</p>
+<p>Trump said oil smuggling, swap lines, cash transfers, exchange houses, ship registries and front companies all “need to stop NOW,” calling the campaign “economic D-DAY” and urging allies to help “isolate” and “defeat” what he called the Iran threat. He also claimed Iran was “on the ropes” and that his “historic measures” would “cripple” the country.</p>
+<p>The announcement came as talks to end the more than five-month conflict between the two countries remained stuck. A separate New York Times report said Iran has survived decades of sanctions, and analysts said more pressure is likely to push it toward escalation rather than surrender.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/19/trump-announces-most-crushing-economic-operation-ever-against-iran?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Trump announces ‘most crushing economic operation ever’ against Iran">AJ #1</a><a href="https://www.nytimes.com/2026/08/19/world/middleeast/uae-cuts-trade-ties-iran-missiles.html" target="_blank" rel="noopener noreferrer" title="The New York Times / U.A.E. Announces Halt to Trade With Iran Amid Trump’s Push To Isolate Tehran">NYT #1</a><a href="https://www.nytimes.com/2026/08/19/world/europe/iran-trump-economic-sanctions-leverage.html" target="_blank" rel="noopener noreferrer" title="The New York Times / With Limited Options, Trump Tries Economic Pressure on Iran — Again">NYT #2</a><a href="https://www.scmp.com/news/world/middle-east/article/3364619/trump-warns-punishment-any-country-supports-iran-economic-warfare" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump warns of punishment for any country that supports Iran: ‘economic warfare’">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="el_pais,scmp">
+  <summary>Moderna and Merck announce the success of the first personalized melanoma vaccine and its shares surge in the stock market</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Moderna and Merck said their personalized melanoma vaccine has hit key milestones in an ongoing phase 3 trial, a result the companies cast as a historic first for both individualized cancer vaccines and mRNA-based oncology treatment, even as they have not yet released the full data behind the announcement.</p>
+<p>The treatment, called autologous intismeran in one report and intismeran autogene in another, was tested in 1,137 people with melanoma whose tumors had already been surgically removed but who were still at high risk of relapse. Patients were split into two groups: about one third received only pembrolizumab, Merck’s Keytruda, while the other two thirds received pembrolizumab plus the personalized vaccine. The companies said the combination achieved relapse-free survival and no spread to other organs.</p>
+<p>The press release, however, did not say by how much survival improved or how much relapse risk fell. It also did not say when regulators might consider approval. Even so, the companies described the result as the first positive phase 3 readout for an individualized neoantigen therapy and for an mRNA-based cancer therapy. The vaccine is personalized after the cancer appears: tumor tissue is analyzed, its distinctive features are identified, and a tailored mRNA vaccine is designed to help the immune system recognize and attack the patient’s own cancer cells if they return.</p>
+<p>The market reacted quickly. Moderna’s shares surged in early New York trading and later closed up 177% in one report, while Merck’s stock rose 10% in early trading and 12% by the close in another. The announcement also revived interest in the technology after earlier phase 2 results, presented last June at the American Society of Clinical Oncology conference, had shown a 49% reduction in relapse or death risk and a 59% reduction in metastasis risk in a smaller group of 157 patients.</p>
+<p>Both the FDA and the European Medicines Agency have placed the therapy on an expedited review pathway, according to the companies. They said full data will be presented at an international medical conference and that discussions with regulators will follow.</p></div>
+  <div class="source-list"><a href="https://elpais.com/ciencia/2026-08-19/el-anuncio-del-exito-de-la-primera-vacuna-contra-el-melanoma-dispara-las-acciones-de-moderna-y-merck.html" target="_blank" rel="noopener noreferrer" title="El País / Moderna and Merck announce the success of the first personalized melanoma vaccine and its shares surge in the stock market">El Pais #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3364603/merck-moderna-claim-encouraging-melanoma-vaccine-trial-results" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Merck, Moderna claim encouraging melanoma vaccine trial results">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>Can Andy Burnham rewire the ‘Treasury brain’ to boost growth?</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham is trying to shift growth policy away from the Treasury and into a new Manchester-based No 10 department, betting that a more devolved setup can loosen Whitehall blockages and make economic decision-making less cautious.</p>
+<p>He framed the idea by reaching back to Harold Wilson’s short-lived Department for Economic Affairs, which was created to bring longer-term thinking into British economic policy. Burnham told the *Times* that “the dual job of growth and control of the public finances sometimes clouds the growth mission,” and that having No 10 lead the agenda would give “maximum power to unlock the blockages where they exist in the Whitehall system.”</p>
+<p>The plan is tied to devolution, with the PM hoping to hand more powers to metro mayors and pull together growth policies now scattered across government. Ruth Curtice of the Resolution Foundation said coordinating housing, education, planning and other areas could be the most effective use of the new Manchester unit. Michael Jacobs, a former Brown adviser, suggested a growth unit made up of officials from relevant departments. Sanjay Raja of Deutsche Bank said Burnham’s pick for chancellor, John Healey, had long experience in regional development.</p>
+<h3>Why the Treasury fight matters</h3>
+<p>The argument is that the Treasury’s grip on tax and spending can push the system toward short-term caution. Burnham’s allies see that dynamic in decisions criticised by many Labour MPs under Keir Starmer, including the winter fuel allowance cut and the retreat on a bank windfall tax.</p>
+<p>But sceptics question whether No 10 North can really counter the Treasury, which will keep control of tax and spend. Former Conservative Treasury minister David Gauke said the Treasury is “always going to be the most important department.” A Treasury source said the new unit is meant to focus on “local growth” and devolution, not to take over economic strategy from No 11.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/aug/19/can-andy-burnham-tame-the-power-of-the-treasury-to-boost-growth" target="_blank" rel="noopener noreferrer" title="The Guardian / Can Andy Burnham rewire the ‘Treasury brain’ to boost growth?">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="cnn,guardian">
+  <summary>US gross national debt tops $40tn for first time</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US federal debt has crossed $40 trillion for the first time, a Treasury Department milestone that puts rising interest costs, larger recent deficits and a long-running fight over federal borrowing back at the center of Washington’s budget debate.</p>
+<p>Treasury’s one-day-delayed data showed the latest debt balance at $40.047 trillion on Tuesday afternoon, the highest in US history. The threshold arrived sooner than the Congressional Budget Office expected in May 2023, when it projected the US would not cross $40 trillion until fiscal year 2028.</p>
+<h3>Why the debt keeps climbing</h3>
+<p>Several forces are pushing the total higher. The debt has been growing more quickly in recent years, and interest payments have ballooned as interest rates and borrowing have risen. The government has also added $1 trillion in just the past five months, according to Treasury data, and ran a $1.8 trillion deficit in the first 10 months of the fiscal year, which ends September 30.</p>
+<p>Officials and watchdog groups say the scale of the borrowing reflects both aging demographics and policy choices. Roughly 10,000 Baby Boomers are retiring every day, seniors are living longer, and Congress has approved multiple packages over the years that cut taxes or increased spending, including the Tax Cuts and Jobs Act of 2017, the One Big Beautiful Bill Act of 2025 under Donald Trump, and several Covid-19 relief bills under Trump and Joe Biden.</p>
+<p>Michael Peterson, chief executive of the Peter G. Peterson Foundation, said the country was on track for $50 trillion in debt within six years and noted that it was at $20 trillion less than 10 years ago. Maya MacGuineas, president of the Committee for a Responsible Federal Budget, said the debt is felt throughout the economy and warned that more borrowing can add to inflation, squeeze out other priorities and leave the US more vulnerable.</p>
+<p>The size of the debt is also showing up in the bond market. Interest payments are expected to top $1 trillion this fiscal year, more than triple what they were five years ago and now close to Medicare as the government’s second-largest expense behind Social Security. Treasury yields have also climbed, with the 30-year yield hitting its highest level since 2007 and the 10-year yield near its highest level of Donald Trump’s second term.</p>
+<p>Congress has added to the pressure. Lawmakers remain at an impasse over the latest spending bill, with the House and Senate having passed different versions. Treasury also announced it would increase buybacks of long-term bonds in the coming months, while a shutdown is scheduled for September 30 if no bill is adopted by both chambers and signed by the president.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/19/economy/national-debt-hits-40-trillion-dollars-vis" target="_blank" rel="noopener noreferrer" title="CNN / National debt reaches grim $40 trillion milestone. Here’s why that matters">CNN #1</a><a href="https://www.theguardian.com/us-news/live/2026/aug/19/mary-peltola-dan-sullivan-alaska-primary-election-us-senate-florida-california-wyoming--donald-trump-us-politics-latest?page=with%3A6a861a998f0802183f0c3387#6a861a998f0802183f0c3387" target="_blank" rel="noopener noreferrer" title="The Guardian / US gross national debt tops $40tn for first time">Guardian #1</a><a href="https://www.theguardian.com/us-news/2026/aug/19/us-debt-40-trillion" target="_blank" rel="noopener noreferrer" title="The Guardian / US gross national debt tops $40tn for first time">Guardian #2</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="xinhua_en">
+  <summary>China Focus: From barefoot to high-tech: How Chinese doctors shaped a healthier nation</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Doctors’ Day arrives with a health system that has moved from barefoot village care to AI-assisted diagnosis and surgical robots, even as the core question remains the same: whether patients can reach the care they need close to home.</p>
+<p>Half a century ago, a rural “barefoot doctor” might have carried little more than basic medicines, a few syringes and a dozen needles. Wang Guizhen, regarded as one of China’s earliest barefoot doctors, began tending villagers on the outskirts of Shanghai in the 1960s and 1970s, treating them with basic Western medicines and traditional Chinese therapies such as acupuncture and herbal remedies. Wang and more than a million fellow practitioners formed the backbone of rural healthcare, delivering essential care to hundreds of millions of villagers with limited training and modest equipment.</p>
+<h3>From village rounds to high-tech medicine</h3>
+<p>That world has been replaced by a much larger and more diverse workforce inside what is now the world’s largest health system, spanning village clinics, county hospitals and advanced medical centers. By the end of 2025, China had more than 1.1 million medical institutions, including about 560,000 village clinics, supported by 16 million healthcare professionals, among them 5.3 million licensed and assistant physicians.</p>
+<p>The change is visible in both rural and urban settings. In Qingzhen City in Guizhou Province, village doctor Li Yuqin now relies on an AI-powered medical assistance system that analyzes medical information, generates records and flags possible medication risks. The platform has been rolled out across local healthcare institutions, and Li said it helps her make more accurate diagnoses and produce more standardized medical records.</p>
+<p>In major cities, doctors are also using advanced technologies in routine practice, including high-resolution imaging, robotic surgery and precision radiotherapy. In July, Huashan Hospital Affiliated to Fudan University in Shanghai issued China’s first prescription for an implantable brain-computer interface system designed to restore hand movement, after the device was approved for market.</p>
+<p>The broader system has expanded alongside basic medical insurance, which covered about 1.33 billion people by the end of 2025. Over the same period, average life expectancy rose to 79.25 years from 2012 to 2025, while infant and maternal mortality fell. China is now pushing further toward prevention, health promotion and training more doctors, with more than one million resident physicians trained since the residency program began in 2013.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260819/d2ea8e40a2f74f4198c45e14809b9089/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China Focus: From barefoot to high-tech: How Chinese doctors shaped a healthier nation">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="al_jazeera_en">
+  <summary>What the social media addiction lawsuit could cost Meta</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Meta’s US trial over social media addiction could end up costing the company far more than a headline fine, with state attorneys general seeking structural changes to Facebook and Instagram and damages that range from $200bn to Meta’s own $1.4tn estimate.</p>
+<p>Opening statements began on Tuesday in a US federal court case brought by 29 state attorneys general. They accuse Meta, the parent of Facebook and Instagram, of designing its platforms to encourage infinite scrolling and keep younger users hooked despite allegedly knowing the products could fuel addictive behaviour. The company is also accused of collecting data on minors. The case is expected to last as long as six weeks, and Meta denies the allegations.</p>
+<h3>What the states want</h3>
+<p>If the states prevail, the consequences could go beyond money. The lawsuit asks the court to compel Meta to change how its products work, including eliminating infinite scroll, getting rid of algorithms and AI models made from data compiled from minors, promoting users’ wellbeing, and setting time restrictions for its youngest consumers.</p>
+<p>The financial stakes are unusually large. Meta says state penalties could reach as high as $1.4 trillion, though the coalition of states says it is seeking $200bn in damages. That is roughly the equivalent of Meta’s revenue last year. In 2025, the company generated nearly $201bn in revenue and had $83.2bn in operating income. The $200bn demand is also far higher than any penalty Meta has faced so far: in March, a jury in a separate New Mexico case ordered the company to pay $375m in civil penalties, and another $567m was ordered by a judge earlier this month.</p>
+<p>Meta says it stands by its teen safety protections, pointing to features introduced in 2023 that notify teens after 20 minutes on the platform and let them set daily time limits. The lawsuit says that is not enough, arguing that teens can dismiss the notice and keep scrolling.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/8/19/what-the-social-media-addiction-lawsuit-could-cost-meta?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / What the social media addiction lawsuit could cost Meta">AJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Demystifying Agent Skills: Why They Work-Until They Don&#x27;t</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Agent skills work best when they turn noisy prior trajectories into procedural anchors, according to a preprint from researchers at Princeton, Stanford, USC, Johns Hopkins and UC San Diego, but the same abstraction also creates retrieval and applicability failures that current success-rate evaluations can miss.</p>
+<p>The paper asks a more basic question than whether skills raise task success: when do they help, why do they work, and where do they fail? To answer that, the authors ran controlled experiments across benchmarks, agent harnesses and LLMs, combined them with paired trajectory analysis, and normalized 8,135 trial records into 238 valid unique labels drawn from 240 open-coded records. From those observations, they built a taxonomy of three high-level categories and 12 skill-use modes.</p>
+<p>Their main conclusion is that skills are usually not acting as a way to inject missing facts. In matched comparisons, skills improved over Workflow Memory by 6.06 points, and procedural anchoring accounted for 65.7% of skill cases, versus 4.5% for explicit knowledge injection. The study says skills are most useful when they compress prior experience into a cleaner procedure that helps agents keep setup steps, tool sequences, implementation routines and verification checks on track.</p>
+<p>The paper also treats retrieval as a separate bottleneck. In one set of offline diagnostics, pool size grew from 5 to 100 and actual-use precision fell from 29.6% to 3.3%. It also says cross-framework transfer can work: workflows and skills built in one agent setting were evaluated in another, and the authors say distilled procedural guidance remained useful when moved across frameworks.</p>
+<p>But the same mechanism can fail. The paper says skills can still miss when the retrieved item is only superficially invoked, when the procedural context is wrong, or when task-level problems such as timeout, numerical precision, missing dependencies and brittle implementation requirements dominate. It also notes that skills help less on tasks needing reformulation or stronger verification, and that the abstraction itself introduces new failure surfaces around invocation and applicability.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14036v1" target="_blank" rel="noopener noreferrer" title="arXiv / Demystifying Agent Skills: Why They Work-Until They Don&#x27;t">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Agentic ESOpt: Fine-Tuning Long-Horizon LLM Agents with Minimal GPU Requirements</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the National University of Singapore and collaborators say Agentic ESOpt could make long-horizon LLM agent tuning practical on far less GPU memory, challenging the usual RL setup by showing stronger results on Sudoku, web tasks and test-time heuristic search.</p>
+<p>The method is built around evolution strategies rather than agentic RL. The paper argues that long-horizon agentic reasoning creates branching interactions and sparse rewards that make RL harder to scale, especially because of backpropagation overhead and credit-assignment problems across longer trajectories. Agentic ESOpt instead samples perturbations around the current LLM parameters, evaluates the resulting agents with rewards, and then applies an online reward-weighted update. It also adds a cosine decay schedule for the perturbation scale σ to balance exploration and adaptation.</p>
+<p>The reported appeal of the approach is that it keeps memory use at an inference-level footprint while still allowing full-parameter optimization. The authors also say the black-box feedback interface makes it easier to combine with prompt-space evolution such as skill optimization and test-time compute.</p>
+<p>Results are reported across several settings. On long-horizon Sudoku, Agentic ESOpt outperforms RL methods by 12.50% with Qwen3.5-4B. On WebArena-Lite, full-parameter optimization of Qwen3.5-27B improves the No Skill baseline by 6.69%, and combining Agentic ESOpt with Trace2Skill improves the Trace2Skill baseline by 2.42%. The paper also says that in ReAct-style Math and DocVQA, Agentic ESOpt improves the Qwen3.5-4B base model and its Trace2Skill variant, while preserving strong Pass@4 coverage.</p>
+<p>In a test-time automatic heuristic design setting, the framework is used for online prompt–parameter co-evolution. The authors say it improves the matched baseline in 28 of 36 settings across six scenarios and 12 test sets, including constructive and ACO-style search setups. They frame that as evidence that Agentic ESOpt can extend test-time compute beyond a frozen policy to coupled heuristic-and-parameter optimization.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.17310v1" target="_blank" rel="noopener noreferrer" title="arXiv / Agentic ESOpt: Fine-Tuning Long-Horizon LLM Agents with Minimal GPU Requirements">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">FreeToken is designed to let personal machines serve larger open-weight mixture-of-experts models by treating the GPU, CPU, host memory and interconnect as one elastic inference platform, instead of assuming datacenter hardware. The tension it addresses is simple: model weights are open, but running them still remains expensive or awkward on edge devices.</p>
+<p>The system, presented as an edge-native MoE serving stack, co-designs model layout and loading, expert residency, CPU–GPU execution, agentic state reuse and runtime memory management. Its core idea is to stop committing to a fixed offloading plan and instead map computation and model state onto whatever resources the machine actually has. The preprint frames this around two realities of local AI: agent workloads change their execution pattern over time, and edge hardware varies widely from machine to machine.</p>
+<p>FreeToken says it supports more than 20 MoE models and real coding and tool-using agents across hardware ranging from an 8 GB laptop GPU to a single workstation GPU. In the paper’s examples, that extends practical serving from a 35B model on a laptop to a 284B model on a gaming desktop and the 753B GLM-5.2 on a single workstation GPU. The authors also point to recent open-weight systems such as Kimi-K3, GLM-5.2 and DeepSeek-V4-Flash-0731 as evidence that model capability is catching up, even if serving cost is not.</p>
+<p>The serving design centers on a two-level expert-memory hierarchy. During prefill, FreeToken hides expert movement behind computation and preserves prefixes and recurrent state. During decode, it uses bandwidth-adaptive execution: cache misses are split between PCIe transfer and direct CPU execution according to measured bandwidth on the deployed machine, with the CPU and GPU partial outputs merged exactly. The runtime also keeps the first request on a cold cache and lets the cache warm through normal serving, rather than requiring a separate warmup phase.</p>
+<p>In evaluation, FreeToken was tested on four real agentic workloads across six machines, and compared with llama.cpp, Ollama, KTransformers and MoE-Infinity. The preprint says it sustained 77–83 tok/s on Qwen3.6-35B-A3B and 22–25 tok/s on DeepSeek-V4-Flash on an RTX 5090, with 1.5–2.3x higher decode throughput than the strongest baseline in those settings. It also reports worst-case TTFT below 44 s across every workload, while each baseline exceeded 150 s in at least one setting.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.16157v1" target="_blank" rel="noopener noreferrer" title="arXiv / FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>ASI-Bench: At the Dawn of Artificial Superintelligence</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced ASI-Bench, a 60-task benchmark for testing whether AI systems can carry out project-level science with less human guidance, after current models dropped sharply as instructions were stripped away.</p>
+<h3>What ASI-Bench is designed to measure</h3>
+<p>The benchmark is meant to test two things at once: whether AI can explore unfamiliar problems and whether it can execute scientific work end to end. The paper says that today’s systems still mostly learn, compress, and apply existing human knowledge, so existing benchmarks tend to reward correct answers or completion under extensive human guidance.</p>
+<p>ASI-Bench is presented as the first benchmark to jointly evaluate innovative exploration and autonomous scientific execution across general research domains, and the first to progressively withdraw methodological guidance within the same research project. The authors say the benchmark was built by over 40 experts at a cost of 31,000+ human hours, and that it contains 60 project-level research tasks across 11 scientific domains. Those domains are mathematics, physics, chemistry, biology, astronomy, materials science, earth science, medicine and biostatistics, computer science, robotics, and electrical engineering.</p>
+<p>Each task is built around a scientific objective, task-specific data, an executable environment, and verifiable research artifacts. The benchmark keeps the research problem, data, and evaluation criteria fixed while reducing the amount of guidance given to the model, so the same task can be used to test increasingly independent performance. The paper says the tasks undergo expert review, AI-assisted auditing, sandbox execution, and scorer validation.</p>
+<h3>Scores fall as guidance is removed</h3>
+<p>Across 18 state-of-the-art agent–model configurations, the average score drops from 50.91 with full methodological guidance to 29.10 when only the method is specified, and to 26.62 when agents must determine the method themselves. The authors say that sharp decline shows current systems remain heavily dependent on human guidance and are still far from autonomously carrying out end-to-end, project-level scientific research.</p>
+<p>The strongest configuration reported is Codex with GPT-5.6 Sol (ultra), which reaches a B3 score of 51.60 and is the only evaluated system to go above 50 when agents must independently select methods and construct research workflows. The paper also says stronger inference-time reasoning helps: GPT-5.6 Sol rises from 40.86 with xhigh to 51.60 with ultra, a gain of 10.74 points.</p>
+<p>The benchmark also exposes a cost trade-off. B1, the most guided setting, is the least expensive at 4.35M tokens and 37.8 minutes per task on average. Removing guidance pushes usage higher: B3 and B4 consume 25% and 30% more tokens than B1 and take 22% and 18% more time, while B2 is the most expensive at 6.91M tokens and 49.7 minutes per task. The paper says Codex with GPT-5.6 xhigh reaches 40.86% on B3 at about $684 per run, while GPT-5.6 Ultra reaches the highest B3 score at about $1,550 per run.</p>
+<h3>Open to outside contributors</h3>
+<p>ASI-Bench is being released as an open benchmark, and the authors invite researchers and builders to submit new tasks at https://asibench.apexin.ai/submit. They describe it as a community-driven system meant to grow with scientific and AI progress rather than remain a fixed test set.</p>
+<p>The paper says future contributed tasks will go through scientific and technical review before inclusion in later releases, and that accepted contributors will be listed with the benchmark release.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.17271v1" target="_blank" rel="noopener noreferrer" title="arXiv / ASI-Bench: At the Dawn of Artificial Superintelligence">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Zhejiang-led preprint proposes TAMP-Nav, an embodied-navigation framework that tries to make large vision-language models plan and act more efficiently by turning navigation into pixel selection, selective reasoning, and two-level alignment instead of forcing them into rigid action spaces.</p>
+<h3>How TAMP-Nav is built</h3>
+<p>The authors say existing embodied-navigation methods can misalign VLMs with their 2D pre-training priors, while rigid reasoning schedules and inefficient memory handling add more friction. TAMP-Nav breaks that problem into three parts: <strong>Point</strong>, <strong>Think and Memorize</strong>, and <strong>Align</strong>.</p>
+<p>In the <strong>Point</strong> stage, the model is given a Pixel-to-3D Action Formulation: it selects 2D pixels on egocentric visual observations, and those points are then projected into 3D for a low-level SLAM controller. In the <strong>Think and Memorize</strong> stage, the system uses selective reasoning and Anchor-Trajectory Memory. The paper says Chain-of-Thought is triggered only at critical nodes, while redundant trajectory segments are compressed into lightweight Space-Time Indicators so the model keeps key spatio-temporal information without storing everything in full.</p>
+<p>The <strong>Align</strong> stage uses a two-level GRPO setup. The framework combines global outcome rewards with finer-grained process rewards, including rewards for target approach, collision avoidance, stopping, reasoning value, and format adherence. Before this reinforcement phase, the authors say they do a supervised fine-tuning cold start on a curated <strong>MultiNav-CoT</strong> dataset built from <strong>90,000 trajectories</strong>. Their key-node mining procedure yields a sparse set of anchors that they say covers roughly <strong>30%</strong> of a trajectory.</p>
+<p>The preprint reports that TAMP-Nav reaches <strong>66.2% SR on R2R-CE</strong> and says it does so with high runtime and sample efficiency, using only <strong>90,000 training trajectories</strong>. It also says the system averages <strong>16.58 seconds per task</strong> on a single A800 GPU, faster than StreamVLN and DualVLN, and that an “auto” setting cuts R2R-CE Chain-of-Thought calls by <strong>73.7%</strong> compared with Dense CoT, with a <strong>0.6-point</strong> SR drop; the corresponding RxR-CE drop is <strong>0.4 points</strong>.</p>
+<p>The paper’s robustness section says controlled depth noise caused only a <strong>2.8-point</strong> SR decrease under the strongest tested perturbation, but it also notes that severe depth errors, accumulated odometry or SLAM drift, localization failure, and highly dynamic environments can degrade performance further.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.17512v1" target="_blank" rel="noopener noreferrer" title="arXiv / Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>AVA-Encoder: Towards Agent-Native Video Representation Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new preprint describes AVA-Encoder, a framework that turns video into a structured Film Knowledge Graph so agentic systems can reason about, edit, and reconstruct films more faithfully, addressing a gap the authors say still limits cinematic-grade video creation.</p>
+<p>The work argues that current video creative agents lack an effective way to learn from high-quality human films. AVA-Encoder is designed around that problem: it transforms a video into a Film KG representation, then reconstructs it back into video, with the reconstruction residual used as a signal to improve both the representation and the encoder policy.</p>
+<p>The proposed representation is meant to capture entities, events, assets, and multimodal relationships in a form that agents can understand, query, and manipulate. The system uses a dual-loop setup: one loop pseudo-trains a data-agnostic encoding policy, and the other refines the Film KG for each input video. The paper says this is driven by “agentic self-evolution” and a “dual-loop textual-gradient evolution” process.</p>
+<p>On the paper’s benchmark, AVA-Encoder reaches an Overall reconstruction score of 49.0%, which the authors say is a 20.7-point absolute gain and a 73.1% relative improvement over the strongest external baseline. In the controlled policy-only setting, the pseudo-trained Agentic Video Encoder policy scores 45.8% versus 44.4% for a carefully human-tuned policy, while using 74.3% fewer shot-level and 70.1% fewer keyframe-level system-prompt tokens.</p>
+<p>The authors also say the framework’s two optimization stages improve Overall reconstruction by 6.6 percentage points, or 15.6% relative, over removing both stages. They report that its automatic metrics matched human judgments on 710 of 730 blinded triples across 18 video clips, 129 film shots, and 246 keyframes.</p>
+<p>Alongside the model, the paper says it releases the complete AVA-Encoder framework, a reconstruction benchmark, and the first dataset of high-quality Film KG representations.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.12313v2" target="_blank" rel="noopener noreferrer" title="arXiv / AVA-Encoder: Towards Agent-Native Video Representation Learning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Towards Faithful and Efficient Ultra-High-Resolution Image Editing</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from Shanghai Jiao Tong University, Alibaba’s Qwen Business Unit and the National University of Singapore propose EditBridge, a diffusion bridge for ultra-high-resolution image editing, aimed at making 2K and 4K editing both faithful to the original source and practical for professional workflows.</p>
+<p>The preprint, posted on arXiv on 18 Aug 2026, says current diffusion-based editors are usually limited to below 1K because attention is quadratic and memory use is high. A common workaround is to edit at low resolution and then upscale with a separate super-resolution model, but the authors say that can create two problems: information divergence, where invented details conflict with the original high-resolution source, and texture degradation, including over-smoothed or over-sharpened artifacts.</p>
+<p>EditBridge reframes the task as structured data-to-data translation from the low-resolution edited result to the high-resolution output, while explicitly conditioning on the original HR source. The model uses a diffusion bridge rather than conventional noise-to-image diffusion, so the refinement process preserves structure from the low-resolution edit instead of regenerating the image from scratch. To keep the source guidance efficient, the method adds a prior-guided block-wise sparse attention mechanism that limits cross-image interaction to spatially aligned regions.</p>
+<p>The paper reports that this design lets EditBridge reach high-fidelity editing at resolutions up to 4K. In the reported experiments, it delivers 3.6–8.4× speedup at 2K and enables practical 4K editing in 61 seconds. The authors also say their system achieved better perceptual quality than the compared methods in the table of results.</p>
+<p>For training, the work is built on Qwen-Image-Edit and uses Gemini 3 to generate detailed editing instructions. The final dataset includes 5,000 image pairs at 1K and 2K, plus 1,500 pairs at 4K. The authors frame the result as a way to close the gap between efficient editing and faithful detail preservation in ultra-high-resolution image generation.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.18063v1" target="_blank" rel="noopener noreferrer" title="arXiv / Towards Faithful and Efficient Ultra-High-Resolution Image Editing">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>StartupBench: Benchmarking General-Purpose Agents on Market-Validated End-to-End Workflows</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">StartupBench tries to answer a narrower question than many AI benchmarks: can general-purpose agents actually finish market-validated professional workflows end to end, not just isolated tasks? Its first results say the gap is still wide, with the strongest systems making progress but rarely delivering a fully acceptable final product.</p>
+<h3>How StartupBench was built</h3>
+<p>The benchmark is based on AI startup products that already showed real-world adoption. The project says it first surveyed more than 20 startup agents, interviewed over 30 deep users, and then recruited more than 50 domain experts to turn those workflows into reproducible tasks. In the end, StartupBench contains 97 real-world workflow tasks across six domains: Medical &amp; HealthCare, Finance, Legal, Business &amp; Management, STEM &amp; Computer Science, and Education &amp; Humanities.</p>
+<p>The tasks are meant to look like deliverable-oriented work rather than short-answer prompts. The paper says each task is framed around a natural-language request, a workspace of files or resources, and weighted rubrics for evaluation. Across the full benchmark there are 2,453 rubrics, with tasks averaging 25.3 fine-grained checks. The rubric system emphasizes completion, structure, calculation precision, domain-specific compliance, engineering and format, and output presentation.</p>
+<p>To score results, StartupBench uses a unified agent harness and an automatic judge system that the authors compare against expert annotations. They report 92.78% agreement with experts at the rubric level and 92.84% agreement on task-level success decisions. The paper also says that changing the general-purpose agent framework only slightly affects results: across Hermes, Claude Code, and Nanobot, the average performance spread is 1.79 points, and the ranking of models stays the same.</p>
+<h3>What the first results showed</h3>
+<p>The central finding is that current agents still struggle to reliably complete these workflows. Across representative models, the highest average score belongs to Kimi-K3 at 73.67%, closely followed by GPT-5.6-sol at 73.61%. But when the benchmark applies its strict success rule, which requires a score of at least 90, the best success rate is only 31.27% for GPT-5.6-sol, while Kimi-K3 reaches 29.55%.</p>
+<p>That gap matters because it shows partial progress is not the same as finishing the job. The paper says most models land somewhere between roughly 55% and 75% on average, so they can advance into the workflow, but they still fail to produce reliably usable deliverables. Under the benchmark’s strict threshold, no model successfully completes even one third of the tasks.</p>
+<p>The results also vary by domain. Business &amp; Management is described as the easiest area, while Finance is the hardest, with the lowest average score at 54.48%. Different models also show different strengths: Kimi-K3 leads in several domains, while GPT-5.6-sol does better in Finance, STEM, and Education under success rate.</p>
+<h3>Where agents break down</h3>
+<p>StartupBench’s failure analysis points to two main problem areas: complex instruction following and domain-specific expertise. The paper says the strongest models outperform others across most rubric dimensions, but they still lose points on core requirements more often than on auxiliary ones. Average satisfaction falls from 68.67% on auxiliary rubrics to 65.89% on important rubrics and 63.45% on core rubrics.</p>
+<p>Output formatting is another recurring weakness. The benchmark includes 56 tasks with explicit file-type requirements, and no model gets perfect compliance. Common mistakes include returning the wrong file type, such as.md or.txt when.pdf was required, or omitting one of several requested deliverables.</p>
+<p>The authors also compare general-purpose agents with specialized agents built for the same startup workflows. Across all runs, general-purpose agents average 64.26 with a 19.74% success rate, while specialized agents reach 83.50 and 39.18%. Even when the general-purpose systems are given three tries and the best outcome is kept, they rise only to 71.75 and 28.06%, still well below the specialized systems.</p>
+<p>Taken together, StartupBench is presented as a benchmark for measuring progress toward real end-to-end work, not just conversational capability. Its first run suggests that current general-purpose agents can help with pieces of professional workflows, but many market-validated tasks still remain beyond their reliable reach.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.17800v1" target="_blank" rel="noopener noreferrer" title="arXiv / StartupBench: Benchmarking General-Purpose Agents on Market-Validated End-to-End Workflows">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Functional role of skull lymphoid structures in CNS immunosurveillance</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A mouse study has identified lymphoid structures inside skull bone marrow that appear to sample brain-derived antigens and help mount immune responses, raising the possibility that the skull itself is an active CNS immune niche rather than just a source of bystander cells.</p>
+<h3>Skull bone marrow appears to host its own lymphoid structures</h3>
+<p>The work builds on the idea that the central nervous system is linked to the peripheral immune system, including through osseous channels between the skull and the dura mater that allow cerebrospinal fluid and immune cells to move between the CNS and skull bone marrow in mice. What had remained unclear was whether skull bone marrow does more than supply immune cells to the brain’s borders.</p>
+<p>The researchers report that the skull bone marrow contains lymphoid structures with germinal-centre-like features and a distinct population of follicular-helper-like T cells. Those cells promoted B cell activation and humoral immunity through CD40L, IL-21 and IFNγ signalling. The study also says these structures included cellular components characteristic of peripheral lymphoid organs, including T FH cells, FDCs and GC-like structures.</p>
+<p>The finding matters because the skull bone marrow had already been described as a primary lymphoid organ that supplies developing and immature B cells and myeloid cells to the CNS and CNS border regions under homeostatic, neuroinflammatory or injurious conditions. This study adds that it may also support antigen-specific adaptive immune responses in place.</p>
+<h3>Brain-derived antigens can trigger local responses</h3>
+<p>To test what activates these skull structures, the researchers compared mice kept under different antigen-exposure conditions and used adeno-associated virus to drive model antigen expression in neurons. After AAV injection, they detected OVA in brain homogenate and cerebrospinal fluid, but not in serum. They then transferred naive OT-II CD4 T cells and MD4 B cells and found that, one week later, cell numbers and activation markers in skull bone marrow were significantly increased.</p>
+<p>The study says this showed CNS antigen-specific anti-tumour T and B cell responses can occur locally in the skull bone marrow. Early after transfer, antigen-specific OT-II responses were detected only in the skull bone marrow, while germinal-centre responses took longer to develop. The researchers interpret this as evidence that the skull bone marrow is among the first brain barriers to respond to brain-derived antigens.</p>
+<p>They also tested whether this activity depended on secondary lymphoid organs. After dCLN ligation, skull lymphoid responses still occurred, suggesting they can arise in the absence of those organs. At the same time, the study says active, glymphatic-driven antigen efflux from the brain is required, because responses were altered in Aqp4-deficient mice. Selective OVA detection in the skull bone marrow, but not in sternum bone marrow or spleen, suggested preferential use of skull channels, although the study says systemic dissemination cannot be fully excluded.</p>
+<h3>A possible role in brain cancer, but not the whole story</h3>
+<p>The clearest functional test came in mouse brain cancer models. The researchers say adaptive immune cells within the skull bone marrow lymphoid structures surveil and respond to CNS-derived antigens and contribute to anti-tumour immune responses. In CT2A-bearing mice, partial blockade of skull lymphoid responses with anti-CD40L reduced overall survival. By contrast, combining a CD40 agonist with IL-21 and IFNγ significantly extended survival, and local administration under the scalp enhanced skull lymphoid responses without the same effect in other tissues.</p>
+<p>That result suggests the skull marrow niche can participate in anti-tumour immunity independently of peripheral secondary lymphoid organs, while peripheral compartments may help amplify and sustain the response later. The study also notes that immune cells in the tumour microenvironment, including myeloid cells, B cells, NK cells and CD8 T cells, expressed Fcγ receptor, and that the triple therapy reduced IL-10 expression in several immune cell types.</p>
+<p>The authors are careful not to overstate the scope. They say the contribution of other border tissues and peripheral organs cannot be excluded, and that the magnitude and organization of skull lymphoid responses may vary with disease context, including tumour location, meningeal involvement and patterns of CNS antigen drainage. Still, their overall conclusion is direct: the skull bone marrow is a site of CNS immunosurveillance and may influence immune responses across neurological diseases.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10951-4" target="_blank" rel="noopener noreferrer" title="Nature / Functional role of skull lymphoid structures in CNS immunosurveillance">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Wake-activated neuronal populations that regulate sleep drive</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In mice, researchers identified wake-activated neurons in the median raphe and anterior medial preoptic area that appear crucial for sleep drive, narrowing a long-standing gap in how prolonged wakefulness turns into rebound sleep.</p>
+<p>Prolonged wakefulness normally increases sleep drive, and sleep deprivation is followed by longer, deeper non-rapid eye movement sleep, measured by delta-range EEG activity. To look for the circuit behind that shift, the researchers used whole-brain activity mapping, targeted neuronal manipulations and electrophysiology after depriving mice of sleep for 6 hours, then comparing those brains with recovery sleep and ordinary circadian behavior.</p>
+<p>That analysis pointed to the anterior medial preoptic area and the median raphe as candidate regions that encode sleep deficit. When the researchers activated sleep-deprivation-responsive cells in either region, sleep duration rose and sleep intensity increased in a way that resembled recovery sleep. When they inhibited those cells, sleep fell and the usual increase in sleep propensity during deprivation disappeared.</p>
+<p>The median raphe population included serotonergic neurons and a distinct group of GABAergic neurons whose intrinsic excitability increased during sleep deprivation. Neurons in that region responsive to sleep loss projected to subcortical sleep-associated regions and acted through the preoptic hypothalamus. When GABAergic and serotonergic neurons were co-activated, they synergistically promoted sleep; when they were co-inhibited, chronic NREM sleep fell by nearly 70%.</p>
+<p>The chronic suppression was not uniform in its effects. The researchers reported that most mice survived despite the marked reduction in sleep, and those survivors did not show the compensatory increase in sleep drive or the behavioral deficits typically associated with severe sleep deprivation. In some cases, chronic co-inhibition was lethal, which the researchers suggested may reflect even greater sleep loss.</p>
+<p>Together, the findings define neuronal populations that are activated during wakefulness and are crucial for sleep drive, and they offer specific cell types in the median raphe and anterior medial preoptic area for further study of the circuit mechanisms that make sleep pressure build up.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10928-3" target="_blank" rel="noopener noreferrer" title="Nature / Wake-activated neuronal populations that regulate sleep drive">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Increasing CO 2 levels fertilize C 4 grass production</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Rising atmospheric CO2 is giving wild C4 grasses in dry southern African savannas a measurable productivity boost, according to a synthesis of experiments, 32 years of field observations and model runs; the open question is how much of that extra carbon will remain stored in a system shaped by fire, herbivory and woody plants.</p>
+<p>Rising CO2 is already being linked to changes across the global terrestrial biosphere through both climate effects and direct effects on plant performance. Tropical forests have long-term monitoring behind them, but equivalent long-term analyses for C4-grass-dominated tropical and subtropical savannas have been lacking, even though those savannas contribute about 30% of terrestrial net primary production.</p>
+<h3>Experiments and field data point the same way</h3>
+<p>To fill that gap, the study combines a meta-analysis of 70 CO2-addition experiments with 32 years of in situ field observations from southern Africa. The result is described as clear and consistent: CO2 fertilization of wild C4 grasses is widespread in dry conditions.</p>
+<p>In the experiments, grasses reduced stomatal conductance under higher CO2, which limited water loss while increasing carbon gain. The field observations showed the same basic pattern in another form: improved water-use efficiency translated into higher C4 grass biomass production across three decades.</p>
+<p>That field record comes from southern African savanna observations, where annual aboveground production increased by 28% over three decades. The study puts that CO2-driven rise at 75.1 g m−2, with a 95% confidence interval of 74.5–75.8 g m−2, or 0.37 tons C ha−1 of annual production. The authors say this challenges the view that C4 grasses are unresponsive to increasing CO2.</p>
+<h3>Why the result matters for savannas</h3>
+<p>The paper places the finding in a broader debate that has focused on direct CO2 effects on plants for years. Free-air CO2 enrichment experiments have already shown widespread but context-dependent responses, including increased photosynthesis, reduced stomatal conductance and water use, and greater biomass production. But those experiments have largely left out major tropical and subtropical ecosystems, which makes long-term savanna data especially important.</p>
+<p>The authors also note that in tropical and subtropical savannas, long-term observations and modelling have suggested CO2 fertilization may be helping woody plants encroach on grassland. That means the new grass result does not stand alone: it sits inside a larger question about tree–grass dynamics, including possible effects on fire regimes, that the paper says remain unclear.</p>
+<h3>What the model suggests next</h3>
+<p>A simulation with the Community Land Model 6 suggests the fertilization effect on C4 grass aboveground productivity may continue to increase under future conditions. The study uses that model, along with the experiments and field observations, to argue that rising CO2 is likely to keep influencing savanna grass growth rather than fading into the background.</p>
+<p>At the same time, the carbon’s fate is unresolved. The paper says it depends on feedbacks with fire, herbivory and woody vegetation, and that makes the broader impact on the global carbon cycle potentially profound but not straightforward.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10935-4" target="_blank" rel="noopener noreferrer" title="Nature / Increasing CO 2 levels fertilize C 4 grass production">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Observation of conformal field theory spectra in a quantum simulator</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In a programmable neutral-atom quantum simulator, researchers directly observed the energy excitation spectra of emergent conformal field theories at quantum phase transitions, recovering universal energy ratios and using the same setup to probe boundary-condition effects and critical dynamics.</p>
+<p>Conformal field theories constrain physical observables and can emerge at quantum phase transitions, but much of their predicted structure had remained unobserved in experiment. Here, the team used a one-dimensional lattice of interacting Rydberg atoms and developed a modulation technique to resolve the finite-size spectra of a Rydberg chain tuned to quantum phase transitions described by either Ising or tricritical Ising CFTs.</p>
+<p>The work focuses on the low-energy spectra that field theory says should encode the theory’s operator content. By measuring those levels directly, the researchers say they recovered the universal energy ratios characteristic of the underlying field theories. They also used local control to distinguish excitation parities under reflection. In the tricritical Ising chain, that control let them induce transitions between distinct CFT spectra associated with changing boundary conditions.</p>
+<p>To deal with the difficulty of identifying individual excitation energies in larger systems, they used a variant of the modulation technique to study the dynamical structure factor of the critical system, which is closely related to the correlation of an underlying Ising conformal field. This approach probes the emergence of CFT features in a quantum simulator and may provide a way to diagnose a priori unknown universality classes in future experiments.</p>
+<p>The broader setting is that CFTs are used to describe universal phenomena at quantum phase transitions, where conformal symmetry emerges at long distances and low energies. In finite-size systems, the pattern of low-energy levels can reveal which fields are present and how they scale. This experiment is presented as a direct measurement of that pattern in a quantum simulator rather than an indirect signature.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10904-x" target="_blank" rel="noopener noreferrer" title="Nature / Observation of conformal field theory spectra in a quantum simulator">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>A global atmospheric methane record from a tropical ice core</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 2,000-year methane record from a tropical ice core in Peru points to stronger low-latitude emissions than polar records alone suggest, filling a long-standing gap in how atmospheric methane is reconstructed and why tropical sources remain hard to quantify.</p>
+<h3>Why a tropical ice core changes the picture</h3>
+<p>The record comes from ice cores drilled from the South Peak summit of Nevado Huascarán, or Summit Core A, at 6,768 meters above sea level in the Peruvian Andes. The work builds on the idea that tropical wetlands are widely considered the largest natural source of atmospheric methane, while most historical reconstructions have relied on polar ice cores that cannot fully resolve the tropical contribution to the methane budget.</p>
+<p>Using discrete methane measurements from the Huascarán core, the study presents a 2,000-year atmospheric CH4 record and compares it with Greenland and Antarctic records. The trends and magnitudes of the Huascarán record are broadly consistent with polar records, and the authors say the same is true for the late-period isotopic measurements, δ13C-CH4, from roughly 1530 CE to 1999 CE. Those isotope values align with values consistent with a dominant tropical methane source.</p>
+<p>The team then integrated the new record into an atmospheric four-box model. That model suggests sustained equatorial dominance of methane source strength over the past two millennia. In the paper’s interpretation, equatorial methane emissions are higher than earlier estimates based only on polar ice core data, supporting the long-standing hypothesis that low-latitude emissions dominated pre-industrial methane variability.</p>
+<p>The study also places the result in a broader methane history: atmospheric CH4 has varied between about 350 and 800 parts per billion over the past 800,000 years, but since 1750 CE has risen about 160%, reaching 1,935 ppb in 2025. The authors say past flux and emission estimates still carry uncertainty, and the model itself includes uncertainty from observation noise, assumed atmospheric lifetimes, latitudinal exchange rates, and structural limits from its simplified design. Even so, they conclude that tropical ice cores are important for reconstructing methane variability and its latitudinal distribution.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10938-1" target="_blank" rel="noopener noreferrer" title="Nature / A global atmospheric methane record from a tropical ice core">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Evidence for vacuum-enhanced superconductivity in NbSe 2</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers reported experimental evidence that vacuum fluctuations can enhance superconductivity in NbSe₂, a layered transition-metal dichalcogenide with well-characterized superconducting behavior. When NbSe₂ was embedded in a split-ring cavity resonator, the critical temperature increased. Near the transition temperature, the critical current and critical field increased dramatically. The observations were described as a clear platform for revealing this effect and as a proof-of-principle demonstration of superconductivity enhancement via vacuum fluctuations.</p>
+<p>The authors said the results are consistent with theoretical calculations showing that hybridization between electronic degrees of freedom and fluctuating cavity modes lowers the energy of the superconducting state. The work was also presented as an early, citable 2026 Nature article with a permanent DOI, while the version remains subject to further edits and will be replaced by the final Version of Record. It is also marked as a preview of subscription content.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-11037-x" target="_blank" rel="noopener noreferrer" title="Nature / Evidence for vacuum-enhanced superconductivity in NbSe 2">Nature #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
