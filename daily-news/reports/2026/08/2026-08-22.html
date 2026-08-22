@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-22</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-22</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="bbc,cnn">
+  <summary>Russian double-tap drone strike kills 15 in Ukrainian mall, officials say</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 15 people were killed and 130 injured when Russian drones struck a shopping centre in Kryvyi Rih, Ukrainian officials said, with President Volodymyr Zelensky saying a second wave hit emergency workers already at the scene and raising fears the toll could still rise.</p>
+<h3>A daytime strike that hit twice</h3>
+<p>Local officials said the attack on the central Ukrainian city came in two waves. Zelensky called it an “absolutely cynical and despicable” daytime strike in his home town, saying the second drone targeted emergency workers who had responded after the first hit. A video verified by the BBC shows the second drone striking the already burning shopping centre in the Dnipropetrovsk region.</p>
+<p>Dnipropetrovsk regional head Oleksandr Hanzha said on Friday evening there were 15 confirmed fatalities, including two people who died later in hospital. He said 130 people were injured, including 29 in a serious condition. Earlier, officials had said another 130 people, including 23 children, were hurt in the city’s biggest mall. More people were also reported trapped in the rubble.</p>
+<h3>Rescue work and unanswered questions</h3>
+<p>Rescuers from four other Ukrainian regions were being urgently deployed to help search for survivors, while specially trained psychologists were sent to support some survivors after the attack. Hanzha said there were fears the death toll would rise further.</p>
+<p>Kryvyi Rih Mayor Oleksandr Vilkul said earlier in the day that the Russian drones were flying at “extremely low altitudes” and described the attackers as “animals”. He also said there were missing people who were not responding to calls. Russia’s military had not commented.</p>
+<h3>Other Russian strikes reported the same day</h3>
+<p>The shopping-centre strike was not the only attack reported in Ukraine that day. Local officials said four people, including three children, were killed in separate Russian attacks in the southern Mykolaiv region, and another two people were killed in the north-eastern Kharkiv region. In the southern city of Zaporizhzhia, three people were injured when a drone exploded near a taxi, the regional head said.</p>
+<p>The violence came a day after officials said 17 people were killed and more than 40 injured in a major Russian missile and drone attack on Kyiv, where blocks of flats and warehouses were struck overnight and a children’s hospital and school were also damaged.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c39egw7nmk2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Russian double-tap drone strike kills 15 in Ukrainian mall, officials say">BBC #1</a><a href="https://www.cnn.com/2026/08/21/europe/russia-north-korea-ukraine-drones-intl" target="_blank" rel="noopener noreferrer" title="CNN / North Korea boosts support for Russia to include drone operators, Ukraine says">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="cnn,el_pais">
+  <summary>At least 15 killed and over 100 wounded in Russian ‘double-tap’ strike on a Ukrainian shopping center</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 15 people were killed and more than 100 wounded in a Russian “double-tap” strike on a shopping center in Kryvyi Rih, central Ukraine, on Friday, Ukrainian authorities said. President Volodymyr Zelensky said the attack drones struck in two waves, with a second strike about half an hour after the first and the resulting fire, targeting emergency responders. He said Ukraine “will definitely respond” to the attack.</p>
+<p>The Dnipropetrovsk regional prosecutor’s office later said at least 130 people were wounded, including multiple children. Oleksandr Vilkul, head of the city’s defense council, said at least 29 of the injured were in serious condition, including a 14-year-old girl with a traumatic brain injury and four other children. He also said stores inside the shopping center caught fire, emergency crews were still clearing rubble, and several people were missing and could not be reached.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/21/europe/kryvyi-rih-shopping-center-strike-intl" target="_blank" rel="noopener noreferrer" title="CNN / At least 15 killed and over 100 wounded in Russian ‘double-tap’ strike on a Ukrainian shopping center">CNN #1</a><a href="https://elpais.com/internacional/2026-08-21/varios-muertos-y-heridos-en-un-ataque-ruso-en-kryvyi-rih-la-ciudad-natal-de-zelenski.html" target="_blank" rel="noopener noreferrer" title="El País / Al menos 15 muertos y más de un centenar de heridos en un ataque ruso en Kryvyi Rih, la ciudad natal de Zelenski">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Rise in migrant deaths as 19 bodies found along Arizona border last month</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The remains of 19 migrants, including children, were recovered along the Arizona-Mexico border last month, the highest monthly death toll in the area since 2024, as advocates warn that the desert’s real death count is still far higher than the records show.</p>
+<p>Newly released data from the medical examiner’s office in Pima County, Arizona, shows that the 19 remains pushed the total found this year to 73, which is 14 more than at the same point last year. The figures add another grim month to a long-running pattern in the Arizona desert, where deaths are tracked by local authorities and by Humane Borders, a nonprofit that rescues migrants from dehydration and exposure.</p>
+<p>Experts and immigration advocates say the latest toll reflects US policy abroad and at home, including the recent blocking of asylum seekers. They say people are still making the journey through Mexico despite extreme temperatures and the threat of arrest by ICE.</p>
+<h3>A route that keeps taking lives</h3>
+<p>Octavio Fuentes, executive director of Humane Borders, said the current administration has been effective at “closing legal ports of entry” and making it “darn near impossible” for people to enter the country “the right way.” The group works alongside Pima County to track migrant deaths, and its data shows that at least 4,505 migrants have died in the Arizona desert over the last 25 years, or roughly one death every other day.</p>
+<p>The causes are often the same. Humane Borders says the most frequent are dehydration and exposure, but people also die from hypothermia or from blunt force trauma after passing out and hitting their heads on rocks. The latest numbers, Fuentes and other advocates argue, show that danger has not diminished even as the border has become harder to cross legally.</p>
+<p>Fuentes also pointed to a longer enforcement history. He said that since Operation Gatekeeper in 1994 under the Clinton administration, the approach has been “prevention through deterrence,” pushing crossings away from safer, more obvious places and into remote terrain. “Out of desperation, people think, ‘How else can I get in?’” he said. “And that’s what has driven people into the Arizona desert for the last 32 years.”</p>
+<h3>Why the count may still be incomplete</h3>
+<p>Brad Jones, a Humane Borders board member and a professor with the Global Migration Center at the University of California, Davis, said the latest figures show a high number of “contemporaneous” deaths compared with recent years. In other words, he said, the deaths appear to have happened recently rather than reflecting old remains that were only just found.</p>
+<p>Jones said the desert often hides evidence quickly, and that it is often “random happenstance” when a hiker or law enforcement officer comes across human remains. Scavengers and animals can make remains “disappear without a trace pretty quickly,” he said, which means the known toll is almost certainly too low.</p>
+<p>He said estimates suggest the true number of migrant deaths could be as high as four times what has been found. “For every migrant’s remains that you find, how many do you not find?” he asked.</p>
+<p>The broader pattern, according to the advocates and researchers quoted in the data, is that people are still taking the risk because the alternatives feel worse. Amelia Frank-Vitale, an anthropology professor at Princeton University, said many migrants feel they have no choice at all, even as US policies and ICE enforcement make the journey more dangerous.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/21/migrant-deaths-arizona" target="_blank" rel="noopener noreferrer" title="The Guardian / Rise in migrant deaths as 19 bodies found along Arizona border last month">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="el_pais">
+  <summary>Ceuta buries the first migrants who died in the Tarajal stampede</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ceuta buried the first 18 migrants who died in the July 30-31 crossing at the border pier, but most of the dead still have no names and Morocco has not accepted their return, leaving families and officials with numbered graves and an unresolved repatriation effort.</p>
+<p>The final burial took place Friday afternoon at the Sidi Embarek Muslim cemetery after 82 people died in the mass entry, mostly men and one woman. A dozen imams from the city’s mosques joined the public burial, and Health Counselor Nabila Benzina said only nine of the deceased have been identified.</p>
+<h3>An emergency burial</h3>
+<p>The bodies were laid on their right side, facing Mecca, with care that the earth would not touch them. The ceremony began shortly before the five o’clock prayer and ended at eight, in an expanded area of the cemetery that had already been prepared for the burials.</p>
+<p>The setup showed how unusual the day was for Ceuta’s only Muslim cemetery, which handles about 20 funerals a month. Six gravediggers, wearing suits, gloves and masks, worked in humid afternoon heat beside a trench with concrete walls, wooden planks and piles of sand. “We have summoned all staff,” Benzina said. “We have never done this before.”</p>
+<p>The first deceased were taken from the hearse at 18:23 in four white funeral bags and placed on four orange stretchers. City imams then began praying as the bodies were lowered into the graves, with Qur’anic verses recited by the imam with the most authority in the group. Later batches were buried in the same way, with the soil covered by clay bricks and sand and water sprayed to reduce dust.</p>
+<h3>Graves with numbers only</h3>
+<p>The headstones for the dead were identified only by numbers because their names and stories are unknown. Their cases remain tied to a judicial file with limited information: where each was found, physical characteristics, clothing and any details that could link them to their families.</p>
+<p>Benzina said the dead are still difficult to return because Morocco is not accepting handover to families. She said the funeral home has tried twice, but “the reasons are not known.” Some relatives have come to mourn, she said, but not to reunite with their loved one in their country.</p>
+<h3>Morocco and the families</h3>
+<p>Benzina said the authorities will keep trying, although time is short because of health recommendations. The funeral home will continue attempting to send the identified dead to Morocco, while the burial work is due to continue on Saturday and over the coming days until all the bodies are interred.</p>
+<p>There is little expectation that exhumations will follow if victims are later identified. Based on Ceuta’s experience, families of Moroccan or Sub-Saharan victims who died trying to reach the city by swimming usually do not claim the remains, although there have been Algerian victims repatriated. For now, the graves in Sidi Embarek remain marked by numbers, and by the effort to give the dead a dignified burial even while their identities are still incomplete.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-21/ceuta-entierra-a-los-primeros-migrantes-fallecidos-en-la-avalancha-en-el-tarajal.html" target="_blank" rel="noopener noreferrer" title="El País / Ceuta buries the first migrants who died in the Tarajal stampede">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>Indian workers in Israel demand accountability after murder of Indian caregiver</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Indian workers in Israel have filed an appeal demanding justice and accountability after the murder of Indian caregiver Rajeev Acharya, who was stabbed to death by an Israeli national, according to NDTV as summarized by Middle East Eye. Israeli authorities have since indicted Avior Zaken, the grandson of the elderly couple who employed Acharya, for attacking him repeatedly with a sharp object on 23 July. Indian media reported that Zaken faces a charge of premeditated murder under the Israeli penal code. On Wednesday, nearly a month after Acharya’s killing, India’s embassy in Tel Aviv said on X that it was “in close contact with the Israeli authorities,” who had informed it that a suspect had been arrested and the investigation was ongoing.</p>
+<p>The community’s appeal also called on the Israeli government to prosecute the case fully, provide compensation to Acharya’s family, and protect Indian foreign workers from violence and abuse. It drew attention to the vulnerabilities of Indian domestic workers in Israel, who live and work in the homes where they are employed. Middle East Eye also reported that in May 2023 India signed an agreement to send more than 42,000 workers to Israel, including 34,000 for construction and 8,000 for care of the elderly.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/indian-workers-israel-demand-accountability-after-murder-indian-caregiver" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Indian workers in Israel demand accountability after murder of Indian caregiver">MEE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="cnn,guardian">
+  <summary>First deportation flight lands in Haiti after TPS suspension</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Haiti received its first deportation flight from the United States since Temporary Protected Status was revoked, bringing more than 160 Haitian nationals to Cap-Haïtien and deepening concern in a city locals say is already stretched by displacement, overcrowded services and the prospect of more arrivals.</p>
+<h3>A first flight lands in Cap-Haïtien</h3>
+<p>The charter flight landed in Cap-Haïtien on Thursday, when Haiti’s National Migration Office said 161 people stepped down a little after noon. It was the first deportation flight to Haiti from the US since the revocation of Temporary Protected Status, or TPS, which had protected about 350,000 Haitians in the US from deportation and given them legal work permits.</p>
+<p>The arrival took place in Cap-Haïtien rather than Port-au-Prince because the capital’s main international airport is considered too dangerous. The US government has also kept a ban on US commercial flights to Haiti’s capital through early September because of ongoing gang violence. Many of the deportees were dressed in white and covered their faces as journalists filmed them. Nearly all declined to speak, and some appeared to fear being targeted by gangs.</p>
+<p>DHS Secretary Markwayne Mullin posted on X Thursday morning, hours before the flight took off: “It’s a great day to deport illegal aliens. Good morning America!”</p>
+<h3>A city already under strain</h3>
+<p>Cap-Haïtien has been a major hub for internally displaced people since Haiti’s devastating earthquake in 2010, and locals say it is already crowded with people fleeing disaster and violence from elsewhere in the country. The city is also the first-choice destination for the Trump administration to deport Haitian migrants.</p>
+<p>Some residents warned that the city cannot absorb many more arrivals. Demonstène Reynold, a mechanic in Cap-Haïtien, said: “Cap-Haitian alone can’t receive more people.” He said the city is already receiving people from the country’s interior, including Hinche and Port-au-Prince, because of the political crisis.</p>
+<p>CNN described street traffic as snarled and trash collection sites as overflowing. At a hospital visited by CNN, patients were queuing outdoors in the heat. Louis Ronald Espoir, an administrator at Hospital Fort Saint Michel, said the city’s medical facilities are at capacity. “As you can see here with your own eyes, all the hospitals in the region are full despite the best efforts of the government,” he said. “If they’re full with the current population, I’d be lying to say we can take in anyone else.”</p>
+<p>Angie Bell, the city’s former mayor, said Cap-Haïtien needed more development and more security before it could safely take in large numbers of returnees. She estimated the population had risen from around 350,000 in the 2003 census to at least 800,000, adding that a lack of housing has pushed many people to live on the outskirts while working in the city.</p>
+<h3>The TPS fight and what comes next</h3>
+<p>The flight came after the Trump administration’s legal victory this month to remove temporary deportation protections from hundreds of thousands of Haitians in the US. The end of TPS followed a Supreme Court ruling backing the administration’s effort to end the program and a later decision by Washington DC district judge Ana Reyes removing a stay on deportations.</p>
+<p>The administration has repeatedly argued that Haiti is safe enough for Haitians to be sent back, despite a State Department “Do not travel” advisory and the flight ban to Port-au-Prince. Haitian communities in the US are now confronting the loss of protection, while immigrant-rights advocates warn about the dangers of sending people back to Haiti.</p>
+<p>In Cap-Haïtien, the immediate question is how many more flights will follow. Haitian officials have already been told to expect an increase in removals, and locals say the city is struggling to make room for the people already arriving.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/21/americas/haiti-ice-deporatations-cap-intl-latam" target="_blank" rel="noopener noreferrer" title="CNN / In the city where Haitian deportees are being sent, locals say they’re not ready">CNN #1</a><a href="https://www.theguardian.com/us-news/2026/aug/21/haiti-deportation-tps" target="_blank" rel="noopener noreferrer" title="The Guardian / First deportation flight lands in Haiti after TPS suspension">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Fever trees felled, fencing destroyed near iSimangaliso — 52 people arrested</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Fever trees and wildlife fencing were cut down in the Ozabeni section of the iSimangaliso Wetland Park, disrupting traffic on the R22 and leading to at least 52 arrests as a dispute over land claims and park access played out near Hluhluwe and Sodwana Bay.</p>
+<h3>Blockade on the R22</h3>
+<p>Traffic was halted for several hours this week on the road between Hluhluwe and Sodwana Bay after people hacked down trees and set up a blockade. Daily Maverick reported that larger patches of fever trees were chopped down with chainsaws in the adjoining iSimangaliso Wetland Park, while wildlife fencing was torn down in the protected area.</p>
+<p>Motorists were reportedly stuck for up to five hours when several large fever trees were felled on the R22 at the point where the Mkhuze River crosses the road, south of the Mkhuze Game Reserve. Wesley Gold, who was driving southwards towards Pietermaritzburg, said the blockade near the river crossing seemed to have been chosen carefully, making it impossible for vehicles to drive around the fallen trees. He said he arrived at dusk, as the blockage was being cleared, and was escorted past the remnants by police vehicles. Gold said there were at least 10 large fever trees across the road, with tree wreckage on both sides.</p>
+<p>Another roadblock was set up in the same area early on Friday, 21 August, but police and other security personnel cleared it away.</p>
+<h3>Arrests, court order and land claim tensions</h3>
+<p>The SA Police Service confirmed that at least 52 people were arrested after community protests and a road blockade on the R22 on Wednesday afternoon, 19 August. SAPS spokesperson Colonel Robert Netshiunda said the suspects were arrested for “trespassing, contravention of a court order, malicious damage to property, assault on police, possession of dangerous weapon and public violence” and were due to appear before Mtubatuba Magistrates’ Court on Friday.</p>
+<p>The iSimangaliso Wetland Park Authority said in a press statement on 21 August that it had obtained an urgent interim court order from the High Court more than a month earlier to stop the illegal occupation of several sections of the park. The authority said the court order was granted on 30 June and that the arrests were carried out during a joint operation between SAPS and other law enforcement agencies this week.</p>
+<p>According to the park authority, those arrested had allegedly breached the order by clearing trees or establishing farming plots in the Ozabeni area and other sections of the park. It also said the destruction had already exceeded 10 hectares of trees cut and land cleared, and 45 kilometres of park fence vandalised and stolen, with repairs costing more than R26-million and the stolen fence about R20-million. The authority warned that if the damaged boundary fencing is not repaired soon, human-wildlife conflict could become a danger.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-21-fever-trees-felled-fencing-destroyed-near-isimangaliso-52-people-arrested" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Fever trees felled, fencing destroyed near iSimangaliso — 52 people arrested">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Death of Syrian in police custody sparks protest and conversation about prison reform</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The death of Syrian detainee Mohammed Ghamira in police custody sparked backlash and protest in Syria, with activists and rights groups urging authorities to build on efforts to overcome the history of arbitrary detentions, torture and disappearances under former leader Bashar al-Assad. Ghamira, 29, a father of two and former volunteer with the White Helmets rescue organisation, died on Sunday, days after being detained over a financial dispute. Syrian authorities said he was later pronounced dead in hospital from complications from cerebral and gastrointestinal haemorrhaging that resulted from a beating he sustained after being detained. His family said authorities were informed of his haemophilia during detention and asked not to subject him to physical violence.</p>
+<p>The government launched a three-day investigation that concluded on Thursday. It found that Ghamira’s death resulted from a slap delivered by a police investigator, who has since been detained and referred to judicial authorities. The probe also found procedural shortcomings and negligence by the police department chief and investigator, including failure to record Ghamira’s medical condition in an official report. Earlier this week, a crowd gathered in Aleppo to demand accountability, with protesters holding signs reading, “Do not repeat the oppression that we revolted against.”</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/death-syrian-detainee-sparks-protest-and-conversation-about-prison-reform" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Death of Syrian in police custody sparks protest and conversation about prison reform">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc,cnn,scmp">
+  <summary>1 killed, 3 injured when man with sword attacks Swedish school</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An 18-year-old armed with a sword attacked students at Brinell high school in Fagersta on Friday, leaving one person dead and three injured, while police shot and detained the suspect and officials tried to understand why the first day back after summer recess turned violent.</p>
+<p>The attack happened on Friday afternoon at the school in the central Swedish town of Fagersta, which has about 13,000 residents. The school had just reopened after summer recess, and for some students it was their first day back. Police said the suspect was an 18-year-old man who was shot and taken into custody on suspicion of murder.</p>
+<p>The local health authority said two of the victims were teenage boys who were severely injured. A third injured person was later released from hospital.</p>
+<h3>A normal day that ended in lockdown</h3>
+<p>Students described the scene as sudden and alarming. One Brinell student, Nellie, said: “First it was just a regular day really. But then … I saw a guy all covered in blood, at least down his back anyway. Then I saw the police and they flooded in.” She spoke alongside her mother, Agnes Strandberg, after a five-hour lockdown at the school.</p>
+<p>Another student, Abdulrahem Salmo, said he saw a victim with a bloody stab wound in the arm. “Then people called the police and we just all ran from there because we were afraid,” he told SVT.</p>
+<p>Police chief Tommy Alriksson said officers responded quickly to the school, which has 450 students aged 16 to 20. “The first patrol entered and let us know that the perpetrator was subdued with gunfire,” he said.</p>
+<p>Several other schools and public buildings in Fagersta were also initially locked down.</p>
+<h3>What police said about the suspect</h3>
+<p>At a press conference, police said the suspect was an 18-year-old man who was shot and taken into custody on suspicion of murder. Media reports said the attacker was a former student at the school.</p>
+<p>Public broadcaster SVT, citing unnamed sources, reported that the attacker was wearing a helmet and carrying a sword, and that he had a previous conviction for assault. The same reporting said he was a former student at the school.</p>
+<p>Police were also investigating a TikTok account connected to the violence, according to Aftonbladet. The paper said the account posted a picture of a sword 20 minutes before the attack. Dagens Nyheter said the picture appeared to have been taken in a restroom at the school based on details in the background. Before the month-old account was taken down on Friday, it had videos referring to two episodes of mass violence in Sweden along with Norwegian far-right mass murderer Anders Behring Breivik.</p>
+<h3>Fagersta reacts</h3>
+<p>Fagersta Mayor Asa-Marta Sjostrom said the town was shaken. “Our and the school’s main focus right now is to take care of our students and our employees,” she said. “We are working together … to create safety and provide support to those who need it.”</p>
+<p>The wider political response was immediate. Swedish Prime Minister Ulf Kristersson cancelled a speech he was due to hold on Saturday, news agency TT reported. He wrote on X: “Our thoughts are with all those affected.”</p>
+<p>Sweden’s King Carl XVI Gustaf said in a statement released by the royal household that he received the news “with dismay and sadness.” Social Democrat leader Magdalena Andersson, whose center-left coalition leads opinion polls for next month’s parliamentary election, said: “All of Sweden stands together with Fagersta at this difficult time.”</p>
+<p>The violence also recalled earlier school attacks in Sweden. CNN reported that Sweden’s worst mass shooting happened in February 2025 in Orebro, when a gunman killed 10 people before turning the weapon on himself. In 2015, a masked swordsman killed a teaching assistant and two boys at a school in Trollhattan before being shot dead by police.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c3r0g7gj2n3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / One killed in sword attack at Swedish school">BBC #1</a><a href="https://www.cnn.com/2026/08/21/europe/swedish-school-sword-attack-intl" target="_blank" rel="noopener noreferrer" title="CNN / One killed, several injured in sword attack at Swedish school">CNN #1</a><a href="https://www.scmp.com/news/world/europe/article/3364889/man-armed-sword-injures-several-swedish-high-school" target="_blank" rel="noopener noreferrer" title="South China Morning Post / 1 killed, 3 injured when man with sword attacks Swedish school">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="vanguard_ng">
+  <summary>Autopsy ordered after man dies in Bauchi vigilante custody</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Homicide detectives in Bauchi have launched an investigation after a 39-year-old man, Abdulrazak Ibrahim, died while in the custody of a local vigilante group in Bauchi metropolis. The Bauchi State Police Command said on Friday that three members of the vigilante group had been arrested and detained in connection with the death. Police said Ibrahim was invited to the Bakin Kura Vigilante Office after a theft complaint was lodged against him by his mother, Hauwa Ibrahim, and the group was asked to investigate the allegation, recover the stolen items and identify possible buyers. He later died under unclear circumstances while being held there.</p>
+<p>The Chairman of the Bakin Kura Vigilante Group reported the incident to police on Thursday, August 20, 2026, at about 6:39pm. SP Nafiu Habib said detectives from the ‘A’ Division Township were deployed to the scene, and Ibrahim’s body was taken to the mortuary of the Abubakar Tafawa Balewa University Teaching Hospital, Bauchi. He said a preliminary examination found no visible signs of physical violence or trauma, and an autopsy will be conducted to determine the actual cause of death. CP Sani-Omolori Aliyu ordered a thorough investigation and condemned extrajudicial actions.</p></div>
+  <div class="source-list"><a href="https://www.vanguardngr.com/2026/08/autopsy-ordered-after-man-dies-in-bauchi-vigilante-custody" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / Autopsy ordered after man dies in Bauchi vigilante custody">VN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="ocha">
+  <summary>South Sudan: OCHA’s pool funds help mobile health services access remote communities</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">humanitarian expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In February 2026 in Adiei Payam in Pariang County, Ruweng Administrative Area, eight-month-old Minyiel Yiik fell seriously ill, was losing weight and hardly eating. His mother, 26-year-old Agau Kur Piok, walked four hours to Pariang Hospital, where he was diagnosed with measles and admitted for two weeks. He later recovered enough to return home, but his health stayed fragile and he became sick again a few months later. Agau said he had a high fever, diarrhoea and coughing, and that the long distance to hospital made it hard to seek treatment quickly.</p>
+<p>Relief came when the International Rescue Committee mobile health and nutrition outreach clinic, supported by the South Sudan Humanitarian Fund, arrived in Adiei in July 2026. During a visit, Minyiel was screened and diagnosed with acute malnutrition, then enrolled in the outpatient therapeutic programme while Agau received health and nutrition education. The IRC said its mobile clinics are bringing primary healthcare and nutrition services closer to vulnerable communities in Ruweng Administrative Area, where conflict, displacement, disease outbreaks and extreme weather have strained livelihoods and health systems. The same service also helped 55-year-old Akuol Kirr Minyang in Panthur Payam, who received medication and guidance after a comprehensive assessment.</p></div>
+  <div class="source-list"><a href="https://www.unocha.org/news/south-sudan-ochas-pool-funds-help-mobile-health-services-access-remote-communities" target="_blank" rel="noopener noreferrer" title="UN OCHA updates / South Sudan: OCHA’s pool funds help mobile health services access remote communities">UN OCHA updates #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Recent Peru Earthquake Reopens Debate Over Disaster Response Capabilities</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Peru’s southern Andes were hit by a 7.2 earthquake on August 20, 2026, affecting communities in Ayacucho, Arequipa and Ica and reviving concern that scaled-back civil protection budgets and weak infrastructure leave towns exposed to the next disaster.</p>
+<p>The quake’s epicenter was in Parinacochas, near Coracora in the Ayacucho region, and monitoring agencies registered it at a depth of between 80 and 100 kilometers. Because of that intermediate depth, the shaking was felt across a broad area, including parts of Arequipa, Ica, Apurímac and Cusco, and even in high-rise buildings in Lima. Initial assessments coordinated by the National Institute of Civil Defense, or INDECI, and regional authorities said the damage was concentrated in rural districts and small urban centers.</p>
+<p>Local reports described damage to unreinforced masonry structures and traditional adobe houses. Preliminary reports said 50 homes, 6 schools and 4 health centers were affected in rural districts. Mountain passes connected to the Interoceanic Highway were also temporarily blocked by rockfalls and landslides triggered by the shaking.</p>
+<p>The event landed in a country already described as highly exposed to natural hazards. Peru sits on the Pacific Ring of Fire, where the Nazca Plate subducts beneath the South American Plate, making it susceptible to frequent earthquakes and tsunami risks along the coast. It also faces regular hydrometeorological hazards linked to the El Niño-Southern Oscillation cycle, including heavy rainfall, flash floods and huaicos, or mudslides, that affect both coastal cities and rural Andean valleys.</p>
+<p>The broader debate is about more than geology. The evidence points to decades of unmanaged urban growth, uneven compliance with building codes and administrative centralism shaping how communities experience and recover from disasters. It also says public financial reporting has chronic under-execution of Budget Program 0068, the fund for disaster prevention and emergency reduction, while regional and municipal authorities often lack the technical teams needed for projects such as seismic retrofitting, hillside containment and river stabilization.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/recent-peru-earthquake-reopens-debate-over-disaster-response-capabilities" target="_blank" rel="noopener noreferrer" title="Telesur English / Recent Peru Earthquake Reopens Debate Over Disaster Response Capabilities">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>800 Migrants Walk to Mexico City Seeking Jobs and Regularization</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Around 800 migrants left Tapachula in southern Mexico on Friday and marched toward Mexico City, seeking jobs and faster regularization. The group included people from about ten nationalities, with many from Cuba, Haiti, Honduras, Guatemala, El Salvador, Colombia and Venezuela. Families with children, adolescents, adults, elderly people and pregnant women were among those carrying backpacks and water as they aimed to obtain official identification papers and eventually move on to northern Mexican states for stable work.</p>
+<p>Many participants said they had spent months waiting for answers from the Mexican Commission for Refugee Assistance (Comar) and left Chiapas because they faced obstacles continuing toward the United States, a lack of employment and scarce resources. Local officials in Tapachula supported the departure’s logistics, and the State Preventive Road Guard, under the Secretariat of People’s Security, led the convoy. The caravan also had an ambulance, Human Rights personnel, the National Guard and the Beta Group of the National Migration Institute, while a helicopter monitored the movement from above.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/800-migrants-mexico-jobs-regularization" target="_blank" rel="noopener noreferrer" title="Telesur English / 800 Migrants Walk to Mexico City Seeking Jobs and Regularization">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Raúl Zibechi: Lessons from the water and life assembly</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">general_news</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Raúl Zibechi’s lessons from the water and life assembly centered on the seventh assembly, which was described as showing the potential Indigenous peoples are deploying to resist dispossession and to open paths toward dignity and autonomy, while building their own worlds. The account treats that assembly as a demonstration of what these peoples are doing for themselves, rather than as a narrow or isolated meeting.</p>
+<p>He also said, “No es poco para los tremendos tiempos que corren,” which in English means it is “not little for the tremendous times that are unfolding.” That closing line is the other concrete point in the evidence: the assembly is presented as significant precisely because of the difficult moment it is being placed against.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/21/politica/014a1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Raúl Zibechi: Lessons from the water and life assembly">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,telesur_en">
+  <summary>Bolivian President Paz Dismisses Economy Minister After Legislative Censure</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Rodrigo Paz has removed Economy and Public Finance Minister José Gabriel Espinoza after Congress censured him, installing an interim replacement while leaving unanswered how quickly a permanent appointment will come and whether the move will ease anger over Bolivia’s cost-of-living crisis.</p>
+<p>The dismissal was set out in a decree published on Friday in the government’s official gazette. It named Oscar Mario Justiniano Pinto, the Minister of Sustainable Production, Environment and Water, as interim economy minister and said he would hold the post until a permanent candidate is appointed. The decree did not give a timeline for that replacement.</p>
+<p>Espinoza’s exit follows a Tuesday vote in Congress, where legislators censured him after he failed to appear before the legislature to answer questions about the economy and the government’s policies on the country’s economic crisis. One report said 91 of the 129 parliamentarians present voted for the censure after Espinoza asked to reschedule, saying he had planned trips to Santa Cruz and Brazil for official matters. Under Bolivia’s constitution, a censure leads to dismissal, and Law 1350 says the president must remove the censured minister within 24 hours once the resolution is formally communicated.</p>
+<p>The Paz government had initially said it would challenge the decision while a tribunal reviewed the dispute. The decree suggests Paz has now changed course. Telesur reported that the decree also notes a constitutional protection action had been filed and that the Third Constitutional Chamber in El Alto scheduled a hearing for August 24, but that there was no precautionary measure suspending the censure.</p>
+<p>The move comes as Paz faces public anger over economic hardship. Al Jazeera described the cabinet shake-up as likely to be seen as a concession, and noted that Paz was elected last October after promising stability and later inaugurated following nearly two decades of Movement Toward Socialism rule. His government has already been under pressure from protests over fuel subsidies and land reform, while it seeks congressional backing for economic reforms and an IMF financing programme.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/21/bolivias-president-rodrigo-paz-nixes-economy-minister-amid-unrest?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Bolivia’s President Rodrigo Paz fires economy minister amid unrest">AJ #1</a><a href="https://www.telesurenglish.net/colombian-senator-cepeda-to-challenge-suspension-of-peace-stations-opinion-programming" target="_blank" rel="noopener noreferrer" title="Telesur English / Colombian Senator Cepeda to Challenge Suspension of Peace Stations’ Opinion Programming">TE #1</a><a href="https://www.telesurenglish.net/president-rodrigo-paz-dismisses-economy-minister-after-legislative-censure" target="_blank" rel="noopener noreferrer" title="Telesur English / Bolivian President Paz Dismisses Economy Minister After Legislative Censure">TE #2</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="scmp">
+  <summary>China’s Typhoon Maysak death toll soars to 159 as region tallies catastrophic losses</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Authorities updated the official death toll from Typhoon Maysak’s floods in southern China to 159 on Friday, up from 39, after the figures were revised for the first time in six weeks. Media briefings in Nanning and Guigang in Guangxi Zhuang autonomous region said 10 people were still missing and more than 1.65 million people were affected, Xinhua reported. The typhoon also brought “historically rare, large-scale and persistent heavy rainfall” to the province.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/politics/article/3364814/chinas-typhoon-maysak-death-toll-soars-159-region-tallies-catastrophic-losses" target="_blank" rel="noopener noreferrer" title="South China Morning Post / China’s Typhoon Maysak death toll soars to 159 as region tallies catastrophic losses">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>Chinese premier chairs State Council executive meeting</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Chinese Premier Li Qiang on Friday chaired a State Council executive meeting in Beijing that heard a report on next-generation communication networks and made arrangements for further efforts to clear overdue payments owed to enterprises. The meeting also discussed measures to further improve air quality, adopted draft revisions to regulations on emergency response and investigation of power safety accidents, and approved draft regulations on market regulation offices at township level.</p>
+<p>The meeting said China will coordinate the development of terrestrial, space-based, international and integrated networks, while promoting wider use of next-generation smart devices and developing applications in smart cities and intelligent manufacturing. It also called for stronger protection of critical network infrastructure and data security, improved emergency communications, and better support for land, electricity and spectrum resources. Other points included stepped-up efforts to clear overdue payments to businesses, stronger enforcement against unfair competition, better regulation of non-cash payment instruments, stronger maintenance and safety checks of power equipment, and greater use of technology to improve market regulation and public services.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260821/691ad335df3f408da7cb2309fdb201aa/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Chinese premier chairs State Council executive meeting">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China&#x27;s Wuhan turns to Yangtze River for cooling solutions</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Wuhan, a centralized river-water cooling system is helping cool a primary school and a commercial complex amid sweltering conditions in central China, drawing on the Yangtze River. The project is currently servicing about 260,000 square meters of building space and is expected to eventually provide air conditioning across more than 2.1 million square meters. Xinhua News Agency English reported the project.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260821/e7fbadbcc0664499a85777ca11e2cb66/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China&#x27;s Wuhan turns to Yangtze River for cooling solutions">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>Macao&#x27;s visitor arrivals up 2.4 pct year on year in July</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Macao’s visitor arrivals rose 2.4 percent year on year to 3,542,218 in July 2026, the special administrative region’s Statistics and Census Service (DSEC) said Friday. Same-day visitors increased 6.4 percent to 2,107,744, while overnight visitors fell 2.9 percent to 1,434,474. The average length of stay shortened by 0.1 day to 1.1 days. In the first seven months of 2026, visitor arrivals increased 8 percent year on year.</p>
+<p>The same DSEC release said Macao’s composite consumer price index rose 1.12 percent year on year in July, while edging down 0.01 percent month on month. The price index of food and non-alcoholic beverages rose 1.22 percent, driven by higher charges for dining out and takeaway services, and the transport index increased 2.29 percent due to higher airfares and gasoline prices. For the first seven months of 2026, the average composite CPI increased 1.11 percent year on year, and the average CPI for the 12 months ended July rose 0.88 percent from the previous period.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260821/1d437c8148474151a62411baeb2a7e98/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Macao&#x27;s composite CPI up 1.12 pct in July">XNAE #1</a><a href="https://english.news.cn/20260821/f0f6480c63ca4cc2a247b0386f01578c/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Macao&#x27;s visitor arrivals up 2.4 pct year on year in July">XNAE #2</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>TikTok, ByteDance agree to US$400 million settlement with US over children’s privacy suit</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">TikTok and its Chinese parent ByteDance have agreed to pay US$400 million to settle a US Justice Department lawsuit accusing the video-sharing app of violating children’s online privacy laws. The settlement was announced on Friday and resolves allegations brought by the Justice Department and the US Federal Trade Commission in 2024 that TikTok and ByteDance collected personal information from children. The deal closes a major federal case as TikTok’s American operations remain under intense political scrutiny.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/diplomacy/article/3364895/tiktok-bytedance-agree-us400-million-settlement-us-over-childrens-privacy-suit" target="_blank" rel="noopener noreferrer" title="South China Morning Post / TikTok, ByteDance agree to US$400 million settlement with US over children’s privacy suit">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>&#x27;Bloodline punishment&#x27;: Iranian family faces ongoing punitive ICE detention</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Los Angeles-based Iranian family has spent more than 130 days in Immigration and Customs Enforcement detention, according to the family’s account, after their relative’s political activity nearly 50 years ago. Iranian academic Maryam Tahmasebi said her husband, Eissa Hashemi, their 16-year-old son and she were detained after their green cards were stripped following an online campaign. Tahmasebi wrote that the three permanent residents had no criminal history.</p>
+<p>Tahmasebi said Hashemi was arrested on 9 April and she and her son were arrested the next day on the way to the boy’s school. In her letter, she called the situation “bloodline punishment” and said she asked to be reunited with her husband but was told that “family separation is the policy and the rule.” She also wrote that the family sought voluntary departure from the United States, but that request was blocked by the government. The Department of Homeland Security, however, described the three as “individuals whose presence in the United States posed a clear threat to our national security and foreign policy,” according to a statement given to NBC Los Angeles.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/bloodline-punishment-iranian-family-faces-ongoing-punitive-ice-detention" target="_blank" rel="noopener noreferrer" title="Middle East Eye / &#x27;Bloodline punishment&#x27;: Iranian family faces ongoing punitive ICE detention">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Experts raise alarm over Trump’s public consultation on vaccines policy</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Trump administration asked for public feedback on changes to the way it recommends vaccines, in a move experts said could open the door to greater access challenges and confusion. In a notice published by the health and human services department to the Federal Register on Friday, officials said they want comments on the current categories for vaccine recommendations — routine, risk-based and shared clinical decision-making — and on whether “additional or different categories should be adopted.” The notice says public input will help the department and its task force consider whether the current structure serves scientific rigor, informed choice and public trust.</p>
+<p>Dorit Reiss, a vaccine law expert at UC Law San Francisco, said asking for public comments is “appropriate and right,” but called the notice strange because this kind of categorization would normally be handled by experts at the Centers for Disease Control and Prevention or its advisory committee on immunization practices, ACIP. Wendy Parmet, a public health law scholar at Northeastern University, said reviewing the categories may be appropriate but that the “shared clinical decision making nomenclature” is confusing. Parmet said it is troubling that the process was initiated by HHS in support of the task force on safer childhood vaccines implemented by Robert F Kennedy Jr rather than by ACIP or CDC.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/21/trump-administration-public-comment-vaccines" target="_blank" rel="noopener noreferrer" title="The Guardian / Experts raise alarm over Trump’s public consultation on vaccines policy">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>The residents of Gátova, in Valencia, evacuated due to the Segorbe forest fire</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Residents of Gátova in Valencia were evacuated after a nighttime forest fire between Segorbe and Gátova spread through the Sierra de la Calderona, forcing authorities to request UME support, send an Es-Alert, and race to contain a blaze that had already burned 423 hectares.</p>
+<p>The fire was one of several that broke out late yesterday after a strong electrical storm across the Valencian Community, but the Generalitat treated this one as the most worrying. The Castellón Firefighters Consortium said the blaze turned “violent” and “extreme,” becoming “very negative” from two in the afternoon as wind direction and speed changed. José Melitón, who heads the extinction operation, said wind has complicated the effort and that “headwinds, high temperatures, and dryness are all factors against extinction.”</p>
+<p>Ground teams were working at three hot spots with difficult access, while aerial units were deployed because the terrain made containment hard. By around 8:30 p.m., Emergencies and Interior Minister Juan Carlos Valderrama said the fire had scorched 423 hectares. He also said between 250 and 280 personnel were on the ground, and that the Generalitat had asked for UME support and sent an Es-Alert after five o’clock to evacuate Gátova as the flames advanced.</p>
+<p>The evacuation escalated after earlier warnings. Residents had first received a message around three in the afternoon telling them to stay indoors and close doors and windows because of smoke. Two hours later, as the fire evolved, the Generalitat ordered evacuation to a shelter set up at Bétera’s municipal sports complex, while some displaced people were also moved elsewhere, including vulnerable residents sent to a care home in Carlet. Valderrama said about a thousand people were evacuated in total.</p>
+<p>President of the Generalitat Juan Francisco Pérez Llorca attended a Cecopi meeting at seven in the evening with Government delegate Pilar Bernabé and Minister Diana Morant. He said all administrations were acting in a coordinated manner to resolve the fire as soon as possible. With tonight’s wind and humidity expected to improve, Melitón said he was “a little optimistic,” but the operation was still relying on a narrow window before conditions were forecast to worsen again around midday.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/comunidad-valenciana/2026-08-21/las-tormentas-provocan-un-incendio-forestal-entre-segorbe-y-gatova-en-la-sierra-de-la-calderona.html" target="_blank" rel="noopener noreferrer" title="El País / The residents of Gátova, in Valencia, evacuated due to the Segorbe forest fire">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>The United States has Imposed Nine Rounds of Sanctions on Cuba to Strangle Strategic Sectors</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Since May, the United States has imposed nine rounds of sanctions on Cuba, targeting 31 individuals and 49 companies under Executive Order 14404 of May 1 signed by President Donald Trump, according to Telesur English. The measures were presented as a way to stop foreign companies from doing business with entities and individuals linked to the Cuban government and to curb their involvement in energy, defense, finance, mining and security.</p>
+<p>The latest sanctions list includes directors of the Cuban Institute of Friendship with the Peoples (ICAP), the Ministry of Construction, the Comandante Ernesto Che Guevara Nickel Company, Metalcuba, the Geominero Salinero Business Group (Geominsal), Acinox Comercial, Coratur, Transimport, Consumimport and Acorec. Cuba described the campaign as a “failed obsession” and said its leadership has implemented 176 reforms while facing an energy and economic crisis.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/the-united-states-has-imposed-nine-rounds-of-sanctions-on-cuba-to-strangle-strategic-sectors" target="_blank" rel="noopener noreferrer" title="Telesur English / The United States has Imposed Nine Rounds of Sanctions on Cuba to Strangle Strategic Sectors">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="peoples_daily_en">
+  <summary>China&#x27;s Ecological and Environmental Code: Original value and global contributions</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Ecological and Environmental Code took effect on Aug. 15, 2026, becoming China’s second law named a “code” after the Civil Code and the world’s first code specifically named after the ecological environment. Supporters say its significance lies in how it tries to fit China’s own environmental pressures and legal practice rather than copy foreign models.</p>
+<p>Huang Haihua, director of the Research Office under the Legislative Affairs Commission of the Standing Committee of the National People’s Congress, said the code consolidates China’s theoretical, institutional and practical achievements in ecological civilization and marks a new phase in systematic, law-based environmental governance. He pointed to a shift in legal thinking: in 1989, the Environmental Protection Law said environmental protection should be coordinated with economic and social development, while the 2014 revision reversed the order. The new code goes further, requiring coordination of industrial restructuring, pollution prevention and control, ecological conservation and climate-change response, while pursuing the synergy of carbon reduction, pollution abatement, ecological expansion and economic growth.</p>
+<h3>A Chinese framework with global ambitions</h3>
+<p>The code’s original value, as described in the evidence, is its integrated structure. It brings together pollution prevention and control, ecological conservation, and green and low-carbon development under one legal framework, instead of leaving environmental issues split across separate laws. That approach also moves beyond regulating air, water or soil in isolation and instead emphasizes systems thinking around problems, goals and tools. The code even adds a dedicated section on green and low-carbon development, along with a section on international cooperation covering participation in and leadership of global climate governance and bilateral and multilateral exchanges.</p>
+<p>Huang said the code also has global significance because it elevates mature Chinese practices into legal provisions while leaving room for further exploration. The evidence says it includes new rules for emerging issues such as new chemical substances, electromagnetic radiation and light pollution. It also creates a dual-control system for total carbon emissions and carbon intensity, and it supports renewable energy, lower fossil fuel use and green and low-carbon technologies. The code’s international influence, the evidence says, will depend not only on its design but also on how effectively it is implemented.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0821/c90000-20491068.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China&#x27;s Ecological and Environmental Code: Original value and global contributions">PDE #1</a><a href="https://en.people.cn/n3/2026/0821/c90000-20491106.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China advances ecological governance under the rule of law">PDE #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Australia charges dual citizen accused of spying for Russia in Ukraine</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Australian police charged a 27-year-old Russian-Australian man with foreign interference on Friday, alleging he sought to pass intelligence about Ukrainian military activities to Russia. Federal police commissioner Krissy Barrett said the man had undergone “military-style” training in Russia and later joined the Ukrainian armed forces. He was scheduled to face charges at a court hearing in Brisbane on Friday.</p>
+<p>Barrett said police allege he travelled to Russia for the training in October 2024, returned to Australia and maintained contact with people he believed were linked to Moscow’s intelligence services, then travelled to Ukraine in 2025. There, police allege, he enlisted in the armed forces, gained access to information about military personnel, units and locations, and provided or tried to provide that information to people he believed were acting for Russian intelligence services. Barrett said search warrants had been executed and further arrests were a possibility. ASIO deputy director general Claire McGuinness said the case should put regimes perpetrating foreign interference on notice.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/asia/australasia/article/3364856/australia-charges-dual-citizen-accused-spying-russia-ukraine" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Australia charges dual citizen accused of spying for Russia in Ukraine">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Under-fives and pregnant women told to avoid runny eggs when eating out over salmonella risk</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Vulnerable people have been warned not to eat under-cooked or runny eggs when eating out because of a developing salmonella outbreak. The Food Standards Agency told the BBC that under-fives, over-65s, pregnant women and people with health conditions should avoid runny eggs and freshly made products that may contain uncooked eggs, including mayonnaise, soufflé and hollandaise sauce. The FSA said well-cooked eggs in restaurants, cafés and takeaways were fine to eat. The warning follows a national salmonella food-poisoning outbreak declared by the UK Health Security Agency after one person died and hundreds more fell ill.</p>
+<p>FSA chief scientific adviser Ian Young said eggs or egg-containing products in cafés and restaurants should be “very well cooked” for young, elderly, pregnant or vulnerable people, and described the outbreak as “unusually large and rapidly increasing.” He said British eggs bought from supermarkets were still fine, adding: “There is no link to those eggs to this current outbreak.” Mark Williams, chief executive of the British Egg Industry Council, said British eggs were safe to eat runny, even for vulnerable people, and asked customers to check whether British Lion eggs were being used.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cx2krdggx6xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Under-fives and pregnant women told to avoid runny eggs when eating out over salmonella risk">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,axios,bbc,el_pais,guardian,scmp,telesur_en">
+  <summary>US Supreme Court allows Trump’s ballroom project to continue for now</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Supreme Court let Donald Trump keep work going on his White House ballroom project on Friday, temporarily blocking a lower-court halt while it considers whether the administration needed congressional approval for the $400m build.</p>
+<p>Chief Justice John Roberts signed the temporary order, allowing construction to continue while the court weighs an emergency appeal from the Trump administration. The move pauses a deadline that would have forced work to stop, but it does not decide the legality of the project itself. Trump quickly thanked the court on social media and said the ballroom was “THE GREATEST OF ITS KIND”, calling it “vital for National Security.”</p>
+<p>The dispute has already moved through lower courts. In December, the National Trust for Historic Preservation sued to stop the project, arguing Trump had no unilateral authority to do the work. Earlier this month, a federal appeals court upheld an injunction that said the ballroom likely required congressional approval. Two judges on that panel, both appointed by Democrats, wrote that “Whether or not a massive ballroom should be constructed is for Congress to decide and is not a matter for Executive self-help.” A third judge, appointed by Trump, dissented and said the National Trust had no legal right to sue.</p>
+<p>The administration has argued in court filings that the ballroom and related work are necessary for national security. Justice Department lawyers said the case involves an “extraordinary and unlawful injunction” against an “integrated military complex” with a “totally secure ballroom space.” They said the overall East Wing project is about 65 percent complete, and that crews are working 20 hours a day, seven days a week. Trump’s team also said the ballroom would be roughly 8,400 square metres, or 90,000 square feet, and that the East Wing has already been demolished as part of the work.</p>
+<p>The stay gives the justices more time to consider the administration’s request while the lawsuit continues. It also leaves unresolved the central question at the heart of the case: whether the president can move ahead with such a major alteration to the White House without Congress.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/21/us-supreme-court-allows-trumps-ballroom-project-to-continue-for-now?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US Supreme Court allows Trump’s ballroom project to continue for now">AJ #1</a><a href="https://www.axios.com/2026/08/21/trump-ballroom-construction-supreme-court" target="_blank" rel="noopener noreferrer" title="Axios / Supreme Court allows Trump&#x27;s ballroom construction to proceed for now">Axios #1</a><a href="https://www.bbc.co.uk/news/articles/c78g2vq6nx6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Supreme Court temporarily unfreezes Trump ballroom construction">BBC #1</a><a href="https://elpais.com/us/2026-08-21/el-tribunal-supremo-permite-que-trump-continue-por-ahora-con-la-construccion-del-salon-de-baile-en-la-casa-blanca.html" target="_blank" rel="noopener noreferrer" title="El País / The Supreme Court Allows Trump to Proceed, for Now, with the White House Ballroom Construction">El Pais #1</a><a href="https://www.theguardian.com/us-news/2026/aug/21/white-house-ballroom-construction-scotus" target="_blank" rel="noopener noreferrer" title="The Guardian / US supreme court lets Trump continue work on White House ballroom for now">Guardian #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3364894/us-supreme-court-lets-trump-continue-work-white-house-ballroom-now" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US Supreme Court lets Trump continue work on White House ballroom for now">SCMP #1</a><a href="https://www.telesurenglish.net/u-s-allows-trump-ballroom-construction" target="_blank" rel="noopener noreferrer" title="Telesur English / U.S. Supreme Court Allows Trump to Resume White House Ballroom Construction">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>Caring for a 104kg senior alone – the risks when domestic workers lack caregiving training</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Myanmar domestic worker’s experience caring for older people in Singapore has brought attention to a wider problem: migrant domestic workers can be pushed into caregiving roles without enough training, leaving both workers and care recipients exposed to strain and mistakes.</p>
+<p>Anna, not her real name, came to Singapore in 2023 after getting a job as a domestic worker and hoping to care for seniors. Her first two jobs quickly showed her how demanding the work could be. She was first assigned as the sole caregiver for a woman in her 80s with dementia, who had no family in Singapore because her daughter was overseas. “I had no experience; it was very difficult,” Anna said. “I didn’t know what to do.” She added that the older woman’s needs became heavier after a fall left her wheelchair-bound, while deteriorating memory and mood added to Anna’s mental and emotional strain.</p>
+<p>Her experience matches concerns raised by others in the sector. In January, labour Member of Parliament Yeo Wan Ling called for better support for domestic workers who take on caregiving duties, including more training schemes, subsidies such as the Caregivers Training Grant, and stronger job-matching standards. HOME said it regularly meets workers expected to handle substantial caregiving responsibilities despite having little or no relevant training or experience, warning that insufficient training can raise fatigue, stress and risks for both the caregiver and the person receiving care.</p>
+<p>Families and agencies said training, clearer expectations and better matching matter because caregiving is not something workers can simply learn on the job. Anna later transferred to a new agency and was matched with an employer who enrolled her in a caregiving course before she started looking after his parents-in-law. Three years after arriving, she is now doing the work she wanted to do, but with a better understanding of what it takes.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/today/ground-up/domestic-worker-helper-maid-caregiver-training-elderly-senior-special-needs-6332566" target="_blank" rel="noopener noreferrer" title="CNA / Caring for a 104kg senior alone – the risks when domestic workers lack caregiving training">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="nikkei_asia">
+  <summary>Singapore breeds mosquito &#x27;studs&#x27; by the millions for war on dengue</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Singapore is breeding mosquito “studs” by the millions in an effort to fight dengue. On May 25, a National Environment Agency staffer released Wolbachia-infected male mosquitoes at a public housing estate in northeast Singapore. The mosquitoes were carried in a black cylinder through the block, which at first glance looked like a thermos. The project uses bacteria-infected bugs as health officials work against the sometimes-deadly virus.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/spotlight/big-in-asia/singapore-breeds-mosquito-studs-by-the-millions-for-war-on-dengue" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Singapore breeds mosquito &#x27;studs&#x27; by the millions for war on dengue">NA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Iran president says time to end war while Tehran is in position of strength</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iranian President Masoud Pezeshkian said on Friday it was time to end the months-long Middle East war with the US, saying Tehran appeared to be in a stronger position than Washington. In a meeting with doctors, he said, “It is better that we bring the war to an end now as we are in a position of power and dignity,” while talks between the long-time foes remained on hold and the war started by the US and Israel in February stayed locked in a stalemate. He also said Tehran was keeping the key Strait of Hormuz partially shut, while Washington continued a naval counter-blockade of Iran.</p>
+<p>Pezeshkian defended a June memorandum of understanding with the US aimed at ending the war, saying it did not signal defeat for Tehran. “They cannot find even a single clause in this agreement that indicates capitulation,” he said. “All the commitments concern the other side.” His remarks came weeks after Iran’s supreme leader Mojtaba Khamenei said he had approved the deal despite having “different views.” Tehran’s claim to be in a stronger position followed a US announcement that it would ramp up sanctions, which Iran’s foreign ministry called “economic terrorism”; Scott Bessent said Washington would “collapse” the Iranian regime with the threatened campaign.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/middle-east/article/3364893/iran-president-says-time-end-war-while-tehran-position-strength" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Iran president says time to end war while Tehran is in position of strength">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="mail_guardian">
+  <summary>Khumalo and Crime Intelligence co-accused cleared as NPA withdraws charges</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The National Prosecuting Authority withdrew fraud and corruption charges against Crime Intelligence head Dumisani Khumalo and his six co-accused when they appeared in the Pretoria Magistrate’s Court on Friday, 21 August 2026. The state confirmed the withdrawal in court, and the magistrate said all the charges had been withdrawn and the accused were free to go. The court accepted the decision, and the matter cannot be re-enrolled without the express written approval of National Director of Public Prosecutions Andy Mothibi.</p>
+<p>Khumalo had been charged alongside Brigadier Dineo Mokwele, Major-General Philani Lushaba, Major-General Nosipho Precious Madondo, Major-General Josias Lekalakala, Major-General Zwelithini Gabela and Brigadier Phindile Ncube. The case centred on Mokwele’s appointment to the rank of brigadier in Crime Intelligence’s Technical Support Services. Idac had alleged that she was unqualified, lacked the required police experience and was appointed irregularly, although former Idac head advocate Andrea Johnson later conceded before the Madlanga Commission of Inquiry that Mokwele was qualified as an industrial engineer for the technical support role.</p></div>
+  <div class="source-list"><a href="https://mg.co.za/news/south-africa/2026-08-21-khumalo-and-crime-intelligence-co-accused-cleared-as-npa-withdraws-charges" target="_blank" rel="noopener noreferrer" title="Mail &amp; Guardian / Khumalo and Crime Intelligence co-accused cleared as NPA withdraws charges">Mail &amp; Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Deselected candidate claims Lib Dems’ religious discrimination cost him £790,000</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">David Campanale is seeking about £790,000 from the Liberal Democrats in a case before the Central London county court, saying discrimination against his Christianity cost him his political career. Campanale, a former BBC journalist, was selected in 2021 as the party’s candidate for Sutton and Cheam and was removed in August 2023. His schedule of loss, seen by The Guardian, puts the claim at £788,740.75 including interest, and the party has admitted claims of direct and indirect discrimination on grounds of religion or belief under the Equality Act, along with a failure to deal with his complaints, leaving damages for the court to तयermine.</p>
+<p>In a counter-schedule filed on Friday, the Liberal Democrats described the claim as “grossly inflated and egregious”. Their lawyers say £14,000 should be awarded for injury to feelings, and that Campanale, as a volunteer political party member, could have been expected to withstand “rigorous political debate and criticism”. They put aggravated damages, past and future loss of earnings, an MP’s pension and loss of political capital at £0. Campanale says he was mocked and abused over his Christian beliefs and faced an organised campaign to remove him.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/aug/21/deselected-candidate-claims-lib-dems-religious-discrimination-cost-him-790000" target="_blank" rel="noopener noreferrer" title="The Guardian / Deselected candidate claims Lib Dems’ religious discrimination cost him £790,000">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Texas slashes $50m judgment against Alex Jones over false claim Sandy Hook shooting was hoax</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Texas appeals court has cut a $50 million judgment against Alex Jones to $1.5 million over his false claim that the 2012 Sandy Hook school shooting in Newtown, Connecticut, was a hoax. Jones, the founder of Infowars, had been found liable with his company, Free Speech Systems, for damages after parents Neil Heslin and Scarlett Lewis sued over the hoax claims. The court said they did not show enough evidence that harassment stirred up by Jones’s claims rose to a level that would let them exceed Texas’s $750,000 cap on damages.</p>
+<p>The ruling does not affect a separate $1.4 billion judgment against Jones in Connecticut. Jones’s efforts to meet the awards have been tied up in legal wrangling, and bankruptcy proceedings continue after he dropped a petition and placed himself and his company into bankruptcy in 2024. He has also fought to keep control of Infowars, while a proposed leasing deal involving Global Tetrahedron, the Onion’s parent company, remains in limbo because of appeals.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/21/alex-jones-texas-court-sandy-hook-school-shooting-hoax" target="_blank" rel="noopener noreferrer" title="The Guardian / Texas slashes $50m judgment against Alex Jones over false claim Sandy Hook shooting was hoax">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>Website that falsely claimed to have MFA links blocked by Singapore police</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Three websites that had been flagged for false links to Singapore institutions, including the Ministry of Foreign Affairs (MFA), were no longer accessible as of Thursday (Aug 20). Singapore police ordered the Global Asia Think Tank website to be blocked, while Great Vision consultancy and Afforesight were believed to have been taken down by their site owners. On Friday, the Singapore Police Force said it had issued an access blocking direction under the Online Criminal Harms Act to Global Asia Think Tank after assessing information from a police report lodged by MFA.</p>
+<p>Global Asia had said on its website that it was supported by MFA and had worked with the Lee Kuan Yew School of Public Policy at the National University of Singapore and the Nanyang Technological University’s S Rajaratnam School of International Studies. MFA said it does not and has not supported Global Asia and called claims by Global Asia and Great Vision “misrepresentations”. LKYSPP said the claims on Global Asia’s website were false and that it has “no relationship” with the entity, while an RSIS representative said it has “no knowledge” of Global Asia.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/global-asia-false-website-blocked-police-6333411" target="_blank" rel="noopener noreferrer" title="CNA / Website that falsely claimed to have MFA links blocked by Singapore police">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Twelve Arab and Muslim Countries Condemn Israeli Airstrikes in Syria</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Friday, foreign ministers of Turkey, Algeria, Indonesia, Jordan, Lebanon, Malaysia, Mauritania, Pakistan, Palestine, Qatar, Saudi Arabia and Somalia issued a joint statement condemning the recent Israeli airstrikes against the Abu al-Duhur military base in Syria as an extreme escalation. They called the strikes a flagrant violation of Syria’s sovereignty, territorial integrity and political unity, and said continued attacks on Syrian territory and infrastructure could jeopardize Damascus’s efforts to restore security, rebuild institutions and address the humanitarian consequences of years of conflict.</p>
+<p>The same ministers said the violations could raise regional tensions, undermine peace and stability, and weaken respect for international law and the UN Charter. They called for a firm international response, compliance with the 1974 Disengagement Agreement, and the withdrawal of Israeli forces from occupied territories. In a second statement, foreign ministers of the United Arab Emirates, Saudi Arabia, Qatar, Jordan, Indonesia, Pakistan, Turkey and Egypt condemned Israeli settlement expansion in the occupied Palestinian territory and rejected the E1 settlement plan and related activity in East Jerusalem, while warning that the project threatens territorial continuity between the West Bank and East Jerusalem and the prospect of a contiguous Palestinian state.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/twelve-arab-and-muslim-countries-condemn-israeli-airstrikes-in-syria" target="_blank" rel="noopener noreferrer" title="Telesur English / Twelve Arab and Muslim Countries Condemn Israeli Airstrikes in Syria">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>SSPC may continue litigation against former collaborators of Genaro García Luna</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Supreme Court of Justice of the Nation opened the way for the Secretariat of Security and Citizen Protection, led by Omar García Harfuch, to continue legal actions over the patrimonial damage tied to the improper awarding of prison-construction contracts during Genaro García Luna’s tenure. The ruling concerns the SSPC’s attempt to keep pursuing an amparo in a case linked to alleged irregularities in contracts and agreements for the construction and operation of eight penitentiaries, which were said to have caused damage of more than 5 billion pesos.</p>
+<p>By seven votes to two, the plenary approved a project by minister Loretta Ortiz Ahlf and, for the first time, recognized that a state secretariat can promote a direct amparo when it seeks to defend public resources from its own budget under Article 7 of the Amparo Law. The court overturned a tribunal ruling from October 2023 that had dismissed the case for lack of standing. The amparo stemmed from a 2020 complaint against 16 former public servants, and the prisons were built in Chiapas, Michoacán, Durango, Coahuila, Morelos, Sonora, Guanajuato and Oaxaca.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/21/politica/012n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / SSPC may continue litigation against former collaborators of Genaro García Luna">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="cnn">
+  <summary>‘Life is not rosy here’: Migrant workers in Spain’s greenhouses tell of poor pay and hardships</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Migrant workers in Spain’s greenhouse belt around Almería are describing low pay, informal settlements and basic-living conditions without electricity or running water, highlighting the gap between Europe’s winter produce supply and the people harvesting it.</p>
+<p>Amoateng Foster, 44, now lives in an informal settlement for migrants in Almería province after leaving Ghana, where he had been a math teacher, and making a journey through the Sahel toward Libya, across the Mediterranean into Italy and then into Spain. He spends his days in Don Domingo de Arriba, one of the makeshift neighborhoods in the area around Níjar, northeast of Almería, where hundreds of people live in shelters built from brick, mortar, tires and plastic. Foster said, “It’s not easy being here if you don’t have proper documentation,” and added: “It’s not rosy here.”</p>
+<p>The greenhouses surrounding the settlement produce fruit and vegetables for European markets during the winter, but workers described harsh conditions and pay that can be very low for those without secure papers. Foster said some laborers are paid about five euros an hour, and others told CNN they had seen rates as low as four euros. By contrast, workers with paperwork in order often earn at least Spain’s minimum wage of 8 euros an hour.</p>
+<p>Foster said the life many migrants imagined in Europe has proved “immeasurably hard and degrading in many ways.” In Don Domingo de Arriba, he and thousands of others live without official electricity or running water, while some four settlements have been identified in the wider area around Níjar.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/21/europe/spain-migrant-workers-conditions-intl" target="_blank" rel="noopener noreferrer" title="CNN / ‘Life is not rosy here’: Migrant workers in Spain’s greenhouses tell of poor pay and hardships">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="al_jazeera_en,scmp">
+  <summary>Trump waives ‘out-of-quota’ beef tariffs for 90 days to lower prices</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump said he will temporarily let more foreign ground beef into the United States without the higher “out-of-quota” tariff, saying the move should lower prices for American consumers even as cattle ranchers warn that cheaper imports could hurt them.</p>
+<p>On Friday, Trump posted that he had made a deal to “substantially lower” the price of ground beef, and said up to 300,000 tonnes could be imported over the next 90 days with no higher tariff. He wrote that the beef would be sold at 25 percent below current market prices and said the agreement would “reduce prices for Americans while giving space for our Great American Beef Herd to grow again.”</p>
+<p>Trump did not say which country he had reached the deal with or which companies had agreed to sell at below-market prices. When asked for details, a White House official said Trump would formally sign an executive order “within the next two weeks” and said foreign beef exporters had agreed to provide a 25 percent discount to be passed on to consumers.</p>
+<p>The decision comes as beef prices have stayed high. Trump blamed former President Joe Biden for the rise, writing that under Biden “beef prices soared at their fastest rate” and the American beef herd fell to its smallest size in modern history. He also pointed to the price of ground beef, saying it was $5.55 a pound when he returned to the White House; by July, according to US Bureau of Labor Statistics data cited in the reporting, it had risen to $6.89.</p>
+<h3>Pressure on prices, pressure on ranchers</h3>
+<p>The announcement also lands in a political fight over the cost of living. One of Trump’s Republican allies, US Senator Tim Sheehy of Montana, said the move would “further harm” cattle ranching families and American farm groups. The Trump administration has struggled to bring beef costs down, with supply squeezed by a smaller cattle herd and other limits on imports.</p>
+<p>Trump’s latest move follows earlier efforts to increase beef imports, including expanding imports of beef trimmings from Argentina to cool ground beef prices.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/21/trump-waives-out-of-quota-beef-tariffs-for-90-days-to-lower-prices?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Trump waives ‘out-of-quota’ beef tariffs for 90 days to lower prices">AJ #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3364863/trump-eases-tariffs-ground-beef-imports-90-days" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump eases tariffs on ground beef imports for 90 days">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-section="undercovered_watchlist" data-sources="la_jornada">
+  <summary>Comprehensive care will be provided for diabetes, chronic kidney disease, and heart conditions</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Health Secretariat (Ssa) announced a new care model for diabetes, chronic kidney disease and heart conditions, saying they will be treated comprehensively under a new clinical entity: the cardio-renal-metabolic syndrome. David Kershenobich, head of the dependency, said the conditions share risk factors and body changes. He also said they cause four out of ten deaths in the country, more than 300,000 a year, and that obesity is linked to one third of a serious health problem that has grown steadily for three decades. Gustavo Reyes Terán, medical director of Issste, said the high prevalence of these diseases and the premature deaths they cause have left life expectancy in Mexico unchanged for 20 years, at an average of 75 years.</p>
+<p>The new scheme will strengthen prevention and add more than 50 drug options in family clinics and health centers, including semaglutide and dapagliflozin. It will also incorporate single-tablet medicines with two or three active substances for blood pressure control. Kershenobich said this is meant to improve adherence for diabetes, hypertension and chronic kidney disease, which affect 14.4 million, 21.3 million and 9.2 million people, respectively. He said that from January 2027 there will be 12,000 new first-contact clinics as part of the Universal Health Service, to reduce out-of-pocket spending and provide continuous care.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/21/politica/007n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Comprehensive care will be provided for diabetes, chronic kidney disease, and heart conditions">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>EnvHarness: Awakening Static Worlds for Agent Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">EnvHarness: Awakening Static Worlds for Agent Learning proposes EnvHarness, a programmable layer of plug-in components that wraps a static environment and reshapes its behavior without changing the underlying logic. The preprint says LLM agents learn by interacting with environments that are hand-built and static, so they can miss an agent’s weaknesses and quickly fall behind as the agent improves. It also says recent environment-generation methods often depend on domain-specific pipelines, expensive or unreliable verifiers, and still produce static environments.</p>
+<p>To automate the approach, the paper introduces EnvRigger, which treats the target policy as a black box, observes execution trajectories to synthesize EnvHarness components aimed at diagnosed flaws, and validates them with fresh rollouts. Across five benchmarks in four domains, EnvHarness outperformed both the original environments and domain-specific environment-generation pipelines, with up to a 9.0-point improvement on held-out instances and 9.8% fewer execution steps. The preprint also says EnvHarness provides a stronger optimization signal for reinforcement learning, enabling continuous, targeted co-evolution of the policy and its environment.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.19880v1" target="_blank" rel="noopener noreferrer" title="arXiv / EnvHarness: Awakening Static Worlds for Agent Learning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Preserving Source Intent and Executable State in Terminal Task Synthesis</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced FACET to make terminal-agent training tasks more reliable by keeping source intent and executable state aligned across instructions, environments, solutions, and verifiers, after finding that multi-stage synthesis can strip away constraints and leave tasks unsolvable or misgraded.</p>
+<h3>Why terminal tasks can go wrong</h3>
+<p>The work starts from a basic problem in terminal-agent training: each task is a tightly linked bundle of an instruction, an initialized environment, a reference solution, and an executable verifier. If those pieces are generated from inconsistent assumptions, the task can become unsolvable or be judged incorrectly.</p>
+<p>The authors say existing multi-stage synthesis can also lose important details from the source material, including goals, dependencies, state transitions, and procedural constraints. In their framing, a terminal task should not be treated as separate parts assembled later, but as one executable whole.</p>
+<h3>What FACET does differently</h3>
+<p>FACET, short for Fine-grained Agentic Construction of Executable Tasks, is designed to preserve information during synthesis and keep the artifacts aligned with one another. The pipeline first reconstructs related agent skills into a richer scenario, then builds the environment before generating the final task components.</p>
+<p>The framework works through a shared specification. It first collects skill packages from OpenClaw, ClawHub, and GitHub, then uses a model-based judge to keep only scenarios and skills that are relevant, complementary, non-redundant, and executable as a terminal workflow. The retained skills are organized into five top-level and 34 fine-grained categories.</p>
+<p>From there, FACET reconstructs each scenario along five dimensions: goal, context, capability, state, and inputs/outputs/tools. The paper says this is meant to preserve the underlying workflow rather than compress it into a simplified task description. A consistency-alignment model then checks that the instruction and solution share the same initial state and target outcome, and that the verifier can observe the required effects.</p>
+<p>Stage 3 grounds the task in a realized container state. The environment is built and repaired first, then the system records the initial state and uses that shared state to generate the final instruction, solution, and verifier. If validation fails, the pipeline identifies which artifact is responsible and repairs only that piece rather than regenerating everything.</p>
+<h3>What the experiments showed</h3>
+<p>The preprint says FACET produced 6,078 validated tasks from 7,852 scenario-skill seeds. It also reports 71,341 retained skills and says the dataset’s validated tasks average 22.77 executable tests per task, more than the comparison datasets listed in the paper.</p>
+<p>For supervision, the authors used rollout data from about 6,000 validated tasks and selected 1,200 complete successful trajectories for supervised fine-tuning. Across those trajectories, they report that 89.40% of individual checks were satisfied, but only 20.94% of completed rollouts reached full task success, with 54.00% of unsuccessful rollouts failing only one or two verifier checks.</p>
+<p>On Terminal-Bench 2.1, fine-tuning on FACET data improved all three Qwen3.5 base models they tested. Qwen3.5-4B rose from 17.60 to 24.72, Qwen3.5-9B from 27.34 to 35.58, and Qwen3.5-27B from 40.82 to 47.57. The paper says the 27B model ended only 1.49 points below Qwen3.5-397B under the same evaluation setting.</p>
+<p>The authors also compare generation orders. In one analysis of 100 scenario-skill pairs, forward generation delivered 99 tasks to validation and 46 were initially valid, reverse generation delivered 91 and 22 were initially valid, and joint generation delivered 96 and 36 were initially valid. The paper says forward generation had the highest initial validity, while reverse generation produced the most contract mismatches.</p>
+<p>Overall, FACET’s claim is that source-intent preservation and shared executable-state grounding are key to building scalable terminal tasks that stay valid from instruction through verification.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.18580v1" target="_blank" rel="noopener noreferrer" title="arXiv / Preserving Source Intent and Executable State in Terminal Task Synthesis">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>4DAnyone: Create Anyone in 4D from a Casual Monocular Video</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">4DAnyone turns a casually captured monocular human video into multiview-consistent footage for 4D Gaussian Splatting, aiming to let a subject filmed with a phone be rendered from free viewpoints; the hard part is keeping many generated views coherent enough for reconstruction.</p>
+<h3>What the system is designed to do</h3>
+<p>The setup starts from a source video of a person, typically with mild camera motion and unknown camera intrinsics and poses. From that single input, 4DAnyone generates multiple target-view videos that stay consistent with one another, then lifts them into 4D Gaussian Splatting so the subject can be rendered in 4D from new viewpoints.</p>
+<p>One figure shows the idea as a continuous 3D scene: a smartphone at the lower left films a bass-playing subject, a ring of 24 generated camera views surrounds the stage, and the reconstructed subject stands at the center on a turntable. The paper frames this as a route from uncalibrated monocular capture to reconstruction-grade multiview video.</p>
+<p>The authors say the challenge is that existing camera-controlled video diffusion models can make plausible novel views, but they do not stay consistent once the number of target views grows to the tens needed for 4DGS reconstruction. They identify that breakdown as a bounded-attention-context problem: when target views exceed what a single DiT forward pass can handle, the views have to be split into groups, and that creates two bottlenecks.</p>
+<h3>How it keeps views consistent</h3>
+<p>4DAnyone addresses those bottlenecks with two pieces. Reference Context Packing, or RCP, compresses the growing set of reference views into a fixed-length mixed-resolution context, keeping reference-context cost at O(1) as more views are added. Target Context Routing, or TCR, rotates the target-view groupings during denoising so groups can share context at high-noise steps and then stabilize fine details at low-noise steps.</p>
+<p>The method also leans on 3D skeletons rather than dense depth maps. The authors say they use an accuracy-over-density principle: instead of relying on dense metric depth, which they describe as difficult to estimate reliably from unconstrained videos, they use 3D skeletons that can be estimated from monocular input. Given a source video, GVHMR estimates a 3D skeleton sequence, which is rendered into depth-buffered skeleton videos for the target viewpoints. A 40-keypoint subset is used for conditioning, leaving appearance details to the video model.</p>
+<p>Training is staged. The model first learns on foreground-only DNA-Rendering videos, then expands to multi-view datasets without background masking, and then adds monocular datasets such as Pexels and TedTalk to improve in-the-wild generalization. The base model is Wan2.2-TI2V-5B, and the system uses 20 denoising steps at inference.</p>
+<h3>What the experiments showed</h3>
+<p>The reported evaluation uses DNA-Rendering and DyMVHumans. For each scene, 4DAnyone generates 16 approximately uniformly distributed target-view videos from a single front-view source video, then tests three things: generated video quality, generated video consistency, and downstream 4DGS reconstruction. In the main comparisons, it outperforms MV-Performer, TrajectoryCrafter, and ReCamMaster across all three measures.</p>
+<p>On DNA-Rendering, the reported generated-video consistency scores for 4DAnyone are 24.33 PSNR, 0.862 SSIM, and 0.163 LPIPS, compared with 21.25/0.799/0.222 for MV-Performer, 13.56/0.641/0.331 for TrajectoryCrafter, and 21.47/0.806/0.210 for ReCamMaster. On DyMVHumans, the corresponding numbers are 24.48/0.862/0.109 for 4DAnyone, versus 19.98/0.797/0.182, 15.19/0.769/0.204, and 21.94/0.833/0.142 for those baselines.</p>
+<p>The same pattern appears in the 4DGS reconstruction results. On DNA-Rendering, 4DAnyone reports 24.15 PSNR, 0.863 SSIM, and 0.159 LPIPS; on DyMVHumans, it reports 23.28/0.846/0.117. The authors also say the system generalizes to challenging in-the-wild inputs, including back-view source videos, complex subject appearance, and difficult motion.</p>
+<p>An ablation study shows both routing pieces matter. Removing both TCR and RCP lowers the DNA-Rendering consistency result to 21.09/0.766/0.216, and the full system performs best with the sliding grouping setting, which the authors report as 22.63/0.796/0.191 among the routing variants they tested.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.20335v1" target="_blank" rel="noopener noreferrer" title="arXiv / 4DAnyone: Create Anyone in 4D from a Casual Monocular Video">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>SWE-bench Science: Can Coding Agents Resolve Engineering Tasks in Science?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced <strong>SWE-bench Science</strong>, a repository-level benchmark for scientific software engineering with <strong>119 tasks</strong> drawn from <strong>98 GitHub repositories</strong> across <strong>20 scientific domains</strong>. The benchmark organizes tasks into three paradigms: <strong>Issue-driven</strong>, <strong>Expert-exploratory</strong>, and <strong>Engineering-integration</strong>. In its evaluation, even the best-performing agent, <strong>Claude Code with Opus-5 (max)</strong>, achieved a <strong>pass@1 below 50%</strong>. The study says this points to substantial challenges in repairing scientific software, where code failures can affect not just program behavior but also the evidence behind scientific conclusions.</p>
+<p>The analysis identifies <strong>four recurring failure mechanisms</strong>: deficits in scientific knowledge or abstraction, misguided exploration or surface-level repair, incomplete repair coverage or system integration, and failures to generalize scientific knowledge beyond observed cases. The researchers also ran a paired ablation that removed explicit scientific guidance while keeping the repository and executable engineering context. They found that scientific knowledge was not uniformly beneficial: well-grounded information could constrain repair and improve average performance and token efficiency, while poorly aligned guidance could induce anchoring and did not necessarily improve exact repair success.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.19799v1" target="_blank" rel="noopener noreferrer" title="arXiv / SWE-bench Science: Can Coding Agents Resolve Engineering Tasks in Science?">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>WithEveryone: Unified Planning and Identity Grounding for Group Image Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">WithEveryone is a new group-image generation framework aimed at a specific failure mode: when a scene must include many named people, identity preservation gets less reliable, faces can be duplicated or merged, and the model has to keep track of both who belongs where and how each person is posed.</p>
+<p>The preprint says the core problem is not just recognizing each reference face, but binding every reference to a distinct person and location before generation starts. To address that, the system uses each selected identity as an addressed token, predicts a structured “Layout Chain of Thought” that includes person indices, bounding boxes, identity–layout bindings, and pose keypoints, and then renders that plan into a visual condition for image synthesis. It also introduces two training pieces: Layout-Grounded ID Loss, which supervises intended identities using annotated face regions instead of unstable embedding-based face matching, and ID Representation Forcing, which trains a prediction for each identity before the final image is generated.</p>
+<p>The researchers say WithEveryone is designed for group images with five to ten reference identities. On an identity-disjoint benchmark, it achieved the highest target-context identity similarity among the compared systems, raising face similarity from 0.462 for GPT-Image 2 to 0.499. It also reduced copy-paste artifacts from 0.169 to 0.055. In the same benchmark, it covered 97.3% of the requested identities with a duplicate rate of 2.8%.</p>
+<p>The paper’s broader claim is that explicit identity–layout grounding helps scale identity-preserving generation to larger groups without relying on direct reference-face copying. It frames the main challenge as planning: a single model has to decide which references participate, where they should appear, and how their identities stay distinct throughout the generation process.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.20336v1" target="_blank" rel="noopener noreferrer" title="arXiv / WithEveryone: Unified Planning and Identity Grounding for Group Image Generation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">MemTrapBench adds a new test for LLM memory systems: instead of asking only whether models retrieve the right information, it probes when remembered information pushes them into the wrong reasoning path and hurts the current task, even when the memory itself is accurate and relevant.</p>
+<h3>What MemTrapBench is testing</h3>
+<p>Mengru Wang, Haozhe Luo, Zhenqian Xu, Zhixiang Cui, Haoming Xu, Qu Yang, Jizhan Fang, Junfeng Fang, and corresponding author Ningyu Zhang describe memory as a key component of large language models because it helps them retain information and learn from long-term interactions. Their concern is that existing memory benchmarks mostly check whether information is extracted, stored, updated, and retrieved correctly, while missing a different failure mode: memory can reshape how a model reasons about the present question.</p>
+<p>The paper calls these failures memory-induced cognitive traps. In the authors’ framing, a model may receive memories that are faithfully recorded and semantically relevant, yet still be led toward distorted beliefs or an unhelpful reasoning strategy. To measure that, they introduce MemTrapBench, which focuses on two trap types: Reasoning Fixation and Belief Distortion.</p>
+<p>MemTrapBench contains 1,050 instances across four scenarios under those two categories. The benchmark was built through trap seeds, multi-turn dialogue generation, and two-stage quality control with automated filtering and expert validation. The authors say it is designed to evaluate how memory changes the reasoning strategies, beliefs, and capabilities a model expresses on the current task, rather than only judging separate stages of memory management.</p>
+<h3>What happened in the experiments</h3>
+<p>The paper says experiments across two model families and five representative memory frameworks found the benchmark difficult. Using full interaction histories, all evaluated memory strategies underperformed the no-memory setting. Even the strongest methods dropped by more than 10 percentage points.</p>
+<p>One example in the paper shows the problem directly. Without memory, Gemini-3-Flash-Preview finds the factorial solution to a query. But when the retrieved memory contains valid and relevant examples solved with basic arithmetic, the model fixates on that operation regime and does not consider factorial. In another example, using the full interaction history on Gemini-3-Flash-Preview reduces performance across all four Memory Trap scenarios compared with the no-memory setting.</p>
+<p>The authors present this as evidence that memory can be harmful even when it is not stale, wrong, or irrelevant. The issue is not just retrieval quality; it is that memory can pull the model into the wrong cognitive frame for the current task.</p>
+<h3>AdaptiveMem and the reported fix</h3>
+<p>To address the problem, the paper proposes AdaptiveMem, an inference-time method that tells LLMs to avoid memory traps before using memory. The authors describe it as simple but effective.</p>
+<p>AdaptiveMem reportedly mitigates cognitive traps on MemTrapBench while preserving or improving performance on standard memory benchmarks across diverse memory frameworks. On Gemini-3-Flash-Preview, the paper says AdaptiveMem improves LightMem by 14.9 percentage points on MemTrapBench without degrading its general memory performance.</p>
+<p>The authors say the data and code will be available at `https://github.com/zjunlp/MemTrapBench`.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.20202v1" target="_blank" rel="noopener noreferrer" title="arXiv / MemTrapBench: Benchmarking Cognitive Traps in LLM Memory Use">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>SkillEvo: Self-Renewing Evolution Gradients from Multi-Turn Interaction Feedback</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from Tencent Cloud Andon and Zhejiang University propose SkillEvo, a framework for evolving cloud-service Skills by keeping multi-turn interaction feedback in the loop, after arguing that single-turn evaluation leaves latent failures untouched and lets skill improvement stall.</p>
+<h3>Why the paper says current skill evolution stalls</h3>
+<p>The preprint says Skills are often hand-authored or generated in one LLM pass, and that even newer self-improvement methods usually rely on single-turn question-answering evaluation. In that setup, the first revision round can patch what one exchange exposes, but the authors say the evolution gradient then decays, defects that only show up across multiple turns stay invisible, and improvement stops.</p>
+<p>They also say common governance is too blunt: an end-to-end verification score can reject a degraded candidate, but it cannot localize or repair the structural cause. SkillEvo is their answer to that problem. The framework is built around trustworthy feedback generating the gradient, with controllable governance constraining its direction.</p>
+<p>To make that work, SkillEvo recasts multi-turn user simulation from an evaluation endpoint into a feedback generator. Follow-up questions are meant to expose defects layer by layer, so each round of revision both consumes feedback and produces new feedback. The paper says trustworthy feedback must satisfy three conditions at once: coverage, accuracy, and attributability.</p>
+<p>What SkillEvo changes.</p>
+<p>The system also adds an independent governance layer that is meant to actively repair factual degradation and structural bloat, instead of only rejecting a candidate. The authors say this is meant to prevent the gradient from drifting as degradation accumulates.</p>
+<p>In the reported evaluation, SkillEvo was tested across six categories of cloud services, 9 production Skills, and 98 skill-reference files. The authors say it outperformed self-reflection-based evolution by 23.0 points and single-turn-QA-driven evolution by 15.4 points, and improved over the original Skills by 51.8 points.</p>
+<p>A figure in the preprint draws the core contrast plainly: single-turn QA patches the gaps visible in the first exchange, then the curve saturates around round 2; multi-turn interaction keeps exposing latent failures, renews the gradient, and lets TSR keep climbing.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.13120v1" target="_blank" rel="noopener noreferrer" title="arXiv / SkillEvo: Self-Renewing Evolution Gradients from Multi-Turn Interaction Feedback">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>ForgeWM: Progressive Causal Training for Few-Step Action-Conditioned Video World Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">ForgeWM is a new preprint on action-conditioned video world models that tries to keep low-latency generation aligned with game controls, after finding that discrete keyboard inputs and continuous mouse motion are hard to preserve when video is compressed into a few denoising steps.</p>
+<p>The work frames the problem this way: generative video models can simulate future visual states from observations and actions without an explicit graphics engine, but causal generation changes both the input distribution and the model state. The authors say that causal distillation can produce one- or few-step video synthesis, yet interactive world models remain difficult because control signals have to stay aligned with temporally compressed latent chunks during causal training and autoregressive rollout.</p>
+<p>ForgeWM addresses that with a four-stage framework that converts a bidirectional action-conditioned video generator into budget-specialized world models. The stages are domain adaptation, teacher-forced causal training, causal consistency distillation, and on-policy distribution matching with a bidirectional teacher. The resulting students are trained for steady-state denoising budgets of 1, 2, and 4 steps. The system also supports a dual-path deployment setup: it can be used for latency-critical interaction, or it can save a draft and later refine it at replay time, with the one-step student re-noising and improving the saved output.</p>
+<p>In the reported experiments, the model is shown on paired Minecraft trajectories under keyboard–mouse control and on an FPS domain under gamepad control. On Minecraft, ForgeWM led the evaluated systems in imaging quality, reference-aligned motion-profile agreement, action-sign accuracy, and mouse-control accuracy, while also achieving the lowest reference LPIPS. The same four-stage recipe was said to transfer to the gamepad-controlled FPS setting. Replay-time refinement matched four-step reference quality while staying roughly three times closer to the experienced trajectory than regeneration from noise.</p>
+<p>The paper also describes the control setup in detail: Minecraft uses a two-dimensional mouse delta and a six-state keyboard vector, while the CrossFPS adaptation widens the continuous-control input to four channels for gamepad sticks. It says the checkpoint adapts through the same four-stage recipe and that the action module preserves the zero-action-residual-at-initialization property through its output projection.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14022v1" target="_blank" rel="noopener noreferrer" title="arXiv / ForgeWM: Progressive Causal Training for Few-Step Action-Conditioned Video World Models">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Sleuth identifies dozens of studies that used the wrong antibody</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">More than 50 studies on cell ageing may have used the wrong antibody to identify a key protein, raising questions about whether some results can be trusted and adding to a wider run of antibody-related errors in biology.</p>
+<p>Sholto David, a UK-based independent molecular biologist, reported the latest mix-up in a 21 July post on the research-integrity blog For Better Science. He said the papers appear to have used an antibody that targets the bacterial version of β-galactosidase, rather than the mammalian version used in studies of ageing. David says he has identified at least 54 papers with the error.</p>
+<p>Researchers use antibodies to bind to and track specific proteins, but the tools can cause problems when they do not behave as expected. In some cases, scientists struggle to replicate experiments even with identical antibodies; in others, antibodies recognize other proteins and produce unreliable results.</p>
+<p>The ageing papers are meant to track senescence, a state in which cells stop dividing but remain alive. Scientists look for a hallmark enzyme called β-galactosidase using techniques such as immunostaining or western blotting. David says the papers listed antibodies that bind to β-galactosidase from Escherichia coli bacteria, which he says will not work for detecting the mammalian protein in these experiments.</p>
+<p>It is not clear whether the flaws compromise the studies, but David says they might in some cases. He also framed the issue as part of a larger problem in biology: reagents are sometimes used poorly or are not adequately characterized. Aled Edwards, a biochemist at the Structural Genome Consortium in Toronto, said researchers should validate antibodies before experiments, though he noted that can be time-consuming and expensive.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02352-4" target="_blank" rel="noopener noreferrer" title="Nature / Sleuth identifies dozens of studies that used the wrong antibody">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Hidden magnetism inside atoms may explain mysterious gamma rays</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the Facility for Rare Isotope Beams and Lawrence Livermore National Laboratory have traced a long-running nuclear physics puzzle to magnetic transitions inside atomic nuclei. In a study published in *Nature*, they found strong evidence that the unexpected “low-energy enhancement” seen in some nuclei’s gamma-ray emission comes from hidden magnetism in the nucleus, rather than from electric transitions. The result addresses a decades-old question about why some atomic nuclei release more low-energy gamma rays than scientists expected.</p>
+<p>To test the idea, the team measured gamma rays from a radioactive copper isotope as it decayed into zinc and separated two decay states. In one state, the decay involved an electric transition, with protons shifting positions. In the other, a magnetic transition, the neutrons and protons effectively flipped their internal magnets. Only the magnetic transition produced the low-energy enhancement. The researchers say the finding could improve nuclear models and may have implications for astrophysics, nuclear energy, national security, and nuclear forensics.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260820202849.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Hidden magnetism inside atoms may explain mysterious gamma rays">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A strange new quantum droplet can hold itself together</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at Monash University have predicted an unusual new form of quantum matter that could overturn long-held assumptions about how ultracold particles behave. Their calculations suggest that, under the right conditions, two different classes of quantum particles — bosons and fermions — can combine to create stable, self-bound “quantum droplets.” Scientists had previously considered such droplets unlikely to form in strongly interacting Bose-Fermi systems. Lead author Sam Foster said the results show these very different particles can balance each other to create a stable droplet that “effectively holds itself together.”</p>
+<p>The work also points to a path for testing the prediction in the lab. The calculations indicate the droplets could be produced using ultracold atom experiments that already exist, and the team found signs of additional unusual quantum behavior, including phenomena resembling the transition between a liquid and a gas. The findings are described as a new theoretical framework for future experiments and a step toward better understanding quantum materials relevant to ultra-precise sensors and quantum computing.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260820202846.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A strange new quantum droplet can hold itself together">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>This weight-loss hormone may protect the liver even without weight loss</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at McMaster University say the hormone GDF15 may protect the liver from inflammation even when weight loss does not occur. In a study published in *Cell Metabolism* on August 10, 2026, they found that GDF15 reduced liver inflammation and slowed the development of liver scarring, suggesting a role beyond its known effects on appetite and body weight. The finding points to possible new approaches for treating advanced fatty liver disease, including metabolic dysfunction-associated steatohepatitis, or MASH.</p>
+<p>To explore how the hormone affects advanced liver disease, the team used mouse models designed to closely reproduce human MASH and combined genetic, pharmacological, genomic, and spatial transcriptomics techniques. They reported that GDF15 activates a brain-to-liver signaling pathway that leads to the release of glucocorticoids, which then help suppress inflammation in the liver. The researchers said these protective effects appeared regardless of changes in food consumption, body weight, or liver fat, and that GDF15 also seemed to slow the progression of liver fibrosis.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260820202854.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / This weight-loss hormone may protect the liver even without weight loss">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A lost mega-cliff may explain the Grand Canyon’s missing billion years</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the University of Southampton say an ancient “great escarpment” may help explain why the Grand Canyon appears to be missing more than a billion years of rock. In the study, published in *Geology*, the team says the cliff system formed about 800 million years ago as Rodinia broke apart and may have helped bring the canyon’s deepest crystalline basement rocks to the surface long before the Colorado River carved the landscape seen today. Lead author Thomas Gernon said the Grand Canyon preserves about two billion years of geological history, but more than half of that record appears to be absent.</p>
+<p>The researchers say the escarpment may have reached roughly a kilometer in height and stretched for thousands of kilometers along western North America, crossing areas that today include Arizona, Utah, Idaho, Wyoming, Colorado, Texas, Oklahoma, Arkansas, Missouri and Illinois. They combined plate-tectonic reconstructions with landscape-evolution data and estimate the process could have removed as much as eight kilometers of rock in some places. They also say that matches other geological evidence showing roughly five to ten kilometers of rock disappeared from parts of the region before the modern Grand Canyon formed.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260820202828.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A lost mega-cliff may explain the Grand Canyon’s missing billion years">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>2,200-year-old Roman shipwreck reveals ancient waterproofing secrets</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers in France and Croatia analyzed the protective coating on the Roman Republic shipwreck Ilovik-Paržine 1, which sank about 2,200 years ago off what is now Croatia. The study found two kinds of waterproofing material on the vessel: one made of pine tar, or pitch, and another made from a mixture of pine tar and beeswax. The team also said pollen trapped in the coating helped identify plant taxa present in the immediate environment during the ship’s construction or repairs.</p>
+<p>The wreck was discovered in 2016 and has been investigated several times since then. This study is described as the first to combine molecular and pollen analysis to identify the ship’s coatings and reconstruct the vegetation present when those materials were produced and applied to the hull. The researchers analyzed 10 coating samples with structural, molecular and pollen methods, including mass spectrometry, and said the coatings suggest repeated applications over time.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260820202907.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / 2,200-year-old Roman shipwreck reveals ancient waterproofing secrets">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
