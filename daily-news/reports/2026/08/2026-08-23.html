@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-23</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-23</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="la_jornada">
+  <summary>Guatemala, destination for 2,400 Mexicans expelled by Trump</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Guatemala received another 42 Mexicans from the United States yesterday, bringing the total deported from U.S. territory to the Central American nation to at least 2,400 so far this year, according to Carlos Woltke, deputy director general of Guatemala’s migration institute. Woltke said the reception of Mexicans in Guatemala was in “consideration of reciprocity for the same attention that Mexican authorities give to Guatemalans who are returned by land.” The undocumented Mexicans arrived on a plane from Texas and were separated from 80 Guatemalans who were also expelled on the same flight.</p>
+<p>At the reception center for returned Guatemalan migrants in Guatemala City, they received medical and health care, along with water, coffee, and pastries. Migration officers explained the registration procedure and handed back their belongings. The Mexicans wore green and white bracelets, while the Guatemalans arrived in sports outfits used at U.S. detention centers. Afterward, the Mexicans were taken by white migration institute bus on a road trip of about seven hours to the Tecún Umán border crossing in Guatemala and Ciudad Hidalgo in Mexico. In 2025, President Bernardo Arévalo’s government signed an agreement with U.S. Secretary of State Marco Rubio to receive migrants from other Central American nations deported from the United States.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/22/politica/005n3pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Guatemala, destination for 2,400 Mexicans expelled by Trump">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>Ukrainian drones kill at least 10, hit warehouse of Russian online retailer Ozon</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ukrainian drones killed at least 10 people in attacks on targets across Russia and Russian-occupied areas of Ukraine on Saturday, Russian officials said, including a warehouse owned by online retailer Ozon and an industrial facility. In Russia’s Samara region, governor Vyacheslav Fedorishchev said an elderly woman was killed in Novokuibyshevsk and that industrial facilities were damaged. Ozon said work at its logistics centre in the town of Chapayevsk was halted after the strike, which it said caused injuries. In the southern Krasnodar region, governor Veniamin Kondratyev said three people, including two children, were killed and another adult wounded in a strike on Yeysk.</p>
+<p>The strikes came amid a broader exchange of drone attacks. On Friday, several Russian drones struck a shopping centre in central Ukraine, killing at least 16 people and wounding more than 130, while Russian President Vladimir Putin said on Saturday that Ukraine’s strikes had opened a “Pandora’s box” of Russian retaliation.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/russia-central-asia/article/3364941/ukrainian-drones-kill-least-10-hit-warehouse-russian-online-retailer-ozon" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Ukrainian drones kill at least 10, hit warehouse of Russian online retailer Ozon">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc,scmp">
+  <summary>Rescuers dig through Ukraine mall wreckage as Zelensky condemns &#x27;despicable&#x27; Russian strike</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Rescuers kept digging through the wreckage of a shopping centre in Kryvyi Rih after a Russian drone strike on Friday killed at least 16 people, injured 130 and left four missing, while officials warned the search could continue for two more days.</p>
+<p>Two drones hit the busy centre in quick succession in what officials described as a double-tap strike. President Volodymyr Zelensky condemned the attack as “cynical and despicable”, saying the second drone targeted emergency workers. Dnipropetrovsk regional head Oleksandr Hanzha said on Saturday morning that rescuers were still searching for survivors and were doing everything possible to speed up the operation.</p>
+<h3>Search teams keep working through the rubble</h3>
+<p>The scale of the destruction has kept the rescue effort going through the weekend. Hanzha said another body was retrieved from the rubble overnight, bringing the death toll from Friday’s attack to 16. He said the work could continue for another two days because of the amount of damage and the constant threat of further Russian attacks.</p>
+<p>Rescue teams from seven other Ukrainian regions were urgently deployed on Friday evening to help search for survivors. The huge fire covering an area of about 9,000 square metres has since been extinguished, but the site remained a focus of the search-and-rescue operation. Four people were still missing, and in an update later on Saturday Hanzha said 52 injured people, including 14 children, were still in city hospitals. Kryvyi Rih military chief Oleksandr Vilkul said dozens of people had already undergone surgery.</p>
+<p>South China Morning Post reported that regional governor Oleksandr Hanzha said 22 children were among the wounded and that 29 people were in serious condition, including five children. The attack hit Kryvyi Rih, which is Zelensky’s hometown, and the president said the strike was an “act of barbarism”.</p>
+<h3>A strike that came amid wider overnight fire</h3>
+<p>The mall attack did not happen in isolation. The sides exchanged more fire overnight, with Ukrainian attacks said to have killed at least four people in Russia, including two children, and three people reported dead by Kyiv as a result of Russian strikes. Zelensky said there had been missile and drone strikes across Ukraine through the evening and night, damaging residential buildings and civilian infrastructure.</p>
+<p>Officials also linked the Kryvyi Rih strike to a broader pattern of continuing attacks. One day before the mall hit, 17 people were killed and more than 40 injured in a major Russian missile and drone attack on Ukraine’s capital Kyiv. In the latest update, Hanzha said the Dnipropetrovsk region was observing a day of mourning.</p>
+<p>According to the evidence, Russia’s military has not commented on the shopping-centre strike. Officials also had not commented on why Ukraine’s air defence units failed to stop Friday’s attack, even though the military says its drone interception rate is 90%. The attack left a scene of severe damage in a central Ukrainian city already under repeated pressure from the war, with the rescue teams racing both against time and against the risk of renewed strikes.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c39egw7nmk2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Rescuers dig through Ukraine mall wreckage as Zelensky condemns &#x27;despicable&#x27; Russian strike">BBC #1</a><a href="https://www.scmp.com/news/world/russia-central-asia/article/3364896/russian-drone-strikes-ukraine-shopping-centre-kill-16-injure-130" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Russian drone strikes on Ukraine shopping centre kill 16, injure 130">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Ebola frontline workers missing wages as outbreak spreads ‘exponentially’</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Frontline Ebola workers in the north-east of the Democratic Republic of the Congo are going to work without pay while the outbreak accelerates, leaving nurses and hygiene staff worried about infection, family exposure and whether the response can keep up.</p>
+<p>Sophie Mwadawa Kabundo, a nurse at an Ebola treatment centre, said she went to work every day afraid she would contract the virus and pass it to family and friends. She said more and more confirmed cases were being admitted, some colleagues had died, and staff were worried that workplace accidents could put them in even greater danger.</p>
+<p>Martin Bolombi, her colleague at the Elikya treatment centre in Bunia, in Ituri province, said the outbreak was causing him “a lot of stress”, but that he had no choice but to keep working until the situation was brought under control. Kabundo said she and other workers were under “immense pressure” because they were exposed to infection and feared their families and other loved ones might contract the disease because of them.</p>
+<h3>Wages withheld on the Ebola wards</h3>
+<p>The workers said the strain was made worse by missing wages. Bolombi, a hygiene worker, said he had been working since May and had only been paid for June. He was among about 100 people who protested outside the Elikya treatment centre during a strike last month over unpaid bonuses.</p>
+<p>Kabundo said she was also missing wages and called on the government to provide solutions as soon as possible. She said they were not being paid even as they continued to face the risks of working in a treatment centre while patients kept arriving.</p>
+<p>Bolombi said he was working seven days a week with barely any time to see his family. Even so, he said logistics had improved compared with the early days of the response, though not enough to meet growing needs as the disease progressed. Kabundo, despite the lack of remuneration, said there had been “a large number of recoveries” at Elikya and argued that the progress should be recognised, but not used as a reason to relax.</p>
+<h3>An outbreak growing faster than the response</h3>
+<p>The unpaid wages sit inside a wider response that the senior UN Ebola coordinator, Julien Harneis, said was being overtaken. Speaking on a video call from Bunia, he said more than 2,500 people had died and that the outbreak was spreading exponentially in an area larger than France. He warned that existing funds would run out within weeks and said 160 healthcare workers had fallen ill with Ebola, 43 of them fatally. “The outbreak is growing faster and wider than the Ebola response,” he said.</p>
+<p>Harneis also said the DRC was dealing with an epidemic in an area that had suffered three decades of conflict and generated huge humanitarian needs. The World Health Organization estimates that the outbreak is on course to exceed west Africa’s 2014-16 Ebola outbreak as the biggest ever globally. That earlier outbreak recorded more than 28,600 cases and 11,325 deaths across Guinea, Liberia and Sierra Leone, according to WHO data.</p>
+<p>The infections in the DRC are of the rare Bundibugyo species of the virus. There are no approved treatments or vaccines for that strain, though trials for both are under way. The outbreak has spread to six of the country’s 26 provinces and is concentrated in the north-east, with more than 4,200 confirmed cases in Ituri.</p>
+<p>Unpaid wages are only one of the problems slowing efforts to contain the disease. Misinformation, community mistrust and infrastructure deficits are also hampering the response. Dr Eddy Kambale Kahandukya, a deputy medical coordinator for Médecins Sans Frontières in the DRC, said lack of community engagement remained a major challenge in breaking the chain of transmission. He said patients who suspected they had symptoms and were waiting for laboratory results sometimes sought refuge in the community and created new clusters that fuelled spread.</p>
+<p>Fear was also feeding mistrust, said Manon Dumortier, an emergency coordinator in Bunia for Mercy Corps. She said people were seeing many deaths without understanding what was happening, while others disappeared into health centres and were buried before relatives could see them, which had encouraged speculation and rumours.</p>
+<p>The outbreak also reached Uganda, where authorities reported 20 cases and two deaths, all in Kampala, before declaring the country Ebola-free on 28 July after the last patient, a Congolese national, was discharged on 16 July.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/aug/22/ebola-drc-democratic-republic-congo-health-workers-unpaid-wages" target="_blank" rel="noopener noreferrer" title="The Guardian / Ebola frontline workers missing wages as outbreak spreads ‘exponentially’">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="yonhap">
+  <summary>President expresses condolence over death of Ven. Myeongjin</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Lee Jae Myung on Saturday expressed condolence over the death of Ven. Myeongjin, the former chief monk of Bongeun Temple in Seoul. Ven. Myeongjin died Saturday at the age of 76 after a maritime accident presumed to have taken place while he was practicing free diving. He was found floating in waters off the southern resort island of Jeju, rescued and moved to a hospital, but was later pronounced dead.</p>
+<p>Lee wrote on his Facebook page, “I am sharing sorrow with the people over the loss of a great leader in Korean Buddhism.” Recalling a luncheon meeting in July last year, Lee said Ven. Myeongjin asked him to open a world where workers suffering under the wealth gap can equally live and to open a path toward peace between the two Koreas. Lee added that he would long remember the monk’s life and dedication, saying he lived with a heart of equality, peace and compassion. Ven. Myeongjin was born in 1950, became a Buddhist monk in 1969, and served as chief monk of Bongeun Temple from 2006 to 2010.</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20260822002800315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / President expresses condolence over death of Ven. Myeongjin">YNA #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>7 Alarming Facts on Israel E1 Settlements Expansion Plan</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel’s move to open a tender for more than 1,200 homes in the E1 zone on Friday, August 21, 2026, raised fresh alarm over the West Bank’s territorial continuity, with critics saying the project would split the territory and deepen diplomatic fallout.</p>
+<p>The Israeli Housing Ministry opened the tender in the strategically contested E1 zone of the occupied West Bank, east of East Jerusalem. Telesur English said the project is meant to connect Jewish settlements between Jerusalem and the large Ma’ale Adumim enclave, effectively dividing the West Bank into northern and southern sectors and isolating the area designated as the future Palestinian capital.</p>
+<p>The current tender covers 1,234 of the 3,401 housing units approved in August 2025 and spans about 12 square kilometers between Jerusalem and Ma’ale Adumim. The plan includes residential, industrial and tourism complexes, along with roads and infrastructure networks to link them. Telesur English also said bids are due just one week before Israel’s general elections scheduled for late October.</p>
+<h3>Condemnation and political pushback</h3>
+<p>Palestinian and international leaders condemned the move as illegal under international law and a fatal blow to the viability of a two-state solution. Palestinian Ambassador to the UN Riyad Mansour called the decision “extremely dangerous, irresponsible, and threatening,” while Egypt said from Cairo that the expansion cements a new reality in occupied territory, changes its legal status and demographic composition, and undermines the two-state solution.</p>
+<p>The European Commission and a bloc of countries, including Greece, Austria, Spain, Australia, New Zealand, Sweden, Belgium, the UK, France, Germany, Italy, the Netherlands, Canada and Norway, demanded the immediate withdrawal of the plan. European Commission President Ursula von der Leyen called it “unacceptable” and said it breaks territorial continuity. UK Foreign Secretary Ed Miliband described it as an “unacceptable and destructive act.”</p>
+<p>Peace Now accused Prime Minister Benjamin Netanyahu’s government of using a “last-minute maneuver” and a “scorched-earth policy” to lock in construction contracts before the elections, making it harder for any future administration to cancel the project. The group said even partial implementation would fundamentally alter the area’s geographic and strategic character, severing the northern West Bank from the south and isolating East Jerusalem. Israeli Foreign Minister Gideon Saar rejected the criticism, saying Britain has no basis to dictate where Jews can live.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/israel-e1-settlements" target="_blank" rel="noopener noreferrer" title="Telesur English / 7 Alarming Facts on Israel E1 Settlements Expansion Plan">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Israeli army and settlers injure several Palestinians across West Bank</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli military raids and attacks by settlers across the occupied West Bank injured at least 19 Palestinians, according to Palestinian health officials and local media reports. The Jerusalem Governorate said Israeli forces shot and injured three Palestinians who tried to enter occupied East Jerusalem near the separation wall in ar-Ram on Saturday. In Tubas, the Palestine Red Crescent Society said its crews treated at least 11 Palestinians, including four children, for tear gas inhalation during Israeli army raids. Wafa reported that in Masafer Yatta, south of Hebron, armed settlers beat and bruised an elderly man, then Israeli forces raided his home, damaged its contents and confiscated his family’s phones.</p>
+<p>The Palestine Red Crescent also said two young men were hospitalised after being beaten by settlers in Arrabeh, south of Jenin, while a 15-year-old boy was hospitalised after a severe beating in Tammun, where another child was injured in a settler assault. Separately, Israeli forces and settlers killed two Palestinians in Hebron and Jenin on Friday, and the Hassan and Abu Rida families in Qusra, south of Nablus, remained besieged in their homes for a 14th consecutive day with a closed military zone around the area.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/22/israeli-army-and-settlers-injure-several-palestinians-across-west-bank?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Israeli army and settlers injure several Palestinians across West Bank">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="nikkei_asia">
+  <summary>Thailand, Asia&#x27;s gun ownership leader, cracks down after deadly shootings</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Thailand’s government is moving ahead with legislation to tighten gun controls after recent shootings renewed scrutiny of firearm access in the country. The proposals would set a time limit on gun licenses but stop short of canceling the “welfare” program. The reported crackdown comes while modified guns and their parts can still be bought online, bypassing existing controls in Thailand, which is described as Asia’s gun ownership leader.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/spotlight/society/crime/thailand-asia-s-gun-ownership-leader-cracks-down-after-deadly-shootings" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Thailand, Asia&#x27;s gun ownership leader, cracks down after deadly shootings">NA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cna">
+  <summary>‘This is our home’: The women fighting a company’s land claim on Indonesia’s Pari Island</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Pari Island off North Jakarta, women led by Wina Sabenah are planting mangroves and cleaning beaches to defend their homes and livelihoods, even as a private firm claims most of the island and residents still do not have a final ruling on who owns the land.</p>
+<p>Wina, 60, walks the coastline checking young saplings that she and other women planted months ago, measuring whether the roots hold in the soft tidal soil against incoming waves. The group, known as the Pari Island Women’s Group, says it is trying to protect the 43ha island — part of Jakarta’s Thousand Islands regency — so families can keep living there for generations. “I joined (the) Pari Island Women’s Group to hold onto my birthplace and so that my children and grandchildren can also continue living here. This is our home,” Wina said.</p>
+<p>The group was founded in 2017 by Asmania, known locally as Sister Aas, and its work has expanded from planting crops and producing food such as salted fish, fish crackers and dodol to mangrove and seagrass planting, beach cleaning and tourism-related businesses. Members say those activities help guard against erosion and bring in income. The island is just 1.5m above sea level, and reports predict that rising seas could submerge most of it by 2050.</p>
+<p>Their work sits alongside a separate legal fight. In December last year, a Swiss court agreed to hear a climate case filed by Asmania and three other Pari Island residents against Holcim, seeking financial compensation for climate-related loss and an order for the cement giant to reduce its greenhouse gas emissions.</p>
+<p>But on Pari Island itself, the longer-running dispute is over land ownership. In 2014, PT Bumi Pari Asri claimed rights over a large part of the island. Islanders and rights groups have challenged how land ownership certificates and right-to-build permits were issued, while the company’s field supervisor, Slamet Huzaini, said the certificates were obtained legally from the North Jakarta National Land Agency. PT Bumi Pari Asri says it owns about 90 per cent of the island, with 62 freehold certificates and 14 right-to-build permits.</p>
+<p>Residents say the stakes are personal: they have lived on Pari for generations and fear eviction if the company’s claims stand. In 2018, the Indonesian Ombudsman found maladministration in relation to PT Bumi Pari Asri’s certificates, but the dispute has still not been definitively resolved.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/indonesia-pari-island-women-jakarta-environment-advocacy-6332926" target="_blank" rel="noopener noreferrer" title="CNA / ‘This is our home’: The women fighting a company’s land claim on Indonesia’s Pari Island">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>Will seniors protect us?</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On February 7, 2025, a group of men allegedly took over Md Shamim’s rickshaw garage in Kallyanpur, forcing out all 16 rickshaws kept there. Shamim, 31, said most of the rickshaws were later stolen. He said he submitted a written complaint to Mirpur Police Station, but no case had been registered despite a dozen follow-up visits. He alleged the group was led by two local men, one claiming to be a Jubo Dal activist and the other a Swechchhasebak Dal leader. Shamim said he had bought the garage three years earlier for Tk 1.5 lakh.</p>
+<p>In separate comments, serving police personnel said many officers are reluctant to take decisive action when an operation could lead to confrontation with influential people. Field-level officers said they now weigh the possible consequences before making arrests or intervening in contentious situations, especially when they are unsure whether senior officers will stand by them if trouble follows. One assistant sub-inspector put it bluntly: “if we take action today and trouble follows, will our seniors protect us?”</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/will-seniors-protect-us-4254521" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Will seniors protect us?">TDSB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Islamabad chief commissioner seeks early hearing of review petition against order to shift Imran to private hospital</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Islamabad chief commissioner on Saturday approached the Supreme Court seeking an early hearing of the government’s review petition against the Aug 18 order to shift incarcerated PTI founder Imran Khan to Shifa International Hospital. The application asked the court to fix the review petition for hearing at the earliest. It followed the Supreme Court Registrar’s Office returning the federal government’s review petition on Thursday, with objections that the affidavit and facts were not properly drawn up and that one of the paper books was not in order. The office directed that the petition be resubmitted within two weeks after the objections are removed.</p>
+<p>The chief commissioner argued that the Aug 18 order had affected the government’s constitutional authority. That order was issued by a three-judge bench headed by Justice Shahid Waheed and comprising Justice Naeem Akhtar Afghan and Justice Ishtiaq Ibrahim while hearing petitions about Imran’s health and family meetings. The bench ordered his transfer from prison to the private hospital within two days. The review petition said the order was liable to review because the prescribed procedure for moving a convict to a hospital for treatment had been overlooked, and the chief commissioner also said the Aug 18 order appeared “discriminatory.”</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2024588/islamabad-chief-commissioner-seeks-early-hearing-of-review-petition-against-order-to-shift-imran-to-private-hospital" target="_blank" rel="noopener noreferrer" title="Dawn / Islamabad chief commissioner seeks early hearing of review petition against order to shift Imran to private hospital">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israeli forces reportedly use phosphorus shells in attacks on southern Lebanon</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli forces fired phosphorus shells and carried out air strikes and heavy artillery attacks across several areas of southern Lebanon overnight and early Saturday, Lebanese state media reported. Lebanon’s National News Agency said heavy artillery fire targeted Mansouri, the area around Bayt al-Sayyad and the outskirts of Majdal Zoun, and extensive attacks hit Mansouri, Majdal Zoun and Bayt al-Sayyad. The agency also reported extensive destruction to homes in Bayt al-Sayyad, saying no house in the town had been left undamaged.</p>
+<p>The agency said similar explosions were reported in Hadatha, Beit Yahoun and Aita al-Jabal, while machine-gun fire was directed toward nearby valleys and Israeli drones continued flying over villages and towns in the western and central sectors of southern Lebanon. Separately, it reported two air strikes on Ali al-Taher hill near Nabatieh al-Fawqa and heavy shelling of Dawhat Kfar Remman, Dabsha hill and the wooded area of Ali al-Taher using phosphorus shells. This came amid previous warnings from rights groups over Israel’s use of white phosphorus in southern Lebanon.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israeli-forces-reportedly-use-phosphorus-shells-indiscriminate-attacks-southern-lebanon" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israeli forces reportedly use phosphorus shells in attacks on southern Lebanon">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cnn,guardian">
+  <summary>Former world boxing champion, 38, shot dead outside home in South Africa</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Former world boxing champion Zolani “Last Born” Tete was shot dead outside his home in Mdantsane township in South Africa’s Eastern Cape on Friday, leaving a 27-year-old woman with him injured and sending police to investigate a killing whose motive remains unclear.</p>
+<p>Police and the country’s sports minister said Tete, 38, was arriving at his residence when two armed men wearing balaclavas got out of a vehicle and opened fire. A 27-year-old woman travelling with him was shot multiple times and taken to hospital. In one account, he was declared dead at the scene. Sports Minister Gayton McKenzie said, “I will not speculate about who did this or why,” and police said they had started investigations and were asking the public for assistance.</p>
+<p>The killing has drawn attention in Mdantsane, the Eastern Cape township that has produced some of South Africa’s most successful boxers, and it has also renewed focus on violent crime in South Africa, which remains among the countries with the world’s highest murder rates despite recent declines in homicides.</p>
+<p>Tete was one of the country’s most successful fighters. He won the IBF junior-bantamweight world title in 2014 after defeating Japan’s Teiru Kinoshita in Kobe, later added the WBO bantamweight crown, and is perhaps best remembered internationally for his 11-second knockout of fellow South African Siboniso Gonya in Belfast in November 2017, the fastest stoppage in a world title fight.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/22/africa/tete-boxer-south-africa-shot-dead-intl" target="_blank" rel="noopener noreferrer" title="CNN / South Africa’s former world boxing champion Tete shot dead outside his home">CNN #1</a><a href="https://www.theguardian.com/world/2026/aug/22/zolani-last-born-tete-world-boxing-champion-shot-dead-south-africa" target="_blank" rel="noopener noreferrer" title="The Guardian / Former world boxing champion, 38, shot dead outside home in South Africa">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Israel targets ‘terrorist’ in southern Syria; Damascus condemns attack</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel said it targeted a “terrorist” in southern Syria on Saturday, while Syria’s foreign ministry said the strike was a drone attack on a civilian vehicle on the outskirts of Damascus, near Beit Jinn village west of the capital. The Syrian ministry called it a “blatant” violation of its territory and said the strike caused injuries among civilians. Syrian state television reported that one person was injured.</p>
+<p>The attack came after tensions between Israel and Syria flared this week over an Israeli bombing of an airbase in northwest Syria on Tuesday, which US special envoy to Syria Tom Barrack called “unnecessary.” Syria’s foreign ministry said that strike was part of a pattern of repeated Israeli attacks and a “blatant violation” of its sovereignty. Barrack said the Tuesday attack on the Abu Duhur base could have been Israel “baiting the Turks,” while Israeli Defence Minister Israel Katz said Israel decided to alert senior members of the Syrian government and, “Simultaneously, we transferred the intelligence reports to the relevant authorities in the US.”</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/middle-east/article/3364943/israel-targets-terrorist-southern-syria-damascus-condemns-attack" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israel targets ‘terrorist’ in southern Syria; Damascus condemns attack">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Iran grants permission for some Iraqi oil tankers to pass through Hormuz</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran granted permission for a number of Iraqi oil tankers to pass through the Strait of Hormuz after repeated requests from Baghdad, Iranian state media said. IRNA reported on Saturday that special permission for Iraqi tankers was one of Baghdad’s main requests during Iranian parliament speaker Mohammad Bagher Ghalibaf’s visit to Iraq this week. Iraqi President Nizar Amidi said on Saturday that Iran had facilitated the passage of “some ships carrying Iraqi oil in the strait” in recent days, and that Baghdad had discussed exporting Iraqi oil through Hormuz with Iranian officials.</p>
+<p>Speaking at the Baghdad Dialogue policy conference, Amidi said Iraq would not accept its territory being used to launch attacks against any other country, and said attacks launched from inside Iraq against countries in the region “have no justification.” He also said the Strait of Hormuz “affects the whole world, not only Iraq,” while Al Jazeera’s Tohid Asadi said the situation around the strait remained “vague,” with Iran in talks with Oman over arrangements for reopening it and no deal reached so far.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/22/iran-grants-permission-for-some-iraqi-oil-tankers-to-pass-through-hormuz?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Iran grants permission for some Iraqi oil tankers to pass through Hormuz">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>Fish once shunned improves income for women in fishing in Rio de Janeiro</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">general_news</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Women in the Associação de Caranguejeiros e Amigos dos Mangue de Magé (ACAMM) in Baixada Fluminense, Rio de Janeiro, are turning ubarana, a fish long undervalued by local fishers, into income through the Cozinha das Caranguejeiras, where traditional recipes, community meals and environmental work now shape the group’s livelihood.</p>
+<p>The women make dishes such as strogonoff, escondidinho, meatballs, fritters, coxinhas, croquettes, kibbeh and risoles from ubarana at the ACAMM headquarters. Their method, passed down through generations, helped add value to a fish that had not been commercially prized. The meals are sold at special lunches backed by invitation sales to the community, visitors, tourist groups, researchers and companies, as well as through orders.</p>
+<p>Márcia Regina, a fisher for 40 years and now retired from the activity, said the lunches bring in tourists, university people and others studying environmental issues, along with companies and people interested in the group’s work. She said that helps support the women crab harvesters. “We have been helping 15 families,” she said, adding that the kitchen also has a social role because women sometimes arrive depressed and leave feeling better after talking, sharing stories and supporting one another.</p>
+<p>The project grew out of older local knowledge in Rio Suruí, in the mangrove area on the recôncavo of Guanabara Bay. According to Márcia, the women once lived from crab harvesting and also prepared fish for their own consumption when husbands brought it home from fishing. Later, they began working through the association and started selling what they made. Rafael Santos, president of ACAMM, said the fish had first been offered only as a snack in association meetings, until someone from outside suggested selling it to generate income and strengthen the chain of women already preparing it at home.</p>
+<p>Biologist Verônica Souza, from Projeto Andadas Ecológicas of the NGO Guardiões do Mar, said ubarana lives in coastal and estuarine environments, including mangroves across Guanabara Bay, but its many fine bones make filleting difficult and keep its commercial value low. She said the women found a way to process the meat so the bones are not noticed, showing how community culinary knowledge can change how a species is valued.</p>
+<p>The kitchen won a temporary physical address in 2021 with support from an edital of Funbio, then moved three years later to a larger space inside ACAMM after another edital. The group says its work also connects to mangrove conservation, including cleaning and replanting, and to community-based tourism and environmental education in Magé.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-08/peixe-antes-desprezado-melhora-renda-de-mulheres-da-pesca-no-rio" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Fish once shunned improves income for women in fishing in Rio de Janeiro">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Israeli strikes kill two and injure others as Gaza attacks continue</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least two Palestinians were killed in Israeli attacks in the last 48 hours, Gaza’s Ministry of Health said, and four injured people were brought to hospitals in Gaza on Saturday. In Deir el-Balah, an Israeli drone attack targeted the al-Hasanat family, killing one person and wounding others, Al Jazeera’s Ashraf Abu Amra reported from the city. He said the strike came without warning in an area crowded with tents for displaced people, and ambulance and civil defence crews transported several wounded people to Al-Aqsa Martyrs Hospital.</p>
+<p>Abu Amra also reported two demolition operations in Deir el-Balah, with targeted houses collapsing into rubble after explosions were heard from a distance. He said Israeli forces pushed into the eastern part of the city and struck multiple homes there, while troops remained close to civilian areas along the eastern perimeter. Elsewhere in the enclave, strikes and home demolitions continued in Khan Younis, where forces shelled several civilian areas and targeted displaced Palestinians’ camps across from the military-controlled area along the “Yellow Line.” A woman was also reported wounded near ad-Dawa Street, northeast of the Nuseirat refugee camp, in central Gaza.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/22/israeli-strikes-kill-two-and-injure-others-as-gaza-attacks-continue?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Israeli strikes kill two and injure others as Gaza attacks continue">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,bbc,scmp">
+  <summary>Two police officers among seven killed in wrong-way car crash</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Seven people, including two police officers, died after a car travelling the wrong way down the A66 crashed into a marked Cleveland Police vehicle near Middlesbrough, leaving families waiting for answers over what happened before the collision.</p>
+<p>Cleveland Police said the crash happened in the early hours of Saturday near the South Bank area east of Middlesbrough. The other car was a Volkswagen Passat with five occupants said to be in their late teens. The occupants of both vehicles were pronounced dead at the scene. The officers were named as PC Matthew Blades, 37, and PC Tom Clough, 38.</p>
+<p>Chief Constable Victoria Fuller called them “brave officers protecting our communities” and said it was an “incredibly sad day for Cleveland.” She said she and her deputy chief constable had visited the officers’ families to “offer our condolences, support one another, and begin to come to terms with this unimaginable loss,” and that the families of those identified had been informed and were being offered specialist support.</p>
+<p>The BBC said it understood a pursuit of the car had ended before the crash, with the police vehicle “just happening to be in the South Bank area.” But security footage from a house on Lime Road in Middlesbrough appears to show a car being pursued by police vehicles three minutes before the crash. The Independent Office for Police Conduct said it had opened an investigation and said, at this early stage, it understood Cleveland Police sighted a suspicious vehicle and a pursuit began.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/22/seven-killed-including-two-police-officers-in-uk-wrong-side-car-crash?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Seven killed, including two police officers, in UK ‘wrong-side’ car crash">AJ #1</a><a href="https://www.bbc.co.uk/news/articles/cx272ly3g00o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Two police officers among seven killed in wrong-way car crash">BBC #1</a><a href="https://www.scmp.com/news/world/europe/article/3364942/7-dead-uk-after-vehicle-travelling-wrong-direction-hits-police-car" target="_blank" rel="noopener noreferrer" title="South China Morning Post / 7 dead in UK after vehicle travelling in wrong direction hits police car">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China activates Level-IV flood emergency response for Guangdong, Guangxi, Hainan</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Ministry of Water Resources activated a Level-IV emergency response to flooding in Guangdong, Guangxi and Hainan on Saturday, as Typhoon Narra was forecast to bring torrential rains to southern China. The ministry said Narra, the 19th typhoon of the year, would bring heavy to torrential rainfall across southern and western Guangxi, Guangdong and Hainan from Aug. 22 to 24, with some areas expecting extremely heavy downpours. It said water levels were forecast to rise in several rivers in the three provinces, and that the Zuojiang and Mingjiang rivers, tributaries of the Yujiang River, as well as some small and medium-sized rivers in the rainstorm-hit areas, may see floods above warning levels.</p>
+<p>The ministry urged local water resources departments to closely monitor the typhoon’s development and strengthen rain and river monitoring, forecasting and early warning, while ensuring the scientific operation of water conservancy projects. It also called for preventing mountain torrents and small and medium-sized river floods, ensuring reservoir safety, and implementing safety measures for tourists and construction workers. Authorities were told to update high-risk area catalogs, evacuate residents from hazardous areas in time, and safeguard people’s lives and property. Also on Saturday, a separate Level-IV response was activated for typhoon and flood control in southeastern Fujian Province. China’s flood-control emergency system has four levels, with Level I the most severe.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260822/fbbc94fb0f51460c8eeb2e6365bd3fd8/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China activates Level-IV flood emergency response for Guangdong, Guangxi, Hainan">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Abusers coercing or duping women to post explicit OnlyFans content, UK court cases reveal</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two men were convicted this week in separate UK criminal cases that exposed women being used to post explicit OnlyFans content without their full consent. In the first, Alexander Tang, 37, took and uploaded 47 intimate images and four videos of a woman to OnlyFans without her consent and was paid for the material. In the second, Dean Holmes, 43, was heard to have coerced a woman to open an OnlyFans account to make money; at Bolton crown court, he pleaded guilty to assault and controlling and coercive behaviour at the start of the trial on Monday, denied rape, and was found guilty of rape on Thursday after a four-day trial.</p>
+<p>The cases come amid warnings from domestic abuse charities about women being compelled to create content for the platform. In its 2026 annual report, Women’s Aid said the most common new form of tech-facilitated abuse its frontline teams were dealing with involved “young women being coerced to set up an OnlyFans account to generate income for their abusive partners”. The Revenge Porn Helpline also said it had handled reports from women coerced into creating content for OnlyFans and similar platforms. Holmes is due to be sentenced on 25 September, while Tang pleaded guilty to voyeurism and received a 26-week suspended prison sentence on Wednesday.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/aug/22/two-uk-men-convicted-explicit-content-onlyfans-without-consent" target="_blank" rel="noopener noreferrer" title="The Guardian / Abusers coercing or duping women to post explicit OnlyFans content, UK court cases reveal">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cnn">
+  <summary>‘Cancer has taken so much … but it’s also given us a few things’: One family’s journey</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sabina McMahon’s cancer returned after a diagnosis at 12, pulling her family into years of travel, treatment and upheaval while she tries to keep school and music moving forward. The central strain is familiar but unresolved: how a teenager builds a life around repeated relapses without letting cancer define everything.</p>
+<p>Sabina was diagnosed with osteosarcoma, a form of bone cancer, when she was 12. After chemotherapy, radiation and surgery to remove the affected leg bone, she was cancer-free for more than a year, but the cancer later spread to her lungs, beginning a series of relapses. She is now 17 and being treated at Nationwide Children’s Hospital in Columbus, Ohio, after her family moved there to be with her.</p>
+<h3>A childhood shaped by treatment and distance</h3>
+<p>In Sabina’s telling, the diagnosis split her life into before and after. She says that when she heard the news, she wanted to run out of the doctor’s office, but stayed calm because, as she put it, “you don’t walk out on the plan to save your life.” She remembers the surgery that removed the tumor from her right knee and replaced it with a titanium rod, the heavy prosthetic knee she was shown, and the sound of the bell when treatment ended.</p>
+<p>She also says she does not remember much of the treatment itself, something she later came to think could be related to medical post-traumatic stress disorder. Even so, the family’s account makes clear how much the illness has pulled everyone into it. Sabina’s father, mother and younger brother Charlie live in Portland, Oregon, and have struggled to keep any sense of normal life while crossing the country for her care. Late this spring, Sabina enrolled in a clinical trial in Cleveland, but she had to drop out almost immediately so she could have chemotherapy to shrink aggressive tumors in her lungs.</p>
+<p>Charlie says he was only 9 when Sabina was diagnosed and that he hardly remembers life before cancer. He was kept away from much of the hospital experience when COVID-19 limited visitors, and now, almost 14, he describes the constant travel and long stretches away from his family as normal only because that is what he grew up with. He says being separated from Sabina in Ohio hurts, but not as much as the alternative would.</p>
+<h3>Music, school and the parts of life that keep going</h3>
+<p>Cancer has not stopped Sabina from trying to live like a high school student. She is preparing for her senior year, and she has also been building a career as a singer-songwriter, including completing her first full-length album. Sabina says music has been with her since childhood: she was singing on a theater stage at 3, writing songs by 10, and later turned to music to write about friendships, grief and the changes cancer brought to her life.</p>
+<p>Her work has continued even as treatment has moved around with her. She says she was in Seattle when her producer sent her the first professionally recorded version of her debut single, “Cinematic,” and that hearing the finished track before surgery was a huge moment. After her family relocated to Ohio this summer so she could pursue treatment and surgery there, she recorded final vocals in Columbus for her album, “forget me not.” She says she wants her music to reach other children listening from hospital beds.</p>
+<p>That public role has become part of her story too. Sabina has become an advocate for pediatric cancer research, which she says receives just 4 cents of every dollar in federal research spending and is often overlooked by drug companies. For her family, that advocacy sits alongside the more private costs of the disease: the long trips, the missed school time, the hospital stays and the moments when, as her mother Kate describes it, fear and grief hit hardest in the car on the way to and from the hospital.</p>
+<p>Sean says cancer has taken so much from the family, but it has also given them some things, including memories and closeness they might not otherwise have had. Sabina is still living through treatment, still trying to finish school, and still making music, while her family stays close by in Ohio and continues the same hard routine that has defined so much of the last five years.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/22/health/sabina-cancer-journey-ghrc" target="_blank" rel="noopener noreferrer" title="CNN / ‘Cancer has taken so much … but it’s also given us a few things’: One family’s journey">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna,el_pais,scmp">
+  <summary>US judge strikes down Trump&#x27;s 75-country visa ban</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A US federal judge has overturned a visa policy covering nationals of 75 countries, including Afghanistan, Brazil and Yemen, after finding the ban contrary to law; the government can appeal, leaving the fate of the suspended immigrant visa process unresolved.</p>
+<p>Judge Jeannette Vargas issued the ruling on Friday in the Southern District of New York. She said Secretary of State Marco Rubio had exceeded his “statutory authority” in issuing the policy, which had come into force in January and suspended the processing of immigrant visas for nationals of 75 countries.</p>
+<p>The policy applied to people who wanted to settle in the United States indefinitely. The countries named in the measure included Afghanistan, Brazil, Egypt, Iran, Iraq, Nigeria, Somalia, Thailand and Yemen. At the time, the State Department said the decision was made “to ensure that immigrants from high-risk countries do not unlawfully utilize welfare in the United States or become a public charge.”</p>
+<p>Vargas ruled that consular officers were wrongly ordered to refuse immigrant visas solely because of an applicant’s country of origin, even when the applicant had otherwise met the requirements. Her ruling vacates any visa denial based only on the policy.</p>
+<p>The decision lands against the backdrop of Donald Trump’s broader immigration agenda. Trump campaigned for the White House on a promise to expel millions of undocumented migrants, and after returning to the White House he has taken a number of actions aimed at speeding up deportations and reducing border crossings. The government can appeal Friday’s ruling.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/world/us-judge-strikes-down-trumps-75-country-visa-ban-6335151" target="_blank" rel="noopener noreferrer" title="CNA / US judge strikes down Trump&#x27;s 75-country visa ban">CNA #1</a><a href="https://elpais.com/internacional/2026-08-22/una-jueza-federal-anula-la-prohibicion-de-visados-de-estados-unidos-a-ciudadadanos-de-75-paises.html" target="_blank" rel="noopener noreferrer" title="El País / A federal judge strikes down US visa ban for citizens of 75 countries">El Pais #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3364905/us-court-strikes-down-trump-visa-ban-affecting-south-asian-nations" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US court strikes down Trump visa ban affecting South Asian nations">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian,nyt">
+  <summary>Texas judge denies Karmelo Anthony’s request for a new trial in stabbing death</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Texas judge denied Karmelo Anthony’s request for a new trial on Saturday, leaving intact his murder conviction and 35-year prison sentence in the fatal stabbing of his classmate Austin Metcalf. Anthony, 19, was convicted in June by a Collin County jury over the killing at a high school track meet in Frisco, about 28 miles north of Dallas.</p>
+<p>Anthony’s defense attorneys have sought a retrial, saying county prosecutors violated an off-the-record agreement they say would have narrowed the case to the day of the track meet and kept out allegations that could affect the jury’s view of the teenagers’ character. They said the state broke the deal at the 11th hour, which led Anthony to forgo testifying even though, they said, his testimony would have been central to a self-defense argument. A county prosecutor denied that claim at the time and said the trial was conducted ethically. The Collin County district attorney, Greg Willis, said on Saturday that he respected the court’s decision and that the guilty verdict stands.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/22/karmelo-anthony-texas-trial" target="_blank" rel="noopener noreferrer" title="The Guardian / Texas judge denies Karmelo Anthony’s request for a new trial in stabbing death">Guardian #1</a><a href="https://www.nytimes.com/2026/08/22/us/karmelo-anthony-texas-stabbing.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Judge Denies New Trial for Karmelo Anthony in Texas Teen’s Killing">NYT #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>US Postal Service shares mail-in ballot restrictions despite court ruling</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US Postal Service published a final draft of proposed rules to restrict mail-in ballots under President Donald Trump, even though the rules have so far been blocked by the US court system. The USPS shared the 95-page update on Friday so the rules could take effect immediately if the existing court injunction is reversed. Under the proposal, the Postal Service would not distribute mail-in ballots in states that do not comply with federal demands for voter records. States would have to identify to the USPS any voters who requested mail-in ballots and redesign ballot envelopes to include barcodes the agency could use to track and identify voting materials.</p>
+<p>In the document, the USPS said the changes were necessary to ensure compliance with federal law. It said the requirements “do not amount to election administration” and instead regulate the use of the mail to improve operational efficiency. Critics accused the Trump administration of trying to exert federal oversight over election administration, which they said belongs to the states under the US Constitution. They also warned the Postal Service could use the rules to gather voter information and reject ballots in states that do not comply with Trump’s demands.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/22/us-postal-service-shares-mail-in-ballot-restrictions-despite-court-ruling?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US Postal Service shares mail-in ballot restrictions despite court ruling">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,scmp">
+  <summary>Israel-Turkey tensions rise after Netanyahu orders strikes on Syrian airbase</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel’s strikes on the Abu Duhur military base in northern Syria have sharpened tensions with Turkiye, after a US envoy said Washington was not warned in advance and suggested the attack may have been aimed at provoking the Turks.</p>
+<p>Tom Barrack, the US ambassador to Turkiye and special envoy to Syria, said in an interview on Friday that Israel offered no notice before carrying out military strikes in Syria this week. He called the attacks an “unnecessary escalation” and said they may have been meant to “bait the Turks”, who have substantial influence in the region.</p>
+<p>Barrack’s comments drew an angry response from Israeli officials, who have warned Turkiye against expanding its military presence in Syria. Israeli Defence Minister Israel Katz said on Saturday that Israel had shared “intelligence information to the authorised parties in the United States” before the strike on Tuesday. Katz also denounced Barrack’s remarks as “full of inaccuracies and positions that contradict the stance of US President [Donald] Trump himself” on Israel’s military occupation of the Golan Heights.</p>
+<p>Barrack has acknowledged the territory as occupied, while the first Trump administration recognised Israel’s annexation of the Golan Heights in 2019. The territory is considered occupied under international law after being captured from Syria in the 1967 Arab-Israeli War.</p>
+<h3>Strikes near the Turkish border</h3>
+<p>Netanyahu’s office said the eight strikes on the Abu Al-Duhur airbase were meant as a warning to Turkiye against increasing its military role in Syria or helping rebuild the Syrian armed forces. Netanyahu later said the attack was a “message” that Israel would not tolerate a Turkish military entrenchment in Syria that “advances southward”.</p>
+<p>Barrack, however, said the US had concluded that the alleged military activity at the base was “not happening”. Syrian Foreign Minister Asaad al-Shaibani said on Wednesday that Damascus had told Israel there were no plans for a Turkish military base at Abu Duhur, and that Turkish military officers had visited the facility as part of “ongoing military cooperation in the areas of training and the exchange of expertise”.</p>
+<p>Turkiye blasted the strikes as “reckless”. Israel has stepped up threats against Turkiye in recent months, portraying it as a potential rival seeking to expand its regional influence, while the US has tried to broker talks between Israel and Syria to de-escalate the situation.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/22/envoy-says-israel-did-not-give-the-us-notice-before-strikes-on-syrian-base?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Envoy says Israel did not give the US notice before strikes on Syrian base">AJ #1</a><a href="https://www.scmp.com/week-asia/politics/article/3364901/israel-turkey-tensions-rise-after-netanyahu-orders-strikes-syrian-airbase" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israel-Turkey tensions rise after Netanyahu orders strikes on Syrian airbase">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Chinese J-16 fighters arrive in Egypt ahead of Eagles of Civilisation 2026 joint drill</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Chinese J-16 fighters arrived in Egypt on Friday morning ahead of the Eagles of Civilisation 2026 joint exercise, marking the aircraft’s first-ever deployment to Africa. The planes and aviators reached an Egyptian airbase after a 6,000km (3,700-mile) journey that took nine hours and required mid-air refueling, the People’s Liberation Army said. The arrival comes before the planned drill involving Chinese service personnel.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/diplomacy/article/3364913/chinese-j-16-fighters-arrive-egypt-ahead-eagles-civilisation-2026-joint-drill" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Chinese J-16 fighters arrive in Egypt ahead of Eagles of Civilisation 2026 joint drill">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="global_voices">
+  <summary>Caught between silence and visibility: LGBTQ+ experiences in Mozambique</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Mozambique, transgender people and LBQ (lesbian, bisexual, and queer) women face discrimination in schools, health facilities, workplaces, religious spaces, and on digital platforms, even though the country has no laws criminalizing LGBTQ+ identities. Activists say that legal tolerance does not prevent exclusion, which often shows up through silence, invisibility, and institutional neglect. Pepetsa Fumo, a trans activist with Transform, said, “As nobody writes about us, we become invisible.”</p>
+<p>Activists say the exclusion starts in education, where school curricula are described as profoundly heteronormative and leave little room for discussion of sexual orientation, gender identity, or diversity. They also say officials have withdrawn references to sexual orientation from Mozambiquan school materials. According to activists, this environment contributes to bullying, psychological violence, and a high dropout rate among LGBTQ+ students. Pepetsa said many teachers receive little or no training on diversity, human rights, and inclusion, adding, “The challenge begins in the ministry itself, and in the way teachers are trained to not respect diversity.”</p></div>
+  <div class="source-list"><a href="https://globalvoices.org/2026/08/22/caught-between-silence-and-visibility-lgbtq-experiences-in-mozambique" target="_blank" rel="noopener noreferrer" title="Global Voices / Caught between silence and visibility: LGBTQ+ experiences in Mozambique">GV #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>France to ramp up Ukraine support, says Macron</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">French President Emmanuel Macron said on Saturday that Paris will strengthen its support for Ukraine after Russia’s deadly attacks on a shopping mall in Kryvyi Rih on Friday. Macron said he called Ukrainian President Volodymyr Zelenskyy after the strikes, which killed 16 people and left 130 injured. He wrote on X that France is stepping up support with the delivery of interceptors and continuing cooperation, while Zelenskyy said the two leaders agreed to accelerate deliveries of the latest French equipment and missiles. Zelenskyy also thanked Macron for confirming readiness to provide licenses for missile production.</p>
+<p>Macron and his counterparts from Germany and the U.K. are expected to co-host a Coalition of the Willing meeting on Monday in Kyiv to discuss continued support for Ukraine against Russia’s aggression. Some leaders, including Macron, are expected to join remotely, while around 10 leaders, including European Council President António Costa, are expected to attend in person. Zelenskyy said he and Macron also discussed diplomatic work with partners and communication with the team of the U.S. president.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/france-to-ramp-up-ukraine-support-says-emmanuel-macron" target="_blank" rel="noopener noreferrer" title="POLITICO / France to ramp up Ukraine support, says Macron">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cnn">
+  <summary>You want to join a clinical trial. Here’s what to know about the hurdles.</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">People who want to join clinical trials often run into obstacles before they ever enroll, from simply locating a suitable study to covering travel, childcare and time off work. Even as many patients say they would participate, the system still leaves a large gap between interest and access.</p>
+<p>A recent online survey of more than 2,000 adults found that 71% of patients with chronic conditions said they would be likely to take part in a clinical trial if given the chance. But two-thirds said their healthcare provider had never discussed clinical trials with them, and one study using 2020 data found that just 9% of adults had ever been invited to join one.</p>
+<h3>Finding a trial is often the first barrier</h3>
+<p>Clinical trials are essential to developing new medical treatments, but getting enough people into them is hard. One estimate put the share of trials that fail to meet recruitment targets during the trial time frame at up to 86%. Alan Balch, executive board chair at the Patient Advocate Foundation, said, “Recruitment is one thing — retention is another,” adding that “every touchpoint is an opportunity for access and affordability to be a problem.”</p>
+<p>Patients often cannot count on their doctors to find a match for them. In a survey of just over 500 primary care physicians, 86% said they were somewhat or very likely to refer patients to a trial, but only 37% had ever done so. Even when doctors do bring up trials, it is often because patients asked, standard treatment was not working, or the disease was progressing.</p>
+<p>The location of a trial can be just as important. Much of the research is done at large academic medical centers, often in urban areas, so people may have to live nearby or already be treated there. Balch said most recruitment happens at the site where the trial is taking place, and some patient groups have created search tools and navigators to help people find eligible studies.</p>
+<p>Money and logistics can shut people out even after they find a possible match. Trial sponsors cover the costs tied directly to the study, and most commercial plans must cover routine patient costs under the Affordable Care Act, but patients can still owe deductibles, copays or coinsurance. They may also face travel, parking, lodging, childcare or lost wages. Some sponsors pay incidental expenses, but patients are often told to ask.</p>
+<p>The issue has drawn new attention. In June, the Department of Health and Human Services announced an effort to streamline and enhance clinical research in the United States, including a request for information on whether to change federal rules that deter some sponsors from paying travel and lodging costs. In July, nearly 200 patient advocacy and public health groups urged Senate sponsors of the Clinical Trial Modernization Act to pass it; the bill would let sponsors cover medical and nonmedical costs and exclude up to $2,000 in support from federal taxes.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/22/health/clinical-trials-what-to-know" target="_blank" rel="noopener noreferrer" title="CNN / You want to join a clinical trial. Here’s what to know about the hurdles.">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>A mosque in Ohio was attacked for the third time. Members doubt Trump’s FBI will call it a hate crime</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Assailants broke into the Westwood Islamic Community Center in west Cincinnati on 3 August, leaving members facing the building’s third burglary in seven years and questioning whether federal authorities will treat the attack as a hate crime.</p>
+<p>Nashid Shakir, a board member and longtime member of the center, said the intruders used wire cutters to cut the wire and break a window to get inside, then forced their way into the office as well. He described “total disarray” inside the center, where smashed glass was still visible on posters with Arabic lines from the Quran. He also pointed to stolen items including a surveillance camera and television monitors, and to swear words, including “die,” written on a whiteboard.</p>
+<p>The center houses a mosque and food pantry in an underserved, majority-Black neighborhood in west Cincinnati. Its leaders and local Muslim community members have called the break-in a hate crime, especially because it follows two earlier incidents at the same site over the past seven years. In the previous break-in, racist comments were graffitied on the center’s walls.</p>
+<p>Shakir said police came, “checked the boxes for making a report,” but there has been “no follow-through.” Muslim leaders said no suspects have been apprehended. Tala Ali, a community organizer with Cair-Ohio in Cincinnati, said she does not intend to ask the FBI to investigate the break-in as a hate crime because she does not trust authorities to find who was behind it. She pointed to the 2005 bombing outside Cincinnati’s Clifton mosque, in which no one has ever been charged, as part of the reason for that doubt.</p>
+<p>The community is now looking at ways to improve security at houses of worship around Cincinnati, including at the Westwood center, which had no security cameras at the time of the attack. Ali said members would like to apply for federally funded FEMA security grants for nonprofits, but she said people are unsure about seeking that help because of the current political climate.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/22/ohio-mosque-attack-fbi-trump" target="_blank" rel="noopener noreferrer" title="The Guardian / A mosque in Ohio was attacked for the third time. Members doubt Trump’s FBI will call it a hate crime">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Venezuelan Parliament Dismisses Venezuela-US Parliamentary Friendship Group Head</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Venezuela’s National Assembly president, Jorge Rodríguez, removed Congressman Antonio Ecarri from the presidency of the Venezuela-United States Parliamentary Friendship Group, according to a statement Rodríguez released on Telegram on August 22, 2026. Rodríguez linked the decision to Ecarri’s statements about a proposal to formally dollarize the Venezuelan economy with the advice of economist Steve Hanke, and said Ecarri’s actions had been “irresponsible” and had violated the legal system.</p>
+<p>In the official text, the Parliament’s board said Ecarri’s removal was for allegedly infringing article 113 of the AN’s Internal and Debate Regulations, which requires deputies who carry out inter-parliamentary diplomacy functions to act in line with the Constitution and the interests of the Republic. Rodríguez also said Ecarri violated article 318 of the Constitution, which states that the monetary unit is the bolívar and that the Central Bank of Venezuela has exclusive authority over monetary policy. He said the board had begun an internal investigation procedure to determine the scope of the faults and set any sanctions under the internal regulations.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuelan-parliament-dismisses-venezuela-us-parliamentary-friendship-group-head" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuelan Parliament Dismisses Venezuela-US Parliamentary Friendship Group Head">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Struggling households need more help with bills, energy industry says</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Energy UK said households struggling with higher energy bills this winter need more help from the government, arguing that some people now need “emergency support” beyond the existing £150 Warm Home Discount. The body representing UK energy firms said bills were unaffordable for millions and called for a “better targeted and more agile” support scheme.</p>
+<p>The group said record levels of debt showed the current system was failing to support people in need. Ofgem is due to announce the October price cap on Wednesday, and Energy UK said it is expected to hit a three-year high. Cornwall Insight predicts the cap will rise by 4% when announced, after a sharper 13% rise in July. Ofgem reported at the end of last winter that customers behind on their bills owed suppliers a record £4.7bn.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cm2g5x7l4mko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Struggling households need more help with bills, energy industry says">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,guardian,scmp">
+  <summary>Seventeen-year-old girl killed in sword attack at school in Sweden</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 17-year-old girl was killed and three other people were hurt in a sword attack at Brinell high school in Fagersta, Sweden, as police investigated whether the 18-year-old suspect was linked to online communities promoting school violence.</p>
+<p>The girl’s death was confirmed by police, and her parents told the local newspaper Fagersta-Posten that their daughter had been killed in the attack. Three other people were wounded during classes on Friday afternoon, including two boys aged 12 and 17 who suffered minor injuries. A third victim, also under 18, had minor injuries and has since been discharged from hospital, Swedish news agency TT reported.</p>
+<h3>The investigation</h3>
+<p>Police are examining whether a TikTok account that posted a picture of a sword 20 minutes before the attack belonged to the person responsible. The image appeared to have been taken in a restroom at the school, according to Dagens Nyheter. Before it was taken down on Friday, the month-old account contained videos referring to two episodes of mass violence in Sweden and to Anders Behring Breivik, who killed 77 people in Norway in 2011.</p>
+<p>One of the videos also referenced a 2015 attack in Trollhättan, western Sweden, in which a masked swordsman killed a teaching assistant and two boys at a school before being shot dead by police. Investigators, a police source said, are looking into various online communities that may have encouraged the suspect to carry out the attack.</p>
+<p>Police said an 18-year-old man was arrested over the incident, and Brinell School’s principal said the suspected attacker was a student there. On Saturday, police also clarified that the suspect had not been shot, contrary to what they had said the day before. Prosecutors ordered the man’s detention on suspicion of murder and several counts of attempted murder.</p>
+<p>The attack also disrupted politics beyond the school. Several party leaders cancelled planned speeches on Saturday, pausing campaigning ahead of Sweden’s 13 September general election. Prime Minister Ulf Kristersson and opposition leader Magdalena Andersson travelled to Fagersta to offer condolences to the bereaved family and visit the injured.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/22/swedish-police-identify-17-year-old-girl-as-victim-in-school-sword-attack?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Swedish police identify 17-year-old girl as victim in school sword attack">AJ #1</a><a href="https://www.theguardian.com/world/2026/aug/22/seventeen-year-old-girl-killed-in-sword-attack-at-school-in-sweden" target="_blank" rel="noopener noreferrer" title="The Guardian / Seventeen-year-old girl killed in sword attack at school in Sweden">Guardian #1</a><a href="https://www.scmp.com/news/world/europe/article/3364939/sword-attack-sweden-killed-one-prompts-probe-social-media" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Sword attack that killed 1 at Sweden high school prompts social media probe">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Lindsay Clancy trial: everything that happened this week in court</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Lindsay Clancy’s trial moved toward the jury this week after jurors heard competing accounts of her mental state, including testimony about voices, psychosis and depression, leaving the central question whether she was criminally responsible for killing her three children in January 2023.</p>
+<p>On Wednesday and Thursday, jurors were sent home early. Judge William Sullivan called the first interruption an “unforeseen circumstance” and told jurors not to speculate or hold it against either side. The abbreviated Thursday session followed testimony from hospital chaplain Sheila Cavanaugh, who met Clancy after the children’s deaths and her alleged suicide attempt. Cavanaugh said Clancy recalled a voice that allegedly told her to kill her children, and that Clancy told her, “I am so glad my children are safe.” Cavanaugh also said that in the days after the killings, while Clancy was still receiving emergency care at Brigham and Women’s Hospital, her emotional state was “very neutral, a flat affect,” and that Clancy mentioned hearing a male voice multiple times. According to Cavanaugh, the voice told Clancy that if she did not follow the command, neither she nor her children would be safe.</p>
+<p>Defense witness Paul Zeizel, a forensic psychologist who met with Clancy dozens of times and reviewed her medical records, echoed that account. He recalled Clancy saying during a telephone call with her former husband, Patrick Clancy, that she heard a male voice ordering her to kill her children and then kill herself. Zeizel also testified that Clancy had been “unable to conform her behavior to the rule of law” and had “no appreciation for the wrongfulness of her act.” He said psychological testing by a government doctor found no evidence that she was manufacturing or exaggerating psychiatric symptoms. The defense’s final witness, Dr Phillip Resnick, a forensic psychiatrist with expertise in postpartum disorders, said he believed Clancy was “frankly psychotic” on the day she killed her children and was in a “postpartum psychosis” after her third child was born.</p>
+<p>The prosecution then pushed back, arguing Clancy acted deliberately and rationally after sending her husband out on errands. Prosecutors recalled psychiatrist Dr Avram Mack, who testified about the Massachusetts legal standard for criminal responsibility and said the burden was on prosecutors to show Clancy did not suffer from a mental disease or defect, or that she still had the substantial capacity to appreciate the wrongfulness of her conduct. Mack said Clancy suffered from a “major depressive episode” in 2022 and 2023, described her as generally friendly and cooperative, and said there were “not many abnormalities” in her presentation.</p>
+<h3>What comes next</h3>
+<p>Closing arguments are slated to begin next week. If jurors acquit Clancy by reason of insanity, she would be sent to a state psychiatric hospital and reviewed periodically for release; if they find for the prosecution, she faces life without parole. A civil case brought by Clancy and her former husband is also pending against several mental healthcare providers, including two workers who testified at trial.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/22/lindsay-clancy-trial-what-happened-this-week" target="_blank" rel="noopener noreferrer" title="The Guardian / Lindsay Clancy trial: everything that happened this week in court">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="cnn">
+  <summary>Tariffs raised prices you paid. But most businesses won’t be passing tariffs refunds back to you</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tariff refunds have turned into a windfall for US businesses in their most recent quarter, but American consumers are likely to see little or no money back. Companies’ recent disclosures showed payouts starting in May after the Supreme Court ruled that the Trump administration’s global tariffs were illegal. Walmart said it got a $2.9 billion refund, Target got $994 million, Apple an estimated $2.2 billion, Ford $1.3 billion, Home Depot $730 million, Nike $684 million and Amazon $640 million. The government began issuing refunds from the $168 billion collected from 330,000 importers, and as of July 31, $100 billion had been sent out, according to a court filing by the US Customs and Border Protection.</p>
+<p>For consumers, the refund trail is murkier. Businesses often raised prices to cover tariff costs, but it is difficult to determine how much of any price increase came from tariffs versus other pricing factors. One exception is shipping companies like FedEx and UPS, which collected the tariffs from customers on overseas shipments and set up a portal for customers to collect their share of rebates. Amazon also said that in a limited set of circumstances it passed specific import charges to customers and would pass along their share of refunds.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/22/business/tariffs-refunds-companies-consumers" target="_blank" rel="noopener noreferrer" title="CNN / Tariffs raised prices you paid. But most businesses won’t be passing tariffs refunds back to you">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="el_pais">
+  <summary>The most expensive country in the world draws closer to the EU, pushed by high cost of living</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">general_news</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iceland is heading into a key vote on EU membership as soaring prices squeeze households in Reykjavik and beyond, with many residents looking to euro adoption as a possible way to ease inflation even though the decision is still only a first step.</p>
+<p>In the capital, the examples are ordinary but sharp: six small tomatoes cost 980 kroner, nearly seven euros; a hamburger at a very simple place cost 28 euros; and a takeaway pepperoni pizza was more than 22. Even a postcard of the country’s famous fjords came to almost five. Visiting Reykjavik these days, and especially the tourist-heavy parts of the country, has become, as the report puts it, a risk to the wallet.</p>
+<p>The pressure is landing on a remote, wealthy island that will hold a key consultation on Saturday over whether to move closer to the European Union. The country has carried the label of the world’s most expensive for several months, according to calculations by the Viska union, ahead of Switzerland, Norway and Caribbean islands known for some of the biggest US fortunes. It is also described as the richest country most hit by inflation in the last half-century.</p>
+<p>At a “low-cost” supermarket in Breidholt, a working-class district in eastern Reykjavik, 55-year-old Thorunn Davidsdottir said the increase had become much more noticeable in the last three years. “Food, restaurants, clothes... And shoes, especially shoes,” she said. She added that the impact was softer for her than for some people around her because her children have already left home.</p>
+<p>The squeeze is visible in the numbers too. Prices are rising at a 5% annual rate this year, double the central bank’s 2.5% target. Wages are high by continental European standards, with the lowest levels above 3,000 euros gross a month, but the cost of living is rising even faster. A truck driver, Marcin Blasik, said: “You earn much more, but you have to be more careful with expenses.” Economist Thorvaldur Gylfason said high prices are mainly driven by weak competition and high transport costs, adding that Iceland imports half of what it consumes. The IMF has also warned about inflation expectations drifting away from target.</p>
+<p>Some islanders see EU entry, and later possibly the euro, as a way to bring prices down. Jon Steinsson, an economist at Berkeley, said lower trade barriers and more competition could reduce prices, while euro integration could also lower interest rates. But for others, the vote is no cure-all. Blasik said he will vote no. In a week, Icelanders will also be voting with their own budgets in mind.</p></div>
+  <div class="source-list"><a href="https://elpais.com/internacional/2026-08-22/el-pais-mas-caro-del-mundo-se-acerca-a-la-ue-empujado-por-el-alto-coste-de-la-vida.html" target="_blank" rel="noopener noreferrer" title="El País / The most expensive country in the world draws closer to the EU, pushed by high cost of living">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="scmp">
+  <summary>Panama Canal to reduce shipping over El Nino-fuelled drought</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Panama Canal Authority said on Thursday it will cut the number of ships passing through the canal starting next month because of drought driven by El Nino. From September 3, the daily limit will fall from 36 to 34, and from September 15 it will drop to 32, because of low water levels in two artificial lakes that feed the canal. The authority said rainfall in the canal area from May to August is down 34 per cent from its historical average. The canal handles about 5 per cent of global maritime trade and around 40 per cent of US container traffic.</p>
+<p>The operator said lower-than-forecast rainfall in the canal’s watershed requires measures to support the waterway’s long-term sustainability. It has already lowered the maximum draft for the largest ships, and said waiting times for vessels without a reservation will increase. Nine of 10 ships using the canal already travel with a reservation, with the remaining slots auctioned off. The authority also said it does not rule out further restrictions depending on how much it rains in the coming weeks.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/americas/article/3364947/panama-canal-reduce-shipping-over-el-nino-fuelled-drought" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Panama Canal to reduce shipping over El Nino-fuelled drought">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="la_jornada">
+  <summary>Election advisor criticizes ruling on pre-campaign acts</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Electoral advisor Carla Humphrey lamented that the majority of members of the General Council of the National Electoral Institute (INE) approved a decision that the body will not regulate pre-campaign acts. She said the INE argued it lacks the guidelines needed to monitor internal party processes linked to the elections of the coming year, which she criticized in the ruling.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/22/politica/008n3pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Election advisor criticizes ruling on pre-campaign acts">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="scmp">
+  <summary>Nvidia customers notified of AI-related price rises above 15%</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Some of Nvidia’s biggest customers have been told that prices for servers containing its artificial intelligence chips are going up by more than 15% in many cases, as memory chip costs soar. The increases will take effect on systems shipped early next year and will affect products including those using the flagship Vera Rubin and Grace Blackwell chips, people familiar with the process said. They said the size of the increases will depend on the generation of Nvidia chips and the memory configurations.</p>
+<p>Companies building servers under contract for large data centre operators such as Microsoft, Alphabet’s Google and Oracle have recently notified their customers of the forthcoming price rises, the people said. Nvidia representatives did not respond to requests for comment. The report also said Nvidia’s accelerator processors are central to computers that create and run AI software, and their effectiveness depends on how much dynamic random access memory, or DRAM, they are paired with. Samsung Electronics, SK Hynix and Micron Technology account for most of the world’s production of that chip, and they have not kept up with surging demand even as output has risen.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/tech/big-tech/article/3364945/nvidia-customers-notified-ai-related-price-rises-above-15" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Nvidia customers notified of AI-related price rises above 15%">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>WithEveryone: Unified Planning and Identity Grounding for Group Image Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">WithEveryone introduces a unified framework for generating group images with up to ten reference identities. It is designed for the case where identity-preserving image generation becomes less reliable as more specified people are added. The method injects each selected identity as an addressed token, predicts a structured identity-layout plan, and renders that plan as a visual condition. Its key objective, Layout-Grounded ID Loss, uses annotated face regions to supervise the intended identities directly, and ID Representation Forcing trains a prediction for each identity before image synthesis.</p>
+<p>On an identity-disjoint benchmark, WithEveryone reports the highest target-context identity similarity. It improves face similarity from 0.462 for GPT-Image-2 to 0.499, while reducing copy-paste artifacts from 0.169 to 0.055. It also covers 97.3% of the requested identities with a duplicate rate of 2.8%. The preprint says these results show that explicit identity-layout grounding can scale identity-preserving generation to larger groups without direct reference-face copying.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.20336" target="_blank" rel="noopener noreferrer" title="arXiv / WithEveryone: Unified Planning and Identity Grounding for Group Image Generation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Training Chemical Plausibility-Aware Large Language Models for Single-Step Retrosynthesis</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced Top-K prompting for single-step retrosynthesis, arguing that the one-to-many nature of the task is poorly captured by single-answer evaluation and benchmarking. They compiled CREED-CCV-2+USPTO-XL, an ultra-large dataset of about 45.6 million verified reactions, to train C3LM, the Chemistry Constraint-Consistent Language Model. Using fine-tuning with ChemCensor-based and novelty-oriented rewards, the model reached state-of-the-art performance on the OOD URSA-expert-2026 benchmark. The preprint also says LLMs and conventional models explore complementary reaction spaces.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.18940" target="_blank" rel="noopener noreferrer" title="arXiv / Training Chemical Plausibility-Aware Large Language Models for Single-Step Retrosynthesis">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Decision-Metric Alignment in Latent World Models: Diagnostics and Action-Conditioned Objectives for MPC Planning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces Decision-Metric Alignment in Latent World Models, arguing that strong decoding of task variables in JEPA-style latent world models does not guarantee that Euclidean distance to a goal latent will rank action sequences by real task progress. The authors define this as decision-metric alignment and propose Plan-Real Spearman and CEM-stage Spearman to measure it. They also present DA-LeWM, which adds inverse-dynamics and demonstration-conditioned goal-action heads to LeWM. Across experiments, DA-LeWM converged faster and reached higher online success while probe scores stayed similar.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.18746v1" target="_blank" rel="noopener noreferrer" title="arXiv / Decision-Metric Alignment in Latent World Models: Diagnostics and Action-Conditioned Objectives for MPC Planning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Repo0: Design-Driven Zero-to-All Code Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Repo0 is a continuous structural evolution framework for zero-to-all code generation, presented in a preprint on arXiv. It is aimed at the setting where an agent must build an entire software project from natural-language requirements while preserving a modular repository architecture. The work evaluates Repo0 on six real-world repositories from RepoCraft using GPT-5 mini and DeepSeek V3.2. Across all settings, Repo0 reports the highest Functionality Coverage and Pass Rate, and compared with RPG, the strongest repository-planning baseline, it improves Functionality Coverage by up to 20.08 percentage points and Pass Rate by up to 29.74 percentage points.</p>
+<p>Repo0 maintains an explicit architectural state as a Dual-Directed-Acyclic-Graph (Dual-DAG), with a requirement-level DAG, a component-level DAG, and an alignment relation between them. Starting from natural-language requirements, it iteratively evolves component boundaries through structural actions guided by modularity metrics until structural convergence, then uses the converged architecture to guide test-driven development code generation. Ablation and structural-evolution analyses further support the roles of the Dual-DAG state, modularity-guided structural evolution, and explicit structural convergence.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.19854v1" target="_blank" rel="noopener noreferrer" title="arXiv / Repo0: Design-Driven Zero-to-All Code Generation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Looped Language Models Improve Compositional Tool Calling</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Looped language models improved compositional tool calling in a preprint that tested how they handle agentic tool use in settings where models must coordinate multiple API calls, maintain intermediate state, and preserve dependencies across tool interactions. The work evaluated native and retrofitted looped language models on API-Bank, BFCL, and NESTful, comparing looped and non-looped models trained under matched supervised fine-tuning recipes and varying recurrent depth at inference time.</p>
+<p>In controlled experiments, recurrent computation generally helped compositional and dependency-aware tool use, while the gains were smaller and more model-dependent for isolated API invocation. Accuracy on multi-step tool use generally rose with recurrent depth, and adaptive inference was described as offering a more favorable compute-performance trade-off by adding computation only when needed. The authors said these results suggest looped language models are a promising architecture for agentic systems that need reliable planning, coordination, and execution of compositional tool-use workflows.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.18171v1" target="_blank" rel="noopener noreferrer" title="arXiv / Looped Language Models Improve Compositional Tool Calling">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Training Leaves Traces: Centered Residual Signatures for Language Model Lineage Verification</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Centered residual signatures are proposed for verifying the lineage of compatible open-weight language-model checkpoints. The work asks whether weights alone can show whether two checkpoints share ancestry when models have been fine-tuned, quantized, pruned, or merged. It says residual training leaves a shared identity-aligned component in branch products, so that structure alone cannot establish ancestry; the method removes it and compares checkpoint-specific structure across residual blocks to produce a symmetric lineage score calibrated against independent checkpoints.</p>
+<p>On residual-MLP and GPT-2 benchmarks, the score separates fine-tuned, LoRA-merged, pruned, and quantized descendants from independent and distilled models, with AUROC=1.0. The researchers also say it remains unchanged in function-preserving checkpoint laundering experiments, while weight-space baselines lose margin or fail, and that it runs 76x faster than the nearest robust baseline on GPT-2. They report that the signal appears across six language-model families and beyond, and a case study correctly identifies 3 related and 7 unrelated LLaMA-2 public checkpoints.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14929v1" target="_blank" rel="noopener noreferrer" title="arXiv / Training Leaves Traces: Centered Residual Signatures for Language Model Lineage Verification">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>The More Popular, The Harder to Forget: Adaptive Popularity for LLM Unlearning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Popular facts appear to be memorized more deeply during pretraining and harder to remove than rare ones, and a preprint proposes AdaPop (Adaptive Popularity) to address that imbalance. The method combines local token confidence with a per-fact popularity-dependent exponent drawn from proxies such as Wikidata sitelinks or LLM-as-Judge, and uses a dual-ascent controller to adjust the retain penalty each epoch. Across three model families and two benchmarks, it reportedly leaked about 5x less forgotten content under paraphrased queries and about 1.6x less under adversarial reformulations.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14229v1" target="_blank" rel="noopener noreferrer" title="arXiv / The More Popular, The Harder to Forget: Adaptive Popularity for LLM Unlearning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>FM-Bench: A Benchmark for Long-Horizon Management with Competing Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">FM-Bench (Football Management Benchmark) measures long-horizon decision-making for language model agents by having an LLM run a football club for 20 in-game years through 26 tools and roughly 340 to 400 decision stops. The setup has the agent draft a squad on the same budget as every rival, trade players, negotiate contracts, invest in facilities and youth, set lineups, and respond to a board that can fire it. A deterministic engine rolls the season forward into one final score, with no LLM judge or human rater. The benchmark has a solo track, where 15 frontier models play against a frozen scripted world, and an Arena track, where the same models plus a scripted anchor share one 20-year world.</p>
+<p>Across three seeds, all 15 models completed every horizon, while the blind scripted baselines died out in most of theirs. claude-fable-5 led the solo board on mean score and the Arena, though the Arena title rotated among ten models. The ordering was not predicted by scale, price, or vendor, and the best first-play human landed at the bottom of the model board. The preprint says the main differences were managerial: higher-scoring models cut back on late slow-payoff investment, kept cash invested, and opened renewals early, while token spend predicted nothing.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.18423v1" target="_blank" rel="noopener noreferrer" title="arXiv / FM-Bench: A Benchmark for Long-Horizon Management with Competing Agents">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>This yeast supplement may boost cancer-fighting immunity</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at Trinity College Dublin and University College Dublin found that a yeast-based dietary supplement strengthened immune cells involved in fighting cancer in obese laboratory mice. In experiments, adding yeast beta-glucan to standard or high-fat diets for 4-12 weeks changed how immune cells developed and produced stronger cancer-fighting responses when the mice were later challenged with colorectal, skin and breast cancer cells. The work was published in the scientific journal Cell Reports and was led by Frederick Sheedy and Helen Roche.</p>
+<p>Dr. Anna Ledwith said the team wanted to test whether yeast beta-glucan could reprogram early-stage immune cells in the bone marrow to produce long-lasting anti-tumor responses. Prof. Roche said the findings show, for the first time, that dietary delivery of yeast beta-glucan was enough to trigger trained immunity by altering bone marrow stem cells, and that it restored anti-tumor innate immunity in obese mice and reversed long-term immune memory defects that persisted after weight loss. The researchers said the results could support dietary intervention studies in people living with obesity, chronic infections and other immunocompromised populations.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260821012230.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / This yeast supplement may boost cancer-fighting immunity">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Multilingual people may have brains up to 13 years younger</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">People who speak more than one language may have brains that appear younger than expected for their age, with the biggest difference seen among those who spoke four languages, according to research presented at the Federation of European Neuroscience Societies (FENS) Forum 2026. In the study, people who spoke two languages had brains that appeared about six years younger than those of people who spoke only one language, three-language speakers showed a difference of roughly seven years, and four-language speakers showed a difference of about 13 years. The work was presented by Dr. Lucia Amoruso of the Basque Center on Cognition, Brain and Language in San Sebastián, Spain, with collaborators in Chile, Argentina and Ireland.</p>
+<p>The researchers focused on people from the Basque region of Spain who spoke between one and four languages, using combinations of Spanish, Basque, French and English. They first studied 728 people to create a “brain aging clock” using magnetoencephalography and artificial intelligence, then applied it to a separate group of 144 people. The team said earlier language learning and higher proficiency were also linked to more delayed brain aging. They adjusted for age, sex and education, but said lifestyle and social engagement could also have influenced the differences.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260821012226.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Multilingual people may have brains up to 13 years younger">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Queen bees have a disturbing way to survive pesticides</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Honeybee queens may not be passive victims of pesticide exposure: when chemicals build up over time, they can pass some of that burden into their eggs, a defense that may help the queen but could leave the colony facing an unresolved cost.</p>
+<p>Researchers led by the University of California, Davis say worker bees normally act as a hive’s first line of defense, filtering harmful substances before they spread. But in honeybees, they found queens can also defend themselves through what the scientists call maternal offloading — moving pesticides from their own bodies into their eggs. The findings, published in *Current Biology*, are described as the first evidence in honeybees of a queen reducing her chemical burden this way.</p>
+<h3>Tracking where the pesticides went</h3>
+<p>To study the process, the team built small “nanocolonies” with one queen and 60 worker bees. The bees were given pollen, water and food contaminated with methyl parathion, and the pesticide carried a low-level radioactive marker so researchers could follow it through the hive. On day one, worker bees filtered out 95% of the pesticide and moved it into the honeycomb, but by day 10 that figure had fallen to 86%.</p>
+<p>Sascha Nicklisch, the paper’s senior author, said the queen “offloads these chemicals into her eggs to get rid of them,” adding that no one had shown this in honeybees before. Angela Encerrado-Manriquez, the lead author, said the results suggest worker filtration can be overwhelmed over time, after which queens have their own defense.</p>
+<p>The study, which also involved Lawrence Livermore National Laboratory and the U.S. Department of Agriculture’s Agricultural Research Service, raises questions about how long queens can keep transferring contaminants, what that means for colony health, and whether the effect differs by pesticide. The researchers said it could matter for beekeepers, growers and integrated-pest-management planning, especially when colonies are foraging or expanding.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260821012224.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Queen bees have a disturbing way to survive pesticides">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>JWST finds early galaxies may be 4 times more massive than thought</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">JWST observations suggest some of the earliest large galaxies may contain far more faint, low-mass stars than scientists had realized, making them up to four times more massive than earlier estimates and sharpening a puzzle about how the first galaxies formed and evolved.</p>
+<p>An international team that included Penn State researchers studied nine massive, mature galaxies that stopped producing new stars billions of years ago. They combined JWST observations of the distant universe with earlier ground-based data from the Very Large Telescope, and the results were published in *Nature Astronomy*. By separating each galaxy’s light into a spectrum, the researchers said they could estimate the relative numbers of small, faint stars and much larger, brighter stars at distances where that had not been done reliably before.</p>
+<p>Joel Leja of Penn State said the galaxies were “different” in a way that is “really challenging to understand,” because they appear to be “three or four times more massive than we expected.” Lead author Chloe Cheng said the models show that many low-mass stars are hidden by rarer bright stars, so a galaxy can turn out to be much heavier than earlier calculations suggested.</p>
+<p>The study also challenges the long-standing assumption that stars formed in roughly similar proportions across the universe. The researchers found that the most massive early galaxies appear to contain a greater share of low-mass stars than smaller galaxies such as the Milky Way. One galaxy, according to coauthor Martje Slob, likely formed less than 1.5 billion years after the Big Bang and may be as much as four times more massive than previous calculations suggested.</p>
+<p>Over the next several years, the team plans to use the same technique to study even earlier galaxies.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260822015141.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / JWST finds early galaxies may be 4 times more massive than thought">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Archaeologists discover mysterious 400-year-old Indigenous pot in Florida</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">University of Florida students excavating Mission San Francisco de Potano in northwest Gainesville uncovered a small Indigenous clay pot that survived intact for centuries underground, but archaeologists still do not know what it was used for or why it was buried in a pit.</p>
+<p>Roughly 400 years ago, a member of the Indigenous Potano-Timucua tribe shaped the vessel by hand. It is small enough to fit in a palm, with a simple rim, a smooth dull gray surface, and no decoration. Gifford Waters, collections manager for historical archaeology at the Florida Museum of Natural History, called it unusual because archaeologists “typically” find broken objects that were discarded. He said he had seen complete artifacts in shipwreck collections, but this was the first time in his career that his team excavated an entirely unbroken pottery vessel from a terrestrial site.</p>
+<h3>Found in a centuries-old mission site</h3>
+<p>The discovery came during a spring-semester field course taught by Waters and Charles Cobb, curator of historical archaeology at the museum. Each Friday, students practice archaeological fieldwork at the mission site, a wooded area marked by 1-by-1 meter excavation squares and traces of a 17th-century kitchen, a friar’s residence and the surrounding Potano village.</p>
+<p>Mission San Francisco de Potano was abandoned in 1706, and artifacts only began turning up again in the 1950s. Since 2006, the site has yielded more than 7,000 artifacts, most of them fragments of Native American pottery. The intact pot stands out because it remained whole underground, despite the pressure and disturbance that usually crack pottery over time.</p>
+<p>The vessel was found within a Spanish-made structure whose purpose has not yet been determined, and more excavation will be needed before researchers can say exactly what happened there. The pot itself has not revealed much about use, but its setting has added one more piece to the larger story being reconstructed at the site.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260820202902.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Archaeologists discover mysterious 400-year-old Indigenous pot in Florida">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
