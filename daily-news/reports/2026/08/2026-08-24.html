@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-24</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-24</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Peru Declares Emergency in Five Districts Affected by 7.2 Earthquake</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Peru declared a state of emergency this Sunday in five districts of the southern Ayacucho region after last Thursday’s 7.2 magnitude earthquake. The measure covers Chumpi, Coracora, Pullo and Upahuacho in the province of Parinacochas, and Carapo in Huanca Sancos, and will remain in effect for 60 days. The quake has left nearly 500 people affected and three injured, and it damaged 83 homes, along with about twenty schools, health centers, public buildings and transportation routes.</p>
+<p>Emergency actions will be carried out by the Regional Government of Ayacucho and the local governments involved, with technical coordination and monitoring by the National Institute of Civil Defense (Indeci) and participation from several ministries, including Health, Education, Housing, Transport and Communications, Interior, Defense and others. The decree also lists goods that may be donated, such as medicines, food, clothing, generators, water purification plants, radios, tents and sleeping bags, and says free services may include catering, medical support, transport, logistics, storage and related services. Funding will come from the institutional budgets of the entities involved, without additional Public Treasury resources.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/peru-declares-emergency-in-five-districts-affected-by-7-2-earthquake" target="_blank" rel="noopener noreferrer" title="Telesur English / Peru Declares Emergency in Five Districts Affected by 7.2 Earthquake">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,guardian,nyt,scmp">
+  <summary>Fast-moving wildfire in Reno, Nevada, forces thousands to evacuate homes</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A fast-moving wildfire outside Reno has pushed tens of thousands from their homes, burned structures and left officials racing to protect neighborhoods while investigators say it was human-caused but are still probing how it started.</p>
+<p>The Hawk Fire began near Hawk Meadow Trail on Saturday and quickly intensified as strong gusty winds, low humidity and dry vegetation carried it from the Sierra Nevada foothills toward Reno, according to Truckee Meadows Fire and Rescue. Officials said the blaze was human-caused after an initial investigation, but they have not said how it started.</p>
+<p>By Sunday, the evacuation footprint had widened sharply. Officials said 42,000 residents were under evacuation orders and another 45,000 were in a warning zone and told to be ready to leave. At least six people were injured, and authorities said several structures had already been destroyed.</p>
+<h3>The fire’s size kept changing as it pushed toward Reno</h3>
+<p>Reports on Sunday put the fire at different sizes as it moved toward the city. One account said it had grown to more than 4,450 hectares, or 10,500 acres. Other reports later in the day said it had burned over 13,000 acres, while another said it had spread to more than 15,000 acres.</p>
+<p>The fire reached the edge of the University of Nevada campus in Reno in some reports, and the evacuation zone expanded across neighborhoods on the city’s northern side. The blaze also came close enough to affect major routes, with portions of US Route 395 closed and at least 20 road closures in effect by Sunday afternoon.</p>
+<p>Reno’s mayor, Hillary Schieve, urged people not to wait if they had been told to leave. She said structures had already been burned and stressed that lives mattered more than buildings. She also said evacuating early would help firefighters focus on the blaze instead of on getting people out.</p>
+<h3>Power outages, shelters and emergency crews</h3>
+<p>The fire’s impact spread beyond the evacuation zones. By Sunday, nearly 10,000 homes and businesses in Washoe County were without power. Washoe County emergency officials opened the Reno-Sparks Convention Center for evacuees, though pets could not be brought there and had to be left at two other locations for small and large animals.</p>
+<p>Casinos in Reno offered hotel discounts to evacuees, and officials said approximately 400 personnel were working on the incident with local, state and federal resources, including ground crews and air support. The Nevada National Guard was also mobilized after Governor Joe Lombardo declared a state of emergency in Washoe County.</p>
+<p>Lombardo said two helicopter crews were sent to help with aerial firefighting and 60 troops were assigned to help police safeguard evacuated neighborhoods. Truckee Meadows Fire and Rescue said the fire was being driven by the winds, and chief Richard Edwards described it as a “very dynamic incident.”</p>
+<p>The response unfolded as parts of the city tried to keep moving. Reno-Tahoe International Airport remained outside the evacuation zone, and commercial flights were unaffected on Sunday. The smaller Reno-Stead airport was closed to general aviation traffic but stayed open for firefighting aircraft.</p>
+<h3>What investigators and residents still face</h3>
+<p>Officials said the fire remained under investigation even as the evacuation orders expanded. Washoe County Sheriff Darin Balaam said he had classified the Hawk Fire as human-caused after completing an initial investigation into the origin of the blaze, but no further details were provided about how it began.</p>
+<p>For people in the fire’s path, the change from ordinary weekend weather to emergency evacuation was abrupt. One resident, Tyler Duvall, said the fire was not even a concern on Saturday morning, but by the next day his house was in the evacuation zone. Another evacuee, retired police officer and firefighter Ted Melden, said he was hoping crews would get a good handle on it and that people had to be ready and prepared.</p>
+<p>The fire also came only weeks after three other wildfires fueled by dry and windy conditions north of Reno forced more than 13,000 residents from their homes, according to the Nevada National Guard.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/23/thousands-displaced-as-wildfire-threatens-homes-in-us-state-of-nevada?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Thousands displaced as wildfire threatens homes in US state of Nevada">AJ #1</a><a href="https://www.theguardian.com/us-news/2026/aug/23/wildfire-reno-nevada-hawk-fire" target="_blank" rel="noopener noreferrer" title="The Guardian / Fast-moving wildfire in Reno, Nevada, forces thousands to evacuate homes">Guardian #1</a><a href="https://www.nytimes.com/2026/08/23/us/hawk-fire-reno-evacuations.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Fire Near Reno, Nev., Prompts Evacuation Orders for Thousands of Homes">NYT #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3364995/tens-thousands-ordered-evacuate-nevada-fire-threatens-reno" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Tens of thousands ordered to evacuate in Nevada as fire threatens Reno">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,bbc,scmp">
+  <summary>Landfill collapse in Guinea kills at least 30 people</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 30 people were killed when a landfill collapsed in Guinea’s capital, Conakry, after heavy rain, while rescuers searched for people feared still buried under the waste and the shacks it buried nearby.</p>
+<p>The landslide struck the landfill in the Bbessia district’s Dar-es-salam neighbourhood around 3 am on Sunday, according to the government statement. It buried nearby shacks and left six others seriously injured. The collapse hit what was described as the largest landfill in Guinea’s capital, turning a waste site into the focus of a major search-and-rescue effort.</p>
+<h3>Rescue teams worked through the collapsed landfill</h3>
+<p>Officials said “significant material and human resources” had been deployed to search for anyone who might still be buried, rescue victims and recover bodies. Prime Minister Amadou Oury Bah visited the site as excavators worked through the collapsed landfill under the gaze of onlookers. The government also said measures had been taken to ensure medical care for the wounded and assistance for those affected by the tragedy.</p>
+<p>Lancine Sylla, the head of the Dar-es-Salaam suburb where the incident occurred, said he feared a high death toll. He told AFP that 18 bodies had already been pulled out and taken to the morgue. That figure came as the search continued at the scene, where the government said the response remained centered on finding survivors and recovering the dead.</p>
+<p>The death toll and the number of injured made clear how quickly the collapse overwhelmed the area around the dump. Heavy rain overnight triggered the landslide, and the refuse slid onto the neighbourhood below. The rescue operation was being carried out with excavators and other tools, as the government tried to account for anyone still trapped beneath the rubble.</p>
+<h3>Closure plans had already been announced</h3>
+<p>The collapse also exposed how long officials had been warning about the landfill. Lieutenant Colonel Balde Mamadou Bailo, the sanitation officer for the Military Engineering Battalion, said the site was designated for closure on Sunday. Guinea’s minister of territorial administration, Djenab Toure, said on Thursday that the landfill was unsafe and that the waste would be relocated outside Conakry.</p>
+<p>The government had also recently ordered the expulsion of people near the landfill and put safety measures around the site because of fears of collapses. Former Prime Minister Cellou Dalein Diallo, one of Guinea’s main opposition figures and now in exile abroad, called the accident “a tragedy that plunges us into dismay.” In a post on Facebook, he said the closure of the dump had been announced for Sunday, August 23, and called on the competent authorities to establish the circumstances “with full transparency” and draw the necessary conclusions.</p>
+<p>That mix of rescue work, planned closure and public anger left the site at the center of both an immediate humanitarian response and a wider demand for answers. For now, officials were still searching through the collapsed landfill while trying to care for the wounded and manage the aftermath of one of the deadliest incidents at the Conakry dump.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/23/landfill-collapse-in-guinea-kills-at-least-22-people-official-says?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Landfill collapse in Guinea kills at least 30 people">AJ #1</a><a href="https://www.bbc.co.uk/news/articles/c4g3g36z7p6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Guinea rubbish landfill collapse kills 30">BBC #1</a><a href="https://www.scmp.com/news/world/africa/article/3364990/landfill-collapse-kills-least-22-guinea-rescuers-search-survivors" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Landfill collapse kills at least 30 in Guinea as rescuers search for survivors">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>Israeli forces kill three Palestinians in Gaza, shoot child dead in Nablus</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 14-year-old Palestinian was shot dead by Israeli forces during a raid on the Askar refugee camp east of Nablus on Sunday, while air strikes in central Gaza killed at least three Palestinians, according to the reports cited. In Askar, the child was shot in the chest, Al Jazeera reported, quoting a medical source. In central Gaza, two Palestinians were killed and seven others wounded in strikes on the Nuseirat refugee camp and the town of az-Zawayda, and a separate air strike along Salah al-Din Street killed one Palestinian and wounded two others, Wafa reported.</p>
+<p>The violence came despite a US-brokered ceasefire that took effect in October 2025. Local health officials say more than 1,280 Palestinians have been killed in Gaza since the ceasefire began, while the Israeli military says four soldiers have been killed in the same period. Across the occupied West Bank, Wafa also reported raids in Tulkarm, detentions in Zeita and Seida, tear gas injuries in Tubas, and an assault by Israeli settlers on a 15-year-old Palestinian boy in Tammun.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israeli-forces-kill-three-palestinians-gaza-shoot-child-death-nablus" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israeli forces kill three Palestinians in Gaza, shoot child dead in Nablus">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Iryna Zarutska’s family sues North Carolina city over her murder</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iryna Zarutska’s family is suing Charlotte and a security company, a year after the Ukrainian refugee was fatally stabbed on a light rail train in the North Carolina city. A lawsuit filed Friday in Charlotte’s Mecklenburg County Superior Court says her death was preventable and alleges the city and the company that provides security for the Charlotte Area Transit System failed to put adequate protections in place despite knowing about violent crime on and around the municipal light rail line. Frank Scott Haskell, Zarutska’s uncle, filed the case. The lawsuit says the defendants knew about safety and crime concerns on Charlotte’s public transit system and claims their failures caused the fatal stabbing.</p>
+<p>The suit says the city and Professional Security Services were responsible for protecting passengers from known danger and points to what it describes as inadequate fare enforcement and security staffing. It seeks monetary damages and says it hopes to lead to security changes across Charlotte’s light rail system. Decarlos Brown Jr was charged in Zarutska’s death, and in June a judge ruled him incompetent to stand trial because of mental illness.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/23/iryna-zarutska-charlotte-nc-lawsuit" target="_blank" rel="noopener noreferrer" title="The Guardian / Iryna Zarutska’s family sues North Carolina city over her murder">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israel warns of strikes, evacuations over kites launched by Palestinian children in Gaza</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israel said it would strike and evacuate areas of Gaza over kites and balloons it linked to launches from the Strip, after Netanyahu’s office said on Sunday that Hamas had three days to halt the launches or face a broad air assault. The office also said areas from which balloons, drones and paper kites are launched would be evacuated. Over the weekend, Israeli media reported that several kites believed to have come from Gaza landed near Nahal Oz Kibbutz, adjacent to Gaza.</p>
+<p>Israeli military sources said the kites were being launched by Palestinian children and that no suspicious materials were found on any of them, so they posed no danger to the public. Residents of the kibbutz rejected that view, saying the incidents should not be dismissed as harmless. Netanyahu and Defence Minister Israel Katz also held a special meeting with senior security officials. Katz said Israeli forces had been told to respond “forcefully,” described the launches as an “act of war,” and said measures would include targeting Hamas commanders “responsible for the launches.” Hamas later said Israel was using the kites “as a pretext” to intensify attacks on Gaza.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israel-warns-strikes-evacuations-over-kites-launched-palestinian-children-gaza" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel warns of strikes, evacuations over kites launched by Palestinian children in Gaza">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="atlantic">
+  <summary>Iran Unleashed</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran has moved from a constrained regional power to one that can threaten Gulf energy flows, pressure neighboring states, and force the United States and Israel to weigh escalation differently, leaving the region to adjust to a new balance whose durability is still being tested.</p>
+<p>For years, Iran faced a Middle East tilted against it: a hostile American superpower, a nuclear-armed and militarily superior Israel, and major regional actors such as Egypt, Saudi Arabia, and the United Arab Emirates aligned with Washington. The picture described here is that this has changed. After renewed sanctions, repeated air campaigns, and direct military pressure, Iran has survived without making the concessions many expected.</p>
+<p>Last February, President Trump renewed his “maximum pressure” sanctions campaign, which cut billions of dollars in state revenues. The United States and Israel then launched a 12-day war that June aimed at Iranian nuclear facilities, and a later war followed the killing of the regime’s supreme leader and most of its senior officials, along with more than five weeks of attacks on Iranian military capabilities. Even so, the regime did not yield. The account says Iran’s missiles and drones exposed a vulnerability that mattered more: the fragility of its neighbors’ oil and gas infrastructure.</p>
+<h3>The Strait of Hormuz becomes the leverage point</h3>
+<p>A turning point came in mid-March, when Israel struck Iran’s South Pars gas field and Iran retaliated against Qatar’s Ras Laffan complex, the world’s largest liquefied-natural-gas facility. After that exchange, Trump halted attacks on Iranian energy targets, ordered Israel to stop, and ended the larger campaign without extracting any Iranian concession. A June memorandum of understanding then put Iran in charge of arranging safe passage for commercial vessels through the Strait of Hormuz, with Oman as the other named participant.</p>
+<p>Since then, Iran has moved to formalize control. It created the Persian Gulf Strait Authority, demanded shipping-company registration and permits, and required Iran-designated routes, insurance, and security. It has also proposed excluding vessels linked to governments it deems hostile, including the U.S. and Israel. According to the account, India, Pakistan, Iraq, Turkey, China, and others have already sought to adapt to the arrangement.</p>
+<p>The broader result is a regional adjustment already under way. Neighboring states are making peace with Iran’s new leverage, and more distant powers are expected to do the same. The piece’s conclusion is blunt: after years of trying to contain Iran, the world is now confronting what an unleashed Iran looks like.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/international/2026/08/iran-middle-east-power/688374" target="_blank" rel="noopener noreferrer" title="The Atlantic / Iran Unleashed">TA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="kompas">
+  <summary>Thick Haze from Forest and Land Fires, Little Schoolchildren in Pekanbaru Learn Online</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Thick haze from forest and land fires in Riau has begun disrupting schooling in Pekanbaru, where children from kindergarten through junior high school were temporarily sent home and moved to online learning from home. The decision followed worsening air quality, which the BMKG Pekanbaru station said was in the unhealthy to very unhealthy range. City Education Office head Abdul Jamal said the office had issued a circular on the adjustment, and that the policy was in place to protect students’ health and safety from smoke exposure.</p>
+<p>Jamal said the online-learning arrangement applied specifically on Monday, 24/8/2026, and that teaching and learning the next day would be adjusted according to air-quality developments based on BMKG data and other relevant agencies. He asked schools to adapt their methods so students would not be burdened, telling teachers to keep lessons simple and effective. He also urged parents to keep children inside while the air remained poor.</p></div>
+  <div class="source-list"><a href="http://regional.kompas.com/read/2026/08/24/065416378/kabut-asap-karhutla-pekat-siswa-tk-smp-di-pekanbaru-belajar-daring" target="_blank" rel="noopener noreferrer" title="Kompas / Thick Haze from Forest and Land Fires, Little Schoolchildren in Pekanbaru Learn Online">Kompas #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>5 Damning Revelations in Cerimedo Mexico Elections Interference Plot</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nadia Beller’s account has pushed Fernando Cerimedo’s Bolivia case into Mexico’s election debate, with allegations that he wanted to disrupt Claudia Sheinbaum’s government while prosecutors in Santa Cruz pursue detention, a bot-farm seizure and corruption claims that remain under investigation.</p>
+<p>On Saturday, August 22, 2026, Beller, Cerimedo’s ex-partner, said from her hospital bed in Bolivia that he intended to “blow up” the upcoming Mexican electoral process. In an interview with journalist Maca Carriedo, she said Cerimedo had repeated animosity toward Sheinbaum and wanted to interfere directly in Mexico’s federal elections, which will renew the Chamber of Deputies and several state governorships.</p>
+<p>The disclosure came after Bolivian Judge Wilson Espada ordered 180 days of preventive detention for the Argentine political consultant. Cerimedo was ordered to remain in Palmasola maximum-security prison in Santa Cruz while investigations proceed. The judicial decision followed a Prosecutor’s Office request in cases involving attempted femicide and corruption.</p>
+<p>Cerimedo was arrested on August 20 in the Aranjuez neighborhood of La Paz, where authorities seized cash in multiple currencies and detected what prosecutors described as a “mini bot farm.” Prosecutors later raided four properties linked to him, seizing more than 500,000 bolivianos, along with U.S. dollars, euros and computer equipment used for the operation.</p>
+<p>Beller, who is pregnant and hospitalized after sustaining multiple gunshot wounds, also accused Cerimedo of orchestrating the attack to silence her over evidence she says implicates him and people close to Bolivian President Rodrigo Paz’s government in illicit enrichment and money laundering. The case file also reportedly includes messages in which the accused asked for help finding people to attack her, including: “Nadia sold us out. Either we eliminate her or we’re screwed. Do you know someone who can do that job?”</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/cerimedo-mexico-elections" target="_blank" rel="noopener noreferrer" title="Telesur English / 5 Damning Revelations in Cerimedo Mexico Elections Interference Plot">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Another Fuel Theft Route Found; It Goes from Yucatán to Campeche</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">general_news</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Authorities found a fuel-smuggling route running from Yucatán to Campeche and raided a ranch in the El Cerrito community of Champotón, Campeche, where they said fuel was being stored and moved irregularly. In a coordinated operation, personnel from the Attorney General’s Office (FGR) and the Navy-Secretariat of the Mexican Navy (Semar) secured a small aircraft, about 5,912 liters of hydrocarbons and 3,000 liters of aviation gas, along with 61 ground vehicles. Six people were detained at the site.</p>
+<p>The FGR said the case stems from an investigation opened in April for probable crimes in the hydrocarbon sector, after an anonymous complaint reported irregular transportation of hydrocarbons from Mérida, Yucatán, toward Campeche through a company. FGR technicians and Pemex Security personnel also secured five long guns, three handguns, 12 magazines, 1,000 rounds of various calibers, two night vision devices, two ballistic vests, two firearm attachments, 777,750 pesos, five dollars, two LPG tanks, documentation and the property.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/23/politica/005n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Another Fuel Theft Route Found; It Goes from Yucatán to Campeche">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="kompas">
+  <summary>Various Voices Converge in Jakarta on August 27</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Several groups began preparing to head to Jakarta for an action on 27 August 2026, and one group from Pati, Central Java, said it would demonstrate outside the DPR/MPR RI building with demands including passage of the RUU Perampasan Aset and the death penalty for corruptors. The Pati group said its preparations were disrupted when a donation account used to collect protest funds was blocked. The account, under the name Supriyono, reportedly held around Rp 80 million in donations gathered to cover needs during the action.</p>
+<p>Teguh Istianto, coordinator of the Aliansi Masyarakat Pati Bersatu (AMPB), questioned the blocking and said he had not been given a clear explanation. He said the group was having trouble using money that had already been collected for the protest and urged the bank or whoever requested the block to explain the reason. While waiting for clarity, AMPB shared information about another account for donations on Facebook, and Teguh said the plan to hold the 27 August action would still go ahead.</p></div>
+  <div class="source-list"><a href="http://megapolitan.kompas.com/read/2026/08/24/06463221/beragam-suara-massa-menuju-satu-titik-di-jakarta-pada-27-agustus" target="_blank" rel="noopener noreferrer" title="Kompas / Various Voices Converge in Jakarta on August 27">Kompas #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>IPN Postgraduate Students Disown ENCB Occupation After ‘Arbitrary Decisions’</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Postgraduate students at the National School of Biological Sciences (ENCB)-Casco de Santo Tomás, part of the National Polytechnic Institute (IPN), formally withdrew their support for the campus takeover led by the organized licenciatura community. In a statement issued yesterday afternoon, the IPN said the postgraduate students denounced “arbitrary decisions and negligence in the face of a medical emergency that occurred inside the school.” The dispute is tied to the stoppage that began at that academic unit on May 19 last year.</p>
+<p>The Polytechnic said the postgraduate students had previously agreed with striking classmates to deliver supplies or money and to serve as security guards in exchange for access to protect their laboratory projects, and that both sides accepted those conditions. It added that postgraduate representatives accused the occupation leaders of “unilaterally changing the rules of the game, cutting off communication and demanding things that were not asked of the rest of the students.” The IPN also said dialogue tables with the strikers have not resumed since August 4, ahead of the planned return to classes this Monday, and that no response from the strikers was received before closing.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/23/politica/007n3pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / IPN Postgraduate Students Disown ENCB Occupation After ‘Arbitrary Decisions’">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="nikkei_asia">
+  <summary>Manila airport aims to shed &#x27;world&#x27;s worst&#x27; label with upgrades</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Renovations to Manila’s international airport are moving forward, with San Miguel-led upgrades and a recently opened food court in Terminal 3 forming part of an overhaul to improve infrastructure and services. The consortium overseeing the work says it wants to improve the airport’s service enough to shed its reputation as “the worst” in the world. The new dining area is nearing completion as the broader renovation effort continues.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/business/transportation/manila-airport-aims-to-shed-world-s-worst-label-with-upgrades" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Manila airport aims to shed &#x27;world&#x27;s worst&#x27; label with upgrades">NA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc">
+  <summary>Families of two police officers killed in crash say they were heroes</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The families of PC Tom Clough and PC Matthew Blades have described them as heroes after both officers were killed in a crash on the A66 near Middlesbrough, while investigators continue to examine how a police pursuit ended seconds before the collision.</p>
+<p>PC Clough, 38, and PC Blades, 37, died on Saturday when a Volkswagen Passat collided with their marked armed response car. The Passat was travelling the wrong way down the dual carriageway, and its occupants — Michael Robert Cahill, 23, Jacob Matusiak, 23, Theo Rae, 17, Makai Saddington, 18, and Cole Robert Worthy, 17 — also died.</p>
+<p>The Independent Office for Police Conduct said Cleveland Police had been pursuing the Passat after reports of “numerous incidents” linked to it, and that the car was believed to have cloned registration plates that activated an ANPR camera. The watchdog said analysis of police vehicle footage showed the pursuit lasted just under seven minutes before officers “aborted” it when the Passat went on to the wrong side of the A66. About 10 seconds later, at about 03:39 BST, it hit the officers’ vehicle, which was on the correct side of the road and was “in the area to assist in a search” for the car.</p>
+<p>In tributes released by Cleveland Police, PC Clough’s family said he was “willing to help anyone”, while PC Blades’ wife said he was “loved beyond words”. She described him as a “beloved husband” and the “most devoted father” to their two young sons, adding that he gave his life “in the line of duty” and that his “greatest legacy” would be the love he gave his family. PC Clough’s family said he had a “fantastic sense of humour”, “jumped into action whenever needed” and was “our hero”.</p>
+<p>Others also marked the deaths. Seaton Carew FC said PC Blades and his family were “much loved members” of the club, while FC Hartlepool called him a “role model, mentor [and] friend”. Carmel College in Darlington, where he had taught English before joining the police, described him as an “intelligent, kind an approachable teacher”.</p>
+<p>By Sunday evening, more than £180,000 had been pledged for the officers’ families in an online fundraiser set up by Cleveland Police Federation. The IOPC said it was continuing to review evidence, and the A66 section between Eston Road and Normanby Road was due to remain closed until Monday for repairs.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c4gvgy3de37o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Families of two police officers killed in crash say they were heroes">BBC #1</a><a href="https://www.bbc.co.uk/news/articles/cdj0j8enpzyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Police aborted pursuit about 10 seconds before fatal crash, watchdog says">BBC #2</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China activates Level-IV flood emergency response for Guangdong, Guangxi, Hainan</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Ministry of Water Resources activated a Level-IV emergency response to flooding in Guangdong, Guangxi and Hainan on Saturday as Typhoon Narra was forecast to bring torrential rain to southern China. From Aug. 22 to 24, the ministry said Narra, the 19th typhoon of the year, would bring heavy to torrential rainfall across southern and western Guangxi, Guangdong and Hainan, with some areas expecting extremely heavy downpours. It also said water levels were forecast to rise in several rivers in the three provinces, and that the Zuojiang and Mingjiang rivers, tributaries of the Yujiang River, as well as some small and medium-sized rivers, may see floods above warning levels.</p>
+<p>The ministry urged local water resources departments to closely monitor the typhoon, strengthen rain and river monitoring, forecasting and early warning, and ensure the scientific operation of water conservancy projects. It also called for measures to prevent mountain torrents and river floods, safeguard reservoir safety, and evacuate residents from hazardous areas in time. Also on Saturday, the State Flood Control and Drought Relief Headquarters and the Ministry of Emergency Management jointly activated a Level-IV emergency response for typhoon and flood control in southeastern Fujian Province. China has a four-tier flood-control emergency response system, with Level I the most severe.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0823/c90000-20491277.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China activates Level-IV flood emergency response for Guangdong, Guangxi, Hainan">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="scmp">
+  <summary>Gaokao reforms could leave Chinese public vulnerable to pseudo-history, top academic warns</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s gaokao reforms are linked to a drop in history as an exam subject for secondary school students, and an academic at a top university warned that this could make the public more vulnerable to distorted narratives and pseudo-history. The caution comes as Beijing steps up efforts to counter “historical nihilism,” the official term for narratives seen as contradicting or undermining the state’s historical line, as well as claims such as that Ancient Greece did not exist.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/diplomacy/article/3364926/gaokao-reforms-could-leave-chinese-public-vulnerable-pseudo-history-top-academic-warns" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Gaokao reforms could leave Chinese public vulnerable to pseudo-history, top academic warns">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>Knysna tensions grow after two councillors killed within 24 hours</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Three killings in less than 24 hours have deepened fears in Knysna that the town could be sliding back into politically linked violence, with the deaths raising questions about factional conflict and the safety of councillors ahead of local government elections.</p>
+<p>A sitting ANC councillor and former mayor, Aubrey Tsengwa, was shot dead on 19 August, and former councillor Mandla Matiwane and local taxi forum secretary Mandla Tyololo were killed less than 24 hours later. Western Cape Police Oversight MEC Anroux Marais said Tsengwa’s murder happened during an “increasingly sensitive political period” and warned that political violence threatened democracy as campaigning for the local government elections gathered pace.</p>
+<p>The timing has fed speculation about ANC factional tensions. The day before Tsengwa was killed, the party had planned a meeting to discuss candidate nominations for the 4 November elections. The killings also sit against Knysna’s history of political contestation and allegations of factional battles, which has left some residents fearing a return to politically linked killings.</p>
+<p>The violence comes at a delicate moment for the municipality. Just 12 days before Tsengwa was shot, President Cyril Ramaphosa authorised a Special Investigating Unit probe into alleged irregularities in Knysna Municipality’s R68-million Tender T25 of 2023/24, a three-year security contract. The municipality has also been described as being mired in political instability and a prolonged service-delivery crisis, with water, sanitation and refuse collection recurring as flashpoints between rival political groupings.</p>
+<p>The killings have also revived broader concern about attacks on councillors and municipal officials. South African Local Government Association president Bheke Stofile has warned that such killings pose a direct threat to democracy, and Xolisile Ngumbela, an assistant dean at the Central University of Technology, says the ongoing murder of municipal councillors is one of the biggest risks to local democracy and government in South Africa.</p>
+<p>Marais said the exact motive for Tsengwa’s killing was still under investigation. The ANC in the Western Cape called the shootings “gruesome and senseless” and urged the speedy arrest of the gunmen and those behind the killings, while the Electoral Commission said SAPS must establish the motive and circumstances before any political conclusion is drawn.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-23-knysna-tensions-grow-after-two-councillors-killed-within-24-hours" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Knysna tensions grow after two councillors killed within 24 hours">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>6 Critical Updates on Caracas Metro Operations After Floods</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Caracas Metro service returned to normal on Sunday after flooding from Tropical Wave 40, but the city was still clearing roads, monitoring rivers and streams, and dealing with parts of the transport network and power supply left under strain by the weekend storm.</p>
+<p>The Metro of Caracas said all underground and surface stations were fully operational again, restoring commercial service across every line after Saturday’s intense rainfall. The broader response remained active around the capital: authorities had deployed special teams across Caracas’s 22 parishes, and Caracas government head Nahum Fernández said 45 minutes of rain produced as much water as the area would normally get in two months.</p>
+<p>The downpour also caused the Guaire River to overflow near San Pedro parish, affecting the Valle-Coche highway, Fernández said. Crews were clearing roads, removing fallen vegetation and monitoring rivers and streams, including the removal of a large mahogany tree that fell on Los Huertos street in El Recreo parish. City brigades were also on special alert, with Caracas Mayor Carmen Meléndez leading the immediate response alongside emergency and prevention agencies.</p>
+<h3>Damage and precautions that remained</h3>
+<p>One report said 700 officials were deployed solely on the highway to clear the roads. The storm, accompanied by lightning, also disrupted electricity service in affected communities, and Corpoelec deployed crews to restore power.</p>
+<p>Even after metro service normalized, some preventive work continued. The Metro’s cable systems remained temporarily closed for maintenance, while authorities kept watching urban infrastructure. Inameh forecast more rain and thunderstorms across much of Venezuela on Sunday, so officials said monitoring would continue across Caracas and other regions.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-flood-hit-roads-heavy-rainfall" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela Clears Flood-Hit Roads After Heavy Rainfall">TE #1</a><a href="https://www.telesurenglish.net/venezuela-emergency-heavy-caracas-rains" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela Activates Emergency System After Heavy Caracas Rains">TE #2</a><a href="https://www.telesurenglish.net/caracas-metro-operations" target="_blank" rel="noopener noreferrer" title="Telesur English / 6 Critical Updates on Caracas Metro Operations After Floods">TE #3</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Ceuta, the impossible crisis</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ceuta’s migrant emergency turned into a fight over where to house thousands of people, as residents resisted temporary sites, ministers and local officials stalled for days, and the city and Spain argued over how to respond to the mass arrivals.</p>
+<p>After the last major border crossing, about 80,000 people entered and about 70,000 left soon after, but thousands were still wandering the streets. The pressure was compounded, according to the evidence, by a wider rejection of immigration seen in surveys. Privately, some government members blamed themselves and said they had moved too slowly. Others, especially those closest to the emergency, said time was lost because Ceuta and Spain were no longer what they were in 2021, when the previous large jump was clearly encouraged by Morocco as retaliation.</p>
+<p>This time, high-level sources said they believed Rabat let the assault get out of hand but did not encourage it. The comparison with 2021 was stark: then, more than 10,000 jumped; this time, 80,000 did. But the numbers who stayed were not that different, and in 2021 the central government and Ceuta’s government quickly agreed on where to place people and how to care for them.</p>
+<h3>A slower, more contested response</h3>
+<p>This time, ministers and Ceuta’s counselors spent several days playing cat and mouse, under heavy pressure from residents who reject any temporary site for migrants near their homes. Ceuta kept rejecting options as neighbors learned about them and pressed. Mid last week, the city suggested the port as a good option, but business owners protested and Juan Jesús Vivas backed away.</p>
+<p>On Monday, Vivas asked Elma Saiz, who was already in Ceuta, not to go to the port or the flour mill, two facilities controlled by the Government but facing local resistance. After more negotiations, and after Vivas had given a sharp press briefing attacking the Government, he offered the “embalaging” option, a city-controlled facility. There was finally an agreement, but only after what the evidence describes as great tension between La Moncloa and the Ceuta Government, which until this crisis had got along well.</p>
+<p>The dispute also exposed a split over responsibility. Vivas’s circle said the real problem was that the Government did not want to speed up expulsions so as not to upset Morocco. Government sources rejected the idea that Morocco was behind the mass jump, and said they believed the episode had spread on social networks and had not been controlled.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-23/ceuta-la-crisis-imposible.html" target="_blank" rel="noopener noreferrer" title="El País / Ceuta, the impossible crisis">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,guardian,scmp">
+  <summary>Burnham to visit Kyiv on first foreign trip and reaffirm UK support for Ukraine</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham is due to make Kyiv his first foreign stop as prime minister on Monday, using Ukraine’s independence-day anniversary to restate UK backing, join allied talks and signal support at a moment of intensified Russian strikes and fresh tensions with Moscow.</p>
+<p>The trip is set to combine symbolism and policy. Burnham will take part in independence day events, receive an award on behalf of the British people recognising UK support for Ukraine, and chair his first meeting of the “coalition of the willing”, the UK- and France-backed group created under his predecessor, Sir Keir Starmer. Ahead of the visit, Burnham said Ukraine should be “in no doubt” that “the UK is behind you today and for as long as it takes”, adding that he wanted Ukrainians to hear directly that British support “will not waver”.</p>
+<p>His visit comes after a period of escalating Russian strikes on Ukraine, including Friday’s attack on a shopping centre that killed at least 16 people. Burnham said the UK’s support would continue “until there is a just and lasting peace”, and said the friendship between the two countries would “long outlast Russia’s illegal war”.</p>
+<p>The trip is also expected to bring a practical announcement on weapons support. Burnham is due to say the government has agreed to allow defence company MBDA to declassify information on UK components for the long-range Scalp missile, the French-produced version of Storm Shadow, so Ukraine can build its own version. The plan is tied to wider efforts with France to set up local assembly lines in Ukraine for long-range missiles. The UK was first to give Ukraine long-range strike weapons for defensive purposes in 2023, according to Downing Street, and the latest move is meant to strengthen that capability.</p>
+<p>The announcement lands against a sharper backdrop in relations with Moscow. Russia has warned of “consequences” over Ukraine’s use of British drones in attacks on Russian infrastructure, while Kyiv has stepped up long-range strikes on Moscow and other Russian regions, targeting oil refineries and warehouses belonging to Wildberries, the country’s largest online retailer. In response to Russian threats, Burnham said the UK was “providing support so that Ukraine can defend itself” and that this had been Britain’s position throughout the war.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/clyqypkrzq5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Burnham to visit Kyiv on first foreign trip and reaffirm UK support for Ukraine">BBC #1</a><a href="https://www.theguardian.com/politics/2026/aug/24/andy-burnham-ukraine-long-range-missile-technology-kyiv-visit" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham to visit Ukraine with promise of boost for Kyiv’s long-range missiles">Guardian #1</a><a href="https://www.scmp.com/news/world/europe/article/3364998/uk-pm-andy-burnham-visit-kyiv-monday-ukraine-marks-independence-anniversary" target="_blank" rel="noopener noreferrer" title="South China Morning Post / UK PM Andy Burnham to visit Kyiv on Monday as Ukraine marks independence anniversary">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>NDR 2026: Parents to get up to 12 days of childcare leave each</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Parents in Singapore will get up to 12 days of childcare leave a year under a new scheme announced at the National Day Rally, with larger families getting more days and the government reimbursing employers for the costs as part of efforts to give working parents more time with their children.</p>
+<p>Prime Minister Lawrence Wong said each parent will get eight, 10 or 12 days of leave a year if he or she has one, two or three or more children, respectively. The children must be Singaporean and 12 years old or below. That is up from the current six days a year for parents with children aged six and below, or two days a year if the children are between seven and 12.</p>
+<p>Mr Wong said a working couple with three primary school children would go from a combined four days of childcare leave under current provisions to 24 days under the new scheme. “This will give parents more time and much greater flexibility to care for their children,” he said.</p>
+<p>The National Population and Talent Division said the higher baseline of eight days would help both parents cover mandated preschool and primary school closures, with some buffer for unplanned sick days. The government will also reimburse employers for the costs of the full duration of statutory child-related leave, up to a limit of S$2,500 a week.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/ndr-2026-childcare-leave-parents-work-employer-reimburse-6335831" target="_blank" rel="noopener noreferrer" title="CNA / NDR 2026: Parents to get up to 12 days of childcare leave each">CNA #1</a><a href="https://www.channelnewsasia.com/singapore/national-day-rally-2026-live-updates-6330631" target="_blank" rel="noopener noreferrer" title="CNA / NDR 2026 highlights: More childcare leave, BTO income ceiling raised as PM Wong unveils major family support measures">CNA #2</a><a href="https://www.channelnewsasia.com/singapore/national-day-rally-2026-key-takeaways-childcare-leave-support-hdb-bto-income-ceiling-6335906" target="_blank" rel="noopener noreferrer" title="CNA / NDR 2026: 7 key takeaways - from family support and housing to Singapore’s future land plans">CNA #3</a><a href="https://www.channelnewsasia.com/singapore/ndr-2026-marriage-parenthood-baby-bonus-lawrence-wong-6335836" target="_blank" rel="noopener noreferrer" title="CNA / NDR 2026: Each Singaporean child to get almost S$70,000 in growing years as part of moves to support parents">CNA #4</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,guardian">
+  <summary>Reform says it will prioritise British-born young workers for social housing</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Reform UK has said it would give British-born workers under 35 priority for social housing if it entered government, a move critics say would penalise long-term residents while the party argues it would help young people priced out of homes.</p>
+<p>Deputy leader Richard Tice is due to set out the plan at a news conference in London on Monday, alongside a pledge to build 50,000 affordable social homes a year. Reform says the building programme would require no new taxes or borrowing, and that it will explain how it would pay for the homes at the same event.</p>
+<p>The party said the priority list would include British-born workers, former military service personnel and married couples with children. The Guardian reported that British citizens born abroad would be made to wait longer under the policy, although Reform said some foreign-born Britons would be exempt, including those born while their British parents were temporarily overseas. Officials also said the new rules would require legislation to avoid breaking existing laws.</p>
+<p>Tice said on Sunday: “It is time for us to prioritise young British workers, and that is what our policy is about.” He added that he had spent his career in property development and had helped deliver thousands of new homes, saying that in government he would “break down the barriers to getting generation rent onto the housing ladder” and “get Britain building”.</p>
+<p>Reform pointed to official housing data saying UK or Irish nationals made up 88.5% of main social home householders in 2024/25, meaning around 11.5% were non-UK or Irish nationals. The party also said it estimates 540,000 social homes are currently occupied by foreign nationals.</p>
+<p>Labour called the plans “unserious and unworkable” and accused Reform of pushing “gimmicks and division”. A Labour spokesperson said the policy would go after long-term UK residents who had contributed to the country, including NHS staff. Shelter also criticised the approach, saying building more homes was the solution rather than “changing the order of the queue” and “stoking division”.</p>
+<p>Reform has previously said it would ban foreign nationals from social housing, with those already in homes given three months to find private accommodation or face deportation.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cvgjgyg1rngo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Reform says it will prioritise British-born young workers for social housing">BBC #1</a><a href="https://www.theguardian.com/society/2026/aug/23/reform-social-housing-uk-citizens" target="_blank" rel="noopener noreferrer" title="The Guardian / Reform says it would put foreign-born UK citizens lower on social housing list">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Nicaragua Will Reform Its Constitution To Invalidate Interventionist Foreign Laws</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nicaragua’s National Assembly approved an amendment to a partial constitutional reform that would nullify foreign laws that “intend to impose” themselves on the country. Deputies unanimously decided to modify article 12 of the Constitution during a special session held at the National Palace of Culture, marked as a commemoration of the 48th anniversary of the Sandinista assault on the National Palace of Nicaragua on August 22, 1978. Parliament said the change would reaffirm that no foreign legislation intended to override the will of the Nicaraguan people has legal effect.</p>
+<p>Legislative Power president Gustavo Porras said the reform follows national defense guidelines presented by the head of state on July 19. He also said 92,832 people from 25 social sectors took part in consultations on the constitutional changes. Face-to-face and virtual debates with civil society organizations are set to continue as officials draft the final opinion before a plenary vote.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/nicaragua-will-reform-its-constitution-to-invalidate-interventionist-foreign-laws" target="_blank" rel="noopener noreferrer" title="Telesur English / Nicaragua Will Reform Its Constitution To Invalidate Interventionist Foreign Laws">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Why Trump’s economic pain could spark more Iranian attacks on Gulf nations</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Donald Trump is betting new sanctions, a naval blockade and stepped-up economic pressure on Iran’s trading partners can do what thousands of bombs and missiles could not: push Tehran to accept a deal on US terms. The main obstacle, the piece says, is Iran’s Islamic Revolutionary Guard Corps, which has claimed control of the vital Strait of Hormuz and sent volleys of attack drones across the Gulf, raising the risk of further attacks on Gulf nations.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/middle-east/article/3364963/why-trumps-economic-pain-could-spark-more-iranian-attacks-gulf-nations" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Why Trump’s economic pain could spark more Iranian attacks on Gulf nations">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="korea_herald,yonhap">
+  <summary>(LEAD) Gov&#x27;t, ruling party share need to relax tax rule for single-home owners not living in property</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The government and the ruling Democratic Party have begun coordinating on housing policy by seeking to ease a proposed tax rule for single-home owners who do not live in their property, while also weighing tougher taxes on other homeowners and broader housing-supply measures in Greater Seoul.</p>
+<p>At their first meeting, newly elected DP chair Rep. Kim Min-seok met senior ruling bloc officials including Cheong Wa Dae chief of staff Kang Hoon-sik and Prime Minister Han Seong-sook at the prime minister’s official residence in Seoul. Kim called for tax leniency for people who own a home but live elsewhere, saying that “various reasons inevitable in reality that forced homeowners to live elsewhere should be broadly taken into consideration,” and urged broader exemptions from a proposal to raise the comprehensive real estate holding tax on homes valued at 900 million won ($649,000) or more.</p>
+<p>He also warned against narrowing eligibility for a long-term homeownership tax deduction to people who have both owned and actually lived in the property, saying the change could push up rental prices. After the 2½-hour meeting, Rep. Park Sung-joon, the party’s senior spokesperson, said the ruling bloc had “reached a consensus” on tougher taxation for homeowners who live elsewhere, while still pushing to retain deductions for long-term owners who have not lived in the homes.</p>
+<p>Park said the bloc also plans to transfer some of Seoul’s mayoral authority to district ward chiefs on redevelopment projects in zones with 500 or fewer households, and discussed a plan to use the site of a former U.S. base in central Seoul for housing. He did not elaborate further.</p>
+<p>The Lee administration has criticized single-home owners who live elsewhere, in some cases saying they financed purchases partly with lump-sum tenant deposits under the jeonse system, and accused them of speculation.</p></div>
+  <div class="source-list"><a href="https://www.koreaherald.com/article/10849102" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Ruling bloc reconciliation begins with homes - The Korea Herald">TKH #1</a><a href="https://en.yna.co.kr/view/AEN20260823001900315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Gov&#x27;t, ruling party discuss housing policy at high-level meeting">YNA #1</a><a href="https://en.yna.co.kr/view/AEN20260823001951315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (LEAD) Gov&#x27;t, ruling party share need to relax tax rule for single-home owners not living in property">YNA #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Elma Saiz: “Some want immigrants, but without rights. They want first- and second-class citizens”</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Elma Saiz spent a week in Ceuta trying to manage a migration situation she described as out of control, with thousands of immigrants in the streets and sleeping on the beaches, and she used a Friday interview to argue that the response must prioritize human rights rather than “first- and second-class citizens.”</p>
+<p>Saiz, who said the situation was “of enormous complexity,” framed the crisis around individual lives rather than numbers. “Sometimes people speak of hundreds, thousands, numbers,” she said, “but behind each one there is a very hard personal story, a life, a situation of extreme vulnerability.” She said Spain has “an extraordinary humanitarian aid system,” and that what guides the response is “a commitment to human rights” rather than “the noise” and “inciters of hatred.”</p>
+<p>She said she had spoken with a Senegalese man and another from Mali who had gone through very difficult situations and appreciated the work of the entity that will care for them in a new space that will temporarily shelter them. One of them, she said, left his country in 2005. Saiz also defended the legal handling of arrivals, saying that “for everyone there is a legal umbrella,” that Spain is “a rule-of-law state,” and that each case must be handled through an individual file. She said that is why the work in Ceuta this week was so important: to group people in one place, make lists and identify them.</p>
+<p>She said the Interior Ministry had prioritized identifying minors and had already done 2,500. She added that Inclusion was already in Ceuta, alongside a temporary stay center with about a thousand people and permanent staff. Saiz also said the state’s emergency spending of six million euros from the first hours had allowed more than 4,000 people to eat every day.</p>
+<p>Asked about the pressure on the city, she said she had just left a meeting with neighbors who care for women in El Príncipe and La Reina, where authorities will enable a new space for 300 women with minors. She said the city’s society was “mature” and did not need anyone “to come and heat things up.”</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-23/elma-saiz-algunos-quieren-inmigrantes-pero-sin-derechos-quieren-ciudadanos-de-primera-y-de-segunda.html" target="_blank" rel="noopener noreferrer" title="El País / Elma Saiz: “Some want immigrants, but without rights. They want first- and second-class citizens”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="axios">
+  <summary>Scoop: Syria and Israel move to defuse tensions after airbase bombing</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">High-level Israeli and Syrian officials met on Sunday in an effort to lower tensions between the two countries after a recent airbase bombing, according to three sources with knowledge of the matter. The meeting involved Syrian Foreign Minister Asaad al-Shaibani and the director of Israel’s Mossad spy agency, Roman Gofman, and came days after an Israeli strike on a Syrian airbase.</p>
+<p>On Tuesday, the Israeli Air Force dropped at least eight bombs on runways and hangars at the Abu al-Duhur airbase in northern Syria, about 45 miles from the Turkish border. Israel said the strike was aimed at preventing a Turkish military buildup there and warned it would take military action if preparations did not stop. The Syrian government denied any intention to allow a Turkish military presence at the base, and al-Shaibani later told Axios there was “no intention” to establish a Turkish base or permanent Turkish presence. He said Turkish military officers had visited the base days earlier as part of “ongoing military cooperation” and said Syria is still ready for negotiations with Israel to de-escalate and reach a new security agreement.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/23/syria-israel-turkey-airbase-bombing" target="_blank" rel="noopener noreferrer" title="Axios / Scoop: Syria and Israel move to defuse tensions after airbase bombing">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="nikkei_asia">
+  <summary>Taiwan&#x27;s security council quietly steps up as architect of China strategy</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Taipei, Taiwan’s National Security Council is taking on a bigger and broader role in organizing the island’s efforts to fend off pressure from China, according to Nikkei Asia. Once regarded as a “government within a government” created by Taiwan’s former strongman, the council is now described as steering defense and resilience reforms and handling key diplomacy. Joseph Wu, the council’s secretary-general, was pictured accompanying President Lai Ching-te at a briefing in June.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/politics/international-relations/taiwan-tensions/taiwan-s-security-council-quietly-steps-up-as-architect-of-china-strategy" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Taiwan&#x27;s security council quietly steps up as architect of China strategy">NA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="agencia_brasil">
+  <summary>Land degradation and extreme weather threaten nomads in Mongolia</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Land degradation, drought and extreme weather are putting Mongolia’s nomadic herders under growing strain, with Batchuluun Maamun’s family losing animals in recent dzud winters and looking to COP17 in Ulaanbaatar for help as the land itself becomes harder to sustain.</p>
+<p>Maamun, 57, grew up on the Mongolian steppe reading the wind and sky for signs of rain or snow, but he says those cues have brought increasing worry in recent decades. Recent drought episodes hurt vegetation and left sheep, goats, horses and cattle suffering in the heat. His family also lived through two devastating winter events: in 2010, a dzud killed 700 of the 1,300 animals they owned, and in the dzud of 2020 they lost 20% of the herd.</p>
+<p>The family lives in a herding community on the buffer zone of Hustai National Park, about 100 km southwest of the capital, where they moved 27 years ago in search of better conditions. Their seasonal movement remains central to nomadic life: they stay in one camp during summer and shift to a cabín about 10 km away in winter for better protection from the cold.</p>
+<p>The wider pressure is not just weather. Degradation of pastures, overgrazing, mining, reduced water sources and extreme climate events are all cited as threats to a way of life tied directly to healthy ecosystems. The UNCCD says about 70% to 76% of Mongolia’s territory suffers from desertification and soil degradation, equal to roughly 36 million hectares. Maamun hopes the discussions at COP17 will bring solutions and “hope” for nomads and the land they depend on.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-08/degradacao-da-terra-e-clima-extremo-ameacam-nomades-na-mongolia" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Land degradation and extreme weather threaten nomads in Mongolia">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="mail_guardian">
+  <summary>SA’s captive lion industry remains legal despite years of promises to phase it out, say animal welfare groups</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Africa’s captive lion breeding industry is still legal and largely operational, more than five years after the government said it would be phased out, leaving conservation and animal welfare groups arguing that policy promises have not yet changed what is allowed on the ground.</p>
+<p>At a briefing marking World Lion Day, Fiona Miles of Four Paws South Africa said there is “a significant gap between policy intentions and reality.” Four Paws South Africa, Humane World for Animals South Africa, Voice4Lions and Blood Lions want South Africa’s captive lion population to be the last generation bred for commercial exploitation, and are pressing for a ban on new captive lion breeding facilities and on breeding captive lions.</p>
+<p>The dispute has been building since 2018, when parliament’s portfolio committee on environmental affairs held a two-day colloquium on captive lion breeding for hunting and the lion bone trade and called for an urgent policy and legislative review. Then-environment minister Barbara Creecy later appointed a High-Level Panel to review policies and practices on elephant, lion, leopard and rhino. When that panel’s report was released on 2 May 2021, Creecy adopted its majority recommendations on captive lion breeding, including that South Africa should not captive-breed lions, keep lions in captivity or use captive lions or their derivatives commercially.</p>
+<p>Since then, the government has taken several formal steps. Creecy appointed a ministerial task team in December 2022, Cabinet approved its final report and recommendations in March 2024, and a policy published in April 2024 set out the objective of ending the captive keeping of lions for commercial purposes, closing captive lion facilities, halting intensive breeding in controlled environments and ending commercial exploitation of captive and captive-bred lions.</p>
+<h3>What is still pending</h3>
+<p>The key legislative step remains a proposed lion prohibition notice. The department first published a draft in September 2023 and an amended draft for public comment in November 2024. Former environment minister Dion George said in July last year that the department was making progress towards promulgating the notice, which would ban new captive lion breeding facilities for commercial purposes. But the notice has still not been promulgated, and the groups say that means it is not yet in force.</p>
+<p>Miles said that matters because restrictions on lion-bone exports do not end the industry itself. Voice4Lions’ Linda Park said the notice would stop new facilities but would not close existing ones, adding that what happens to current infrastructure remains unknown. Blood Lions director Dr Louise de Waal said the captive lion population remained substantial, with about 8,000 lions in 350-odd facilities. The coalition says it wants a clear, responsible and humane pathway out of commercial captive lion breeding, while the department had not responded to the Mail &amp; Guardian’s enquiries by the time of publication.</p></div>
+  <div class="source-list"><a href="https://mg.co.za/the-green-guardian/2026-08-23-sa-s-captive-lion-industry-remains-legal-despite-years-of-promises-to-phase-it-out-say-animal-welfare-groups" target="_blank" rel="noopener noreferrer" title="Mail &amp; Guardian / SA’s captive lion industry remains legal despite years of promises to phase it out, say animal welfare groups">Mail &amp; Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Man arrested travelling to France after London fire left one dead and eight injured</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 48-year-old woman died in hospital after a fire at a residential address on Berkeley Avenue, Hounslow, in west London, and a 34-year-old man was arrested on suspicion of murder after officers from Kent Police stopped him while he was travelling to France by train on Sunday. The Metropolitan Police said he remains in custody. The blaze was reported to police at about 01:15 BST on Wednesday.</p>
+<p>One woman, aged 40, remains in hospital in a life-threatening condition. The account also said eight others were injured, while separately saying nine patients were taken to hospital and that the remaining seven injured people — six men and one woman — had since been discharged after treatment for minor injuries. Detective Chief Insp Neil John said the investigation was continuing and detectives were building a full picture of the circumstances.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cqlxlxy6z2no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Man arrested travelling to France after London fire left one dead and eight injured">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>Bombshell testimony implicates Mchunu in alleged bid to target Mkhwanazi</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Lieutenant Colonel Deendadayalan “Deena” Govender’s testimony before the Madlanga Commission on Friday pushed sidelined police minister Senzo Mchunu to the centre of allegations that he was involved in pressuring a witness said to implicate KwaZulu-Natal Police Commissioner Nhlanhla Mkhwanazi.</p>
+<p>Govender, attached to the Hawks and commanding the KwaZulu-Natal police cash-in-transit task team, said he had been told to “protect” himself by telling the commission he had acted on Mkhwanazi’s instructions in relation to police shootings. He also said he was threatened with arrest, denial of bail and even poisoning if he refused to cooperate. His appearance followed three days of evidence from National Coloured Congress MP Fadiel Adams, whose testimony raised questions about a second affidavit allegedly obtained by Investigating Directorate Against Corruption chief investigator Dylan Perumal during a late-night visit to Adams’ home.</p>
+<p>According to Govender, the episode began on 13 August 2026, when he was approached about an informal meeting outside Ipid’s offices in Durban. He said he was later contacted by Mavuso Ntandane, whom he described as an acquaintance of Mchunu, and invited to a meeting on Thursday, 21 August 2026. Govender testified that during that meeting Ntandane phoned the minister and passed him the call, and that he recognised Mchunu’s voice.</p>
+<p>Govender said the minister asked how he was and told him, among other things, that “this is a very nice country” and that he should tell the commission he was getting instructions from Mkhwanazi regarding police shootings. The testimony comes against the background of Mkhwanazi’s earlier claims that Mchunu, who has been put on special leave, ordered the disbandment of the KwaZulu-Natal Political Killings Task Team, allegedly to protect criminal syndicates.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-23-bombshell-testimony-implicates-mchunu-in-alleged-bid-to-target-mkhwanazi" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Bombshell testimony implicates Mchunu in alleged bid to target Mkhwanazi">DM #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="bbc,guardian,nyt,scmp,xinhua_en">
+  <summary>Explainer: Why the latest round of Canada-U.S. trade talks collapsed?</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Canada and the United States have entered a fresh trade fight after talks in Washington collapsed, triggering 50% U.S. tariffs on about $20 billion in Canadian goods and Canada’s promise to answer “dollar for dollar.” The unresolved question is whether either side will return to negotiations or keep escalating.</p>
+<h3>How the talks broke down</h3>
+<p>The latest round fell apart on Friday, with both sides blaming the other. Carney said he suspended the talks because Washington introduced last-minute changes that were “unfair, uneconomic, and called into question the reliability of any deal,” even though the two sides had appeared close to an agreement earlier in the week.</p>
+<p>Carney also said Canada had been ready to remove its remaining retaliatory tariffs on U.S. steel, aluminum and automobiles if Washington substantially reduced its own duties, and was willing to encourage Canadian provinces to put U.S. alcoholic beverages back on store shelves. But, he said, “They asked too much and offered too little.” He also said the U.S. proposals restricted Canada’s ability to strike trade deals with other countries and threatened the French language, culture and national sovereignty.</p>
+<p>Washington gave a different account. Jamieson Greer, the U.S. trade representative, said the U.S. had been compelled to act after a year of retaliatory measures by Canada. He also said the United States had offered Canada what he called the most preferential treatment of any trading partner, and that no further trade talks were scheduled.</p>
+<h3>The tariffs and the backlash</h3>
+<p>Trump responded after the collapse with a social-media post saying, “Canada wants the benefits of being a State, without being one!!!” He added that Canada had charged “our great farmers” massive tariffs for years and ended with: “No more!!!”</p>
+<p>Those comments came after the U.S. imposed 50% tariffs on Canadian goods worth about $20 billion, with the duties taking effect on Saturday. The list of affected products ranges from hockey sticks to tongue depressors. Canada has said it will match those measures with new “dollar-for-dollar” tariffs starting on 8 September, aimed notably at U.S. steel and dairy, and also at appliances, agricultural equipment, pulp and paper, and electronics.</p>
+<p>The economic impact is still being debated, but trade experts have predicted that the tariffs could cost some jobs. The larger effect, they say, is likely to be political, adding fresh tension between the two neighbours.</p>
+<h3>What happens next</h3>
+<p>For now, the two countries are farther apart than they were before the talks. Carney said Canada is “at war” over trade with the United States, while Trump has suggested for years that he wants to make Canada the 51st state with “economic force.” Carney, who told reporters in Ottawa that “You’re at war when you’re attacked, and we got attacked,” said Canada could not accept what Washington offered and would not give what it asked.</p>
+<p>The tariff fight has also raised fresh questions about the future of the U.S.-Mexico-Canada Agreement. The pact remains in force, but the latest U.S. tariffs apply even to Canadian goods that comply with its rules. Greer said there are no new talks planned, while Carney said the collapse was “certainly not good news” for the agreement.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Trump says Canada wants &#x27;benefits&#x27; of being US state after trade talks collapse">BBC #1</a><a href="https://www.theguardian.com/us-news/2026/aug/23/donald-trump-lashes-out-after-us-canada-talks-devolve-into-trade-war" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘No more!!!’: Trump lashes out after US-Canada talks devolve into trade war">Guardian #1</a><a href="https://www.scmp.com/news/us/economy-trade-business/article/3364988/us-warns-canada-not-think-it-can-win-devastating-trade-war" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US warns Canada not to think it can win ‘devastating’ trade war">SCMP #1</a><a href="https://english.news.cn/20260823/37e283e602a54345a8b63e089d597320/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Explainer: Why the latest round of Canada-U.S. trade talks collapsed?">XNAE #1</a><a href="https://www.nytimes.com/2026/08/23/world/canada/canada-us-trade-war-trump-carney.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Canada-U.S. Trade War: What to Know">NYT #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="scmp">
+  <summary>Canada’s Carney refuses to take Trump’s ‘bait’, confronting US in trade war</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Prime Minister Mark Carney rejected what he called an “unfair” trade deal with US President Donald Trump and said Canada would “set our own course” as bilateral trade negotiations crumbled on Friday. “We will not allow any nation to determine our future,” Carney said. The remarks came after weeks of talks with US officials as Canada sought to avoid punitive measures.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3364948/canadas-carney-refuses-take-trumps-bait-confronting-us-trade-war" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Canada’s Carney refuses to take Trump’s ‘bait’, confronting US in trade war">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="kompas">
+  <summary>Complete Jakarta Parking Fee Guide: Private Sector vs Provincial Government</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sejumlah lokasi parkir di Jakarta menerapkan tarif tertinggi bagi mobil yang belum atau tidak lulus uji emisi. Kebijakan disinsentif ini berlaku di 11 titik parkir milik Pemerintah Provinsi DKI Jakarta, dengan tarif tertinggi mencapai Rp7.500 per jam secara progresif. Aturan itu mengacu pada Pergub DKI Jakarta Nomor 66 Tahun 2020 tentang Uji Emisi Gas Buang Kendaraan Bermotor. Di IRTI Monas, Jakarta Pusat, pengendara mobil yang belum lolos uji emisi dikenakan tarif Rp7.500, sementara kendaraan yang sudah lulus uji emisi tetap membayar tarif normal Rp5.000 per jam.</p>
+<p>Di luar kebijakan disinsentif itu, Ketua Umum Indonesia Parking Association Rio Octaviano menjelaskan bahwa tarif parkir di Jakarta terbagi dalam dua skema, tergantung pengelola lahan. Untuk lahan swasta, tarif masih merujuk pada Pergub DKI Jakarta Nomor 120 Tahun 2012 dengan rentang Rp3.000 hingga Rp5.000. Sementara untuk lahan parkir yang dikelola langsung oleh Pemprov DKI Jakarta, batas atas tarif bisa mencapai Rp10.000 per jam, mengacu pada Perda Nomor 1 Tahun 2024.</p></div>
+  <div class="source-list"><a href="https://otomotif.kompas.com/read/2026/08/24/064200315/panduan-lengkap-tarif-parkir-jakarta--swasta-vs-pemprov" target="_blank" rel="noopener noreferrer" title="Kompas / Complete Jakarta Parking Fee Guide: Private Sector vs Provincial Government">Kompas #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="xinhua_en">
+  <summary>Xinhua Headlines: Chinese teenagers flock to tech frontline to touch the future amid AI study-tour boom</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Chinese teenagers are increasingly spending summer days in AI camps, science centers and tech-company visits as China’s “AI Plus Education” push moves learning beyond textbooks, with bookings for AI study tours surging and schools folding more of the technology into their programs.</p>
+<p>On a summer day in Jiaxing, east China’s Zhejiang Province, children watched robots race across a soccer pitch at a science center while nine-year-old Zhang Qihang assembled a robot at a nearby workbench. “Building robots is awesome! I can let my imagination run wild,” he said. The scene captured an AI summer camp that is part of a wider wave of study tours gaining traction across China.</p>
+<p>The government’s “AI Plus Education” initiative, unveiled earlier this year, encourages schools to expand AI learning through after-school programs and hands-on activities. That approach is now showing up in trips to tech giants, university labs and science centers, where students are getting direct exposure to cutting-edge AI technologies.</p>
+<p>The trend is also visible in the travel market. During this summer vacation, AI-themed study tours have gained ground, with bookings up 370 percent year on year, according to online travel platform Ctrip. A travel agency in Nanjing, Jiangsu Province, started adding visits to technology companies to its programs last summer to meet growing demand for AI-focused tech tourism. Zhu Ping, the founder, said that on Shanghai-Hangzhou independent study tours, AI-related activities now make up more than 80 percent of the itinerary.</p>
+<p>The boom is unfolding alongside China’s broader AI expansion. For many teenagers, tools such as DeepSeek, Kimi and Doubao are becoming part of everyday life. The country had more than 6,000 AI enterprises last year, and the core AI industry’s output value was projected to exceed 1.2 trillion yuan, up nearly 30 percent year on year. A separate industry research report said China was home to more than 140 humanoid robot developers in 2025, with shipments reaching 14,400 units, or 84.7 percent of the global market.</p>
+<p>For students, the camps are meant to do more than entertain. Organizers and educators say they are meant to help children move from simply using AI to understanding it, creating with it and applying it to real problems. In Shanghai and Shenzhen, that has meant everything from assembling robotic arms to spending six days turning ideas into an AI-powered product.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260823/bc53583c64f24c89a2a58f81b335fbab/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Xinhua Headlines: Chinese teenagers flock to tech frontline to touch the future amid AI study-tour boom">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Training Leaves Traces: Centered Residual Signatures for Language Model Lineage Verification</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint proposes a way to verify whether open-weight language model checkpoints share ancestry from weights alone, aiming to fill a provenance gap for models that have been fine-tuned, quantized, pruned, or merged.</p>
+<p>The work tackles what the authors call data-free white-box lineage verification: given two compatible checkpoints, can weights alone show whether they came from the same training line? The paper argues that residual training creates a shared identity-aligned component inside branch products, so that signal by itself cannot prove ancestry. The method instead removes that shared component and compares checkpoint-specific structure across residual blocks, producing a symmetric lineage score calibrated against independent checkpoints. In the authors’ framing, this is meant to address the limits of hashes, metadata, watermarking, behavioral similarity, weight similarity, and re-basin-style alignment.</p>
+<h3>What the score found</h3>
+<p>On controlled residual-MLP and 30M-parameter GPT-2 benchmarks, centered residual signatures separated fine-tuned, LoRA-merged, pruned, and quantized descendants from independently trained and distilled models, with AUROC=1.0. The authors say the score also stayed unchanged under function-preserving checkpoint laundering, while weight-space baselines lost margin or failed, and that the method ran 76 times faster than the nearest robust baseline on GPT-2.</p>
+<p>The signal was reported across six language-model families and beyond, and a case study on public LLaMA-2 checkpoints correctly identified 3 related and 7 unrelated models. The paper also says trace concentration alone cannot establish ancestry: independently trained models share that structure, and a verifier built only on trace concentration achieved AUROC=0.417. By contrast, the centered residual signature is presented as a passive, data-free provenance signal that distinguishes weight inheritance from behavioral similarity.</p>
+<p>The main limitation is scope. The authors say the method requires open-weight residual architectures, and that comparisons are limited to models with matching depth and hidden dimension, so cross-architecture checks such as LLaMA versus GPT-2 are not supported.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14929" target="_blank" rel="noopener noreferrer" title="arXiv / Training Leaves Traces: Centered Residual Signatures for Language Model Lineage Verification">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>The More Popular, The Harder to Forget: Adaptive Popularity for LLM Unlearning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new LLM unlearning method, AdaPop, tries to fix a mismatch in existing erase-training methods: facts that appeared more often during pretraining are harder to remove, so uniform forgetting can leave popular answers recoverable while over-erasing rarer ones.</p>
+<p>Machine unlearning aims to remove targeted knowledge from a trained model without full retraining. In this paper, the authors say the usual setup is built around a forget set of question-answer pairs and a retain set used to check what the model still knows. Their argument is that existing gradient-based and preference-learning methods treat every forget example as equally hard, even though popular facts are more deeply memorised and resist removal longer.</p>
+<p>AdaPop, short for Adaptive Popularity, adds two pieces. First, it reweights per-fact token contributions to the forget loss using a popularity score from an external proxy such as Wikidata sitelinks or an LLM-as-Judge signal. Second, it uses a dual-ascent controller to adjust the retain penalty each epoch so the model does not drift too far from retained knowledge. The paper frames the result as a “popularity gap”: rare facts can be over-erased, hurting retained quality, while popular facts can remain recoverable under paraphrase or adversarial prompts.</p>
+<p>Across three model families and two benchmarks, the method is reported to leak about 5 times less forgotten content than competing methods under paraphrased queries and about 1.6 times less under adversarial reformulations. The authors also say internal measurements line up with that result: hidden states for the forget set move farther from the pre-unlearning model than they do under other methods, while retain-set representations stay close.</p>
+<p>The benchmarks include DUET and RWKU, which the paper says have different popularity distributions. It also reports that the popularity proxy matters: Wikidata-based scores align more closely with measured corpus frequency than the LLM judge proxy, though the judge proxy still separates rare from popular facts.</p>
+<p>Overall, the paper’s claim is that unlearning should not apply the same force to every fact. AdaPop instead tries to match the erase pressure to how strongly a fact was likely memorised in the first place.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.14229" target="_blank" rel="noopener noreferrer" title="arXiv / The More Popular, The Harder to Forget: Adaptive Popularity for LLM Unlearning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Decision-Metric Alignment in Latent World Models: Diagnostics and Action-Conditioned Objectives for MPC Planning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Latent world models for robotic manipulation can decode task variables without ranking action plans correctly, and that gap can leave model-predictive control choosing the wrong sequence even when probe scores look strong.</p>
+<p>The preprint frames this as a distinction between <strong>information sufficiency</strong> and <strong>decision-metric alignment</strong>. In JEPA-style latent world models, the planner often uses squared Euclidean distance from a predicted latent state to a goal latent as the MPC cost. The authors argue that being able to decode task-relevant information from the latent does not by itself mean that this cost will order candidate action sequences the same way as their real environmental outcomes.</p>
+<p>To make that difference measurable, they introduce two diagnostics: <strong>Plan-Real Spearman</strong>, which measures latent-versus-real rank agreement on random plans, and <strong>CEM-stage Spearman</strong>, which measures the same agreement as cross-entropy-method search concentrates its proposals. They also analyze when latent distance should preserve real-cost rankings, pointing to encoder distortion, terminal rollout error, and candidate margins as the main quantities that matter.</p>
+<p>Guided by the observed alignment gap, they test <strong>DA-LeWM</strong>, which augments LeWM with an inverse-dynamics head and a demonstration-conditioned goal-action head. In their PushT experiments, the action-supervised variants improve the ranking geometry seen by the planner while leaving probe scores similar. On PushT, inverse-only raises Plan-Real Spearman from +0.280 to +0.420 and online success from 49.3% to 64.0%, while DA-LeWM reaches 92.7% success with +0.412 Spearman. At the same time, CEM-stage Spearman improves at the random stage, suggesting better plan ordering before search saturates.</p>
+<p>Across four environments — PushT, Reacher, Cube, and TwoRoom — DA-LeWM is reported to accelerate convergence and achieve higher online success than LeWM, with similar linear-probe scores. Under a ten-epoch budget, it enters the high-success regime earlier and keeps higher success throughout training. The reported final comparison gives DA-LeWM 98.7% on PushT, 87.3% on Reacher, 80.7% on Cube, and 96.0% on TwoRoom, with gains over LeWM on all four tasks.</p>
+<p>The main claim is that action-conditioned auxiliary objectives do not just make latents easier to decode; they also improve the geometry used by Euclidean-cost, CEM-based latent MPC.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.18746" target="_blank" rel="noopener noreferrer" title="arXiv / Decision-Metric Alignment in Latent World Models: Diagnostics and Action-Conditioned Objectives for MPC Planning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Repo0: Design-Driven Zero-to-All Code Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Repo0 proposes a way for large language model agents to build an entire software project from natural-language requirements while keeping the repository modular, targeting a gap in code-generation systems that assume a predefined architecture.</p>
+<p>The framework, called a continuous structural evolution approach for zero-to-all code generation, starts by representing architecture in a Dual-DAG: one DAG for requirements, one for components, and an alignment relation between them. From there, Repo0 iteratively changes component boundaries with structural actions guided by modularity metrics until it reaches structural convergence. Only then does it use the converged architecture to drive test-driven development code generation. The paper frames this as a response to the problem that, in zero-to-all code generation, an agent has to create the whole project directly from requirements while still preserving modular structure throughout development.</p>
+<p>The authors evaluate Repo0 on six real-world repositories from RepoCraft using GPT-5 mini and DeepSeek V3.2. Across all six repositories and both backbone models, Repo0 achieves the highest Functionality Coverage and Pass Rate in every setting. Compared with RPG, described as the strongest repository-planning baseline, Repo0 improves Functionality Coverage by up to 20.08 percentage points and Pass Rate by up to 29.74 percentage points. The paper says ablation and structural-evolution analyses further support the role of the Dual-DAG state, modularity-guided evolution, and explicit structural convergence.</p>
+<p>A closer look at the convergence analysis on statsmodels shows the same pattern: compared with a version without evolution, Repo0 raises Functionality Coverage from 75.90% to 80.68%, Functionality Novelty from 11.05% to 11.48%, Pass Rate from 81.90% to 85.51%, and Voting Rate from 93.00% to 98.65%. The paper says this indicates the gains come from the cohesion and coupling metrics helping the component-level DAG converge before code generation, not simply from doing more refinement steps. A cost analysis also reports that, under DeepSeek V3.2, generation costs were $11.95, $28.19, and $27.24 on requests, statsmodels, and django, with evaluation costs dominating on the larger repository. The authors say their code and data are available on GitHub.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.19854" target="_blank" rel="noopener noreferrer" title="arXiv / Repo0: Design-Driven Zero-to-All Code Generation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">FlashPrefill V2 is a block-sparse prefill attention system for long-context LLM serving that aims to cut the quadratic cost of long prompts without giving up much accuracy, while also fitting modern inference stacks such as SGLang.</p>
+<h3>From prototype to serving backend</h3>
+<p>The preprint presents FlashPrefill V2 as the next step after FlashPrefill, which the authors describe as an algorithmic prototype still far from production deployment. Their goal is to move long-context prefilling from an idea that works in principle to one that can actually serve requests.</p>
+<p>They say V2 does that in three ways. First, it adds a mean correction term meant to suppress approximation error when sparsity is aggressive. Second, it redesigns the sparse attention operator with PackGQA memory access, warp specialization, and pingpong pipelining, and says the kernel is aligned with FlashAttention-3/4 and supports FP8 inference. Third, it natively supports paged KV cache and continuous batching so it can be used as an attention backend in serving frameworks such as SGLang.</p>
+<p>The paper’s setup matters because it targets the prefilling stage, where long prompts are most expensive. It says the prefill phase still dominates the cost of long-context modeling, and that decode is left to dense attention because a single query token per step leaves no room for block-level sparsity.</p>
+<h3>Accuracy under heavy sparsity</h3>
+<p>To show the sparse scheme is not just fast but still usable, the authors report measured attention densities that fall sharply as sequence length grows. On “needle-in-a-haystack” inputs, density drops to 4.6% for Llama-3.1-8B at 128K, 4.9% for Qwen3-4B at 128K, and 4.9% for Qwen3-30B-A3B at 128K.</p>
+<p>Even with that sparsity, the paper says FlashPrefill V2 stays close to full attention on RULER and LongBench. Across the three evaluated models, it reports average RULER scores of 87.79 on Llama-3.1-8B, 86.23 on Qwen3-4B, and 91.76 on Qwen3-30B-A3B, versus full-attention scores of 88.82, 87.06, and 92.05. The FP8 variant adds only a modest drop on top of that.</p>
+<p>The mean correction term appears to matter. In an ablation on Qwen3-4B-Instruct-2507, the table shows that removing correction lowers the BF16 average from 86.23 to 85.77 and the FP8 average from 85.82 to 83.49. The authors also say the corrected pipeline stays within 1.5 points of full attention even at 128K in BF16.</p>
+<p>On LongBench, FlashPrefill V2 has the highest average among the sparse operators listed for all three models: 49.31 on Llama-3.1-8B, 46.96 on Qwen3-4B, and 50.73 on Qwen3-30B-A3B. The preprint says the gain is especially visible on retrieval-heavy tasks: on English passage retrieval, V2 keeps scores in the 96.0 to 99.5 range while the baselines fall to 91.0 to 97.0, and on counting it is the closest to full attention on all three models. It also notes that summarization tasks are nearly lossless, with one example showing 44.76 on SAMSum for Llama-3.1-8B versus 43.59 for full attention.</p>
+<h3>What the speedups look like in practice</h3>
+<p>The biggest claims are about speed. On NVIDIA H20 GPUs, the paper reports up to 47.26× speedup over FlashAttention-2 at 128K context under FP8 and 27.19× under BF16, with a further 30.49× FP8 speedup against an FA3/4-aligned dense baseline.</p>
+<p>Those operator gains carry over into end-to-end serving. In open-loop tests with Poisson arrivals and mixed prompt lengths, FlashPrefill V2 reduces time-to-first-token and raises throughput relative to the dense FA3/4 backend. On Qwen3-30B-A3B-Instruct-2507 at 1 request per second, for example, TTFT falls from 90.69 seconds to 17.63 seconds in BF16 and 7.93 seconds in FP8. At higher request rates, the same pattern holds, though the gains are smaller.</p>
+<p>The authors also test chunked prefill. With chunk sizes of 8K and 16K, FlashPrefill V2 remains faster than the dense backend, and the paper recommends chunk sizes of at least 8K when deploying it with chunked prefill. It also says the system integrates into SGLang without model-side changes, which is the main reason the authors frame V2 as a serving backend rather than only a kernel optimization.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.19758" target="_blank" rel="noopener noreferrer" title="arXiv / FlashPrefill V2: Block-Sparse Prefill Attention for Long-Context LLM Serving">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>FM-Bench: A Benchmark for Long-Horizon Management with Competing Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">FM-Bench sets language model agents loose on a 20-year football-management simulation, where they must handle hidden information, repeated transfers and contracts, and rival clubs that react to their choices. The benchmark asks whether agents can do more than execute short tasks: can they keep making good decisions when actions compound over time and opponents push back?</p>
+<p>The authors frame the task as long-horizon management with competing agents. One agent runs a club through 26 tools and roughly 340 to 400 decision stops, drafting a squad on the same fixed budget as rivals, trading players, negotiating contracts, investing in facilities and youth, setting lineups, and answering to a board that can fire it. A deterministic engine, not a human or LLM judge, turns the run into one final score accumulated season by season. FM-Bench also evaluates the agent’s memory behavior, because the model’s only cross-stop memory is its own notebook.</p>
+<p>Evaluation runs in two modes. In the solo track, 15 frontier models each play against a frozen scripted world. In the Arena, the same models plus a scripted anchor share one 20-year world, so rival signings can deny each other the same player. Across three seeds, all 15 models complete every horizon, while the blind scripted baselines die out in most runs. The authors say this is, to their knowledge, the first head-to-head evaluation at this scale and horizon.</p>
+<p>The score is broken into six behavioral capabilities. On the reported runs, claude-fable-5 tops both the solo board and the Arena on mean score, while the league title in the Arena rotates among ten models. The ordering does not follow scale, price, or vendor, and the authors say it settles only late in the horizon. They also report that no model learns the market’s hidden prices from hundreds of rejected bids, and that self-managed memory fails in two opposite ways: an archive that only grows, or a plan rewritten every season.</p>
+<p>The paper places FM-Bench as a test of whether agents can manage rather than merely execute, while noting that transfer of its rankings to other long-horizon settings remains untested.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.18423" target="_blank" rel="noopener noreferrer" title="arXiv / FM-Bench: A Benchmark for Long-Horizon Management with Competing Agents">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Looped Language Models Improve Compositional Tool Calling</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Looped language models improve compositional tool calling, especially on multi-step tasks that require models to keep track of intermediate state and dependencies across API calls, according to a University of Cambridge preprint that tests whether extra recurrent computation helps agentic tool use.</p>
+<p>Andrei Cristian Popescu, Haitz Sáez de Ocáriz Borde and Pietro Liò study compositional tool-calling settings in which a model has to coordinate multiple API calls rather than emit a single function request. They compare native and retrofitted looped language models against non-looped baselines, using matched supervised fine-tuning recipes and varying recurrent depth at inference time.</p>
+<p>The evaluation spans API-Bank, BFCL and NESTful, with native Ouro-1.4B and Ouro-2.6B models, plus retrofitted looped versions of Llama-3.2-1B and OLMo-2-1B. In controlled experiments, recurrent computation generally helps compositional and dependency-aware tool use, while the gains are smaller and more model-dependent for isolated API invocation. The authors say the biggest relative advantages appear on multi-call BFCL categories, while results on the more single-call-heavy API-Bank benchmark are less consistent.</p>
+<p>The preprint also reports that accuracy on multi-step tool use generally rises with recurrent depth, and that adaptive inference can offer a better compute-performance trade-off by spending extra iterations only when needed. On BFCL, the looped models’ performance improves more clearly on compositional categories than on simple tasks, where non-looped models already do well.</p>
+<p>Retrofitting recurrence into Llama-3.2-1B and OLMo-2-1B also improves several compositional categories, but the retrofitted models remain weaker than natively recurrent ones on deeply nested workflows. The authors conclude that looped language models look promising for agentic systems that need planning, coordination and reliable execution across compositional tool-use workflows.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.18171" target="_blank" rel="noopener noreferrer" title="arXiv / Looped Language Models Improve Compositional Tool Calling">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Experimental compound helps burn fat without muscle loss</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A UC Berkeley team says an experimental compound called TOFA helped obese mice lose fat without significant lean muscle loss, suggesting a possible obesity and diabetes approach that raises energy use instead of mainly reducing appetite.</p>
+<p>GLP-1 medications such as Ozempic, Wegovy, Mounjaro and Zepbound have transformed treatment of obesity, diabetes and fatty liver disease, but the researchers said they can also bring nausea, other gastrointestinal side effects, and possible muscle loss linked to reduced food intake. In a study published August 21 in *Science Advances*, the team tested a different strategy: increasing the amount of energy the body uses.</p>
+<h3>What TOFA did in the study</h3>
+<p>The compound, 5-tetradecyloxy-2-furoic acid, or TOFA, interfered with the production of lipids such as cholesterol and triglycerides. At the same time, it activated genes that encourage cells to use fat for fuel and produce more energy.</p>
+<p>In mice, TOFA improved insulin sensitivity and glucose control, reduced triglyceride levels, and improved signs of fatty liver disease. Obese mice treated with the compound lost fat while showing no significant reduction in lean muscle mass. The researchers also said TOFA increased energy use by as much as 18% without making the animals more physically active or raising body temperature.</p>
+<p>Senior author Anders Näär said the team went after “the second” lever of body weight — spending more energy rather than taking in fewer calories. The researchers also found that TOFA worked additively or synergistically with GLP-1 drugs in mice, including semaglutide and tirzepatide.</p>
+<p>Human testing is still needed. The researchers said TOFA has only been studied in animals so far, and its safety and effectiveness in people remain unknown. They have created ReRx Therapeutics to help move the research toward potential use in patients.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260823014953.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Experimental compound helps burn fat without muscle loss">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A major Alzheimer’s risk gene may shrink brain cells years before symptoms</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at Gladstone Institutes say a major Alzheimer’s risk gene, APOE4, can make neurons smaller and more active in mice years before memory problems appear, raising new questions about how early the damage begins and whether it can be reversed.</p>
+<p>In a study in *Nature Aging*, the team found that APOE4 increases production of a protein called Nell2. Higher Nell2 levels were linked to neurons becoming smaller and unusually active. Young mice with APOE4 showed excessive activity in two hippocampal regions tied to memory, and the more hyperactive those brains were when the animals were young, the worse their spatial learning and memory problems were later.</p>
+<p>The researchers compared those mice with APOE3 mice, which carry a version of the gene associated with lower Alzheimer’s risk in humans. They said the affected neurons in APOE4 mice were smaller, making them more likely to fire excessively, while the same regions in APOE3 mice did not show the same early shift. Misha Zilberter said this was, to the team’s knowledge, the first study to directly examine what APOE4 does to neuron function at different ages. Yadong Huang said the findings open the door to therapies that could block APOE4’s harmful effects early on.</p>
+<p>The team then reduced Nell2 production. Even in adult APOE4 mice, neurons moved back toward normal size and firing behavior, suggesting the changes were not fixed. The result raises the possibility that future drugs targeting Nell2 could help people with APOE4, which is the strongest known genetic risk factor for Alzheimer’s disease.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260821012234.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A major Alzheimer’s risk gene may shrink brain cells years before symptoms">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Physicists create a tiny “Big Bang” with surprisingly small atomic nuclei</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the University of Copenhagen and the international ALICE collaboration have recreated a tiny version of the early Universe using unusually small nuclei, pushing closer to the boundary of what can still produce quark-gluon plasma and leaving open how small the collision system can get.</p>
+<p>At CERN in Switzerland, physicists accelerate atomic nuclei to nearly the speed of light and smash them together. In these new experiments, they successfully created primordial matter by colliding oxygen-16 and neon-20 nuclei, showing that much smaller nuclei than scientists once thought possible can generate quark-gluon plasma, the hot, dense state of matter believed to have filled the Universe during its first millionth of a second. Researchers had long thought that only very heavy nuclei, such as lead, could do that.</p>
+<h3>Reading the imprint left behind</h3>
+<p>Because the plasma survives for only a tiny fraction of a second, scientists cannot observe it directly. Instead, they measure the particles that emerge afterward and study how they move. The new results suggest those movement patterns preserve information about the original shape of the nuclei: oxygen collisions produce a relatively rounded pattern, while neon collisions create a distinctive bowling-pin-shaped pattern.</p>
+<p>“You could call [it] a Little Big Bang,” said Associate Professor You Zhou, who led the experiment. He said the work pushed “the boundary for how small the atomic nuclei can be while still recreating this primordial matter.” He added that the researchers now know more about the conditions required for matter to transition into this extreme state.</p>
+<p>The team says the technique may help explain both the first moments of cosmic history and the structure of atomic nuclei. The next step is to see how small the system can become while still producing quark-gluon plasma; the researchers plan more experiments with even lighter nuclei, including helium-4.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260822015143.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Physicists create a tiny “Big Bang” with surprisingly small atomic nuclei">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A hidden “on switch” in human DNA has finally been decoded</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers in the laboratory of University of California San Diego Professor James T. Kadonaga decoded an important DNA element called the “initiator,” which marks where the information encoded in a gene begins to be expressed into a functional product. Led by graduate student researcher Torrey Rhyne-Carrigg, the team used high-throughput DNA sequencing to measure gene expression activity across approximately 500,000 different versions of the initiator, then trained a machine learning system to identify the characteristic DNA pattern associated with it. After decoding that signature, the researchers searched human genes and found that roughly 60% contain the initiator.</p>
+<p>The findings could help researchers anticipate how mutations affecting the initiator may alter gene activity and contribute to a range of disorders. The data and AI models may also support the design of synthetic promoters, sequences that can switch genes on or off for specific purposes. Kadonaga said the work is “a step forward” in combining laboratory experiments and AI to decipher information embedded in human DNA, and described the initiator model as “a small but important part” of a broader gene expression code.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260823014943.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A hidden “on switch” in human DNA has finally been decoded">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Black holes keep tearing these stars apart, but they survive</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Syracuse University team says the fading flashes seen in some repeating partial tidal disruption events may be driven by a star’s own rapid spin before its first close pass by a supermassive black hole, solving a puzzle that theoretical models had struggled to match for years.</p>
+<p>Most galaxies are thought to harbor a supermassive black hole at their center, and when a star moves too close, it is not always destroyed outright. In a repeating partial tidal disruption event, the star survives the encounter, returns on later passes, and can produce a new burst of light each time. Wide-field time-domain surveys have made these systems visible by tracking changing brightness across large areas of sky.</p>
+<p>The mystery was that some of these systems do not brighten the same way on each return. Instead, their flares get steadily dimmer. Of the roughly 10 repeating systems identified so far, four have shown that pattern. The new study, published in The Astrophysical Journal and led by doctoral student Ananya Bandopadhyay with Benjamin Amend and Eric Coughlin, suggests the key is how fast the star was already spinning before the black hole’s first close encounter. In the simulations, a rapidly spinning star cannot be spun up as much on later passes, so the stripped material falls back over a similar timescale while less of it is removed, making each flare fainter.</p>
+<p>The researchers also say that the same setup could explain how such stars end up on very tight orbits in the first place. Coughlin points to the Hills mechanism, in which a binary system is torn apart by a supermassive black hole and one star is captured. He says that may also help explain stars orbiting Sagittarius A*, the black hole at the center of the Milky Way.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260822015119.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Black holes keep tearing these stars apart, but they survive">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>This common vitamin was linked to 13% better cognitive scores</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Higher vitamin D supplement intake was linked to stronger cognitive performance in adults at increased risk of dementia in a study from Emory University. The study included 54 adults with sleep disturbances and mild cognitive impairments (MCI). People who reported taking at least 5,000 IU of vitamin D each day performed better on cognitive measures than those who did not take vitamin D, and the findings, published in *Sleep Medicine*, showed scores on the Montreal Cognitive Assessment were more than 13% higher in the higher-intake group after researchers adjusted for other factors.</p>
+<p>Lower daily doses were not associated with improved cognitive scores. The researchers also said the timing of an intervention may matter, and senior author Victoria Pak said older adults with both sleep disturbance and mild cognitive impairment may represent “a critical window for intervention.” The team also reported similar cognitive performance among people taking vitamin D2 and vitamin D3.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260822015138.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / This common vitamin was linked to 13% better cognitive scores">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="guardian">
+  <summary>Spying device detectors may give domestic abuse victims false sense of security, study finds</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Commercial detectors meant to help domestic abuse victims find hidden spying devices may give them a false sense of security, researchers at University College London’s computer science department found. The study identified about 1,000 covert surveillance products and 500 detection tools sold in the UK through mainstream online platforms including Amazon, AliExpress and eBay. The hidden devices included small cameras or microphones concealed in items such as USB chargers, plush toys and clocks, and the researchers said they could be misused for spying and abuse.</p>
+<p>The team asked 34 participants to search a simulated living room for hidden devices on their own and then with detection tools. Using a detector made only a marginal difference: participants missed 67% of devices unaided, compared with 59% when using one. The researchers said many participants struggled to interpret readings, some tools produced false positives, and others missed surveillance objects entirely. Lead author Akhil Polamarasetty said many detectors were not designed with at-risk users in mind and could be unsafe if used while living with the person spying on them.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/aug/23/spying-device-detectors-may-give-domestic-abuse-victims-false-sense-of-security-study-finds" target="_blank" rel="noopener noreferrer" title="The Guardian / Spying device detectors may give domestic abuse victims false sense of security, study finds">Guardian #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
