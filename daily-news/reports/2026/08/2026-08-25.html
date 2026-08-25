@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-25</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-25</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en,el_pais,middle_east_eye,scmp">
+  <summary>US removes Syria from ‘state sponsor of terrorism’ list</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The United States has removed Syria from its state sponsor of terrorism list, a move that also strips al-Nusrah Front, now tied to President Ahmed al-Sharaa and known as Hayat Tahrir al-Sham, of a separate terror designation and raises hopes for investment and sanctions relief.</p>
+<h3>From a decades-old blacklist to delisting</h3>
+<p>On Monday, the US Treasury said Syria was no longer on the State Sponsors of Terrorism list, ending a designation that had been in place for decades under the rule of the ousted Assad regime. The announcement confirmed a decision first revealed last month, after the move had earlier been announced pending a review by Congress.</p>
+<p>The same action also revoked the designation of al-Nusrah Front, the group formerly led by al-Sharaa and also known as HTS, as a global terrorist organisation. South China Morning Post said HTS had once been al-Qaeda’s official branch in Syria, while Al Jazeera English said the group, under al-Sharaa’s leadership, removed former President Bashar al-Assad in December 2024 after a lightning offensive.</p>
+<h3>Why the designation mattered</h3>
+<p>The state sponsor label carried restrictions on US foreign assistance, defence exports and financial transactions, which is why the removal has been treated as a major change for Syria’s economic outlook. Treasury Secretary Scott Bessent said the action would help foster additional investment in Syria to promote political and economic stability, and said it was in line with President Donald Trump’s promise to deliver sanctions relief.</p>
+<p>Marco Rubio said the steps were taken in recognition of what he called positive actions by the Syrian government under Ahmed al-Sharaa to fully distance Syria from acts of international terrorism. He also said rescinding Syria’s designation as an SST, and HTS’s designation as an SDGT, eliminates the final major barriers for private sector investment and promotes Syria’s economic recovery and reintegration into the global economy.</p>
+<h3>Damascus welcomes the move</h3>
+<p>In Syria, the decision was already being celebrated, especially by financial officials. The governor of the central bank, Safwat Raslan, said on X that ending Syria’s designation was “a historic step that restores the country to its natural place in the global economic system,” and added that the bank is “working to build a modern and reliable financial system.”</p>
+<p>Finance Minister Mohammed Barnieh, quoted by the official news agency SANA, called Washington’s move “a major and historic success for Syrian diplomacy.” He said it “opens a major and long-awaited door to strengthening Syria’s integration into the global economic and financial system, attracting investment and modern technologies, and supporting development opportunities.”</p>
+<p>US envoy to Syria Tom Barrack also welcomed the change, calling the end of the designation a “decisive step in Syria’s remarkable journey from isolation to partnership, and from a source of terrorism to a committed partner in the global fight against it.”</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/24/us-removes-syria-from-state-sponsor-of-terrorism-list?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US removes Syria from ‘state sponsor of terrorism’ list">AJ #1</a><a href="https://elpais.com/internacional/2026-08-24/siria-abandona-despues-de-47-anos-el-listado-de-ee-uu-de-paises-que-patrocinan-el-terrorismo.html" target="_blank" rel="noopener noreferrer" title="El País / Syria Exits US List of State Sponsors of Terrorism After 47 Years">El Pais #1</a><a href="https://www.middleeasteye.net/news/us-formally-removes-syria-terror-blacklist" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Trump removes Syria from &#x27;terrorism list&#x27;">MEE #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3365113/us-removes-syria-state-sponsor-terrorism-list" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US removes Syria from state sponsor of terrorism list">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="atlantic">
+  <summary>A Reverse Ellis Island</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Julio Borrell and other non-Mexican deportees were bused to Tapachula, a southern Mexican city where they had no legal status and often no clear place to stay, turning it into a holding zone far from the U.S. border and exposing how far deportation is being pushed outward.</p>
+<h3>A bus to Tapachula</h3>
+<p>After 47 hours on a bus rattling through Mexico, Borrell still did not know where the United States was sending him. Through the window, he watched cities give way to banana plantations and coffee farms, while the passengers around him still wore the clothes they had on when ICE detained them: paint-splattered shirts, pajama pants, landscaping uniforms, bathing suits.</p>
+<p>The bus passed a sign for the Guatemala border, then pulled over. When Borrell asked where they were, a Mexican immigration agent answered, “Tapachula.” Borrell had never heard of it, and neither had anyone else on the bus. They were not from there, and not even from Mexico. They were Cuban, Venezuelan, Nicaraguan, and Haitian—many of them elderly, some stripped of their green cards after spending most of their lives in the United States.</p>
+<p>Borrell had lived in Miami for 46 years. He had come from Havana in 1980 as part of the Mariel boatlift, raised seven American children, and built a life around work as a mechanic. Last December, after a routine immigration check-in, ICE detained him, sent him to Florida’s Alligator Alcatraz for four months, then to Eloy Detention Center in Arizona, and finally onto the buses that ended in Tapachula.</p>
+<h3>The city that became the border</h3>
+<p>What happened to Borrell was part of a practice that began last year without any announcement and has quietly grown since then. According to the account, the Trump administration had bused deportees 2,000 miles from the U.S. border to a small city where they do not have legal status, after being unable or unwilling to send them to their home countries.</p>
+<p>That shift has made Tapachula a kind of reverse Ellis Island. The city has become the largest concentration point for deportees dropped in Mexico, while many other migrants traveling through Latin America toward the United States are also halted there. The United Nations’ International Organization for Migration has informally begun calling it “TapaYork.” The city’s border role has changed so much that, in the words of the account, the border has effectively been relocated to Tapachula.</p>
+<p>According to data from the Mexican Institute for Migration, 12,977 non-Mexicans were deported to Mexico from January 2025 to March 2026, largely to southern Mexico. At the same time, Mexican agents pull migrants out of commercial buses and cars on the freeway leaving Tapachula to keep them from heading north again. Another set of agents waits for the next busload of Cubans, Venezuelans, and Haitians to arrive for processing. U.S. officials continue to say they want “zero border crossings,” and the account says they have asked Mexico for stricter enforcement and accommodation for long-distance deportations.</p>
+<h3>Waiting, protesting, and trying to leave</h3>
+<p>For the people stuck there, Tapachula is less a transit point than a place to wait. Borrell had been there about six months when he said he was trying to earn enough fixing tires to rent a studio apartment. He also knew that a handful of other Cuban deportees had been flown even farther away, to African countries such as Eswatini and South Sudan. “Why the hell did they bring us here?” he asked.</p>
+<p>Others in the city have built whole lives around waiting. Mervil Wisdael, a Haitian bread seller, said deportees arrive a few times a week looking lost and dragging their feet. Haitians now make up roughly 10 percent of the city’s public-school students, one local sign of how long many have stayed. The city also has Haitian players on its semiprofessional basketball teams, Haitian food stalls in the market, and municipal immigration employees who have taught themselves Creole. Wisdael tells newly arrived Haitians they need to line up at Mexico’s refugee office every 15 days; after 30, 40, or 50 signatures, many eventually get refugee status, though that can take one to two years.</p>
+<p>Even so, Tapachula often feels like a dead end. Haitians without Mexican papers are typically caught at a checkpoint just north of the city, and other migrant communities describe the same sense of being stranded far from anywhere they lived before. The account says there are also Cubans, Venezuelans, Central Americans, Congolese, Senegalese, Bangladeshis, Nepalese, a Cameroonian bar, a Ghanaian restaurant, and a Ukrainian shelter guard. People commonly ask each other two questions: how long have you been here, and when are you leaving?</p>
+<p>The pressure has also produced friction. In 2022, a city official said Tapachula was in “a state of siege, a state of chaos,” and Haitian street vendors have at times been removed by local police. This month, migrants set mattresses on fire in the city’s migrant-detention center, prompting military intervention; two Venezuelans were arrested, and Mexico’s immigration agency said the protest was tied to “the dissatisfaction of a group of foreign nationals regarding their immigration process.”</p>
+<p>Some Cubans in Tapachula say they will begin marching north in the next week or two, even though they think their chances of reaching the border are close to zero. The point, they say, is to remind Americans that they are still there. Meanwhile, the account says the Trump administration plans to push this approach to more remote locations, and not long after the reporter left Tapachula, Liberia announced it would accept 1,200 non-Liberian deportees from the United States.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/national-security/2026/08/tapachula-mexico-migrant-deportees/688333" target="_blank" rel="noopener noreferrer" title="The Atlantic / A Reverse Ellis Island">TA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Violence flares in Haiti as gang attack kills 30 people</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 30 people were killed in a gang attack on the farming community of Kenscoff, south of Port-au-Prince, late on Sunday, officials reported. Jean Massillon, Kenscoff’s mayor, said armed men “sowed chaos” as they set homes on fire and killed residents, and said gang members targeted a church and homes, including that of Jean William Pape, a leading public health expert. Massillon blamed members of Viv Ansanm for the attack.</p>
+<p>The violence came as Haiti hopes to hold its first general election in more than a decade. Haiti’s prime minister’s office condemned the “heinous attack” on Monday and said security forces were on high alert and reinforcements were being deployed, while a UN-backed gang suppression force has not yet reached its full capacity of 5,500 members. The UN says gang violence has displaced 1.5 million people across Haiti, and experts have warned it is currently too dangerous to hold the January vote.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/24/violence-flares-in-haiti-as-gang-attack-kills-30-people?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Violence flares in Haiti as gang attack kills 30 people">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="ocha">
+  <summary>Technology is outpacing accountability in Ukraine, UN relief chief tells Security Council</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">humanitarian expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tom Fletcher told the Security Council that Ukraine is entering a stage of war where drones and other technology are reshaping civilian life faster than accountability can keep up, with civilians in Kherson and Kyiv bearing the clearest costs and the question of protection still unresolved.</p>
+<p>Speaking on 24 August 2026 on the humanitarian situation in Ukraine, the UN under-secretary-general for humanitarian affairs said July was the deadliest month for civilians in more than four years, with at least 437 killed and more than 2,600 injured. He said civilian casualties were up 37 per cent in the first half of the year compared with the same period last year, and argued that the statistics still did not capture the daily suffering.</p>
+<h3>Kherson and the changing face of the war</h3>
+<p>Fletcher said he had spent the previous week in Ukraine and had seen in Kherson how drone warfare was “dismantling civilian life.” He described the area as a landscape of kill zones and kamikaze drones, with roads and buildings covered in anti-drone netting, and said people there had become familiar with the sound and lethality of different models. According to him, there had been a 60 per cent increase in first-person view, or FPV, drone attacks this year, often with civilian victims.</p>
+<p>He said the humanitarian response was being forced to adapt to that threat. Huge resources, he said, were now going into subterranean schools and hospitals as people prepared for what he called a chilling future underground. In Kherson hospital, a kilometre from the river that marks the front line, Fletcher said 70 per cent of civilian patients were being treated for blast injuries, mainly from FPV drones, and doctors had grown used to frequent mass-casualty incidents involving civilians.</p>
+<p>Fletcher also said he met a man recovering from an FPV attack while selling fruit, and another who had lost both legs and needed three operations and 17 blood transfusions. He added that civilians across the river in Russian-controlled areas also faced drone threats, and that the use of drones created constant anxiety because they could track, observe and strike with little warning.</p>
+<h3>Protection, law and aid under fire</h3>
+<p>Fletcher said the core problem was not only the weapons themselves but the gap between rapidly advancing technology and the rules meant to restrain it. Drone operators, he said, appeared detached from their victims and from the law, yet the obligations under international humanitarian law remained unchanged: civilians and civilian objects must be protected, regardless of the weapon or the party using it.</p>
+<p>He extended that warning beyond the battlefield. Fletcher said humanitarians were facing the same dangers and needed the same protection. Between January and July, he said, 10 humanitarian workers were killed in Ukraine and almost 40 were injured. At least 20 warehouses had been destroyed, erasing millions of dollars in aid, and UN convoys and evacuation vehicles had been struck while trying to save civilians. He said these attacks were not only harming individuals but also depriving the most vulnerable people of help.</p>
+<p>The toll, he said, was not limited to the front line. Fletcher described a massive attack during his final night in Kyiv that hit homes, a school and a children’s hospital and killed at least 15 civilians. He also said there were reports of civilian casualties and infrastructure damage inside the Russian Federation.</p>
+<h3>What he asked the Council to do</h3>
+<p>Fletcher urged the Security Council to defend international humanitarian law, credibly investigate violations and hold perpetrators accountable. He called for concrete steps to protect humanitarian action, including systems for responding to strikes near convoys, better humanitarian notification, and temporary ceasefires for evacuations.</p>
+<p>He also pressed for support to prepare for winter. The UN, he said, had launched a $358 million Winter Response Plan to provide heat, shelter and medical care to two million people, but this would require immediate procurement and prepositioning of supplies. He said Ukraine remained underfunded despite being better supported than other crises, and called for a stronger bridge to long-term recovery.</p>
+<p>Fletcher ended by warning that as artificial intelligence and autonomy enter warfare, preserving human judgment in military decision-making is even more urgent. “Technology is now outpacing accountability,” he said, arguing that unless the rules of war are enforced, civilians will continue to pay the price.</p></div>
+  <div class="source-list"><a href="https://www.unocha.org/news/technology-outpacing-accountability-ukraine-un-relief-chief-tells-security-council" target="_blank" rel="noopener noreferrer" title="UN OCHA updates / Technology is outpacing accountability in Ukraine, UN relief chief tells Security Council">UN OCHA updates #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>US strikes vessel in eastern Pacific, killing 2 people in first attack in months</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US forces struck another vessel in the eastern Pacific Ocean, killing two people the US military said were accused of trafficking drugs. The strike was announced on Monday and was described as the first attack in about two months. The military also said the nearly year-long US campaign of bombing boats allegedly trafficking drugs has now killed more than 210 people after more than 60 strikes off Latin America’s Caribbean coast and in the eastern Pacific Ocean.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3365108/us-strikes-vessel-eastern-pacific-killing-2-people-first-attack-months" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US strikes vessel in eastern Pacific, killing 2 people in first attack in months">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc,cnn,politico">
+  <summary>Burnham vows support for Ukraine despite &#x27;outrageous threats&#x27; from Russia</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham’s first official visit to Ukraine as UK prime minister paired a fresh promise to keep pressure on Russia with a sharp dispute over British missile technology, after London agreed to share classified component blueprints that could help Ukraine build long-range weapons domestically.</p>
+<p>Burnham met Ukrainian President Volodymyr Zelensky in Kyiv on Monday and chaired his first meeting of the “coalition of the willing,” the 34-country grouping set up by the UK and France under his predecessor Sir Keir Starmer. He also laid flowers at the graves of Ukrainian soldiers and accepted an award from Zelensky on behalf of the British people recognising UK support for Ukraine.</p>
+<h3>Missiles and coalition backing</h3>
+<p>The centrepiece of the visit was the government’s decision to let MBDA declassify information on British-made components for the Scalp missile, the French version of the UK’s Storm Shadow cruise missile. That move is intended to allow Ukraine to produce the long-range weapon at home, and CNN said Paris and Kyiv want to set up a Ukrainian production line by the end of the year.</p>
+<p>Burnham said the coalition was “doing everything we can” and urged the US Congress to “ratchet up” economic pressure on Russia. He also said allies were doing “everything we can” to “dig into our own stocks and help others dig into their stocks” of air defences to protect Ukraine. In a joint statement after the meeting, Burnham, French President Emmanuel Macron and German Chancellor Friedrich Merz said the group would aim to strengthen Kyiv’s air defences “as a matter of urgent priority”.</p>
+<p>The statement also condemned Moscow’s “systemic and escalating strikes against Ukraine’s cities, critical infrastructure and civilians” and pledged to “constrain Russia’s war chest through sanctions and actions against the shadow fleet.” The coalition members met on Monday in Kyiv or by video conference, and the release said leaders had “once again reaffirmed their commitment to support Ukraine’s independence.”</p>
+<p>Burnham’s visit came as the UK and Ukraine announced a new military technology partnership giving British experts access to Kyiv’s Avengers AI Labs database. Burnham said Ukraine had been “Europe’s protector, not a drain on our security but the front line in keeping Europe safe,” and told Zelensky’s allies that “this is the moment to keep up the pressure on Russia, the moment to squeeze their ability to fund this illegal war.”</p>
+<h3>Moscow’s warning</h3>
+<p>The Kremlin pushed back hard. Dmitry Peskov, the Kremlin spokesman, criticised the UK’s decision to share the missile blueprints and said it prevented “even the slightest progress” towards peace. He told reporters on Monday that the Russian military was already gathering data to locate any missile production sites to destroy them.</p>
+<p>Peskov also said Britain was “involved in this war on the side of the Kyiv regime” and accused it of “methodically and regularly” adding fuel to the fire. Burnham answered: “Who started the fire? That’s the question, isn’t it?”</p>
+<p>The exchange underscored the tension around the new missile arrangement. Burnham said the issue of missile interceptors would be the main topic at the coalition meeting, while Moscow framed the blueprints decision as an escalation. Burnham, meanwhile, said on Monday that Ukraine’s security was Britain’s security and that the UK would not back down until there was “a just and lasting peace.”</p>
+<h3>What happens next</h3>
+<p>The immediate next questions are how quickly the missile project can move beyond the blueprint stage and whether allies can do more to fill Ukraine’s air-defence gap. CNN said even with the UK announcement, it could take several years for production to scale up. Burnham and his partners said they want to make air defence reinforcement an urgent priority, and the coalition’s members are due to continue coordinating support.</p>
+<p>The broader fight is also still being shaped by Ukraine’s shortage of interceptors. Burnham said allies need to keep searching their stocks for air-defence systems, while Kyiv continues to ask for more weapons to counter Russian missiles and drones.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/clyqypkrzq5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Burnham vows support for Ukraine despite &#x27;outrageous threats&#x27; from Russia">BBC #1</a><a href="https://www.cnn.com/2026/08/24/asia/britain-ukraine-scalp-missile-technology-intl-hnk-ml" target="_blank" rel="noopener noreferrer" title="CNN / Britain’s giving Ukraine access to secret missile technology. Will it make a difference?">CNN #1</a><a href="https://www.politico.eu/article/british-prime-minister-andy-burnham-ukraine-ups-ante-against-russia" target="_blank" rel="noopener noreferrer" title="POLITICO / Burnham ups the ante in fight against Russia — and leaves Merz in the shade">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="daily_star_bangladesh">
+  <summary>Pabna clinic OT shut after 12 patients contract TB</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The health authority in Faridpur upazila of Pabna temporarily closed the operating theatre of Al-Modina Lab and Hospital yesterday after 12 post-surgery patients contracted tuberculosis over the past few weeks. Health officials also formed a three-member committee to investigate the matter. Officials said all 12 patients tested positive after surgical procedures, mostly C-sections, at the clinic, and warned the number could rise because the facility performs about 60-70 surgeries a month.</p>
+<p>Five affected patients told The Daily Star they developed symptoms after surgery there. Taslima Khatun, 21, of Berhaulia village, underwent a C-section on May 18; her husband Md Abu Rayhan said her wound had not healed even a month later and she was later diagnosed with TB in Rajshahi. He said she had no prior history or symptoms of TB and is now being treated at Faridpur Upazila Health Complex. Shushanto Kundu said his daughter, Joya Rani, 20, developed TB after a C-section on May 25 and is also receiving treatment at an upazila health complex. Dr Md Rashedul Hasan Shaon said the clinic was told to suspend operations, while Dr Nazrul Islam said they suspected contamination of a diathermy unit that had since been replaced and the operating theatre sanitised.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/pabna-clinic-ot-shut-after-12-patients-contract-tb-4256221" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Pabna clinic OT shut after 12 patients contract TB">TDSB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>East African troops prepare for Gaza peacekeeping role in US-backed plan</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Military officials from Uganda and Burundi visited Israel last week to discuss deploying troops to Gaza as part of an international security force envisioned by US President Donald Trump’s “Board of Peace” for the fragile ceasefire, according to officials. An official with the board said Ugandan officials joined a Burundian military delegation, and that Uganda was finalising details of its participation after its parliament approved the troop contribution this month.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/africa/article/3365030/east-african-troops-prepare-gaza-peacekeeping-role-us-backed-plan" target="_blank" rel="noopener noreferrer" title="South China Morning Post / East African troops prepare for Gaza peacekeeping role in US-backed plan">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,axios,bbc,cnn,guardian,nyt,scmp">
+  <summary>US threatens severe sanctions against countries with economic ties to Iran</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">climate_disaster</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Trump administration has widened its campaign against Iran with new sanctions on revenue sources, shipping and technology, while warning countries and companies that keep trading with Tehran they could face secondary penalties.</p>
+<p>US Treasury Secretary Scott Bessent announced the measures on Monday, describing them as an “economic D-Day” and saying the United States would isolate any nation that financially partners with Iran. He said the goal was to cut off Iran’s economic lifelines as the war enters its sixth month.</p>
+<h3>The sanctions reach beyond Tehran</h3>
+<p>The Treasury Department said the package will hit Iran’s aviation, digital assets, gold, technology and shipping sectors, and will also sanction 60 specific individuals and vessels. Bessent said the targets are meant to cut off major sources of revenue, including oil and gas, while also pressuring Iran’s trade partners.</p>
+<p>The department also said Iran has used cryptocurrency to bypass long-running sanctions and to facilitate transactions involving the Islamic Revolutionary Guard Corps and members of the Iranian regime. It said the new shipping sanctions target Iran’s state-linked fleet, which it alleges is used to move oil and “sensitive weapons components,” while the aviation measures target Iranian airlines the department says are used to transport weapons, military personnel and financial resources to Iran’s proxies.</p>
+<p>Washington also suspended several broad exceptions to its sanctions regime, including those covering academic exchanges, personal money transfers and some sporting activities.</p>
+<h3>Trade partners are now in the frame</h3>
+<p>Bessent said on Monday that the new sanctions expose Tehran’s trade partners to secondary penalties, and that every country would be given a defined timeline to shut down Iran-related business activity. According to a Treasury Department release, the targets include ships based in or linked to Singapore, China and Hong Kong.</p>
+<p>That wider reach is what makes the announcement more than a simple Iran sanctions update. “Today’s sanctions are mostly incremental, but are part of trying to intimidate remaining trading partners into cutting ties [with Iran],” Rachel Ziemba, an adjunct senior fellow at the Center for a New American Security think tank, told Al Jazeera. Peiman Salehi, a Tehran-based geopolitical analyst, said Iran appears to have “much less room than it did in previous years to simply work around sanctions.”</p>
+<p>The Trump administration is also signaling that it is prepared to keep turning the screw. Axios said Bessent said a major financial institution would be sanctioned by the end of the week because it is doing business with Iran, and that President Donald Trump would call foreign leaders and ask them to stop specific trade and business ties.</p>
+<h3>Markets and consumers are already part of the story</h3>
+<p>The pressure campaign matters well beyond government and shipping circles because it is tied to oil flows and transport costs. John Deal, managing director of capital markets at Post Oak Group investment bank, told Al Jazeera that if sanctions provoke Iranian retaliation against Gulf shipping, reduce oil exports, or push insurers and shipping companies away from the region, Americans could feel it quickly through gasoline, diesel, airfares, freight costs and inflation.</p>
+<p>The Treasury Department’s move came as Brent crude fell by more than 2% on Monday to $85.22 a barrel, while the average US price for a gallon of petrol stood at $4.09, up from $2.98 on February 28, according to the American Automobile Association.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/8/24/how-us-sanctions-on-iran-ripple-through-global-markets-and-consumers?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / How US sanctions on Iran ripple through global markets and consumers">AJ #1</a><a href="https://www.axios.com/2026/08/24/bessent-dday-iran-secondary-sanctions" target="_blank" rel="noopener noreferrer" title="Axios / Bessent unveils sanctions designed to cripple Iran">Axios #1</a><a href="https://www.axios.com/2026/08/24/trump-iran-sanctions-bessent-economy" target="_blank" rel="noopener noreferrer" title="Axios / 5 ways Iran&#x27;s economy is wilting under Trump&#x27;s pressure">Axios #2</a><a href="https://www.bbc.co.uk/news/articles/c0qxew81y83o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Iran faces &#x27;greatest financial offensive ever&#x27;, says US treasury secretary">BBC #1</a><a href="https://www.cnn.com/2026/08/24/middleeast/trump-iran-economic-pain-intl" target="_blank" rel="noopener noreferrer" title="CNN / Trump is trying to tighten the screws on an Iran numb to economic pain">CNN #1</a><a href="https://www.theguardian.com/world/2026/aug/24/us-severe-sanctions-economic-ties-iran" target="_blank" rel="noopener noreferrer" title="The Guardian / US threatens severe sanctions against countries with economic ties to Iran">Guardian #1</a><a href="https://www.theguardian.com/us-news/live/2026/aug/24/hakeem-jeffries-jared-kushner-democrats-midterm-elections-donald-trump-iran-war-sanctions-latest-news-updates?page=with%3A6a8c925a8f0879bfdefa897a#6a8c925a8f0879bfdefa897a" target="_blank" rel="noopener noreferrer" title="The Guardian / Here&#x27;s a recap of the day so far">Guardian #2</a><a href="https://www.nytimes.com/2026/08/24/us/politics/trump-bessent-iran-economic-d-day.html" target="_blank" rel="noopener noreferrer" title="The New York Times / An ‘Economic D-Day’ That Must Overcome a Troubled History">NYT #1</a><a href="https://www.scmp.com/news/us/diplomacy/article/3365111/us-sanctions-chinese-entities-issues-global-warning-economic-d-day-against-iran" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US sanctions Chinese entities, issues global warning on ‘Economic D-Day’ against Iran">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc">
+  <summary>Organised crime arrests as police investigate A66 crash that killed two officers</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Twelve people have been arrested as Cleveland Police investigates a fatal A66 crash near Middlesbrough that killed two officers and five other people, after officers say a pursued Passat went the wrong way down the road and hit an oncoming police car.</p>
+<h3>What police say happened</h3>
+<p>Cleveland Police said it had received several reports of two vehicles being driven dangerously on Saturday morning. The force said the first vehicle, believed to be a Volvo XC60, was seen ramming properties in the Middlesbrough area, while the second vehicle, a Passat, was believed to have been associated with that activity.</p>
+<p>In the early hours of Saturday, the Passat, which police said had been pursued, travelled the wrong way down the A66 near Middlesbrough and collided with an oncoming police car. Two police officers and all five people in the Passat died. The dead officers were named as PC Tom Clough, 38, and PC Matthew Blades, 37.</p>
+<p>The five people who died in the Passat were Michael Robert Cahill, 23, Jacob Matusiak, 23, Makai Saddington, 18, Theo Rae, 17, and Cole Robert Worthy, 17. Cleveland Police said it was investigating “serious criminal activity that resulted in this fatal incident”.</p>
+<p>Assistant Chief Constable Wayne Fox said the investigation had been “fast moving and complex”. He said the events of the night would have “a lasting and profound impact” on the Cleveland area and the communities the force serves, and that police had a duty to respond to and thoroughly investigate the crime and bring those responsible to justice.</p>
+<h3>The arrests across Teesside</h3>
+<p>Earlier, the force released more details about the 12 people it had arrested as part of the investigation. They included nine men and three women, aged between 19 and 61, arrested across Teesside on suspicion of offences including possession of a firearm and being part of an organised crime group.</p>
+<p>Police said both vehicles were operating with cloned number plates but were picked up by automated number plate recognition technology. The Volvo has been recovered in Middlesbrough. The force also said four of the five people in the Passat had previous convictions.</p>
+<p>Among those arrested, three men aged 24, 19 and 35 were held on suspicion of participating in an organised crime group and possession of an offensive weapon. A 21-year-old man was held on suspicion of participating in an organised crime group, possession of an offensive weapon and criminal damage, and police said he had been remanded on recall to prison.</p>
+<p>A 30-year-old woman was arrested on suspicion of assisting an offender and remains in police custody. A 20-year-old man was arrested on suspicion of threats to cause criminal damage and public order and also remains in custody.</p>
+<p>Police said a 26-year-old man has been charged with possession with intent to supply class A and class B drugs, as well as possession of criminal property. Another man, 39, and a 47-year-old woman were released on conditional bail after both were arrested on suspicion of possessing a firearm without a certificate, possession with intent to supply class A and class B drugs, and possession of class C drugs.</p>
+<p>An 18-year-old man was released on unconditional bail after being arrested on suspicion of possessing a firearm without a certificate, possession with intent to supply class A and class B drugs, and possession of class C drugs. A 61-year-old woman was released on conditional bail after being arrested on suspicion of possessing a firearm without a certificate, and a 39-year-old man was arrested on suspicion of threats to kill and released on conditional bail.</p>
+<h3>The collision inquiry</h3>
+<p>The Independent Office for Police Conduct has launched an investigation into the collision after a self-referral from Cleveland Police, which is mandatory when someone dies following contact with police. The IOPC said officers had followed the Passat for almost seven minutes before abandoning the pursuit when it went the wrong way down the A66 at South Bank. Ten seconds later, at 03:39 BST, it hit the vehicle carrying PCs Clough and Blades, who were travelling on the correct side of the road and were in the area to assist with the search for the car.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c36d6975dzno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Organised crime arrests as police investigate A66 crash that killed two officers">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>UK police arrest 12 after deadly wrong-way crash that killed 7</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">British police arrested 12 people after a car pursued by police crashed while driving the wrong way on a major road, killing five youths and two officers. The deaths came on Saturday as officials warned of a trend for young people to carry out dangerous driving stunts to post on social media. Police in the Cleveland area of northeast England said on Monday there was no evidence the collision was linked to filming for TikTok.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/europe/article/3365104/uk-police-arrest-12-after-deadly-wrong-way-crash-killed-7" target="_blank" rel="noopener noreferrer" title="South China Morning Post / UK police arrest 12 after deadly wrong-way crash that killed 7">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israel probably committed war crimes in Gaza hospital double-tap, investigation finds</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A double-tap strike on Nasser Hospital in southern Gaza on 25 August 2025 killed 20 people, including Palestinian journalists, medics and first responders, in an attack that an investigation by The Independent said may have involved war crimes. Among those killed were Middle East Eye contributors Mohamed Salama and Ahmed Abu Aziz, and The Independent correspondent Mariam Abu Dagga. The first strike hit Reuters cameraman Hussam al-Masri as he operated his camera. Eight minutes later, as a large crowd gathered, two more projectiles were fired from Israeli tanks; the second strike killed 19 people and was captured on live television.</p>
+<p>International law experts told The Independent that the attack raised serious concerns over potential war crimes, including the intentional targeting of civilians and a disproportionate attack, and said the second strike was of particular concern. Israel denies committing war crimes in Gaza and says it does not target journalists. At the time, Israeli prime minister Benjamin Netanyahu described the incident as a “tragic mishap.” The Israeli military said it had targeted a camera “positioned by Hamas” to monitor Israeli troops and claimed six “terrorists” were killed, while The Independent identified two of those six as a hospital worker and a member of the civil defence team helping with the rescue operation.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israel-likely-committed-war-crimes-gaza-hospital-double-tap-investigation-finds" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel probably committed war crimes in Gaza hospital double-tap, investigation finds">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Hakeem jeffries jared kushner democrats midterm elections donald trump iran war sanctions latest news updates</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Supreme Court on Monday lifted one of two lower-court orders blocking the Trump administration’s planned restrictions on mail voting, but a separate injunction still prevents the US Postal Service from enforcing a new rule that would let it refuse to deliver ballots mailed by voters who are not on a list approved by the federal government. The rule was posted online late Friday and is set to take effect this week if both injunctions are lifted. The challenge was brought by 23 states and Washington DC before the USPS issued its new rule.</p>
+<p>Rick Hasen, a law professor at the University of California, Los Angeles, said the decision “just postpones any kind of ruling on the merits” until “a week or two” later, when the election will be closer and states may find it impossible to comply with some rules that could follow. He also noted that North Carolina’s board of elections says voting in the 2026 election officially begins on Sept. 4, with absentee ballots sent to voters who requested them.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/aug/24/hakeem-jeffries-jared-kushner-democrats-midterm-elections-donald-trump-iran-war-sanctions-latest-news-updates?page=with%3A6a8cc4738f089afd0ba40d93#6a8cc4738f089afd0ba40d93" target="_blank" rel="noopener noreferrer" title="The Guardian / Hakeem jeffries jared kushner democrats midterm elections donald trump iran war sanctions latest news updates">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Antifeminicide Law Should Protect Victims’ Family Members, Warn</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Survivors used Senate forums on a proposed general law to prevent, investigate and punish feminicide to press for changes to Claudia Sheinbaum’s initiative, saying it should protect victims’ mothers and other relatives as well as women who survive attempted gender-based killings. They argued that attacks now treated as domestic violence leave aggressors unpunished, and called for guaranteed medical, psychological and legal care after stabbings, acid attacks, or near-strangulation. Claudia Ednita Guerrero said the proposal does not provide the “integral reparation” and emotional recovery survivors need.</p>
+<p>María Elena Ríos Ortiz urged lawmakers to amend article 10 so attacks with toxic irritants, explosives and liquids at high temperatures are no longer treated as simple injuries but as attempted feminicide, which would cover the so-called “violent acid” attacks. María Elena de la Fuente, of Madres Poderosas de La Laguna, said the plan lacks support for mothers and grandmothers who often raise orphaned children after feminicide, while Minerva Hernández Rodarte proposed changes to article 25 to hold relatives or medical personnel responsible if they cover up attackers or obstruct arrests. Sabrina Jimena Gaucher Troncoso also asked for a presumption of truth and greater weight for victims’ testimony.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/24/politica/007n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Antifeminicide Law Should Protect Victims’ Family Members, Warn">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Venezuela Advances in Reconstruction Plan Two Months After Earthquakes</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two months after the June 24 double earthquake, Venezuela said its humanitarian and reconstruction deployment was still operating uninterrupted, with 335 homes delivered to families that suffered total losses and 59,109 structures inspected across the country. Official figures cited by the government said 34,638 of those structures were habitable, 13,733 had restricted conditions and 10,696 remained in high-risk situations. Authorities also said they had collected 528,222.30 tons of debris, equal to 25.15% progress in cleaning affected areas, and that La Guaira, the state most affected by the tremors, had cleared main roads and commercial areas.</p>
+<p>The reconstruction drive also included other fronts. The government activated a second phase of financing for entrepreneurs and traders in La Guaira, after an earlier stage that served 1,766 service providers; the new round delivered 478 direct credits. In education, the National Government said it activated a plan through the Military Community Brigades for Education and Health to repair 1,000 facilities nationwide. In La Guaira, officials said 167 schools were damaged after inspections of more than 300 plants, 11 collapsed structures will be rebuilt from scratch, and 102 schools with minor damage were already under maintenance work.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-reconstruction-2-months-quakes" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela Advances in Reconstruction Plan Two Months After Earthquakes">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Preventive prison ratified for co-defendant of Silvano Aureoles</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A federal court seated at the Reclusorio Oriente in Mexico City ratified preventive prison for Elizabeth Villegas Pineda, co-defendant of former Michoacán governor Silvano Aureoles Conejo, in a case involving the embezzlement of more than 3 billion pesos earmarked for the construction of seven police barracks. The hearing took place on Friday night and lasted more than three hours. During it, representatives of the Attorney General’s Office of the Republic defended the arguments used to impose the precautionary measure, while the defense sought for Villegas Pineda to face her criminal process in freedom.</p>
+<p>The case also involves Carlos Maldonado, former secretary of Administration and Finances of the Michoacán government; Antonio Bernal Bustamante, former secretary of Public Security; and Mario Delgado Murillo, former administrative delegate of the Ministry of Finance, who are imprisoned. Villegas Pineda is currently held in Santa Martha Acatitla prison in Mexico City. Aureoles Conejo is a fugitive in the case; according to investigations, during his 2015-2021 administration he directed a criminal scheme that caused patrimonial damage of 3,412 million pesos to the treasury through contracts and direct awards at inflated prices for the same seven barracks.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/24/politica/014n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Preventive prison ratified for co-defendant of Silvano Aureoles">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Mexican cartel concerns around SA ‘tik farms’ may connect to Ecuador’s cocaine gangs</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Limpopo farm raid and new US sanctions against an Ecuador-based cocaine network have intensified concern about Mexican cartel activity in South Africa, with officials describing separate cases on the same day and suggesting an overlap that is still being traced.</p>
+<p>Police said five suspects were detained after an alleged crystal methamphetamine, or tik, manufacturing facility worth about R600-million was uncovered on a Limpopo farm on Thursday, 20 August 2026. The South African Police Service said the Hawks worked with the narcotics bureau, Crime Intelligence and the Special Task Force, and that the US Drug Enforcement Administration and Homeland Security were also involved. It said the breakthrough followed a two-month investigation into suspected drug manufacturing at the farm.</p>
+<p>The suspects later appeared in court in Musina. According to a Limpopo National Prosecuting Authority statement, two were from Mexico, two from Zimbabwe and one from Malawi. The group was said to be facing charges including manufacturing a scheduled substance, dealing in drugs, possession of drugs, money laundering and contravention of the Immigration Act.</p>
+<h3>How the Limpopo case fits a wider pattern</h3>
+<p>The Limpopo raid was described as one of several recent crackdowns on illicit drug-making operations in South Africa in which suspects from Mexico were arrested. The evidence cites at least five such operations over two years, including a July 2024 bust at a Limpopo farm, a November 2024 case in Tshwane, a September 2025 discovery outside Volksrust in Mpumalanga, and a May 2026 facility in Swartruggens, North West.</p>
+<p>The concern is not limited to South Africa. On the same day as the Limpopo crackdown, the US Treasury Department’s Office of Foreign Assets Control announced sanctions against an Ecuador-based cocaine trafficking network that it said was working with Mexican cartels, including Sinaloa and Cartel de Jalisco Nueva Generación, or CJNG. The Treasury said the network used Ecuador-based vessels near Manta to transfer cocaine to smaller boats heading north, and that the cocaine was then smuggled through Mexico by those cartels.</p>
+<p>The evidence also points to earlier links between South Africa and Ecuador. Cocaine from Ecuador was intercepted at Ngqura Port in 2019, and there have been arrests in Ecuador involving South Africans. Local sources with knowledge of illicit drug patterns and investigations have told Daily Maverick there is mounting concern about Mexican cartel activity in South Africa, where they may use local gangs to distribute drugs.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-24-mexican-cartel-concerns-around-sa-tik-farms-may-connect-to-ecuador-s-cocaine-gangs" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Mexican cartel concerns around SA ‘tik farms’ may connect to Ecuador’s cocaine gangs">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Ceasefire monitoring mission arrives in Democratic Republic of Congo</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A monitoring mission has been deployed in eastern Democratic Republic of Congo to verify the formal ceasefire between the DRC’s army and M23 rebels, UN and government sources said on Monday. The team arrived to track the progress of the Qatari-mediated truce, even as fighting has continued on the ground. The UN said the mission deployed to Minembwe in South Kivu province, where intense fighting has persisted in recent months.</p>
+<p>The Swiss government said on Sunday that the DRC and M23 had agreed on a roadmap for peace talks after closed-door negotiations, and that a mission would be deployed to verify violations of the ceasefire agreement signed in Doha, Qatar, in July 2025. The mission includes members of the Congolese government and M23, as well as observers from member countries of the International Conference on the Great Lakes Region. Local journalists reported that MONUSCO provided logistical support for the deployment, and the mission is due to visit Uvira and Kalehe.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/24/ceasefire-monitoring-mission-arrives-in-democratic-republic-of-congo?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Ceasefire monitoring mission arrives in Democratic Republic of Congo">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Family, legal team of Imaan and Hadi voice concerns over medical facilities at Adiala jail</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The families and legal team of incarcerated lawyers and human rights activists Imaan Zainab Mazari-Hazir and Hadi Ali Chatta have raised concerns about medical facilities at Adiala jail in Islamabad. They said the couple were sentenced by an Islamabad sessions court on January 24 to a total of 17 years in jail on multiple charges under the Prevention of Electronic Crimes Act, and later challenged those convictions before the Islamabad High Court on February 7. In a statement issued on Monday, they said they were satisfied with the weekly meetings with the couple at the jail.</p>
+<p>The family and legal team said Imaan had been facing health issues for the past three weeks. They said she first complained of heavy bleeding from her gums, but there was no dentist available at the jail, and later suffered stomach problems and a serious chest infection. The statement alleged that not all medicine sent after consultation with their dentist reached her, and that Zedron was administered to her to stop nausea and vomiting. They said a blood test showed a high white blood cell count, but a chest X-ray had still not been arranged, and added that women’s medical facilities and access to doctors at Adiala jail “leave a lot to be desired.”</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2025022/family-legal-team-of-imaan-and-hadi-voice-concerns-over-medical-facilities-at-adiala-jail" target="_blank" rel="noopener noreferrer" title="Dawn / Family, legal team of Imaan and Hadi voice concerns over medical facilities at Adiala jail">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Ambush in South Sudan kills peacekeeping troops</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An ambush in South Sudan killed two United Nations peacekeepers, and three other peacekeepers were wounded, along with two South Sudanese police officers and two civilian staff attached to the mission. UNMISS said in a statement issued on Monday that armed men had ambushed a patrol as it travelled toward Pajut in Jonglei state. The identities and nationalities of those killed have not yet been disclosed. UNMISS said it deployed a “Quick Reaction Force” to secure the area and support the emergency response.</p>
+<p>Anita Kiki Gbeho, the head of the mission, said, “Such deadly violence targeting UNMISS personnel, who are serving to support peace in South Sudan, is unacceptable.” The attack came as fears persist that the country risks sliding into a full-scale civil war. The evidence also says numerous attacks on humanitarian workers have been recorded this year, while violence against peacekeepers is rare. UN figures show more than 450 attacks on humanitarian workers and assets between January and July, and at least 36 humanitarian workers and contractors were killed.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/24/ambush-in-south-sudan-kills-peacekeeping-troops?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Ambush in South Sudan kills peacekeeping troops">AJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>Nearly 4,000 residents evacuated as Typhoon Narra approaches south China&#x27;s Guangxi</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Rescue teams worked around the clock as Typhoon Narra triggered severe flooding in Shangsi County in Fangchenggang City, south China&#x27;s Guangxi. Xinhua said a Level II alert was issued Saturday night, and nearly 4,000 residents were evacuated by the following evening. The evacuation was carried out in Shangsi County, Fangchenggang City, as the typhoon approached Guangxi, with rescue work continuing around the clock.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260824/5add81a40e1d4c2e890b4e4019c9714f/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Nearly 4,000 residents evacuated as Typhoon Narra approaches south China&#x27;s Guangxi">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="bbc,guardian">
+  <summary>70,000 social and affordable homes to be built across England as part of £39bn plan</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ministers have set out where the first 70,000 social and affordable homes in England will be built under a £39bn programme, but the plan has reopened the argument over whether the funding is enough to meet demand and cut homelessness.</p>
+<h3>Where the money is going</h3>
+<p>The government said the homes will be delivered over the next 10 years in England, with funding going to Greater Manchester, the West Midlands, West Yorkshire, South Yorkshire, North East England and Liverpool, plus £6bn for London. Officials said this is the first part of a wider plan to build 300,000 social and affordable homes across the country.</p>
+<p>Of the homes announced on Monday, 60% will be for social rent. Social rent homes are the cheapest form of social housing in the package, with rents set at about half market levels and strict criteria for who can apply. The rest will be a mix of other subsidised housing, including shared ownership and sheltered housing.</p>
+<p>The money will be spent by 33 strategic partners, who will be guaranteed funding for the next decade. Ministers said some of the homes will be built by councils, and the government said millions extra would be given to councils to support their housebuilding plans and help with expertise.</p>
+<h3>Support, scepticism and Burnham’s shift</h3>
+<p>Housing charities welcomed the announcement but said it still did not go far enough to meet demand. Charlie Berry, policy manager at Shelter, said the plan was “not near the level we need to truly tackle that backlog and end homelessness”, though she called it a “significant improvement”.</p>
+<p>The Conservatives attacked the plan as an “unfunded spending commitment”. Shadow housing secretary Sir James Cleverly called it “sleight of hand” and said the “small print” showed homes would not have to be delivered until 2039.</p>
+<p>The announcement also marks a shift for Andy Burnham, who had previously argued that the £39bn housing fund should be spent entirely on social homes and council homes. Under the plans announced on Monday, the initial £10bn is being used for a mix of subsidised housing types rather than only social rent homes.</p>
+<h3>The housing pressure behind the plan</h3>
+<p>The policy lands against a backdrop of record homelessness figures. Data released earlier this month suggested 177,530 children were homeless in temporary accommodation, and one recent figure put the number of households on social housing waiting lists at 1.34 million in March 2025.</p>
+<p>That backdrop was reflected in the case of Natasha, who has been living in a hotel in Milton Keynes for four months with her son, Zayd. She said she does not always feel safe in shared spaces with her young son, and described how she spent the final months of her pregnancy and the first weeks of his life in the hotel. She said the room was infested with ants, and that visitors are not allowed, leaving her without help from friends and family.</p>
+<p>Natasha also said she shares a kitchen with around 60 other residents and described living there as feeling “like a prison”. She said she just wants “somewhere peaceful” and “somewhere nice” where she can raise her son.</p>
+<p>What happens next.</p>
+<p>Ministers said Monday’s allocation is only the first stage of the 10-year programme, and more than £16bn still remains to be allocated outside London. Officials also said social rent homes and council houses will be prioritised in future funding rounds.</p>
+<p>Labour has also pledged to build 1.5 million homes by 2029, but BBC Verify said current government statistics suggest England is still short of the pace needed to hit that target.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cnvly73jrrdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / 70,000 social and affordable homes to be built across England as part of £39bn plan">BBC #1</a><a href="https://www.theguardian.com/society/2026/aug/24/andy-burnham-social-homes-backtrack" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham backtracks on spending housing fund only on building social homes">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Nevada files lawsuit challenging federal plan for Colorado River revival</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nevada filed a federal lawsuit on Monday in US district court in Nevada challenging the Trump administration’s new plan for the Colorado River. The state of Nevada, the Colorado River commission of Nevada and the Southern Nevada Water Authority sued the Department of Interior and the US Bureau of Reclamation after a Friday federal plan cut roughly 20% from the water supplied to lower basin states — Nevada, Arizona and California — over the next two years, with the possibility of harsher cutbacks later. According to Gov. Joe Lombardo, Southern Nevada stood to lose more than 70% of its share under the framework.</p>
+<p>The filing comes amid a broader fight among seven Colorado River states over how to divide steep reductions as the river crisis worsens. Lombardo said the upper basin states — Colorado, Utah, New Mexico and Wyoming — were “not required to contribute a drop,” echoing a central complaint in the dispute. The upper basin has resisted mandatory cuts, while lower basin states have said they have already agreed to substantial reductions and want their northern neighbors to share the burden.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/24/nevada-federal-lawsuit-colorado-river" target="_blank" rel="noopener noreferrer" title="The Guardian / Nevada files lawsuit challenging federal plan for Colorado River revival">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Home-testing kits now available for women in England who have missed cervical screening</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Women in England who have missed a cervical screening appointment are being offered HPV self-testing kits by the NHS. Over the next year, nearly 4 million women will receive invites on the NHS App or by text message, email or letter to order a free kit to use at home. Figures show around a third of women eligible for cervical cancer screening have not taken up the offer recently, and the kits are meant to get more women checked for high-risk HPV, which causes nearly all cases of cervical cancer.</p>
+<p>Gem Sofianos-Boorman, 39, said her own experience showed the importance of screening. She was diagnosed with cervical cancer at 28, after screening, and said it was the last thing she expected because she was young, healthy and had no symptoms. She had surgery to remove cancerous cells plus lymph nodes from her abdomen and pelvis, and said going to her screening appointment “saved my life.” Dr Sue Mann, national clinical director for women’s health, said offering an at-home alternative would be “a game-changer” and could help overcome embarrassment, lack of time or worries about discomfort.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c9w4jgg4y55o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Home-testing kits now available for women in England who have missed cervical screening">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>Ukraine faces €23B defense funding hole as Western cash lags</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ukraine faces a €23 billion hole in its defense budget this year, with Kyiv scrambling for cash as Western leaders gathered in the capital on Monday to mark the country’s independence day and pledge continued support. The gap emerged after the defense ministry brought forward spending planned for the second half of the year, while Hungary delayed the EU’s €90 billion loan. The money is needed for weapons and air defense, but also to pay soldiers, support the families of those killed, and secure supplies for the start of 2027.</p>
+<p>President Volodymyr Zelenskyy said, “We are not asking [you] to fight for us. Give Ukraine everything to stop this war, to stop it faster than Putin can start the next one.” U.K. Prime Minister Andy Burnham was in Kyiv for a meeting of the so-called coalition of the willing, alongside António Costa, Luc Frieden, Maia Sandu, Alar Karis and Alexander Stubb, while Emmanuel Macron and Friedrich Merz joined remotely. The European Commission also approved €6.1 billion in new defense procurement, but Zelenskyy said Ukraine still needs about €6.8 billion to €8.5 billion for a “normal start” to next year and around €17 billion more for military salaries and payments to families of fallen soldiers.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/ukraine-e23-billion-defense-funding-gap-russia-war" target="_blank" rel="noopener noreferrer" title="POLITICO / Ukraine faces €23B defense funding hole as Western cash lags">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cnn">
+  <summary>California AG calls off Paramount settlement talks, accuses company of ‘playing games’</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">California Attorney General Rob Bonta canceled a Monday meeting over Paramount’s planned $110 billion takeover of Warner Bros. Discovery, the parent of CNN, after the two sides were expected to discuss a potential settlement of the lawsuit that has frozen the media mega-merger. Bonta called off the meeting after the Wall Street Journal reported that lawyers for both sides held a prep session on Friday and discussed what the states might want from Paramount. In a statement late Sunday night, Bonta said Paramount “did not maintain the confidentiality” of that meeting and accused the company of leaking and misrepresenting settlement talks, saying it was “playing games” instead of engaging sincerely.</p>
+<p>Paramount responded Monday that it shared Bonta’s concerns about the public discussions and misreporting around the deal, but said it had not been the source of leaks from confidential discussions with the attorney general’s office. The company said it remained hopeful and ready to continue good-faith talks to resolve the attorneys general suit and move forward with the merger.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/24/business/california-cancels-meeting-paramount-warner-merger-intl" target="_blank" rel="noopener noreferrer" title="CNN / California AG calls off Paramount settlement talks, accuses company of ‘playing games’">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>Higher income ceilings ensure 8 in 10 households continue to qualify for subsidised public housing: Chee Hong Tat</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Higher income ceilings for new Housing and Development Board flats took effect in Singapore on Monday, Aug 24, with National Development Minister Chee Hong Tat saying the change will keep subsidised public housing within reach of eight in 10 Singaporean households. For Build-to-Order flats, the monthly household income ceiling rose from S$14,000 to S$16,000 (US$12,500), while the ceiling for executive condominiums increased from S$16,000 to S$18,000. The income ceiling for eligible single HDB buyers aged 35 and above also rose from S$7,000 to S$8,000.</p>
+<p>Chee said in a Facebook post on Monday that the higher ceilings would “keep pace with income growth” and that the changes were possible because of “encouraging results” from efforts to sustain a robust housing supply. He also highlighted a separate measure announced by Prime Minister Lawrence Wong in his National Day Rally speech on Sunday: first-timer families with, or expecting, children will get one additional ballot chance for each Singaporean child aged 18 and below, starting from the February 2027 BTO sales exercise. Chee said the extra ballot chances will apply to Prime, Plus and Sale of Balance Flat applications.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/higher-income-ceiling-hdb-flats-bto-families-singles-public-housing-6337326" target="_blank" rel="noopener noreferrer" title="CNA / Higher income ceilings ensure 8 in 10 households continue to qualify for subsidised public housing: Chee Hong Tat">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="yonhap">
+  <summary>Trump gov&#x27;t proposes more than US$103,000 fee on H-1B visas for skilled foreign workers</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">U.S. President Donald Trump’s administration proposed a fee of $103,265 on new H-1B visas for highly skilled foreign workers, a government notice on the Federal Register showed Monday. The H-1B program is for skilled professionals in science, technology, engineering and math, and has an annual worldwide cap of 85,000 visas. A federal judge in June ruled that the fee was illegal.</p>
+<p>The Department of Homeland Security said the fee would “serve as a dedicated revenue mechanism to help recover a portion of the federal government’s costs of administering the lawful immigration system.” The department plans to take public comments on the proposal for 30 days after the Federal Register notice is officially published Tuesday. In September, Trump signed a proclamation to impose a yearly $100,000 fee for an H-1B nonimmigrant visa application, and that proclamation is set to expire next month.</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20260825001100315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Trump gov&#x27;t proposes more than US$103,000 fee on H-1B visas for skilled foreign workers">YNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_star_bangladesh">
+  <summary>Govt prepares ‘red line’ along eastern border</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The government is preparing to establish a clear “red line” backed by credible deterrence along its eastern border, Brig Gen (retd) AKM Shamsul Islam, adviser to the Ministry of Defence and Armed Forces Division, said yesterday. He said Bangladesh is gradually developing its preparedness along the border in response to repeated airspace violations and cross-border shelling linked to the conflict in Myanmar’s Rakhine State. He made the remarks at a discussion titled “Challenges of Rohingya Repatriation: International Politics and National Priorities” at Dhaka University.</p>
+<p>Shamsul said the only real choice was active and sustained pressure for Rohingya repatriation, supported by a coherent diplomatic and credible security strategy. He said Bangladesh had sheltered the displaced Rohingyas for the past nine years, but making that a permanent responsibility was “not morally or strategically viable.” He also said Bangladesh was moving beyond quiet diplomacy and would engage through the UN, ASEAN, OIC, China, India and other partners to treat the Rohingya crisis as a regional security challenge. Former Bangladesh ambassador to Myanmar Mohammad Sufiur Rahman also called for combining security and diplomatic approaches.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/govt-prepares-red-line-along-eastern-border-4256231" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Govt prepares ‘red line’ along eastern border">TDSB #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>1.2 Million Teachers Return to Work Today to Fine-Tune the 2026-2027 School Year</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">general_news</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">1.2 million basic education teachers returned to classrooms this Monday for the intensive phase of the School Technical Council ahead of the 2026-2027 school year. Over the next week, they are expected to discuss and answer digital questionnaires on the new rules for entry, promotion and advancement under Usicamm, as well as on the use of digital devices, and to organize the 2026 awareness day on the severity of sexual abuse and child mistreatment. Teachers consulted said they did not know the questionnaire content because it will be available starting today for virtual review.</p>
+<p>The school year is set to begin on August 31, when more than 23 million basic education students will return to classes. The official calendar runs for 185 days and includes nine holiday suspensions and eight technical council sessions. On September 7, the awareness day on sexual abuse and child mistreatment will be held again in all basic education schools nationwide, with formative and informational activities. The measure responds to a 2022 federal judge’s ruling ordering the Education Ministry to dedicate a school day to the issue after abuses in 2018 at the Marcelino de Champagnat kindergarten, where 17 children aged 3 to 5 were victims of violence and sexual abuse.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/24/politica/010n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / 1.2 Million Teachers Return to Work Today to Fine-Tune the 2026-2027 School Year">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>‘He was left on his own’: the care-leaver lives lost to a system that abandons them at 18</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">David* spent most of his childhood in and out of care after abuse and neglect, and spent his teenage years in a children’s home where a nurse helped him manage his type 1 diabetes. As he approached 18, he was moved into supported accommodation on his own, and at 19 his diabetes nurse stopped working with him because of his age. His connections fell away, the monitoring of his insulin declined, and in the summer of 2025 he died from a lack of insulin while his local care leavers’ hub was shut for refurbishment and his new personal adviser was on leave. His body was not discovered for two weeks.</p>
+<p>His death was one of more than 100 care-leaver deaths aged 18-24 examined in a landmark review in 2025. The review findings suggest the death rate for that group was about three to four times higher than in the general population, and one-fifth of the deaths were at age 18. The review said there was no one close enough to notice David’s absence when he died, and that neighbours alerted the police. It also described similar failings in the cases of Michael*, who died in prison after years of instability and harm, and Janey*, who died at 23 after her children were taken into care.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/aug/25/he-was-left-on-his-own-the-care-leaver-lives-lost-to-a-system-that-abandons-them-at-18" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘He was left on his own’: the care-leaver lives lost to a system that abandons them at 18">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>‘Immense drop-off’ in support contributing to care leaver deaths in England, review says</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A government-commissioned review has found that profound isolation and a sharp drop in support from social services at 18 were linked to the deaths of more than 100 care leavers in England. Led by social work leader Clare Chamberlain and broadcaster Ashley John-Baptiste, the review examined the deaths of 112 care leavers aged 18 to 24 in 2025 and said their death rate was three to four times higher than among the general population, with suicide rates among female care leavers potentially 15 times higher.</p>
+<p>It said 36% probably died by taking their own lives, including 24 women, and that one-fifth of the deaths were at age 18, highlighting an “immense drop-off in support services” when care leavers become adults. Children’s minister Josh MacAlister said care leavers had been left “so isolated, so lonely,” while John-Baptiste said the review was the “most emotional and triggering piece of work” he had ever had to do and recalled a meeting at 17 when his foster parents said they did not want to look after him unless they were being paid.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/aug/25/care-leaver-deaths-isolation-drop-off-support-review" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘Immense drop-off’ in support contributing to care leaver deaths in England, review says">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>The grieving family who says the coroner&#x27;s courts aren&#x27;t working</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A family seeking answers about Daniel Lindsay’s death says the coroner’s process turned into another fight, after Sarah left her first hearing feeling “on trial” and the case later overturned the family’s original belief about how he died.</p>
+<p>Sarah, a murder detective used to courts and legal argument, attended a coroner’s court in May 2024 in Woking, Surrey, after the death of her second cousin. Daniel Lindsay died in 2023, aged 41, after living at a Surrey home that specialises in caring for people with learning disabilities. He also had Down Syndrome and type 1 diabetes. Because his death was unexpected, it was referred to a coroner for an inquest.</p>
+<p>What followed, Sarah said, was “far more hostile than I had ever expected.” She said she felt “completely railroaded” at the first hearing, and the family later discovered new details about how Daniel had lived and how he died. They had initially thought he died from a heart attack, but over the inquest they learned that was wrong. The later conclusion was that Daniel died of a choking incident caused by undiagnosed oesophageal cancer.</p>
+<h3>Why the family says the system is not working</h3>
+<p>The story is part of a wider complaint about coroners’ courts in England, Wales and Northern Ireland, which are meant to answer who died, where, when and, above all, how. The BBC says many observers, from MPs to legal experts, believe the system is in peril, citing backlogs, problems with post-mortems and limited resources.</p>
+<p>In Daniel’s case, Sarah also found herself up against the legal team for Ballater House, his care home, at a pre-inquest review. The family later got legal help through a charity, and by the time the second inquest opened in June 2025 they had several legal teams in court. The chief coroner, Alexia Durran, said coroners are seeing “increasingly complex cases” and more stress on staff.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cvgydn9k4p2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / The grieving family who says the coroner&#x27;s courts aren&#x27;t working">BBC #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="korea_herald,yonhap">
+  <summary>Hyundai Motor, labor union tentatively reach wage deal</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Hyundai Motor&#x27;s management and union have tentatively agreed on a wage deal after a week of strikes and partial stoppages, easing the risk of more production losses while leaving final approval in the hands of union members.</p>
+<h3>What the tentative deal covers</h3>
+<p>The union said on Tuesday that it reached an understanding with management at the 17th round of talks. The package includes a base salary increase of 100,000 won a month, a performance bonus of more than 400 percent of monthly salary, and an additional payment of 12.5 million won, according to the union and Hyundai Motor’s release.</p>
+<p>The union also said the retirement age would be extended from the current 60 to 65 if related laws and regulations are revised. It added that salary would not be reduced for the first few years after workers turn 60. If the agreement is approved in a union vote scheduled for Aug. 31, this year’s wage negotiations at South Korea’s largest automaker will be concluded.</p>
+<h3>Strikes, losses and the pressure to settle</h3>
+<p>The tentative deal came after the union staged a series of strikes that disrupted production. Yonhap said the 400,000-member union carried out a combined 60 hours of strikes this year, leading to about 120 hours of production disruptions across two shifts. The action included a full-day strike on Friday, which the union said was its first such walkout in 10 years.</p>
+<p>The union had pushed for higher bonuses, an increase in the retirement age and job protections against artificial intelligence and automation. It also sought for the company to set aside 30 percent of net income for bonuses and guarantee job security, citing growing use of robotics and AI on assembly lines.</p>
+<p>Yonhap said the strikes were estimated to have caused cumulative production losses of around 55,200 vehicles, with lost sales exceeding 2.3 trillion won, according to industry sources. Hyundai Motor said it did not immediately comment outside regular business hours when Reuters sought a response.</p>
+<h3>AI, robotics and what the sides still have to work through</h3>
+<p>Job security tied to new technology remained part of the talks. The agreement seen by Reuters said the two sides would discuss employment matters when rolling out new businesses. Hyundai Motor also said management and the union shared the view that advanced technologies, including physical artificial intelligence and robotics, are essential to the company’s future competitiveness and survival.</p>
+<p>Hyundai, which owns Boston Dynamics, has said it plans to deploy humanoid robots at its U.S. plant in Georgia from 2028, with plans to expand their use across other production sites. The company said it would transparently share information on new projects and their implementation processes and jointly respond to changes in the industry.</p></div>
+  <div class="source-list"><a href="https://www.koreaherald.com/article/10850740" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Hyundai Motor&#x27;s union reaches tentative wage deal, averting more strikes - The Korea Herald">TKH #1</a><a href="https://en.yna.co.kr/view/AEN20260825001200320" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Hyundai Motor, labor union tentatively reach wage deal">YNA #1</a><a href="https://en.yna.co.kr/view/AEN20260825001251320" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (LEAD) Hyundai Motor, labor union tentatively reach wage deal">YNA #2</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>Reform would evict social housing tenants over unkempt gardens</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Reform UK announced that social housing tenants could be evicted if they do not keep their gardens well maintained. Lee Anderson, the party’s chair, said on Monday that if Reform came to power it would require people in social rented homes to keep their properties decorated and their gardens looked after. He linked the idea to what he described as earlier council housing rules, saying tenants had to keep homes in good order and were inspected regularly by council officers.</p>
+<p>The garden rule was presented as part of a wider housing policy. Reform said it would throw out any foreign national from an existing social home and would prioritise young married couples born in Britain for new housing. Richard Tice, the deputy leader, said Reform would change the law so British-born working couples with children would get the highest priority for new homes. Anderson and Tice also said that people born abroad to British parents while those parents were temporarily overseas would count as British-born, but people born abroad to foreign parents who had lived in the UK as British citizens for almost their entire lives would not.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/aug/24/reform-evict-social-housing-tenants-poor-garden-maintenance" target="_blank" rel="noopener noreferrer" title="The Guardian / Reform would evict social housing tenants over unkempt gardens">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="cnn,el_pais,guardian,scmp">
+  <summary>Trump announces new 50% tariff on Canadian cars, trucks and steel</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">major supplement</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump’s new threat to raise tariffs on Canadian cars, trucks, auto parts and steel has escalated a cross-border trade fight that could hit a tightly integrated North American auto industry, even as Canada prepares retaliation and negotiators remain far apart.</p>
+<h3>Trump widens the tariff fight</h3>
+<p>On Monday, Trump said tariffs on all automobiles, trucks, automobile parts and steel from Canada would rise to 50%, with the higher rate starting January 1, 2027. On social media, he said Canada had been “ripping off” the United States for years and added that the country should be treated like a state no longer.</p>
+<p>The move came after last-ditch efforts to reach a deal collapsed on Friday. Over the weekend, the US had already imposed 50% tariffs on a narrower set of Canadian exports, including about $20 billion worth of goods, after talks fell apart. Canada said it would answer with “dollar-for-dollar” tariffs starting September 8.</p>
+<h3>Why the auto industry is so vulnerable</h3>
+<p>The threat lands on an industry that has operated for decades as if North America were a single market. Since NAFTA in the 1990s and then the US-Mexico-Canada Agreement during Trump’s first term, companies have moved parts and vehicles back and forth across the US-Canada border, sometimes multiple times before a car reaches a showroom.</p>
+<p>That is why analysts and industry figures say a steep tariff on Canadian vehicles would be far more disruptive than a simple border tax. Patrick Anderson, CEO of Anderson Economic Group in Michigan, called it “a trade war” and said it would be “a body blow to the auto industry.” He warned that plants could close on both sides of the border.</p>
+<p>The trade numbers show how closely tied the sector is. In the first six months of this year, the US imported $24.5 billion worth of Canadian vehicles and auto parts, while Canada imported $30.4 billion, according to Commerce Department data. Canada does have a larger overall trade surplus with the US, but in autos the US has a nearly $1 billion a month surplus with Canada.</p>
+<p>Even the earlier 25% tariffs on Canadian cars and parts did not fully break the system, because carve-outs reduced the cost. Automakers could deduct the value of US parts used in Canadian-made vehicles, and in some cases Canadian-made parts too if they met USMCA rules. The new threat would go much further.</p>
+<h3>Jobs, plants and the next round</h3>
+<p>Experts quoted by CNN said the impact would reach well beyond Canadian assembly plants. Erin Keating, an executive analyst at Cox Automotive, said the effect of “unworkable tariffs” would be felt across the border because cars built in Canada rely heavily on US suppliers, which employ more than half a million Americans.</p>
+<p>The trade flow also runs the other way. Canadians bought about 663,000 cars built at US assembly plants last year, and they spent more than three times as much as American buyers on larger vehicles such as heavy trucks, buses and special purpose vehicles. That is why Canadian demand matters to US plants, especially in Michigan, Ohio, Kentucky and Alabama.</p>
+<p>Mark Carney has already linked the tariff fight to those workers. On Monday, he said Trump’s announcement was not a surprise and asked what message it sent to workers in states that rely on Canadian demand. He said Canada would be ready to move forward with talks when the Americans came to the negotiating table “with the right attitude toward our industry and a true partnership.”</p>
+<p>For now, the dispute is moving on two timelines: Canada’s retaliatory tariffs begin September 8, while Trump’s broader auto and steel threat is set for January 1, 2027.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/24/business/trump-canada-auto-tariff-us-industry" target="_blank" rel="noopener noreferrer" title="CNN / Trump is threatening new Canadian auto tariffs. That will hurt US automakers and workers">CNN #1</a><a href="https://www.cnn.com/2026/08/24/business/us-canada-cost-more" target="_blank" rel="noopener noreferrer" title="CNN / Trump is threatening 50% tariffs on Canadian cars. Here’s what else he’s targeting">CNN #2</a><a href="https://elpais.com/economia/2026-08-24/trump-anuncia-aranceles-del-50-para-vehiculos-y-acero-de-canada-desde-el-1-de-enero-de-2027.html" target="_blank" rel="noopener noreferrer" title="El País / Trump announces 50% tariffs on Canadian vehicles and steel starting January 1, 2027">El Pais #1</a><a href="https://www.theguardian.com/us-news/2026/aug/24/canada-tariff-increase-trump-auto" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump announces new 50% tariff on Canadian cars, trucks and steel">Guardian #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3365102/trump-threatens-50-cent-tariffs-canadian-cars-trucks-amid-trade-row" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump threatens 50 per cent tariffs on Canadian cars, trucks amid trade row">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="middle_east_eye">
+  <summary>Colombia lifts coal export ban on Israel imposed over Gaza genocide</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Colombia’s new right-wing government has authorised coal exports to Israel, reversing an embargo imposed by former President Gustavo Petro. Trade Minister Mauricio Gomez Amin announced the decision on Friday in a video alongside President Abelardo de la Espriella, who held up the document. Gomez Amin said, “We have the decree that authorises the export of coal.” The government has not published the decree’s number, its date in the Official Gazette or the conditions exporters must meet, and it is still unclear when shipments will resume.</p>
+<p>Petro severed diplomatic relations with Israel in May 2024 over its assault on Gaza, then restricted thermal coal exports in August 2024 and later, in August 2025, eliminated exemptions for existing contracts and imposed a total embargo. The measure was meant to stay in force until Israel complied with provisional measures issued by the International Court of Justice to withdraw from Gaza and Rafah in particular. Before the restrictions, Colombia was Israel’s largest coal supplier, providing 60 percent of Israel’s thermal coal imports during the first part of 2024, according to S&amp;P Global data.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/colombia-lifts-coal-export-ban-israel-imposed-over-gaza-genocide" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Colombia lifts coal export ban on Israel imposed over Gaza genocide">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="scmp">
+  <summary>Homes crack as London heatwaves trigger record subsidence claims</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">London homes are cracking as five successive heatwaves dried out the clay soil beneath much of the city, leaving Londoners facing historic levels of subsidence risk. Insurance claims tied to subsidence, a problem linked to hot, dry weather that shrinks soil and can destabilise foundations, hit a record last quarter, according to data provided by the Association of British Insurers (ABI). Households claimed an average of £20,000 (US$27,200) for subsidence.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/europe/article/3365004/homes-crack-london-heatwaves-trigger-record-subsidence-claims" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Homes crack as London heatwaves trigger record subsidence claims">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="politico">
+  <summary>Saudi Arabia to invest €6B in massive French theme park site</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Saudi Arabia will spend €6 billion to build a massive entertainment complex with three theme parks near Paris, French President Emmanuel Macron said. Macron and Saudi Crown Prince Mohammed bin Salman signed an agreement formalizing the deal at the Elysée Palace on Monday. Macron said the project is expected to create 22,000 jobs and become “a new global destination.”</p>
+<p>The development is being built on the former site of Mirapolis, a theme park that has been shut since 1991, and Macron said it will also include hotels, catering facilities, housing for young workers and students, and 50,000 m² of green spaces dedicated to biodiversity. Among the parks is one centered around manga. No specific timetable for completion has been announced, and the memorandum of understanding signed by Economy Minister Roland Lescure and the chief executive of Qiddiya Investment Company is part of a broader set of Paris-Riyadh agreements during the crown prince’s visit.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/saudi-arabia-to-invest-e6b-in-massive-french-theme-park-site" target="_blank" rel="noopener noreferrer" title="POLITICO / Saudi Arabia to invest €6B in massive French theme park site">POLITICO #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="cnn">
+  <summary>The latest dangerous social media trend that ‘gamifies’ deadly driving</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A dangerous social-media trend involving “wrong-way” driving videos has drawn fresh scrutiny in Britain and Ireland after deadly crashes, including one near Middlesbrough that killed two police officers and five young people and left officials asking whether online attention is encouraging the behaviour.</p>
+<p>Across Britain and Ireland this summer, groups of mostly young men have been filming and posting what have been dubbed “wrong-way” driving videos online. On Monday, the British government called on social media companies to remove videos that celebrate dangerous driving after a string of deadly crashes involving people driving cars the wrong way down major roads. Local officials said the problem has become entangled with the pursuit of “likes” online, and authorities are probing the exact causes of the latest crashes.</p>
+<p>The Middlesbrough incident is at the center of that concern. Over the weekend, a vehicle traveling on the wrong side of the street collided with a marked police car, killing two officers and five young people. Police said the five occupants of the car, a Volkswagen Passat, were between 17 and 23 years old. CNN also reported that a now-deleted TikTok account believed to belong to one of the teenagers who died included a March 2025 video showing him and four other young people in what appeared to be a police car chase, and another video that appeared to show a speedometer reading 100mph.</p>
+<p>Police later said they had arrested 12 people as part of a probe into criminal activity that occurred before the crash. They said several reports had been received about two vehicles being driven dangerously, including one said to be “ramming properties.” Tributes were also paid to the officers killed, Matthew Blades, 37, and Tom Clough, 38.</p>
+<p>The concern is not limited to one crash. Earlier in August, five teenagers were killed in Ireland in a two-vehicle collision after a car was driven the wrong way down a motorway, and Irish police also appealed for witnesses after another crash near Dublin involving eight boys. Irish broadcaster RTÉ said 62 incidents of people driving the wrong way down motorways had been recorded so far this year in Ireland, citing the body that oversees the country’s roads and public transport networks, 32% more than in the same period last year. Mary Aiken, a professor of cyberpsychology, said the danger becomes “the content” when reckless driving is recorded and broadcast for views, likes and followers.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/24/europe/deadly-social-media-trend-dangerous-driving-intl" target="_blank" rel="noopener noreferrer" title="CNN / The latest dangerous social media trend that ‘gamifies’ deadly driving">CNN #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Let&#x27;s Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new preprint proposes a way to predict good learning rates for very large Mixture-of-Experts models without exhaustive sweeps, and then tests it on a 155B-parameter foundation model trained on 10T tokens. The main unresolved point is whether the extrapolated setting can be verified without the prohibitively expensive full-scale search it is meant to avoid.</p>
+<h3>Why the learning-rate search becomes the bottleneck</h3>
+<p>Mixture-of-Experts architectures expand model capacity without a proportional rise in computational cost, but the paper says that tuning their hyperparameters becomes especially expensive at extreme scale. It singles out the learning rate as a critical setting that changes with both model size and token budget, making broad sweeps across scales costly for large MoE training.</p>
+<p>The authors frame the problem as one of two dimensions at once: model width and token horizon. They say conventional optimization requires sweeping across both, while their goal is to replace that with a more compute-efficient transfer method. The paper also notes that sparse MoE scaling does not obviously follow the same behavior as earlier width-scaling transfer methods, leaving large-scale hyperparameter prediction as an open problem.</p>
+<h3>The two-step transfer framework</h3>
+<p>The proposed method uses a two-step hyperparameter transfer framework. First, the authors adapt Maximal Update Parameterization, or μP, for MoE architectures with Multi-head Latent Attention and the Muon optimizer. In their setup, width-scaled models share the same optimal learning rate under μP, while Standard Parameterization does not.</p>
+<p>They then extend the method along the token axis. For short proxy runs, they train small models over a range of learning rates, fit a second-order polynomial to validation loss versus log learning rate, and take the vertex of that curve as the estimated optimum for each token budget. From those optima, they fit a linear regression in log-log space between the estimated optimal learning rate and token budget, which they use to extrapolate to much longer horizons.</p>
+<p>The paper says this approach produced a high-fidelity fit, with R² = 0.95, and extrapolated an optimal learning rate for 10T-token training of 3.85 × 10^-4. It also says the method was built from proxy models trained on limited budgets, rather than from full-scale sweeps. To keep the proxy training stable, the authors used a Warmup-Stable-Decay scheduler and exponential moving average with α = 0.6, and they set the recent 20B tokens to retain more than 1% influence on the merged weights.</p>
+<h3>What the large-scale validation showed</h3>
+<p>The authors then applied the framework to pretrain a foundation MoE model from scratch with 155B total parameters and 17B active parameters over 10T tokens. They say the full-scale pretraining requires about 98 times the compute of the proxy runs used to predict the learning rate, while the model-scale search alone would add another 240.3 ZFLOPs beyond the proxy run cost of 64.8 ZFLOPs.</p>
+<p>During Stage 1 pretraining, the paper says the training loss remained stable. It also reports evaluation results across English, multilingual, math, and code benchmarks, and says the model lies on the Pareto frontier in a compute-versus-MMLU-Pro comparison against publicly available open-weight MoE base models of comparable scale and active parameter count, including dots.llm1, GLM-4.5-Air, Hunyuan-A13B, and DeepSeek-V4-Flash.</p>
+<p>The authors describe these results as evidence that the extrapolated configuration was effective and reliable for extreme-scale pretraining, while also acknowledging that exhaustive full-scale sweeps would be needed to definitively verify optimality and were not practical to run. They say the same framework may be worth extending beyond MLA and Muon, and they note that the effect of sparsity alone could not be cleanly separated from width in their study.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.20061v1" target="_blank" rel="noopener noreferrer" title="arXiv / Let&#x27;s Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>InfinityEdit: Infinite Video Editing with a Lightweight Edit-Ignition Adapter</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">InfinityEdit tries to keep video edits going after the first clip ends, so a model can continue an ongoing stream while applying new instructions without losing coherence or drifting back toward the unedited scene.</p>
+<p>The preprint argues that most instruction-based video editing still assumes an in-place setting: the edited output is aligned frame by frame with a fixed source clip over a fixed time span. That works for bounded clips, the authors say, but not for open-ended streams such as restyling a live game or applying a camera move to a shot that is still unfolding. In the new setting, which they call infinite video editing, each edited segment becomes the history for the next one, so errors can accumulate and later generations can get pulled back toward the original content by anchor frames and cached history.</p>
+<h3>A lightweight adapter on top of a frozen generator</h3>
+<p>To handle that problem, the authors first build a data-collection pipeline for infinite video editing. Source videos come from UltraVideo, basic edit types are drawn from representative cases used by VAP, and target videos are synthesized with Wan2.2-I2V-A14B. The pipeline expands simple edit types into detailed natural-language instructions with Gemini 3 Flash, uses the last source frame as a connection frame, and for appearance edits uses Qwen-Image-Edit-2511 before image-to-video generation. The resulting triplets are filtered by human scoring on alignment, consistency, rationality, and visual quality.</p>
+<p>On top of that data, the paper proposes InfinityEdit, a lightweight edit adapter built on a frozen Helios-Distilled backbone. The adapter is inserted after each transformer layer and contains three attention modules: history cross-attention, temporal causal self-attention, and edit cross-attention. In the authors’ setup, the adapter only activates in the chunk where an edit request arrives, applies the requested change, and then leaves the backbone to continue generating. They say this lets the system preserve the base model’s long-video prior while adding unbounded editing ability.</p>
+<p>Training also includes a few pieces aimed at keeping the model stable over repeated edits. The adapter is trained with a flow-matching objective while the backbone weights stay frozen. The authors add history corruption so the model sees imperfect past frames during training, and they sample noise levels from a Gaussian mixture to cover the different inference stages. They also use a two-phase curriculum: first learning to apply edits, then refining details. At inference time, they add a near-zero-noise step for the “ignition” chunk and reset the anchor frame to the first edited frame in the new chunk after each round.</p>
+<h3>What the experiments showed</h3>
+<p>The paper evaluates the method on a sequential editing benchmark built from 200 source videos across five entity categories, with three chained edit instructions per sample. The instructions span 15 edit types grouped into entity transformation, stylization, camera movement, and motion transfer. Each sample produces three temporally continuous segments, with four chunks per segment. The authors compare InfinityEdit with a frozen Helios baseline, two in-place editing methods, Lucy-Edit and SANA-Streaming, and two prompt-switching methods, Anchor-Forcing and Infinity-RoPE.</p>
+<p>Across VBench metrics, InfinityEdit scores best on the main measures reported in the table. For camera motion, it reaches 0.7654, above the other listed methods. In the VLM-as-Judge study with Gemini-3.5-Flash, it also ranks first on edit faithfulness, visual quality, preservation, and coherence, with scores of 3.828, 3.765, 3.815, and 3.840. The authors also highlight stability across editing rounds: in Table 3, InfinityEdit’s faithfulness stays near 3.8 across all three edits, with a standard deviation of 0.023, while some baselines swing much more sharply.</p>
+<p>They also test a longer regime in which the edited sequence exceeds 1000 frames. In that setting, the paper says the method continues to support repeated edits without unbounded memory growth or the kind of drift that can undermine long streams. The authors’ qualitative examples show the same scene elements carrying through successive camera, style, and entity edits so that the sequence reads as one evolving video rather than three separate clips.</p>
+<p>The preprint closes by noting one current limit: the editor uses only natural-language instructions.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.20910v1" target="_blank" rel="noopener noreferrer" title="arXiv / InfinityEdit: Infinite Video Editing with a Lightweight Edit-Ignition Adapter">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Graph Engineering in the Era of LLM Agents: From Individual Intelligence to System Intelligence</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new arXiv survey argues that LLM agents have advanced far enough that improving a single agent’s prompt, context, or tool use is no longer the main problem; the harder question is how to organize many specialized agents, tasks, and shared state into one coherent system.</p>
+<p>The paper says large language models have rapidly evolved from language generation models into autonomous agents capable of solving increasingly complex, long-horizon tasks. It places that shift alongside Prompt Engineering, Context Engineering, Harness Engineering, and Loop Engineering, but says real-world work often needs heterogeneous expertise, interdependent subtasks, parallel execution, independent verification, and persistent state that exceed what any single agent can organize.</p>
+<h3>Why individual intelligence runs out of room</h3>
+<p>The survey’s central argument is that augmenting one agent’s capabilities or context does not solve the architectural mismatch. A multi-agent system can still lack clear responsibility boundaries, coordination mechanisms, work organization, or consistent state management, even if the agents inside it are individually capable.</p>
+<p>In that framing, the problem is no longer how to make one agent smarter in isolation. It is how to distribute intelligence across specialized agents and organize them at the system level so they can pursue a shared objective without losing track of dependencies, verification, or evolving execution state.</p>
+<h3>What Graph Engineering is meant to do</h3>
+<p>The paper introduces Graph Engineering as the name for that organizing layer. It defines the idea as constructing explicit, dynamic, and evolving graph structures that represent tasks, agents, and system states, rather than focusing only on individual interactions or agent-level behaviors.</p>
+<p>Those graph-based abstractions are meant to support three linked functions: Task Organization, Agent Coordination, and Runtime State Management. In the survey’s description, task graphs structure goals, subtasks, and workflows; coordination graphs make capabilities, roles, delegation, supervision, verification, reporting, and communication explicit; and runtime-state graphs track execution, support recovery, and keep the system coherent as work unfolds.</p>
+<p>The paper also says this graph-centered approach provides a unified foundation for organizing complex objectives, orchestrating heterogeneous agents, modeling system dynamics, and enabling scalable agent evolution. It treats graphs not as static diagrams, but as operational mechanisms for governing how an agent system works.</p>
+<h3>What the survey says comes next</h3>
+<p>The authors present Graph Engineering as a structural foundation, not a complete solution. They point to graph-native capability substrates, self-evolving graph systems, privacy and ethics, and ontology engineering as open challenges. They also say end-task success alone is not enough to show that a system has System Intelligence.</p>
+<p>Instead, they argue that System Intelligence needs a shared machine-interpretable model of system entities, relations, and constraints so that task success, failure, agent contribution, recovery, state consistency, and runtime cost mean the same thing across the system. The survey also notes that explicit structures do not guarantee that components interpret them consistently.</p>
+<p>To place the field in context, the paper surveys benchmarks, datasets, executable environments, open-source libraries, and applications across model, individual, and system intelligence. Among the system-level libraries it highlights are LangGraph, Microsoft Agent Framework, Google ADK, AutoGen/GraphFlow, CrewAI, CAMEL, Mastra, and GPTSwarm, with GPTSwarm described as treating graph connectivity itself as an optimization variable.</p>
+<p>The applications it lists span software engineering, scientific discovery, healthcare, enterprise workflows, general-purpose digital agents, and social and economic simulation. Across those domains, the survey’s bottom line is that the next step is not just smarter agents, but graph-structured systems that can be organized, observed, and improved as a whole.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.21156v1" target="_blank" rel="noopener noreferrer" title="arXiv / Graph Engineering in the Era of LLM Agents: From Individual Intelligence to System Intelligence">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>ParaTempo: Efficient Parallel Reasoning via Temporal Confidence</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">ParaTempo proposes a training-free way to steer parallel reasoning branches as they unfold, pruning weak paths and retiring converged ones to save computation while preserving accuracy; the open question it tackles is how to tell, early enough, which branches are actually converging.</p>
+<h3>Why parallel reasoning needs a different controller</h3>
+<p>The authors say parallel reasoning can make large reasoning models more accurate and robust by exploring multiple solution paths, but the cost rises as reasoning gets deeper and as the number of branches grows. They describe existing control methods as leaning on final-answer consensus, local token confidence, or isolated intermediate probes, and argue that those signals are often delayed, weakly tied to real reasoning progress, or too noisy for branch-level control.</p>
+<p>That gap matters because fixed-budget parallel decoding treats all branches the same. In the setup described in the preprint, converged branches keep producing redundant tokens, while less promising branches still consume computation without clear evidence that they will help. ParaTempo is presented as a response to that problem: an asynchronous parallel reasoning framework that tries to allocate compute according to how each branch is actually progressing.</p>
+<h3>Temporal confidence steers each branch</h3>
+<p>At the center of ParaTempo is a signal the authors call temporal confidence. Instead of looking only at a single probe or at token-level uncertainty, the system periodically probes each active branch for a tentative answer distribution, then aggregates recent probes in a sliding window. Temporal confidence is defined as the exponentiated negative entropy of that aggregated answer distribution, so it rises when recent probes consistently concentrate on one dominant answer and falls when probability mass stays spread across alternatives.</p>
+<p>The control logic follows from that one signal. After a warmup phase, ParaTempo uses the observed temporal-confidence values to set a pruning threshold for the current problem. Branches below that threshold are removed. Branches that keep committing to the same dominant answer over several probes can be retired early, which stops them from consuming more generation tokens while preserving their answer and confidence weight for the final vote. When pruning frees up a slot, ParaTempo can fork a new branch from a promising donor branch, carrying forward its prefix but sampling independently. Global generation stops when the confidence-weighted vote across branches becomes sufficiently concentrated.</p>
+<p>The authors emphasize that this is asynchronous: branches do not have to wait for one another to reach the same depth. They argue that avoiding synchronization barriers is part of why the method can reduce both total computation and critical-path latency.</p>
+<h3>What the benchmarks showed</h3>
+<p>The preprint evaluates ParaTempo on four reasoning benchmarks using Qwen3.5-35B-A3B and GPT-OSS-20B, with AIME 2026, HMMT November 2025, HMMT February 2026, and GPQA Diamond among the tasks cited in the experiments. The reported setup uses 16 parallel branches, probes every 500 generated tokens, and averages results over four independent runs. The authors compare ParaTempo with zero-shot decoding, self-consistency, early-stopping self-consistency, answer-convergence-based termination, DeepConf, and Parallel-Probe.</p>
+<p>Across those benchmarks, ParaTempo is reported to reduce average latency by 21.8% to 32.2% and total token usage by 18.1% to 30.3% while maintaining competitive accuracy. On Qwen3.5-35B-A3B, the authors say ParaTempo reached 71.1% average accuracy, within 1.1 percentage points of self-consistency’s 72.2%, while cutting latency and token use. Compared with Parallel-Probe, ParaTempo improved accuracy by 3.9 points on Qwen3.5-35B-A3B while reducing latency by 10.6%; on GPT-OSS-20B, it delivered a 3.8-point accuracy gain with comparable sequential cost.</p>
+<p>The paper also argues that temporal confidence is a better control signal than the alternatives it studied earlier in the work. In its preliminary analysis, token-level uncertainty measures such as entropy and perplexity fluctuated more and had weak links to future answer stability, while instantaneous answer confidence was more sensitive to transient changes. Temporal confidence, by contrast, is described as more stable over time and more predictive of whether a branch will keep converging.</p>
+<p>An ablation study on HMMT25 supports the role of the individual control actions. Removing early retirement increased total tokens and latency and cut accuracy by 6.6 points. Disabling forking lowered computation cost but also reduced accuracy by 3.3 points, which the authors take as evidence that reusing freed compute to explore new branches helps preserve solution diversity.</p>
+<p>The code and dataset are available at the GitHub repository linked by the authors.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.16425v1" target="_blank" rel="noopener noreferrer" title="arXiv / ParaTempo: Efficient Parallel Reasoning via Temporal Confidence">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">OmniAssistBench adds a benchmark for Omni-LLMs acting as real-time video assistants, aiming to measure skills that static video tests miss and that are harder to score when a model’s answer can alter the next user action.</p>
+<p>Xianyun Sun, Chaoyou Fu and colleagues propose a two-tier setup built around interactive use rather than passive video understanding. The basic tier covers foundational perception such as social perception, temporal perception, referential perception and non-audio prompt following, while the advanced tier tests higher-level assistant behavior such as context-aware response, proactive response and process tracking. The benchmark also includes 3 real-world cases designed to require longer exchanges, with an average of 15 interaction turns. In total, the dataset contains 300 videos, 685 QA pairs and 7 major tasks with 16 sub-tasks.</p>
+<p>The paper says evaluation is difficult because a model’s unpredictable reply can change what the user does next, which makes static offline datasets a poor fit. To address that, the authors say they give models predefined priors derived from the source video and require them to guide users along the same route. Because real interaction videos are rare, the dataset is built by reverse-engineering Internet videos, deducing logical user goals and segmenting clips into multi-turn interactions. The construction pipeline, which includes scenario design, QA design, video editing and quality refinement, took over 1000 expert person-hours.</p>
+<p>The authors say each sample pairs a video with a ground-truth answer paragraph and key-point phrases, and that they used manual annotation because the tasks depend on subtle video details and goal-based interactions that captions often miss. They also say the benchmark uses state-of-the-art MLLMs in validation. In the reported results, Gemini-3-Pro scores 66.4 out of 100, while Qwen3-Omni-Instruct scores 51.2.</p>
+<p>The evaluation highlights four main bottlenecks in current models: following visual prompts such as hand gestures, keeping long-term memory in multi-turn exchanges, delaying response until a target event occurs, and preserving cross-turn context when new visual input appears.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.21360v1" target="_blank" rel="noopener noreferrer" title="arXiv / OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Beyond Correctness: Benchmarking and Aligning Response Behaviors in Hybrid-Thinking MLLMs</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Hybrid-thinking multimodal large language models are now being judged on whether they keep the same user-facing response style when switching between thinking and non-thinking modes, because the paper finds that correctness can hide leakage, repetition, contradiction, and performative reasoning.</p>
+<p>The authors say correctness alone does not capture response quality, so they evaluate task accuracy alongside response-pattern failures. They introduce PatternEval, a failure-enriched benchmark of 2,415 multimodal prompts spanning visual perception and grounding, structured image understanding, and multimodal knowledge reasoning. The benchmark targets four recurring failures: chain-of-thought leakage, response repetition, logical contradiction, and performative reasoning.</p>
+<p>The paper frames this as a question of response-pattern alignment: whether thinking and non-thinking interfaces preserve acceptable final-response behavior. It says hybrid-thinking MLLMs can alternate between deliberative thinking and latency-efficient non-thinking inference, but the delivered responses should still satisfy the same user-facing standard. The authors report that response-pattern failures are widespread across models from different providers, and that non-thinking inference shows substantially higher failure rates, creating systematic misalignment between the two interfaces. In Figure 1, they say the gap reaches 48.64%.</p>
+<p>The analysis also links those failures to response length. The paper says average response length is positively associated with Trigger in both inference settings, with Pearson correlations of r = 0.64 in non-thinking mode and r = 0.84 in thinking mode. After dividing responses into six length-based bins, Trigger rises monotonically or near-monotonically across the four mode-correctness groups. The authors say this is especially notable for long but correct non-thinking responses, which can still trigger the unwanted patterns.</p>
+<p>Motivated by that diagnosis, the authors develop PatternRM, a response-level reward model, and PatternRL, which adds pattern-specific penalties during reinforcement learning. They report experiments on Qwen3-VL-4B and Qwen3-VL-8B, saying the penalties can reduce cross-mode misalignment while introducing a marginal task-performance trade-off. The paper also says the training reward keeps correctness as the primary signal, while the auxiliary pattern reward penalizes undesirable response patterns without overriding answer quality.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.12781v2" target="_blank" rel="noopener noreferrer" title="arXiv / Beyond Correctness: Benchmarking and Aligning Response Behaviors in Hybrid-Thinking MLLMs">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>AgentMercury: Your Agent Can Synthesize Verifiable Environments for Business Scenarios at scale</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced AgentMercury, a framework for synthesizing executable business environments from high-level scenarios, to address a problem they say has limited agent training: environments are often built around fixed tasks and benchmarks rather than realistic, evolving workflows.</p>
+<p>AgentMercury first instantiates a persistent world with entities, services, tools, state, and executable cross-service invariants, instead of starting from a single task. The researchers say this lets many tasks and interaction trajectories emerge from one world. They constructed 4,783 executable environments spanning 14 industries and 50 countries, then used them as reinforcement-learning substrates.</p>
+<p>The reported gains came on both business-oriented and broader benchmarks. In experiments, Qwen3.5-4B improved from 12.3 to 15.7 on EnterpriseOps-GYM and from 45.9 to 56.0 on AIME26 after training on AgentMercury environments. The researchers also say the training environments were built independently of the evaluation benchmarks, yet the resulting policies improved on enterprise workflows and on out-of-domain tasks covering reasoning, coding, scientific computing, and tool use.</p>
+<p>AgentMercury was also used to test whether environment construction itself can be learned. The researchers say fine-tuning Qwen3.5-35B-A3B on construction traces raised executable-world authoring success from 3.3% to 83.3% on held-out business scenarios. They describe this as evidence that scenario-grounded environment building can become a learnable capability, not just a manual design process.</p>
+<p>The paper says the construction traces expose how high-level business scenarios are turned into executable worlds, including changes to entities, services, persistent state, transition logic, and verification conditions. It also says the synthesized environments, tasks, construction code, and trained policy models are being released to support further research on scalable environment generation and agent learning.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.20634v1" target="_blank" rel="noopener noreferrer" title="arXiv / AgentMercury: Your Agent Can Synthesize Verifiable Environments for Business Scenarios at scale">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>FlavourBench: Ranking Frontier Language Models with Executable Culinary Ground Truth</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">FlavourBench turns a culinary runtime into a benchmark for ranking 27 frontier language-model endpoints, replacing human judges and brittle exact-match keys with executable ground truth and raising a simple question: which models can best match a frozen culinary score map?</p>
+<h3>How FlavourBench works</h3>
+<p>The preprint says each task shows eight ingredients and asks for a three-ingredient portfolio. Before any model runs, Epicure scores all 56 possible portfolios, then the benchmark freezes those scores into a task map. The authors say the benchmark uses 534 tasks across substitution, pairing, and constrained composition, with 89 valid responses per panel and family for every ranked model, for 14,418 model–task cells in total.</p>
+<p>They also say the evaluation is designed to be fully shared and comparable: every model faces the same 534-task core, the FlavourBench Score is the equal-family mean of the frozen task scores, and inference uses 50,000 bootstrap replicates for simultaneous 95% score bands plus 100,000 sign-flip draws for all 351 paired model contrasts with Holm control. The two independently compiled panels correlate at r = 0.89, with rank ρ = 0.80.</p>
+<p>What the benchmark found.</p>
+<p>On that core, Grok 4.6 has the largest point estimate at 65.1, with a simultaneous 95% confidence interval of 61.0–69.2. The paper says 101 of 351 model pairs are resolved. It also reports that the release includes the prompts, all portfolio score maps, raw responses, exact routes, content hashes, and an offline verifier that reconstructs every result.</p>
+<p>The authors frame the result as a benchmark for agreement with one published Epicure release, not universal human taste. They say the point is to make culinary reasoning measurable without asking one language model to grade another, while keeping the leaderboard reproducible from public artifacts.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.20574v1" target="_blank" rel="noopener noreferrer" title="arXiv / FlavourBench: Ranking Frontier Language Models with Executable Culinary Ground Truth">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Frontier-technology markets are too narrow — here’s how to widen them</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Public money is already shaping frontier-technology markets, not just funding the technologies themselves, and the unresolved question is whether governments will design those markets so later competitors can still get in, or let early winners harden into gatekeepers.</p>
+<p>The argument is that contracts, grants, benchmarks, infrastructure and purchasing routes help decide which firms learn first, which systems get adopted and whether a market stays open or closes around a few suppliers. Governments, the piece says, should recognize that role and use it to widen the markets they help create. The central principle is contestability: public support should reward performance now without denying later suppliers the access they need to compete on their merits.</p>
+<p>Space is presented as the clearest example of how concentration can form. Nature says government procurement there already shapes which firms build capability and attract investment. It points to SpaceX, headquartered near Brownsville, Texas, which conducted 118 launches — 83% of the total — licensed by the US Federal Aviation Administration in fiscal year 2024. In April 2025, the same company was assigned seven of nine national-security launch missions from that year’s budget, worth $846 million, while the other two missions went to another established provider for $428 million.</p>
+<p>The wider concern is that repeated awards to one supplier can make that system the default around which future work is planned. Nature says the switching costs can be high: NASA estimated that bringing in a new supplier for key parts of its Space Launch System could cost more than $4.5 billion and delay launch by ten years because existing contractors held crucial technical data. In cloud services, the UK Competition and Markets Authority found in 2025 that fewer than 1% of customers switch providers each year.</p>
+<p>That is why the piece calls for safeguards in procurement, adoption and evaluation decisions for cutting-edge technology. Some programmes already try to keep markets open by contracting multiple firms, using staged assessments, creating open interfaces and keeping supplier entry routes available. NASA’s Commercial Lunar Payload Services programme is held up as a positive example because it buys delivery services from a range of commercial providers rather than locking in one firm.</p>
+<p>The same logic, Nature says, applies to AI and quantum technologies, where current decisions on what to fund, procure, assess and govern will shape future use and investment. The warning is that if governments are not careful, early public choices could turn frontier markets into gateways controlled by a few private firms.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02572-8" target="_blank" rel="noopener noreferrer" title="Nature / Frontier-technology markets are too narrow — here’s how to widen them">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Billion-dollar machine aims to set a fusion-energy record — and study nuclear weapons</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Los Lunas, New Mexico, Pacific Fusion is building a billion-dollar machine it hopes will reach fusion “net facility gain” by the end of the decade, while its location near a major US nuclear-weapons laboratory also raises the prospect of research on ageing warheads.</p>
+<p>Nature visited the warehouse where the company is assembling key parts of the machine. Beneath a wall-sized American flag, workers and a few industrial robots put together the first two of more than 150 truck-sized impedance-matched Marx generators. These cylindrical capacitor banks will be arranged around a central reaction chamber, like the legs of a giant metal crab, and fired in parallel to send an electrical pulse thousands of times stronger than a lightning bolt to a pea-sized fuel capsule.</p>
+<p>Pacific Fusion says that pulse will create a magnetic field that compresses hydrogen isotopes until they fuse into helium and release energy. Keith LeChien, the firm’s chief technology officer and co-founder, said the project will be “transformative for both fusion energy and defence applications.” Sandia National Laboratories in Albuquerque is working cooperatively with the company to optimize the pulsed-power approach for both energy and weapons uses.</p>
+<p>The company’s pitch comes amid a surge of money into fusion start-ups: Pacific Fusion alone has raised more than $1 billion since its 2023 founding, contingent on milestones, and the sector has collectively attracted more than $14 billion in five years. Researchers told Nature that pulsed power looks promising, but Michael Campbell, a fusion engineer at the University of California, San Diego, said “there’s still a long ways to go.” Even if Pacific Fusion hits its target of about 100 megajoules of fusion energy from an 80-megajoule pulse, LeChien said, more work would still be needed before the design could operate as a power plant.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02620-3" target="_blank" rel="noopener noreferrer" title="Nature / Billion-dollar machine aims to set a fusion-energy record — and study nuclear weapons">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Patient’s own mitochondria injected into eyes in attempt to restore vision</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Scientists injected mitochondria taken from a woman’s own leg muscles into the vitreous fluid of her eyes in an attempt to treat severe blindness, finding no inflammation or side effects but only a temporary improvement in light responses and no restoration of vision.</p>
+<p>The woman had suffered a brain bleed in February that injured her optic nerve and retina, leaving her nearly blind and with no pupil responses to light. In May, the researchers obtained emergency approval from the US Food and Drug Administration to try the transplant, which they say was the first such procedure in the eyes. The idea was to see whether healthy mitochondria — the energy-producing organelles inside cells — could be taken up by damaged retinal cells and help them recover function.</p>
+<p>That approach has been explored before in other parts of the body: previous human trials have put mitochondria into the heart and brain. David Putrino, a neuroscientist at the Icahn School of Medicine at Mount Sinai and a co-author of the preprint, said the goal was safety. “We can’t prove efficacy at all, nor are we trying to,” he said, though he added that they saw “a significant effect on physiological changes in the eye.”</p>
+<p>After the injections, the woman’s pupils responded to light again, but the effect faded after about four weeks. Putrino said a post-transplant low-vision assessment suggested she was perceiving shapes and shadows in her left eye. Temurkhan Ayupov, a mitochondria biologist at the Institute of Molecular and Clinical Ophthalmology Basel, said the study shows the method was “relatively safe” but does not confirm a therapeutic effect.</p>
+<p>The findings were posted as a preprint on 10 August and have not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02616-z" target="_blank" rel="noopener noreferrer" title="Nature / Patient’s own mitochondria injected into eyes in attempt to restore vision">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists just imaged the hidden quantum shape of a molecule</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An interdisciplinary team at the University of Göttingen has imaged the three-dimensional wavefunction of an organic molecule only nanometers in size, with findings published in *Nature Communications*. The work targets molecular orbitals, the electron wavefunctions inside molecules, which carry information about how a molecule behaves and interacts with its environment, including how it absorbs light and how chemical reactions may unfold.</p>
+<p>Professor Stefan Mathias said the wavefunction is a fundamental quantity in quantum mechanics that cannot be directly observed or measured. To reconstruct it, the researchers used photoelectron spectroscopy, which measures the momentum of electrons emitted from the molecule, and then used advanced computer algorithms to recover the missing half of the wavefunction. The team said this produced an image of the complete molecular orbital and revealed features smaller than the distance separating the carbon atoms in the molecule. Dr. Matthijs Jansen said the group combined a redesigned algorithm that needs much less experimental data with a lab-based soft-X-ray light source that provides ultrashort light pulses, which they said could make three-dimensional wavefunction imaging more practical.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260822015213.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists just imaged the hidden quantum shape of a molecule">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A ghostly ribbon of stars reveals hidden dark matter</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Astronomers have identified the first stellar stream ever seen outside the Milky Way, a faint ribbon of stars in UGC 9050-Dw1 that may let them probe dark matter in a galaxy beyond our own, where such streams had long been predicted but remained too dim to find.</p>
+<p>For billions of years, an ancient cluster of stars has been gradually coming apart, shedding stars that now trace a narrow arc across space. The international team included an astrophysicist from Northwestern University, and the study was co-led by Julie Kiel Holm of the University of Copenhagen and Sarah Pearson of the Technical University of Denmark. It was published Aug. 12 in Nature. Archival Hubble Space Telescope data played a key role: David Sand and Catherine Fielder, both astronomers at the University of Arizona, presented the observations, and David Hendel noticed the faint, narrow arc while examining images of the ultra-diffuse galaxy UGC 9050-Dw1.</p>
+<p>The galaxy lies roughly 115 million light-years from Earth. Because it contains relatively few stars, it provided a dark enough background for the stream to stand out. Researchers then ran thousands of computer simulations, testing combinations of globular cluster characteristics and possible dark matter distributions to see which could recreate the stream’s observed shape. From that, they reconstructed the gravitational field of the host galaxy and estimated how unseen dark matter influenced the stars’ paths.</p>
+<p>Tjitske Starkenburg of Northwestern, a coauthor of the study, said stars in a stellar stream travel along nearly the same orbit, and that orbit is shaped by the galaxy’s gravity. By modeling that gravity, the team can estimate the galaxy’s total mass. Since the amount of visible matter is already roughly known, the remainder must be dark matter. The results indicated that UGC 9050-Dw1 contains a large amount of dark matter, consistent with expectations for an ultra-diffuse galaxy.</p>
+<p>The finding matters because it gives astronomers a new tool for studying one of astrophysics’ biggest unanswered questions. Dark matter makes up roughly 85% of all matter in the universe, but it cannot be seen directly. Starkenburg said thin stellar streams may be especially useful because small concentrations of dark matter can leave gaps or clumps in them. The team said that with more searches, similar streams around other galaxies could help reveal how dark matter is distributed across the universe.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260823015000.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A ghostly ribbon of stars reveals hidden dark matter">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Common medications may change your gut for years</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Medications can influence the community of microbes in the human gut long after a person stops taking them, according to a large study led by researchers at the University of Tartu Institute of Genomics. The researchers analyzed stool samples and prescription records from more than 2,500 participants in the Estonian Biobank’s Estonian Microbiome cohort. They found that most of the medications examined were associated with differences in the gut microbiome, and for a substantial number of drugs those differences could still be detected years after use. The lasting effects were not limited to antibiotics; antidepressants, beta-blockers, proton pump inhibitors and benzodiazepines were also linked to distinctive microbial fingerprints.</p>
+<p>Lead author Dr. Oliver Aasmets said past drug use can be as important as current medication in explaining individual microbiome differences. The study also found that benzodiazepines had associations comparable to broad-spectrum antibiotics, and that drugs in the same class did not always affect the microbiome the same way: diazepam and alprazolam differed in how strongly they appeared to disrupt gut microbes. In a smaller follow-up group, changes after starting or stopping certain medications were accompanied by predictable shifts in gut microbes, with persistent effects confirmed for proton pump inhibitors, selective serotonin reuptake inhibitors and antibiotics such as penicillins in combination and macrolides.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260824065605.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Common medications may change your gut for years">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
