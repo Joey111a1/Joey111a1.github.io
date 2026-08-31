@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-08-31</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-08-31</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Devastating Factors in Chocó Humanitarian Crisis After Earthquake</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Chocó, armed violence, the August 10 earthquake and mining have combined into a humanitarian crisis that has confined about 3,000 people, displaced 652 families and left aid delivery stalled in rural and ethnic territories that remain hard to reach.</p>
+<p>The earthquake was a magnitude 7.4 event with its epicenter in San José del Palmar, and the crisis has since deepened across Colombia’s Pacific department. The Office of the People’s Defender, the Defensoría del Pueblo, issued a public statement on August 29 urging national and local authorities to activate emergency response protocols immediately, saying the emergencies are hitting Afro-descendant, Indigenous and rural communities especially hard.</p>
+<h3>Violence after the quake</h3>
+<p>The Defensoría said security has deteriorated progressively since the earthquake, especially in the San Juan subregion. It said the Clan del Golfo has maintained a prolonged presence in communities such as San Agustín, in Sipí, blocking traditional production activities and moving toward Puerto Murillo in Middle San Juan.</p>
+<p>It also said fighting between the Clan del Golfo and the National Liberation Army, the ELN, has been verified in territories of the General Community Council of San Juan, known as Acadesan, and in rural areas of Nóvita and Sipí. The confrontations have included drone attacks and explosive devices, with civilian casualties and mass displacement.</p>
+<p>One of the sharpest flare-ups came on August 23, when fighting and drone attacks in Charco Hondo, Sipí, left three civilians injured and forced 65 families to flee to Barrancón. Preliminary reports cited by the Defensoría indicate that 652 families, about 3,000 people, remain confined in places including Barrancón, Charco Hondo, Charco Largo in Sipí, and Torrá, Cajón and Santa Bárbara in Nóvita.</p>
+<h3>Mining pressure and isolation</h3>
+<p>The crisis is not only about combat. The evidence also points to illegal mining with heavy machinery and mining tables advancing in sectors of Lloró, Bagadó and the Noanamá–Cucurrupí corridor. That activity is said to be affecting 18 communities, including 11 Afro-descendant and 7 Indigenous communities, for a total of about 3,800 people, or 920 families.</p>
+<p>The environmental damage is also severe. The same evidence says the mining is causing deforestation, river contamination and biodiversity loss, while becoming another arena of dispute among armed groups that tax operations, extort miners and fight for control of extraction sites. The UN Environment Programme has documented that illegal mining in Chocó is responsible for 80% of the department’s deforestation, with mercury contamination affecting fish stocks that communities depend on for food and income.</p>
+<p>The earthquake has made all of this harder to respond to. The lack of a definitive census after August 10 has prevented authorities from accurately assessing material damage, and many rural areas remain isolated. That has made it impossible to send and deliver basic humanitarian aid in some places, the evidence says, while logistical bottlenecks continue to delay assistance.</p>
+<h3>Aid gaps and a disputed picture</h3>
+<p>The National Unit for Disaster Risk Management, UNGRD, reported that 406,963 people in 196,614 families have been affected across 15 departments and 496 municipalities, with 331 deaths, 152 missing, 4,449 injured and 364 rescued as of August 28. In Chocó, the combination of seismic damage, armed violence and geographic isolation has left thousands without food, water, shelter or medical care, according to the evidence.</p>
+<p>The Defensoría called on the Clan del Golfo and the ELN to comply with International Humanitarian Law and stop actions that endanger civilians. It also urged the national government, the Chocó Governor’s Office and UNGRD to activate humanitarian response protocols, guarantee safe mobility, provide food, health care and temporary shelter, and urgently complete the census of victims in isolated rural areas.</p>
+<p>There is also a split between official and community accounts of the response. Chocó Governor Nubia Carolina Córdoba said on August 23 that the first phase of humanitarian aid delivery had reached 100% of affected municipalities. Community leaders dispute that claim, saying many rural and ethnic territories remain unreachable because of armed violence, damaged infrastructure and a lack of transportation.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/colombian-geological-survey-warns-of-purace-volcano-increased-seismic-activity" target="_blank" rel="noopener noreferrer" title="Telesur English / Colombian Geological Survey Warns of Puracé Volcano Increased Seismic Activity">TE #1</a><a href="https://www.telesurenglish.net/choco-humanitarian-crisis" target="_blank" rel="noopener noreferrer" title="Telesur English / Devastating Factors in Chocó Humanitarian Crisis After Earthquake">TE #2</a><a href="https://www.telesurenglish.net/magnitude-4-3-earthquake-strikes-colombia-near-totoro" target="_blank" rel="noopener noreferrer" title="Telesur English / Magnitude 4.3 Earthquake Strikes Colombia Near Totoró">TE #3</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc,guardian">
+  <summary>What is Burnham doing to the early prison release scheme and why?</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham has tightened England and Wales’s next early prison release scheme by blocking people convicted of unlawful killing from early release, a move meant to answer backlash over PC Andrew Harper’s killers while leaving the prison system under severe crowding pressure.</p>
+<p>The change means some prisoners who would have been eligible from 1 October will now stay inside longer. Burnham said on Sunday that anyone convicted of unlawful killing will be excluded, and he conceded the decision means “hundreds” more people will remain in prison as prisons in England and Wales are already more than 97% full.</p>
+<h3>What Burnham has changed</h3>
+<p>The scheme itself is part of a sentencing change that means some adults serving standard prison sentences will be released earlier than originally planned. For prisoners on shorter determinate sentences, that can mean release after a third of their sentence instead of 40% or 50%; for another group, release moves from two-thirds to halfway through the term. Release does not end the sentence: people serve the rest in the community on licence, under probation conditions, and can be sent back to prison if they breach them.</p>
+<p>Burnham’s Sunday announcement narrows who can benefit. He said people convicted of unlawful killing will be excluded, meaning the killers of PC Andrew Harper will not be eligible. The Guardian said the bar also covers historical grooming offences, any form of manslaughter, causing death by dangerous driving and causing or allowing the death of a child. The result, that paper said, is a reduction in the number due to be released early from up to 6,000 to about 4,600.</p>
+<h3>Why he did it</h3>
+<p>The immediate trigger was the anger over the prospect that Harper’s killers could have been included in the scheme. Harper died in 2019 after being dragged by a car while responding to a quad bike theft in Berkshire, and more than one million people signed a petition calling for his killers to remain behind bars. Burnham said he had heard what Harper’s family were saying, adding that nobody would want a situation where people guilty of killing a police officer were let out early.</p>
+<p>But the change is also happening against a wider capacity crisis. Burnham said he had pushed the prison system “to the very limits of what’s possible” without risking collapse, and prison governors said the estate is already under acute strain. One governor in the Midlands described the repeated return of released prisoners as a “revolving door” and said, “The churn is what stresses me out.” Another governor in the north of England said the plan was “all short-term solutions and we need space now.”</p>
+<p>Those governors said they are seeing the same inmates coming back after reoffending or breaching release conditions. One said they were frustrated by the rate of recalls, adding: “We see the same people coming back after being released early and reoffending again, or breaking their [release] rules.”</p>
+<h3>The pressure he is trying to relieve</h3>
+<p>The government says it needs the release scheme to make room because prisons are close to full. The BBC reported that by March this year more than 70,000 people had already been released under the 2024 early release scheme, yet there were still almost 87,000 people in prisons across England and Wales and just over 2,000 spaces remaining.</p>
+<p>Burnham and the government have also pointed to other ways of creating space, including deporting foreign inmates and releasing some prisoners serving indefinite sentences, but the BBC said those steps are unlikely to create much room by the time the first batch of inmates are released in October. Burnham also said he would end imprisonment for public protection sentences during this parliament, but prison experts said that would take time and would not ease pressure quickly.</p>
+<p>Governors warned that overcrowding is already affecting safety and management inside prisons. One said adding cells in existing prisons would require more staff, and staff shortages mean “prisoners are not living in a safe and decent environment.” Another said the lack of space is also driving gang tensions, with prisoners from different areas being held together in ways that can raise threat levels.</p>
+<p>What happens next.</p>
+<p>The justice secretary is expected to give further details on Tuesday, including how many people will be affected. The first batch of prisoners is due to be released early in October, but governors and prison leaders say the system still faces a serious squeeze before then.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c14dlm5e22ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Prisoners freed early are returning to jail at rapid rate, governors tell BBC">BBC #1</a><a href="https://www.bbc.co.uk/news/articles/cdx5zw4e2x9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Burnham gets the early prison release changes he wanted - but at what cost?">BBC #2</a><a href="https://www.theguardian.com/society/2026/aug/30/early-prison-release-scheme-changes-backlash" target="_blank" rel="noopener noreferrer" title="The Guardian / What is Burnham doing to the early prison release scheme and why?">Guardian #1</a><a href="https://www.theguardian.com/society/2026/aug/30/pc-harper-killers-prison-early-release-scheme" target="_blank" rel="noopener noreferrer" title="The Guardian / Prisons ‘one major event from disaster’ after U-turn on early release scheme">Guardian #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Death toll rises to at least nine, MP says</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Late on Sunday, Republican Turkish party MP Sami Ozuslu said the death toll had risen to at least nine, and that people were hearing there were “nine or ten dead.” He said families of passengers were converging on hospitals in Nicosia, Kyrenia and elsewhere, desperate for news of loved ones. Ozuslu also said three children were in intensive care and “seem to be out of danger.”</p>
+<p>He said he had visited the central hospital in Nicosia earlier in the day with a delegation from the ruling party and met many relatives searching for family members among the missing. “Everyone was in a state of shock,” he said. The relatives were looking for family members among the missing at the hospital, and Ozuslu described the situation there as one in which many people were trying to find out what had happened to their loved ones.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/aug/30/northern-cyprus-ferry-capsizes-latest-news-updates?page=with%3A6a9448ce8f089f2cda79a36d#6a9448ce8f089f2cda79a36d" target="_blank" rel="noopener noreferrer" title="The Guardian / Death toll rises to at least nine, MP says">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="el_pais">
+  <summary>The long wait to enter a migrant center in Ceuta: “Every day more arrive”</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Hundreds of Moroccans are waiting on the sidewalks of Ceuta for entry into the Loma Colmenar migrant reception area, while residents say the flow keeps growing and the queue outside the gate has become part of daily life.</p>
+<h3>The queue outside Loma Colmenar</h3>
+<p>Aldellah Zahar, 21, from Marrakech, smiles and flashes a victory sign even while lying on a sidewalk with a bandaged leg. When another young Moroccan reproaches him for showing energy, he replies: “Why shouldn’t I smile, if I’m in Spain?”</p>
+<p>Zahar is among the hundreds of Moroccans who have gathered on the streets of this area in the last week, hoping that getting into the facility will improve their lives and help them stay in Spain. His friend Otman, 18, from Agadir, is waiting there too. When the possibility of expulsion comes up, Zahar says: “As for me, as for those of us here, we’d rather die than go back to Morocco.” Otman adds: “I’ll kill myself before returning; it’s like being stabbed in the back.”</p>
+<p>What they want to enter is a large open-air parking lot known as “the embolsamiento,” beyond a barb wire fence. Until this summer, the apron was used by vehicles crossing to Morocco so they could wait their turn and avoid gridlock at the border. The government has prepared it so migrants can stop living on the street and access food, water, and basic hygiene measures.</p>
+<p>Its first occupants arrived ten days ago. They were people who had been sleeping rough on beaches such as El Trampolín, or in the same neighborhood, until, as the report describes it, “the door closed.” Now there are about 1,300 people inside the enclosure, but for a week no one else has been admitted, according to data from the Loma Colmenar neighbors’ association.</p>
+<h3>Residents say the neighborhood is overwhelmed</h3>
+<p>Rafael García, the neighborhood president, says the situation has created a pull factor and estimates that between 4,000 and 4,500 migrants are surviving on the streets of the neighborhood, including minors, women with children, and adults. He says people are fighting for places and food and throwing stones on the road over conflicts among themselves. He also says everything is moving “very slowly” and that he has seen no changes in recent days.</p>
+<p>“Every day more come, you can walk through the neighborhood and you see them,” García says. “We demand that they pick them up and do with them what they have to do. We have more than 200 children; the children are in the street.”</p>
+<p>The Loma Colmenar facility has more than twenty military huts, shaded areas, and toilets. On Saturday, work to improve and expand it was underway, including the construction of a large tent. García was among about 200 Ceutí residents who took to the streets to protest that day, although they did not manage to reach the neighborhood. He says the protest was peaceful and that police did not let them through.</p>
+<p>Some residents describe a neighborhood life under strain. One neighbor says she has been stressed for a month, cannot sleep or eat, and asks migrants to stop shouting late at night, making video calls, and leaving mattresses in the doorway during the day. Another says she feels surrounded.</p>
+<p>At the same time, around ten migrants consulted say military personnel are telling them to go to the facility. The first three who say they will be allowed in once the door opens — Issam, 22; Usiel, 25; and Yahia, 23 — say they have been there for more than a week. They say they were forced off El Chorrillo beach and told to come there. “We don’t know when they’ll let us in, but we haven’t moved. If you leave, they take your place,” one of them says.</p>
+<h3>Waiting for the gate to open</h3>
+<p>Zahar says he crossed into Ceuta by swimming because he wanted to “be part of Europe.” He also says soldiers told him to leave the place where he was sleeping near Ceuta University Hospital and wait at Loma Colmenar. “I already came to ask when they were setting it up and they told us to go,” he says. “They’ve told us that when the huts are finished, they will let us pass.”</p>
+<p>He tries to understand the hostility some residents feel. “No Ceuta resident is a bad person,” he says. “They have the right to protect their sisters; I haven’t had a bad moment with any of them in this time.” He also shows photographs on his phone of jobs he says he has done: farmer, industrial machinery operator, and disc jockey. Looking at images of himself in Ceuta and in better-dressed photos on his phone, he asks: “Would you say this boy is in Europe?”</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-30/la-larga-espera-para-entrar-en-un-centro-de-migrantes-en-ceuta-cada-dia-vienen-mas.html" target="_blank" rel="noopener noreferrer" title="El País / The long wait to enter a migrant center in Ceuta: “Every day more arrive”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="atlantic">
+  <summary>The Measles-Stricken Mother Who Lost Her Newborn Son</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Lancaster County Amish family learned only after the fact that their newborn son’s death had been pulled into Pennsylvania’s measles fight, where state officials, political opponents and anti-vaccine figures were arguing over what caused it and whether the death should have been publicized at all.</p>
+<p>Last Tuesday, Pennsylvania’s governor, Josh Shapiro, held a press conference to announce the state’s first two “measles-associated” deaths in 35 years. Both deaths were in Lancaster County, home to the country’s largest Amish community and the part of the state hit hardest by a months-long measles outbreak. The family at the center of one of those deaths did not know any of that when they were told. They also did not know that Shapiro’s political opponents were accusing him of using the deaths for political gain, or that the county coroner later said an infant who tested positive for measles had died from a ruptured spleen. Robert F. Kennedy Jr., the secretary of Health and Human Services, then mocked Shapiro on X, calling the press conference “unseemly” and writing, without evidence, that “the deaths may even have been altogether fabricated by one of the Governor’s hopeful staffers.”</p>
+<h3>A family cut off from the news</h3>
+<p>The father came out of his barn wearing a straw hat, black trousers and suspenders over a long-sleeved blue shirt, while one of his similarly dressed sons worked a horse-drawn plow nearby. Like most Amish people, he said, his family does not watch TV or use the internet, and they do not read the newspaper either. That is why they had not heard about the press conference, or about the public argument that followed it, when the subject of the death reached them.</p>
+<p>He asked that his family’s names and exact location not be revealed, to protect their privacy. His son has not been publicly identified as the newborn whose death has been the focus of so much controversy. But when the father heard the details being discussed, he said the case sounded like his son. The family’s grief, not the political clash, was what filled in the rest of the story.</p>
+<h3>Measles spread through the household</h3>
+<p>About a month before the baby was born, John and Anna became aware that measles was spreading in their community. Lancaster County had recorded 210 cases at last count. Besides John, no one in the family had been vaccinated against the virus. John said he had heard that this strain of measles was not dangerous for pregnant women, though he was not sure whether to believe it. Anna worried about what measles might do to her baby, but she thought she could not avoid exposure. She was pregnant, and the virus was already moving through the area.</p>
+<p>When they spoke about vaccination, neither John nor Anna treated it as a political statement. Anna said she was not sure why her parents had not taken her for shots, and John said the family simply did not do it. Pennsylvania allows children to attend school without being vaccinated if their parents object on religious or moral grounds. The Amish Church has no official doctrine against vaccines, but the vaccination rate among the Amish tends to be low; the state health department estimated last year that only 25 percent of the Amish community in Lancaster County had received the measles, mumps and rubella vaccine.</p>
+<p>Soon, the illness reached their home. One of the older children got sick, and then the rest followed. Two became dehydrated and needed IVs. Anna became extremely ill, spiking a fever of 102 degrees, struggling to keep down food and fluids, and able to speak only in a whisper. On August 13, she went to a clinic for an IV because of dehydration. The next day, she went into labor.</p>
+<p>The baby was delivered at a birthing center by the same midwife who had delivered Anna’s other children and, remarkably, Anna herself. He weighed seven pounds and was born a little after 5 p.m. on August 14. The family knew immediately that something was wrong: he had a pulse, but he was not breathing. Paramedics arrived within minutes, gave him oxygen and tried chest compressions with two thumbs, but nothing worked. Less than half an hour later, it was over.</p>
+<h3>What the coroner said, and what remains unresolved</h3>
+<p>John and Anna said they assumed Anna’s severe measles played a role in their loss, and the midwife told them the same thing. But the public debate quickly centered on another detail: a ruptured spleen. The Lancaster County coroner, Stephen Diamantoni, later told reporters that his office had performed an autopsy on an infant who tested positive for measles, but that the cause of death had been a ruptured spleen. He said publicly that the spleen was not enlarged and that the death was not related to measles. He also said the investigation was still ongoing and he was not sure when it would be finished.</p>
+<p>That uncertainty has left the family waiting. John said he called the coroner’s office on Friday but was told the investigation was still under way. He and Anna were surprised that details of the case were being discussed while they were still waiting to hear from the coroner and hoping to read his report when it was done. The body was returned to them on August 17 and buried in a cemetery a few miles from their home. There, a fresh mound of dirt is marked by flat wooden stakes, one with the word “sillborn” scrawled on it, the missing “t” and the father’s name beneath it.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/health/2026/08/pennsylvania-measles-infant-death-family/688469" target="_blank" rel="noopener noreferrer" title="The Atlantic / The Measles-Stricken Mother Who Lost Her Newborn Son">TA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="axios,bbc,scmp">
+  <summary>US strikes Iranian launchers on Larak Island in first known attack in weeks</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">U.S. forces struck two Iranian launchers on Larak Island, in an attack aimed at stopping sea mines from being deployed in the Strait of Hormuz. The strike, described by U.S. officials as the first known American attack inside Iran in weeks, quickly drew a retaliation claim from Iran and renewed pressure around one of the world’s most sensitive shipping routes.</p>
+<h3>The strike on Larak Island</h3>
+<p>A U.S. official said the military struck “two Iranian launchers on Larak Island” after Islamic Revolutionary Guard Corps forces were observed preparing to launch rockets with sea mines into the Strait of Hormuz. The same official said U.S. forces were “monitoring the area closely and remain prepared to protect the free flow of commerce” through the strait.</p>
+<p>The strike was described as the first known U.S. attack in Iran since late July, when President Donald Trump paused a two-week U.S. military campaign in the strait. Larak Island sits close to Bandar Abbas and on the Strait of Hormuz, a route that was again at the center of the confrontation. BBC footage showed vessels in the strait near the beach of Bandar Abbas, close to Larak Island.</p>
+<p>The U.S. message around the strait had already been explicit. Last week, the U.S. military finished clearing all mines from the strait’s main shipping lane, and Trump said Iran had been notified that any ship or boat placing new mines would be “immediately and systematically destroyed.” He also wrote on Truth Social: “There is a Zero Tolerance policy on mine placement in full force and effect.”</p>
+<p>Tasnim News Agency, which is affiliated with Iran’s Islamic Revolutionary Guard Corps, reported that a drone carried out the strike and said two people were killed and two others wounded. Iranian state media also carried statements from the Revolutionary Guards saying the attack would be answered by the “sons of Iran” and would bring punishment for the aggressor.</p>
+<h3>Why the Strait mattered</h3>
+<p>The confrontation centered on the Strait of Hormuz, where the U.S. said Iranian forces were preparing to use sea mines. The waterway is the route the U.S. has tied to commercial traffic and what Centcom called the “free flow of commerce.” The strike on Larak therefore appears to have been aimed at preventing a threat in the shipping lane rather than at a wider target set.</p>
+<p>The move also came after weeks in which the U.S. had said it had removed mine threats from the strait. That made the strike on Larak the latest turn in a contest over access and control in the waterway, with U.S. officials saying they were trying to stop new mine deployment and Iranian officials portraying the attack as a provocation.</p>
+<h3>Iran’s retaliation claim</h3>
+<p>Soon after the strike, a U.S. official said Iran launched ballistic missiles at a U.S. base in Jordan in retaliation. The official said several missiles were fired, but there was no impact on U.S. bases and no reports of damage or casualties.</p>
+<p>Iranian state media said the Islamic Revolutionary Guard Corps later claimed responsibility for attacks on U.S. military targets in Jordan. According to that reporting, the IRGC said it hit the King Hussein and Al Azraq bases with ballistic missiles in what it called “Punishment of the Aggressor.” The Guards said the strikes targeted “technical infrastructure, maintenance facilities, and enemy fighter jet positions,” and claimed heavy damage.</p>
+<p>Jordan’s army said it intercepted eight missiles that breached the kingdom’s airspace at dawn on Monday. The army’s statement, as quoted by state Petra News Agency, said air defense systems intercepted the missiles. BBC said Jordan reported no injuries at the bases, and the U.S. official said there was no damage or casualties at U.S. sites.</p>
+<p>Iran’s Revolutionary Guards spokesman, Hossein Mohebbi, called the attack on Larak a “strategic and fatal mistake” and said the “enemy will pay the consequences of this miscalculation in both the economic and military fields,” according to BBC reporting. The same Iranian reporting said the Guards vowed “response and punishment.”</p>
+<p>The sequence left the two sides in another exchange tied directly to the Strait of Hormuz: the U.S. said it struck launchers preparing to use sea mines there, and Iran said it responded with missiles at U.S. targets in Jordan. The immediate facts available are the strike on Larak, the U.S. claim about averting a mine threat, and the separate claims of retaliation, interception, and limited or no reported damage.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/08/30/us-iran-strike-hormuz-mines" target="_blank" rel="noopener noreferrer" title="Axios / U.S. strikes Iran to prevent Hormuz mine threat">Axios #1</a><a href="https://www.bbc.co.uk/news/articles/cx2z72x5z1po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / US strikes Iranian launchers on Larak Island in first known attack in weeks">BBC #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3365782/us-forces-strike-two-iranian-launchers-irans-larak-island-us-official-says" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US forces strike 2 launchers on Iran’s Larak Island, US official says">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc,cnn,guardian,scmp">
+  <summary>At least 8 dead, 22 missing as ferry capsizes off northern Cyprus</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A passenger ferry capsized off northern Cyprus on Sunday, leaving rescuers searching for people still missing while officials and media accounts gave different tolls for the dead, the rescued and those unaccounted for.</p>
+<p>Ünal Üstel, the prime minister of the self-proclaimed Turkish Republic of Northern Cyprus, said the Filo Jet had 259 passengers and eight crew members aboard when it began taking on water after leaving Kyrenia, also known as Girne, for Taşucu in southern Turkey. The privately owned catamaran-style ferry left about 12:30 local time (09:30 GMT), after a planned Saturday departure had been delayed because of poor weather, according to Üstel. Helicopters, coastguard boats and ambulances were dispatched to the scene near the port of Kyrenia as search and rescue teams, including Turkish authorities, moved to find the people still missing.</p>
+<h3>Rescue effort and disputed toll</h3>
+<p>The death toll and the number still missing did not line up across the supplied accounts. BBC News said at least eight people had died and more than a dozen were missing. CNN said at least eight were dead and 18 people were still missing, while South China Morning Post said a search was under way for another 22 people. The Guardian’s live updates first cited seven dead before later updating to eight dead and 18 missing, and another update said Üstel had put the missing number at 23.</p>
+<p>Rescue figures also varied. Üstel was quoted as saying 237 people had been rescued, while CNN said Turkish Cypriot leader Tufan Erhürman put the number of survivors at 241. South China Morning Post said 237 people had been rescued, and BBC News said Turkish Cypriot transport minister Erhan Arikli told local media that 100 passengers had been taken to shore. Arikli later told TRT the ship had completely sunk to a depth of 514 metres (1,686 feet). The captain and seven crew members were detained as part of an investigation into “how this tragedy occurred,” Üstel wrote on social media, and Turkey’s President Recep Tayyip Erdogan said efforts to reach those still missing “continue uninterrupted.”</p>
+<p>Üstel said the “priority right now is human life” and said security forces, rescue teams and health officials were at the scene. He also said the disaster would be thoroughly investigated and that “even the slightest negligence will be uncovered.”</p>
+<h3>What survivors and officials said about the capsizing</h3>
+<p>The supplied accounts do not settle why the ferry capsized. Üstel told Turkish media outlet TRT that the boat was hit by two waves before it overturned. He said that while the captain was trying to recover from the first wave, a second wave hit and the ferry began taking on water. One witness told the BBC that the sea was “quite choppy” and said the crew should have waited until it was calm.</p>
+<p>Some rescued passengers told a different story. The Guardian quoted survivors saying a blast went off at the vessel’s bow before it rolled over, with one unnamed passenger saying the “front part exploded” and that the side windows blew out. Another witness said he had reported water leaks to the captain and described the boat’s seats floating before the bow “exploded.” The Guardian also said witnesses claimed the captain was among the first to abandon ship, though those accounts were reported as survivor claims rather than confirmed findings.</p>
+<p>BBC News said the company operating the boat, Filo Denizcilik, was “deeply saddened” by the accident. Local television showed the ferry upside down in the water, with people wearing life vests on top of the hull. BBC News said a hotline was set up for relatives seeking information, and the location of the injured and the nationalities of those on board were still unclear in the supplied reports.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c770jyd4l7lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Eight killed and others missing after ferry capsizes off northern Cyprus">BBC #1</a><a href="https://www.cnn.com/2026/08/30/europe/cyprus-boat-capsizes-turkey-intl" target="_blank" rel="noopener noreferrer" title="CNN / At least 8 dead and more missing after ferry carrying hundreds capsizes off Cyprus’ northern coast">CNN #1</a><a href="https://www.theguardian.com/world/live/2026/aug/30/northern-cyprus-ferry-capsizes-latest-news-updates?page=with%3A6a9432018f08187a5f76f69a#6a9432018f08187a5f76f69a" target="_blank" rel="noopener noreferrer" title="The Guardian / Northern cyprus ferry capsizes latest news updates">Guardian #1</a><a href="https://www.theguardian.com/world/live/2026/aug/30/northern-cyprus-ferry-capsizes-latest-news-updates?page=with%3A6a947e138f08fce2a63ffc87#6a947e138f08fce2a63ffc87" target="_blank" rel="noopener noreferrer" title="The Guardian / Northern cyprus ferry capsizes latest news updates">Guardian #2</a><a href="https://www.theguardian.com/world/live/2026/aug/30/northern-cyprus-ferry-capsizes-latest-news-updates?page=with%3A6a942b928f08187a5f76f66a#6a942b928f08187a5f76f66a" target="_blank" rel="noopener noreferrer" title="The Guardian / Northern cyprus ferry capsizes latest news updates">Guardian #3</a><a href="https://www.scmp.com/news/world/europe/article/3365774/least-8-dead-22-missing-ferry-capsizes-northern-cyprus" target="_blank" rel="noopener noreferrer" title="South China Morning Post / At least 8 dead, 22 missing as ferry capsizes off northern Cyprus">SCMP #1</a><a href="https://www.theguardian.com/world/live/2026/aug/30/northern-cyprus-ferry-capsizes-latest-news-updates?page=with%3A6a94813e8f08187a5f76f931#6a94813e8f08187a5f76f931" target="_blank" rel="noopener noreferrer" title="The Guardian / Northern Cyprus ferry disaster - key developments so far">Guardian #4</a><a href="https://www.theguardian.com/world/live/2026/aug/30/northern-cyprus-ferry-capsizes-latest-news-updates?page=with%3A6a9445bf8f08187a5f76f741#6a9445bf8f08187a5f76f741" target="_blank" rel="noopener noreferrer" title="The Guardian / Northern cyprus ferry capsizes latest news updates">Guardian #5</a><a href="https://www.theguardian.com/world/live/2026/aug/30/northern-cyprus-ferry-capsizes-latest-news-updates?page=with%3A6a9470088f089f2cda79a4bb#6a9470088f089f2cda79a4bb" target="_blank" rel="noopener noreferrer" title="The Guardian / Northern cyprus ferry capsizes latest news updates">Guardian #6</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israeli forces seal West Bank village for more than 20 hours as settler violence escalates</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli forces shut the only entrance to the occupied West Bank village of al-Mughayyir for more than 20 consecutive hours, the Palestinian news agency Wafa reported. On Friday, Israeli forces also raided the village with armed settlers, who attacked residents and tried to steal herds of sheep. Local reports cited by Haaretz said the settlers stole 15 lambs and that one sheep was found wounded. Three Palestinians were wounded, one by live fire and two after being beaten by settlers, and the settlers and Israeli forces blocked an ambulance from reaching them.</p>
+<p>Amin Abu Aliya, the village council head, told Wafa that the gate had been opened only for a few minutes at a time, and said controlling residents’ entry was meant to drive Palestinians away from the area. On Saturday, the Palestinian Authority’s foreign ministry called for international intervention to help al-Mughayyir’s residents amid rising settler violence across the occupied West Bank. The evidence also points to a similar incident in Qusra, near Nablus, where settlers began a siege on three homes in the Ras al-Ain area earlier this month.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israeli-army-intensifies-siege-west-bank-village" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israeli forces seal West Bank village for more than 20 hours as settler violence escalates">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Thousands of Children Missing Across Colombia 2026</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Michelle Dayana Chavarría’s disappearance in Buriticá has triggered a widening search by Antioquia authorities, with drones, canine units and a 50 million peso reward, while her case also underscores a larger question in Colombia: how so many children can vanish with little trace.</p>
+<p>The 6-year-old was last seen around 10:05 a.m. on August 24 in the Cristo Rey neighborhood of Buriticá, western Antioquia, and her departure from home was recorded on security cameras in the area. By Saturday, August 29, the Antioquia Governor’s Office said the reward had been raised to 50 million pesos, or about $12,000, as the search entered its sixth day.</p>
+<h3>Search efforts in Buriticá</h3>
+<p>The Departmental Security Secretariat’s Human Rights Directorate implemented the reward mechanism and organized the first response measures, while the National Police through SIJIN joined the investigation. Authorities said the operation includes four specialized search canines and up to 10 drones equipped with thermal sensors, with daily overflights over urban and rural sectors near Cristo Rey and in hard-to-reach terrain.</p>
+<p>Buriticá Mayor José Luis Rodríguez Úsuga said ground teams have been searching trails, waterways and abandoned structures. The Antioquia Governor’s Office also said the search involves the National Army, local authorities, firefighters and emergency response organizations from Buriticá and neighboring municipalities. Officials have urged the public to report information only through the phone lines 310 414 0693 and 123, or by email at busqueda_antioquia@antioquia.gov.co, and warned against spreading unverified information.</p>
+<p>The family has also reported extortion attempts from people claiming to know Michelle Dayana’s whereabouts and demanding money for supposed leads that turned out to be false. Authorities said they are investigating those calls as part of the broader case. The girl is reported to have autism, not to speak, and to suffer from epilepsy, which has heightened concern as the search continues.</p>
+<p>The case is unfolding against a wider disappearance problem. The National Institute of Legal Medicine and Forensic Sciences says about 1,200 children and adolescents are reported missing annually in Colombia, or an average of 3 to 4 children a day. The International Committee of the Red Cross documented 99 disappearances linked to armed conflict between January and July 2026, including 36 children and adolescents, with Antioquia among the departments accounting for most cases.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/colombia-missing-girl-reward" target="_blank" rel="noopener noreferrer" title="Telesur English / Thousands of Children Missing Across Colombia 2026">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc">
+  <summary>UK raises case of British activist detained by settlers in West Bank with Israel</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UK Foreign Office has raised with Israeli authorities the detention of British national Finn Joughin, a 22-year-old student activist, after he was arrested in Umm Al-Kheir on Saturday. Joughin was forcibly detained by Israeli settlers who had advanced on the Palestinian village, then taken to an outpost, according to the evidence. The British embassy in Tel Aviv told the BBC it had raised the case and was seeking further information.</p>
+<p>Israeli police said a foreign national was detained by security personnel of a settler community who suspected him of an indecent act against a minor. In a later statement on Sunday, they said the suspect was transferred to police for questioning and that the investigation remained ongoing. Joughin’s family told the BBC he was due to be deported from Israel on Monday, while activists who were with him denied there was any inappropriate behaviour. The confrontation came amid a surge in attacks by settlers on Palestinians and their property in the West Bank since the start of the Gaza war.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c3d7xgge7vgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / UK raises case of British activist detained by settlers in West Bank with Israel">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cnn">
+  <summary>Israeli settlers storm Palestinian village, seizing home with owner inside</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli settlers stormed the Palestinian village of Qusra in the occupied West Bank on Saturday, seizing a home while its owner was inside and leaving the immediate toll of the confrontation and the question of arrests unresolved by Sunday evening.</p>
+<p>Louay Adli said the settlers entered the village early Saturday afternoon and began throwing stones at his home. As he called Israeli police, he said the crowd grew to what he estimated was 60 or 70 settlers. “They surrounded us from all sides and threw stones at all of us,” Adli said. He said the standoff continued for about an hour until the army arrived, with soldiers in front of the house and settlers behind it. Adli also said the Israeli army “watched and did nothing” before firing tear gas at the house.</p>
+<p>A video obtained by CNN appears to show settlers hurling rocks at Adli’s house from one side of the building while soldiers were operating on the other side. Adli said he and six others inside the home ran to the roof “because we could not breathe inside.” He said they were “suffocating” and trapped between the army and the settlers. He later said Israeli security forces arrested and blindfolded him before warning him not to return to his own house.</p>
+<p>The Israeli military said it used what it described as “proportionate force” against a Palestinian it accused of resisting and throwing stones. In a joint statement with border police, the IDF said security forces “identified dozens of rioters who had barricaded themselves inside a Palestinian home while Palestinian residents were inside,” and that they “dispersed using various means.” Prime Minister Benjamin Netanyahu said authorities seized three cars used as part of the raid. Police said the investigation was ongoing, and as of Sunday afternoon authorities had not announced any arrests.</p>
+<p>Israeli President Isaac Herzog called the incident in Qusra “a direct and flagrant defiance of the laws and values of the State of Israel,” while Netanyahu said he expected law enforcement to arrest the rioters and bring them to justice.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/30/middleeast/israeli-settler-violence-qusra-palestinian-intl" target="_blank" rel="noopener noreferrer" title="CNN / Israeli settlers storm Palestinian village, seizing home with owner inside">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>‘Opening a new chapter’: Syria reopens embassy in Libya after talks</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Syria and Libya agreed to reopen Syria’s embassy in Tripoli after talks between Libyan Prime Minister Abdul Hamid Dbeibah and Syrian Foreign Minister Asaad Hassan al-Shaibani. The embassy has been closed for 14 years, and the two sides also agreed to reactivate the Libyan-Syrian Joint Higher Committee to coordinate bilateral ties. They said they would open a Syrian consulate in Benghazi as well. Al-Shaibani arrived in Tripoli on Sunday to meet Libyan officials, according to a statement from Libya’s Government of National Unity.</p>
+<p>The talks also covered security cooperation and counterterrorism, along with consular services, the status of prisoners, detainees and refugees from both countries, and unresolved financial dues between Libyan and Syrian institutions. Al-Shaibani separately met Libya’s oil and gas minister and the head of the country’s investment authority to discuss energy and investment cooperation. Dbeibah called the meeting the start of “a new chapter” in relations, saying it should be based on “shared interests, practical cooperation and addressing outstanding issues.”</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/30/opening-a-new-chapter-syria-to-reopen-embassy-in-libya-after-talks?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / ‘Opening a new chapter’: Syria reopens embassy in Libya after talks">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Armed clash between two clans claims 8 lives in Sindh&#x27;s Dadu</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Eight people were killed and two others injured in an armed clash between two groups of the Chandio clan in Dadu district, Sindh, in the early hours of Sunday. The incident took place in the jurisdiction of Jhallo police station, and the dead and injured were shifted to the Dadu District Headquarters Hospital. Hyderabad Range Deputy Inspector General Tariq Dharejo confirmed the clash and said the deceased were wanted in some criminal cases by police as well.</p>
+<p>According to a police report, the feud stemmed from an “ongoing blood feud” and disputes over the use of a common passage and other land-related matters. Dharejo said efforts had been underway to reconcile the two sides, but they had failed. He also said the two sides had exchanged gunshots on several occasions in the last three years because they were at loggerheads.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2026180/armed-clash-between-two-clans-claims-8-lives-in-sindhs-dadu" target="_blank" rel="noopener noreferrer" title="Dawn / Armed clash between two clans claims 8 lives in Sindh&#x27;s Dadu">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Trita Parsi on why US air strikes strengthened Iran’s hand and failed to trigger a revolt</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In an interview, Trita Parsi argued that US air strikes strengthened Iran’s hand and failed to trigger a revolt. Parsi is co-founder and executive vice-president of the Quincy Institute, a Washington-based think tank, and an expert on US-Iranian relations, Iranian foreign policy and the geopolitics of the Middle East. He has written four books on US foreign policy in the Middle East, with a particular focus on Iran and Israel. Born in Iran, he moved to Sweden as a child and later to the United States as an adult.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/diplomacy/article/3365735/trita-parsi-why-us-air-strikes-strengthened-irans-hand-and-failed-trigger-revolt" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trita Parsi on why US air strikes strengthened Iran’s hand and failed to trigger a revolt">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Colombia’s Abelardo de la Espriella says soldiers killed key dissident leader</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A prominent leader of the dissident factions of the defunct Revolutionary Armed Forces of Colombia was killed on Sunday during a military operation in southwest Colombia, President Abelardo de la Espriella said. He identified the man as “Felipe” or “Arcadio” and called the death a “crushing blow” to the dissident faction led by “Ivan Mordisco”. De la Espriella said Felipe commanded a unit within the Jaime Martinez faction, part of the Farc dissident groups that refused to join the government’s 2016 peace negotiations.</p>
+<p>De la Espriella also posted a video he said showed a person in a body bag near a weapon and ammunition seized by authorities during the operation. He said offensive operations against illegal armed groups would continue and warned, “Any criminal who doesn’t surrender will end up in a body bag.” He said Felipe was responsible for multiple attacks on police stations in Valle del Cauca, as well as planting explosives-laden gas cylinders on roads, attacking a military unit, torching cars and engaging in extortion. On Friday, he also announced the capture of Emilio Jose Cordero Sierra, known as “Fantasma”.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/americas/article/3365781/colombias-abelardo-de-la-espriella-says-soldiers-killed-key-dissident-leader" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Colombia’s Abelardo de la Espriella says soldiers killed key dissident leader">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="daily_star_bangladesh">
+  <summary>No more ‘Aynaghar’ in Bangladesh</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Mirza Fakhrul Islam Alamgir yesterday pledged to ensure justice for victims of enforced disappearances and said Bangladesh would never again allow “Aynaghar” or secret detention centres to exist. Speaking at a discussion marking the International Day of the Victims of Enforced Disappearances 2026 at the Bangladesh-China Friendship Conference Centre in Dhaka, he said all those involved would be brought to justice and face the highest punishment under the law. He also said the state should take responsibility for the dignity, social security, healthcare, education, livelihoods and rehabilitation of families who have waited for their loved ones.</p>
+<p>Fakhrul said enforced disappearances, secret detention centres and killings had been used over the past 15 years to silence people who protested injustice, expressed dissent or demanded democratic rights. He called it a painful and shameful chapter and said Bangladesh must pursue justice rather than revenge. Referring to the final report of the Commission of Inquiry on Enforced Disappearances, he said it identified 1,569 incidents, with 287 victims found to have gone missing and been killed. He also said the Enforced Disappearance Prevention and Remedy Bill, 2026 had been placed before Parliament to permanently prohibit enforced disappearance.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/no-more-aynaghar-bangladesh-4260916" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / No more ‘Aynaghar’ in Bangladesh">TDSB #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>South Africa accuses Israel of violating ICJ&#x27;s legally binding provisional measures</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Africa has accused Israel of breaking legally binding orders issued by the International Court of Justice intended to protect Palestinians in Gaza, saying Israel has refused to comply with three separate provisional measure orders. In a statement issued by the Department of International Relations and Cooperation, Pretoria said the refusal “undermines their protective function and entails further destruction of the Palestinian group,” and called on the international community “to take all necessary action to prevent and punish genocide.”</p>
+<p>Earlier this week, the South African government submitted a dossier of evidence to a dedicated committee of judges tasked with monitoring the court’s provisional measures. The 2024 ICJ orders cited by Pretoria include preventing genocidal acts and incitement, ceasing military operations in Rafah, and providing immediate access to humanitarian assistance and basic services in the Gaza Strip. The orders also required Israel to submit formal reports on compliance, which it did in February 2024. Pretoria’s dossier says that as of August 2026, at least 73,407 Palestinians have been killed and 174,335 wounded since 7 October 2023.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/south-africa-accuse-israel-violating-icj-provisional-measures" target="_blank" rel="noopener noreferrer" title="Middle East Eye / South Africa accuses Israel of violating ICJ&#x27;s legally binding provisional measures">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="korea_herald,yonhap">
+  <summary>Lee’s approval down to 38.9%, falls below 40% for first time: Realmeter - The Korea Herald</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Lee Jae Myung’s approval rating fell below 40 percent for the first time, slipping to 38.9 percent in a Realmeter poll and extending a seven-week decline that has sharpened criticism over housing, judicial nominations, police distrust and ruling-camp infighting.</p>
+<p>Lee’s approval was down 1.3 percentage points from the previous week, while his disapproval rating rose 1.8 points to 58.7 percent. The gap between the two stood at 19.8 percentage points, outside the poll’s margin of error. Realmeter said the sharpest drop came among voters in their 50s, where approval fell 7.5 points to 40.8 percent. Support in that age group has fallen for three straight weeks, from 53 percent in the second week of August. Approval also declined among voters in their 40s, 60s and those aged 70 and older, while support among voters in their 30s rose 8.8 percentage points.</p>
+<p>Regionally, the steepest decline was recorded in Daejeon, Sejong and the Chungcheong region, where Lee’s approval fell 8.5 percentage points. Realmeter attributed the slide to growing public dissatisfaction over housing prices and rents, controversy over the nomination of Supreme Court justices, distrust of police following missing-person cases in Jeju, and infighting within the ruling camp.</p>
+<p>The poll was conducted Aug. 24-28 among 2,509 voters aged 18 and older nationwide. It was commissioned by Energy Economy and carried out through an automated telephone survey using randomly generated mobile phone numbers. The margin of error was 2 percentage points at a 95 percent confidence level, and the response rate was 3.9 percent.</p></div>
+  <div class="source-list"><a href="https://www.koreaherald.com/article/10856806" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Lee’s approval down to 38.9%, falls below 40% for first time: Realmeter - The Korea Herald">TKH #1</a><a href="https://en.yna.co.kr/view/AEN20260831001500315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Lee&#x27;s approval rating falls below 40 pct for 1st time: poll">YNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="xinhua_en">
+  <summary>Feature: Chinese firm helps rural Egyptian women improve livelihoods through poultry raising</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In a training room in Egypt’s northern Beheira Governorate, rural women learned poultry-raising techniques from Chinese and Egyptian specialists, including temperature control, ventilation, weight monitoring and disease prevention. The session, held at the Family and Child Development Center in Dimisna village, was part of the China-Egypt “New Hope” initiative run by New Hope Liuhe Co., Ltd. with Egypt’s National Alliance for Civil Development Work and Sonaa El-Kheir. Each participating family received 55 chicks, along with feed, medicines and other supplies, and veterinarians have been making regular household visits while staying in touch through a WhatsApp group as the roughly 60-day cycle nears completion.</p>
+<p>Amal Ahmed, a housewife from Dimisna, said the project gives rural women a chance to improve income without leaving home. She said she weighs the chicks to monitor their growth and consults New Hope’s vet when something unusual comes up. According to New Hope, the current program is its second phase in Egypt and covers about 600 rural households; in Beheira, it includes 100 families across four villages. The company said participants in the first phase last year increased their income by an average of about 8,900 Egyptian pounds and had a poultry survival rate above 95 percent.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260830/f28533f50a8e415d80b32025cf138036/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Feature: Chinese firm helps rural Egyptian women improve livelihoods through poultry raising">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>NSW may not be able to prosecute large-scale water theft due to doubts about licences for billions of litres</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The New South Wales water regulator has cast doubt on its ability to prosecute potential water theft because of uncertainty over licences governing billions of litres of water entitlements in the state’s north. Grant Barnes, the chief regulatory officer of the Natural Resources Access Regulator (NRAR), told a parliamentary estimates committee that the Emu Rider case and a separate Supreme Court matter had created “uncertainties” for enforcement. The Emu Rider case followed a legal challenge by irrigators in the state’s north-west that found 11 floodplain harvesting licences issued by the former Coalition government were invalid, with the NSW Land and Environment Court finding the government had failed to follow correct procedures for fair consultation with landholders.</p>
+<p>Barnes said the uncertainties meant NRAR had to assess each case on its merits and decide whether it could prove a breach of law to the required standard. A separate challenge brought by major irrigator Budvalt led the NSW Supreme Court to find the volume of water extraction permitted by the licence had been inaccurately determined and to order the government to recalculate. Two more proceedings challenging floodplain harvesting licences in the Border Rivers and Gwydir Valley regions were filed in NSW courts this month.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/2026/aug/31/nsw-water-licenses-found-to-be-invalid-casting-doubt-on-regulator-powers" target="_blank" rel="noopener noreferrer" title="The Guardian / NSW may not be able to prosecute large-scale water theft due to doubts about licences for billions of litres">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Nicolás Maduro releases his first images in the New York jail: “I want you to know that we are firm”</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Eight months after being detained by United States troops, Nicolás Maduro released the first known images of him from inside the Brooklyn Metropolitan Detention Center, where he has been confined since January with his wife, Cilia Flores, after his arrest as part of Operation Resolution Absolute. In the photos, the deposed president of Venezuela appears smiling, wearing a tracksuit and making the victory sign; in one image he wears glasses, and in another he holds them in his hand.</p>
+<p>Maduro wrote to his family, “I want you to know that we are firm,” and later posted on X that he was sending the photos “as a small gift” to his grandchildren, children and supporters. In his circle, the photographs were said to have been taken on June 25, for Father’s Day week, and “he saw them on July 13 and we received them this week by mail.” The images were made public two days after Delcy Rodríguez’s government announced an agreement with the Donald Trump administration involving 65.000 billion barrels of oil, around 22% of Venezuela’s total reserves.</p></div>
+  <div class="source-list"><a href="https://elpais.com/america/2026-08-30/nicolas-maduro-difunde-sus-primeras-imagenes-en-la-carcel-de-nueva-york-quiero-que-sepan-que-estamos-firmes.html" target="_blank" rel="noopener noreferrer" title="El País / Nicolás Maduro releases his first images in the New York jail: “I want you to know that we are firm”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,el_pais,politico,scmp,telesur_en">
+  <summary>Iceland’s No Vote Reaffirms Sovereignty Debates as EU Faces Trump Era Pressures</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Icelanders voted against restarting European Union membership talks, leaving Prime Minister Kristrún Frostadóttir’s government to say the issue will not be revisited while it remains in power and raising the question of whether the bid could return later.</p>
+<p>RÚV reported that 52.8% of the more than 225,000 people who voted rejected the government’s proposal, while 47.2% backed it, a margin of about 12,600 votes. Turnout was 82.5%, which RÚV said was the highest in any Icelandic election since 2009.</p>
+<p>The referendum was brought forward by Frostadóttir’s centre-left government from a promised 2027 timetable, after international tensions including US President Donald Trump’s threats against Greenland. But debate in the island nation of almost 400,000 people centered more on fishing than security. Supporters of the “no” side warned that membership would mean losing control over fishing quotas and opening Icelandic waters to foreign companies.</p>
+<p>Iceland is already part of the EU’s single market and Schengen border-free zone, but full membership would bring it into the customs union and eventually the eurozone. The country first applied to join the EU in 2009 after the 2008 financial crisis and the collapse of its banking system. Talks were already well advanced when a eurosceptic government took power in 2013 and put them on hold.</p>
+<p>Fishing rights were then, and remain now, the biggest obstacle. Iceland won protection for its fisheries in the Cod Wars with the UK in the 1970s, and fish and marine industries still account for almost 40% of exports. Frostadóttir said after voting that the campaign had fueled debate about Iceland’s place in the world, and she later said parliament would discuss how best to close the chapter.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c70le8ed1plo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Iceland votes against restarting EU membership talks">BBC #1</a><a href="https://elpais.com/internacional/2026-08-30/el-no-de-islandia-debilita-a-la-ue-ante-trump-y-las-fuerzas-antieuropeas.html" target="_blank" rel="noopener noreferrer" title="El País / Iceland’s No Vote Weakens the EU in the Face of Trump and Antieuropean Forces">El Pais #1</a><a href="https://www.politico.eu/article/icelanders-say-no-to-restarting-talks-to-join-the-eu" target="_blank" rel="noopener noreferrer" title="POLITICO / Icelanders say no to restarting talks to join the EU">POLITICO #1</a><a href="https://www.politico.eu/article/iceland-parliament-will-discuss-withdrawing-eu-bid-after-failed-referendum" target="_blank" rel="noopener noreferrer" title="POLITICO / Iceland’s parliament will ‘discuss’ withdrawing EU bid after failed referendum">POLITICO #2</a><a href="https://www.politico.eu/article/iceland-referendum-question-marks-no-camp-successful" target="_blank" rel="noopener noreferrer" title="POLITICO / The real reason Iceland rejected the EU">POLITICO #3</a><a href="https://www.scmp.com/news/world/europe/article/3365778/icelandic-voters-reject-proposal-restart-negotiations-join-european-union" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Icelandic voters reject proposal to restart negotiations to join European Union">SCMP #1</a><a href="https://www.telesurenglish.net/icelanders-reject-to-resume-talks-to-join-the-eu" target="_blank" rel="noopener noreferrer" title="Telesur English / Icelanders Reject to Resume Talks to Join the EU">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>The narcissist in the White House heads for ever more dangerous waters</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump is being portrayed as pushing the US into increasingly dangerous territory, with his ego-driven, loyalty-first style said to have weakened Nato ties, elevated personal allies such as Vladimir Putin and raised the risk of conflict with Iran, alongside possible economic shocks and fractured partnerships.</p>
+<p>More than a decade ago, before Trump was elected, the writer behind the piece says they were trying to understand what his presidency could mean for the US and the world. That led to three articles published before and just after the first Trump presidency began, with Trump put “on the psychiatrist’s couch” and a real mental health professional consulted, in strict confidence, about his emotional stability and whether anything might make him unsuitable for the presidency.</p>
+<p>The consultant, according to the piece, said Trump almost certainly suffers from Narcissistic Personality Disorder. The profile described people with NPD as having extremely fragile egos and rigid defence mechanisms, and as reacting quickly and often aggressively to criticism. The analysis says that description has proved “eerily predictive” of Trump’s behaviour in office and beyond, citing a capricious governing style, little attention to detail or planning, and a habit of deflecting blame. It also says he demands obsessive loyalty from subordinates and treats loyalty as a one-way street.</p>
+<p>That same lens is used to describe his foreign policy. The piece says Trump’s approach has been personality-driven, shaped by personal ties and sharp hostility toward many traditional partners. It points to his “love letters” with North Korea’s ruler, his fawning over Vladimir Putin, attacks on Canada and other Nato allies, demands that Denmark cede Greenland, pressure on South Korea, and what it calls an ill-conceived conflict with Iran. In the Middle East, it says the original break was the US withdrawal from the Joint Comprehensive Plan of Action, followed in Trump’s second term by bombing Iran’s nuclear installations in 2025. The piece says Iran then closed the Strait of Hormuz, affecting nearly 20% of global oil shipments, while a US-Iran Memorandum of Understanding remained stillborn.</p>
+<p>The story frames the situation as highly volatile. It says sanctions are unlikely to force Iran’s surrender, that tensions with China are deepening, and that the Ukraine-Russia war and the unresolved Middle East conflict could all feed into the US political calendar. Trump is due to host Xi Jinping in a few weeks, the campaign for Congress begins after Labor Day on 7 September, and Israel votes on 27 October. The unresolved question, the piece says, is whether Trump will seek more advice and support, or respond more aggressively and erratically.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-30-the-narcissist-in-the-white-house-heads-for-ever-more-dangerous-waters" target="_blank" rel="noopener noreferrer" title="Daily Maverick / The narcissist in the White House heads for ever more dangerous waters">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cnn,nyt,scmp">
+  <summary>Manhunt underway after deadly Switzerland rave shooting</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A manhunt is underway after a shooting at a rave in northern Switzerland killed one woman and wounded five other people at a horseracing track in Aarau, with police still unclear on the motive and exact circumstances.</p>
+<p>Aargau Cantonal Police said shots were fired overnight into Sunday at the Schachen horse racing track, where organizers’ social media posts showed a rave was being held. Police said a 22-year-old woman died at the scene, while four men and one woman aged 24 to 27 were taken to hospital with injuries ranging from minor to severe. All of the victims held Swiss residency, police said, although CNN affiliate Sky24 reported that the woman who died was an Italian national.</p>
+<p>An eyewitness told Blick he initially thought the gunshots were fireworks. He said the music stopped at 2:30 a.m., and after a minute or two he heard shots and saw that a woman had been hit. Despite attempts to save her, she died, he said. Police cordoned off a large area around the venue and asked the public to stay away.</p>
+<p>Swiss DJ Tekibo, who played at the rave, called the incident “heartbreaking” on Instagram and said techno and raves should be places of freedom and safety, not places where something like this happens. He said he had “lost an important friend,” without elaborating.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/30/europe/switzerland-shooting-rave-aargau-hnk-intl" target="_blank" rel="noopener noreferrer" title="CNN / Manhunt underway after deadly Switzerland rave shooting">CNN #1</a><a href="https://www.nytimes.com/2026/08/30/world/europe/switzerland-rave-shooting.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Hunt Underway After Deadly Shooting at Swiss Rave">NYT #1</a><a href="https://www.scmp.com/news/world/europe/article/3365736/shooting-erupts-rave-party-switzerland" target="_blank" rel="noopener noreferrer" title="South China Morning Post / 1 dead and 5 wounded in shooting at a rave in northern Switzerland">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>British woman killed in stabbing at German railway station</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A British woman died after being stabbed at a railway station in Rosenheim, Bavaria, in the early hours of Sunday, police said. The 31-year-old was attacked shortly before 01:00 local time (00:00 BST), taken to hospital and died there of “severe” injuries, according to the Bavarian police. Officers arrested a 27-year-old German man at the scene immediately after the incident.</p>
+<p>Police said the background and motive for the attack are under investigation and asked anyone who saw “an argument or physical altercation” at the station late on Saturday or early on Sunday to contact them. German news agency DPA reported that the suspect, from the Fürstenfeldbruck district, will be brought before magistrates later on Sunday, and that it is unclear whether the two knew each other or what the woman was doing in Bavaria. Rosenheim Mayor Abuzar Erdogan said there were no indications of a security threat in the city or of any link to the ongoing Rosenheimer Herbstfest, and a Foreign Office spokesperson said the UK was supporting the woman’s family and was in touch with local authorities.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cx2zy118q7ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / British woman killed in stabbing at German railway station">BBC #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="cna">
+  <summary>About 1,200 BTO flats in Toa Payoh, Sin Ming to have shorter waiting time of under 3 years</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">About 1,200 new flats are set to be launched across two Build-to-Order projects in Sin Ming and Toa Payoh, with waiting times of less than three years, National Development Minister Chee Hong Tat said on Sunday (Aug 30). He said the launch dates and estimated waiting times will be released when ready.</p>
+<p>Chee said the projects are part of efforts to sustain a robust housing supply while adding new housing into existing towns and rejuvenating those areas. He also pointed to previously announced plans for 1,600 new homes across three projects in the Lakeview and Shunfu area, with the first launched in the June 2026 BTO sales exercise. More than 10,000 public and private homes are also planned across Toa Payoh West and Mount Pleasant over the next decade. Chee asked existing residents to understand any temporary inconvenience from construction, saying measures would be taken to minimise it, including hoardings, low-noise machinery and restricting noisy work to daytime hours.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/1200-bto-flats-toa-payoh-sin-ming-shorter-waiting-times-6350066" target="_blank" rel="noopener noreferrer" title="CNA / About 1,200 BTO flats in Toa Payoh, Sin Ming to have shorter waiting time of under 3 years">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="cnn">
+  <summary>‘This is an all-out war’: Inside the casino industry’s fight to stop prediction markets</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">climate_disaster</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Las Vegas casinos, already facing a summer tourism slump, have turned prediction markets into a major target, arguing that sports and event-contract platforms like Kalshi and Polymarket threaten gambling revenues, regulation and taxes even as the companies keep expanding.</p>
+<p>Prediction markets have grown from a niche product into a multibillion-dollar business where users wager on sports, politics, culture and weather. With the Trump administration’s blessing, the platforms are set up as financial markets rather than casinos or sportsbooks, which lets them bypass state gaming boards and instead get licensed by a federal commodity regulator to offer “event contracts.” That also means they are not taxed like gambling, which generated nearly $18 billion for states last year.</p>
+<h3>Court wins and a wider campaign</h3>
+<p>The casino industry says it is not waiting to see how far the market goes. Derek Stevens, who owns three Vegas casinos and Circa Sports, says prediction platforms were built to avoid taxes and should not be exempt from the law. Las Vegas gaming interests have mobilized for what one tribal gaming leader called “an all-out war,” and the fight has become a nationwide push to rein in the industry.</p>
+<p>The anti-prediction campaign got a lift on Friday when the Ninth Circuit Court of Appeals unanimously ruled that states can regulate prediction platforms as gambling, siding with Nevada officials and an association of Vegas casinos. Earlier this summer, federal judges in other states, including Connecticut and Wisconsin, cited earlier Nevada rulings in cases involving prediction sites. Congress has also taken up the issue, with lawmakers filing five new bipartisan bills this summer to limit the industry on top of a dozen-plus already pending proposals.</p>
+<p>The lobbying fight is broadening beyond Las Vegas. The American Gaming Association and the largest casinos have spent at least $3.3 million on federal lobbying this year, while the biggest prediction companies have spent at least $5.6 million, according to federal records. State attorneys general, Indian tribes, consumer advocates, addiction experts and lawmakers in both parties have also pushed for tighter rules. Nevada regulators and casino groups say they want sports out of prediction markets, while some prediction supporters argue the industry should still be able to offer contracts tied to elections, entertainment and commodities.</p>
+<p>For now, prediction sites are not killing casinos. But casino leaders worry about what comes next, especially as sports trading surges. Kalshi and Polymarket have drawn heavy volume, and some analysts say the ease of their apps and their sports offerings have hit gambling stocks. That pressure has also pulled some big sportsbook companies into the same space: FanDuel and DraftKings have launched CFTC-regulated prediction apps in states where they cannot offer sportsbooks, a move that has realigned parts of the gaming industry and put them at odds with Nevada regulators too.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/30/business/kalshi-polymarket-casino-vegas-trump" target="_blank" rel="noopener noreferrer" title="CNN / ‘This is an all-out war’: Inside the casino industry’s fight to stop prediction markets">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="la_jornada">
+  <summary>Teachers speak out in favor of regulating mobile devices</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Secretaría de Educación Pública said teachers who took part in the National Consultation for the Use and Regulation of Digital Devices favored “clear regulation” of mobile device use according to students’ age, along with protocols to prevent and address risk situations tied to devices and social networks. The agency said it gathered the views through an electronic questionnaire with closed-ended responses during the intensive phase of the Technical School Council, held from August 24 to 28 with teachers and principals participating. The announcement came during a virtual Second Extraordinary Plenary National Meeting of the National Council of Educational Authorities, led by Secretary Mario Delgado Carrillo with authorities from the country’s 32 entities.</p>
+<p>The SEP did not disclose how many teachers and principals answered the survey or what diagnosis it produced about device use in schools or the impact of digital screens on students, and the questionnaire was accessible even to people outside school communities because no lock was applied. Delgado Carrillo said the aim is to keep indiscriminate use from affecting recess, socio-emotional skills and peer relations, or from becoming a source of distraction, anxiety or excessive use. The meeting also covered the “ABC of Emotions” strategy, with Tania Rodríguez Mora saying 16 million printed orientations will be distributed in the 2026-2027 school year, along with 250,000 posters on mental health care.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/30/politica/005n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Teachers speak out in favor of regulating mobile devices">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="al_jazeera_en,scmp">
+  <summary>Trump threatens to report journalist Kristen Welker to broadcast regulator</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump threatened to report NBC’s Kristen Welker to the FCC after she described his primary endorsements as having “mixed results”, turning a dispute over TV coverage into another clash between the president and broadcast news.</p>
+<p>On Sunday, Trump took issue in a Truth Social post with Welker’s description of his candidate endorsements ahead of November’s elections. He wrote, “How can anyone be allowed to say this, working for freely given public airwaves?” and said, “Because of this purposeful inaccuracy, she will be reported to the FCC,” the federal agency that oversees broadcast licences.</p>
+<p>He also posted a chart, without saying where the data came from, that he said showed 98 percent of the candidates he endorsed had won their elections. The argument centred on Welker’s on-air characterisation of those results as mixed. Welker hosts NBC’s weekly news programme *Meet the Press* and moderated the 2020 presidential debate between Trump and Joe Biden.</p>
+<p>The dispute was not the first tense exchange between the two. In June, Welker’s one-on-one interview with Trump turned heated after she pressed him on his continued claim that Democrats cheated in the 2020 election. Trump ended that interview by calling the election and several major networks “crooked” and leaving after pulling off his microphone.</p>
+<p>Trump has also increasingly threatened to use the FCC against what he calls false news. The warning to Welker came as Disney, the owner of ABC News, sued the FCC this month over what it said was an early licence review of eight of the network’s stations and described as retaliation. Trump and his wife Melania had also called on the network to fire late-night host Jimmy Kimmel over a joke he made about her.</p>
+<p>In the same period, Trump has filed multibillion-dollar defamation lawsuits against other outlets, including the BBC, The New York Times and The Wall Street Journal.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/30/trump-threatens-to-report-journalist-kristen-welker-to-broadcast-regulator?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Trump threatens to report journalist Kristen Welker to broadcast regulator">AJ #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3365780/trump-calls-punishment-nbc-reporter-us-media-regulators" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump calls for ‘punishment’ of NBC reporter by US media regulators">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="korea_herald">
+  <summary>Lee replaces 6 ministers, fills key AI roles in year-two reset - The Korea Herald</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Lee Jae Myung reshuffled his Cabinet on Sunday, replacing six ministers and filling long-vacant AI-related posts as he moved into his second year, with new appointments spanning defense, justice, the economy and the administration’s semiconductor and AI agenda.</p>
+<p>For defense minister, Lee nominated Kang Shin-chul, a retired four-star general who has served as South Korea’s ambassador to Saudi Arabia since January, presidential chief of staff Kang Hoon-sik said at a press briefing. Kang, a Korea Military Academy graduate, previously served as deputy commander of the South Korea-US Combined Forces Command and as head of the Operations Directorate at the Joint Chiefs of Staff. Kang Hoon-sik said he was expected to strengthen independent national defense capabilities and push defense reform, including the integration of the military academies.</p>
+<p>Cheong Wa Dae also said Kang Shin-chul had been vetted for any involvement in the martial law declaration during his time at the combined command. Kang Hoon-sik said neither the task force nor the Defense Ministry’s audit found him to have been involved.</p>
+<p>On the justice side, Lee nominated ruling Democratic Party of Korea Rep. Kim Seung-won, a two-term lawmaker and former judge, to fill a vacancy left when Lee accepted the resignation of Kim’s predecessor, Jung Sung-ho, on Aug. 24 over health concerns. The nomination comes ahead of a sweeping criminal justice overhaul set to take effect on Oct. 2, under which prosecutors will lose investigative powers while retaining the authority to indict, with investigative authority shifting to the police. The main opposition People Power Party denounced the nomination, pointing to Kim’s support for withdrawing prosecutors’ indictments against Lee and his criticism of cases brought under the Yoon Suk Yeol administration as politically motivated.</p>
+<h3>AI posts filled as Lee widens the reset</h3>
+<p>Lee also filled two long-vacant posts at the center of his AI policy push and created a new role to coordinate major projects. Rebuilding Korea Party Rep. Lee Hai-min, described as a longtime Google product manager, was named senior presidential secretary for AI and future planning. The post had been vacant since late April, when its inaugural officeholder stepped down to run in the June 3 National Assembly by-election in Busan.</p>
+<p>Lee also nominated Ha Jung-woo as vice chair of the Presidential Council on National AI Strategy, another post that had been empty since early May. In addition, Lee Won-ju, a senior official at the Ministry of Climate, Energy and Environment, was tapped as presidential adviser for megaprojects, with responsibility for major initiatives in semiconductors, physical AI and AI data centers.</p>
+<p>The reshuffle also reached the economic team as the government faced high interest rates, persistent inflation and a weak won. Lee nominated First Vice Finance Minister Lee Hyoung-il as deputy prime minister for economic affairs and minister of finance and economy, and named Vice Minister for Transport Hong Jee-sun as minister of land, infrastructure and transport.</p></div>
+  <div class="source-list"><a href="https://www.koreaherald.com/article/10856426" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Lee replaces 6 ministers, fills key AI roles in year-two reset - The Korea Herald">TKH #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Agentic Game Development as a Verifiable Trajectory Data Engine for Scaling World Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint proposes “Agentic Game Development as a Verifiable Trajectory Data Engine for Scaling World Models,” arguing that the common approach of training world models on more crawled video with more compute is inefficient. It says scaling world models also needs a recursive data engine with grounded reward signals, and points to code agents as an example of why that matters. The paper contrasts executable code, where compilers and runtimes can provide high-quality rewards for Reinforcement Learning post-training of LLMs, with spatial generation, which it says still relies largely on fuzzy proxies such as CLIP scores.</p>
+<p>The preprint argues that game development can fill that gap for spatial world models. It describes a scene encoded by a game engine as an executable world specification, where the engine can check collision, physics, navigability, and bounded playability, while the developer supplies a global verification signal by accepting or rejecting the scene. It also says game development provides real-world long-horizon trajectory data for RL post-training, and proposes Reinforcement Learning with Human-Engine Verification, or RLHEV, as a post-training paradigm combining dense engine signals with implicit human acceptance feedback.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.25518v1" target="_blank" rel="noopener noreferrer" title="arXiv / Agentic Game Development as a Verifiable Trajectory Data Engine for Scaling World Models">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Code World Model: Coding Agent as World Brain</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Code World Model is a new framework for world models that separates world evolution from visual realization by combining the reasoning and coding abilities of language models with the generative priors of video models. The work argues that existing video-based world models mostly learn dynamics from visual observations, which show outcomes rather than the underlying knowledge, rules, and mechanisms that govern how a world changes. The system uses a coding agent as a “world brain” to reason about events and consequences, generate executable code, and keep persistent world state while supporting rule-consistent evolution.</p>
+<p>To connect executable state with video output, the framework introduces a proxy representation that encodes frame-wise spatiotemporal constraints and is compiled into a proxy video, which then conditions a video model to produce high-fidelity visual observations. The researchers also built data pipelines for aligned proxy-observation pairs from gameplay and real-world videos. After fine-tuning on paired gameplay data, MiniMax-H3 followed proxy-based spatiotemporal specifications in simple interactive worlds built by the coding agent while preserving rich visual details and dynamics.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.25927v1" target="_blank" rel="noopener noreferrer" title="arXiv / Code World Model: Coding Agent as World Brain">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Agent-G^2: Gaussian Guidance for Agentic Reinforcement Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Agent-G^2 proposes a Gaussian guidance method for agentic reinforcement learning, targeting long-horizon tasks where hint-based reinforcement learning keeps a prefix of an expert trajectory before each rollout to reduce reward sparsity. The work says the key choice is guidance depth, and argues that useful guidance is not concentrated at one optimal point but instead occupies a band of depths with an approximately Gaussian informativeness profile. The method was evaluated on ALFWorld and WebShop with Qwen2.5-1.5B / 7B-Instruct, and on ALFWorld it outperformed the strongest hint-based, hint-free, and Aux-RL baselines by 2.3, 3.9, and 7.4 points.</p>
+<p>The preprint contrasts Agent-G^2 with prior approaches that treat guidance depth as a fixed scalar. It says scheduled methods use one value across samples and ignore per-task differences, while per-sample probing estimates depth separately but needs extra rollouts. Agent-G^2 instead draws depth per task from a Gaussian whose center and spread are estimated online from rollouts already collected for policy optimization, with no probe rollouts or learned depth predictor. The center combines a global baseline with per-cluster difficulty, and the spread tracks within-cluster variance.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.23318" target="_blank" rel="noopener noreferrer" title="arXiv / Agent-G^2: Gaussian Guidance for Agentic Reinforcement Learning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>D^3-MOPD: Adaptive Dynamic Domain ScheDuling for Efficient Multi-Teacher Distillation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">D^3-MOPD is a preprint on adaptive dynamic domain scheduling for multi-teacher distillation. The method builds on multi-teacher on-policy distillation (MOPD), which distills several domain-expert teachers into a single student by minimizing per-domain reverse-KL divergence on the student’s own rollouts. The paper says fixed per-domain mixtures can miss that different domains converge at different rates, with some plateauing early and others improving for longer, so a static schedule can waste compute on faster domains and undertrain slower ones. D^3-MOPD uses the reverse-KL signal already produced during training to adjust domain sampling online.</p>
+<p>The system is described as a zero-overhead scheduler that runs asynchronously outside the training process. An off-process watcher tracks each domain’s KL trajectory, estimates remaining headroom and current improvement rate, and updates sampling ratios without changing the core training loop. On a Qwen3.6-35B-A3B student distilled from four domain-expert teachers, D^3-MOPD closes 97% of the average student-to-teacher performance gap, compared with 63% for vanilla MOPD, reaches the same peak performance with about a 3× reduction in rollout steps, and exceeds the specialist teachers on three of seven benchmarks.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.24987" target="_blank" rel="noopener noreferrer" title="arXiv / D^3-MOPD: Adaptive Dynamic Domain ScheDuling for Efficient Multi-Teacher Distillation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="nature">
+  <summary>AI models are being used to track zoonotic diseases. Will they prevent the next pandemic?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Uganda’s Bwindi Impenetrable National Park, researchers are combining gorilla-monitoring records, livestock samples and AI models to spot spillover risks earlier, while still relying on local staff, communities and human judgment to decide whether the technology can really stop the next outbreak.</p>
+<p>Since 2003, the non-profit Conservation Through Public Health in Entebbe has worked to protect mountain gorillas *(Gorilla beringei beringei)* from diseases traced to their human neighbours. Bwindi is home to endangered gorillas, about 120 other mammal species, 350 bird species and hundreds of plant varieties, with people and livestock on its borders — conditions epidemiologists describe as fertile ground for spillover, the transfer of pathogens between species.</p>
+<p>Ssali Ronald Ogwal, a public-health specialist at CTPH, says the work has usually been reactive, responding to outbreaks after they emerge. The organization is now trying to move toward prevention, in part through a three-year collaboration that ended in March 2026 with NESTLER, a public-health initiative linking the European Union and African nations. Ogwal collected cattle and poultry samples around Bwindi, sent them to a laboratory in Entebbe for testing for diseases including brucellosis and Rift Valley fever, and shared the results with local communities before combining them with CTPH gorilla-monitoring records. That information was then passed to NESTLER, where it is being used to train predictive AI models designed as early-warning systems for disease outbreaks that can affect people, livestock and gorillas.</p>
+<h3>What AI is already doing</h3>
+<p>Beyond Bwindi, researchers are using machine-learning tools to find new zoonotic viruses, forecast outbreaks and decide where to sample next. Edward Holmes of the University of Sydney uses sequencing data from public resources such as GenBank and Pathoplexus to train models on known human pathogens, then identify “risky” viruses in field samples. One of his tools, LucaProt, was applied in 2024 to 10,487 public metatranscriptome datasets and identified 161,979 species of RNA virus, including 70,458 never seen before, according to the authors.</p>
+<p>Other groups are using AI to predict which viruses might cross into humans and where sampling would be most productive. BlueDot has used AI to filter thousands of articles and official public-health sources, plus travel and ecological data, to assess location-specific risk; in 2015, it identified Miami as a possible Zika outbreak location before 1,471 cases were later documented in Florida. HealthMap, started by epidemiologist John Brownstein and colleagues at Boston Children’s Hospital, has tracked disease reports from news sites, government health departments and social media, and Brownstein says it sent the first global alert related to COVID-19 in late 2019.</p>
+<p>Still, the models are mostly being used for research rather than routine surveillance, and the field’s own experts say humans remain essential. Holmes says AI can support faster pattern-finding and earlier action, but it cannot replace the uncertainties of pathogen emergence. Researchers also warn that AI systems may miss local knowledge and lived realities if communities, especially in low- and middle-income countries, are not built into the models from the start.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02684-1" target="_blank" rel="noopener noreferrer" title="Nature / AI models are being used to track zoonotic diseases. Will they prevent the next pandemic?">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Zero-WAM, a causal video-action model, was presented for robotic manipulation that executes unseen tasks by following in-context human video guidance. The preprint says zero-shot cross-task generalization remains a central challenge in robot learning, and it frames human video as a natural task specification because it provides visual cues about how a task should evolve. On seven unseen tasks in RoboTwin 2.0 simulation, Zero-WAM reached a 47.0% average success rate, which the preprint says was 29.5 percentage points above the strongest video-action baseline.</p>
+<p>To support training, the authors describe an automatic pipeline that converts task-sampled robot trajectories into semantically matched human videos, producing HumanGen, a dataset of 74.2K human-robot in-context learning pairs across 8.6K tasks. They also introduce an in-context future chunk prediction objective meant to suppress shortcuts from seen tasks and push the policy to use the video prompt. In real-world evaluations, the model is described as following human video guidance on unseen task configurations involving multi-object scenes, long-horizon manipulation, and fine-grained insertion.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.26103" target="_blank" rel="noopener noreferrer" title="arXiv / Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="semantic_scholar">
+  <summary>Machine Learning Model for Contemporary Dry Eye Disease Risk Factors: A Study on the Integrated Approach of Logistic Regression Model and Statistical Verification</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A study titled *Machine Learning Model for Contemporary Dry Eye Disease Risk Factors: A Study on the Integrated Approach of Logistic Regression Model and Statistical Verification* examined dry eye disease risk factors and an early screening approach. The researchers described dry eye disease as rapidly spreading in modern society because of increased use of digital devices and environmental factors, and noted that it can lead to corneal damage and permanent vision loss if not properly managed. They also said that lifestyle, environment, and heredity act in combination, making early screening with measurable indicators in daily life important for prevention.</p>
+<p>In the study, a machine learning model and binary logistic regression analysis using SPSS were run in parallel to secure predictive power and statistical validity. The researchers said the model’s reliability was supported by matching the rankings of the top six risk factors identified by machine learning and SPSS analysis. They said the results combine flexible machine learning with statistical interpretation power and are expected to support customized digital healthcare and symptom-centered early screening tools in the future.</p></div>
+  <div class="source-list"><a href="https://www.semanticscholar.org/paper/1608eb38c8a991e2974c324558a02a7872180a1f" target="_blank" rel="noopener noreferrer" title="Semantic Scholar / Machine Learning Model for Contemporary Dry Eye Disease Risk Factors: A Study on the Integrated Approach of Logistic Regression Model and Statistical Verification">SS #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="semantic_scholar">
+  <summary>Can Artificial Intelligence Make Us Happier? Dynamic Capability-Dependency Theory and a Two-Horizon Framework for AI-Mediated Well-Being</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A paper on AI-mediated well-being argues that artificial intelligence is already mediating work, learning, emotional support, decision making and social interaction, and asks when it makes people happier now but worse off later. It develops Dynamic Capability-Dependency Theory (DCDT), an integrative framework that treats AI-mediated happiness as a two-horizon process: the first horizon covers acute affective relief, convenience and enjoyment, while the second tracks accumulated changes in competence, autonomy, human relatedness, meaning and dependency through repeated use.</p>
+<p>The paper says evidence from randomized trials, longitudinal studies and workplace deployments shows near-term benefits such as productivity gains, symptom reduction and temporary reductions in loneliness, but that outcomes vary with design, usage intensity, autonomy, relational context and time horizon. It formalizes these mechanisms as a dynamic state model and introduces a Temporal Well-Being Reversal condition, where initially positive effects turn negative as capability erosion, relational substitution or dependency accumulate. It also proposes testable propositions, an empirical research program and an AI-Happiness Impact Assessment that evaluates both immediate and durable effects.</p></div>
+  <div class="source-list"><a href="https://www.semanticscholar.org/paper/7b199b044354793455882a972cac630e3a5e6f36" target="_blank" rel="noopener noreferrer" title="Semantic Scholar / Can Artificial Intelligence Make Us Happier? Dynamic Capability-Dependency Theory and a Two-Horizon Framework for AI-Mediated Well-Being">SS #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Lift-off! NASA launches Roman Space Telescope to tackle dark-energy mysteries</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">NASA’s US$4.3-billion Nancy Grace Roman Space Telescope has lifted off from Kennedy Space Center in Florida, putting its huge infrared camera and repurposed mirror safely in orbit and setting up a mission aimed at dark energy, distant galaxies and billions of stars in the Milky Way.</p>
+<p>The telescope launched atop a SpaceX rocket at 7:35 a.m. local time today, and it will soon head to its final location. Roman is named after Nancy Grace Roman (1925–2018), NASA’s first chief astronomer and a key figure in some of the agency’s most important science programmes, including Hubble.</p>
+<p>Roman is designed to be a wide-field sky mapper with a field of view roughly 100 times larger than Hubble’s. It is the final member of a trio of complementary observatories that also includes the US-led Vera C. Rubin Observatory in Chile, inaugurated in 2025, and Euclid, the European Space Agency’s space telescope launched in 2023. Together, the three are expected to deliver unprecedented amounts of data and vast, detailed images.</p>
+<p>Its scientific edge is infrared. Roman’s 300-megapixel camera can take frequent, deep images in infrared light, which is especially useful for seeing highly reddened galaxies and for peering into the Universe’s deep past. It should also help cosmologists map galaxies in 3D, spot thousands of distant supernovae and probe whether dark energy has changed over time. Closer to home, NASA says it will map an unprecedented 20 billion stars in the Milky Way, including many hidden by dust near the galaxy’s centre.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02727-7" target="_blank" rel="noopener noreferrer" title="Nature / Lift-off! NASA launches Roman Space Telescope to tackle dark-energy mysteries">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A cancer therapy put severe rheumatoid arthritis into remission</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A CAR T-cell cancer therapy put severe rheumatoid arthritis into remission in six patients at Charité - Universitätsmedizin Berlin, raising an early question about whether a treatment designed to fight cancer can also reset the immune memory that keeps autoimmune disease going.</p>
+<h3>What the trial found</h3>
+<p>Rheumatoid arthritis is a chronic autoimmune disease in which the immune system attacks the joints, causing repeated inflammation, swelling and, over time, damage. Existing medicines often control inflammation but do not cure the disease, and some patients do not respond well enough even to newer therapies.</p>
+<p>In the first clinical trial of its kind, reported in Nature Medicine, researchers tested CD19 CAR T-cell therapy in six people with especially severe rheumatoid arthritis. All had already tried as many as eight targeted or biologic therapies over the previous decade. Disease activity fell substantially in every participant, and during follow-up of up to one year, three patients no longer needed rheumatoid arthritis medication.</p>
+<p>The results are early and uneven, but encouraging. One patient’s disease returned after an initial medication-free remission, and some participants did not achieve a complete response. Even so, researchers said the treatment appeared to reach disease-driving B cells in the bone marrow, lymph nodes and joint tissue, and autoantibodies associated with rheumatoid arthritis dropped sharply during follow-up.</p>
+<p>Safety findings were also described as encouraging. After the CD19 CAR T cells were given, all participants had only temporary, mild-to-moderate cytokine release syndrome, with no severe neurological complications or other serious adverse events, and infections were rare. Researchers also said antibodies from earlier vaccinations, including chickenpox and tetanus, could still be detected.</p>
+<p>The next phase of the COMPARE trial will include ten additional patients and compare CAR T-cell therapy with an already approved rheumatoid arthritis drug that also targets B cells.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260828082330.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A cancer therapy put severe rheumatoid arthritis into remission">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>This strange “spacetime crystal” can suddenly become a black hole</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Physics may allow black holes far smaller than the huge ones at galaxy centers or those made when massive stars die, and researchers at Goethe University Frankfurt and TU Wien have now found a mathematical way to describe how an unusual “spacetime crystal” could tip into collapse. The result gives physicists a new analytic route into a problem long explored mainly by computer simulations.</p>
+<h3>How a tiny change can trigger collapse</h3>
+<p>The idea starts with critical collapse: under special conditions, spacetime can enter a finely balanced state in which even a tiny addition of energy decides whether the system disperses or collapses. In that state, the curvature of spacetime can organize into a repeating, crystal-like pattern across space and time. The researchers describe that pattern as a “spacetime crystal.”</p>
+<p>In their description, the crystal is unstable. It can simply dissolve again, leaving ordinary spacetime filled with freely moving particles, or it can move onto a different path and become a black hole. That makes the process important for understanding microscopic black holes, which theory says can exist without a strict lower size limit. The same kind of extreme conditions may also have existed in the early universe, shortly after the Big Bang, when matter and energy were packed into an intensely chaotic environment, potentially creating primordial black holes.</p>
+<p>The challenge was not the idea itself but the math. Computer simulations had already shown in 1993 that these unusual critical structures should be possible, but reproducing them with equations proved exceptionally difficult. The new work gets around that by changing the number of dimensions used in the calculation. Instead of staying in four dimensions, the team first studies the problem in a hypothetical setting with infinitely many dimensions, where some of the hard calculations become easier. They then work back toward the four-dimensional spacetime we live in.</p>
+<p>That shortcut allowed the researchers to derive an exact formula for the phenomenon for the first time, using what they describe as essentially paper and pencil. The technique is also said to be stable, allowing the formulas to be improved systematically with additional approximation methods. The upshot is a new way to study black-hole-related phenomena and other extreme behavior of spacetime without relying entirely on numerical simulations.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260829035225.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / This strange “spacetime crystal” can suddenly become a black hole">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover a massive heat anomaly deep inside Mars</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers uncovered a major temperature imbalance deep inside Mars, with the planet’s southern interior appearing significantly hotter than its northern half. Gravity measurements suggest the region beneath the southern hemisphere is about 200 to 400 degrees Celsius warmer than the north and may be partially molten. The study was led by Caltech alumnus Alexander Berne, now a postdoctoral associate at the University of Arizona, and the results were published August 27 in Nature.</p>
+<p>Berne developed a model using subtle variations in gravity to estimate the internal structure of a planetary body, and he and colleagues applied it to Mars. They analyzed decades of observations from Mars Global Surveyor, Mars Odyssey and Mars Reconnaissance Orbiter, tracking extremely small changes in the spacecrafts’ velocities to reconstruct Mars’s gravitational field. The team used tidal tomography to study how those gravitational signatures changed over time and build a model of the planet’s interior. The finding offers a new window into Mars’s geologic history, including periods when the planet may have had environments capable of supporting life.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260828082336.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover a massive heat anomaly deep inside Mars">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>The next Cascadia megaquake could hit Oregon harder than expected</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new seismic analysis of the Juan de Fuca tectonic plate beneath northern Oregon suggests the subducting slab lies closer to the surface than scientists previously believed, which could affect estimates of how strongly the region might shake in a future Cascadia megathrust earthquake. Erin Wirth, a seismologist with the U.S. Geological Survey, said the slab interface is about 20 kilometers deep near the coastline, roughly 5 kilometers shallower than previous estimates. She added that this could increase estimated peak ground acceleration — shaking intensity — by about 9 to 17% along the coast of northern Oregon. The results were presented at the 2026 SSA Annual Meeting.</p>
+<p>The researchers also detected a deep sedimentary basin beneath Tillamook, Oregon. They said the new measurements provide the first direct seismological constraints on the basin’s shape and depth. Wirth said sedimentary basins can amplify ground shaking during an earthquake, and that characterizing the presence and thickness of a sedimentary layer helps scientists estimate future shaking more accurately. The work also uses 192 temporary nodal seismometers installed during the summers of 2021 and 2022, and the team plans to use the dataset to investigate the Tualatin Basin near Portland in greater detail.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260828082350.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / The next Cascadia megaquake could hit Oregon harder than expected">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Researchers unveil sustainable spirulina solution to vitamin B12 deficiency</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers led by Dr. Asaf Tzachor at Reichman University say they found a way to grow Spirulina that produces biologically active vitamin B12 at levels comparable to beef. In a study published in *Discover Food*, the team from Iceland, Denmark and Austria used advanced biotechnology and carefully controlled light conditions to produce carbon-neutral, nutrient-rich Spirulina biomass containing active vitamin B12. According to the researchers, this is the first time biologically active vitamin B12 has been reported in Spirulina.</p>
+<p>Vitamin B12 is an essential micronutrient involved in red blood cell formation and normal nervous system function, and the researchers estimate that more than a billion people worldwide have low levels of it. The study says conventional Spirulina has been limited because much of its B12 is pseudo-vitamin B12, which is not bioavailable to people. The biomass produced in the study contained 1.64 µg of active vitamin B12 per 100 grams, compared with 0.7 to 1.5 µg per 100 grams in beef. The researchers also explored scale-up scenarios and said larger production could potentially help supply dietary B12 needs for millions of children.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260829035227.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Researchers unveil sustainable spirulina solution to vitamin B12 deficiency">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
