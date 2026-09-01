@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-09-01</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-09-01</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="daily_star_bangladesh">
+  <summary>Hazardous job treated as routine work: probe report</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An official inquiry into the toxic gas leak that killed 10 workers at Ferdous Steel Ship Recycling yard in Chattogram’s Sitakunda found that a hazardous cutting operation had been treated as routine work without basic safety oversight. The 11-member committee, formed after the August 14 accident, circulated its report at a press conference at the industries ministry. It said the workers drilled a hole into one of the ship’s ballast tanks to drain accumulated water, and the ship’s gas-free certification had not included tests for hydrogen sulphide.</p>
+<p>Sample tests found mud, sediment, organic matter and microbes in the stagnant seawater, while oxygen depletion had created an anaerobic environment. It said sulphate-reducing bacteria could convert sulphate into sulphide, and the dissolved sulphide turned into hydrogen sulphide gas when it came into contact with air as the water drained. Industries Ministry Additional Secretary AKM Benjamin Riazi, who led the inquiry, said one worker went forward to check the drain and collapsed immediately, followed by others in the same way.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/hazardous-job-treated-routine-work-probe-report-4261811" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Hazardous job treated as routine work: probe report">TDSB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>North Carolina teenager dies from rare infection caused by brain-eating amoeba</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A North Carolina teenager died after contracting a rare infection caused by *Naegleria fowleri*, the state’s health department said Monday. NCDHHS said it had been informed that the teen died on Aug. 31, 2026, after developing the illness, and earlier said last Thursday that he had contracted the infection from the single-celled organism commonly found in warm freshwater. The teenager was identified by his mother, Monica Mendoza, as Moises Ponce Mendoza.</p>
+<p>Mendoza said in an online fundraiser that her son was “a young man full of life” who was fighting for his life in the hospital and in a coma. She said his illness began with severe headaches, and that she first took him to a Burlington hospital on 21 August, where he was sent home after a brief examination. After his condition worsened, she said she rushed him to the University of North Carolina hospital’s emergency department at 7 a.m. the next day, where doctors found an infection caused by *Naegleria fowleri*.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/aug/31/north-carolina-teen-dies-brain-eating-amoeba" target="_blank" rel="noopener noreferrer" title="The Guardian / North Carolina teenager dies from rare infection caused by brain-eating amoeba">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>Israeli army shoots first and finds reasons to justify mass killings later, veterans group says</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Breaking the Silence accused the Israeli military of killing Palestinians in Gaza and then seeking evidence to justify the killings. Nadav Weiman, the group’s executive director, made the allegations in an interview with France 24 and described “retrospective incrimination” as a process in which Palestinians killed during Israeli military operations are later identified as Hamas members to justify the attacks. He said, “First, we shoot, we kill, and then we think, and then we try to find a reason why it happened.”</p>
+<p>Weiman cited Israeli military operations around Nasser Hospital, the killing of 15 paramedics in Rafah, and air strikes in Gaza that he said killed large numbers of civilians. He said Israeli intelligence then obtains the identities of those killed and examines possible links to Hamas or other armed groups, with possible justifications including being near a Hamas building, having a family member linked to Hamas, or having previously been on a payroll. He also said the soldiers carrying out attacks do not have the information later used to justify the killings, and that this pattern appears in testimonies collected by the group.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israeli-army-shoots-first-and-finds-reasons-justify-mass-killings-later-veterans-group-says" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israeli army shoots first and finds reasons to justify mass killings later, veterans group says">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Iran’s economy in crisis as US launches new sanctions campaign</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iranians are facing record inflation, a plunging currency and fuel shortages just as the US launches Operation Economic Outcast, deepening a crisis that many households were already living through and sharpening the question of how far the country can absorb more economic pressure.</p>
+<p>The new sanctions campaign lands in a country where the currency has kept sliding and basic goods have become far more expensive. On 23 August, the US dollar reached roughly 2 million rials on Iran’s open market, a record, and three days later Iran’s statistical centre said year-on-year inflation in August had reached 84.4%, with the rolling annual average at about 65%. The price of vegetable oil in August was 383% higher than a year earlier, while eggs rose by 294%, chicken by 177% and red meat by 148%.</p>
+<h3>Daily life is narrowing as prices surge</h3>
+<p>As purchasing power collapses, households are buying fewer goods. Diets are changing, clothes are being patched and repaired instead of replaced, and medicine is short in supply, though it can still be found on the hidden market. According to the Mehr news agency, demand for red meat fell by 50% in April 2026 compared with the same period last year, and there has also been a leap in potato consumption that has led to shortages.</p>
+<p>Golshan Fathi, an Iranian feminist, said basic goods such as eggs are now unaffordable to middle- and working-class families. Mohsen Zavaar, a biomedical engineer, described the pressure on households as a shift from bigger ambitions to daily survival: cutting out meat, reducing food quality, postponing medical treatment and collection by until the end of the month. He said people do not want miracles; they want decisions.</p>
+<h3>Fuel queues, closures and political fear</h3>
+<p>The crisis has also spread beyond the grocery basket. Long lines of cars stretched through parts of Tehran and the north-eastern city of Mashhad on Tuesday and Wednesday as motorists queued for fuel, with some queues blocking entire streets. Many petrol stations, including some of the largest, were closed.</p>
+<p>Officials blamed either isolated panic buying driven by rumours of a government-planned price increase or Israeli bombs that destroyed two of Tehran’s three main oil depots. Inside the government, there have been anxious discussions for weeks about raising the price of oil to reduce costly subsidies, but the political class knows from past experience that such a move can trigger a backlash. A sudden overnight petrol price rise of 50% in November 2019 sparked week-long violent protests.</p>
+<p>Public anger has been sharpened by comments about fuel smuggling. Saqab Esfahani, deputy to Iran’s president, said both political factions in the country were involved in fuel smuggling and that shutting down the operation would provoke retaliation. Masoud Pezeshkian has been urged to investigate those remarks.</p>
+<p>The government is also moving toward greater secrecy around the economy. Fatemeh Mohajerani, a government spokesperson, said future poverty statistics would only be published with permission from the supreme national security council, making the decline in living standards effectively a classified state secret.</p>
+<h3>A crisis now framed as a war</h3>
+<p>Iran’s leaders are presenting the economic strain as part of the confrontation with the US. Hojatoleslam Taeb, the new head of the Basij paramilitary force and a close ally of Mojtaba Khamenei, said it would be necessary to reduce petrol consumption by as much as 10% to cut the need for expensive imports, and suggested avoiding unnecessary travel as an act of patriotism. Mohsen Rezaei, the new secretary of the supreme national security council, urged young people to start producing needed goods at home, drawing a comparison that one economics editor likened to Mao’s “backyard steel furnaces.”</p>
+<p>Amirhossein Hashemi-Javid, an energy expert, said the deeper problem was Iran’s inability to export oil because of the US blockade. In his view, oil that cannot reach customers brings in no revenue and only adds storage, production and risk costs.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/aug/31/iran-economy-crisis-usa-launches-sanctions-inflation-trump" target="_blank" rel="noopener noreferrer" title="The Guardian / Iran’s economy in crisis as US launches new sanctions campaign">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Open Arms Returns to Cuba with 7 Tons of Humanitarian Aid</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Astral sailboat, operated by the Spanish NGO Open Arms, arrived in Havana on Sunday with 7 tons of humanitarian aid, just over a month after its first trip to Cuba. The vessel had departed Saturday from Cancun, Mexico, carrying medical supplies, powdered milk, hemodialysis equipment and supplies, school materials, and other essential goods. The donations were set to be unloaded Monday and delivered Wednesday to the Abelardo Buch Lopez Institute of Nephrology and the Juan Manuel Marquez University Pediatric Hospital.</p>
+<p>The trip was Open Arms’ second arrival in Havana. The sailboat first reached the city on July 19 as part of the “Heading to Cuba” mission, after departing Barcelona on May 14 and traveling 6,200 miles as what the group described as the first humanitarian vessel to cross the Atlantic to the island carrying 7 tons of aid. The donation was valued at 160,000 euros and supported by more than 4,000 donors, with photovoltaic equipment and an ultrasound machine among the items included for the Juan Manuel Marquez Pediatric Hospital. Open Arms founder Oscar Camps said the group returned after seeing what was missing in Cuba’s hospitals in July.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/open-arms-returns-to-cuba-with-7-tons-of-humanitarian-aid" target="_blank" rel="noopener noreferrer" title="Telesur English / Open Arms Returns to Cuba with 7 Tons of Humanitarian Aid">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Us iran israel hormuz oil donald trump larak kharg island uae jordan latest news updates</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Gaza City airstrike on Monday hit a crowd near the municipal public park, killing two people and injuring several others, medics said. Gaza’s health ministry said its latest update puts the death toll from Israeli attacks across Gaza at 73,456, mostly women and children, since October 2023. The ministry also said at least 1,320 people have been killed by Israeli attacks since a ceasefire was signed between Israel and Hamas last October.</p>
+<p>The ceasefire remains contested. Hamas accuses Israel of violating the truce and undermining efforts to implement a broader US plan to end the war on Gaza. Israeli prime minister Benjamin Netanyahu said earlier this month that there can be no progress on the stalled Gaza ceasefire deal or an Israeli withdrawal from the territory until Hamas first disarms. The same health ministry said the war began after the Hamas-led attack on southern Israel on 7 October 2023, in which about 1,200 people were killed.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/aug/31/us-iran-israel-hormuz-oil-donald-trump-larak-kharg-island-uae-jordan-latest-news-updates?page=with%3A6a955b728f08187a5f76fdb1#6a955b728f08187a5f76fdb1" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran israel hormuz oil donald trump larak kharg island uae jordan latest news updates">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Three minors killed in Colombia armed group crackdown</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Colombian military air strike on cocaine-trafficking rebels in southern Guaviare on August 27 killed 10 people, the National Institute of Legal Medicine and Forensic Sciences said, and authorities said three of those killed were minors. The Ministry of National Defence said two of the victims were 15 and another was 16.</p>
+<p>President Abelardo de la Espriella said on Monday that another bombing in the same area killed eight members of a FARC dissident group led by commander Ivan Mordisco, and the Defence Ministry said 24 suspected rebels have been killed in military operations since he took office. The strikes came as Human Rights Watch said child recruitment by armed groups was rising again in Colombia, with at least 1,500 children recruited since 2021 and 625 cases reported in 2024.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/31/three-minors-killed-in-colombia-armed-group-crackdown?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Three minors killed in Colombia armed group crackdown">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Nearly 300 Paraguayan Doctors To Resign Over Low Pay</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nearly 300 specialist and subspecialist doctors in Paraguay’s public health system were set to resign Monday after five days of strikes failed to produce an agreement with the government of President Santiago Peña. The action followed a week of industrial protests by about 11,000 public-sector doctors who suspended regular duties from Monday through Friday. The National Medical Union, Sinamed, said the strike ended without a state response to the doctors’ demands.</p>
+<p>Sinamed Secretary General Rossana González said the resignations would affect key public hospitals and leave Paraguay’s entire pediatric surgery service without doctors. She said one directly affected hospital would be the Niños de Acosta Ñu Pediatric Hospital in San Lorenzo, in the suburbs of Asunción. The union said the doctors were acting because salaries had become economically unsustainable and stressed that the move was not intended to harm patients. Their demands included higher pay, regular supplies of medicines and medical equipment, and permanent appointments for 9,000 workers on temporary contracts.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/300-paraguayan-doctors-to-resign-low-pay" target="_blank" rel="noopener noreferrer" title="Telesur English / Nearly 300 Paraguayan Doctors To Resign Over Low Pay">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Araghchi blames ‘serpent’ Netanyahu for luring Washington into war on Iran</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US forces bombed Larak Island on Sunday, the official state broadcaster IRIB reported, and Iranian President Masoud Pezeshkian said Tehran would respond decisively to any further attacks. He said Iran was “not looking for war” but would “never sit still in the face of any aggression,” and would give “a decisive response to the aggressors” if attacked again. Iranian Foreign Minister Abbas Araghchi accused Israeli Prime Minister Benjamin Netanyahu of manoeuvring Washington into fighting Israel’s war, and wrote on X that Netanyahu had “suckered the U.S. Administration into a war on Iran on behalf of Israel,” calling him a “serpent.”</p>
+<p>Trump later posted an AI-generated video purporting to show an attack on Kharg Island, Iran’s principal oil export hub. The head of the National Iranian Oil Company dismissed the video, calling Trump’s “tweets are laughable,” and said operations on Kharg Island had not stopped and conditions remained calm. The company said workers were continuing to repair damage from previous attacks.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/serpent-netanyahu-suckered-washington-fighting-israels-war-iran-araghchi-says" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Araghchi blames ‘serpent’ Netanyahu for luring Washington into war on Iran">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="kompas">
+  <summary>Refusing Students as Sacrifices During the Haze Disaster</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Haze from forest and land fires has become a daily reality in several regions, and teachers are seeing students cough and struggle to breathe in class. In an online meeting with principals of high schools, vocational schools and SKH across Kalimantan Tengah on Sunday, 30/8/2026, Head of the Central Kalimantan Education Office Muhammad Reza Prabowo was shown in a viral video instructing schools to keep their gates open for students; he later issued a clarification.</p>
+<p>In the column, the writer says this puts teachers in a dilemma between following bureaucratic hierarchy and protecting students’ health. The writer also criticizes the stated reason for asking students to keep coming to school: to ensure the National Nutrition Program (MBG) operates and canteen money keeps circulating. In that view, schools are being reduced from safe places for learning to centers for logistics and micro-market economics.</p></div>
+  <div class="source-list"><a href="http://regional.kompas.com/read/2026/09/01/06200041/menolak-siswa-jadi-tumbal-saat-bencana-kabut-asap" target="_blank" rel="noopener noreferrer" title="Kompas / Refusing Students as Sacrifices During the Haze Disaster">Kompas #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="kompas">
+  <summary>KontraS-TAUD Highlight Suspected Deployment of White-Capped Headed Groups During August 27 Demonstration</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">TAUD said it found signs of irregular handling of the August 27-28, 2026 demonstrations and highlighted a suspected deployment of mysterious groups wearing white headbands. In remarks at KontraS in Kwitang, Central Jakarta, TAUD member Gema Gita Persada said the groups were allegedly conditioned and facilitated by officers to attack demonstrators and the public. TAUD said it identified at least three waves of these groups moving in different areas: the first two used trucks and buses, while the groups were said to have carried out violent sweeping from the DPR area to Pejompongan, Central Jakarta. A third wave was said to have carried out separate assaults on Jalan KS Tubun and Pejompongan Raya.</p>
+<p>Gema said the convoy passed through toll roads without paying and was escorted at certain points, with some officers allegedly seen giving thumbs-up gestures as the group sang along. TAUD said the violence affected demonstrators, nearby residents, and workers at the scene, and that the organized group was suspected of being involved in the assault that killed Bambang Setiawan and injured several other residents. TAUD said it was still deepening and verifying the group’s identity and movement mechanism, while Dimas Bagus Arya said the team was not yet sure who the group was or whether the facilities were sponsored or facilitated by the state.</p></div>
+  <div class="source-list"><a href="http://megapolitan.kompas.com/read/2026/09/01/06130081/kontras-taud-soroti-dugaan-pengerahan-kelompok-berikat-kepala-putih-saat" target="_blank" rel="noopener noreferrer" title="Kompas / KontraS-TAUD Highlight Suspected Deployment of White-Capped Headed Groups During August 27 Demonstration">Kompas #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian,middle_east_eye">
+  <summary>Trump&#x27;s vow to escalate on Iran rings hollow amid warnings from top US generals</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump vowed a hard US response after Iran targeted US bases in Jordan, but the threat landed amid warnings, reported by Middle East Eye, that a prolonged war on Iran could strain US forces and supplies.</p>
+<p>Trump told Fox News’s Trey Yingst, “We’re going to hit them hard,” and added, “There will be a response,” after Jordan’s army said it had intercepted eight missiles early on Monday. In the same report, Iranian state TV said the Islamic Revolutionary Guard Corps had answered a US assault on Larak Island late on Sunday by targeting technical infrastructure, maintenance facilities and enemy fighter jet positions at the US-operated King Hussein and al-Azraq airbases in Jordan with ballistic missiles, causing “heavy damage.”</p>
+<p>Trump’s public messaging also shifted onto social media. Vice-president JD Vance said on Monday that Trump was sending a message to Iran with his post about Kharg Island, while a US official said the military had not targeted Kharg Island in overnight strikes. The post, made on Sunday, was paired with an AI-generated video clip showing fake attacks by the US military. In a brief Truth Social post, Trump also called Iran a “failed nation” with no navy, air force or currency.</p>
+<p>Middle East Eye said the escalation talk sat uneasily beside reports that the heads of the US army, navy and air force, and commanders overseeing US operations in Europe, Asia and Latin America, warned Secretary of War Pete Hegseth that prolonging major operations would weaken the US’s ability to confront other foes. Treasury secretary Scott Bessent said the goal of sanctions on Iran was “to create the conditions that they will want to come to the table” for negotiations. Middle East Eye also reported Brent crude rose 2.5% to $90.35 a barrel.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/aug/31/us-iran-israel-hormuz-oil-donald-trump-larak-kharg-island-uae-jordan-latest-news-updates?page=with%3A6a95825f8f089f2cda79ab90#6a95825f8f089f2cda79ab90" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran israel hormuz oil donald trump larak kharg island uae jordan latest news updates">Guardian #1</a><a href="https://www.theguardian.com/world/live/2026/aug/31/us-iran-israel-hormuz-oil-donald-trump-larak-kharg-island-uae-jordan-latest-news-updates?page=with%3A6a95abef8f08187a5f770208#6a95abef8f08187a5f770208" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran israel hormuz oil donald trump larak kharg island uae jordan latest news updates">Guardian #2</a><a href="https://www.middleeasteye.net/news/trumps-vow-escalate-iran-rings-hallow-amid-warnings-generals" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Trump&#x27;s vow to escalate on Iran rings hollow amid warnings from top US generals">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="el_pais">
+  <summary>The Police Evict the Camp Set Up Next to the Ceuta Loma Colmenar Reception Facility</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Police evacuated on Monday the camp that hundreds of migrants had set up next to the Loma Colmenar reception facility in Ceuta, where several hundred people who entered the city illegally had been housed for days. Around 800 people entered the reception center, while others were dispersed to other locations, according to the neighborhood association. In the morning, officers intervened with gunfire in the air to stop confrontations between migrants, according to Europa Press. The neighborhood association’s president said the clash happened around 8 a.m. after managers of the facility, which depends on the Ministry of Migrations, began letting more migrants pass.</p>
+<p>Later that day, workers cleaned up debris left on the street. The same Monday, Pedro Sánchez said Ceuta had 3,300 urgent migrant reception places, including 1,200 at Loma Colmenar, 1,300 at Loma Margarita, between 500 and 600 in the expansion of the Temporary Stay Center for Immigrants, and 320 at La Hípica. In the afternoon, about 100 people gathered in front of the former flour mill in Ceuta, a Ministry of Defense property, amid the possibility that it could be used as a provisional camp.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-31/la-policia-desaloja-el-campamento-instalado-junto-al-recinto-de-acogida-del-barrio-ceuti-de-loma-colmenar.html" target="_blank" rel="noopener noreferrer" title="El País / The Police Evict the Camp Set Up Next to the Ceuta Loma Colmenar Reception Facility">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>Violence against women: 7,5 thousand agents will be trained</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">general_news</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 7,500 public security agents from the 27 Brazilian state capitals and 81 interior cities are set to take part next Wednesday (2) in a one-day training session, via simultaneous transmission, on how to assist women victims of violence. Michele Gonçalves dos Ramos, director of Teaching and Research at the National Public Security Secretariat, said another 2,000 professionals have already taken the course over the past three years. The session will involve civil, military and penal police, fire brigades, municipal guards and official forensic units.</p>
+<p>The Justice minister and Women’s minister Márcia Lopes also signed two ordinances on the issue. One regulates the procedure for reviewing and approving state plans and the Federal District plan to combat violence against women, and Michele Gonçalves dos Ramos said it should make National Public Security Fund resources for that purpose more transparent and faster to apply. The second ordinance creates an interministerial working group to draft a national protocol for care of women victims of sexual violence, intended as a reference for police stations across the country.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-08/violencia-contra-mulher-75-mil-agentes-serao-capacitados" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Violence against women: 7,5 thousand agents will be trained">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Trump to meet US oil executives as Iran war keeps fuel prices high</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US President Donald Trump will meet oil refining executives at the White House on Tuesday as the administration tries to bring down fuel prices that it says have been driven up by the Iran war ahead of November’s midterm elections. White House spokeswoman Taylor Rogers said the president will meet industry leaders “to collaborate on the best ways to increase refining capacity” and lower prices, and the White House said the meeting will include a mix of small, medium and large refiners and distributors.</p>
+<p>The talks come days after Trump announced a deal for a major US stake in Venezuela’s oil reserves. Trump said on Friday that the deal would give “majority US control” of 65 billion barrels of proven Venezuelan petroleum reserves. A White House official said the meeting was “especially timely” as Venezuelan crude flow to US refineries increases. The White House also said Trump is hoping Venezuelan oil can help offset disruption to global supplies caused by the Iran war, as the United States and Iran traded fire on Sunday amid a stalemate.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3365892/trump-meet-us-oil-executives-iran-war-keeps-fuel-prices-high" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump to meet US oil executives as Iran war keeps fuel prices high">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cna">
+  <summary>‘Hazardous’ levels of air quality in parts of Indonesia’s Borneo</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Air pollution in parts of Indonesia’s Central and West Kalimantan provinces on Borneo reached hazardous levels on Monday (Aug 31), with IQAir readings putting Palangkaraya in Central Kalimantan at an AQI of 780 at noon and Pontianak in West Kalimantan at 593. An AQI reading above 300 is considered hazardous.</p>
+<p>Deputy Health Minister Dante Saksono Harbuwono said last week that more than 5 million people on Borneo and Sumatra were directly exposed to the risks of a putrid haze from dozens of fires across the archipelago, and that some 13,500 people were treated for respiratory infections in July and August. In response to the forest fires, Indonesian military and other government agencies have begun restoring ecosystems and optimising water sources in East and North Kalimantan, while a Japan Self-Defense Force transport ship is en route from Hiroshima to Indonesia to aid in firefighting operations.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/indonesia-kalimantan-forest-fires-air-quality-6351716" target="_blank" rel="noopener noreferrer" title="CNA / ‘Hazardous’ levels of air quality in parts of Indonesia’s Borneo">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Noemí Juárez Pérez*: Our main findings</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At the morning press conference of President Claudia Sheinbaum Pardo, Noemí Juárez Pérez, undersecretary of Basic Education of the Government of Mexico, presented the findings of the National Consultation on the use and regulation of electronic devices in Basic Education as more than 23 million girls, boys and adolescents returned to classrooms, alongside about 1.2 million teachers. She said the consultation drew on the views, experiences and daily practices of teachers about how digital devices reach schools, how and when they are used, what pedagogical purposes they serve, and what effects teachers have observed on attention, learning, coexistence and students’ emotional well-being.</p>
+<p>Juárez Pérez said more than half a million teachers from across the country took part and that the results show digital devices are already part of children’s and adolescents’ daily lives and school dynamics. She also said there is still a lack of knowledge about whether official school guidelines are being applied in the states where teachers work, even though at least 14 entities already have regulations or restrictions on cell phone use in schools. She added that upcoming initiatives will include an awareness day on sexual abuse and child maltreatment prevention, the ABC of Emotions strategy and the National Day of Traditional Games.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/31/politica/010a1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Noemí Juárez Pérez*: Our main findings">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="guardian">
+  <summary>Australians missing in the Nepal floods: what we know so far</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The number of Australians reported missing in the Nepal-Tibet border floods remains 43, with most of them pilgrims bound for Mount Kailash; one woman has been taken off the list, but several families are still waiting for word on relatives swept up in the disaster.</p>
+<p>Deadly flash floods and landslides tore through valleys on Wednesday, leaving thousands of people reported missing across Nepal and Tibet, while Nepali and Chinese authorities have confirmed hundreds of deaths. On Tuesday, the Australian tally still stood at 43, most of them travelling with Himalayan Glacier Adventures, Kailash Journeys and the Isha Foundation.</p>
+<p>Cara Severino, 25, is no longer included after the Sydney woman made contact with her parents two days after she was first reported missing. The Australians still unaccounted for include Venkatraman Balakrishnan, 52, and Chitra Venkatraman, 46, a New South Wales couple who were among 15 Australians on a spiritual trip to Mount Kailash with Himalayan Glacier Adventures. Their son, Akash Venkatraman, said his parents planned to leave their riverside accommodation in Syabrubesi before flood waters devastated it.</p>
+<p>Another Himalayan Glacier Adventures group included Shylaja Muralitharan, 42, Chandresekaran Muralitharan, 47, and their children Ashwin, 14, and Aarush, 11. Shylaja’s younger sister, Vaishnavi, said the parents and two children had been training together for the long walk, and that she lost contact with them shortly after breakfast on the morning of the flood.</p>
+<p>The Iyer family — Sreedharan Iyer, 52, Lakshmi Iyer, 50, and their sons Rishab Iyer, 23, and Rudhra Iyer, 20 — were also on a pilgrimage to Mount Kailash with Himalayan Glacier Adventures. The brothers are medical students at the University of Newcastle and members of the West Pennant Hills Cherrybrook Cricket Club in Sydney’s north-west.</p>
+<p>Others still missing include Karan Bhardwaj, a 40-year-old Brisbane-based member of the Royal Australian Air Force; Narayan Panthi, from Brisbane, who Nepali police listed as travelling with Kathmandu Holiday Tours and Travel; and several people linked to the Isha Foundation, including Bharat Mangwani, 42, Sumi Adhikari, 41, and Newcastle woman Reshma Patel, 46. Renee Spry, Suhasini Kandimalla and Kanagamah Sundrasan are also among those named in the missing list.</p>
+<p>There is also uncertainty over Michael Keats. His family said on social media that the 37-year-old from Mollymook in NSW had died, but foreign minister Penny Wong said on Tuesday the Australian government had not yet received official confirmation and that he remained unaccounted for.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/aug/31/nepal-tibet-floods-australians-missing-list-names-what-we-know-so-far-ntwnfb" target="_blank" rel="noopener noreferrer" title="The Guardian / Australians missing in the Nepal floods: what we know so far">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China unveils measures to expand, upgrade consumer goods consumption</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China has set out a new consumer-spending push aimed at lifting retail sales of consumer goods to around 60 trillion yuan by 2030, with seven departments backing measures that target automobiles, home appliances and green, smart and health products after July’s consumption plan.</p>
+<p>The implementation guideline, made public on Monday, was jointly issued by seven government departments, including the Ministry of Commerce and the National Development and Reform Commission. It says China wants to foster 10-trillion-yuan markets in areas such as green, smart and health consumption by 2030, while trillion-yuan product categories including automobiles, home appliances, communications equipment, textiles and clothing are expected to keep growing and remain among the world’s largest.</p>
+<p>The guideline lays out four main tasks: promoting durable goods consumption, improving the quality of everyday consumer goods, supporting specialty products and encouraging demand for upgraded products. It also spells out measures such as expanding automobile consumption across the entire industrial chain, promoting smart home applications, supporting products for elderly people and children, and boosting green, smart and health products. Alongside that, it calls for better urban and rural consumption facilities, stronger product standards, brand development and fiscal and financial support, and tighter market order.</p>
+<p>The new measures come after the release in July of China’s first five-year plan dedicated exclusively to expanding consumption. That plan seeks to better tap the potential of the country’s vast market, optimize the consumption structure and improve people’s livelihoods.</p>
+<p>The latest push also follows this year’s spending support. China plans to earmark 250 billion yuan in ultra-long special treasury bonds for consumer goods trade-in programs and create a 100-billion-yuan special fiscal-financial coordination fund to help expand domestic demand. In the first half of the year, trade-in programs generated 1.1 trillion yuan in sales and benefited consumers on 150 million occasions, according to the Ministry of Commerce. During that period, 3.71 million automobiles, 63.27 million home appliances and 79.1 million digital and smart products were traded in. In the first seven months of the year, total retail sales of consumer goods reached 28.77 trillion yuan, up 1.2 percent year on year.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260831/73fd9057e97845f6af08eba3c44e2ba5/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China unveils measures to expand, upgrade consumer goods consumption">XNAE #1</a><a href="https://english.news.cn/20260831/de3bd27544504853b4a35e52c115b35c/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China unveils measures to expand, upgrade consumer goods consumption">XNAE #2</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Cliff elevator, cable car system benefit commuting students in SW China&#x27;s Yunnan</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">For students in Nizhuhe Village, a cliff elevator, cable cars and shuttle vehicles have turned a half-day trip across a vertical drop of more than 500 meters into a school commute of about 30 minutes in southwest China’s Yunnan Province, with a dedicated passage and staff now part of the route.</p>
+<p>Nizhuhe Village sits at the bottom of the Nizhu River Grand Canyon, while Guanzhai primary school is on the mountain top. Students living at the canyon bottom used to take nearly half a day to travel from home to school. On Aug. 30, 2026, students were seen waiting for cable cars and taking shuttle vehicles on the way to school in Puli Township, Xuanwei City.</p>
+<p>The commuting change came in 2022, when the Nizhu River Grand Canyon scenic area completed and opened. Along with it came a 268-meter-high cliff elevator and a cable car system that were available to local villagers, including students, free of charge. Today, the combination of sightseeing shuttle vehicles, elevators and cable cars has shortened the journey to school to about 30 minutes.</p>
+<p>The route now includes more than just the transport itself. A dedicated passage has been set up for the commuting students, and police officers and dedicated staff members have been deployed along the route. The new system has replaced the long climb and descent that once separated the village from the school, giving students a faster way to get to class across the canyon.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0831/c90000-20494023.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Cliff elevator, cable car system benefit commuting students in SW China&#x27;s Yunnan">PDE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>China will stop Russia from going nuclear, Finland’s Stubb says</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Finnish President Alexander Stubb said China has privately assured Finland that it would not allow Russia to use nuclear weapons, and he said that message offers “pretty good deterrence” against Moscow escalating the war in Ukraine. Stubb said he raised the issue with Chinese Foreign Minister Wang Yi when Wang visited Helsinki on July 5, during talks that also covered Russia’s full-scale invasion of Ukraine and European security. He added that China remains one of Moscow’s most important economic and diplomatic partners.</p>
+<p>Stubb also said Moscow benefits from keeping Europeans focused on the possibility of nuclear escalation or a direct attack on NATO. In the interview, he urged restraint, saying: “Stay calm, stay cool, stay collected, stay vigilant. Don’t dramatize, prepare for the worst in order to avoid it.” He said Russia’s moves toward NATO looked “more like teasing” than preparation for war, while its troops remain tied down in Ukraine.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/china-wont-let-russia-use-nukes-finlands-alexander-stubb-says" target="_blank" rel="noopener noreferrer" title="POLITICO / China will stop Russia from going nuclear, Finland’s Stubb says">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="atlantic">
+  <summary>How the Right Could Actually End Birthright Citizenship</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Trump executive order put birthright citizenship back in play for children like Liza’s newborn, turning a once-settled Fourteenth Amendment guarantee into a fresh legal fight over whether the right can weaken a constitutional rule long treated as definitive.</p>
+<p>Early last year, Liza and her husband were preparing for the birth of their child while facing an unusual fear: that their baby could be stateless. The couple had left Russia for the United States. Liza was in the country on temporary legal status, and her husband was seeking asylum. In theory, they could have applied for Russian citizenship for the baby at the consulate, but Liza said that felt risky because of her husband’s asylum case. Before January 20, 2025, that worry would not have existed: their baby, born in the United States, would automatically have been a U.S. citizen under the Fourteenth Amendment.</p>
+<p>That changed when Donald Trump signed an executive order on the day of his second inauguration. According to the order, after February 19 only children with at least one biological parent who was a U.S. citizen or green-card holder could be legally considered American. Liza worried that if she and her husband were deported, their child could be left without legal protection anywhere. On January 21, she and four other expectant mothers sued, and federal courts blocked the policy within days.</p>
+<p>At the end of June, the Supreme Court ruled in Trump v. Barbara that the order violated the Fourteenth Amendment. But the decision was narrower than many expected: only five justices took that view, while four conservatives would have allowed at least some restrictions on birthright citizenship. That split mattered because administration officials and allies were already signaling they were not done. Vice President Vance said, “We have to keep fighting,” and a month later the White House issued a second, narrower order aimed at certain categories of people, including children born to members of legally designated foreign terrorist groups.</p>
+<p>The broader strategy is not just another executive order. The evidence points to a longer campaign to get the Court to revisit Barbara, much as conservatives spent decades working to overturn Roe v. Wade. Right-leaning law professors helped create doubt around the meaning of “subject to the jurisdiction thereof,” conservative justices cited a “groundswell of new scholarship,” and Republican lawmakers quickly introduced bills and proposals to press the fight in court. For now, the effort lacks the votes to erase Barbara. The unanswered question is whether the right can build enough support, inside and outside the courts, to make that ruling collapse too.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/magazine/2026/10/birthright-citizenship-trump-barbara-supreme-court/688342" target="_blank" rel="noopener noreferrer" title="The Atlantic / How the Right Could Actually End Birthright Citizenship">TA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Sira Rego confronts ultra discourse in Congress: &#x27;I will not discuss whether a child deserves rights&#x27;</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sira Rego used her appearance before Congress on Monday to clash with the harsh anti-accommodation line over children in Ceuta, defending their rights while pressing for quick transfers to the mainland as the city’s reception system remained overwhelmed.</p>
+<p>Rego appeared before the Commission on Youth and Childhood to explain her department’s work in the autonomous city, but her intervention quickly became political. “I will not discuss whether a child deserves rights,” she warned at the start, in a debate shaped by the rejection of accommodation voiced by the right and the far right in recent weeks and by the July 30-31 arrival crisis in Ceuta.</p>
+<p>The minister said the priority was to move minors to the peninsula as soon as possible to “guarantee” their care and ease the collapse. She put the number of children, girls and adolescents in reception centers in Ceuta at 1,478, describing that figure as 50 times above capacity. “Girls and boys are not invaders, but rights-holders,” she said, adding that those who arrived in Ceuta were also victims of abuse and, in some cases, extreme violence.</p>
+<h3>Ceuta becomes the fault line</h3>
+<p>Rego rejected what she called the criminalization of childhood and said she would not help turn the commission into a “resonance chamber for racism.” She argued that racism and fascism are not just another political option and said that no human beings can be treated as having more rights than others. While family reunification remains the priority, she said a minor cannot be returned “without listening to them,” calling that distinction part of the rule of law rather than autocracy.</p>
+<p>The sharpest clash came from Vox’s Blanca Armario, who repeated her party’s line that returning the children to their families in Morocco, or to protection institutions there, was the only acceptable path. She accused Rego of political betrayal and of encouraging a “gigantic process of legal kidnapping” and violating international law. Rego later replied with a reference to a girl fleeing a father who put out cigarettes on her skin, and she also accused Vox of using language that dehumanizes minors.</p>
+<p>Rego also said Spain had sent Morocco 600 files before July 30 to verify the situation of these minors and had still received no response. She added that her department had started the process for an extraordinary 25 million euro fund approved by the Conference on Children and Adolescence, and set out options already discussed with the regions: moving 500 especially vulnerable girls through an entity, bilateral agreements between communities, and foster care, which she said was still being explored.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-08-31/sira-rego-confronta-el-discurso-ultra-en-el-congreso-no-voy-a-discutir-si-un-nino-merece-tener-derechos.html" target="_blank" rel="noopener noreferrer" title="El País / Sira Rego confronta el discurso ultra en el Congreso: “No voy a discutir si un niño merece tener derechos”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Donald trump lake america ontario canada trade war tariffs jd vance g20 latest news updates</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">House lawmakers returned to Capitol Hill after a five-week recess as Republicans sought to move a stopgap spending bill to avoid a possible government shutdown. Funding is guaranteed through 30 September, and House Speaker Mike Johnson wants a bill that would keep spending at current levels until after the November midterms.</p>
+<p>Johnson is expected to bring the measure to the House floor this week under a fast-track procedure that needs a two-thirds majority to pass. Before the Senate left for its August recess, it approved its own continuing resolution to keep the government funded until 11 December, including a provision aimed at preventing political appointees from approving federal grants. The House is also set to leave Washington again at the end of this week for Labor Day recess if it gets through its remaining work.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/aug/31/donald-trump-lake-america-ontario-canada-trade-war-tariffs-jd-vance-g20-latest-news-updates?page=with%3A6a9571868f08187a5f76ff01#6a9571868f08187a5f76ff01" target="_blank" rel="noopener noreferrer" title="The Guardian / Donald trump lake america ontario canada trade war tariffs jd vance g20 latest news updates">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Jordan intelligence chief spearheaded move to arrest US journalist Ali Younes</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jordanian intelligence officers detained American-Jordanian journalist Ali Younes on 17 August after he arrived at Queen Alia International Airport, then questioned him before ordering him to appear before prosecutors in Amman. Middle East Eye said Major General Ahmad Husni, the director of Jordan’s General Intelligence Department, spearheaded the arrest and had signed off on the move. Younes is a correspondent for Drop Site News and has previously worked for Al Jazeera, with other contributions listed to The New York Times, Fox News, CNN and the BBC.</p>
+<p>A separate Ammon News article linked the arrest to alleged “attacks on the Jordanian Armed Forces” and to efforts to “disseminate misleading information originating from a Jewish source (Aaron Magid).” Security officials, according to the reporting, centered their case on Younes’s alleged reposting of an article by Aaron Magid in The American Conservative that questioned US aid to Jordan; the evidence says Jordan has received $33.8bn in American assistance over the past 75 years. Younes’s US legal defence team said he had never attacked the Jordanian armed forces.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/jordan-intelligence-chief-spearheaded-arrest-us-journalist-ali-younes" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Jordan intelligence chief spearheaded move to arrest US journalist Ali Younes">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,axios,el_pais,guardian,scmp,vanguard_ng">
+  <summary>US supreme court allows Trump to keep building $400m White House ballroom</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US Supreme Court has let Donald Trump keep building a $400m White House ballroom while lawsuits continue, giving him a major temporary win even as Chief Justice John Roberts and the court’s three liberal justices warn the project may be unlawful.</p>
+<p>In a 5-4 ruling, the court granted the Trump administration’s request to block a lower-court order that had halted above-ground construction of the ballroom. The majority said it was not deciding the legality of the East Wing project itself; instead, it found that the National Trust for Historic Preservation likely lacks standing to challenge it in federal court. Roberts dissented, calling the construction “likely unlawful,” and wrote that the court was allowing it to proceed “not because that construction is legal,” but because the trust probably cannot bring the case.</p>
+<p>The dispute has moved quickly through the courts. Federal judges had found the project should stop because it did not have congressional approval, and a divided appeals court upheld an order from US District Judge Richard Leon halting above-ground work while allowing below-ground construction to continue. The Supreme Court had already issued a temporary order earlier this month keeping construction moving while it considered the administration’s request.</p>
+<p>The White House and its lawyers have argued that the president has total authority to renovate the White House and other federal buildings, and that the ballroom project is justified by national security concerns. In an August 14 filing, Justice Department lawyers said the work involved “an extraordinary and unlawful injunction” against an “integrated military complex,” including a “totally secure ballroom space” at the East Wing, which they said was “vitally required by national security.” The administration has also said crews are working 20 hours a day on the planned 8,400 square metre ballroom.</p>
+<p>Court documents say the framework is expected to be completed in November, much of the facade by April, and full completion is slated for August 2028. The lawsuit will now return to lower courts, while the work continues. The project has already included demolishing the East Wing, which housed the first lady’s offices and the White House movie theatre.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/31/white-house-construction-on-400m-ballroom-can-go-on-says-us-supreme-court?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / White House construction on $400m ballroom can go on, says US Supreme Court">AJ #1</a><a href="https://www.axios.com/2026/08/31/supreme-court-trump-white-house-ballroom-construction-ok" target="_blank" rel="noopener noreferrer" title="Axios / Supreme Court allows Trump&#x27;s ballroom construction to proceed">Axios #1</a><a href="https://elpais.com/us/2026-08-31/el-tribunal-supremo-autoriza-definitivamente-la-construccion-del-salon-de-baile-de-trump-en-la-casa-blanca.html" target="_blank" rel="noopener noreferrer" title="El País / The Supreme Court definitively authorizes the construction of Trump&#x27;s ballroom in the White House">El Pais #1</a><a href="https://www.theguardian.com/us-news/2026/aug/31/supreme-court-white-house-ballroom-trump" target="_blank" rel="noopener noreferrer" title="The Guardian / US supreme court allows Trump to keep building $400m White House ballroom">Guardian #1</a><a href="https://www.theguardian.com/us-news/live/2026/aug/31/donald-trump-lake-america-ontario-canada-trade-war-tariffs-jd-vance-g20-latest-news-updates?page=with%3A6a95e4918f089f2cda79af9a#6a95e4918f089f2cda79af9a" target="_blank" rel="noopener noreferrer" title="The Guardian / Supreme Court gives Trump go-ahead on ballroom">Guardian #2</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3365903/us-supreme-court-lets-trumps-white-house-ballroom-construction-continue" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US Supreme Court lets Trump’s White House ballroom construction continue">SCMP #1</a><a href="https://www.vanguardngr.com/2026/08/us-supreme-court-allows-trump-ballroom-project-to-proceed" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / US Supreme Court allows Trump ballroom project to proceed">VN #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna,korea_herald,nyt">
+  <summary>Last-minute flood warning saved over 900 Nepal students, school head says</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A last-minute warning gave Rajendra Dawadi barely 14 minutes to empty Tribhuvan Trishuli Secondary School in Bidur, Nepal, before floodwaters swept through the area and erased the building, saving more than 900 students and 16 faculty members.</p>
+<p>Dawadi, the headmaster, said the warning came on Aug. 26 when his accountant ran in shouting, “The flood is coming, the flood is coming!” The accountant had just received a call from a relative in Rasuwa, which was hit first. Dawadi said he immediately told staff to stop classes and ring the bell, then began evacuating the school and instructing buses carrying more students to head for safer ground.</p>
+<p>At the time of the first warning, more than 900 of the school’s roughly 1,600 students were on campus. As panic spread, parents, teachers and students arrived on motorbikes, by bus or on foot to move children to safety. Dawadi said at least one student fainted during the chaos. He said the last bus crossed a nearby bridge about 14 minutes later, just before a wall of water reached the town.</p>
+<p>The school is now gone. Its former location, sits inside the riverbed after flash floods destroyed the building in Nuwakot. Dawadi said the school had been rebuilt after Nepal’s devastating 2015 earthquake, and it stood squeezed between the Trishuli River and a hydropower canal.</p>
+<p>Dawadi told Reuters, “We immediately said: Stop the class, ring the bell.” He also said he wants authorities to rebuild the school in a safe location as soon as possible.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/last-minute-flood-warning-saved-over-900-nepal-students-school-head-says-6352481" target="_blank" rel="noopener noreferrer" title="CNA / Last-minute flood warning saved over 900 Nepal students, school head says">CNA #1</a><a href="https://www.koreaherald.com/article/10858086" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Despite helicopter, drone searches, no meaningful progress in finding missing Koreans in Nepal: official - The Korea Herald">TKH #1</a><a href="https://www.nytimes.com/2026/08/31/world/asia/nepal-floods-teacher.html" target="_blank" rel="noopener noreferrer" title="The New York Times / A Principal Saved 900 Students Before His School Was Washed Away in Nepal">NYT #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Turkish deep-sea search vessel joins efforts to retrieve 20 still missing after Cyprus ferry disaster</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Turkey has sent the deep-sea search and rescue vessel TCG Isin to Cyprus to join efforts to find the 20 people still missing after the Filo Jet passenger ferry capsized off the island’s northern coast. The ferry sank on Sunday about four nautical miles outside Kyrenia, after beginning to take on water while bound for Taşucu on the Turkish mainland.</p>
+<p>Authorities said late on Monday, the first of three days of national mourning in Turkish-held northern Cyprus, that eight people had died and that 241 of the 267 people aboard had been rescued. The Isin was due to arrive on Tuesday and can search up to 3,000 metres below the sea surface. Officials said it was expected to play a key role in recovering the ferry’s voyage data recorder, or black box, which is now seen as important in determining what happened.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/aug/31/turkish-deep-sea-search-vessel-tcg-isin-retrieve-20-missing-cyprus-ferry" target="_blank" rel="noopener noreferrer" title="The Guardian / Turkish deep-sea search vessel joins efforts to retrieve 20 still missing after Cyprus ferry disaster">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="kompas">
+  <summary>Appeal Turns Against Ibam: Sentence Increased, Must Pay Rp 5 Billion</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ibrahim Arief, or Ibam, received a tougher sentence on appeal in the alleged Chromebook procurement corruption case. The DKI Jakarta High Court raised his prison term from four years to five years and added Rp 5 billion in replacement money, in a ruling read on Monday, 31/8/2026, by panel chair Catur Irianto with judges Hotma Maya Marbun and Pandu Budiono. The court also imposed a Rp 500 million fine, payable within one month after the ruling becomes final, and said the appeal requests from both the prosecutor and Ibam’s lawyers were accepted.</p>
+<p>The panel said it was correcting the decision of the Jakarta Central District Court corruption court, case No. 148/Pid.Sus-TPK/2025/PN Jakarta Pusat dated 12 May 2026. It said the earlier four-year sentence did not reflect a proper balance between the defendant’s fault and the goals of punishment. The court also said Ibam was proven to have committed corruption together with others under Article 3 in conjunction with Article 18 of the Anti-Corruption Law and Article 55(1) of the old Criminal Code.</p></div>
+  <div class="source-list"><a href="http://nasional.kompas.com/read/2026/09/01/05174001/banding-jadi-bumerang-bagi-ibam-vonis-diperberat-harus-bayar-rp-5-miliar" target="_blank" rel="noopener noreferrer" title="Kompas / Appeal Turns Against Ibam: Sentence Increased, Must Pay Rp 5 Billion">Kompas #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Chile fines Chinese mafia inmate after cocaine found at maximum-security prison</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Chilean court on Monday fined a Chinese man after officers found cocaine inside Santiago Uno prison, where he was being held on charges of homicide, kidnapping and drug trafficking. Officers searched Haifeng Tang on August 12, a day before his planned move to La Laguna, the maximum-security jail in Santiago. They found two sealed bags holding about a gram of powder, and a field test confirmed it was cocaine. The Seventh Guarantee Court of Santiago set the fine at 71,649 pesos (US$75), or up to six months in prison if he does not pay.</p>
+<p>It was the second such ruling in five involving a Chinese inmate in five months, and prosecutors linked the two men to the same criminal network. Tang also faces charges of weapons possession and criminal association, and prosecutors have identified the victim in the homicide count as another Chinese citizen. Later in August, a judge in Iquique ordered several Chinese defendants in a fraud case sent back from La Laguna to the prison where they had been held in the northern city, more than 1,700 km away.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/diplomacy/article/3365899/chile-fines-chinese-mafia-inmate-after-cocaine-found-maximum-security-prison" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Chile fines Chinese mafia inmate after cocaine found at maximum-security prison">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye,nyt,scmp">
+  <summary>Greece signs $3.5bn air defence deal with Israel</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Greece’s $3.5bn deal with Israel will bring Israeli air-defence systems into Athens’s Achilles Shield project, deepening security ties between the two countries while leaving open how the move will affect Greece’s effort to manage tensions with Turkey.</p>
+<p>Greece and Israel signed the agreement on Monday. Under it, Israel will contribute to an integrated anti-drone, anti-ballistic missile and anti-aircraft defence system that Greece is developing under the name Achilles Shield. The package includes David’s Sling and SPYDER systems from Rafael Advanced Defense Systems, the Barak MX system from Israel Aerospace Industries, and MMR multi-mission radars for air surveillance made by IAI unit ELTA Systems. Greece will also receive a new national command-and-control system developed by Rafael. An additional $26m deal will see Rafael provide Drone Dome systems to protect strategic sites against drones. The system’s total price tag is estimated at $28bn, with completion expected by 2036.</p>
+<p>Israel’s defense ministry said the deal was “the largest defense export deal in the history of Israel-Greece relations, and one of the largest in the history of the State of Israel.” Greece will be only the second customer for David’s Sling after Finland. The system is part of Israel’s integrated air defence and is intended to intercept heavier rockets and some ballistic missiles. The Iron Dome is used against short-range rockets and drones, while Arrow 2 and 3 are used to down ballistic missiles, with Arrow 3 able to shoot down exoatmospheric hypersonic missiles.</p>
+<p>The agreement comes as Greece and Israel’s strategic partnership is “reshaping geopolitics in the Eastern Mediterranean,”. It also lands amid rising tensions between Israel and Turkey, while the Greek government of Prime Minister Kyriakos Mitsotakis has tried to deescalate tensions with Turkey. It remains an open question how Greece’s deepening ties with Israel will affect that strategy.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/greece-and-israel-sign-3-billion-air-defence-deal" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Greece signs $3.5bn air defence deal with Israel">MEE #1</a><a href="https://www.nytimes.com/2026/08/31/world/middleeast/israel-greece-defense-deal.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Israel and Greece Reach $3.5 Billion Defense Deal">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3365876/israel-and-greece-sign-us35-billion-defence-deal-largest-ever-between-two" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israel and Greece sign US$3.5 billion defence deal, largest ever between the 2">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>Mapisa-Nqakula trial: State ‘proves millions changed hands, but not the quid pro quo’</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Pretoria on Monday, Nosiviwe Mapisa-Nqakula’s lawyers asked the Gauteng Division of the High Court to discharge her from a R4.55-million corruption and money-laundering trial, arguing that the State has shown money changed hands but not the exchange that would make it corruption.</p>
+<p>Mapisa-Nqakula, the former defence minister, faces 12 counts of corruption and one count of money laundering linked to her time in office between 2016 and 2019. She has pleaded not guilty. Under Section 174 of the Criminal Procedure Act, her legal team said the case should stop because the evidence is not strong enough for a conviction.</p>
+<p>At the centre of the dispute is businesswoman and SANDF contractor Nombasa Ntsondwa-Ndhlovu, whom the State alleges paid about R4.55-million in bribes to Mapisa-Nqakula. The defence’s core point is that proving corruption requires more than showing that payments were made: it must also be shown that the money was given and received in exchange for a specific action or favour. Siyabulela Mapoma SC told the court there was “absolutely no evidence at all” that Ntsondwa-Ndhlovu paid the money so Mapisa-Nqakula would do, or not do, something for her benefit.</p>
+<h3>The fight over what the evidence proves</h3>
+<p>The defence also attacked the reliability of Ntsondwa-Ndhlovu’s evidence, saying she was the key witness on the alleged payments and that other State witnesses contradicted her in material respects. It argued that the law may allow a conviction on a single witness, but that courts must be cautious, especially where the witness is said to be a Section 204 witness.</p>
+<p>Much of the argument turned on WhatsApp messages and alleged phone calls. The defence said some messages were deleted before being presented as evidence, the people who copied them from Ntsondwa-Ndhlovu’s phone did not testify, and the authenticity of the messages could not be confirmed. It also said there were no WhatsApp call records or independent verification of the alleged calls between the two women.</p>
+<p>Mapoma further argued that alleged payment codes were “a total fabrication” and that Ntsondwa-Ndhlovu had given shifting explanations for their meaning. He also said the State had not established the element of intention by either party. Prosecutor Emile van der Merwe rejected the defence case, saying the witnesses had given an honest account and that the State’s evidence should be heard as a whole. He also argued that if the codes did not mean money, Mapisa-Nqakula was the one who could explain why the monies were not returned.</p>
+<p>Judge Mashudu Munzhelele also intervened during the evidence, asking Ntsondwa-Ndhlovu: “Did you pay because you were expecting to gain favours from the accused?” Judgment on the discharge application is expected on Monday, 7 September 2026.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-08-31-mapisa-nqakula-trial-state-proves-millions-changed-hands-but-not-the-quid-pro-quo" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Mapisa-Nqakula trial: State ‘proves millions changed hands, but not the quid pro quo’">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Poland opens terror probe into fire at factory supplying Ukraine drones</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Poland has opened a terror probe into a fire at the WB Electronics factory in Skarzysko-Kamienna, south of Warsaw, after the site reportedly caught fire shortly after midnight. The Polish National Prosecution Office announced the investigation on Monday, saying it concerns “participation in the activities of a foreign intelligence service directed against the Republic of Poland” and a terrorist offence involving deliberately causing a fire at the factory using a device containing flammable materials. The factory makes key components for drones supplied to the Polish and Ukrainian militaries, and firefighters spent two hours containing the blaze.</p>
+<p>Officials said the country’s Internal Security Agency is assisting police with the investigation. A spokesman wrote on social media that no details have been released to the public at this stage because of their “specific and confidential nature.” WB Electronics is one of Poland’s largest private defence companies and makes loitering munitions, drones, fire-control systems and military-related communication tools and platforms.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/8/31/poland-opens-terror-probe-into-fire-at-drone-factory?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Poland opens terror probe into fire at factory supplying Ukraine drones">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Nueva Escuela Mexicana faces bureaucratic obstacles as it seeks consolidation of eight pedagogical principles</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">More than 23 million preschool, primary and secondary students returned to classes for the 2026-2027 school cycle as the Nueva Escuela Mexicana faced what teachers, school directors and specialists described as a choice between consolidating its eight pedagogical principles — including identity with Mexico, honesty and a culture of peace — or getting stuck in “the bureaucratic structures of the past.” On the same start of the school year, Claudia Sheinbaum was scheduled to give her morning press conference in a school for the first time; on Monday, the “mañanera del pueblo” was to be held at Escuela Secundaria Técnica No. 10 Artes Gráficas in Mexico City.</p>
+<p>Lev Velázquez Barriga, a pedagogy doctor and telesecundaria teacher, said that four years after the NEM began in classrooms, teachers and principals still face administrative burdens that do not allow proper pedagogical work. He pointed to school protocols, which he called “a real nightmare” because every incident involving schools and students must be recorded, and said these reports are required from 1.2 million basic-education teachers in Mexico. Óscar Cortés Jiménez of the Benemérita Escuela Nacional de Maestros said the NEM has an opportunity through its articulating axes, but also must survive under the weight of the Secretariat of Public Education’s bureaucracy.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/08/31/politica/008n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Nueva Escuela Mexicana, en riesgo de quedar atrapada en burocratismos">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="cnn,guardian">
+  <summary>US trade regulator and 22 states accuse Amazon of taking $20bn with secret surcharges</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Federal Trade Commission and 22 states have sued Amazon over allegations that its advertising system used hidden surcharges and auction manipulation to overcharge millions of businesses, putting the retail giant in a fight over whether it secretly raised ad prices and shifted the costs onto shoppers.</p>
+<h3>How the ad auctions are said to work</h3>
+<p>The case focuses on Amazon’s advertising marketplace, which uses a second-price auction system. In that setup, companies bid on different kinds of ads and where they appear, and the winning advertiser is supposed to pay only a cent more than the second-highest bid.</p>
+<p>The lawsuit alleges that Amazon broke that rule. According to the complaint, Amazon began secretly manipulating auction results in 2018 to increase ad prices. The FTC and the states accuse the company of using hidden surcharges and artificial bids to “secretly and systematically overcharge” advertisers on Amazon.com, with the agency claiming Amazon took in more than $20 billion from what it calls an “ad-rigging scheme.” The FTC says 1.2 million advertising customers were overcharged since 2019, including more than 500,000 small and medium-sized businesses.</p>
+<p>The complaint says the alleged higher costs were eventually passed on to Amazon shoppers. Andrew Ferguson, the FTC chair, said advertisers had been “misled into paying significantly higher prices” and that those costs were largely passed on to American consumers, including on groceries and other essential goods sold on Amazon.</p>
+<p>The lawsuit also says Amazon’s advertising business has become a major part of the company’s scale, describing it as the third-largest online advertising marketplace after Google and Meta. The FTC says Amazon generates more than $68 billion in ad revenue on its website.</p>
+<h3>Amazon rejects the allegations</h3>
+<p>Amazon pushed back sharply. In a 3,000-word statement, the company said it “strongly disagrees” with what it called a “misguided” lawsuit. Amazon said the FTC’s claim “fundamentally misunderstands how advertisers operate” and argued that advertisers adjust bids based on real-world performance, not on the mechanics of the auction itself.</p>
+<p>The company also said it shared data with the FTC “on multiple occasions,” but that regulators “have shown little interest in engaging with the facts and appear more focused on trying to secure some sort of monetary victory.” Amazon said the FTC had reviewed about 1.5 million pages spanning six years and was relying on “a handful of simplified communications” to allege companywide deception.</p>
+<p>Amazon also offered its own estimate of the effects of its pricing approach, saying that even under the FTC’s premise, advertisers saved more than $8 billion from 2021 to 2025 because Amazon prioritized ad relevancy rather than selecting ads on bid price alone.</p>
+<p>The states involved also framed the case as a broad coalition effort. Rob Bonta, the attorney general for California, said the lawsuit brought together conservative states, liberal ones and the federal government. Jeff Jackson, the attorney general for North Carolina, said Amazon had manipulated its ad auctions to inflate what sellers had to pay, adding billions of dollars in costs that ultimately get passed on to customers with higher prices.</p>
+<h3>What happens next</h3>
+<p>The federal agency and the states are asking the court to stop Amazon from continuing the allegedly deceptive advertising practices, and to order civil penalties and refunds for advertisers. The case is the third major lawsuit the FTC has filed against Amazon, following earlier actions over Prime subscriptions and privacy-related claims.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/08/31/business/ftc-amazon-lawsuit-pricing" target="_blank" rel="noopener noreferrer" title="CNN / FTC sues Amazon, alleging it overcharged advertisers">CNN #1</a><a href="https://www.theguardian.com/technology/2026/aug/31/amazon-advertising-lawsuit" target="_blank" rel="noopener noreferrer" title="The Guardian / US trade regulator and 22 states accuse Amazon of taking $20bn with secret surcharges">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="yonhap">
+  <summary>Unionized workers at Hyundai Motor accept wage deal</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Unionized workers at Hyundai Motor Co. in South Korea voted to accept this year’s wage deal, the union said Tuesday. The agreement includes a 100,000 won (US$73) increase in monthly base pay. In Monday’s vote, 61.55 percent of 31,166 union members who cast ballots approved the wage agreement between the labor union and the company.</p>
+<p>Under the deal, workers will also receive performance bonuses equivalent to 400 percent of their monthly wages and an additional 12.7 million won in cash. The two sides also reached an understanding to extend the retirement age from 60 to 65 if related laws and regulations are revised. The settlement came after multiple strikes that caused about 120 hours of production disruptions. The labor action included a full-day strike on Aug. 21, the union’s first such walkout in 10 years. Industry sources estimated the strikes led to cumulative production losses of around 55,200 vehicles and lost sales of more than 2.3 trillion won.</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20260901000500315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Unionized workers at Hyundai Motor accept wage deal">YNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>More public control is the way to grow UK economy, Burnham to tell MPs</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham will tell MPs that bringing more essential services back into public control is, in his view, the only way to improve UK growth, as he begins to put a summer’s worth of promises before the Commons and faces early tests on utilities, immigration and electoral reform.</p>
+<p>Burnham will address the House on Tuesday from the frontbench for the first time in 16 years, and six weeks after becoming prime minister. He will use the statement to put public control of services at the centre of his priorities for the coming months, with sources saying he will argue that it can unlock investment, jobs and growth.</p>
+<p>He is expected to say that the cost of everyday services is weighing on family budgets and holding back the economy, and to promise a plan to regain control of those costs. A No 10 source said Burnham is “optimistic about our country’s future” and has “a clear plan for how we turn things round”.</p>
+<p>The speech comes as Burnham weighs legislation that could make it easier to bring struggling utilities such as Thames Water under government ownership. The Guardian reported last week that he was also considering laws to put companies into insolvency proceedings and then take control of them afterwards.</p>
+<p>Burnham will also face decisions on changes to the immigration bill to exempt carers, pressure from MPs to back electoral reform, and an expected ruling on whether more North Sea drilling should be allowed. He will also tell MPs he wants to “bring back hope” in politics and work constructively with opposition parties.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/aug/31/andy-burnham-commons-more-public-ownership-only-way-to-grow-uk-economy" target="_blank" rel="noopener noreferrer" title="The Guardian / More public control is the way to grow UK economy, Burnham to tell MPs">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="nikkei_asia">
+  <summary>Japan ministries seek slew of tax breaks, from bond purchases to wage hikes</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Japan’s government ministries are seeking incentives for bond purchases and growth investment as part of fiscal 2027 tax code changes in Tokyo. The proposals aim to encourage individuals to buy government bonds and businesses to raise employee pay through tax code changes. Efforts to eliminate ineffective tax breaks and improve state finances have made little progress, adding to funding questions.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/politics/japan-ministries-seek-slew-of-tax-breaks-from-bond-purchases-to-wage-hikes" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Japan ministries seek slew of tax breaks, from bond purchases to wage hikes">NA #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="peoples_daily_en">
+  <summary>AI reshaping the job market, creating new opportunities</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">AI is reshaping work across industries, with repetitive and standardized tasks increasingly being assisted or performed by AI while new opportunities emerge in both traditional industries and the AI sector itself. A report released by the World Economic Forum says about 92 million jobs worldwide are expected to be displaced by 2030 due to factors including AI, while 170 million new jobs are expected to be created. The text also points to examples such as an e-commerce platform recruiting an “AI visual designer,” and AI being used in legal work to screen compliance risks and sort relevant laws and regulations.</p>
+<p>New roles are also appearing in China’s job market. Since 2019, more than 30 of the 110 new occupations identified by China’s Ministry of Human Resources and Social Security have been closely related to AI, including AI trainer, robotics product manager, digital human designer and prompt engineer. In 2025 alone, more than 10,000 people in Shanghai took professional skills assessments for AI trainers, and local business executives said the market most needs interdisciplinary talent who understand both AI technologies and specific industry applications.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0831/c90000-20494256.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / AI reshaping the job market, creating new opportunities">PDE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>LoopArena: Benchmarking Models as Runtime Controllers for Loop Engineering</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">LoopArena is a new benchmark for judging whether one model can steer a separate coding agent through a long-running task, and its main result is that even strong controllers still leave a lot of room for improvement in loop control.</p>
+<p>The benchmark was introduced by Yi Wang, Haopeng Zhang, Chengxiang Huang, Rui Dai, Kaikui Liu, Piotr Koniusz and Xiangxiang Chu in an arXiv preprint posted on August 28, 2026. It is aimed at what the paper calls “Loop Engineering,” where developers do not write every prompt by hand but instead set a task goal and criteria for progress while a loop manages repeated rounds of interaction with a coding agent.</p>
+<p>LoopArena splits that job into two roles. The evaluated model is the Controller, which receives a structured summary after each coding round and tells a separate, fixed coding agent, the Worker, what to do next, what to verify, or whether to stop. The point of the benchmark is that a finished end-to-end run does not by itself show whether success came from the loop’s guidance or from the coding agent’s own ability.</p>
+<p>The benchmark tests this control ability in three settings that trade off realism and cost. Type I checks next-step Loop Contract selection without running the Worker during evaluation. Type II repeats control over a selected slice of a full task. Type III evaluates the same kind of control on the full task from its original state. The paper says LoopArena contains 90 Type I questions and 27 paired Type II–Type III task instances.</p>
+<p>In experiments, the strongest observed Strict Success Rate on full tasks was 24.69%, which the authors say leaves substantial room for improvement in long-horizon loop control. Across Controllers, the paired reduction in estimated inference cost averaged 64.4%, and Type II produced a similar ranking to Type III under the main Core criterion, with Spearman’s ρ at 0.9747.</p>
+<p>The paper also notes a boundary on what LoopArena covers: it currently focuses on repository-level coding tasks and a Controller–Worker setup with structured handoffs.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.28281v1" target="_blank" rel="noopener noreferrer" title="arXiv / LoopArena: Benchmarking Models as Runtime Controllers for Loop Engineering">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new robot-policy pretraining recipe, VLAct, tries to improve vision-language-action models by shaping representations rather than just adding more trajectories, and it reports gains on simulated and real-world benchmarks under a 16-GPU, open-data setup.</p>
+<p>VLAct starts from a pretrained vision-language model and continues pre-training it on broad, heterogeneous, multi-embodiment robot data before task-specific fine-tuning. The paper says the goal is to keep the backbone reusable across tasks and embodiments, rather than tying it too tightly to one action head. To do that, it uses shallow-layer protection and caption-mixed pre-training to preserve the original vision-language prior, plus multi-head continuous action co-supervision and a partially unified cross-embodiment action layout to encourage shared action semantics.</p>
+<h3>Results across robot benchmarks</h3>
+<p>In the reported evaluations, VLAct improves downstream performance across multi-embodiment simulation benchmarks, real-world robot experiments, and unseen-embodiment transfer. On LIBERO-Plus and RoboTwin 2.0, it surpasses large-scale industrial VLA systems such as ABot-M0 and LingBot-VLA, with success rates of 82.6% and 92.5%, respectively. On RoboDojo, it scores 10.66 on the average metric and 7.60% success, ranking sixth among all policies by success rate and outperforming all explicitly designated world-action-model entries on both metrics.</p>
+<p>The strongest transfer result comes on RoboCasa-GR1, a humanoid embodiment never seen during continued pre-training. With only 20% of downstream trajectories, VLAct already outperforms the full-data GR00T-N1.6 baseline. The paper frames that as evidence that better continued-pretraining design can matter independently of raw data scaling.</p>
+<p>The reported results use fully open-source data and only a 16-GPU training setup, and the models and training pipelines are open-sourced.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.27550v1" target="_blank" rel="noopener noreferrer" title="arXiv / Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Diamond-topology Aware Retrieval and Tuning for Self-Distillation of Multi-Turn Tool-Calling Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">DART-SD tries to change how multi-turn tool-calling agents are distilled: the ByteDance and University of Science and Technology of China authors train on recovery steps after a failure point they call the Critical Topological Breakpoint, aiming to preserve valid reasoning prefixes while improving policy diversity.</p>
+<p>The preprint argues that common Behavior Cloning, supervised fine-tuning, and standard reinforcement-learning approaches flatten tool use into a linear sequence. For tasks with order-independent sub-goals, the authors say the true solution space forms a diamond lattice, so forcing it into monolithic trajectories can penalize legitimate alternative paths. To address that, DART-SD builds an Interaction-State Transition Graph from teacher rollouts, replays failed student rollouts in the same state space, and identifies the first transition from a projectable to a non-projectable state as the CTB.</p>
+<p>From there, the framework retrieves success-supported recovery references rather than concatenating full reference traces to the student prefix. The training loss is then applied only to assistant tokens generated after the CTB and before the final answer, while the retained prefix, user messages, tool observations, and final answer receive zero weight. The authors describe this as localized correction rather than global forcing, with the goal of protecting valid exploration while steering the model back toward a successful path.</p>
+<p>They report experiments on the FTRL dataset and four out-of-domain benchmarks: BFCL, ToolHop, τ-bench, and RoTBench. According to the preprint, DART-SD outperformed traditional full-trajectory baselines and also beat supervised and reinforcement-learning baselines across Qwen3-4B and Qwen3-8B in Table 1, while reducing redundant tool calls and extending valid interaction prefixes. FTRL, the training set, includes more than 2,000 automatically constructed tool-use environments with verifiable feedback and covers Single, Para-Single, Multi, and Para-Multi task structures.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.18524v1" target="_blank" rel="noopener noreferrer" title="arXiv / Diamond-topology Aware Retrieval and Tuning for Self-Distillation of Multi-Turn Tool-Calling Agents">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Agentic Artifact Creation: Systems, Evaluation, Principles, and Opportunities</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A survey of 259 works maps a fast-growing set of AI systems that do more than generate drafts: they build deliverables step by step, revise them as evidence arrives, and still struggle with whether the final artifact is coherent, repairable, and fairly evaluated.</p>
+<h3>What counts as agentic artifact creation</h3>
+<p>The survey defines <strong>agentic artifact creation</strong> as stateful construction in which an AI system materially constructs or revises a deliverable and intermediate observations redirect later work. It says the process links an operational representation of the artifact, a construction policy, and runtime verification whose feedback can redirect later actions.</p>
+<p>To draw that boundary, the authors reviewed 259 works available through August 20, 2026: 230 systems that met the definition and 29 benchmarks of agentic artifact construction. They searched arXiv, Google Scholar, Semantic Scholar, ACM DL, and IEEE Xplore from January 2023 onward, and they also maintain a curated paper list on GitHub.</p>
+<p>The survey organizes the field into six artifact families: textual, 2D visual, audio, video, spatial, and behavioral. It includes mixed-initiative systems in which human input changes later system-mediated artifact work, but excludes generic problem-solving agents and systems that only consume or evaluate artifacts. Across families, it argues that construction difficulty depends not just on modality, but on how tightly decisions are coupled and whether failures become visible while they are still repairable.</p>
+<h3>How the survey says these systems should be judged</h3>
+<p>A major focus is evaluation. The survey says evaluation can target the delivered artifact, the construction trajectory, or the agentic system itself. To support a claim, an evaluator has to match a target with an evidence channel, an evaluator type, and a metric or aggregation rule. The authors note that benchmark coverage is still sparse in audio, video, and spatial creation, so the landscape includes named protocols released with core systems as well as more ordinary benchmark setups.</p>
+<p>Examples in the survey include MLR-Bench and DRACO for textual creation, AgenticVBench for video, AuthorBench for spatial creation, and SWE-bench for behavioral software repair. It also lists broader evaluation methods for textual and visual grounding, source quality, editability, and rendering, and for audio and video composition, playback, physical checks, and repair.</p>
+<p>The survey also warns that learned judges may add little independent evidence when they share the generator’s preferences or blind spots. In its framing, a system may compile, render, or score well and still fail source evidence, intended use, or reproducibility.</p>
+<h3>Principles and open problems</h3>
+<p>From those cases, the authors propose four design principles: <strong>externalize commitments</strong>, <strong>define control boundaries</strong>, <strong>make feedback actionable</strong>, and <strong>revalidate affected state</strong>. In plain terms, later decisions should be tied to addressable artifact state; delegation and tool use should have clear boundaries; feedback should point to repairs a system can actually make; and any change should trigger selective rechecking of the affected state.</p>
+<p>They contrast this with systems where commitments are omitted, observations arrive too late, or review feedback cannot be turned into a bounded fix. They also frame these principles as inspectable control relations, not as a maturity ladder or mandatory pipeline.</p>
+<p>The survey’s open problems follow that same logic. It points to global coherence under decision interdependence, targeted repair when a system is diagnosing its own work, system self-evolution across episodes, human authority under agentic delegation, and reliable evaluation of open-ended artifacts. Its bottom line is that the field is moving from direct generation toward construction systems whose value depends on whether they can preserve intent, expose failures early, and revise the right parts of an artifact without losing the rest.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.28122v1" target="_blank" rel="noopener noreferrer" title="arXiv / Agentic Artifact Creation: Systems, Evaluation, Principles, and Opportunities">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Code-as-World preprint proposes executable code as a way to represent physical worlds, aiming to give vision-language models a more explicit basis for quantitative physical reasoning from videos and descriptions than simple recognition or explanation can provide.</p>
+<p>The report argues that modern vision-language models can describe physical events but often lack explicit representations of object states, physical parameters, and governing dynamics. Code-as-World is presented as a compact, quantitatively grounded, and controllable abstraction that encodes physical composition, dynamic evolution, and visual appearance as executable code.</p>
+<h3>Agentic discovery from partial observations</h3>
+<p>To build these representations from multimodal inputs such as natural-language descriptions or real-world videos, the system uses an agentic discovery loop inspired by abductive reasoning. In that loop, an agent proposes a world hypothesis, executes it, renders it, verifies it against the evidence, and then iteratively refines it.</p>
+<p>The paper says this process is implemented as a propose–instantiate–execute–render–verify cycle, with an iteration budget of up to five rounds in the reconstruction experiments. It also says the loop was compared with one-shot generation and Best-of-5 sampling under matched evaluation budgets.</p>
+<p>As a downstream use, verified executable worlds are used as scalable physical supervision for training vision-language models on quantitative physical reasoning. The task is to infer measurable quantities such as object size, displacement, velocity, and acceleration from monocular video rather than answer only semantic questions about what is happening.</p>
+<p>The preprint reports that Code-as-World-VL achieved state-of-the-art performance on QuantiPhy and surpassed leading proprietary models. It also says Code-as-World-VL-9B outperformed substantially larger models, including Gemini-3.1-Flash, on QuantiPhy, which the authors present as evidence that executable world representations can serve as a scalable foundation for physical intelligence.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.27549v1" target="_blank" rel="noopener noreferrer" title="arXiv / Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>J-Zero: Unified Challenger--Solver--Judge Co-Evolution from Zero Data</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">J-Zero is a new self-evolving language-model framework that claims to let a Challenger, Solver, and Judge improve each other from zero data, aiming to push performance in both verifiable and unverifiable tasks while addressing whether learning signals can keep pace without human labels.</p>
+<p>The KAIST authors, Gyouk Chu, Myeongho Jeon, and Eunho Yang, present Judge co-adaptation from Zero data, or J-Zero, as a way around the limit they see in unverifiable domains, where a Judge scores answers in place of a verifier. In their setup, the Challenger and Solver co-evolve adversarially: the Challenger generates harder tasks, and the Solver learns to answer them better. At the same time, the Judge is not fixed. It is co-adapted during the loop so that evaluation improves along with the two policies it supervises.</p>
+<p>The paper says the Judge learns from preference pairs whose ordering is known from how the answers were produced, rather than from the Judge’s own scores. One pair compares the Solver’s answer with the Challenger’s, since the Solver is meant to answer well and the Challenger is meant to make the task difficult. Another compares the Solver’s decomposed-and-recombined answer with its one-shot answer, on the idea that the subtask-based version should be easier to solve well. The authors describe this as a unified Challenger–Solver–Judge co-evolution framework for self-improvement across both domains.</p>
+<p>J-Zero also claims measurable gains. The preprint reports average improvements of 4.2 points on verifiable domains and 8.0 points on unverifiable domains. It says the system keeps improving through at least ten iterations, while the baselines degrade after two. The authors further say their analysis identifies Judge co-evolution as the key component for sustaining improvement across iterative rounds.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.26582v1" target="_blank" rel="noopener noreferrer" title="arXiv / J-Zero: Unified Challenger--Solver--Judge Co-Evolution from Zero Data">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Revisiting Local Context for Long-Horizon Streaming 3D Reconstruction</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Streaming 3D reconstruction from extremely long videos is being pushed toward a strictly local temporal window, with ABot-Recon trying to keep camera-motion and scene-geometry estimates stable under bounded memory and computation while avoiding the drift that grows as sequences get longer.</p>
+<p>The model comes from AMAP CV Lab, affiliated with Alibaba Group, and it takes a different route from streaming systems that rely on persistent long-range memory. Instead, it keeps learned temporal context local and makes each prediction in local reference frames over fixed temporal ranges, so the per-step task stays the same even as the stream grows.</p>
+<h3>Local context instead of long-range memory</h3>
+<p>The paper frames the problem around a familiar failure mode: early streaming models can run causally with finite context buffers or compact recurrent states, but their estimates often deteriorate as sequences grow. More recent methods try to stabilize long-horizon reconstruction by coupling short-range context with persistent or multi-level long-range memory.</p>
+<p>ABot-Recon drops that learned long-range state. It caches KV features from only the preceding 11 frames, giving it a fixed 12-frame temporal horizon, and predicts a point map in the current camera coordinate system together with an adjacent-frame relative pose. Global camera poses and geometry are then recovered by sequential composition of those local measurements.</p>
+<p>Because the predictions stay reference-frame-consistent, the paper says they are equivariant under changes of reference frame. That is what lets the system assemble a global trajectory from local outputs rather than asking the model to carry an ever-expanding temporal memory.</p>
+<h3>How the model is kept stable</h3>
+<p>ABot-Recon is not just a local predictor; it also adds a small set of mechanisms to curb drift. A lightweight temporal refiner improves relative rotations using recent visual and motion context, and a composition-aware pose loss supervises multi-step pose composition rather than treating each adjacent pair in isolation.</p>
+<p>The training objective also keeps the usual local geometric supervision: point-map loss, surface-normal loss, and confidence loss. In the method description, the authors say the fixed window means memory stays O(K) and temporal-attention computation scales as O(NK) over a sequence of N frames, which is part of the case for a simple streaming backbone.</p>
+<p>The paper says this design can be trained on short sequences and applied to ultra-long streams. It also notes that the same local formulation is compatible with standard attention implementations, and that cached states outside the window are discarded rather than preserved in a persistent state.</p>
+<h3>What the benchmarks showed</h3>
+<p>The evaluation covers camera pose estimation and dense 3D reconstruction on long-sequence benchmarks including VBR, KITTI, Oxford Spires, 7Scenes, and TUM-Dynamic. On Oxford Spires, ABot-Recon reports an ATE of 4.35 m and an RPE-R of 0.12°, which the paper says is about a 40% reduction in both errors relative to the best prior results.</p>
+<p>The discussion also says that adding a loop-closure backend further reduces Oxford Spires ATE to 4.02 m. In that framing, loop closure is an optional long-range refinement layer, while the learned streaming backbone stays local and sequence-length-independent.</p>
+<p>For dense 3D reconstruction, the paper says the method preserves coherent global structure while maintaining aligned local geometry across scene scales, including compact indoor scenes, dynamic RGB-D sequences, and larger landmark-scale environments. It also says increasing the training clip length from 32 to 128 frames further reduces both ATE and relative-pose errors, while keeping the local pose-prediction window unchanged.</p>
+<p>Taken together, the preprint argues that persistent learned long-range memory is not required for ultra-long streaming reconstruction. Its core claim is that long-horizon performance can come from a short-context model, as long as the local predictions are designed to be accurate and composable.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.27529v1" target="_blank" rel="noopener noreferrer" title="arXiv / Revisiting Local Context for Long-Horizon Streaming 3D Reconstruction">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Puro-2B: Poor Lab&#x27;s Qwen2-1.5B Trained on RTX 5090 within $5090</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new pretraining recipe called Puro-2B trains a collection of 2B models from scratch on consumer-grade RTX 5090 GPUs, and the authors say it can bring dense billion-parameter pretraining into a few-thousand-dollar range while still nearing Qwen2-1.5B and Qwen2.5-1.5B performance under their protocol.</p>
+<p>The paper says the models were trained on up to 1.4 trillion tokens with FP8 precision on an RTX 5090 cluster, using predominantly open-source datasets. The authors frame the work as an attempt to lower the cost barrier around language-model pretraining, which they describe as a major reason the field has been out of reach for many academic and open-source groups.</p>
+<p>They report that their best checkpoint cost less than $6.9K to train and approaches Qwen2.5-1.5B performance under their evaluation setup. A separate cost scaling law derived from the Puro-2B collection suggests that about $4.4K, below the paper’s $5,090 target, is enough to reach Qwen2-1.5B performance. In the paper’s tables, the $4.4K run exceeds Qwen2-1.5B on the reported average score, while the $6.9K run comes closer to Qwen2.5-1.5B.</p>
+<p>The recipe combines several pieces the authors say are central to the cost reduction: hardware selection, low-precision training, hyperball optimization, curriculum model averaging, and the data recipe. They also say the RTX 5090 cluster is a practical training platform for this workload, despite hardware limits such as smaller memory and the lack of NVLink. Their evaluation compares Puro-2B against models including Qwen2-1.5B, Qwen2.5-1.5B, Gemma-2-2B, Llama-3.2-3B, Yulan-Mini-2.4B, SmolLM3-3B-Base, MiniCPM5-1B-Base, and MobileLLM-R1-950M-base.</p>
+<p>The paper also says it provides two additional results beyond the recipe itself, but the evidence does not spell those out here.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.27370v1" target="_blank" rel="noopener noreferrer" title="arXiv / Puro-2B: Poor Lab&#x27;s Qwen2-1.5B Trained on RTX 5090 within $5090">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>The leap second is dead. Long live the leap hour?</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">World timekeepers are weighing an immediate end to the leap second, with a vote due in October, after researchers warned that the next adjustment could have to run backward — a first that could unsettle clocks, computers and critical infrastructure.</p>
+<p>The leap second has been used 27 times since the 1970s to keep Coordinated Universal Time aligned with Earth’s uneven rotation, even though the practice was already set to end by 2035. But authorities are now considering scrapping it sooner because scientists say there is a 30% probability of a negative leap second by 2035, which would make UTC skip a second instead of add one.</p>
+<p>That has pushed timekeepers to propose a leap hour instead. Under that plan, clocks would be realigned only when the two timescales drifted apart by 3,600 seconds. Member states of the General Conference on Weights and Measures (CGPM) will vote on the resolution at their 28th meeting outside Paris on 13–15 October.</p>
+<p>The concern is not just theoretical. The last leap second was added in 2016, and researchers say such adjustments can disrupt systems that depend on precise synchronization, including electrical grids, telecommunications, financial systems and the Internet. Different organizations already handle leap seconds differently: Google “smears” the extra second across the day, others add it to a specific minute, and some exchanges alter trading times to avoid the 61-second minute.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02669-0" target="_blank" rel="noopener noreferrer" title="Nature / The leap second is dead. Long live the leap hour?">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Why are rich people so pessimistic? What the numbers say</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">People in richer Western countries often sound gloomier about the future than people in poorer places, and the numbers suggest wealth alone does not explain it: age, culture, income, and how much influence people think they have all shape expectations.</p>
+<h3>Why wealth does not map neatly onto optimism</h3>
+<p>Polls cited in the piece show how strong the mood can be. In 2026, two out of five US respondents said they thought the United States would not exist in 2276, its 500th year. In another poll, a majority expected that by 2050 the country would be less important, more politically divided, and economically weaker. The United Kingdom and France also ranked well below the global average in a 2025 survey of views on economic prospects.</p>
+<p>But a UNICEF study spanning 55 countries found that people’s feelings about the future varied sharply even when they faced shared challenges. Optimism depends less on objective facts than on where people live, their income, culture and age. It also says optimism is not a rational forecast of coming reality; instead, it is a mood or attitude about the social or material future.</p>
+<p>That helps explain why optimism is more common in low- and middle-income countries. Four in five young Indonesians, aged 15–24, said the world is becoming better with each generation, compared with 42% of young people in France. Age matters too: with each year, people are 1% less likely to think the future will be better, and 55 is presented as the point at which pessimists become the majority.</p>
+<p>The pattern is not just about personal finances. People may feel happier as they get richer, yet also become more pessimistic about their country and the world. Optimism is strongest where people expect improvement and believe they have some agency over what comes next.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02687-y" target="_blank" rel="noopener noreferrer" title="Nature / Why are rich people so pessimistic? What the numbers say">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Order from disorder: do we need a new law of physics?</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new book by Robert Hazen and Michael L. Wong argues that the natural world does not only run downhill toward disorder: it also has a recurrent tendency to build order, and that physics may need a second arrow of time to explain it.</p>
+<p>The pair focus on the second law of thermodynamics, which says energy dissipates over time and entropy increases. In their framing, that is the familiar “arrow of time” behind events such as a snowman melting or organic matter decaying, as chemical bonds break and atoms spread into soil, air and water. But Hazen and Wong say that is only half the story.</p>
+<p>Their case is that order has repeatedly emerged from simple, randomly distributed beginnings — in the creation of elements through nuclear fusion, the formation of chemical compounds and the evolution of intelligent life. They argue that this tendency is so widespread that there “must be a second arrow of time” describing “the universal tendency for certain systems to display increases in order”. They want guiding principles that explain complexity in evolutionary systems, both living and inert.</p>
+<p>To measure that order, they propose “functional information”, estimated by comparing the number of forms that exist with the number that are theoretically possible. In their view, order rises when emergent forms occupy a smaller share of all possible configurations, as with human language, where particular sounds became useful for communication out of many possibilities.</p>
+<p>The proposal is engaging and grounded in some peer-reviewed literature, but it is not settled. The authors acknowledge counterarguments and say they have not found “a satisfying solution” to all of them. A major difficulty is practical: measuring functional information in natural systems is not straightforward, even before deciding whether increasing order is really a new law of nature.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02685-0" target="_blank" rel="noopener noreferrer" title="Nature / Order from disorder: do we need a new law of physics?">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A “quantum bath” puts quantum entanglement on autopilot</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Physicists at the Institute of Science and Technology Austria have shown a fully autonomous way to entangle separated qubits using a “quantum bath” of correlated light, a step that could matter for future quantum computers even though the method is still less efficient than active-control approaches.</p>
+<p>The experiment, published in *Physical Review X*, is described as the first demonstration of a prediction proposed more than 20 years ago. It addresses a central problem in quantum computing: future systems may need to connect widely separated modules through distributed entanglement, but until now that has generally required active control and repeated measurements.</p>
+<p>Previous attempts to entangle distant qubits usually followed one of two routes. One sent a single, actively controlled photon from one qubit to another. The other had each qubit emit a photon and then matched the two photons in an effort to generate entanglement. That second approach was recognized by the 2022 Nobel Prize in Physics, but it still depends on repeated measurements and post-selection, and it does not always produce entanglement successfully.</p>
+<h3>A bath that does the work</h3>
+<p>Alejandro Andrés-Juanes and professor Johannes Fink, working with international collaborators, developed a different setup. Their system uses a quantum bath — the qubits’ environment — made from correlated particles of light that automatically brings distant qubits into synchronization. In a prototype device, the researchers used a shared source of correlated light particles to entangle two separated qubits, experimentally realizing a concept that had remained theoretical for more than two decades.</p>
+<p>The team says the approach is meant to bridge a gap between continuous-variable entangled states, which can be produced efficiently, and discrete-variable entanglement, which stationary qubits can use for practical applications. In Andres-Juanes’s words, the aim was to overcome the mismatch between what is readily available and what is practically useful. Because the entangled state is stabilized remotely, the method does not require active control or measurement.</p>
+<p>To confirm that the qubits were synchronized inside the quantum bath, the researchers used quantum tomography, taking measurements lasting only 20-80 nanoseconds. Fink said the bath becomes the source of entanglement and creates a new ground state through a continuous stream of correlated photons, so the entangled qubit state remains available as a resource for further processing.</p>
+<p>The result is promising, but the paper says it is not yet as efficient as actively controlled methods. The researchers report that their method currently transfers about 10% of the bath’s available entanglement. Even so, they say the prototype could provide new opportunities for quantum-optics experiments and help efforts to expand quantum processors.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260830000002.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A “quantum bath” puts quantum entanglement on autopilot">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover two superconducting states hiding as one</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In niobium diselenide (NbSe2), researchers at the Hebrew University of Jerusalem found that a material once thought to show a single superconducting gap actually contains two different superconducting orders that interact so strongly they appear as one. The study was led by PhD. student Shahar Simon and MSc. student Maya Klang under Prof. Oded Millo and Prof. Hadar Steinberg of the Racah Institute of Physics and the Center for Nanoscience and Nanotechnology. The work, published in *Physical Review Letters*, used highly sensitive tunneling spectroscopy measurements.</p>
+<p>The researchers said the same concealed behavior also appears in the closely related material TaS2. By using a model with two distinct superconducting orders, they said they could explain the detailed superconducting energy spectrum seen in earlier experiments more accurately, as well as how the materials behave under magnetic fields. The findings also suggest that bulk NbSe2 may contain three interacting superconducting orders.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260828005222.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover two superconducting states hiding as one">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover diamonds can generate electricity</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the University of Hong Kong said ultrathin, highly flexible diamond membranes can produce a measurable piezoelectric response, challenging a scientific assumption that had stood since the early 1900s. The work was led by Professor Zhiqin Chu of HKU’s Department of Electrical and Computer Engineering and Professor Yuan Lin of the Department of Mechanical Engineering, Faculty of Engineering. Diamond had generally been classified as non-piezoelectric and was usually used only as a structural support in microelectromechanical systems, but this result suggests it can generate electricity when mechanically deformed.</p>
+<p>To test the idea, the team used a recently developed edge exfoliation method to make an ultrathin, flexible polycrystalline diamond membrane. When they deliberately flexed it, they observed stable voltage signals, and they carried out mechanical cycling experiments under controlled conditions to check that the output was genuine and not from environmental interference or triboelectric effects. The researchers also used first-principles calculations, which pointed to asymmetry at grain boundaries inside the membrane as the source of the effect.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260829035223.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover diamonds can generate electricity">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
