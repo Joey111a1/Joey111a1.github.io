@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-09-02</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-09-02</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Russia kills at least 12 on sixth night of drone attacks on Kyiv</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 12 people were killed in and around Kyiv overnight as the Ukrainian capital endured a sixth consecutive night of Russian drone and missile attacks. Eight of the dead were reported in Kyiv, including seven at a railway depot on the city’s left bank, and four more were killed in Boryspil, east of the city, in strikes that began around 2.30am after hours of air alerts. Regional officials said a further four people were killed in other parts of Ukraine.</p>
+<p>Ukraine’s air force said Russia attacked 28 locations, focusing on Kyiv and Odesa and their surroundings. It said air defences shot down five Iskander ballistic missiles, two Banderol and five Kalibr cruise missiles, and 187 of 218 drones. Volodymyr Zelenskyy said “a significant number of jet-powered drones and ballistic missiles were used in the attack” and said Russia was taking advantage of a shortage of US-made Patriot interceptors.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/sep/01/russia-kills-sixth-night-drone-attacks-ukraine-kyiv" target="_blank" rel="noopener noreferrer" title="The Guardian / Russia kills at least 12 on sixth night of drone attacks on Kyiv">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian,middle_east_eye">
+  <summary>Iran president offers olive branch even as US restarts attacks</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran and the US traded fresh strikes around the Strait of Hormuz and beyond on Sunday and Monday, while President Masoud Pezeshkian offered a conditional opening to Donald Trump, leaving the question of whether the fighting will ease or intensify unresolved.</p>
+<p>The exchange followed a weekend in which, as The Guardian put it, the two sides fired on each other for the first time in a month. The US military said it struck rocket launchers on Larak Island in the strait of Hormuz on Sunday, in its first strikes on Iran since July, after it detected that the Iranians were planning to deploy fresh mines in the waterway.</p>
+<p>Tehran responded by launching missiles at US sites in Jordan, which were intercepted, and at the United Arab Emirates, which said it had stopped an Iranian drone over its territorial waters. On Monday, Donald Trump threatened further action, telling Fox News: “We’re going to hit them hard. There will be a response.” The strikes 24 hours later were presented as that response.</p>
+<h3>The Strait of Hormuz remains the center of the fight</h3>
+<p>The immediate military clash is tied to the Strait of Hormuz, a waterway that before the war accounted for a fifth of the world’s seaborne energy supply. Washington claimed Iranian control over the route had been loosened by repeated US attacks on Iranian missile launchers and radars, while Trump last week said the US navy had cleared mines from the strait for the first time since the conflict started on 28 February. Iran rejected that claim as lies.</p>
+<p>Iranian state TV gave its own account of how the fighting escalated on Sunday, saying a tanker caught fire after hitting two Iranian naval mines while trying to pass through the southern side of the strait close to Oman. Officials later said Iran had targeted three ships trying to use the southern route, which Tehran says is unauthorised. The Islamic Revolutionary Guard Corps warned that other ships violating its rules would face the same fate and said compliance with its regulations for passage through the strait was mandatory.</p>
+<h3>Pezeshkian offers a conditional opening</h3>
+<p>Against that backdrop, Pezeshkian tried to signal restraint. Middle East Eye said he offered an olive branch to Trump even after several soldiers and civilians were killed in a US strike on Larak Island. Speaking on Monday before travelling to Bishkek for a Shanghai Cooperation Organisation summit, Pezeshkian said Iran was “not looking for war” but would “never sit still in the face of any aggression”.</p>
+<p>He also drew a line around any future response. According to the Fars news agency, he said Iran would give a decisive response if attacked again. At the same time, state media reported that he said Iran would immediately reciprocate if the US fulfilled its commitments under an interim deal signed in June. The Iran presidency’s website quoted him saying: “I state explicitly that if the United States returns to its commitments under the aforementioned memorandum of understanding, the Islamic Republic of Iran will immediately take reciprocal action.”</p>
+<h3>Diplomatic pressure and economic strain</h3>
+<p>Iran also turned to the UN after the strike. In a letter to UN Secretary-General Antonio Guterres, Tehran’s deputy permanent representative and ambassador to the UN, Gholamhossein Darzi, urged the Security Council to demand that Washington end its attacks. He described the strikes as “a clear violation of the sovereignty and territorial integrity” of Iran and accused the US and others involved of war crimes and crimes against humanity in the war on Iran. He also said Iran’s forces “would not hesitate” to respond to any further strikes.</p>
+<p>The wider cost of the war is already showing up in shipping data. Middle East Eye said the number of vessels sailing through the Strait of Hormuz changed little on Monday, with preliminary Kpler tracking showing five commodity vessels passing through: four entered the waterway and one exited. One of the vessels that entered was an empty handy-sized gas tanker travelling via the Iranian route, while the other three were laden dry bulk carriers.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/sep/01/us-iran-military-strikes-live-updates?page=with%3A6a9702568f08b75e8aebce9f#6a9702568f08b75e8aebce9f" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran military strikes live updates">Guardian #1</a><a href="https://www.middleeasteye.net/news/trump-ignores-generals-he-threatens-hit-iran-hard" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Iran president offers olive branch even as US restarts attacks">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="dawn">
+  <summary>Mir Raza murder case: Judicial commission records statements, MLO says he was ‘under no pressure’ during autopsy</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The judicial commission probing Mir Raza Ali’s death heard from the first autopsy doctor, police officials, nursery workers, charity volunteers and family members on Tuesday, as it tried to piece together whether the killing was properly investigated and whether the post-mortem findings were handled correctly.</p>
+<h3>Hearing opens with multiple witnesses</h3>
+<p>The one-member commission, headed by Sindh High Court Justice Omar Sial, recorded testimonies in Karachi from a medico-legal officer, police officials, two volunteers of a charity organisation, gardeners and members of the aggrieved family. It also summoned several other people, including the victim’s business partner, friends and police officials, to appear before it on Sept 3.</p>
+<p>The provincial government had formed the commission to examine the circumstances leading to the death of young entrepreneur Mir Raza Ali, determine whether medical and police officials had been negligent during the investigation, and recommend further investigation, forensic analysis or legal and departmental action.</p>
+<h3>MLO defends the autopsy</h3>
+<p>Medico-legal officer Dr Osama Sheikh, who conducted the first autopsy, told the commission he had not been under any influence or pressure and had not mentioned suicide in his report. He also said that after completing his MBBS in 2016, he was appointed through the Sindh Public Service Commission in 2019, joined the police surgeon’s office in 2021 and was posted as an MLO at Jinnah Postgraduate Medical Centre.</p>
+<p>Responding to questions, Dr Sheikh said he had conducted around 100 post-mortems so far and added that a sweeper used to be present during such procedures. Justice Sial asked why burn marks on the deceased’s hands and other parts of the body, as well as fractures, had not been mentioned in the report. Dr Sheikh replied that there were no burn marks and that the change in skin colour was due to decomposition, and he said he had found no visible fractures.</p>
+<p>The commission, however, expressed serious displeasure over what it saw as unsatisfactory answers. It questioned how the body had decomposed so quickly and why the MLO had been able to identify only a bullet wound during the procedure. Justice Sial also asked whether the autopsy had been conducted by the sweeper and pointed out that the final report of the first autopsy differed from the initial report and that the handwriting in the two reports did not match.</p>
+<p>Dr Sheikh maintained that he had conducted the autopsy and acknowledged that the handwriting in both reports was his. He said the final report of the first post-mortem was issued after the body had been exhumed and a second autopsy had been conducted, and after the police surgeon had raised 14 objections to the first post-mortem.</p>
+<h3>A case shaped by competing versions</h3>
+<p>The hearing also brought in more details from people linked to the recovery of the body and the police response. Nursery employees Yasir and Qaiser said they had informed police after spotting the body, called the police helpline 15, and saw two policemen arrive on a motorcycle about 15 minutes later, followed by a police van. They said police recorded their statements under Section 161 of the CrPC three days later and that officers used to be present at the nursery’s main entrance for around 20 days a month.</p>
+<p>Two Edhi Foundation volunteers, Mohsin and Javed, told the commission they reached the site at around 1pm after being informed by their head office. They said the body was lying face down and that when they turned it over they noticed a bullet wound.</p>
+<p>Police officials also testified. ASI Nadeem Mughal said he was directed from Gulistan-i-Jauhar police station to Jinnah Postgraduate Medical Centre and handed over samples collected during the autopsy to the SIO of Ferozabad police station, Shabbir Laghari. ASI Azhar Abbas said he shared pictures of the body with the SHO and duty officer after reaching the crime scene. Another policeman, Mohammad Arif, said he tried to record the victim’s fingerprints through the Talash search app but could not do so because of decomposition.</p>
+<p>The case has been marked by disagreement from the start. Ali’s family believed he had been kidnapped, tortured and murdered, while police initially built the case around the possibility that he died by suicide. The background to the commission included a Karachi court order on Aug 6 allowing exhumation and a second autopsy, followed by changes to the medical board, objections from the family, the restoration of the original board and the body’s exhumation on Aug 8. The next day, the investigating team was reconstituted and a murder charge was added to the FIR.</p>
+<p>On Aug 19, Ali’s parents wrote to Chief Minister Murad Ali Shah seeking his direct supervision of the murder investigation and asking for an inquiry into the previous team. The provincial government then announced the judicial commission on Aug 23, but the family’s counsel later objected and moved the Sindh High Court, seeking an independent multi-agency JIT instead.</p>
+<p>The commission has now summoned more people, including the victim’s business partner, friends and police officials, to appear before it on Sept 3.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2026610/mir-raza-murder-case-judicial-commission-records-statements-mlo-says-he-was-under-no-pressure-during-autopsy" target="_blank" rel="noopener noreferrer" title="Dawn / Mir Raza murder case: Judicial commission records statements, MLO says he was ‘under no pressure’ during autopsy">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Police arrest 34 after deadly gang shootout in eastern Netherlands</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Dutch police said they arrested 34 suspects after a drug-related shooting in Overasselt, a village in the east of the Netherlands near the German border, where a 51-year-old security guard was killed and two police officers were injured. Regional police chief Jolanda Aalbers said on Tuesday that a “large group” of masked men opened fire around 4am (02:00GMT) when officers arrived at a house to investigate reports of suspicious activity. She said the officers’ injuries were not life-threatening.</p>
+<p>Aalbers added that several weapons, data storage devices and vehicles were seized at the scene. Regional prosecutors said some of those arrested were from the Netherlands, Belgium, France and Algeria, and that there were indications the shooting was tied to a “long-running” conflict. They said the same house had been shot a dozen times in a single incident last year, and two people were convicted in that case.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/1/police-arrest-34-after-deadly-gang-shootout-in-eastern-netherlands?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Police arrest 34 after deadly gang shootout in eastern Netherlands">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="vanguard_ng">
+  <summary>Lassa fever deaths hit 252 as Nigeria records 14 new cases</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nigeria’s Lassa fever outbreak had reached 252 deaths from 1,035 confirmed cases as of epidemiological week 33, with a case fatality rate of 24.4%, the Nigeria Centre for Disease Control and Prevention said. The agency said 14 new confirmed cases were recorded between August 10 and 16, 2026, up from four in the previous week, with new cases reported in Ondo, Bauchi, Edo and Benue states. It also said 23 states and 117 local government areas had recorded at least one confirmed case this year.</p>
+<p>The NCDC said five states — Ondo, Bauchi, Taraba, Edo and Benue — accounted for 87% of confirmed cases nationwide, with Ondo alone responsible for 33%, followed by Bauchi at 25%, Taraba at 13%, Edo at 10% and Benue at 6%. It said the most affected age group was 21–30 years, patients ranged from one to 93 years, and 54 healthcare workers had been affected cumulatively in 2026, though no new healthcare worker infection was reported during week 33.</p></div>
+  <div class="source-list"><a href="https://www.vanguardngr.com/2026/09/lassa-fever-deaths-hit-252-as-nigeria-records-14-new-cases" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / Lassa fever deaths hit 252 as Nigeria records 14 new cases">VN #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian,nyt,scmp">
+  <summary>UK ex-PM Starmer to quit parliament, focus on ‘international affairs’</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Keir Starmer is leaving parliament after 11 years as MP for Holborn and St Pancras, saying he wants to concentrate on international affairs, defence, security, trade and technology, while his departure sets up a likely byelection in a seat where the Greens think they can compete.</p>
+<p>In an interview with the Camden New Journal, Starmer said it was “right to step down” because his priorities had changed. He said he would “focus on other things” and that would mean international affairs “including defence, security, trade and technology in a fast-changing world,” while also continuing work on combating violence against women and girls.</p>
+<p>He added that, once someone has been prime minister, “it’s important to answer the question: what are you going to do next?” On that basis, he said, “Having decided I’m going to concentrate on international affairs, I think it’s right to step down [as MP].” He also said he would not back any candidate seeking Labour’s nomination to replace him, saying the constituency party had “many, many fantastic people” and “no shortage of first class candidates.”</p>
+<h3>What he pointed to in the constituency</h3>
+<p>Starmer used his announcement to highlight changes he said the Labour government had made in Holborn and St Pancras. He said ten breakfast clubs were being opened across the constituency, with five opened in April and five more to follow when schools went back. He also pointed to free school meals for 4,600 children, an increase in the number of GPs, and the lifting of the two-child benefit cap, which he said would affect 2,500 children.</p>
+<p>He also cited the Renters’ Rights Act, saying it would affect 16,500 renters in Holborn and St Pancras, and said workers would benefit under the Employment Rights Act. Starmer said these were among the changes he wanted to leave behind as he moved on from Westminster.</p>
+<h3>A byelection fight is already being discussed</h3>
+<p>A related report said his departure would trigger a byelection, and election experts are already treating Holborn and St Pancras as a potentially difficult seat for Labour to defend. Owen Winter of the Economist pointed to local election results in May showing Labour on 38%, the Greens on 29%, the Conservatives on 10%, Reform on 9% and the Lib Dems on 7%. He also cited post-Burnham models showing Labour on about 41% and the Greens on about 22%.</p>
+<p>Rob Ford said Starmer’s departure left “a tricky first by-election defence” in a Labour seat where the Greens would “fancy their chances.” He noted that Labour’s vote fell 17 points to 48% in the 2024 general election, while the Greens and left independent Andrew Feinstein together won 29%. Ford said a high-profile Green candidate could win with a 10-point swing from Labour.</p>
+<p>Josh Housden said Holborn and St Pancras sits within the London group of seats where the Greens are likely to come second to Labour under normal circumstances. Ford also pointed to the 2026 Camden local elections, where the Greens were first or close second in all but three of the 11 wards wholly or partly in the seat.</p>
+<h3>What happens next</h3>
+<p>A related report said Green party leader Zack Polanski is understood to be considering a run for the central London seat. The contest will now turn on who Labour selects and whether the Greens can turn their local strength into a parliamentary win.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/live/2026/sep/01/andy-burnham-statement-commons-prison-release-farage-healey-defence-latest-news-updates?page=with%3A6a96bd5d8f08e4482e4fb592#6a96bd5d8f08e4482e4fb592" target="_blank" rel="noopener noreferrer" title="The Guardian / Andy burnham statement commons prison release farage healey defence latest news updates">Guardian #1</a><a href="https://www.theguardian.com/politics/live/2026/sep/01/andy-burnham-statement-commons-prison-release-farage-healey-defence-latest-news-updates?page=with%3A6a96ddc28f08ec0a6cdfdea0#6a96ddc28f08ec0a6cdfdea0" target="_blank" rel="noopener noreferrer" title="The Guardian / Andy burnham statement commons prison release farage healey defence latest news updates">Guardian #2</a><a href="https://www.nytimes.com/2026/09/01/world/europe/keir-starmer-uk-prime-minister-resigns-mp.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Starmer, No Longer Prime Minister, Says He Will Leave Parliament">NYT #1</a><a href="https://www.scmp.com/news/world/europe/article/3366013/uk-ex-pm-starmer-quit-parliament-focus-international-affairs" target="_blank" rel="noopener noreferrer" title="South China Morning Post / UK ex-PM Starmer to quit parliament, focus on ‘international affairs’">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Nelson Mandela Bay needs nearly R1bn to tackle water losses and ageing pipes</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nelson Mandela Bay&#x27;s water and sanitation crisis has deepened into a major repair and funding problem, with leaks, outages and sewage spills affecting residents, rivers and beaches while the metro, civil society and human rights officials point to a large bill and no quick fix.</p>
+<p>The metro is facing up to 1,000 water-related complaints a week, a backlog of more than 5,000 leak complaints and a network in which 4,700km of pipeline needs replacement. Officials have put the cost of fixing leaks at R426-million and the pipe replacement programme at another R495-million as they try to curb water losses that run up to 60%.</p>
+<p>Water outages have also become more common, with some residents left without water for weeks. On the sanitation side, malfunctioning pump stations and wastewater treatment plants are sending raw sewage into beaches, estuaries and riverine areas. The crisis drew scrutiny from the South African Human Rights Commission in July, after an investigation report described it as a material public-health risk with human-rights implications.</p>
+<h3>A repair bill measured in hundreds of millions</h3>
+<p>The size of the problem is not limited to a few broken pipes. The city’s water boss, Barry Martin, said stopping the 60% water loss would require R426-million for leak repairs and R495-million for a pipe replacement programme. The metro’s political head for infrastructure and engineering, Buyelwa Mafaya, said the leaks and water losses needed urgent attention and that contractors had been appointed to work across six clusters.</p>
+<p>The city is also dealing with vandalism and theft that undermine the system. According to the evidence, criminals steal electrical cables, which affects pumping. Bloom, during an oversight visit to the Nooitgedagt and Groendal water treatment plants, said huge volumes of treated water were being lost through leaks and raised concerns about sewage seeping into rivers.</p>
+<h3>Sewage spills, failing plants and polluted waterways</h3>
+<p>The Nelson Mandela Bay Civil Society Coalition released its CSC Metro Rough Guide on 25 August, and the metro’s wastewater system is failing. It describes continual spills polluting the environment and threatening public health, livelihoods, natural ecosystems, the local economy and what it calls the environmental inheritance of future generations.</p>
+<p>The report’s description is blunt: in townships, it says, people see stepping-stones across algae-infested sewage waters streaming down roads, homes and factories flooded, stormwater drains dumping sewage into rivers and across beaches, and air that continually smells of sewage. It also says the Driftsands Wastewater Treatment Works, once considered the metro’s “gold standard” plant, has been largely non-operational for three to four years after thieves stole its underground electricity supply cable. Internal cables serving plant equipment were also stolen, despite 24-hour security.</p>
+<p>As a result, raw sewage flows through a 3km sand canal and is discharged into the sea from rocks between the Willows and Willow Grove resorts. Additionally, the Cape Recife plant, which previously discharged raw sewage into the sea, has improved after recent upgrades, but its settlement ponds are now threatened by an advancing sand corridor. A water-recycling project meant to supply one megalitre a day to Pine Lodge, Nelson Mandela University and Humewood Golf Course is also inactive because of failures at the plant and in the conveyance system.</p>
+<p>The city’s largest pump station, the Creek, receives wastewater from Summerstrand, Humewood, Central, Korsten and Westering. It has been hit by regular cable theft, and a recently installed perimeter fence is repeatedly damaged and breached by traffic failing to make the turn on the highway.</p>
+<h3>Pressure for fixes and a new water source</h3>
+<p>The response now includes both repairs and broader questions about where future water will come from. In August, municipal spokesperson Sithembiso Soyaya said oversight visits were being planned and that the media would be informed once they were completed. Bloom suggested that coastal municipalities should consider desalination at scale as an alternative source of water, saying the city needed “a new source of water” and that lack of water was “a job destroyer”.</p>
+<p>Martin said his two-year-old proposal for the city to look into desalination had been shot down. Mafaya said the National Treasury had not supported the proposal when it was submitted, but she welcomed Bloom’s mention of desalination. She said the municipality was addressing water issues on the R75 and Mission Road, where it would draw water from the Orange River to Nooitgedagt, but added that the budget remained a major obstacle to doing the work needed.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-09-01-nelson-mandela-bay-needs-nearly-r1bn-to-tackle-water-losses-and-ageing-pipes" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Nelson Mandela Bay needs nearly R1bn to tackle water losses and ageing pipes">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Mainland China stepping up preparations for Taiwan blockade, report says</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Taiwan’s defence ministry warned that the People’s Liberation Army is stepping up preparations for a blockade of the island and is sharpening its own plans to break such a cordon in response. The assessment was included in the ministry’s “2026 China Military Power Report”, which was submitted to the legislature this week вместе with its five-year force development plan and next year’s proposed defence budget. The report also said recent PLA exercises were increasingly focused on the “joint...”</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/military/article/3366011/mainland-china-stepping-preparations-taiwan-blockade-report-says" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Mainland China stepping up preparations for Taiwan blockade, report says">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>“Extremely positive”, first year of the new Court: Aguilar</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The renewed Supreme Court of Justice of the Nation marked its first year on Tuesday with 163 public sessions and more than 2,600 matters resolved, and its president, Hugo Aguilar Ortiz, called the “new Court”’s performance “extremely positive.” Aguilar said the court has protected Indigenous and Afro-Mexican rights, cleared overdue multimillion-dollar tax disputes, and inherited more than 1,400 overdue matters, some filed for up to six years, while only 56 remained at the start of this month.</p>
+<p>He said the court also confirmed tax credits of more than 48,326 million pesos in cases involving Ricardo Salinas Pliego’s companies. Among its rulings, it set criteria on money laundering, child sexual abuse, shell companies, vicarious violence and access to water. Mandatory preventive detention remains pending, and Aguilar said he hoped to resolve it this year while extending the court’s approach to the rest of the Federal Judicial Power, where delays and heavy workloads persist.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/09/01/politica/012n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / “Extremely positive”, first year of the new Court: Aguilar">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israel imposes curriculum on 45,000 Palestinian students in East Jerusalem</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli authorities are imposing their curriculum on more than 45,000 Palestinian students in state-run schools in East Jerusalem, with the change set to take effect from Tuesday. Middle East Eye said the move will affect about 38 percent of all Palestinian students and will cover all new first grade and seventh grade classes opening in the state education system. It also said the number of Palestinian students studying the Israeli curriculum rose from 10,347 in 2020-21 to 27,041 in 2025-26 and is now above 45,000.</p>
+<p>Maarouf al-Rifai, the Palestinian Authority’s Jerusalem Governorate spokesperson, called the decision a dangerous escalation and said it was unprecedented since 1967, when Israel occupied East Jerusalem. He said the move was a direct attack on Palestinian national and cultural identity in Jerusalem, pointing to what he described as the marginalization of core topics in Palestinian narrative and history, including the Nakba, prisoners and Jerusalem itself.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israel-imposes-curriculum-45000-palestinian-students-jerusalem-crackdown" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel imposes curriculum on 45,000 Palestinian students in East Jerusalem">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Venezuela-U.S. Oil Deal Aims to Boost State Revenue and Energy Production</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Venezuela’s new oil agreement with the U.S. is being presented as a way to raise state revenue and production while preserving control over reserves, but its promised output, earnings and long-term impact remain the key unanswered points.</p>
+<p>In a message to the nation on Aug. 29, Acting President Delcy Rodríguez said the joint project covers oil fields and greenfield blocks in the Orinoco Oil Belt and is designed to strengthen Venezuela’s position as a global energy power. She said the 25-year binational plan would develop 17 strategic fields, preserve state sovereignty over the reserves, and channel resources into public services, health care, education and national infrastructure.</p>
+<h3>Revenue, output and sovereignty</h3>
+<p>Petroleum engineer German Marquez-Hill, in an exclusive interview with teleSUR on Monday, said the contractual model of the Venezuela-U.S. oil agreement guarantees energy sovereignty and economic benefits. He said the Constitution is clear that “the deposits belong to the nation,” and said the agreement is backed by reform of the Hydrocarbons Law.</p>
+<p>Marquez-Hill said the Venezuelan state has granted exploitation rights under royalties of up to 16% and a 34% income tax, with estimates based on a oil price of US$65 per barrel after operating costs. He added that the oil industry reaches many parts of the economy, making the agreement a factor in boosting local economies.</p>
+<p>The figures attached to the deal vary across the evidence. Rodríguez said the 25-year arrangement would produce 1.5 million barrels a day and that, at around $65 per barrel, Venezuela expects to receive roughly $19 per barrel, for total state revenues of US$209.335 billion. Marquez-Hill said the project contemplates 17 strategic fields and a production target exceeding 1.5 million barrels per day. The evidence also says OPEC puts Venezuelan oil production at 1.2 million barrels per day, and that it could reach 2 million barrels per day by 2030 under the agreement.</p>
+<p>Rodríguez said Venezuela would keep ownership and sovereignty over its resources while using capital, technology and operational capacity to recover a sector she described as severely affected by sanctions. She also thanked President Donald Trump, Secretary Marco Rubio and both governments’ teams for reaching the agreement.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-u-s-oil-deal-aims-to-boost-state-revenue-and-energy-production" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela-U.S. Oil Deal Aims to Boost State Revenue and Energy Production">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Cuba Begins the 2026-2027 School Year with Joy and Resilience</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Cuba opened the 2026-2027 school year across the island on Tuesday with more than 1.4 million students returning to class, while officials tried to keep teaching moving through energy shortages, fuel limits and transportation problems.</p>
+<p>The main opening ceremony was held in Havana’s Prado People’s Council and was presided over by President Miguel Díaz-Canel and Prime Minister Manuel Marrero. Authorities presented the return to school as a national moment for children and families, with students going back to friends, routines, games and the expectation of new experiences. They also said the right to education would not be given up despite the strain on daily life.</p>
+<p>Education Minister Naima Trujillo said efforts were underway to ensure a “dignified and sustainable” school year and to address the main needs of children and adolescents within the resources of each institution. She stressed the need to innovate, adapt and tailor solutions to each school, neighborhood, municipality and province. The minister said the key challenge was organizing schooling in a reality that goes beyond the classroom and directly affects families, and she pointed to fuel problems and electricity shortages as reasons to look for alternatives that would keep classes going while respecting the conditions of each territory.</p>
+<p>Higher education is also resuming with specific measures. Enrollment for new students, readmission and renewal will be organized from students’ places of residence, either in person or online, depending on what each university, Municipal University Center and Municipal University Branch can support. University education will combine blended and distance learning, with in-person periods when conditions allow, especially for daytime students.</p>
+<p>The adjustments are meant to preserve continuity in education by using available resources more flexibly rather than applying the same solution everywhere. The new term is being shaped by the need to keep teaching active while adapting to shortages and uneven local conditions.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/cuba-begins-the-2026-2027-school-year-with-joy-and-resilience" target="_blank" rel="noopener noreferrer" title="Telesur English / Cuba Begins the 2026-2027 School Year with Joy and Resilience">TE #1</a><a href="https://www.telesurenglish.net/cuba-opens-school-year-for-1-4m-amid-tightened-u-s-blockade" target="_blank" rel="noopener noreferrer" title="Telesur English / Cuba Opens School Year for 1.4M Amid Tightened U.S. Blockade">TE #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Chile Unemployment Hits Record, Highest Level in Five Years</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Chile’s unemployment reached a historic level in the March-May 2026 rolling quarter, with 981,315 people out of work, or 9.4%, according to the National Statistics Institute (INE). The number of unemployed workers was up 63,000 from the same period a year earlier. The rise drew political and social reaction, and Economy and Mining Minister Daniel Mas said Chile “keeps paying the costs of years of bad public policies.” INE figures also showed a sharp gender gap: female unemployment was 10.55% compared with 8.6% for men, while male labor force participation was 71.6% versus 53.6% for women.</p>
+<p>A later INE Chile post dated August 28 said the unemployment rate was 9.5% in the May-July 2026 quarter, and that unemployed persons increased 10.4%, including those on leave, at 9.4%, and those seeking work for the first time, at 20.9%. The government has pointed to the reduction of the legal workweek from 45 to 40 hours and the increase in the minimum wage as factors, while saying those measures made hiring more expensive and slowed job creation.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/chile-unemployment-hits-record-5-years" target="_blank" rel="noopener noreferrer" title="Telesur English / Chile Unemployment Hits Record, Highest Level in Five Years">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Cuba Receives 7 Tons of Aid From NGO Flotilla Open Arms</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Cuban authorities received Open Arms activists at the Havana International Cruise Terminal on Monday afternoon, as the NGO’s sailboat *Astral* brought 7 tons of aid to the island. The vessel had departed Cancún on August 29 with medical supplies and powdered milk destined for hospitals in Havana. It was the group’s second solidarity shipment to Cuba since the initiative began in July.</p>
+<p>The flotilla, called *Rumbo a Cuba*, is backed by Mexican solidarity organizations and hospital institutions from Mexico, and it says its aim is to help break the economic blockade imposed by the United States. Open Arms founder Óscar Camps addressed the press on arrival and said the team had seen shortages in local hospitals during its July mission, which is why it returned with supplies. The reception included Havana Vice Governor Reinol García, Vice President of the Cuban Institute of Friendship with the Peoples Noemí Rabaza, and a representative of Mexico’s diplomatic corps accredited in Cuba.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/cuba-receives-7-tons-of-aid-from-ngo-flotilla-open-arms" target="_blank" rel="noopener noreferrer" title="Telesur English / Cuba Receives 7 Tons of Aid From NGO Flotilla Open Arms">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israel kills children in intensifying attacks on Gaza over past day</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli attacks on Gaza escalated over the last 24 hours, with the Palestinian health ministry reporting five Palestinians killed. On Tuesday morning, at least seven air strikes hit an area west of Gaza City within 10 minutes, killing a child, while Israeli soldiers opened fire in Deir el-Balah and killed another child. In Gaza City, Al Jazeera described chaotic scenes after what it called “intense” attacks, with 10 blasts heard in al-Kateeba, and Palestinian journalist Abdulrahman Ismail said the strikes hit an area near a field hospital and thousands of tents sheltering displaced Palestinians.</p>
+<p>A separate thread in the reporting says the humanitarian situation is worsening. The World Health Organization warned on Tuesday that the quality of water reaching people had deteriorated in recent months and that diarrhoea cases were surging. Reinhilde Van de Weerdt, the WHO’s representative in the Palestinian territories, said water quality and contamination remained a major issue, while data from the United Nations, European Union and World Bank show Israel has destroyed or damaged nearly 90 percent of water and sanitation infrastructure in Gaza.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israel-kills-children-intensifying-attacks-gaza-past-day" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel kills children in intensifying attacks on Gaza over past day">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>House vote stopgap funding bill us federal government shutdown mike johnson trump ballroom politics latest news updates</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Kathy Hochul, New York’s governor, criticized Donald Trump for withholding $87 million in counterterrorism funds from the state, calling it a betrayal of 9/11 victims. At a press conference on Tuesday alongside Mayor Zohran Mamdani, Hochul said, “Don’t undermine our public safety efforts. Don’t defund the police who thwart terror attacks. Don’t play political games with people’s lives.” Mamdani said the funding is essential to keeping New Yorkers safe and said it supports 12 bomb squads across the city, among other programs.</p>
+<p>The US Department of Homeland Security told CBS News that Hochul “is manufacturing a funding crisis” and accused Hochul and Mamdani of “[shielding] criminals from the law.” Hochul responded, “New York works with federal law enforcement every day to take dangerous criminals off the streets. So spare us the theatrics,” adding: “And while you’re here, cut the $87 million check you owe our cops and counterterrorism officials.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/sep/01/house-vote-stopgap-funding-bill-us-federal-government-shutdown-mike-johnson-trump-ballroom-politics-latest-news-updates?page=with%3A6a9743988f08f08ddc7029de#6a9743988f08f08ddc7029de" target="_blank" rel="noopener noreferrer" title="The Guardian / House vote stopgap funding bill us federal government shutdown mike johnson trump ballroom politics latest news updates">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Afghan-origin doctor, policeman among eight held; meth worth Rs900m seized</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A police narcotics task force in Karachi, working with a federal civilian intelligence agency, raided a warehouse in Mehran Town, Korangi, on Tuesday and arrested eight people it described as members of an alleged international narcotics network. Police said they recovered 50kg of crystal meth, or ice, worth Rs900 million.</p>
+<p>West Deputy Inspector General Irfan Ali Baloch said the group was allegedly moving drugs from Pakistan to Thailand and Malaysia in bulk, and that the seized consignment was being prepared for export to the Philippines. He said the narcotics had been hidden in crates of tiles and marble, with links in Karachi, ice sourced from Chaman in Balochistan, and hawala transactions routed through Lahore. Among the eight were Dr Noor Ahmed Khilji and Garan Khan, both of Afghan origin and holders of Pakistani CNICs, and Mohammed Kamran, a police constable posted in Malir. Baloch said Nazir Soomro was the principal accused, while Shahid Mastoi and Sheikh Khalid handled the warehouse and storage arrangements.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2026679/afghan-origin-doctor-policeman-among-eight-held-meth-worth-rs900m-seized" target="_blank" rel="noopener noreferrer" title="Dawn / Afghan-origin doctor, policeman among eight held; meth worth Rs900m seized">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israel warned Turkey against moving south in Syria. It did so anyway</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Turkey moved into Deir ez-Zor over the weekend to establish a temporary bridge for civilians crossing the Euphrates River. Turkish soldiers, working with Syrian counterparts, quickly erected the floating bridge, raised Turkish and Syrian flags, and tested it by driving Turkish armoured vehicles across it. The move came two weeks after Israel bombed a Syrian base in the north to draw a red line against Turkish troops moving south, but Ankara advanced anyway and Israel did not respond militarily.</p>
+<p>Last month, Benjamin Netanyahu said Israel would not tolerate Turkish military entrenchment moving southward, and his spokesperson said Israel would not allow Turkey to entrench itself in Syria and move steadily south toward Israel’s border. Israeli officials had also claimed Turkey was preparing to move into the Abu al-Duhur military airbase, but Turkish and Syrian officials, as well as US envoy Tom Barrack, denied that assertion. Turkish officials later said the lack of an Israeli response to the Deir ez-Zor move showed Netanyahu had tried to inflame tensions for political gain ahead of Israel’s October general election.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israel-warned-turkey-against-moving-south-syria-it-did-anyway" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel warned Turkey against moving south in Syria. It did so anyway">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Taxi Bomb Hits Police Station in Northeast Colombia</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A taxi rigged with explosives detonated outside the Los Patios police station on Monday night, wounding one auxiliary officer and sending three civilians to hospital, authorities confirmed. The blast caused severe structural damage to the facility and cut electricity in the affected area of Los Patios, which borders Cúcuta in Norte de Santander department. Investigators have opened a formal inquiry to identify those responsible for the attack.</p>
+<p>The explosion came after a previous car-bomb blast on July 31 near the Norte de Santander Police command in Cúcuta, which injured at least eight officers and three civilians and was followed by additional detonations. A note accompanying Norte de Santander hosts several illegal armed groups, including the National Liberation Army (ELN) guerrilla and Front 33 of the FARC dissidents.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/taxi-bomb-hits-police-station-in-northeast-colombia" target="_blank" rel="noopener noreferrer" title="Telesur English / Taxi Bomb Hits Police Station in Northeast Colombia">TE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China unveils measures to expand, upgrade consumer goods consumption</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China unveiled measures on Monday to expand and upgrade consumer goods consumption, with an implementation guideline aiming to lift total retail sales of consumer goods to around 60 trillion yuan, or about 8.85 trillion U.S. dollars, by 2030. The guideline was jointly issued by seven government departments, including the Ministry of Commerce and the National Development and Reform Commission, and calls for fostering 10-trillion-yuan markets in green, smart and health consumption by 2030.</p>
+<p>It sets out four major tasks: promoting durable goods consumption, improving everyday consumer goods, supporting specialty products and fostering demand for upgraded products. The measures also include expanding automobile consumption across the whole industrial chain, promoting smart home applications, supporting products for elderly people and children, and improving urban and rural consumption facilities, product standards, brand development, fiscal and financial support, and market order. Separately, China plans to earmark 250 billion yuan in ultra-long special treasury bonds for consumer goods trade-in programs and create a 100-billion-yuan fiscal-financial coordination fund. In the first half of the year, those trade-in programs generated 1.1 trillion yuan in sales and benefited consumers on 150 million occasions, while 3.71 million automobiles and 63.27 million home appliances were traded in.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0901/c90000-20494427.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China unveils measures to expand, upgrade consumer goods consumption">PDE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="axios">
+  <summary>USPS whistleblower warns new ballot system could fail</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A U.S. Postal Service whistleblower is alleging the agency defied court orders while rushing to build a new ballot system that could reject thousands of mail ballots. The whistleblower says the Postal Service built the system in weeks, not the nine months to a year normally needed for a project of this complexity. The system stems from an executive order signed by President Trump that directed the federal government to generate lists of confirmed U.S. citizens eligible to vote and for the postmaster general to propose a rule that USPS will not transmit ballots from people not on their state list. The rule appeared in the Federal Register late last month.</p>
+<p>Sen. Richard Blumenthal, D-Conn., sent a letter Monday to Postmaster General David Steiner with the whistleblower report and asked the agency to explain its process and whether it followed court orders to stop work on the new system. He called the changes a “deeply troubling departure” from USPS’s traditional role in U.S. elections, and wrote that the agency has historically issued only election-mail guidance, not requirements that could lead it to refuse to deliver ballots. House Oversight Committee ranking member Robert Garcia also said his office received the report and called the plan “unconstitutional and dangerous.”</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/09/01/usps-whistleblower-mail-ballots-warning" target="_blank" rel="noopener noreferrer" title="Axios / USPS whistleblower warns new ballot system could fail">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,guardian">
+  <summary>Ed Miliband promises ‘comprehensive reset’ of UK policy toward Israel</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ed Miliband’s first Commons appearance as foreign secretary brought a sharper UK line on Israel, with plans to curb British involvement in West Bank settlements prompting Gideon Saar to threaten retaliation and leaving open how far London will go over the E1 project.</p>
+<p>Miliband told MPs he would introduce a “comprehensive reset” of policy on Israel “in the coming weeks” and said the government would examine how to stop UK companies “financing, constructing or advertising new settlements” in the occupied West Bank. He said, “I want a comprehensive reset of our approach on these issues because it is necessary, it is high time.”</p>
+<p>The immediate focus was Israel’s E1 settlement plan east of Jerusalem. Last month, Israel opened tenders for the construction of some 1,200 homes there, and The Guardian said the tenders covered around a third of the 3,400 homes planned for the project. Critics say the development would effectively divide the West Bank in two and isolate East Jerusalem.</p>
+<p>Miliband called the plans “the crossing of a red line,” saying they “cut[] through the heart of the West Bank and risk[] making a Palestinian state unviable.” He also said the plans were “illegal under international law.” UK Prime Minister Andy Burnham warned that Israel’s statement about E1 could “imperil or end” the two-state solution in the Middle East.</p>
+<p>Israel’s foreign minister, Gideon Saar, responded by warning that his country would retaliate if the UK imposed sanctions. Speaking to the Hebrew-language website Ynet, he said: “If Britain acts against Israel, Israel will act against Britain.” He added: “If they act, I think they will be making a big mistake.”</p>
+<p>The dispute sits against wider pressure on ministers to go further over settlements. Miliband said the government was looking at its wider economic relationship with the occupied territories, while Stephen Doughty, a Foreign Office minister, said the government had condemned “the settler violence, the settler terrorism” and was looking at “further sanctions” and measures to ban trade in goods with illegal settlements.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cr7degkkv5go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Israel warns it will retaliate if UK imposes sanctions">BBC #1</a><a href="https://www.theguardian.com/politics/2026/sep/01/ed-miliband-promises-reset-of-uk-policy-toward-israel" target="_blank" rel="noopener noreferrer" title="The Guardian / Ed Miliband promises ‘comprehensive reset’ of UK policy toward Israel">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="korea_herald,yonhap">
+  <summary>S. Korea dispatches disaster relief team to Nepal to support flood recovery efforts - The Korea Herald</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Korea has sent a 44-member disaster relief team to Nepal after devastating floods and mudslides, with the mission focused on search-and-rescue work and on finding nine South Koreans still unaccounted for.</p>
+<p>The foreign ministry said the Korea Disaster Relief Team, made up of personnel from the ministry, the Korea International Cooperation Agency, fire authorities and other agencies, departed shortly before midnight Tuesday aboard a KC-330 Cygnus multirole tanker transport aircraft. It is expected to arrive in Nepal at 5:55 a.m. local time with 700 pieces of equipment and five search-and-rescue dogs.</p>
+<p>The team is due to stay for about 10 days, though a ministry official said the deployment could be extended if necessary. The KDRT is a statutory emergency response unit that provides disaster relief, search and rescue, medical assistance and other support overseas, and the ministry said this will be its 12th deployment to a disaster site.</p>
+<h3>Search efforts in Rasuwa district</h3>
+<p>The ministry said the deployment came after the Nepali government requested assistance with search-and-rescue operations in areas hit by worsening floods in Rasuwa district. South Korean officials said the severe floods and mudslides struck Nepal’s north-central Himalayan region near the Nepal-Tibet border last Wednesday, killing more than 800 people and leaving around 3,000 missing, according to foreign media reports.</p>
+<p>A separate rapid response team sent last week has already been searching for the nine missing South Koreans, all of whom were working at a hydroelectric power plant construction site in Rasuwa district when the floods hit. The missing workers are six employees of Doosan Enerbility and three of Korea South-East Power Co.</p>
+<p>Nepal’s army said rescue workers recovered one body from a tunnel at the Upper Trishuli-1 hydropower plant, where the missing Koreans had been working, but the ministry said the identity and nationality of the victim had not yet been confirmed. The rapid response team joined a search with the Nepali military on Tuesday, including an aerial sweep aboard a Nepal Army helicopter and a ground search near a weir, but officials said no significant clues were found.</p></div>
+  <div class="source-list"><a href="https://www.koreaherald.com/article/10859554" target="_blank" rel="noopener noreferrer" title="The Korea Herald / S. Korea dispatches disaster relief team to Nepal to support flood recovery efforts - The Korea Herald">TKH #1</a><a href="https://en.yna.co.kr/view/AEN20260901003554315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / (3rd LD) S. Korea dispatches disaster relief team to Nepal to support flood recovery efforts">YNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="ocha">
+  <summary>“Time is not on our side,” UN relief chief warns as Ebola spreads in DRC</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">humanitarian expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At a virtual briefing to member states on Sept. 1, 2026, Tom Fletcher, the UN under-secretary-general for humanitarian affairs and emergency relief coordinator, warned that Ebola was spreading in the Democratic Republic of the Congo and said “time is not on our side.” He said the outbreak had spread across six provinces, including areas where insecurity is limiting access and health systems are already weak. Fletcher said nearly 11 million people already need support in a country facing conflict, acute food insecurity and widespread malnutrition, and said women and girls, especially pregnant women, are disproportionately affected.</p>
+<p>He said the response has been scaled up but the virus is moving faster, and that a larger effort is needed to get ahead of it. Fletcher said operational hubs in Bunia and Beni are up and running, humanitarian financing has been mobilized, and the revised 2026 DRC Humanitarian Needs and Response Plan calls for $2.1 billion, including $300 million for Ebola-related activities. He said more than $1 billion has been secured, but half the funding gap remains, and said the Central Emergency Response Fund has allocated over $57 million for response and preparedness in the DRC and neighboring countries.</p></div>
+  <div class="source-list"><a href="https://www.unocha.org/news/time-not-our-side-un-relief-chief-warns-ebola-spreads-drc" target="_blank" rel="noopener noreferrer" title="UN OCHA updates / “Time is not on our side,” UN relief chief warns as Ebola spreads in DRC">UN OCHA updates #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Honduran Congress Approves Energy Reform Amid Privatization Risk Criticism</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Honduras’ Congress approved the government’s energy reform this Tuesday to restructure the state-owned National Electric Energy Company (ENEE) and stem daily losses of $1.9 million. The vote ended 78 in favor and 35 against. The backing came from 49 deputies from the governing National Party plus a sector of the Liberal Party bench, while the entire 35-member Freedom and Refoundation Party (LIBRE) bloc voted against it.</p>
+<p>During the debate, leftist lawmakers denounced what they described as privatization risks, with deputy Angélica Smith saying electric power should be treated as a right, not a business. The executive power presented the reform as an operational solution for ENEE. Liberal Party leader Jorge Cálix rejected claims that the initiative hides the alienation of state assets, saying the State of Honduras will remain the sole owner through ENEE, with 100% of the shares. The Honduran Congress also posted that the reform transforms ENEE “without privatizing it.”</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/honduras-congress-approves-energy-reform" target="_blank" rel="noopener noreferrer" title="Telesur English / Honduran Congress Approves Energy Reform Amid Privatization Risk Criticism">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Us iran military strikes live updates</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US strikes near the Strait of Hormuz were followed by fresh threats from Donald Trump, who said Iran would face “much harder” action if it retaliates, while the central question remained whether Tehran would answer the attacks.</p>
+<p>Trump posted on Truth Social that the United States was “as we speak” striking Iranian targets near the Strait of Hormuz. He said the strikes were “large and powerful” and said they were in retaliation for Iran’s “failed attempt” to lay mines in the strait and for Iran’s attacks on a US military base in Jordan, which he said were intercepted. He also warned that if Iran retaliates, “they will be hit again at a much harder and higher level,” adding that “there will be very little left of the Islamic Republic of Iran.”</p>
+<p>In a separate call with Fox News, Trump reportedly said Iran would be “totally wiped out” if it launches retaliatory strikes against the US. Fox correspondent Trey Yingst reported that Trump said US forces had targeted and destroyed Iranian radar assets, including systems Tehran was trying to rebuild. Yingst quoted him as saying: “This is a very big hit today. If it goes a third time, they’re going to be totally wiped out as a country.”</p>
+<p>As background, the latest exchange followed a new flare-up over the weekend, when the two sides exchanged fire for the first time in a month. In that earlier round, the US military said it struck rocket launchers on Larak Island in the Strait of Hormuz on Sunday, saying it had detected Iranian plans to deploy fresh mines in the waterway. The same sequence also included Iranian missiles aimed at US sites in Jordan, which were intercepted, and a reported Iranian drone stopped by the United Arab Emirates over its territorial waters.</p>
+<p>The immediate stakes now turn on whether Iran responds to the latest US strikes, and how far Trump’s threats are meant to go if it does.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/sep/01/us-iran-military-strikes-live-updates?page=with%3A6a970b498f08b75e8aebcf14#6a970b498f08b75e8aebcf14" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran military strikes live updates">Guardian #1</a><a href="https://www.theguardian.com/world/live/2026/sep/01/us-iran-military-strikes-live-updates?page=with%3A6a971af68f08b75e8aebcfbe#6a971af68f08b75e8aebcfbe" target="_blank" rel="noopener noreferrer" title="The Guardian / Us iran military strikes live updates">Guardian #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="la_jornada">
+  <summary>Dismantling the federal government narcolab and den of huachicol</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Federal forces dealt a series of blows to organized crime over the past weekend, dismantling a narcolaboratory valued at more than 3.3 billion pesos, arresting three people with an arsenal of 210 weapons from the United States, seizing more than half a million packs of cigarettes, and securing an inmueble with around 800,000 liters of hydrocarbon. The operations also included Zitácuaro, Michoacán, where the Army and the National Guard disabled a clandestine lab and seized 1,550 liters and 4,896 kilograms of chemical substances for synthetic drugs, along with nine reactors and 35 LP gas tanks.</p>
+<p>The security cabinet said the economic damage to organized crime was 3,324 million pesos. It also said that during the current administration federal forces have dismantled 2,644 narcolaboratories and seized 132 tons of methamphetamine and more than 5,400 tons of chemical precursors. In related comments, Omar García Harfuch said more than 30,000 weapons have been seized in the last two years and stressed shared responsibility with the United States to stop arms trafficking.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/09/01/politica/013n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Dismantling the federal government narcolab and den of huachicol">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Ukraine russia strikes attacks odesa zelenskyy putin eu defence europe latest news updates</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russia criticised Italy’s decision to appoint Ukraine’s former defence minister Mykhailo Fedorov as an innovation adviser at the defence ministry in Palermo. The Russian foreign ministry spokesperson, Maria Zakharova, called it “ridiculous” and said it was “a perfect example of how western countries use Ukraine and Ukrainians.” Italy’s defence minister, Guido Crosetto, disclosed the offer shortly after Fedorov was dismissed in July, praising him as a driving force behind military innovation who had helped Ukraine regain the initiative in its war against Russia. Fedorov is 35 and was fired six months after his appointment after reforms on procurement and mobilisation put him on a collision course with the military establishment and political rivals.</p>
+<p>Crosetto responded to the criticism by telling Ansa that he understood some would prefer “decisions concerning Italy” to be checked with Moscow first, but said that was “still not the case.” He added: “We make decisions thinking only about Rome, not Moscow, Kyiv or Washington.” Fedorov thanked Crosetto in a post on X for “his personal support” and for the offer to serve as his adviser, saying he would help Italy adopt modern warfare technologies, strengthen its defence sector and adapt to “emerging global security challenges.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/sep/01/ukraine-russia-strikes-attacks-odesa-zelenskyy-putin-eu-defence-europe-latest-news-updates?page=with%3A6a96a6a78f08ff1a9ab6725a#6a96a6a78f08ff1a9ab6725a" target="_blank" rel="noopener noreferrer" title="The Guardian / Ukraine russia strikes attacks odesa zelenskyy putin eu defence europe latest news updates">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="atlantic,guardian,middle_east_eye">
+  <summary>Democrats warn of ‘hollowed out’ leadership after army chief resigns amid clashes with Hegseth</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Army Secretary Dan Driscoll has resigned after telling President Donald Trump that Defense Secretary Pete Hegseth’s firings and blocked promotions were leaving the Army unable to carry out the transformation it needed, intensifying fears in Congress about a force with gaps at the top.</p>
+<p>Driscoll raised his concerns during a White House meeting last week, according to people familiar with the conversation. Trump was said to be surprised by how many generals and other senior officers had been fired, pushed out or passed over under Hegseth, and Driscoll argued that the Army could not transform itself if so many leaders were gone. Driscoll also told the president he intended to resign, and by Monday he was on his way out.</p>
+<p>The departure leaves the Army in an unusually exposed position. With Driscoll gone, the service is described as lacking a top civilian leader, a Senate-confirmed top general, a confirmed Army general in charge of operations, and a confirmed commander of Army troops in Europe. One account said the Army, with more than 450,000 active-duty soldiers deployed around the world, has fewer generals than at any point in recent history after a year of firings across the service.</p>
+<h3>Democrats call the leadership gap “hollowed out”</h3>
+<p>Sen. Jack Reed, the ranking Democrat on the Senate Armed Services Committee, said he did “not welcome” Driscoll’s resignation and accused Hegseth of having “hollowed out” the Army’s senior ranks. Reed said Driscoll’s departure leaves the Army without its top civilian and uniformed leaders and warned that the service cannot stay ahead of adversaries while its senior ranks are “hollowed out” and its chain of command is left “in limbo.”</p>
+<p>The White House defended Driscoll’s record. Spokesperson Anna Kelly said he had been “highly effective” in improving soldier readiness and advancing President Trump’s agenda, and said the Army was “more powerful than ever” thanks to his work with the president and Hegseth. Driscoll’s spokesperson declined to comment, and Driscoll did not respond to a call seeking comment. Hegseth did not have an immediate response to Driscoll’s departure.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/national-security/2026/08/driscoll-hegseth-military-resignation/688479" target="_blank" rel="noopener noreferrer" title="The Atlantic / Dan Driscoll’s Parting Shot">TA #1</a><a href="https://www.theguardian.com/us-news/2026/sep/01/dan-driscoll-resignation-hegseth" target="_blank" rel="noopener noreferrer" title="The Guardian / Democrats warn of ‘hollowed out’ leadership after army chief resigns amid clashes with Hegseth">Guardian #1</a><a href="https://www.theguardian.com/us-news/live/2026/sep/01/house-vote-stopgap-funding-bill-us-federal-government-shutdown-mike-johnson-trump-ballroom-politics-latest-news-updates?page=with%3A6a96eca18f08fad6f7abf316#6a96eca18f08fad6f7abf316" target="_blank" rel="noopener noreferrer" title="The Guardian / Democratic senator Jack Reed voiced grave concern about US Army secretary Dan Driscoll’s resignation amid ongoing Defense Department">Guardian #2</a><a href="https://www.middleeasteye.net/news/us-army-secretary-resigns-amid-signs-pentagon-unease-iran-war" target="_blank" rel="noopener noreferrer" title="Middle East Eye / US army secretary resigns amid signs of Pentagon unease with Iran war">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Fund defence spending from tax rise on middle earners, thinktank tells Healey</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Resolution Foundation has told John Healey he must be prepared to raise taxes on middle earners if he wants to fund significantly higher defence spending. In a report called *Thin End of the Wedge*, the thinktank said he would not be able to raise the £28bn a year needed to meet Labour’s pledge of spending 3.5% of GDP on defence by 2035 without asking average workers to pay more. Healey has said he will wait until next year’s spending review before setting out a plan.</p>
+<p>The foundation said tax rises since Labour came to power in 2024 have amounted to £70bn a year, yet the “tax wedge” — taxes on earnings minus benefits — remains low by international standards. It said tax rises under Rachel Reeves produced a 2.4 percentage point jump in the tax wedge last year, the largest for any country in the OECD, but the level for a single earner on average pay remains 32.4%, below the OECD and G7 averages. James Smith, the foundation’s chief economist, said any politician promising a bigger state and a lower burden on average workers was “not being realistic.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/sep/02/fund-defence-spending-from-tax-rise-on-middle-earners-thinktank-tells-healey" target="_blank" rel="noopener noreferrer" title="The Guardian / Fund defence spending from tax rise on middle earners, thinktank tells Healey">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Bank of America VP Erin Piacenti killed in Times Square stabbing</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Bank of America vice-president Erin Piacenti, 32, was killed in a stabbing in Times Square on Monday. The NYPD said Piacenti sustained stab wounds in the incident and was later pronounced dead. New York Mayor Zohran Mamdani said in a Monday press briefing that a woman carrying multiple knives stabbed two people in Times Square before police used a taser and fired their weapons. The NYPD said the suspect, Pamela Cisneros, 49, was killed on Monday as officers responded.</p>
+<p>Bank of America said in an emailed statement on Tuesday that it was “shocked and deeply saddened by the tragic loss of our colleague,” calling Piacenti “a valued teammate” who “will be greatly missed.” Piacenti was a vice-president in BofA’s business selection and conflicts unit, according to her LinkedIn profile. The bank’s Manhattan office is at One Bryant Park, near Times Square. The NYPD said the investigation remains ongoing.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3366029/bank-america-vp-killed-times-square-stabbing" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Bank of America VP Erin Piacenti killed in Times Square stabbing">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="politico">
+  <summary>Marine Le Pen’s risky economic gamble</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Marine Le Pen is trying to widen her appeal beyond the far right while keeping the populist pledges that animate her base, but her latest economic pitch has revived doubts over whether she can satisfy business-minded conservatives and the centrist voters she may need to win.</p>
+<p>At the first debate ahead of next spring’s presidential election, the National Rally candidate promised an ambitious cost-cutting package that she said would bring France’s budget deficit under control. But she also doubled down on a pledge to roll back a key part of Emmanuel Macron’s pension reform and let workers retire at 62. Speaking at an event last week organized by Medef, France’s main business lobby, Le Pen acknowledged that critics would see the pension promise as “an additional deficit,” but said it was “a choice we have to make as a society” and that she stood by it.</p>
+<p>That tension runs through her campaign. Le Pen says she wants a “golden rule” to keep budget deficits below 3 percent of GDP, and she has said she will soon present a plan to cut about €125 billion in spending, including on migration-related items, “useless” public agencies and France’s contribution to the EU. Yet she has not explained in detail how those savings would work, and rivals are already attacking the arithmetic.</p>
+<p>The issue has also surfaced inside her own camp. As she was laying out her agenda at the Medef event, news broke that François Durvye, one of her key economic advisers and a long-time advocate of fiscal discipline, was leaving the campaign. Durvye said privately and publicly that he did not feel able to defend the party’s latest positions to business contacts.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/marine-le-pen-france-2027-election-economy-pension-promises" target="_blank" rel="noopener noreferrer" title="POLITICO / Marine Le Pen’s risky economic gamble">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="al_jazeera_en,guardian">
+  <summary>US House passes funding bill to avert government shutdown ahead of midterms</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The House has approved a stopgap funding bill that keeps the federal government running through December 11, pushing the shutdown threat past the midterm elections while leaving the larger fight over full-year spending bills unresolved.</p>
+<p>The measure passed on Tuesday by 370 votes to 48 after clearing the Senate on August 8, and it now goes to President Donald Trump for his signature. The temporary bill is a continuing resolution, or CR, which keeps federal spending at current levels while lawmakers buy more time to negotiate the annual budget.</p>
+<p>Before Tuesday’s vote, existing funding was set to expire on October 1, and Congress had still not finished the 12 spending bills normally needed to fully fund the government’s programmes. Those bills are divided into areas such as homeland security, energy, housing and defence, but lawmakers have not completed them for the 2027 fiscal year, which runs through September 30, 2027.</p>
+<p>The vote also removes the immediate threat of another shutdown as lawmakers head into the November 3 elections. Those elections will decide which party controls each chamber of Congress, a shift that could shape the next round of budget negotiations. Government shutdowns are widely unpopular in the US, and the measure delays the next funding deadline to December, giving Congress more time but not settling the broader fiscal dispute.</p>
+<p>Top House Democrats said they were ready to back the Senate version of the bill because it included policy changes they supported, including a delay until December 11 on a new White House Office of Management and Budget rule they feared could let the Trump administration cancel grants at any time for any reason. Republican House Appropriations Committee Chairman Tom Cole said during debate, “This will give Congress time to get past the November elections.”</p>
+<p>The temporary measure does not resolve the larger spending battle, and lawmakers will still have to return to the full-year bills on a tighter timetable in December.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/1/us-house-passes-funding-bill-to-avert-government-shutdown-ahead-of-midterms?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US House passes funding bill to avert government shutdown ahead of midterms">AJ #1</a><a href="https://www.theguardian.com/us-news/2026/sep/01/house-bill-prevents-government-shutdown" target="_blank" rel="noopener noreferrer" title="The Guardian / House passes funding bill to avoid shutdown before midterms">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="el_pais">
+  <summary>The Government approves a plan of 309 million to dispel the idea of Ceuta’s “abandonment”</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ceuta is set to receive a 309 million euro package of aid, security spending and support for migrants after the Cabinet moved to counter what Juan Jesús Vivas calls a sense of “abandonment” in the city, while questions remain over the royal visit that Pedro Sánchez announced on Cadena SER.</p>
+<p>Carlos Cuerpo, the first vice president and minister of Economy, set out the package at the post-Cabinet press conference. He said the decree covers direct aid to Ceuta’s economy, security expenditures, immigration support and stronger public services, and that the total reaches 309 million euros. In four months, he said, the amount across those lines will amount to 16% of Ceuta’s GDP. The main item is 80 million euros in direct aid to companies and self-employed workers over four months, which the Government says equals 4% of Ceuta’s GDP for businesses and self-employed.</p>
+<p>The decree also includes 90 million euros for strengthening security, 21 million for essential services such as health, education, justice and water distribution, and 118 million euros for humanitarian reception. Of that, 63.6 million will go to unaccompanied minors and 53.4 million to housing and basic care for migrants. Cuerpo said the purpose of the decree is “to give confidence to both companies and workers,” and described it as “a shock response” that addresses requests from social partners and the city government. The aid can be requested from September 14 at the Tax Agency, and Cuerpo expects it to start arriving in October.</p>
+<p>The political backdrop is a dispute over how Ceuta’s crisis is being framed. The Government is upset with Vivas for publicly talking about “abandonment” and promoting demonstrations while, it says, he has been negotiating the aid measures privately in good faith. Still, it avoided a direct clash. Ángel Víctor Torres, head of the unified command, summed up the tone by saying: “We remain silent in the face of statements we don’t like, because now is not the time for that.”</p>
+<p>One of the other major topics was the King’s visit to Ceuta. Elma Saiz said relations with the Royal Household are “good” and that the offices are “routine and absolutely fluid,” but she would not say whether the trip is imminent or still weeks or months away. She said details will be given “as soon as they are known.”</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-09-01/el-gobierno-anuncia-un-plan-de-choque-por-valor-de-309-millones-para-ayudar-a-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / The Government approves a plan of 309 million to dispel the idea of Ceuta’s “abandonment”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>Andy burnham statement commons prison release farage healey defence latest news updates</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham is set to make his first statement to MPs in the Commons since becoming prime minister six weeks ago, with the immediate question whether his summer message of optimism can survive a chamber built for conflict and fresh pressure over taxes, spending and prison policy.</p>
+<p>Burnham will chair cabinet in the morning and then speak to MPs after 3.30pm, in what is also his first time speaking from the dispatch box in more than 16 years. Briefings suggest the statement will be a wide-ranging run-through of what he has been saying since summer, rather than a single major policy announcement. According to the BBC’s preview, he will say he wants to “unlock a feeling of positivity and possibility” in every part of the country.</p>
+<p>That upbeat tone has been a feature of Burnham’s first weeks in office. He has said little in public critical about Nigel Farage, Reform UK or the Tories, and the day’s Commons business gives him a more difficult backdrop: Farage is due to take his seat as an MP after winning the Clacton byelection during the summer recess, and Alex Norris is due to make a later statement about changes to the prisoner early release scheme. In cabinet, Burnham thanked Norris for his work on that scheme and Shabana Mahmood for her work on small boat crossings.</p>
+<p>The fiscal argument around Burnham also sharpened on the day. In an article for the Times, Darren Jones warned that higher public spending on its own will not make Britain richer. Jones, who was chief secretary to the PM under Keir Starmer but left government when Burnham took power, said Britain is “poorer than we often think” and argued: “We won’t get richer based on higher public spending alone, and we can’t tax billionaires who don’t live here.”</p>
+<p>Jones said the chancellor should avoid big tax rises in the budget and that the key decisions would come in the spending review. He called for a focus on growth, saying the country needs “the right conditions for a dynamic, thriving market” and that policymakers should get ahead of what artificial intelligence will mean for a services-dominated economy. He also said there should be no political clash between growth and fairness, or business and workers, or the market and the state. Burnham, meanwhile, has refused to rule out tax rises to fund higher public spending, while also playing down the prospect of big changes.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/live/2026/sep/01/andy-burnham-statement-commons-prison-release-farage-healey-defence-latest-news-updates?page=with%3A6a969c148f08ff1a9ab671f7#6a969c148f08ff1a9ab671f7" target="_blank" rel="noopener noreferrer" title="The Guardian / Andy burnham statement commons prison release farage healey defence latest news updates">Guardian #1</a><a href="https://www.theguardian.com/politics/live/2026/sep/01/andy-burnham-statement-commons-prison-release-farage-healey-defence-latest-news-updates?page=with%3A6a96708c8f089f2cda79b259#6a96708c8f089f2cda79b259" target="_blank" rel="noopener noreferrer" title="The Guardian / Andy burnham statement commons prison release farage healey defence latest news updates">Guardian #2</a><a href="https://www.theguardian.com/politics/live/2026/sep/01/andy-burnham-statement-commons-prison-release-farage-healey-defence-latest-news-updates?page=with%3A6a96c0db8f08b72e3ab148bf#6a96c0db8f08b72e3ab148bf" target="_blank" rel="noopener noreferrer" title="The Guardian / Andy burnham statement commons prison release farage healey defence latest news updates">Guardian #3</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="global_voices">
+  <summary>Seen and silenced: How Russian surveillance software suppresses Georgian civilians rights</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A face-recognition crackdown in Georgia is turning protest participation into a searchable record, with one Tbilisi woman fined after being identified at a march and others saying the cameras have made taking to the streets too costly.</p>
+<p>The case centers on Nino, a Georgian in her 40s, who in mid-March 2025 got a call from the Tbilisi City Court summoning her to answer for blocking a road in the capital two and a half months earlier. She said she had joined protests against the alleged rigging of the last elections and the suspension of EU integration talks, and had long known the area around parliament was covered with cameras.</p>
+<h3>A protester identified after the fact</h3>
+<p>At the hearing, Nino saw footage of herself at the protest and was accused of initiating a blockade of the road. The system had identified her through face recognition software and processed her as an unlawful protester, resulting in a fine of GEL 5,000, or about EUR 1,620 or USD 1,878.</p>
+<p>The consequences did not end there. Five months later, her bank accounts were frozen, and she was forced to set up a crowdfunding campaign to pay off the fine. She said that, like many others in Tbilisi, she could not afford the risk of receiving more fines and largely stopped protesting.</p>
+<p>That fear spread beyond her own case. The account says her experience resonated with other Georgians who, since 2025, have stopped attending demonstrations against the ruling Georgian Dream party. It also says the recent surveillance mechanisms, including face recognition software and a broad network of AI-enabled cameras, helped authorities achieve what physical force alone could not: breaking the protest movement.</p>
+<h3>How the surveillance system is described</h3>
+<p>Over the past two years, the Georgian government has built what the report describes as a comprehensive face recognition enforcement system. It says the system was procured by a Moscow-based company with ties to the Federal Security Service, or FSB.</p>
+<p>The surveillance infrastructure is called Polyface, and the Ministry of Internal Affairs has been procuring the facial recognition system from Papillon AO, a Moscow-based company that has been sanctioned by several countries. Papillon’s products are used mainly by Russian law enforcement and governments close to Russia, and a 2018 upgrade contract said ministry operators would be trained directly by Russian personnel.</p>
+<p>The latest upgrade, Polyface 3.7.0, was delivered in early June 2025. Built on a deep-learning recognition algorithm developed by 3DiVi, a Russian AI company based in Novosibirsk and backed by a Russian state venture fund, it is described as able to record high-definition images of large crowds, even in poor lighting, and identify faces under masks or partly hidden. The ministry also requested licenses for an unlimited number of operators, and in 2024 asked for the ability to run searches against pre-loaded images from social media and other external sources.</p>
+<h3>Protest, punishment, and a narrowing space for dissent</h3>
+<p>The surveillance came amid a wider tightening of public space. Georgia was granted EU candidate status in 2023, but after the allegedly rigged parliamentary elections of October 26, 2024, many Georgians protested for 580 days in a row. Prime Minister Irakli Kobakhidze then announced that his government was suspending the EU accession process until 2028, a move is widely considered unconstitutional because the Georgian Constitution requires public bodies to facilitate accession and 86 percent of Georgians supported it.</p>
+<p>By 2024 and 2025, the rules around protest had become more restrictive. In 2023 assembly required no permit and freedom of expression was guaranteed, but by 2024 covering one’s face had become an administrative offense and the penalty for blocking a road rose from GEL 500 to GEL 5,000. In 2025, both acts became criminal offenses, and even gathering required state registration. By 2026, calling the government illegitimate or criticizing it online using terms deemed offensive also became a criminal act.</p>
+<p>Police force did not stop the protests either. By December 2024, demonstrations had spread across dozens of cities, with many local outlets describing them as the largest since Georgia’s independence in 1990. Police used water cannons and rubber bullets, the Public Defender’s Office recorded 282 cases of physical abuse, and at least 486 people were detained in November and December 2024 alone. The crowds kept returning, including thematic protests led by teachers, musicians, athletes, and doctors, which spread to 37 of Georgia’s 55 cities and more than 40 cities abroad.</p>
+<p>Once the authorities could identify demonstrators more accurately, the fines began to arrive. By March 2025, at least GEL 2 million worth of penalties had been imposed on protesters. People began changing how they behaved: they stopped chanting, using whistles, carrying posters, taking pictures, or wearing distinctive clothes. Some wore masks for protection, only to see face covering itself criminalized.</p>
+<p>The result was a growing chill around protest. Nino said the scale changed enormously once funds were seized and there was no more hope of help. Others described becoming paranoid and avoiding any sign that might make them easier to identify. Yet hundreds, if not thousands, still gather at Rustaveli every evening, each of them being watched.</p></div>
+  <div class="source-list"><a href="https://globalvoices.org/2026/09/01/seen-and-silenced-how-russian-surveillance-software-suppresses-georgian-civilians-rights" target="_blank" rel="noopener noreferrer" title="Global Voices / Seen and silenced: How Russian surveillance software suppresses Georgian civilians rights">GV #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="peoples_daily_en,xinhua_en">
+  <summary>China to explore AI-powered solutions for special education</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">regional expansion</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China has issued a five-year plan to expand AI in special education, aiming to help students with disabilities and their teachers through new digital tools even as officials say the sector is still at an early stage and short of resources.</p>
+<p>The plan for special education development and improvement was released by the Ministry of Education and six other departments for the 15th Five-Year Plan period, 2026-2030. It calls for new models of human-machine collaboration, including intelligent learning companions and AI-assisted teachers, and says AI applications should support classroom assistance for students with disabilities as well as home-based teaching for those with severe disabilities.</p>
+<h3>Digital tools and capacity gaps</h3>
+<p>The plan also pushes greater use of AI, big data, virtual reality and other new technologies in special education, alongside improved digital infrastructure in special education schools and more resources on the national smart education platform. A Ministry of Education official said digitalization will be a key driver of special education development over the next five years.</p>
+<p>The official said advances in information technology have created new opportunities, noting that a special education section has already been launched on the national smart education platform and that local authorities have explored digital tools for individualized education. But he also said digitalization remains at an early stage, with shortages of resources and insufficient application still posing challenges.</p>
+<p>Official data showed that by 2025 China had 2,464 special education schools, 927,000 special education students and 85,100 full-time special education teachers, up from 2012. The enrollment rate of school-age children with disabilities in compulsory education had reached 97 percent in 2025, and the plan aims to keep it above that level through 2030.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0901/c90000-20494532.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China to explore AI-powered solutions for special education">PDE #1</a><a href="https://english.news.cn/20260901/dae3c777349c4fb28766d7260c6b7ac3/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Village children take &quot;cloud school bus&quot; to school in SW China">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="nikkei_asia">
+  <summary>&#x27;Red-hot&#x27; data center boom fuels public backlash across Asia</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Residents and community groups from Australia to India are voicing concerns about the impacts of hosting massive AI data centers, putting operators under greater scrutiny over pressure on electricity and communities. In Moss Vale, a small Australian town surrounded by farmland about halfway between Sydney and Canberra, opposition to a gas-fired power plant intended to support data centers began in a WhatsApp chat group for preschool parents.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/business/technology/tech-asia/red-hot-data-center-boom-fuels-public-backlash-across-asia" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / &#x27;Red-hot&#x27; data center boom fuels public backlash across Asia">NA #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="folha">
+  <summary>Senate approves Redata tax regime for data centers with Redata text including natural gas as a low-emission energy source</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Senate approved the Redata tax regime for data centers on Tuesday, opening the way for federal tax exemptions to expand the sector in Brazil while also leaving a dispute over a late change that could broaden the energy sources allowed in subsidized projects.</p>
+<p>The bill now goes to President Luiz Inácio Lula da Silva for sanction. It passed in a symbolic vote and was presented as an early test of the agreement between Lula and Senate president Davi Alcolumbre, which had helped unlock this bill and other priorities. Redata, short for the Special Tax Regime for Data Center Services, is designed to encourage the installation and expansion of data centers by granting federal tax breaks.</p>
+<p>The final version also absorbed a demand from the natural gas sector. The original text said companies had to meet all of their electricity demand through contracts or self-generation from clean or renewable sources, such as wind or solar, and nuclear power was also included. The Senate replaced that language with “low emission” sources, defined in the text as those with reduced environmental impact and lower greenhouse-gas emissions, with the exact classification to be set by regulation. That wording, according to the account, opens room for natural gas, as well as hydropower or nuclear plants, to qualify. The shift was handled through a maneuver framed as a redaction amendment, even though the Chamber’s technical staff objected that the changes were substantive rather than merely editorial.</p>
+<p>The approval came after the bill had already passed the Chamber in February and then stalled in the Senate. The maneuver was validated by Alcolumbre, who said the Senate would defend the change before the Chamber as a redaction adjustment. The regime’s fiscal cost is estimated at R$5.2 billion this year, and the package also includes a zero import tariff for five years on certain capital goods used to assemble data centers.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/09/senado-aprova-incentivo-a-data-centers-com-manobra-para-incluir-gas-natural.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / Senado aprova incentivo a data centers com manobra para incluir gás natural">Folha de S.Paulo #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="scmp">
+  <summary>US Congress seeks to identify foreign countries behind scam calls</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US lawmakers are trying to identify which foreign countries are the biggest sources of unlawful robocalls targeting Americans, as Congress steps up efforts to combat a surge in phone scams. The inquiry follows US government reports tying much of the financial damage from scams to Chinese criminal networks based in Southeast Asia. On Tuesday, the House Energy and Commerce Committee’s Communications and Technology Subcommittee passed the bipartisan Foreign Robocall Elimination Act in another effort to curb the calls.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/us/diplomacy/article/3366036/us-congress-seeks-identify-foreign-countries-behind-scam-calls" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US Congress seeks to identify foreign countries behind scam calls">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Does On-Policy Distillation Really Distill? From Noisy Teacher to Self-Improvement</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers studying on-policy distillation (OPD) found that teacher supervision during training is substantially noisy, with noise becoming more prevalent as teacher scale grows. OPD is presented as dense token-level supervision alongside reinforcement learning with verifiable rewards, but the teacher scores student-generated trajectories that are off-policy for it, so the source of the student’s gains was unclear. In their analysis, the student policy stayed insensitive to the noisy supervision and reached comparable performance whether that noise was kept or removed.</p>
+<p>The paper then argues that OPD’s gains come mainly from suppressing low log-probability tokens: learning concentrates there, and a single fixed negative advantage matched teacher-provided advantages. On that basis, the authors propose On-Policy Self-Adaptation (OPSA), a supervision-free method with entropy-adaptive negative advantages. Compared with base Qwen3-1.7B, OPSA improves Avg@32 by 35.41 points on AIME24, a 263% relative gain, and more than doubles Pass@32 across all three benchmarks. It also outperforms OPD by 16.77 points in Avg@32 on AIME24.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.31046v1" target="_blank" rel="noopener noreferrer" title="arXiv / Does On-Policy Distillation Really Distill? From Noisy Teacher to Self-Improvement">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">DreamX-Creator 1.0 is a compact native joint audio-video generation system centered on a 7B generator, designed to produce synchronized audio and video at 2K resolution. Conditioned on a first frame and a text prompt, it jointly denoises modality-specialized audio and video streams. The work says recent video generators often omit audio or generate it in a separate stage, limiting modeling of visual dynamics and acoustic events.</p>
+<p>The system processes the two streams independently in the first half of the network and couples them in the second half through Gated Cross-Modal Attention. The preprint also describes a unified Audio-Video Data System that constructs and filters temporally coherent clips, produces structured multimodal annotations, and organizes clips into capability-oriented data pools. Training combines two audio-video pre-training stages, High-Quality Finetuning, and Audio-Video Reinforcement Learning with Modality-Aware Multimodal Feedback. For high-resolution output, the Autoregressive 1-Step 2K Refinement pipeline distills a bidirectional multi-step teacher into a student requiring one denoising evaluation per temporal chunk. The release includes the compact 7B generator and 2K Refiner, and claims performance competitive with state-of-the-art open-source systems.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.31106v1" target="_blank" rel="noopener noreferrer" title="arXiv / DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Lucida: Parse, Generate, and Place for Composable Real-to-Sim Scene Modeling</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces Lucida, a composable real-to-sim scene modeling pipeline that aims to recover a real indoor scene as complete, editable object assets arranged as observed, so robot simulation and embodied AI can use a simulation-ready replica of the real environment. The work says existing pipelines break the task into three steps—parse the observations into instances, generate an asset for each, and place each asset back—but each step assumes inputs that a cluttered capture rarely provides, including accurate instance geometry, unoccluded views, and assets that match the observations.</p>
+<p>Lucida keeps that order but redistributes the requirements so each step uses only what a real capture reliably provides, with precision pushed to the end of the pipeline. It parses video into a scene graph with per-instance multi-view evidence, generates a complete asset for each instance from that evidence, and places assets with GizmoAct, a VLM policy that treats placement as multi-turn GUI interaction and manipulates the object’s gizmo in a closed loop. Across scene-level 3D object detection, object pose estimation, and scene reconstruction, Lucida improves mAP over Boxer by 69% on R2S-Scene, raises ADD-SB@0.05 from 57.8% to 83.4% on CA-1M, and increases scene F-Score from 0.794 for SAM3D to 0.924.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.30821v1" target="_blank" rel="noopener noreferrer" title="arXiv / Lucida: Parse, Generate, and Place for Composable Real-to-Sim Scene Modeling">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>GenFirst: Generation Before Reconstruction for Stable End-to-End Latent Generative Modeling</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">GenFirst proposes a generation-before-reconstruction strategy for stable end-to-end latent generative modeling in a preprint on latent generative models. The work says these models usually use a two-stage pipeline: train a variational autoencoder for reconstruction, then train a generative model on the frozen latent space. It argues that direct end-to-end training is difficult because it can lead to latent collapse and a generation-reconstruction conflict. The authors say they analyzed how different objectives shape the latent space and identified two key insights: the Kullback-Leibler divergence entropy term is essential to prevent collapse, and reconstruction and generation learn at different speeds, with reconstruction being faster and more strongly supervised.</p>
+<p>Based on those insights, the authors say they achieved the first direct end-to-end training without latent collapse. They validate GenFirst with continuous autoregressive priors with exact likelihoods and SiT priors with implicit likelihoods. With the end-to-end objective and GenFirst, SiT reaches a gFID of 0.97 with CFG and 1.45 without CFG on ImageNet-256, while MMDiT reaches a GenEval score of 0.90 on text-to-image generation. The framework is also extended to shared visual latents for generation and representation learning, and to continuous unified text-image generation.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.29335v1" target="_blank" rel="noopener noreferrer" title="arXiv / GenFirst: Generation Before Reconstruction for Stable End-to-End Latent Generative Modeling">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Normalized Low-Rank Adaptation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In a preprint, researchers introduced Normalized Low-Rank Adaptation (NoRA), a method for LoRA that normalizes the down-projection matrices during training. They said LoRA’s zero-initialized up-projection leaves early optimization largely governed by the down-projection, and that the same normalization can also be applied only at initialization to improve standard LoRA. Across pretraining, supervised finetuning, and reinforcement learning, they reported faster convergence, better performance and training stability, and less catastrophic forgetting, without extra trainable parameters or inference-time computation.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.31036v1" target="_blank" rel="noopener noreferrer" title="arXiv / Normalized Low-Rank Adaptation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>PaperGym: Rubric-Centered Evolution for Research-Plan Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">PaperGym turns each research paper into a complete training environment for research-plan generation. The preprint argues that research planning is a key capability for AI scientists, but that plans do not have verifiable answers, so reinforcement learning needs a critic. In PaperGym, the question is synthesized from the research goal and background, while the criteria are derived from the method and experiments. The paper says this design keeps criteria focused on methodological innovation and experimental design, and lowers criterion leakage to 3.7%, compared with 11.90% to 34.10% in existing datasets.</p>
+<p>Training uses the rubric twice: first as privileged context for OPSD’s self-teacher, then as the reward for GRPO. Across Qwen3-1.7B, Qwen3-4B, and Qwen3-8B, the schedule outperforms supervised fine-tuning, either stage alone, and the reverse ordering, improving five-benchmark averages by +5.6, +5.0, and +4.8 points. With the recipe held fixed, models trained on PaperGym-20k win 58.1% of three-way comparisons against 28.2% for RubricHub Science, and the trained Qwen3-8B reaches 73.48 on ResearchQA, above Kimi K2.6.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.31119" target="_blank" rel="noopener noreferrer" title="arXiv / PaperGym: Rubric-Centered Evolution for Research-Plan Generation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Qwen3.8-Flash-Next is described as a sparse mixture-of-experts model with 125B parameters, 6B activated per token, and an additional 51B parameters of n-gram embedding tables held off the accelerator. On fourteen pre-training benchmarks, it leads the 397B-A17B predecessor on eight and trails it on the rest by at most 2.6 points, while using 1/3 the activated parameters, 1/3 the training tokens, and roughly 1/9 the training FLOPs. Its token mixing combines Gated DeltaNet (GDN) and global attention, with one full-attention layer in every four; during continued pretraining, those layers are replaced by Qwen Sparse Attention (QSA).</p>
+<p>The work evaluates each design change across loss and downstream benchmarks, training/prefill/decode cost, and effects on optimal hyperparameters and training stability. It says loss and downstream accuracy do not always move together: enlarging the n-gram vocabulary lowers loss monotonically while downstream accuracy saturates. The architecture and the Muon optimizer together shift the optimal learning rate and batch size upward, make batch-size warmup unnecessary, and substantially improve stability under stress tests.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.30320" target="_blank" rel="noopener noreferrer" title="arXiv / On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>CogEvol: Towards Efficient and Reliable Learning Environment Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">CogEvol is a family of models for Learning Environment Generation, turning a course brief into a finished learning artifact—structured-JSON slides or self-contained interactive HTML pages—in a single pass. Across 220,000 production requests, it completes a slide in a median of 17 seconds and an interactive page in 59 seconds, replacing minutes-long multi-turn agent scaffolding. CogEvol-27B scores 83.7 on slide quality and 63.7 on a 500-case interactive-HTML benchmark, while using 26.9 times fewer parameters than flagship coding models.</p>
+<p>Reliability is built into the training pipeline: real failures are turned into 53,687 verified SFT samples, and a hybrid rule-plus-VLM reward drives GRPO-based RL after the team caught and fixed a reward-hacking episode that produced visually convincing but unplayable games. CogEvol-4B is released under the Apache 2.0 license at the GitHub link given, and the models serve OpenMAIC live production traffic. Scaffold editing cuts interactive-page generation cost by about 76%, and the full stack runs on domestic Ascend accelerators at application-level parity with A800 GPUs.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.30968" target="_blank" rel="noopener noreferrer" title="arXiv / CogEvol: Towards Efficient and Reliable Learning Environment Generation">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Is this the first glimpse of dark matter? Data point excites physicists</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A single outlier event in the LUX-ZEPLIN dark-matter search has physicists excited because it could be the first glimpse of a WIMP, but researchers say one flash is far from proof and past hopeful signals have later vanished.</p>
+<p>Researchers working with the LUX-ZEPLIN (LZ) experiment at the Sanford Underground Research Facility in Lead, South Dakota, announced the result on 1 September at the TeV Particle Astrophysics conference in Tendo, Japan, and described it in a preprint on the experiment’s website. The signal came from a detector holding 10 tonnes of ultra-pure liquid xenon, which registered an unusual energetic flash sometime in 2023 or 2024. That kind of signal could be caused by a collision between an atom’s nucleus and a massive dark-matter particle passing through the Galaxy.</p>
+<p>The event stood out after the collaboration unsalted its data and found that only one flash remained. Richard Gaitskell, the LZ spokesperson, said: “Obviously, that was very exciting.” The recoil deposited 248 keV of energy, and the researchers estimated that a dark-matter particle producing it would need to weigh at least 200 GeV and probably around 1,000 GeV.</p>
+<p>For decades, theorists have argued that dark matter may be made of WIMPs, but searches on Earth and at the Large Hadron Collider near Geneva have come up empty. LZ began in late 2021 as a scaled-up direct-detection experiment, and it analyzed 220 days of data taken from March 2023 to April 2024, extending its search to higher energies than usual. Even so, Samuel Eriksen, who presented the result, said: “We’re not claiming this is dark matter at all.”</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-01985-9" target="_blank" rel="noopener noreferrer" title="Nature / Is this the first glimpse of dark matter? Data point excites physicists">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>India has an ambitious plan to lure scientists back — will it work?</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">India is trying to reverse its scientific brain drain with a new fellowship scheme that offers money, allowances and lab access to overseas researchers, but scientists are split over whether it can fix the deeper reasons many left in the first place.</p>
+<p>In June, the government launched the Prime Minister Research Chair (PMRC) Scheme to support 120 overseas researchers originally from India who want to work at an Indian university, laboratory or research centre. The programme offers up to 50 million rupees, or roughly US$520,000, in research grants, plus extra stipend, residential and medical allowances, for five years. Researchers will be chosen from strategic fields including artificial intelligence, quantum computing, biotechnology and advanced materials.</p>
+<p>The push comes as India joins other countries trying to bring back researchers who moved abroad. Scientists mostly support such fellowships and the generous funding they can bring, but some say the schemes will not do much if they do not address the reasons many people leave in the first place: weak research infrastructure, poor income security, low pay compared with global standards and limited career opportunities.</p>
+<p>The scale of the challenge is large. In the 2024–25 academic year, 363,000 students from India were enrolled in US universities, the biggest international student cohort there. A 2025 preprint suggested that 73% of researchers who leave India never return. At the same time, theoretical physicist Aavishkar Patel at the International Centre for Theoretical Sciences in Bengaluru says tighter US immigration controls, visa scrutiny and uncertainty around research funding are making the United States less attractive, while opportunities in India are increasing.</p>
+<p>There is no data yet on how many scientists have come back, but researchers who spoke to Nature said India is becoming a more popular research destination.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02636-9" target="_blank" rel="noopener noreferrer" title="Nature / India has an ambitious plan to lure scientists back — will it work?">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Mindfulness may lower blood pressure in just 8 weeks</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mindfulness, gratitude journaling and optimism training were linked to lower blood pressure and other heart-risk markers within weeks in a review of 18 randomized trials, but the findings also suggest the benefits may depend on repeated practice and ongoing reinforcement.</p>
+<p>Rosalba (Rose) Hernandez, a professor of social work at the University of Illinois Urbana-Champaign, led the research team, which looked at positive psychology and mindfulness interventions designed to improve mental or physical health. The studies generally enrolled 50 to 200 adults with elevated cardiovascular risk, including uncontrolled hypertension and heart failure, and most participants were in their late 50s to mid-60s.</p>
+<p>The programs varied widely. Some used structured phone sessions, journaling with brief check-ins, or apps and text messages. Others were built around in-person group meetings or hybrid formats. Most included weekly sessions plus home activities, and the majority lasted six to 12 weeks. In the review, programs with more frequent contact tended to produce the most reliable physiological benefits.</p>
+<p>Hernandez said that in hypertension and postacute coronary syndrome cohorts, mindfulness-based programs delivered over eight weeks reduced systolic blood pressure and inflammatory markers such as high-sensitivity C-reactive protein and fibrinogen. She also said a 12-week spirituality-based digital intervention reduced systolic blood pressure by 7.6 points and central systolic pressure by 4.1 points.</p>
+<p>Some of the benefits appeared tied to healthier behavior, including better eating habits and more physical activity. Hernandez said that means continued reinforcement may be needed to maintain progress over time, even if short-term gains come quickly.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260901010721.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Mindfulness may lower blood pressure in just 8 weeks">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover why snake embryos twist into spirals</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Canadian-led team has a likely explanation for why snake embryos curl into tight right-handed spirals before hatching, pointing to a growth mismatch that may help snakes accommodate the exceptionally long bodies that set them apart from other vertebrates.</p>
+<p>The findings, published in *Current Biology*, suggest that the spiral begins as the embryo’s body rapidly lengthens while its gut acts as a tether. That constraint appears to make the growing body buckle and twist into a coil. Senior author Dr. Tetsuto Miyashita of the Canadian Museum of Nature compared it to adjusting the length of a strap, where the longer, buckling side of the loop twists.</p>
+<h3>How the spiral forms</h3>
+<p>The project began during the COVID lockdown in 2020, when Miyashita was working from home and looking for a research question his students could pursue without laboratories or museum collections. He asked lead author Alexandra Weber, then at Carleton University and now a graduate student in zoology at the University of British Columbia, and two undergraduate students at the University of Ottawa to look through published research and museum databases for images of developing snakes.</p>
+<p>They collected pictures of more than 900 embryos from 39 snake and other limbless squamate species. A clear pattern emerged: during the first several weeks after eggs were laid, the embryos coiled only dextrally, or to the right, as viewed from head to tail. Because the embryos did not yet have muscles to move themselves into position, the team suspected that something in development was forcing the twist.</p>
+<p>A clue came from Dr. Raul Diaz at California State University Los Angeles, who used CT imaging to look more closely at the embryos. The scans showed what Miyashita described as a pillar of gut stretching through the spiral body, with an intestine detached from the rest of the body and surrounded by tendrils of blood vessels from the yolk. The team says that as the snake body lengthens faster than the gut, the gut becomes a tether, forcing the body to buckle and twist into coiling. Miyashita said the yolk is always on the left side of the embryo, so the embryos start coiling right-handed.</p>
+<p>As the embryos develop, the yolk shrinks and their muscles mature, giving them more room to shift position. Some stay in right-handed coils, while others recoil to the left, Weber said. The researchers say the result adds snake embryos to a wider set of spiral forms in nature that scientists are still trying to understand.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260901070516.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover why snake embryos twist into spirals">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>NASA’s Swift telescope is back, but time is running out</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">NASA’s Neil Gehrels Swift Observatory is back to studying the universe with two of its three science instruments after plans to raise the spacecraft into a higher orbit were scaled back. The Ultraviolet/Optical Telescope and X-ray Telescope were switched back on Wednesday, Aug. 26. Both had been shut down in February to reduce atmospheric drag while NASA prepared for a possible orbital boost. Swift’s third instrument, the Burst Alert Telescope, has not yet resumed science operations, but the team expects to restore it within the next few weeks.</p>
+<p>NASA stopped using that instrument in April to lower the spacecraft’s power needs, which let engineers position Swift’s solar panels to further reduce drag. NASA had previously estimated the low-drag mode would keep Swift above 185 miles (300 kilometers) until October, but now expects it to reach that altitude within the next one to two months. The planned boost was abandoned after Katalyst Space’s LINK spacecraft developed orientation-control problems; NASA and Katalyst announced on Aug. 19 that LINK would no longer try to capture and raise Swift.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260901010702.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / NASA’s Swift telescope is back, but time is running out">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A massive plume deep beneath Africa is pulling the continent apart</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">New computer models are reshaping the picture of how the East African Rift System is stretching apart, pointing to a deep mantle plume beneath Africa as a likely source of unexpected motion parallel to the rift and leaving open how that force works with the shallower processes already pulling the continent apart.</p>
+<p>Continental rifting begins when Earth’s lithosphere — the crust and uppermost mantle — stretches and thins. Geophysicist D. Sarah Stamps has compared the difference in behavior to Silly Putty: hit it hard and it can crack, but pull it slowly and it stretches. More than 12 years of GPS measurements showed the East African Rift System deforming in the expected rift-perpendicular direction, but also moving in a puzzling northward direction along the rift itself.</p>
+<h3>A deeper force beneath the rift</h3>
+<p>In a study published in the *Journal of Geophysical Research*, Tahiry Rajaonarison used 3D thermomechanical models to test what could explain that unusual pattern. The simulations point to the African Superplume, a vast zone of rising mantle material that begins deep beneath southwest Africa and extends northeastward across the continent, as the source of northward mantle flow linked to the rift-parallel motion.</p>
+<p>The models also reproduced rift-parallel seismic anisotropy, a pattern in which seismic waves travel differently depending on direction through rock. That matches the direction of the plume’s mantle flow and gives another clue that deep Earth is influencing what is happening at the surface.</p>
+<p>The findings add to a long-running debate over what drives the East African Rift System. Rajaonarison said the work confirms that lithospheric buoyancy forces are driving the familiar east-west stretching, while deep mantle flow may be behind the anomalous northward deformation.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260831015210.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A massive plume deep beneath Africa is pulling the continent apart">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
