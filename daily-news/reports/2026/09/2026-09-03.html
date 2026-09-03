@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-09-03</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-09-03</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="guardian,middle_east_eye,scmp">
+  <summary>Iran us middle east war strikes tehran washington wedding trump kuwait jordan latest news updates</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US strikes on Iran and Iranian retaliation across Kuwait, Jordan, Bahrain and Iraq pushed the Middle East conflict into a sharper phase overnight, while reports of a wedding hit in southern Iran left the central facts of the attack and its casualty toll still contested.</p>
+<p>Iranian state media said 11 people were killed in overnight attacks, including four people at a wedding near the southern port city of Sirik. The Iranian Red Crescent said more than 50 people were injured when shrapnel hit a home where the celebration was taking place in Hormozgan province. The US had not commented on the reports.</p>
+<h3>A wedding strike became the sharpest casualty claim</h3>
+<p>Iran’s Fars news agency said a four-year-old boy was among those killed after a series of US strikes near Sirik. In a statement carried by state media, Iran’s Islamic Revolutionary Guard Corps said the US military had “turned the wedding celebration of a young and respectable Sunni couple into a mourning by bombing a residential house in Sirik and reducing it to dust and blood”.</p>
+<p>The IRGC added: “In this malicious attack, nearly 70 innocent people were hit, and four of them, including a child, were martyred.” Those figures stood alongside the Red Crescent’s account of more than 50 wounded, showing how quickly the picture around the reported wedding strike hardened into a major point of dispute and political accusation.</p>
+<h3>Iran said it answered with attacks on US-linked sites</h3>
+<p>The exchange widened when the IRGC said it responded to the attacks with strikes on US military bases in Kuwait, Jordan, Bahrain and Iraq’s Erbil. It also claimed that a “number” of “enemy” forces were killed and drones were destroyed in a missile and drone attack on Ali Al Salem airbase in Kuwait, which is known to host some US troops. That claim had not been confirmed by either the American or Kuwaiti military.</p>
+<p>Kuwait said it came under missile fire and drone attacks this morning, and that a fire broke out at a residential complex in the capital. The fire was brought under control and no casualties were reported. The Kuwaiti army said on X that its air defences were “currently responding to hostile missile and drone attacks,” and urged citizens to follow safety instructions.</p>
+<p>Jordan’s army said 10 out of 13 Iranian ballistic missiles were intercepted, with the other three falling in remote areas. That followed the IRGC’s claim that it had struck US Marines’ barracks at Camp Titin, a military site near Aqaba, in what it described as a ballistic attack on American forces. The group said it had killed “a large number” of US personnel and destroyed “several installations and enemy attack helicopters,” but those claims were not confirmed by Jordan or the United States.</p>
+<p>The fighting in this phase began when the US military said it struck rocket launchers on Larak Island in the Strait of Hormuz on Sunday, in its first strikes on Iran since July. The US said it had detected Iranian preparations to deploy fresh mines in the waterway. Tehran then responded by launching missiles at US sites in Jordan, which were intercepted, and at the UAE, which said it stopped an Iranian drone over its territorial waters.</p>
+<h3>Trump kept the pressure on while Tehran talked of reciprocity</h3>
+<p>Donald Trump warned that if Iran retaliated, “they will be hit again at a much harder and higher level.” In a post on his Truth Social app last night, he wrote: “But it will not be the biggest attack of them all, that is waiting in the wings and, when it is over, there will be very little left of the Islamic Republic of Iran.” In a later post overnight, he said he was “not trying to force Iran to the bargaining table” and that he “couldn’t care less if they sign a worthless, to them, agreement”.</p>
+<p>Trump also reportedly repeated the warning in a call with Fox News, saying Iran would be “totally wiped out” if it launched retaliatory strikes against the US. The escalation in rhetoric came alongside Iranian warnings of further response: an IRGC spokesperson, Sardar Mohebi, said on X that the US would face “severe punishment” and that it “will regret its new attacks”.</p>
+<p>At the same time, Iranian president Masoud Pezeshkian said that if the US returned to a peace deal aimed at ending months of hostilities, Iran “will immediately take reciprocal action,” according to the Iranian presidency’s website. The two sides were therefore pairing threats with conditional openings, even as the battlefield exchange spread beyond Iran’s borders.</p>
+<p>The latest claims left several key points unresolved. The IRGC’s account of deaths and damage at Ali Al Salem, Camp Titin and other sites had not been independently confirmed by the American or Kuwaiti militaries, and Washington had not commented on the reports of the wedding strike.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/sep/02/iran-us-middle-east-war-strikes-tehran-washington-wedding-trump-kuwait-jordan-latest-news-updates?page=with%3A6a97549d8f08f08ddc702a41#6a97549d8f08f08ddc702a41" target="_blank" rel="noopener noreferrer" title="The Guardian / Iran us middle east war strikes tehran washington wedding trump kuwait jordan latest news updates">Guardian #1</a><a href="https://www.theguardian.com/world/2026/sep/01/us-iran-airstrikes-launch" target="_blank" rel="noopener noreferrer" title="The Guardian / US and Iran exchange more airstrikes, fuelling fears of wider return to hostilities">Guardian #2</a><a href="https://www.middleeasteye.net/news/iran-strikes-us-bases-across-region-after-american-attack-kills-18-including-children" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Iran strikes US bases across region after American attack kills 18, including children">MEE #1</a><a href="https://www.scmp.com/news/china/diplomacy/article/3366129/iran-wins-sco-backing-against-us-strikes-will-it-be-enough" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Iran wins SCO backing against US strikes. Will it be enough?">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="axios">
+  <summary>Like &quot;pissing in the wind&quot;: Local concerns bulldozed by Trump&#x27;s border wall plan</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Texas border counties are pushing back against a federal wall plan that would add hundreds of miles of barriers and other construction across the southern border, but Customs and Border Protection has told local officials there will be no negotiating, leaving residents and landowners unsure how much of their land, parks and businesses will be affected.</p>
+<h3>Local officials say they were told the plan is fixed</h3>
+<p>President Trump’s envoys recently met privately with officials from Texas border counties after residents objected to construction they said was unnecessary in rugged areas with few immigrant crossings and would damage the environment. At the closed-door meeting with Customs and Border Protection Commissioner Rodney Scott, the officials were told there would be no negotiating.</p>
+<p>Val Verde County Judge Lewis Owens called the plan “completely asinine” in a video statement about the meeting. He also said, “It is like my dad would say, it’s sort of like pissing in the wind. You just, you know, it just ain’t right, folks.” Owens said the people making decisions above Scott “have never been down here” and “don’t know what the hell this place looks like, but yet you’re making decisions on what’s going to affect us that live here.”</p>
+<p>Brewster County Sheriff Ronny Dodson, who was at the meeting, said Scott told local officials that wall construction along a more than 200-mile stretch from Hudspeth County to Presidio County was “not negotiable” and gave no reason. Dodson also said Scott acknowledged a lack of transparency from the federal government about construction plans so far.</p>
+<h3>Big Bend and private land are at the center of the dispute</h3>
+<p>The government is now pushing ahead with plans to build hundreds more miles of the 30-foot steel barrier in most counties, and says there will be vehicle barriers and other construction in the Big Bend state and national parks. But in Brewster County, which includes much of the Big Bend parks and the Black Gap Wildlife Management area, the immediate conflict is over patrol roads and vehicle barriers that locals say would threaten the parks’ environment and eco-tourism industry.</p>
+<p>Dodson said he has been taking local CBP officials on site visits in an effort to persuade them not to build a new road through the parks and to limit the number of vehicle barriers planned. “This county is concerned about tourism, and you may hear that word a lot,” he said. “But there’s a lot of truth there because we don’t have oil or gas or anything. We don’t have much.” He added that talk about the wall was already hurting tourism: “it’s already scaring people off because our tourism is down right now.”</p>
+<p>The people directly affected by construction have not had the same access to the meeting process. County sheriffs and judges, the top elected officials in rural Texas counties, have been the only ones invited to make their case to Scott while construction is temporarily paused. Private landowners, ranch owners and eco-tourism business owners who would be affected by construction were not invited.</p>
+<p>Susan Hays, who is running for a Presidio County commissioner’s seat, said after hearing details from the county judge: “They just paused for a couple of weeks and we are where we were before.”</p>
+<h3>A temporary pause leaves the larger fight unresolved</h3>
+<p>A federal judge has issued a temporary restraining order pausing construction over roughly 600 miles of border, but that order lasts only through the end of this month. The pause may delay significant construction on private land for now, but the underlying dispute remains open.</p>
+<p>In Presidio County, Deirdre Hisler, a county commissioner, told Axios that only about 20% of landowners west of the state park have signed away land access to the federal government, while only about 31% of landowners east of the park have done so. U.S. officials have made clear that landowners who do not comply risk an eminent domain lawsuit over their property.</p>
+<p>For now, the dispute is less about whether local leaders object — they do — than whether those objections will change anything. Scott’s message, as relayed by those who were in the room, was that the plan would go forward.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/09/02/border-wall-bulldoze-local-concerns" target="_blank" rel="noopener noreferrer" title="Axios / Like &quot;pissing in the wind&quot;: Local concerns bulldozed by Trump&#x27;s border wall plan">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>New Israeli Attacks Kill Eight Palestinians in Gaza in 24 Hours</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Eight Palestinians were killed and 31 wounded across the Gaza Strip in the past 24 hours by Israeli strikes, tank fire and drone attacks, bringing the enclave’s death toll to 73,470 since October 2023, according to the evidence cited by Telesur English. An airstrike hit the Al-Hawja area inside Jabalia refugee camp in northern Gaza, while drone attacks wounded several people in a tent sheltering displaced families in Al-Mawasi, in Khan Younis. The same southern area also came under intense tank fire near the local cemetery, and hospitals admitted eight newly wounded people.</p>
+<p>Rescue efforts remained paralyzed, with ambulance and civil defense crews unable to reach victims still trapped beneath rubble and lying in the streets. Health authorities also said the Israeli navy detained a fisherman off the coast of Gaza City. In a separate attack on Tuesday in western Gaza City’s Al-Katiba area, four people were killed, including two children and a woman, and eight others were wounded while families had gathered to collect water.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/new-israel-attacks-kill-8-palestine-gaza" target="_blank" rel="noopener noreferrer" title="Telesur English / New Israeli Attacks Kill Eight Palestinians in Gaza in 24 Hours">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="axios">
+  <summary>America is seeing an uptick in executions</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Florida executed its 14th prisoner of the year on Tuesday, adding to a post-COVID surge in capital punishment that produced 47 executions last year, including 19 in Florida, and 24 executions so far this year with 10 more scheduled. The pace is higher than any year since 2009, according to Death Penalty Information Center data dating back to 1977.</p>
+<p>Florida has led the way, with two men put to death within hours of each other in July, the first such executions in the state in more than six decades. Gov. Ron DeSantis has signed death warrants at a rapid pace, and he said in July that Florida would probably end up doing more executions than any administration in the state’s history. At the federal level, there has not been an execution since 2021, though President Trump signed a day-one executive order directing his attorney general to pursue the death penalty and ensure states have enough drugs for lethal injections.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/09/02/death-penalty-executions-surging-florida" target="_blank" rel="noopener noreferrer" title="Axios / America is seeing an uptick in executions">Axios #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="la_jornada">
+  <summary>With the US, cooperation will never mean subjugation</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mexico said it wants a relationship of understanding with the United States despite difficulties, and framed the message as cooperation that “will never mean subjugation.” The president said the most painful part of the situation has been the death of 17 compatriots in detention centers and during immigration authorities’ operations. She said that, because of this, legal actions would be pursued to demand respect for the human rights of Mexicans.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/09/02/politica/002n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / With the US, cooperation will never mean subjugation">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Over 2,000 Immigrants Have Been Arrested in New York Since July</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Immigration and Customs Enforcement agents arrested 2,197 immigrants across New York state from late July to late August in an operation, U.S. Department of Homeland Security Secretary Markwayne Mullin said on Tuesday. Mayor Zohran Mamdani said ICE was “an attempt to criminalize the very fact of being an immigrant,” and said immigrants across New York City and the country were being terrorized and left in fear about leaving their homes.</p>
+<p>Mullin said “Operation Rotten Apple” did what “sanctuary politicians” in New York City and the state refuse to do and said the operation received no help from Mamdani or Governor Kathy Hochul. He also said ICE arrested “murderers, rapists, pedophiles, drug traffickers, and violent assailants.” White House Border Czar Tom Homan said Democratic politicians in New York and elsewhere claim to care about public safety but do not let immigration officers into their jails to take criminals into custody. Hochul challenged the remarks, saying, “we’re not a sanctuary state for criminals,” accusing the administration of lying to the public, and saying the federal government owes New York US$87 million and is withholding 40 percent of the state’s counterterrorism funding.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/over-2000-immigrants-have-been-arrested-in-new-york-since-july" target="_blank" rel="noopener noreferrer" title="Telesur English / Over 2,000 Immigrants Have Been Arrested in New York Since July">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="el_pais,guardian">
+  <summary>Iran accuses US of ‘war crime’ after missile blast kills four people at wedding</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A missile strike on a wedding in Kuhestak, in Iran’s Hormozgan province, has left at least four people dead and 68 injured, with Iranian officials calling the attack a war crime and warning of a forceful response as the US and Iran trade fresh strikes.</p>
+<h3>Wedding guests caught in the blast</h3>
+<p>Iranian media said the ceremony was being held late on Tuesday in a private home in Kuhestak when a US missile struck, with shrapnel and debris killing and injuring people inside and around the house. Damage to homes in the town was reported early on Wednesday. The dead included a four-year-old child, Amir-Ali Karimi, and a 16-year-old, Mohammad Mollahi.</p>
+<p>Ali Mollahi, the father of the bride, told Mehr News that he was “extremely worried and upset” about what happened. Video from the aftermath showed wedding streamers and decorations scattered on the ground, along with shoes left behind in the rush to escape. A man filming the scene, in footage shared by Fars news agency, said, “You wicked people have attacked people’s homes and turned their wedding ceremony into a funeral.”</p>
+<p>The deputy of the provincial government, Ahmad Nafisi, said first responders went immediately to the scene and took the wounded to hospitals. Footage from a nearby hospital showed women in wedding attire watching injured children being treated. A child injured at the wedding told Fars that when people arrived, “an explosion occurred” and that bricks, stones and cement hit him and others.</p>
+<h3>Iran’s accusation and the wider exchange</h3>
+<p>Iran’s foreign ministry spokesperson called the attack a “war crime” and said Iran “will respond to these savage crimes with firmness.” Mohammad Baqer Ghalibaf, the chief Iranian negotiator, said the strike had killed families with children and called the US the “great Satan.”</p>
+<p>The strike came amid a broader exchange of attacks that had already raised fears of a wider renewal of hostilities. The Guardian said the US attacks followed strikes on Sunday and appeared to signal a resumption of another cycle of escalation. US Central Command said the overnight strikes focused on Iranian military targets, including air defence sites, radars and maritime assets. Tim Hawkins, a Centcom spokesperson, said the US was aware of reports of civilian casualties, but that “the US military never targets civilians.”</p>
+<p>Iran then launched drones and missiles at US bases across the Middle East, including in Bahrain, Kuwait and the UAE. Iran’s military spokesperson, Lt Col Ebrahim Zolfaghari, vowed “heavier, broader, and more crushing and devastating” retaliation.</p></div>
+  <div class="source-list"><a href="https://elpais.com/internacional/2026-09-02/iran-responde-a-estados-unidos-con-nuevos-ataques-contra-bahrein-jordania-y-kuwait.html" target="_blank" rel="noopener noreferrer" title="El País / Iran calls the US attack that killed four civilians at a wedding a &#x27;war crime&#x27;">El Pais #1</a><a href="https://www.theguardian.com/world/2026/sep/02/iran-us-missile-blast-wedding" target="_blank" rel="noopener noreferrer" title="The Guardian / Iran accuses US of ‘war crime’ after missile blast kills four people at wedding">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,bbc,el_pais">
+  <summary>Protests in Spain over government&#x27;s handling of Ceuta migrant crisis</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Thousands of people took to the streets across Spain this week to protest the government’s handling of the migrant crisis in Ceuta, with the biggest rally in Madrid and another in the territory itself as the fight over who should answer for the July influx sharpened.</p>
+<p>About 50,000 people gathered in Madrid on Wednesday, while residents in Ceuta draped Spanish and city flags over their shoulders. Crowds chanted “Expel the invaders” and “Ceuta is not for sale, Ceuta must be defended” on Ceuta Day, the local holiday marking the Portuguese takeover of the North African city in the 15th century.</p>
+<h3>The crisis that triggered the rallies</h3>
+<p>The demonstrations came a little more than a month after more than 70,000 migrants and asylum seekers crossed en masse from Morocco into Ceuta on July 30 and 31. At least 80 people died in the surge. Many of the arrivals have since returned to Africa, but some remain, and estimates of how many differ.</p>
+<p>The Spanish government puts the remaining number at about 5,000 people, including 1,200 minors, while local statistics are higher. Among those still stranded is 40-year-old Otman Ianaya, who told AFP he swam to Ceuta with his wife and two young daughters and wanted to build a future because there was no work in Morocco. Some migrants and asylum seekers are sleeping on Ceuta’s beaches, even as Spain has expanded emergency housing and social-service funding. Critics have said the response is inadequate for the scale of the need.</p>
+<p>The strain has also brought violence. The evidence describes fights, the stoning of a military patrol and reports of sexual assault. Residents in Ceuta have clashed with police and burned items belonging to migrants and asylum seekers in protest of the influx.</p>
+<h3>A political fight over blame</h3>
+<p>The crisis has hardened Spain’s political split. Opposition parties accuse Prime Minister Pedro Sánchez of abandoning Ceuta’s residents, while the government says right-wing parties are exploiting the emergency. Demonstrators in Madrid called for Sánchez to resign, and opposition leaders Alberto Núñez Feijóo and Santiago Abascal used the rally to attack him, accusing him of lying to Spaniards and being a traitor to Spain.</p>
+<p>Sánchez has blamed the surge on a misread court ruling and online disinformation, and he said negative coverage was amplified by Russian- and Israeli-linked accounts, though he did not offer proof and cited Spain’s intelligence community. On Wednesday, a police report said Moroccan security forces showed “total permissiveness” during the influx, after Sánchez had insisted Morocco was not responsible. Morocco denied orchestrating or being involved in the mass crossing. Madrid has pledged 309 million euros in aid for Ceuta.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/2/thousands-protest-in-spain-as-ceutas-migrant-crisis-festers-a-month-on?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Thousands of protesters have rallied across Spain against the ongoing migrant crisis in Ceuta, a small Spanish territory on the African coast.">AJ #1</a><a href="https://www.bbc.co.uk/news/articles/c1mvn2yp9n2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Protests in Spain over government&#x27;s handling of Ceuta migrant crisis">BBC #1</a><a href="https://elpais.com/espana/2026-09-02/feijoo-y-abascal-unen-fuerzas-en-la-protesta-por-ceuta-y-acusan-a-sanchez-de-mentir-a-los-espanoles-es-un-traidor.html" target="_blank" rel="noopener noreferrer" title="El País / Feijóo and Abascal join forces in Ceuta protest and accuse Sánchez of &#x27;lying&#x27; to Spaniards: &#x27;He is a traitor&#x27;">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,guardian,middle_east_eye,scmp">
+  <summary>Israel still wants to remove Palestinians from Gaza, defence minister says</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli Defence Minister Israel Katz said on Wednesday that plans to move Palestinians out of Gaza are still being discussed, keeping alive a clash between a forceful removal proposal and a ceasefire deal that says Palestinians should be able to remain in their land.</p>
+<p>At a conference organised by the Israeli publication Ynet, Katz said de-populating Gaza remained the “only solution” and that there was “no real solution for Gaza in the end without this migration.” He also said the Israeli government was prepared to take Gaza “by sea, by air and by any means to do it,” while arguing that US support was still needed.</p>
+<p>Katz said Donald Trump had not cancelled the idea but had “frozen it.” He added that countries willing to accept Palestinians would need American backing, while Egypt was refusing to take in Palestinian refugees. The remarks echoed earlier calls by some far-right Israeli officials for depopulating Gaza and revived a proposal that rights advocates say amounts to ethnic cleansing.</p>
+<p>Trump had previously backed a plan to have the United States take over Gaza and “own” the territory once Palestinians were removed, a proposal that drew outrage from Middle Eastern countries, including some allied with Washington. He later sponsored a 12-point ceasefire agreement that says, “No one will be forced to leave Gaza, and those who wish to leave will be free to do so and free to return,” and adds, “We will encourage people to stay and offer them the opportunity to build a better Gaza.”</p>
+<p>Since that ceasefire came into effect in October 2025, Israel has continued to restrict aid to Gaza, prevented reconstruction and carried out near-daily attacks against Palestinians, according to the evidence cited. Katz said the plan to remove Palestinians was still being discussed and that he believed there was “no other solution” and that “the moment will come.”</p>
+<p>The comments leave unresolved whether Trump will back any renewed push to depopulate Gaza, even as Katz said the Israeli government was ready to act if the political conditions changed.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/2/israel-still-wants-to-remove-palestinians-from-gaza-defence-minister-says?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Israel still wants to remove Palestinians from Gaza, defence minister says">AJ #1</a><a href="https://www.theguardian.com/world/2026/sep/02/israel-seeking-trumps-support-for-plan-to-expel-palestinians-from-gaza" target="_blank" rel="noopener noreferrer" title="The Guardian / Israel ‘seeking Trump’s support for plan to expel Palestinians from Gaza’">Guardian #1</a><a href="https://www.middleeasteye.net/news/israel-katz-says-palestinians-will-leave-gaza" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel Katz says Palestinians will leave Gaza">MEE #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3366150/israel-ready-remove-palestinians-gaza-once-us-approves-minister-says" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israel ready to remove Palestinians in Gaza once US approves, minister says">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Dreams shattered: Gaza amputees struggle under blockade and rubble</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Gaza City, 24-year-old Shurouq Khaira’s athletic future collapsed after a shell hit her family’s home in Daraj on November 19, 2023, leaving her with a below-the-knee amputation and turning daily movement, treatment and recovery into a struggle shaped by rubble, darkness and shortages.</p>
+<p>Before the war, Khaira was training regularly for track races, had won a national title in 2016 and hoped to represent Palestine internationally. She said she wanted “the whole world to know that people in Gaza live, dream, strive, and achieve,” and dreamed of the Olympics. When the attack came, she survived but her father also lost both legs. Since then, she has lived in a tent because their home was destroyed and reconstruction has not been allowed, and she says even simple tasks now feel overwhelming.</p>
+<h3>Waiting for prosthetics</h3>
+<p>Khaira is waiting for a prosthetic leg and still has to travel to physical therapy appointments across Gaza. With transportation scarce and expensive, she often walks for kilometres on one leg and sometimes misses appointments. She said, “I live between pain, fear, darkness, and suffering, but my heart remains patient.”</p>
+<p>Her case sits inside a wider medical crisis. The Gaza Ministry of Health says the war has led to around 6,000 amputations, and the United Nations says around a quarter are children, making it the largest source of child amputees in modern history. Orthopaedic surgeons in Gaza say shortages of surgical supplies, antiseptics, anaesthetics and prosthetic materials — including silicone, thermoplastics, medical plasters and mechanical joints — have forced improvised fixes and delayed rehabilitation.</p>
+<p>Another injured Gaza resident, 18-year-old Shireen Abu al-Qumsan, is waiting for prosthetic legs and treatment abroad that requires approval from Israel. She said moving in a wheelchair is “extremely exhausting” on Gaza’s destroyed streets.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/features/2026/9/2/dreams-shattered-gaza-amputees-struggle-under-blockade-and-rubble?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Dreams shattered: Gaza amputees struggle under blockade and rubble">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en,guardian">
+  <summary>USS Abraham Lincoln arrives at Thai port after gruelling 270 days at sea</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The USS Abraham Lincoln has arrived off a Thai port after more than 270 days at sea, bringing its 5,000-strong crew to Laem Chabang near Pattaya while reports of poor conditions and emotional strain on board continue to hang over the deployment.</p>
+<p>The nuclear-powered aircraft carrier reached the port south of Bangkok on Wednesday morning, with a heavy security presence in place. Police colonel Anek Srathongyoo, the superintendent of Pattaya city police station, said the sailors would disembark in groups of about 50. The ship left California in November 2025 for duty in the South China Sea and was rerouted to the Middle East before US-Israeli attacks on Iran that began six months ago.</p>
+<p>Reports of deteriorating living conditions and poor mental health on the vessel, including attempted suicides, have drawn attention around the world and criticism of Donald Trump’s actions in the Middle East. The port call has therefore become tied not just to the ship’s movement, but to the conditions its crew is said to have endured during the long deployment.</p>
+<p>Pattaya, a rest-and-recreation destination for US troops since the Vietnam war, has stepped up security as it prepares to welcome the sailors and Marines. The city’s mayor, Poramase Ngampiches, said buses had been arranged to transport the sailors between the ship and Pattaya until the carrier departs on Sunday. He also said they had been banned from water sports such as jetskis and from taking advantage of Thailand’s lax cannabis laws, while encouraging them to enjoy other attractions in the city.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/2/uss-abraham-lincoln-reaches-thailand-after-9-months-at-sea?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / USS Abraham Lincoln reaches Thailand after 9 months at sea">AJ #1</a><a href="https://www.theguardian.com/world/live/2026/sep/02/iran-us-middle-east-war-strikes-tehran-washington-wedding-trump-kuwait-jordan-latest-news-updates?page=with%3A6a980f768f08a39acbb0e8a3#6a980f768f08a39acbb0e8a3" target="_blank" rel="noopener noreferrer" title="The Guardian / Iran us middle east war strikes tehran washington wedding trump kuwait jordan latest news updates">Guardian #1</a><a href="https://www.theguardian.com/world/2026/sep/02/uss-abraham-lincoln-arrives-thailand-after-270-days-at-sea" target="_blank" rel="noopener noreferrer" title="The Guardian / USS Abraham Lincoln arrives at Thai port after gruelling 270 days at sea">Guardian #2</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Colombian Ombudsman Seeks Security Council After Two Indigenous Leaders Killed in Cauca</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Armed gunmen killed Indigenous leaders María Ovidia Palechor and James Flor early Tuesday at their home in rural Cajibío, Cauca. The killings prompted Colombia’s Ombudsman’s Office to request an urgent security council for the department. Social activists and members of the Regional Indigenous Council of Cauca (CRIC) condemned the killings.</p>
+<p>Palechor was a Yanakuna woman and human rights defender who had coordinated the CRIC’s Life and Human Rights Defense Program and Women’s Program, while Flor was a recognized peasant leader and departmental representative of the Victims’ Participation Roundtable. The evidence says Palechor and Flor had repeatedly warned about armed actors’ presence and intimidation, had filed multiple complaints about threats and risks, and had requested Urgent Action measures from the State, particularly after the April 25, 2026 massacre in El Túnel, Cajibío, where a dissident FARC group used cylinder bombs to attack a rural bus and other vehicles, killing 21 people and injuring dozens.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/colombian-ombudsman-seeks-security-council-after-two-indigenous-leaders-killed-in-cauca" target="_blank" rel="noopener noreferrer" title="Telesur English / Colombian Ombudsman Seeks Security Council After Two Indigenous Leaders Killed in Cauca">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="cnn,scmp,telesur_en">
+  <summary>Venezuelan Acting President Rodriguez Meets with U.S. Energy Secretary Wright</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">climate_disaster</span><span class="badge">public_health</span><span class="badge">major supplement</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Delcy Rodríguez’s meeting with U.S. Energy Secretary Chris Wright in Caracas put Chevron’s $7 billion Venezuela expansion at the center of a broader energy deal, while leaving open questions about how much of the arrangement can move ahead and who has the authority to approve it.</p>
+<p>On Wednesday, Rodríguez received Wright at the Miraflores Palace. Telesur English said Wright had been in Venezuela since Tuesday, accompanied by the U.S. Embassy’s charge d’affaires in Caracas, John Barrett, and Venezuelan Economy Minister Calixto Ortega. The visit was tied to a new contract for Chevron in the Orinoco Belt, where the company said Venezuela assigned it additional acreage. Chevron said it would invest more than $7 billion over the next five years and expects to double output to about 600,000 barrels a day by 2031, from roughly 300,000 today.</p>
+<p>Chevron also said its expanded position reflects confidence in Venezuela’s resource potential. Mike Wirth, the company’s chairman and CEO, said the move reflected “the dedication of our Venezuelan employees” and its “long-standing focus on the responsible development of the country’s resources.” The company now owns 49% of its joint venture with PDVSA, Venezuela’s state-owned oil company, after increasing its stake in April.</p>
+<p>The agreement has also drawn scrutiny over its legal footing. South China Morning Post said there were questions about whether Rodríguez can grant NABEP 100-year rights over 17 oilfields, and whether future Venezuelan or American administrations would overturn the deal. Ian Vasquez of the Cato Institute said Venezuela’s constitution requires National Assembly approval for arrangements like this, and that approval has not happened.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/09/02/economy/chevron-venezuela-oil" target="_blank" rel="noopener noreferrer" title="CNN / Chevron pledges to double its Venezuelan oil production">CNN #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3366144/us-chevron-expand-venezuela-oil-operations-us7-billion-plan" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Chevron to expand Venezuela oil operations with US$7 billion plan">SCMP #1</a><a href="https://www.telesurenglish.net/venezuelan-acting-president-rodriguez-meets-with-u-s-energy-secretary-wright" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuelan Acting President Rodriguez Meets with U.S. Energy Secretary Wright">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>&#x27;Inappropriate to say&#x27;: Trump may still be considering CIA-led uprising in Iran</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US President Donald Trump on Wednesday declined to say whether he would greenlight the CIA arming Iranians to encourage a violent uprising, telling reporters in the Oval Office that it “wouldn’t be appropriate to say.” The question came a day after he wrote on TruthSocial, “When are the Iranian people going to rise up and fight?” He was speaking after US strikes on Iran’s southern coast on Tuesday that killed 18 people, including two children at a wedding.</p>
+<p>A reporter asked, “Will you send the CIA in to arm Iranians?” Trump replied, “I’d love to tell you that, but it wouldn’t be appropriate to say,” adding that he understood “their plight.” He also said they had “close to 65,000 protesters killed,” though it remains unclear where that figure came from; Trump has previously floated figures between 25,000 and 80,000 during the anti-government protests in Iran early this year, while Iran’s own figure is about 3,800 killed.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/inappropriate-trump-backs-away-cia-backed-uprising-iran" target="_blank" rel="noopener noreferrer" title="Middle East Eye / &#x27;Inappropriate to say&#x27;: Trump may still be considering CIA-led uprising in Iran">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Lenacapavir gains ground as Western Cape uptake passes 3,600</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Lenacapavir’s Western Cape rollout is moving quickly, with more than 3,600 initiations across 22 government clinics, but the new six-month HIV prevention shot is still shaped by limited supply, side effects that users are learning to manage and questions about who is taking it up.</p>
+<p>At Cape Town’s Philippi Village, beside a rainbow-emblazoned mobile clinic, 20-year-old Olwam Plaatjie said she switched from the two-monthly cabotegravir HIV prevention injection to lenacapavir, the six-monthly injectable. She said small nodules formed at the two jab sites on her abdomen, but she was still delighted with the new medicine. Plaatjie, who is from Crossroads and started cabotegravir three years ago, said she sees many HIV-positive people, many of them girls, and that some boys do not want to be tested. “Guys often don’t even want to be tested; my boyfriend didn’t want to go for HIV tests,” she said.</p>
+<p>The figures behind the rollout show how far the programme has spread, even if supply remains constrained. According to Foster Mohale, spokesperson for the national Department of Health, there had been 3,641 lenacapavir initiations in the Western Cape as of 23 August, across 22 government clinics offering the injection. Nationally, the number stood at 47,934. Lenacapavir is currently being rolled out to 360 health facilities across six provinces, with the Western Cape’s 22 facilities making up about 6% of the total. The selection of facilities was partly based on how well they had been doing with HIV-prevention pills, which are already available in almost all public-sector health facilities.</p>
+<p>The rollout is also being shaped by who feels comfortable using the injection. Plaatjie’s account reflects a broader pattern described by others at Philippi Village: Lutho Windvoel said the six-month schedule made the jab worth it despite a fear of needles, while youth reference engagement facilitator Sive Mphambaniso said many men react with “nah” when injections are mentioned. He said it is a struggle to talk to men about HIV prevention, but that the mobile clinic makes the process feel quicker and more efficient. Elzette Rousseau of the Desmond Tutu Health Foundation said one in four of their lenacapavir clients were men, similar to the share using oral PrEP.</p>
+<h3>What comes next</h3>
+<p>The Desmond Tutu Health Foundation’s Align study is still unfolding in collaboration with the Western Cape Department of Health and Wellness and the national Department of Health. Rousseau said the goal is to enrol at least 1,500 people on lenacapavir and follow them for 18 months, but she said the data are still too limited to produce clear findings.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-09-02-lenacapavir-gains-ground-as-western-cape-uptake-passes-3600" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Lenacapavir gains ground as Western Cape uptake passes 3,600">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>The AGF opened 9,459 cases of fuel contraband</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The General Prosecutor’s Office (FGR) reported 9,459 investigative folders for fuel contraband during the second year of Claudia Sheinbaum Pardo’s presidency, along with 859 detainees, 307 of them already linked to process. It also said 137 searches were carried out and more than 10.3 million liters of fuels were seized. The reported period ran from September 1, 2025 to June 30 of this year.</p>
+<p>Authorities also said coordinated work between federal and local forces in peace tables led to the detection of 963 clandestine taps in six states. In that same strategy, they reported the seizure of 20,381,993 liters of hydrocarbons, including 1,558,192 liters of gasoline, 1,175,100 liters of fuel, 77,889 liters of diesel and 653,146 kilograms of LPG. Separate seizures were reported in Guanajuato, where 50 collection centers and 63 units were taken, and in Querétaro, where 68 vehicles and nine properties were seized.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/09/02/politica/014n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / The AGF opened 9,459 cases of fuel contraband">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Pims fire: PM Shehbaz reiterates no leniency for officials found negligent in their duties</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Prime Minister Shehbaz Sharif on Tuesday chaired an emergency meeting on health affairs and the fire at the gynaecology ward of the Pakistan Institute of Medical Sciences (Pims) in Islamabad, saying no leniency would be shown to officials found negligent in their duties. Fourteen infants were killed in the fire early last Wednesday, and Health Minister Mustafa Kamal said those responsible would “not be spared.” Shehbaz directed the health minister and health secretary to be physically present at Pims on alternate days, oversee steps to improve the hospital’s facilities, and ensure improved medical and treatment facilities and all necessary safety measures were fully implemented.</p>
+<p>The prime minister was briefed on the ongoing investigation into the fire, and the meeting was told that steps were being taken to implement his decisions in light of the interim investigation report. Last Saturday, the inquiry committee submitted that report, after which Shehbaz ordered the suspension of and criminal action against eight officials. On Monday, standing committees in both houses of parliament questioned the probe, raising concerns over incomplete CCTV footage and the disputed number of infants present in the nursery.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2026968/pims-fire-pm-shehbaz-reiterates-no-leniency-for-officials-found-negligent-in-their-duties" target="_blank" rel="noopener noreferrer" title="Dawn / Pims fire: PM Shehbaz reiterates no leniency for officials found negligent in their duties">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Supreme Court outlines a setback for Calica in the litigation against the Navy</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Supreme Court of Justice of the Nation (SCJN) is outlining a setback for Calizas Industriales del Carmen (Calica), a subsidiary of the American Vulcan, in a lawsuit over the Secretariat of the Navy-Armada de México’s (Semar) direct role in surveillance and security tasks at the port terminal it administers in Punta Venado, Quintana Roo. A project by minister Irving Espinosa Betanzo, scheduled for discussion this Thursday, proposes denying the company’s amparo and upholding the constitutionality of Article 2, Section V, Clause A, of the Organic Law of the Mexican Navy.</p>
+<p>The project says the article, amended in October 2021, allows the federal agency to carry out coastal guard, surveillance and inspection tasks at port facilities. It also says those powers are bounded by law, carried out within the maritime domain and coordinated with competent authorities, without granting unlimited or autonomous powers. Calica challenged the norm after, in May 2023, the Command of the Tenth Fifth Naval Zone requested by letter the software, user and password for its video surveillance system. Separately, Calica has long disputed with the Federation the closure of its limestone extraction operations in Quintana Roo, which the government linked to environmental damage.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/09/02/politica/008n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Supreme Court outlines a setback for Calica in the litigation against the Navy">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Environmental ‘watchdog’ barks, but hides names of malpractice offenders</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Africa’s body regulating environmental assessment practitioners has finally opened a partial window on discipline cases, but it still will not name the five sanctioned members, leaving questions about transparency and accountability unresolved.</p>
+<p>Five years after questions were first raised about how environmental consultants are policed, the Environmental Assessment Practitioners Association of South Africa (Eapasa) released a partial record of disciplinary action since it was formed in 2012. The association said it was established at government insistence 14 years ago, compulsory registration only took effect in 2018, and its formal malpractice policy was finalised in 2019.</p>
+<p>Eapasa said it has received 69 formal and informal written complaints against registered and candidate environmental assessment practitioners, or EAPs. Of those, 25 were treated as informal and closed because they were not submitted properly, 23 were withdrawn, incomplete or went stagnant, and 21 were referred to the Professional Conduct Committee for formal inquiry. Sixteen of those were dismissed, and only five were upheld. The sanctions included fines, a temporary suspension of registration, a mentorship requirement and a formal written warning.</p>
+<p>The association has not said who those five practitioners are, or what they did. Patrick Sithole, Eapasa’s registrar and CEO, refused to identify them or give details of the transgressions, saying Eapasa was “not in a position” to provide the names for “administrative and legal reasons”. Environmental assessment practitioners are private-sector consultants and state officials who prepare or assess environmental impact assessment studies.</p>
+<p>That refusal sits uneasily with Eapasa’s earlier policy, which required all findings and sanctions to be published on its website. About four months ago, on 18 May 2026, Eapasa changed the rule so the registrar may publish findings and sanctions only at the discretion of the Professional Conduct Committee and depending on the merits of the case. Sithole also told the newspaper that Eapasa operates under regulations from the National Environmental Management Act rather than an act of Parliament, and said the Department of Forestry, Fisheries and the Environment is working on further enabling legislation.</p>
+<p>After written questions were ignored in May 2021 and again in June 2026, Eapasa eventually responded this week with an update on complaints. University of KwaZulu-Natal law expert Michael Kidd said names and details should ideally be published by default unless exceptional circumstances justify withholding them, while attorney Paul Wani Lado of the Centre for Environmental Rights said accountability is critical to public confidence in environmental governance.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-09-02-environmental-watchdog-barks-but-hides-names-of-malpractice-offenders" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Environmental ‘watchdog’ barks, but hides names of malpractice offenders">DM #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Rental economy opens up new possibilities for consumers</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Beijing-based office worker, Lin Xiao, rented a DJI Osmo Pocket 4 for a trip to Shanghai Disneyland after deciding buying it might leave it unused because she does not travel often. On a friend’s recommendation, she used the rrzu.com rental platform with no deposit required. The device arrived the next day with all accessories included, and the two-day rental cost less than 100 yuan, or about $14.88.</p>
+<p>Her experience comes as rental consumption expands rapidly in China. In January, nine government departments including the Ministry of Commerce issued a guideline on promoting green consumption, calling for green rental services, innovation in green consumption models, and shared mobility, shared spaces and shared goods. A white paper from the Development Research Center of the State Administration for Market Regulation said China’s rental economy exceeded 4.2 trillion yuan in transaction volume in 2024, up 32 percent year on year. Since the start of the summer holiday, rental consumption has continued to heat up, with CAR Inc. saying rental orders rose by more than 30 percent year on year and concert equipment and gaming gear posting the fastest growth, at 388.5 percent and 488.7 percent respectively.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0902/c98649-20495144.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Rental economy opens up new possibilities for consumers">PDE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>The three waves of Ceuta crossing captured by the Police: first Moroccan youths in wetsuits, then “complete family groups”</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The National Police has described the July 30 mass entry from Morocco into Ceuta as three waves in a report sent to the magistrate investigating what it says involved between 70,000 and 80,000 people. The crossing was marked first by Moroccan youths aged 15 to 25, many minors, who swam across the border barrier with wetsuits, fins and flotation items such as tires, devices or air mattresses. The police say the flow began early, rose progressively between 8:10 and 9:30 a.m., and then changed after the access points opened at 11:00 a.m.</p>
+<p>From that point, the profile of people entering diversified. By 2:00 p.m. “complete family groups” and very young children were appearing, after an earlier shift to people up to 40 years old. It also says the second-wave arrivals were mostly dressed in sportswear and flip-flops and did not carry wetsuits or fins. The police further say the overwhelming majority of Moroccans in the first wave, listed as “between 95% and 98%,” diminished as people of Sub-Saharan origin were gradually incorporated.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-09-02/las-tres-oleadas-del-salto-a-ceuta-recogidas-por-la-policia-primero-jovenes-marroquies-en-neopreno-despues-grupos-familiares-completos.html" target="_blank" rel="noopener noreferrer" title="El País / The three waves of Ceuta crossing captured by the Police: first Moroccan youths in wetsuits, then “complete family groups”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Tunisia steps up civil society crackdown as anger mounts over power and water shortages</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tunisia’s government is escalating a crackdown on civil society, with Human Rights Watch warning in a report on Wednesday that the authorities are trying to shut civil society down. HRW said the 49-page report documented prosecutions, arbitrary detention, financial investigations and mass suspensions used by President Kais Saied’s government against local and civil society groups, their members, workers and associates. The crackdown began with the arrests of 14 workers from asylum support groups and anti-racist organisations between May and December 2024. HRW said at least 47 people linked to NGOs have since been prosecuted in trials in 2025 and 2026, and at least 10 have been held in preventive detention beyond the 14-month maximum under Tunisian law.</p>
+<p>Saadia Mosbah was sentenced to eight years in prison and fined in March 2026 on what HRW called abusive financial-crime charges, while five employees of asylum groups were also convicted on abusive charges. HRW said the targeted organisations have been forced to halt their work. The crackdown has unfolded as power outages and water shortages have driven people into the streets, with temperatures repeatedly nearing 50 degrees this summer. The Tunisian Company of Electricity and Gas has introduced rotating power cuts, which have also affected water distribution and bottled-water production.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/tunisia-steps-up-civil-society-crackdown-public-anger-mounts-power-water-shortages" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Tunisia steps up civil society crackdown as anger mounts over power and water shortages">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Ceuta protests demand solutions to migratory crisis and government action</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Thousands of people took to Ceuta’s streets on Wednesday to demand answers to the migrant crisis that has gripped the city for more than a month, as residents pressed for a return to normality while the fate of migrants still in public spaces remained unresolved.</p>
+<p>The protest came after a week of buildup through smaller demonstrations and other acts of protest, but the 2 September rally, on Ceuta’s day as an autonomous city, was the main show of discontent in a place of 83,000 people still living with the aftermath of the mass entry of more than 70,000 people on 30 and 31 July. Thousands of migrants were still in the city’s beaches, parks and streets, waiting to know what would happen to them.</p>
+<p>According to Delegation of the Government figures, about 20,000 people joined the demonstration and spent at least three hours asserting Ceuta’s identity and belonging to Spain. Flags of Ceuta and Spain were everywhere, and many marchers wore shirts reading “Ceuta es España,” “Orgullo ceutí” and “Ceuta no se vende, se defiende.”</p>
+<h3>A march built around anger and identity</h3>
+<p>The route began at 7 p.m. in the Murallas Reales area, where the crowd shouted “¿Dónde están los informes?” and “Ceuta unida jamás será vencida”. Before that, people had been warming up with “Yo soy español”, “Un caballa nunca se rinde” and “Invasores, expulsión”. The organizers — the Federación de Vecinos de Ceuta and the Asociación Siglo XXI — stressed that the rally was apolitical and peaceful, and the route did not stretch beyond a kilometer before the reading of the manifesto prepared for Ceuta’s day.</p>
+<p>The mood was one of anger at the central government’s handling of the crisis. Demonstrators demanded the expulsion of migrants and called for protection against Morocco. A police report pointing to the role of Moroccan agents in the mass entry of migrants on 30 and 31 July was a recurring theme in the chants and private conversations of marchers.</p>
+<h3>The city’s institutions felt the pressure too</h3>
+<p>The protest was not the only public moment shaped by the crisis. Earlier in the day, more than 600 people filled the Teatro Revellín for the city’s institutional celebrations, where the minister for territorial policy, Ángel Víctor Torres, the minister of migration, Elma Sáiz, and the government delegate, Miguel Ángel Pérez Triano, were booed from the audience.</p>
+<p>There, Tarek Mizzian, nephew of the posthumously honored deputy Mustaffa Mizzian, criticized what he called the socialist government’s “abandonment” of the city and asked for “diligent measures” so the migrants still in Ceuta could return. Juan Jesús Vivas, the city president from the PP, said he was living through “the most difficult of all the 2 September” of his 26 years in office and argued that all energies should be focused on getting Ceuta “out of the ICU” and back to normal.</p>
+<p>Vivas later joined the crowd at the demonstration, an hour after it started. He thanked residents for showing unity, told them “This force is unstoppable,” and also thanked people across Spain for their solidarity, saying Ceuta was not alone. After his intervention, the Spanish and Ceuta anthems were played.</p>
+<p>The city’s leaders say the way out runs through the return to Morocco of all the migrants who arrived at the end of July. At the same time, Vivas acknowledged that there is also a humanitarian emergency and that temporary accommodation spaces are needed for migrants, even as he insisted that returns must happen “as soon as possible.” He also warned that Ceutans could not keep living in a “pressure cooker” and asked for a defined time frame for a solution.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-09-02/ceuta-se-echa-a-la-calle-para-exigir-soluciones-a-la-crisis-migratoria.html" target="_blank" rel="noopener noreferrer" title="El País / Ceuta se echa a la calle para exigir soluciones a la crisis migratoria">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>China threat bolsters support for EU industrial policy</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Industry officials at the European Parliament backed the European Commission’s Industrial Accelerator Act proposal in Brussels on Wednesday, as a surge in Chinese imports prompted warnings that Europe could face a second export shock. Industry insiders and experts told EU lawmakers that time is running out to curb Beijing’s export push, and they said the next wave could be even more destructive than the one that followed China’s 2001 entry into the World Trade Organization.</p>
+<p>The industries now under pressure include electric vehicles, batteries, steel, chemicals and wind turbines, alongside sectors such as raw materials and solar panels. The IAA would partly aim to blunt that pressure by limiting Chinese investments in strategic sectors and setting Made-in-EU requirements for public procurement, potentially excluding Chinese suppliers. Beijing has strongly objected to the proposal, but it is gaining more support among EU countries and broad backing in the Parliament. Green MEP Anna Cavazzini, a co-lead on the file, said, “The urgency has increased,” and called the IAA a “cornerstone” of the EU’s response to China’s trade policies.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/china-threat-bolsters-support-for-eu-industrial-policy" target="_blank" rel="noopener noreferrer" title="POLITICO / China threat bolsters support for EU industrial policy">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Republican senator calls on Trump to fire Secretary of Defence Hegseth</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Republican Senator Thom Tillis has called on President Donald Trump to fire Defence Secretary Pete Hegseth, accusing him of creating a “leadership void” in the military as the war with Iran continues and after another senior Army official quit this week.</p>
+<p>In a social media post on Wednesday, the North Carolina senator contrasted Hegseth with former Army Secretary Dan Driscoll, who resigned on Monday amid reported disagreements with the Pentagon chief. Tillis wrote that he had “never witnessed more inept management” of service members, and said Hegseth was “intimidated by competence” and spent too much time “ginning up culture wars” instead of focusing on national defence and troop welfare. He urged Trump to “find a new leader at the Pentagon” who would “retain and empower” military talent.</p>
+<p>Driscoll’s resignation came after he reportedly tried to directly appeal to Trump about how changes in military leadership were affecting the Army’s readiness for war. His departure is the latest in a broader shake-up under Hegseth, who has overseen the firing or forced resignation of top military figures, including three- and four-star generals and members of the Joint Chiefs of Staff.</p>
+<p>Tillis’s criticism carries added weight because he is a member of Trump’s Republican Party. In recent years, he has become an increasingly outspoken critic from within the party, saying he fears some of Trump’s policies could harm democracy. He also voted to confirm Hegseth early in Trump’s second term, though he did so at the last minute and appeared to share some of the Senate’s concerns about Hegseth’s conduct and past work.</p>
+<p>Since taking office, Hegseth has pushed controversial changes at the Pentagon, including efforts to limit journalistic access and a broad drive to root out what he calls “wokeness” from the military. That effort has reportedly included firing leaders, blocking promotions, removing transgender service members and reviewing admissions standards at top military academies.</p>
+<p>Tillis also noted that modern warfare is changing, pointing to Ukraine and Iran, and argued that the Pentagon needs leaders focused on long-term military adaptation rather than culture-war fights.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/2/republican-senator-calls-on-trump-to-fire-secretary-of-defence-hegseth?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Republican senator calls on Trump to fire Secretary of Defence Hegseth">AJ #1</a><a href="https://www.aljazeera.com/news/2026/9/2/long-term-implications-pete-hegseth-military-purges?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / The long-term implications of Pete Hegseth’s US military purges">AJ #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Patagonia sues Trump over slashing of protected areas in Utah</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Patagonia joined a lawsuit on Wednesday challenging Donald Trump’s decision to significantly reduce the Bears Ears and Grand Staircase-Escalante national monuments in Utah, removing protections from nearly 3m acres. In July, Trump approved a 90% reduction of the sites, a move that would clear the way to open the land to oil and gas companies. The monuments are sacred to tribes, and Patagonia had sued Trump in 2017 when he first sought to downsize the public lands in Utah; Joe Biden later overturned that move.</p>
+<p>The retailer said it was joining the case to stop what it described as illegal orders that “betray Tribal sovereignty.” Chief executive Ryan Gellert said the company would not “stand idly by” while “anti-public lands crusaders” tried to exploit the lands for extractive-industry interests or disrespect tribal nations. He also wrote that the Antiquities Act lets presidents establish national monuments, but does not give them authority to undo them, and said Trump’s move was an effort to “force secession of federal land to the state” and allow private companies to extract natural resources from it.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/sep/02/trump-patagonia-lawsuit-utah-national-monuments" target="_blank" rel="noopener noreferrer" title="The Guardian / Patagonia sues Trump over slashing of protected areas in Utah">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>US prosecutors refuse to say if they secretly obtained Don Lemon’s phone records</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Federal prosecutors have declined to say whether they secretly obtained phone records for journalist Don Lemon using an unusual administrative summons, his lawyers said in a Monday court filing. The filing said officials served Verizon in January with a summons for a log of Lemon’s phone records from 19 December to 20 January, but that it did not come from a grand jury and was not a court-approved search warrant. Instead, the Department of Homeland Security said it was acting under 19 USC 1509, a customs-related law, while Lemon faces January charges tied to a protest at a church in Saint Paul, Minnesota.</p>
+<p>Lemon’s lawyers said records the government produced in the case still leave it unclear whether Verizon complied with the request. They said they asked prosecutors on Friday for clarification and had not received a response by Monday. The justice department and DHS declined to comment, and Verizon did not return a request for comment. The same DHS summons authority was also used to obtain six months of telephone records from T-Mobile for Georgia Fort, another journalist charged in connection with the protest.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/sep/02/don-lemon-phone-records" target="_blank" rel="noopener noreferrer" title="The Guardian / US prosecutors refuse to say if they secretly obtained Don Lemon’s phone records">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="agencia_brasil">
+  <summary>Discord will have ten days to present a protection proposal for users</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Federal Court in the Federal District gave Discord ten days on Wednesday (2) to present a conciliation proposal in a case brought by the federal government seeking measures to protect women, children and adolescents on the internet. The deadline was requested by Discord during the first hearing, which also included representatives of the Attorney General’s Office (AGU) and the Federal Public Prosecutor’s Office (MPF).</p>
+<p>The government had tried to reach an agreement with the platform before filing the lawsuit, but the AGU said the measures previously presented by the company were not enough to eliminate the problems identified. Discord is being targeted after the fallout from a July case involving a teenager who was induced to take her own life during a live stream on the platform. The company says it intends to present a protocol for receiving sextortion notifications, a mechanism to detect and moderate content about mistreatment and cruelty to animals, and measures to preserve user data for possible investigations.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/discord-tera-dez-dias-para-apresentar-proposta-de-protecao-usuarios" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Discord will have ten days to present a protection proposal for users">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Police report says Moroccan agents guided the entry of migrants into Ceuta in late July</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A police report sent to Spain’s National Court says Moroccan agents helped guide migrants into Ceuta on July 30 and 31, but senior police officials later told Interior that no report assigns the assault to any government, leaving responsibility unresolved.</p>
+<p>The 55-page document from the National Center for Immigration and Borders (CENIF) says its conclusions are based on images, social media messages and migrant interviews in the media. It describes the crossing as a planned operation rather than an accidental one, says the migratory objective was only a “formal cover” to direct a mass flow to Ceuta, and speaks of the “permissiveness” of the Moroccan security forces.</p>
+<p>The report also includes a photographic compilation of alleged Moroccan uniformed agents and says there were signs of active “guiding” toward crossing points by people identified as members of the Moroccan gendarmerie. It says the aim was to “eliminate Spain’s capacity to respond,” and notes a “relatively orderly and large-volume outflow” followed by effects of destabilization that remain.</p>
+<p>It also points to messages posted on Facebook, Instagram and TikTok before the crossing, which it says were not spontaneous but part of a pre-established pattern. The document contrasts July 30 and 31 with August 15, when the “country’s security structure” controlled the border with Ceuta for more than 48 hours and prevented another surge.</p>
+<p>But the police hierarchy later drew a line around what the report can prove. After Interior Minister Fernando Grande-Marlaska asked Police Director General Francisco Pardo Piqueras for clarification, Pardo replied that the document does not attribute to Morocco “the planning or execution” of the crisis. In separate communications, senior police officials said no report has attributed responsibility for the Ceuta assault to any government, service or person, and that the intellectual author remains unknown. Government sources said the CENIF file is data analysis and a possible starting point for a judicial investigation, not an operational document.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-09-02/el-informe-de-la-policia-apunta-que-agentes-marroquies-guiaron-la-entrada-de-migrantes-a-ceuta.html" target="_blank" rel="noopener noreferrer" title="El País / The police report points to Moroccan agents who “guided” the entry of migrants into Ceuta">El Pais #1</a><a href="https://elpais.com/espana/2026-09-02/tres-escritos-de-mandos-policiales-a-interior-aseguran-que-ningun-informe-atribuye-la-autoria-del-asalto-a-ceuta-a-ningun-gobierno.html" target="_blank" rel="noopener noreferrer" title="El País / Three writings by police officials to Interior certify that no report attributes &#x27;the responsibility for the Ceuta assault to any government&#x27;">El Pais #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Us politics latest news updates donald trump iran</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">House Democrats rejected a Republican constitutional amendment that would have permanently capped the Supreme Court at nine justices, defeating it 212-206. The proposal was part of a Republican effort to make the Supreme Court a campaign issue ahead of the November midterms, according to Reuters as cited in the evidence.</p>
+<p>The National Republican Congressional Committee said House Democrats “want to pack the Supreme Court with liberal justices so they can follow through on their radical socialist agenda,” and spokesperson Mike Marinella added that Democrats would use power to “fundamentally transform America into an unrecognizable socialist hellscape.” Congressman Jamie Raskin countered that Republicans were trying to “cement their stacked and packed MAGA Supreme Court majority into the Constitution” and were asking Congress to give up a power it has had since the Republic was founded: deciding how many justices sit on the court.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/sep/02/us-politics-latest-news-updates-donald-trump-iran?page=with%3A6a9890288f08bf7c3abbeb34#6a9890288f08bf7c3abbeb34" target="_blank" rel="noopener noreferrer" title="The Guardian / Us politics latest news updates donald trump iran">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Israel vows to retaliate if UK imposes sanctions</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli Foreign Minister Gideon Sa’ar warned that Israel would retaliate if the UK imposes sanctions over illegal settlements in the occupied West Bank. In an interview with Ynet on Tuesday, he said the relationship between Israel and the UK has become tense over recent Israeli plans to further expand settlements. Sa’ar accused the Labour government of “acting systematically against Israel,” said it had “already harmed defence exports to us and imposed sanctions on ministers,” and added: “If Britain acts against Israel, Israel will act against Britain.” He also said Israel is bracing for UK sanctions and preparing a response.</p>
+<p>The warning comes after London imposed sanctions in June 2025 on Israeli far-right ministers Itamar Ben Gvir and Bezalel Smotrich, and after late-last-month exchanges between Sa’ar and UK Foreign Secretary Ed Miliband over Israel’s plan to expand settlements in Area E1 in the occupied West Bank. Miliband told British MPs on Tuesday that his government plans a “comprehensive” package of sanctions in the coming weeks, saying Israel’s new plan in Area E1 “risks making a Palestinian state unviable.”</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israel-vows-retaliate-uk-imposes-sanctions" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel vows to retaliate if UK imposes sanctions">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Burnham to crack down on UK mega-donors influencing politics</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham’s government pledged to tackle the issue of “mega-donors” in UK politics as soon as possible, while dozens of Labour MPs pressed for an immediate cap on donations before the next election. In the Commons debate on Wednesday, Florence Eshalomi, the democracy minister, said the government was prepared to do more on big money in politics and promised a new cross-government taskforce to find a solution quickly. The bill’s main purpose is to lower the voting age to 16 and cap donations by Britons based abroad at £100,000 a year. It will also ban cryptocurrency donations until the Electoral Commission no longer deems them a risk.</p>
+<p>The debate also exposed pressure inside Labour over how far to go on donation limits. Stella Creasy led calls for a cap to restore trust in democracy, while trade unions continued to resist the idea over fears a future rightwing government could target large union donations. Burnham has previously backed an annual donations cap in correspondence with a campaigner, but was not in favour of including it in the bill. Creasy welcomed the minister’s statement but still wants a firm commitment to bring in a cap before the next election.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/sep/02/new-uk-taskforce-will-examine-influence-of-political-mega-donors" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham to crack down on UK mega-donors influencing politics">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Niger Accuses Neighboring Countries and France for Attempted Coup</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Tuesday, Niger accused several neighboring countries and France of involvement in an attempted coup over the weekend, in which three members of the presidential guard were killed. The military junta also requested help from Russian personnel of Africa Corps, who intervened with ground and air support to help regain control alongside the forces of President Abdourahamane Tchiani. Parts of the military, supported by special forces, had attacked the airport and presidential palace in Niamey, while the Nigerien Ministry of Defence attributed the violence to a “spontaneous outburst” involving soldiers who had breached military regulations.</p>
+<p>Captain Roger Gabriel, commander of the paratrooper battalion, said it was not a mutiny but an attempt to destabilize the military body, and he implicated relatives of former President Mohamed Bazoum. Gabriel said he received a call from a colonel in Chad who told him French and Chadian special forces were preparing to intervene in support of the rebel soldiers. He also said Bazoum’s relatives mentioned alleged support from Ivory Coast for the mutineers.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/niger-accuses-neighboring-countries-and-france-for-attempted-coup" target="_blank" rel="noopener noreferrer" title="Telesur English / Niger Accuses Neighboring Countries and France for Attempted Coup">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Police chief in Mississippi town where 1-year-old was killed has been fired</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Senatobia, Mississippi, fired police chief Harold Vanderford late Tuesday after reports that he regularly used racist slurs against Black people in text messages. Vanderford had submitted a resignation letter earlier on 1 September, but the city’s board of aldermen unanimously rejected it and voted to terminate him instead. The move came less than a week after the city said he would “continue to serve the City” with the confidence given to him when he was appointed chief. Angelica Maze, who is Black, has been named interim police chief.</p>
+<p>The firing lands in a town that had already drawn national attention over police encounters with Black residents, especially children. Earlier this year, a white officer fatally shot 1-year-old Kohen Wiley while responding to a shoplifting call at Walmart; the toddler was being held in his mother’s arms when officers fired into a vehicle. In 2023, Senatobia also made national news after an officer arrested and placed in a cell a 10-year-old Black boy who had urinated in public, and the child later received three months’ probation.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/sep/02/mississippi-police-chief-fired" target="_blank" rel="noopener noreferrer" title="The Guardian / Police chief in Mississippi town where 1-year-old was killed has been fired">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="cnn">
+  <summary>The war is raising the price of money. That’s a problem for the global economy</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Rising war costs, stubborn inflation worries and heavy government borrowing are pushing bond yields higher in the US and other major economies, raising the cost of mortgages, business loans and public debt just as investors worry the pressure could feed on itself.</p>
+<p>The sharpest warning sign is in the US bond market, where the benchmark 10-year Treasury yield climbed on Wednesday to its highest level in nearly three years. The move came as the war with Iran heated up again, lifting US defense spending and the cost of oil, gasoline, diesel and jet fuel. That energy spike is adding to inflation fears in a market already uneasy about America’s $40 trillion debt load.</p>
+<p>Higher yields matter because they make borrowing more expensive for everyone. Consumers face pricier mortgages, businesses pay more to finance expansion, and Washington pays more to cover the bills. Some investors fear the situation could turn into a “doom loop,” in which a longer war keeps spooking bonds, which in turn slows the economy and weighs on stocks. “It feels like there is no end to the inflation problem, the war or the deficit in the near term,” said Hardika Singh, economic strategist at Fundstrat.</p>
+<h3>A global bond-market shock</h3>
+<p>The strain is not limited to the US. Bond investors around the world have been active this summer, and yields have surged in several major markets. In Germany, the 10-year yield recently hit levels unseen since 2011. The UK’s 30-year yield reached its highest level since 1998. In Japan, the 10-year government bond crossed 3% for the first time since 1996.</p>
+<p>That broad rise in yields is also changing the balance with stocks. Higher bond returns offer investors a traditional alternative that is supposed to be safer, and that can draw money away from equity markets. The result is a global repricing of energy, inflation and government debt at the same time.</p>
+<p>What happens next is tied to both the war and central-bank policy. Investors suspect the Federal Reserve may have to seriously consider raising rates at its meeting later this month. Treasury Secretary Scott Bessent’s effort to steady the market by promising to at least double Treasury buybacks helped only briefly before the sell-off resumed. As Art Hogan of B. Riley Wealth Management put it, the bond market may cool only if there is “a credible way to get out of this war.”</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/09/02/economy/debt-treasury-stocks-bond-market" target="_blank" rel="noopener noreferrer" title="CNN / The war is raising the price of money. That’s a problem for the global economy">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>Burnham tries to calm bond market fears as sell-off threatens crucial first budget</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham moved to reassure investors on Wednesday as a days-long sell-off in government bonds pushed borrowing costs higher and threatened to complicate his government’s first budget next month, leaving John Healey with the prospect of much less room to spend.</p>
+<p>Burnham used his first appearance at prime minister’s questions to say decisions would be “grounded in fiscal responsibility” after his statement to parliament on Tuesday, when he promised more public control of utilities, further action on the cost of living and a recommitment to a 3% rise in defence spending. Those pledges were welcomed by Labour MPs, but others blamed him for worsening the sell-off.</p>
+<p>His former economic adviser, Jim O’Neill, said the statement was the “last thing” the markets needed. In the Commons, Kemi Badenoch attacked Burnham’s three-hour statement and said a prime minister needed to be “a leader, not a people pleaser”. Burnham responded that his budget would “stick to the fiscal rules, but at the same time, we will help reduce cost of living pressure on our constituents”.</p>
+<p>The pressure was not confined to Westminster. Investors across world markets have been dumping government bonds amid fears about inflation, deficits and competing demand for capital from tech companies on a debt-fuelled AI spending spree. That pushed yields higher, including in the UK. At one point on Wednesday, the cost of 10-year borrowing for the government hit 5.29%, its highest level since 2008, before easing slightly.</p>
+<p>That matters because the Office for Budget Responsibility bases its bond-yield forecast on a snapshot of market rates taken several weeks before each budget, and that snapshot is expected to be due about now for Healey’s 28 October statement. The chancellor has repeatedly said fiscal discipline is the “bedrock” of government policy, but analysts believe higher debt interest could wipe out up to half of the £24bn headroom Rachel Reeves built against Labour’s fiscal rules.</p>
+<p>Healey is due to set out his plans for economic growth on Monday, with the government under pressure to show how it will pay for defence spending and Burnham’s cost-of-living measures while calming markets at the same time.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/2026/sep/02/burnham-tries-to-calm-bond-market-fears-as-sell-off-threatens-budget" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham tries to calm bond market fears as sell-off threatens crucial first budget">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="agencia_brasil">
+  <summary>Warming beyond 1.5°C threatens health, agriculture, and the economy</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The United Nations said on Wednesday (2) that the planet should surpass the 1.5°C warming limit in the coming years, and the warning was tied to health, agriculture and economic risks. The forecasted impacts include natural disasters, heat waves, historic droughts, heavy rains and agricultural losses becoming more frequent on a warmer planet. At an event promoted by the Institute Clima e Sociedade (iCS), Thelma Krug, who chairs the Global Climate Observing System Steering Committee of the World Meteorological Organization, said the magnitude and duration of warming will shape the size of the damage to society and the environment. She also said the global temperature is already about 1.37°C above pre-industrial levels.</p>
+<p>André Guimarães, executive director of the Amazon Environmental Research Institute (IPAM), said the information should be treated with due gravity and should prompt urgent efforts to change the scenario. He said humanity must urgently reduce burning fossil fuels, end deforestation and change its relationship with nature. Economist Sergio Margulis, an expert at the International Institute for Sustainability (IIS) and a professor at PUC-Rio, said losses in infrastructure, agriculture, health and energy already represent 2% of global GDP, and argued that investment in the energy transition and adaptation needs to increase now.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/meio-ambiente/noticia/2026-09/aquecimento-alem-de-15degc-ameaca-saude-agricultura-e-economia" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Warming beyond 1.5°C threatens health, agriculture, and the economy">AB #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="daily_maverick">
+  <summary>SAPS fires Feroz Khan as criminal case, Madlanga probe continue</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">SAPS dismissed Crime Intelligence deputy head Major General Feroz Khan on Wednesday, 2 September, after he failed to appear for his expeditious disciplinary proceedings. SAPS spokesperson Brigadier Athlenda Mathe confirmed he was “deemed dismissed” under Regulation 9(7)(b) of the SAPS Discipline Regulations. The Labour Court had already rejected Khan’s urgent bid to stop the disciplinary process that could have led to his dismissal.</p>
+<p>Khan still faces a criminal case in the Kempton Park Magistrates’ Court and allegations before the Madlanga Commission. He was arrested in May alongside Gauteng Hawks head Major General Ebrahim Kadwa and businessman Tariq Downes over allegations linked to the unlawful possession of precious metals and defeating the ends of justice. The case stems from a May 2021 incident at OR Tambo International Airport, where Downes was allegedly found carrying 75.9 grams of unwrought gold. At the commission, Khan has faced wider allegations about his conduct in Crime Intelligence, but he has not yet testified to answer them.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-09-02-saps-fires-feroz-khan-as-criminal-case-madlanga-probe-continue" target="_blank" rel="noopener noreferrer" title="Daily Maverick / SAPS fires Feroz Khan as criminal case, Madlanga probe continue">DM #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="cnn">
+  <summary>Nation’s largest school district bans AI in the classroom through 8th grade</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">New York City is banning generative artificial intelligence for public school students from 2K through 8th grade under a one-year moratorium that will affect nearly 600,000 students, or nearly two-thirds of the district’s enrollment. Mayor Zohran Mamdani announced the policy Wednesday with Schools Chancellor Kamar Samuels, and Mamdani said the district will “discontinue or disable the AI components of more than 38 previously allowed programs” that do not meet new safety and oversight standards.</p>
+<p>Under the policy, companion chatbots and mainstream services such as ChatGPT and Claude will be blocked for all grades, while high school students will have access to a limited slate of AI tools and receive “AI critical thinking” courses. The district will also limit screen time by grade level. Exceptions will apply for students with disabilities and English learners, and teachers may use AI for lesson planning and other operational tasks, but not for grading or student assessments. A new Technology in Schools Coalition of educators, parents, students and others will review the moratorium and make recommendations for future school years.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/09/02/tech/new-york-city-classroom-ai-ban" target="_blank" rel="noopener noreferrer" title="CNN / Nation’s largest school district bans AI in the classroom through 8th grade">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="al_jazeera_en">
+  <summary>OpenAI faces new lawsuits over Tumbler Ridge mass shooting tragedy</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">OpenAI is facing 30 new complaints over the February mass shooting in Tumbler Ridge, British Columbia, which left eight people dead. The lawsuits were reportedly filed on Wednesday in a United States federal court in California and include teachers and students who were witnesses and survivors at the school where most of the shooting took place. They join seven initial lawsuits filed in April.</p>
+<p>The suits, brought by lawyer Jay Edelson, accuse OpenAI and its CEO, Sam Altman, of negligence and of aiding and abetting a mass shooting. They allege the company knew about the intentions of the 18-year-old shooter through interactions with ChatGPT, where she described scenarios involving gun violence, but did not report concerns to law enforcement. In April, Altman wrote to the community apologising that the company did not alert law enforcement about the shooter, Jesse Van Rootselaar. One of the new cases was filed for a 13-year-old identified as A C, and another was brought by grade seven teacher Deidre Rushlow.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/9/2/openai-faces-new-lawsuits-over-tumbler-ridge-mass-shooting-tragedy?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / OpenAI faces new lawsuits over Tumbler Ridge mass shooting tragedy">AJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>StudentSim: Training LLM-based Student Simulators</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new framework called StudentSim trains individualized LLM-based student simulators from sparse per-student records, aiming to give AI tutors both a realistic starting point and a way to adapt to guidance when real student feedback is costly and limited.</p>
+<p>The preprint says existing student simulators cover only part of what tutor training needs: state-tracking models can fit how a student behaves but struggle to digest a tutor’s explanations, while prompt-based LLM role-play can follow guidance fluently without reliably matching the student being imitated. StudentSim is meant to bridge that gap with a two-stage pipeline: pooled training across many students, then per-student specialization so each simulator reflects one learner while still responding to tutor prompts.</p>
+<h3>How the benchmark and tests work</h3>
+<p>To measure those two abilities, the authors built StudentSimEval, a standardized protocol covering 60 students across chess, second-language English writing, and mathematics. The benchmark scores simulators on behavioral fidelity, or how well they match a student’s own responses, and guidance responsiveness, or how well they update under tutor guidance. The paper says every method is trained on the same records and scored on the same held-out records, and the code for the benchmark and evaluation is released.</p>
+<p>On that benchmark, the paper says the per-student simulators outperform GPT-5.4 on both metrics across all three domains. In chess, StudentSim reaches 0.51 for fidelity and 0.91 for responsiveness, compared with 0.23 and 0.72 for GPT-5.4 and 0.45 and 0.27 for Maia2, a skill-conditioned chess move prediction model. The authors also say the trained simulators outperform state-tracking and prompted-LLM baselines more broadly.</p>
+<p>The work also includes a chess proof of concept for tutor improvement. A trained StudentSim was used as the reward in tutor reinforcement learning, and the resulting tutor was rated by expert humans as more accurate, better-guided, and more personalized than both a no-RL baseline and a tutor trained with a GPT-5.4 simulator reward.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.01591" target="_blank" rel="noopener noreferrer" title="arXiv / StudentSim: Training LLM-based Student Simulators">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Qwen-Drive-1.0 is presented as an early attempt to build a vision-language foundation model for autonomous driving that can handle 3D perception, driving question answering, and motion planning at once, while avoiding the tradeoff between driving-specific adaptation and losing broader vision-language abilities.</p>
+<p>The model keeps the architecture of a pretrained vision-language model and adds two external modules. One is a bird’s-eye-view perception head that jointly does 3D object detection, semantic occupancy prediction, and BEV map segmentation. The paper describes that head as both a probe of the 3D information already present in the shared representations and an explicit interface to scene structure. The other module is a Planning Expert that conditions on the shared VLM representations to generate future ego trajectories.</p>
+<p>To train the system, the team uses a staged recipe that mixes driving supervision with general-purpose vision-language data. The stated goal is to learn driving-specific competence while preserving broad visual understanding and instruction-following. The introduction frames this as a response to two limits of existing driving VLA systems: textual supervision alone does not directly constrain 3D layout, depth, or occupancy, and heavy domain adaptation can erase general knowledge that may still matter in rare or out-of-distribution driving situations.</p>
+<p>The reported results are broad rather than narrow. The experiments say Qwen-Drive-1.0 shows strong 3D perception and driving scene understanding while largely keeping its general vision-language capability. On nuScenes, it reports 43.95 mAP and 60.99 map mIoU; on OpenScene, 43.45 mAP and 71.27 map mIoU. For motion planning, it reports a Predictive Driver Model Score of 90.7 on NAVSIM, a Rater Feedback Score of 7.91 on the Waymo Open Dataset end-to-end benchmark test split, and promising closed-loop behavior in AlpaSim.</p>
+<p>The paper also says comprehensive evaluations across open-loop, pseudo-closed-loop, and closed-loop settings show highly competitive planning performance. A performance overview is given across driving VQA, general VQA, 3D perception, and motion planning, and the model is linked with Qwen-Drive-1.0-4B resources on Hugging Face, ModelScope, and GitHub.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.00111" target="_blank" rel="noopener noreferrer" title="arXiv / Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Scaling Laws for Compute-Matched MoE Looped Transformers</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new preprint argues that looping can help Mixture-of-Experts Transformers even when compute, non-embedding parameters and KV cache are closely matched, challenging the common practice of comparing looped models at fixed size while leaving extra FLOPs uncontrolled.</p>
+<h3>Matched budgets, not just bigger models</h3>
+<p>The study focuses on Loop Transformers that increase effective depth by repeating a shared block of layers. To isolate architecture from raw compute, the researchers compare a looped model against an unlooped Baseline while closely matching per-token FLOPs, total non-embedding parameters and KV cache. They call the resulting recipe SMELT, short for “Sparse MoE Transformer, middle layers loop twice.”</p>
+<p>After a series of ablations, the paper says SMELT should loop the middle half of layers twice, rather than the full stack or three or four times. The team then scales SMELT across four sizes up to 54B non-embedding parameters and fits a separate Chinchilla-style scaling law for each architecture. The point of the setup is to test whether looping still helps when the model does not get an unfair budget boost.</p>
+<p>The answer in the paper is yes. SMELT’s loss drops faster with compute, and the authors say that translates into 6.8–18.0% training FLOPs saved on the compute-optimal frontier. They also say the gain carries over to downstream benchmarks in ways that go beyond what validation loss alone would predict. The advantage is reported as largest on Code, and it grows with sample length and the number of in-context examples.</p>
+<p>The paper also includes a mechanistic analysis of what changes inside the repeated block. It says the second visit reduces the attention sink and shifts mass toward content-relevant tokens, which the authors present as a possible inductive bias behind the performance gains. In the paper’s framing, that makes looping not just a parameter-sharing trick, but a practical way to turn depth reuse into measurable improvements under matched budgets.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.01343" target="_blank" rel="noopener noreferrer" title="arXiv / Scaling Laws for Compute-Matched MoE Looped Transformers">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>UI-Venus-2 Technical Report</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">UI-Venus-2 is presented as a general-purpose GUI agent for mobile, web, and desktop environments, with the report arguing that the hard part is not just benchmark performance but making digital task automation dependable in messier real-world settings.</p>
+<p>The technical report says the system uses a unified closed-loop reasoning–action framework: it observes an interface, reasons about the task state, acts, and uses the feedback to decide what to do next. To push it toward practical use, the authors say they scaled three areas together. On the environment side, they expanded coverage to more than 170 multilingual mobile apps and native desktop operating systems. On the task side, they used a deep-research pipeline to generate function-grounded instructions. On the verification side, they used trace- and sample-level evaluators with visual keypoints and multi-model voting to produce more reliable reinforcement-learning signals.</p>
+<p>The report also says safety-aware mechanisms were added to control consequential actions. For evaluation, it compares UI-Venus-2-27B and UI-Venus-2-9B against selected strong baselines on several GUI benchmarks, including MobileWorld, WebVoyager, Odysseys, VenusBench-CAPTCHA, and VenusBench-GD. The authors note that they favor standalone end-to-end systems evaluated on the closest available task subset and step budget, and that results marked with an asterisk were reproduced by them.</p>
+<p>In the report’s framing, UI-Venus-2 is meant to move the UI-Venus family from action-centric navigation toward a broader, verifiable, and self-reflective foundation agent for real-world computer use. It also says the model, code, and project materials are being released openly, and that UI-Venus-2 achieves “almost state-of-the-art performance” among models of comparable scale across multiple GUI benchmarks.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.00028" target="_blank" rel="noopener noreferrer" title="arXiv / UI-Venus-2 Technical Report">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>H3-World: Turning Language Understanding into World Control</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">H3-World turns the 33B MiniMax-H3 video generator into an interactive world model, using language to control character behavior and camera motion with temporally grounded actions across visual environments.</p>
+<p>In a preprint from Danze Chen, Zeqing Wang, Ziyue Lin, Xingyi Yang and Yeying Jin, the system is presented as a lightweight adaptation of MiniMax-H3 rather than a new control model built from scratch. The authors say the key idea is that large video generators already respond to coarse natural-language instructions, so H3-World tries to convert that broad interface into more precise world control without adding dedicated action modules.</p>
+<h3>How the control system is built</h3>
+<p>The paper describes each action as a structured combination of character instructions and camera instructions, then aligns those with the corresponding temporal video latents. To make the timing more exact, it adds temporal attention routing so each instruction applies only to its intended interval and does not leak into neighboring actions. The model also reuses semantic representations learned during large-scale video pretraining and relies on lightweight LoRA adaptation.</p>
+<p>For training, the system uses 8,000 gameplay samples, 10,000 LoRA optimization steps, and only 0.199% trainable parameters. The data comes from ABot-World-Explorer-500h, with 7,872 clips for training and 128 held out for evaluation. Each clip contains 124 frames at 24 fps.</p>
+<p>The experiments in the paper compare H3-World with frozen MiniMax-H3 and other action-conditioning approaches. The authors report that when camera direction changes within a clip, H3-World follows both scheduled directions, while the zero-LoRA per-latent interface remains nearly static. They also say the model can follow recorded controls on held-out clips, handling stationary and forward motion, left and right strafing, and slow and fast camera pans.</p>
+<p>The paper further claims the system generalizes to unseen action combinations and to six initial observations that differ substantially from the gameplay training set. Across these tests, the authors say H3-World preserves scene layout and subject appearance while producing the requested character or camera response.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.01560" target="_blank" rel="noopener noreferrer" title="arXiv / H3-World: Turning Language Understanding into World Control">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>ZimaBlue: Evolving Generalizable World Action Models through Scalable Video Pre-training</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">ZimaBlue argues that general-purpose robot control can improve by training World Action Models on large-scale embodied video first, then grounding them with robot trajectories, instead of relying mainly on scarce action-labeled demonstrations. The preprint’s central question is whether action-free video can supply the scale and diversity that robot data lacks.</p>
+<h3>Why video is the bottleneck ZimaBlue tries to solve</h3>
+<p>The authors frame robotic manipulation as a scaling problem: robust generalization needs broad physical experience, but action-labeled robot trajectories are expensive and limited in diversity. They say egocentric videos are a much larger source of embodied experience because they capture object interactions, contact dynamics, tool use, and long-horizon behavior across many environments.</p>
+<p>That creates the core challenge of the work: how to turn abundant video into usable robot control. ZimaBlue’s answer is to treat video as the main substrate for learning physical and causal priors, then connect those priors to action through robot data. The preprint also argues that recent vision-language-action models have helped with instruction following, but that World Action Models offer a different route by predicting how the world evolves and how the robot should act within it.</p>
+<h3>How ZimaBlue is trained</h3>
+<p>ZimaBlue is presented as a three-stage curriculum. First, it does causal embodied video pre-training on large-scale human and robot egocentric videos. Second, it performs video-action mid-training on heterogeneous robot trajectories using a unified action representation. Third, it specializes the model to a target robot for deployment.</p>
+<p>The system also uses an asynchronous Slow-Fast dual-system design so that the world model and the control policy do not have to run at the same speed. The Slow branch is the high-capacity world model that learns generalizable spatiotemporal representations. The Fast branch is lightweight and is used for 30 Hz action prediction on NVIDIA RTX 4090 hardware. In the paper’s setup, this separation is meant to make generative World Action Models practical for real-time control.</p>
+<p>The preprint says the training pipeline uses a three-level data pyramid and separates video supervision from action supervision. In the first stage, the model learns from large-scale heterogeneous videos without action annotations. In the second stage, it brings in real-robot trajectories so that video and action tokens interact in a shared backbone. In the third stage, the model is adapted to the target robot, while the Fast action branch is trained with the Slow branch frozen.</p>
+<h3>What the reported results show</h3>
+<p>The strongest claim in the paper is that scaling embodied video improves zero-shot robot performance. On real-robot evaluations, moving from target-robot data alone to more than 120,000 hours of embodied video raises success from 36.1% to 77.8%. The authors also report that adding cross-embodiment robot data improves success to 46.1%, and that adding large-scale video pre-training pushes it further to 66.9% with 60,000 hours of video and 77.8% with 120,000 hours.</p>
+<p>The same pattern appears in the benchmark tables. On LIBERO-Plus, RoboTwin-2.0, and RoboCasa365, ZimaBlue is reported to perform strongly across settings, with especially notable gains on tasks that are harder or more visually shifted. For LIBERO-Plus, the paper says ZimaBlue reaches an overall zero-shot success rate of 86.7%, 0.9 points above InternVLA-A1.5, and 92.0% under supervised fine-tuning, 1.9 points above CAC-VLA under the same protocol.</p>
+<p>On RoboCasa365, the model reaches a 49.5 average success rate and the highest Average, Composite-Seen, and Composite-Unseen scores among the World Action Models compared in the table. The paper notes that Xiaomi-Robotics-1 still ranks higher overall, but it uses 100,000 hours of real-world robot data, while ZimaBlue uses 6,000 hours of action-labeled robot trajectories. ZimaBlue’s Composite-Unseen score is reported at 16.5%, more than doubling ABot-M0.6’s 7.9%.</p>
+<p>The preprint also emphasizes visual robustness. In a perturbed real-robot suite with unseen scenes, cluttered backgrounds, and dynamic illumination, scaling video pre-training from 60,000 to 120,000 hours raises success from 35.0% to 57.5%. The authors say this suggests the video scaling strategy matters most when environments shift away from the training distribution.</p>
+<p>The dual-system setup is not only about accuracy. The paper reports that asynchronous execution cuts end-to-end inference latency from 449.6 ms to 145.6 ms, a 3.1× speedup over the Slow policy. That matters because the model is meant to support closed-loop control, not just offline prediction.</p>
+<p>ZimaBlue’s overall message is that embodied video can function as the scale engine for generalizable robot learning, with robot trajectories used to anchor and specialize that visual knowledge rather than to provide the whole training signal.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.00188" target="_blank" rel="noopener noreferrer" title="arXiv / ZimaBlue: Evolving Generalizable World Action Models through Scalable Video Pre-training">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>From Production Traffic to Post-Training: Building a Self-Hosted LLM That Covers the Corporate Request Mix</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A self-hosted LLM for a large enterprise now handles half of platform traffic after post-training closed quality gaps across instruction following, function calling, and internal task mix, easing pressure on a finite GPU pool while testing whether one model can replace many without losing broad capability.</p>
+<p>The work starts from a deployment problem: data-residency constraints pushed the enterprise to self-host, but newer models kept arriving before older ones could be retired, expanding the serving fleet. The system was built around traffic from more than 200 internal applications, where production error analysis showed three main weaknesses to fix: instruction following, function-calling, and alignment to the internal task distribution. In the paper’s framing, instruction-following and formatting issues accounted for 37.9% of failures, while tool-equipped requests made up about 12% of traffic.</p>
+<p>To measure progress, the team built offline benchmarks from production traffic and scored them with deterministic verifiers or calibrated LLM judges. Rather than optimizing all objectives together, which the authors say created cross-domain reward interference, they trained a separate GRPO expert for each axis and merged the experts with two-stage SLERP. The paper says those experts target different failure modes, including semantic collapse, over-calling, and verbosity hacking.</p>
+<p>The resulting model is described as operating in non-reasoning mode on Qwen3-32B with an adapted Cyrillic-dense tokenizer. In the reported comparison, it beat a roughly seven-times-larger baseline by total parameters on the in-house Arena, with 69.6 versus 65.8, instruction following at 0.85 versus 0.83, and function-calling at 0.79 versus 0.77, while also improving general dialogue benchmarks. The adapted model is reported to absorb 50% of platform traffic, or 116 million requests per month, at a fraction of the serving cost, six months after rollout.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.01572" target="_blank" rel="noopener noreferrer" title="arXiv / From Production Traffic to Post-Training: Building a Self-Hosted LLM That Covers the Corporate Request Mix">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Hi-Q: Hierarchical Evidence-guided Query Refinement for Multi-Hop Question Answering</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">POSTECH researchers Jueun Kim, Sungho Park and Wook-Shin Han introduced Hi-Q, a hierarchical query-refinement system that decides when a multi-hop question is already supported by retrieved evidence and when it needs to be split further, targeting the granularity mismatch that makes multi-hop QA difficult.</p>
+<p>The work argues that multi-hop questions often compress several dependent reasoning steps into one sentence, while the supporting facts sit in documents at a finer retrievable level. Existing approaches, the authors say, use fixed graphs, iterative reformulation, or generated programs, but they do not explicitly decide when a query unit is already evidence-backed and when it should be refined. Hi-Q turns that problem into “retrievable granularity discovery.”</p>
+<h3>How Hi-Q decides whether to stop or expand</h3>
+<p>Hi-Q is an evidence-conditioned framework for hierarchical query refinement. At each query node, a resolution operator checks whether the retrieved evidence supports the current query unit. If the node is resolved, the search stops there. If not, the node is expanded using a dependency-preserving binary operator, and the proposed split is checked by a semantic coverage verifier.</p>
+<p>That design matters because Hi-Q does not assume in advance which query decomposition will fit the corpus. Instead, it grows a query tree whose shape is determined by corpus support signals rather than by a fixed decomposition template or a pre-built graph. The paper describes the split as ordered: one sub-query establishes a bridge fact, and the second uses that bridge to reach the parent answer. A verifier checks that the two-need split preserves the parent question’s intent without adding, omitting or reordering essential constraints.</p>
+<p>The introduction gives a simple example: for a query about “the birthplace of the performer of III,” Hi-Q first resolves who performed “III,” then rewrites the downstream question using that resolved entity before looking for the birthplace. The aim is to ground abstract references in already resolved facts and reduce retrieval interference.</p>
+<h3>What the benchmarks showed</h3>
+<p>The authors evaluated Hi-Q on MuSiQue, HotpotQA and 2WikiMultiHopQA. Their primary setting was full-corpus retrieval, where dependent evidence must be found among open-domain distractors rather than in a small annotated pool. They also reported results in the restricted supporting/distractor setting used by prior work.</p>
+<p>Across the three benchmarks in full-corpus retrieval, Hi-Q reached 52.3 EM and 64.0 F1 on average. That was ahead of IRCoT by 15.1 EM and 18.2 F1 on the same average, and ahead of PropRAG by 11.5 EM and 12.0 F1 on MuSiQue-full, without corpus-wide graph construction. In the restricted supporting/distractor setting, Hi-Q again led on average with 57.9 EM and 69.3 F1, ahead of PropRAG by 5.6 EM and 3.9 F1 and ahead of IRCoT by 13.7 EM and 15.8 F1.</p>
+<p>The evaluation used 1,000 validation questions per dataset, with GPT-4o-mini as the reader and NV-Embed-v2 as the retriever. The full-corpus setup was emphasized because it scaled from 139,416 passages on MuSiQue to 5,233,235 on HotpotQA. The paper says Hi-Q’s cost-matched configuration was both cheaper and more accurate than iterative retrieval at the same number of LLM calls, and it reports that Hi-Q retained the best average QA performance with two additional readers, Llama-3.3-70B and Qwen3-30B-A3B.</p>
+<h3>Scope and limits</h3>
+<p>The experiments establish performance on English, Wikipedia-derived, passage-based short-answer multi-hop QA, and the authors say the results should not be read as transfer beyond that setting. They also note that the resolution operator is implemented through three prompts: subquery refinement, granularity assessment and binary query decomposition.</p>
+<p>Hi-Q’s retrieval gains were also reported across embedding backbones. With text-embedding-3-large, Qwen3-Embedding-8B and NV-Embed-v2, the system improved average Recall@5 by 11.8, 14.3 and 8.2 points over dense retrieval alone.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.30468" target="_blank" rel="noopener noreferrer" title="arXiv / Hi-Q: Hierarchical Evidence-guided Query Refinement for Multi-Hop Question Answering">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Creating bottom-up RNA transfer vehicles from synthetic protein assemblies</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers built more than 100 synthetic transfer vehicles, or STVs, from AI-designed protein assemblies and natural protein domains, creating RNA carriers that outperformed widely used delivery systems by several orders of magnitude and were then tested in cells, mice and a pig.</p>
+<p>The work starts from a biological contrast: viruses are highly optimized for gene transfer, yet most have converged on similar capsid sizes and shapes, while generative protein-design models can produce protein architectures that do not occur in nature. The researchers asked whether those artificial assemblies could be turned into nucleic acid transport vehicles without following natural evolutionary paths.</p>
+<h3>Building synthetic RNA carriers</h3>
+<p>To do that, the team combined natural protein domains with synthetic protein assemblies and built what they call synthetic transfer vehicles. They first screened 39 designs with icosahedral, dihedral and cyclic symmetries across three linked readouts: release from producer cells, uptake by target cells and RNA transfer efficiency. Among those, cyclic symmetries moved more RNA per packaging protein than the other symmetry classes.</p>
+<p>They then expanded the search around the strongest designs and settled on STV-C8, an optimized vehicle built from the pleckstrin homology domain from *Ursus americanus* Ua PHPLC, a synthetic budding domain called SynL, a tandem coat protein from *Pseudomonas phage* PP7, and an artificial-intelligence-designed C8 assembly domain, HE0690. In this configuration, STV-C8 enriched cargo RNA in the supernatant more than 10,000-fold compared with a control lacking the membrane-binding domain.</p>
+<p>The authors report that STV-C8 also carried a broad size range of cargo RNAs, with similar expression for RNAs between 1 and 10 kb, suggesting no packaging limit across most of the cargo sizes they tested. They also say the vehicle remained stable for at least a week at 4°C.</p>
+<h3>Delivery, targeting and benchmarking</h3>
+<p>Once optimized, STV-C8 was compared with several other delivery systems, including virus-like particles, enveloped protein nanocages, selective endogenous encapsidation for cellular delivery and clinically used lipid nanoparticles. In those comparisons, STV-C8 delivered EGFP mRNA into target cells more than 1,000-fold more efficiently than lipid nanoparticles, and the mRNA dose needed to match lipid-nanoparticle expression was more than 10,000-fold lower.</p>
+<p>The team also tracked how the vehicle behaved after delivery. Uptake in split-luciferase reporter cells began after 2 to 4 hours and peaked around 10 to 12 hours. To steer the vehicle toward specific cells, they added computationally designed peptide binders against EGFR or IL-7Rα and paired them with a blinded VSV-G fusogenic protein. That let them program tropism and deliver therapeutically relevant cargo RNAs into a wide range of cellular models.</p>
+<p>The cargoes were varied. STV-C8 carried OpenCRISPR-1 into traffic light reporter cells with editing rates similar to wild-type Cas9, delivered Ascl1 mRNA into cortical astrocytes and produced ASCL1 expression in more than 30% of cells, and transported Cas13d-NCS and a crRNA into iPS cell-derived human lung cells infected with SARS-CoV-2-GFP.</p>
+<h3>Mouse biodistribution and a Duchenne muscular dystrophy test</h3>
+<p>The researchers then moved into animals. After intravenous injection of STV-C8(EGFP) into mice, they mapped biodistribution at near-single-cell resolution and say they confirmed an excellent safety profile in two animal models. They also used STV-C8 to deliver a CRISPR–Cas9 strategy aimed at deleting exon 51 of the dystrophin gene.</p>
+<p>In patient-derived cells and in a pig, the vehicle carried the gene-editing system and produced exon 51 deletion; the paper says amplification of the dystrophin locus from treated cells showed a deletion frequency of about 40%. The researchers note that intramuscular delivery is not directly applicable to Duchenne muscular dystrophy, and that future studies will need to address comparative performance, targeting and cell-type specificity.</p>
+<p>Even with those limits, the study argues that generative AI protein design can be used to build RNA transport systems from scratch, overcoming the constraints of natural protein diversity.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10952-3" target="_blank" rel="noopener noreferrer" title="Nature / Creating bottom-up RNA transfer vehicles from synthetic protein assemblies">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Late-life semaglutide treatment slows ageing and extends lifespan in female mice</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Semaglutide given late in life extended lifespan and improved multiple measures of ageing in female mice, raising the unresolved question of whether a GLP-1 drug can act as a calorie-restriction mimetic without the need for sustained diet cutting.</p>
+<h3>Late-life treatment changed ageing measures in old female mice</h3>
+<p>In the study, 20-month-old female C57BL/6 mice were treated with the GLP-1 receptor agonist semaglutide for 3 months. The treatment improved physiological function, attenuated hallmarks of ageing, and modulated nutrient sensors and conserved genetic regulators of ageing. When treatment continued for the full lifespan study, it extended mouse lifespan.</p>
+<p>The mice also ate less: semaglutide treatment reduced food intake by 24%. In the lifespan cohort, the median lifespan was 742 days in the control group and 834 days in the semaglutide group. The paper says the age at death appeared to be delayed across several categories unrelated to tumour.</p>
+<p>The functional changes were broad. Semaglutide-treated aged mice showed increased locomotor and exploratory activity in open-field and elevated-plus-maze tests, better performance in the Barnes maze, improved motor function in the rotarod test, and improved glucose clearance in a glucose-tolerance test. The paper also says semaglutide reduced ageing-associated inflammation, cellular senescence, genomic instability, mitochondrial stress and endoplasmic reticulum stress, while increasing expression of mitochondria-related genes.</p>
+<h3>The comparison with calorie restriction</h3>
+<p>The work places those results beside calorie restriction, which the paper describes as reduced calorie intake without malnutrition and says can slow ageing and extend lifespan across species. In the authors’ view, the semaglutide effects parallel key features of calorie restriction, including its links to slower ageing and a broad effect on ageing-associated disease.</p>
+<p>A longitudinal study directly compared semaglutide with matched calorie restriction in 20-month-old female C57BL/6 mice treated for 5 months. According to the paper, semaglutide preserved baseline function and recapitulated many functional benefits of calorie restriction by attenuating age-associated decline. It also produced improvements above baseline, and more favourable trajectories than calorie restriction, in exploratory drive, spatial memory and glucose control.</p>
+<p>The paper says the two interventions also showed similar effects on body weight and fat loss, even though their feeding patterns differed. That comparison is central to the study’s argument: semaglutide did more than just reduce food intake, and some benefits tracked more closely with a calorie-restriction-like state than with simple weight loss alone.</p>
+<h3>What the biology suggests</h3>
+<p>The authors say semaglutide altered pathways tied to ageing biology rather than only changing appetite. They report reduced hallmarks of ageing, including stem cell attrition, inflammation, cellular senescence, genomic instability, mitochondrial dysfunction and loss of proteostasis. RNA-sequencing of liver tissue found that semaglutide downregulated lipid metabolism and inflammatory responses while upregulating adaptive immune response, insulin response and proteostasis.</p>
+<p>The paper also reports changes in conserved ageing regulators. Semaglutide increased NAD+ levels and induced expression of Oser1, which the paper describes as a conserved FOXO-regulated protein that increases lifespan in multiple species. The authors say semaglutide and calorie restriction shared an impact on genes suppressed by both treatments, which were enriched in inflammation and lipid metabolism, and on genes induced by both, which were enriched in adaptive immune response, glucose/insulin response and proteostasis.</p>
+<p>The authors conclude that GLP-1 receptor activation initiated late in life slows ageing and extends lifespan in female mice, supporting a calorie restriction mimetic role while also revealing effects beyond reduced calorie intake. They add that whether GLP-1 medicines influence ageing trajectories and lifespan in humans will require long-term clinical studies designed to evaluate ageing-related outcomes in older populations.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10940-7" target="_blank" rel="noopener noreferrer" title="Nature / Late-life semaglutide treatment slows ageing and extends lifespan in female mice">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Functional chimeric mRNAs encode proteins in mammalian immunity</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Inflammation in mouse macrophages can produce a protein-coding chimeric mRNA, Gsdmd-Tmem106a, that helps drive pore formation and IL-1β release, adding evidence that mammalian immunity can use transcript fusion to generate functional proteins whose effects cut both ways in host defense and sepsis.</p>
+<p>The study addresses a long-running question in mammalian gene expression. Individual mRNAs and proteins are usually thought to come from single genomic loci, with diversity arising through cis-splicing, while chimeric RNAs in healthy mammals have been considered rare and often tied to oncogenic DNA translocations. Here, the researchers built a pipeline combining long-read direct RNA sequencing with non-targeted and targeted validation to look for chimeric transcripts in macrophages.</p>
+<p>That search identified many candidates, and the work centered on one protein-coding chimera in mice: a fusion between gasdermin D, or GSDMD, and a C-terminal domain translated out of frame from Tmem106a. Chromatin conformation capture studies showed that inflammation induces interchromosomal DNA interactions, positioning the parent genes closer together and facilitating chimeric mRNA formation. The researchers report that inflammasome priming upregulated Gsdmd-Tmem106a, and the protein localized to the plasma membrane.</p>
+<h3>A chimeric protein that boosts pore formation</h3>
+<p>After inflammasome activation, GSDMD–TMEM106A directly interacted with canonical GSDMD N termini and accelerated and enhanced pore formation and IL-1β release. The findings link the chimera to the core inflammatory machinery rather than to a byproduct of abnormal transcription.</p>
+<p>The study also extends the story in vivo. The researchers say GSDMD–TMEM106A balanced host defense and immunopathology: loss of the chimera protected against lethal sepsis but compromised antibacterial defense, while overexpression improved host protection but increased sepsis lethality. In that sense, the molecule appears to sit at a trade-off point between fighting infection and worsening inflammatory damage.</p>
+<p>The authors conclude that protein-coding chimeric mRNAs formed by regulated transcript fusion events are operative during inflammation and immunity. They argue that this expands the functional proteome in mammals and opens a wider landscape for biological discovery and therapeutic intervention.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10982-x" target="_blank" rel="noopener noreferrer" title="Nature / Functional chimeric mRNAs encode proteins in mammalian immunity">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>3D epigenome of glial cell types in developing human cortex</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 3D epigenomic map of glial cells in the mid-gestational human neocortex has tied cell-type-specific regulatory elements to cortical development, schizophrenia risk and human-accelerated regions, while also clarifying how ventricular and outer radial glia differ during a period when the scaffold of the developing cortex is changing.</p>
+<h3>Mapping four glial populations in the developing cortex</h3>
+<p>The study focused on four main glial populations: ventricular radial glia (vRG), outer radial glia (oRG), oligodendrocyte precursor cells and microglia. Using second-trimester human cortex, the researchers combined gene expression, chromatin accessibility, DNA methylation and high-resolution 3D chromatin interactions to identify candidate cis-regulatory elements, or cCREs, and their likely target genes.</p>
+<p>They isolated vRG and oRG from six donors spanning gestational weeks 15 to 18, and microglia and oligodendrocyte precursor cells from nine donors spanning gestational weeks 22 to 24. Across the four cell types, they identified 69,141 cCREs in vRG, 72,450 in oRG, 65,295 in oligodendrocyte precursor cells and 60,958 in microglia. More than 60% of the cCREs sat outside promoter regions, and the PLAC-seq data produced 136,389, 144,089, 140,297 and 135,123 significant chromatin interactions in the four cell types, respectively.</p>
+<p>The data were used to highlight loci with epigenomic signals specific to vRG and oRG and to point to transcription factors that may help drive lineage specification. The paper frames this as a way to study human cortical development at the level of gene regulation rather than only cell identity.</p>
+<h3>A link between glial regulatory DNA and schizophrenia</h3>
+<p>The same framework was then applied to disease-associated variation. Using machine learning, the researchers prioritized 112 schizophrenia risk variants within glial cCREs. They also reported in vivo confirmation that the rs4449074 risk allele disrupted a predicted vRG enhancer.</p>
+<p>The study places this result in the context of earlier work showing that chromatin looping can help explain how non-coding variants affect lineage-specific gene regulation. Here, the point was not only that schizophrenia-linked variants lie in accessible regulatory DNA, but that the 3D map could help connect those variants to specific glial cell types and, in at least one case, to a predicted functional effect in vRG.</p>
+<h3>Outer radial glia and human-accelerated regions</h3>
+<p>The evolutionary signal in the dataset centered on oRG. The researchers found that oRG cCREs were enriched for human accelerated regions compared with other cCREs. They also reported that a subset of these human accelerated regions showed activity differences from chimpanzee orthologues and interacted with genes involved in neuronal development.</p>
+<p>That result sits alongside the paper’s broader view of radial glia as key drivers of cortical expansion. The authors describe radial glia as stem cells of the developing brain that form the scaffold supporting neuronal migration, and note that during mid-gestation the scaffold becomes discontinuous as oRG delaminate from the ventricular surface while vRG remain behind. Against that backdrop, the enrichment of accelerated regions in oRG-linked regulatory DNA suggests a possible role for these cells in human-specific gene regulation during corticogenesis.</p>
+<p>The paper’s overall claim is that integrating 3D chromatin contacts with other epigenomic layers can reveal how glial populations help shape the developing human cortex, how some schizophrenia risk variants may act in that setting, and how regulatory DNA in oRG may relate to human cortical evolution.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/s41586-026-10987-6" target="_blank" rel="noopener noreferrer" title="Nature / 3D epigenome of glial cell types in developing human cortex">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A search for one exotic particle uncovered two strange new structures</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A search at Jefferson Lab for a confirmed XYZ particle with a high-energy photon beam turned up two unexpected structures instead, adding new clues to a class of hadrons that still resists a simple explanation.</p>
+<p>Researchers in the Gluonic Excitations, or GlueX, Collaboration at Experimental Hall D were looking for Y(2175), a strangeonium candidate first reported in 2006. Instead, they found two nearby signals created when high-energy photons struck a proton target: one at about 2.24 GeV, named Y(2240), and another at about 1.82 GeV, named X(1830). Malte Albrecht, a staff scientist at Jefferson Lab, said, “We went searching for a confirmed XYZ candidate with a photon beam but instead found two other structures. It’s new information.”</p>
+<p>The result matters because XYZ states are particles that do not fit neatly into the conventional quark model. That model, developed in the 1960s to organize the growing “particle zoo,” describes hadrons as composite particles made from quarks held together by the strong nuclear force. But after the start of the 21st century, experiments began turning up hadrons with unusual quantum properties that did not sit comfortably in that framework.</p>
+<p>GlueX was built to investigate hybrid mesons, exotic particles in which excited gluons may contribute directly to the internal structure. In this case, the new signals may help scientists sort out the strangeonium region, where particles contain strange and anti-strange quarks. The team said the findings could help clarify how one of nature’s fundamental forces contributes to the formation of matter.</p>
+<p>Y(2240) was detected with 5σ significance, while X(1830) reached 3σ significance. The study also sets an upper limit on how likely Y(2175) is to be produced through photoproduction, which may help guide future work. For now, the researchers say the new structures open another path into a crowded and still poorly understood part of particle physics.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/08/260831015147.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A search for one exotic particle uncovered two strange new structures">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Earth may have lost the Sun’s protective shield millions of years ago</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two NASA-funded studies suggest Earth’s climate may have been shaped not only by the Sun’s light, but by the Sun’s journey through the Milky Way and by violent activity from its early years, raising a new question about how the planet stayed habitable.</p>
+<p>One study from NASA’s SHIELD center examined how the heliosphere — the Sun’s vast protective bubble — moved through the galaxy over time. Using computer simulations, researchers reconstructed the heliosphere’s past path and found that the solar system may have passed through extremely cold, dusty regions at least three times in the last several million years. The modeled encounters occurred about 2 to 3 million years ago, 6 to 7 million years ago, and 13 to 14 million years ago.</p>
+<p>In those simulations, dense interstellar clouds pressed on the heliosphere hard enough to compress it dramatically. At times, the bubble may have shrunk to smaller than Earth’s orbit, leaving the planet outside the Sun’s protective shield. The researchers said that if that happened, Earth’s atmosphere would have been exposed to a very different interstellar environment. They also said the timing lines up with geological evidence, including interstellar dust found in deep-sea sediment cores, Antarctic snow and Moon samples from those periods.</p>
+<p>The study suggests those galactic encounters may have influenced conditions on Earth. In the simulations, exposure to a dense, cold cloud of galactic hydrogen increased atmospheric water vapor and altered the upper atmosphere, with effects that eventually reached closer to the surface. That raises the possibility that the solar system’s passage through colder parts of the Milky Way contributed to long-term climate change, including ice ages.</p>
+<p>A second study tackles a different puzzle: how the young Sun, which was about 70% as bright as it is today roughly 3 billion years ago, could have left Earth warm enough for liquid water. That contradiction is known as the Faint Young Sun paradox. To test one idea, NASA scientist Vladimir Airapetian and collaborators recreated early Earth-like atmospheric conditions in a sealed chamber and bombarded the gas mix with protons to mimic particles from solar superflares.</p>
+<p>The experiment produced nitrous oxide, a greenhouse gas about 300 times more potent than carbon dioxide. The researchers found that even if only 10% of that gas survived, it could have raised temperatures near Earth’s equator to about 41 degrees Fahrenheit, or 5 degrees Celsius, enough to keep water from freezing. The study also suggests that those conditions may have favored prebiotic chemistry, offering a possible link between the young Sun, Earth’s warmth and the chemistry that preceded life.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260901070523.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Earth may have lost the Sun’s protective shield millions of years ago">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
