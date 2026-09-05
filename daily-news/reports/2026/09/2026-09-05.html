@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-09-05</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-09-05</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Catastrophic Nepal Floods Leave 1.290 Dead, Rescue Efforts Continue</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nepalese police said the floods in Nepal, triggered by the sudden rise of the Bhotekoshi River, had killed 1,290 people and left 4,798 missing as of Friday, with the hardest-hit area in Rasuwa district. They said rescue teams had saved 8,197 people alive. For identification, police collected 1,143 DNA samples from the deceased and 711 from their families, while 926 bodies had been buried by local authorities. The confirmed dead included 32 children, 250 women and 427 men, and 532 partially recovered remains had been found in heavily affected areas.</p>
+<p>A third batch of emergency aid from China arrived in Kathmandu with modular metal bridges, freezers for preserving bodies, medical supplies and other essential items for the affected population. Ten Chinese experts in DNA testing and forensic medicine also arrived to work with local authorities, under the coordination of China’s Ministry of Public Security.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/nepal-floods-1-290-dead-rescue-continue" target="_blank" rel="noopener noreferrer" title="Telesur English / Catastrophic Nepal Floods Leave 1.290 Dead, Rescue Efforts Continue">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye,scmp">
+  <summary>‘There was blood everywhere’: Survivors recount US strike on wedding in Iran</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A wedding in Kuhestak, on Iran’s Hormozgan coast, turned into a scene of smoke, rubble and blood when a projectile struck the house where women and children were gathered, killing five people and wounding 68, while the exact weapon and target remain unclear.</p>
+<h3>The wedding in two houses</h3>
+<p>On the evening of Tuesday 1 September, about 350 people gathered in Kuhestak, in Sirik county, for the wedding of Maryam Mallahi and Ziaeddin Khoshrish. By local tradition, the celebration was split between two homes: the men were at a relative’s house, while the women waited at the bride’s family home.</p>
+<p>Coloured lights had been put up, guests wore traditional clothing, and everyone was waiting for the bride and groom to arrive. Maryam and Ziaeddin had not yet reached the house when the attack began, and that delay saved them from the blast that hit their celebration.</p>
+<h3>Explosions in Kuhestak</h3>
+<p>At around 9pm, as the United States launched a new wave of attacks across southern Iran, people in Kuhestak heard a series of explosions. Initial reports said a telecommunications tower and facilities near the pier had been hit. The tower was less than 200 metres from the wedding venue.</p>
+<p>Moments later, a projectile struck the house where the women and children had gathered, tearing through the roof. Majid, 41, was at the men’s gathering nearby. He said his wife and five-year-old child were both wounded. “We rushed towards the bride’s house and saw smoke and fire everywhere,” he said. “I pulled my wife and my five-year-old child from beneath the rubble. Screams were coming from every direction. There was blood everywhere, and everyone was desperately trying to help the wounded.”</p>
+<p>Ali Mallahi, the bride’s father and owner of the house, said he heard a second and then a third explosion and realized the sounds were coming from the direction of his home. He said the first blast destroyed the single-storey house and left it uninhabitable, while the second struck the courtyard and damaged a car and other parts of the property.</p>
+<p>Residents and emergency workers rushed in before the formal rescue response arrived. A Red Crescent worker who came with colleagues minutes after the strike said people from the building and nearby homes were already trying to pull survivors from the rubble. Fifteen ambulances were sent to the area, and the wounded were taken mainly to hospitals in Sirik and Minab, with the most serious cases admitted to intensive care.</p>
+<h3>Death toll, damage and unanswered questions</h3>
+<p>The toll rose over the following days. Iranian officials first reported two deaths and about 50 injuries, then said the number of dead climbed to four after the deaths of 50-year-old Zarkhatoun Taheri, 43-year-old Kolsoum Mallahi-Nezhadnia, 16-year-old Mohammad Mallahi and four-year-old Amir Mohammad Karimi. On Thursday, 22-year-old Asieh Molaeinejad died in hospital, bringing the death toll to five. Provincial authorities said 68 people were wounded, including 19 children under 10.</p>
+<p>A number of those hurt were relatives, friends or acquaintances of the bride and groom. Fatemeh, another guest, said Amir Mohammad had been due to start preschool in a few days. “Now his parents have to attend his funeral,” she said.</p>
+<p>It is still unclear exactly what kind of weapon hit the house. Some witnesses interviewed about the attack believed it was a missile, while others spoke of drones. No official account has established precisely how the strike was carried out. The Iranian Red Crescent’s deputy for international and humanitarian affairs, Razieh Alishvandi, described it as a projectile striking a residential home during a wedding. Everyone interviewed said the building was purely residential and that there were no military, security or intelligence facilities nearby.</p>
+<p>The attack in Kuhestak was part of a broader wave of strikes across Hormozgan and other parts of southern Iran that night. Iranian officials reported attacks or explosions in Bandar Abbas, Qeshm, Jask, Sirik, Konarak and Chabahar. In Kuhestak, the telecommunications tower, parts of the pier and electricity and communications infrastructure were also damaged, and mobile phone and internet services were cut temporarily in Kuhestak and the nearby village of Mishi.</p>
+<p>US officials have not said what the precise target in Kuhestak was. US Central Command said the strikes that night targeted Iranian radar and communications facilities and maritime capabilities, and that the US military does not target civilians. US Vice-President J.D. Vance later said Washington was investigating the incident. South China Morning Post reported that Vance said the United States was investigating a deadly strike on an Iranian wedding, and that an analysis published by Reuters said the explosion likely resulted from a direct hit by a US munition.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/there-was-blood-everywhere-survivors-recount-us-strike-wedding-iran" target="_blank" rel="noopener noreferrer" title="Middle East Eye / ‘There was blood everywhere’: Survivors recount US strike on wedding in Iran">MEE #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3366297/us-probes-deadly-strike-iran-wedding-experts-link-us-munition" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US probes deadly strike on Iran wedding that experts link to US munition">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="middle_east_eye">
+  <summary>Hussam Abu Safiya: Abducted Palestinian doctor still subject to torture by Israel</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Palestinian doctor Hussam Abu Safiya told his lawyer that he is still being beaten in detention by his Israeli guards, according to Physicians for Human Rights. The organisation and Abu Safiya’s lawyer said the guards beat him in various parts of his body, including sensitive areas, using hands, feet and batons, and that he has also been threatened and told he cannot talk about the conditions in which he is being held. Abu Safiya is a paediatrician and former medical director of Kamal Adwan Hospital in northern Gaza. He was abducted by Israel and has been held without charge since December 2024.</p>
+<p>He also told his lawyer this week that guards deliberately deprive him of sleep by making noise and “announcements during nighttime hours,” and that he was attacked the last time his lawyer visited. In July, a number of United Nations experts called on Israel to immediately release Abu Safiya and all healthcare workers they described as being held in arbitrary detention. The experts said his continued detention without charge or trial reflected Israel’s systematic targeting of Palestinian health workers and the continued destruction of Gaza’s health system, and they said he and other Palestinians are being held under Israel’s Unlawful Combatants Law.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/hussam-abu-safiya-abducted-palestinian-doctor-still-subject-torture-israel" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Hussam Abu Safiya: Abducted Palestinian doctor still subject to torture by Israel">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="ocha">
+  <summary>Ebola’s toll on humanity</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">humanitarian expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A woman named Celestine was struggling to breathe in an Ebola treatment centre in eastern Democratic Republic of the Congo, and the scene left an OCHA communicator confronting both the disease’s human cost and the limits of care when patients arrive too late.</p>
+<h3>Celestine in the cube</h3>
+<p>Priscilla Lecomte, a Public Information Officer with OCHA on assignment in eastern DRC, said she “didn’t really meet Celestine.” She saw only Celestine’s head and feet beneath a blanket, and her frail shoulders from behind. What stopped her was the uneven movement of those shoulders: Celestine was struggling to breathe.</p>
+<p>Celestine was being treated in a portable isolation chamber called the cube, inside the Ebola treatment centre. Lecomte said oxygen was being pumped from a ventilator placed next to her, while a doctor in full protective equipment later came by to give her palliative medication through an IV. Dr. Etienne, who had just finished his shift, told Lecomte that Celestine was in a coma, that she had been in the centre for a week, that she was 60 years old, and that she had been infected with Ebola.</p>
+<p>The account is shaped by Lecomte’s memory of her mother’s final weeks with cancer. Watching Celestine’s breathing, she said it reminded her of the same uneven movement in her mother’s chest when she could no longer breathe properly. Lecomte said she was scared and thought Celestine could stop breathing at any moment. She also said Celestine was alone in the cube, with no relative and no daughter beside her.</p>
+<p>Lecomte wrote that she had not come to visit Celestine, but to document the Ebola response so that people abroad would “care and pay attention” to a crisis that had slipped from the world’s focus. Yet Celestine’s condition became the scene that made the crisis personal for her. Lecomte said she thought about what it would mean if her own mother were in that cube, alone and scared.</p>
+<h3>A response under pressure</h3>
+<p>The treatment centre in Rwampara, about half an hour from Bunia in Ituri Province, is run by the non-governmental organization ALIMA, which Lecomte said was doing everything it could to save people like Celestine. She said ALIMA invented the cube as a treatment system that lets medical staff work through transparent plastic walls with gloves and tools attached, while relatives can see loved ones up close and doctors can monitor patients more easily.</p>
+<p>Lecomte said the cube is used in Rwampara for the most serious cases and for pregnant women who may need to deliver while suffering from Ebola. In those cases, she wrote, it is very difficult for a doctor to stay in full protective equipment throughout the delivery, so the cube helps.</p>
+<p>She also described the strain on health workers. A nurse named Danny told her how hard it was to see so many people dying, including people from his own community. Lecomte said thousands of health workers were doing the best they could, but they were also at great risk. More than 40 of them had died since the beginning of the outbreak, she wrote.</p>
+<p>The scale of the outbreak, as Lecomte described it, is severe: more than 3,000 people had died from Ebola, the fatality rate in eastern DRC was 47 per cent, and nearly half of the people infected since the outbreak began in May had died. She said the outbreak was the largest the country had faced and could surpass the 2014-2016 Ebola outbreak in West Africa, which killed more than 10,000 people.</p>
+<p>Lecomte framed the crisis as one that would have been stopped under different circumstances — if the health system had been strong enough, or if the disease had been identified early enough. Instead, she said, the virus was outpacing the response. The government, from the Ministry of Health to community health workers, was doing its best, and the international community had sent hundreds of aid workers and experts. But, she wrote, the virus was silent, deadly and unforgiving.</p>
+<p>Lecomte said that as she finished the piece she had just learned Celestine had died, first writing that it happened on 16 June 2017 and later adding that she had passed away on 25 August 2026. She ended by saying hundreds of people were still receiving care at Ebola treatment centres across eastern DRC and still needed attention and support.</p></div>
+  <div class="source-list"><a href="https://www.unocha.org/news/ebolas-toll-humanity" target="_blank" rel="noopener noreferrer" title="UN OCHA updates / Ebola’s toll on humanity">UN OCHA updates #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="cna">
+  <summary>Malaysia declares state of emergency in Sarawak’s Serian after air pollutant index exceeds 500</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sarawak’s Serian district was placed under a state of emergency after its air pollutant index climbed above 500, leaving residents facing hazardous haze, school disruption and the prospect of wider shutdowns as officials moved to protect public health and safety.</p>
+<p>The Air Pollutant Index first went past 500 in Serian at 510 at 9am on Friday, then rose to 515 by 5pm after haze conditions worsened overnight. The Prime Minister’s Department said Malaysian King Sultan Ibrahim Sultan Iskandar had consented to the emergency declaration throughout Serian because the haze had reached levels “hazardous to public health and safety.”</p>
+<p>The department said the decision was made after considering the advice of the prime minister, the Premier of Sarawak and relevant agencies on air quality in the area. It also said the government would continue to monitor developments and take required actions promptly, including mitigation measures and the dissemination of information and health advice to the public.</p>
+<h3>Why Serian crossed the threshold</h3>
+<p>Under Malaysia’s API scale, readings above 400 are classed as “very hazardous.” Sarawak Disaster Management Committee chairman Amar Douglas Uggah Embas had previously said a locality would be declared an emergency if its API reading reached 500 under the National Haze Action Plan. Such a declaration would close all public and private sector activities except essential services.</p>
+<p>Serian has been the worst hit district, with “hazardous” air quality recorded since last weekend. The district is about 60km southeast of Kuching and has a population of just under 106,000, according to Malaysia’s Department of Statistics. The Sarawak government website says it covers 2,039 sq km, close to three times the size of Singapore.</p>
+<p>Local media reported that readings in Serian began to rise from 6pm on Thursday after haze conditions had shown signs of improvement over the previous 24 hours. It was also the first district to announce school closure on Aug 13, when API readings briefly exceeded 200.</p>
+<h3>Residents were already feeling the impact</h3>
+<p>The haze was not just a number on a chart. Serian resident Yasmina R.C. Holland told CNA the current episode was the worst she had experienced in the last two decades, and said she had noticed the air quality deteriorating over the past two weeks.</p>
+<p>She said the haze had affected her family, with some unable to go to work and others needing medical attention after breathing difficulties. Holland, a 26-year-old content creator, said she and several family members are asthmatic, adding that even walking outside had become difficult and that washing and laundry outside the house left them exhausted.</p>
+<p>Her nephews and nieces have also been affected by school closures in Serian, leaving them unable to attend classes in person. At Farmasi Ting, a pharmacy in the district, all types of masks, including N95 masks, had sold out amid surging demand. Store assistants had limited the number of masks on shelves so more customers could buy them, and the pharmacy’s supervisor said people had been panic buying for the past two weeks, “like during the COVID season.”</p>
+<h3>A wider haze response</h3>
+<p>Officials had already launched a three-day cloud-seeding operation on Thursday to try to ease the hazardous haze choking Sarawak, while also aiming to replenish water supplies ahead of expected hotter, drier weather. The state capital, Kuching, recorded an API reading of 306, followed by Samarahan at 292 and Sri Aman at 241.</p>
+<p>The emergency also comes against a backdrop of severe haze in Sarawak in recent years. The state’s most recent worst air quality level was in 2019, when the API reached 405, while its last haze emergency was in September 1997, when the API peaked at 860.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/malaysia-serian-sarawak-state-emergency-haze-forest-fires-borneo-6362021" target="_blank" rel="noopener noreferrer" title="CNA / Malaysia declares state of emergency in Sarawak’s Serian after air pollutant index exceeds 500">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Six-week-old child in Pennsylvania dies from measles, coroner says</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A six-week-old child in Pennsylvania died from measles, Lancaster County coroner Stephen Diamantoni determined, as the county faces a growing measles outbreak. Pennsylvania has counted nearly 400 measles cases across 28 counties, nearly half of them in southern Lancaster County. At a news conference last week, governor Josh Shapiro and state health secretary Debra Bogen said two Lancaster County residents had died in cases they described as “measles-associated.”</p>
+<p>State health officials have not confirmed whether the six-week-old was one of those two deaths. The county’s first reported death, on 14 August, involved an infant whose mother had measles and transmitted it to the child. In that case, Diamantoni told WGAL that a ruptured spleen, not measles, was the cause of death, although measles was listed on the newborn’s death certificate. The Atlantic reported that the parents believe their baby died from measles.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/sep/04/pennsylvania-measles-death-infant" target="_blank" rel="noopener noreferrer" title="The Guardian / Six-week-old child in Pennsylvania dies from measles, coroner says">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="bbc,cnn,el_pais">
+  <summary>Russia hits Ukrainian security headquarters in drone attack, Zelensky says</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Russian drone struck the headquarters of Ukraine’s Security Service in central Kyiv on Friday, damaging the building and nearby businesses as officials gave differing injury totals and said it was still unclear who had been inside the targeted office.</p>
+<h3>Strike on the SBU headquarters</h3>
+<p>Ukrainian President Volodymyr Zelensky said the unmanned aerial vehicle crashed into the Security Service of Ukraine headquarters during a strike in the heart of Kyiv, hitting a room used by security chief Oleksandr Poklad. He said the drone was aimed directly at the office of the head of the security service in that building.</p>
+<p>Zelensky said he had spoken to Poklad after the strike and ordered an “appropriate, tangible response.” He also said, “Our military will support this response.” CNN reported later that the SBU said Poklad was safe and was not injured, while it remained unclear at first whether he had been in the building.</p>
+<p>Images widely shared online showed black smoke pouring from two windows on the front of the building. BBC News said emergency services were at the scene and that Zelensky wrote on Telegram that everyone affected would receive the necessary assistance.</p>
+<h3>Damage in central Kyiv</h3>
+<p>The strike landed in daylight and hit one of the state’s key security institutions, which CNN described as the first time the SBU building had been hit in the four-and-a-half-year conflict. BBC News said the drone crashed on Friday afternoon, and CNN said the attack came after days of near-continuous aerial assaults on the Ukrainian capital.</p>
+<p>The casualty count was not consistent across the reports. Kyiv Mayor Vitali Klitschko said five people had been hurt in the SBU attack, while CNN reported that authorities said 12 people were injured. BBC News also said a nearby café was damaged and one customer was taken to hospital after the strike.</p>
+<p>Stanislav Zavertaylo, co-owner of the Zavertailo café chain, told BBC News that the damage was especially painful because it was his third café to be hit since the start of the full-scale invasion. He said there was “a lot of damage,” with broken windows and glass scattered inside.</p>
+<h3>A sharper backdrop to the war</h3>
+<p>Foreign Minister Andriy Sybiha called the attack a “major escalation that demands resolute responses.” He said Moscow had launched the strike during a “renewed push for peace,” which he said showed “its true rejection of diplomacy.” He also called on international partners to condemn the attack and increase pressure on the Putin regime.</p>
+<p>The strike also came as reports said Steve Witkoff and Jared Kushner, Donald Trump’s peace envoys, were due to visit Moscow and Kyiv over the weekend. BBC News said they were expected to meet Vladimir Putin on Saturday in Moscow and Volodymyr Zelensky on Sunday in Kyiv.</p>
+<p>For Zelensky, the immediate message was one of retaliation and resilience. He said Poklad had been told to prepare a response that would mirror the strike if possible, and that Ukraine’s military would back it.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c5yep7y48x2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Russia hits Ukrainian security headquarters in drone attack, Zelensky says">BBC #1</a><a href="https://www.cnn.com/2026/09/04/europe/russia-strikes-ukraine-security-service-kyiv-intl" target="_blank" rel="noopener noreferrer" title="CNN / Russia strikes Ukraine Security Service headquarters in central Kyiv">CNN #1</a><a href="https://elpais.com/internacional/2026-09-04/rusia-ataca-con-un-dron-la-sede-de-los-servicios-secretos-ucranios-en-kiev.html" target="_blank" rel="noopener noreferrer" title="El País / Russia attacks Ukrainian security services headquarters in Kiev with a drone">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="telesur_en">
+  <summary>Cuba Reaffirms Support for DR Congo Amid Severe Ebola Epidemic</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Cuba has renewed its offer to help the Democratic Republic of Congo fight a severe Ebola outbreak just as Congolese health authorities say the epidemic has passed 3,000 deaths, with hospitals, surveillance and containment efforts all under strain.</p>
+<p>On Friday, Cuban Health Minister Jose Portal reaffirmed Havana’s willingness to support the DRC in combating the current Ebola epidemic after a Thursday video call with officials from the DRC Ministry of Health. Congolese Health Minister Samuel Roger Kamba thanked Cuba for its readiness to help, while DRC officials said they need support to contain the spread of the virus, care for the sick, support doctors in the field and improve monitoring.</p>
+<h3>A worsening outbreak in eastern Congo</h3>
+<p>The outbreak was declared on May 15, and it has now surpassed 3,000 deaths, making it the second deadliest Ebola outbreak in history. According to data from the National Institute of Public Health collected up to August 31, the epidemic had caused 3,007 deaths and 6,186 confirmed cases, with a case fatality rate of 48.6%.</p>
+<p>Active transmission is continuing in 60 health zones across six provinces: Ituri, Tshopo, Bas-Uélé, Haut-Uélé, North Kivu and South Kivu. Ituri is described as the epicenter. The same data says 1,409 patients have recovered, while 830 remain hospitalized or in isolation.</p>
+<p>The current outbreak is caused by the Bundibugyo strain, for which there are no specific therapeutic treatments. The World Health Organization is advancing Phase 1 trials for two vaccine candidates, and the DRC has launched a campaign with the Ervebo vaccine because of its cross-protection indications.</p>
+<p>Even so, the response is facing several obstacles. The source cites insecurity caused by armed groups, strikes by healthcare workers over unpaid wages and community reluctance to undergo post-mortem testing. Ebola Treatment Centers are operating near capacity, and the WHO, the Africa Centres for Disease Control and Prevention, and the DRC government have all appealed for urgent assistance.</p>
+<h3>Cuba points to its earlier Ebola response</h3>
+<p>In backing its offer of help, the Cuban side highlighted experience from the 2014 Ebola outbreak in West Africa, when it deployed 256 doctors from the Henry Reeve Contingent to Sierra Leone, Liberia and Guinea Conakry. Portal said Cuba was committed to helping the DRC with its “modest knowledge and lessons learned previously in confronting Ebola.”</p>
+<p>Cuba has already activated its National Plan for the Prevention and Control of Ebola, preparing the country’s 24 points of entry and monitoring international travelers. That places the Cuban response in a preventive posture at home even as Havana signals readiness to assist abroad.</p>
+<p>For the DRC, the immediate need remains practical and urgent: more help to slow transmission, treat patients, support frontline doctors and strengthen monitoring as the outbreak continues across multiple provinces.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/cuba-reaffirms-support-for-democratic-republic-of-congo-amid-severe-ebola-epidemic" target="_blank" rel="noopener noreferrer" title="Telesur English / Cuba Reaffirms Support for DR Congo Amid Severe Ebola Epidemic">TE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Israeli police kill Palestinian in Jerusalem as army blocks aid for Qusra</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli police killed a 33-year-old Palestinian near Damascus Gate in Jerusalem on Friday, and the Israeli army blocked humanitarian assistance from reaching Qusra in the occupied West Bank. Israeli police said its border guard “neutralised” the man, claiming he was trying to stab one of them. The Palestinian Wafa news agency identified him as Ibrahim al-Hendi from East Jerusalem’s Beit Hanina neighbourhood, and he was pronounced dead at the scene. Palestinian sources told Al Jazeera that Israeli forces then deployed around Damascus Gate and the surrounding area of Jerusalem’s Old City.</p>
+<p>Separately, the Israeli army said it arrested Palestinians in Qabatiya, alleging they were “planning to carry out an attack” against Israelis and security forces, and said 10 more Palestinians were arrested during a 48-hour operation in Nablus in which it seized more than “30 weapon production machines used to manufacture weapons.” In Qusra, the army prevented around 100 peace activists from delivering food and medicine to families under siege for 28 days, with Peace Now saying the army first blocked them at a “closed military zone” and later detained them on the way back.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/4/israeli-police-kill-palestinian-in-jerusalem-as-army-blocks-aid-for-qusra?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Israeli police kill Palestinian in Jerusalem as army blocks aid for Qusra">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>US immigration judges told to slash time given to people awaiting visas or green cards before being deported</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US immigration judges have been told to narrow or deny time for people waiting on visas, green cards or lawyers, raising the risk that some vulnerable immigrants will be ordered out of the country before their cases or paperwork are ready.</p>
+<h3>Continuances pushed to the sidelines</h3>
+<p>Training materials shared with the Guardian say the instruction came through a mandatory presentation in recent days about “continuances” — the legal tool judges have historically used to give immigrants more time to find lawyers, build their cases, or wait for approval of documents from another federal immigration agency.</p>
+<p>According to one source familiar with the training, hundreds of immigration judges attended the virtual session. The presentation was led by Keith Hunsucker, a veteran immigration judge on the board of immigration appeals, the appellate branch of the immigration courts. Images of the slides shared with the Guardian show the presentation was titled “Motions to Continue: Efficiently Advancing Cases to Completion.”</p>
+<p>The thrust of the training, as described in the materials, was to restrict continuances in favor of faster adjudications, even when extra time could allow someone to receive a legal protection that would let them stay in the US. The materials specifically say an approved visa petition should not automatically delay deportation proceedings if the visa itself is not yet available because of annual quotas.</p>
+<p>One slide quoted in the materials said: “Where a party lacks diligence and ‘sleeps on their rights,’ a continuance is unwarranted.” Another warned that “Continuance requests solely for dilatory purposes should not be countenanced by Immigration Judges.”</p>
+<h3>The people most exposed</h3>
+<p>The training appears to target some of the people with the strongest claims for remaining in the US. The Guardian’s account says the government’s own materials identify abused and abandoned children and survivors of violent crime among those affected. It also says the guidance explicitly targets special immigrant juvenile, or SIJ, classification for abused, abandoned or neglected youth, and U non-immigrant status for survivors of especially egregious crimes.</p>
+<p>The instructions also appeared to discourage judges from giving people more than 10 days to find an attorney before proceeding with a case. One source familiar with the training said: “I thought, who has time to find an attorney in 10 days?” The same source said: “There is no room to be kind; there is only urgency to make them leave [the US], one way or the other.”</p>
+<p>That would be a sharp turn for immigrants trying to defend themselves, especially because representation makes a major difference in immigration court. The evidence supplied says that from 2019 to 2024, only about a quarter of people with attorneys were ordered removed from the US, compared with over 60% of those who were unrepresented. It adds that only about a fifth of immigrants were represented when they were ordered deported in June.</p>
+<p>The materials also suggest that lawyers themselves could face punishment if judges decide they are taking on too many cases. One slide said that where a practitioner takes on more cases than they can responsibly and professionally handle, an immigration judge may consider referral to EOIR disciplinary counsel for further action and possible sanction.</p>
+<h3>Faster courts, heavier pressure</h3>
+<p>The training comes against the backdrop of a backlog of roughly 3.2 million pending immigration court cases nationwide. The materials say the logic behind the approach was to cut inefficiencies and avoidable delays.</p>
+<p>That pressure is taking place inside the Executive Office for Immigration Review, or EOIR, which houses the immigration courts. The EOIR is not part of the independent judicial branch; it sits within the Department of Justice, where the US attorney general can make precedential decisions and otherwise exercise control.</p>
+<p>In response to the request for comment, a Justice Department spokesperson said the administration’s priority is reducing the immigration court backlog and said the department is “restoring integrity to our immigration system by hearing cases fairly, expeditiously, and uniformly, in accordance with the law.” An EOIR spokesperson said the agency prioritizes timely completion of cases and that judges are obligated to follow current immigration law, regulations, precedent decisions and EOIR policies so cases do not languish.</p>
+<p>The training materials, however, suggest a much harder line: one that treats delay itself as a problem to be stamped out, even when more time might mean the difference between deportation and a lawful path to stay in the US.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/sep/04/immigration-judges-limit-time-deportations" target="_blank" rel="noopener noreferrer" title="The Guardian / US immigration judges told to slash time given to people awaiting visas or green cards before being deported">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>UAE-linked networks supplying weapons and fighters for Sudan atrocities, UN finds</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Foreign weapons, military technology and mercenaries are helping sustain Sudan’s war and drive attacks on civilians, while a UN finding has intensified scrutiny of a transnational network linked to the UAE without assigning the network’s conduct to the Emirati state.</p>
+<p>A report by the Independent International Fact-Finding Mission for the Sudan, made public on Thursday, said there were “reasonable grounds to believe” that companies, intermediaries and individuals operating in or through the United Arab Emirates, Colombia, Chad, Libya and Somalia supplied the paramilitary Rapid Support Forces (RSF) with weapons, logistical help, training and foreign personnel. The UAE rejected the accusation, and the mission stopped short of saying the Emirati state itself was responsible.</p>
+<h3>The network investigators say they traced</h3>
+<p>The mission said the assistance moved along interconnected air, maritime and land routes involving Bosaso in Somalia’s Puntland region, southeastern Libya and Chad. It identified Chinese-made NORINCO AH-4 howitzers, FK-2000 air defence systems and CH-95 reconnaissance and strike drones among the equipment involved, and said some materiel was consistent with items previously exported to the UAE.</p>
+<p>Investigators said individuals and entities operating from, registered in or linked to the UAE played a “significant role” in recruiting, financing and transporting military contractors and providing other support to the RSF. They also said up to 2,000 former Colombian military personnel may have been recruited since August 2024, with some reportedly trained at a military-style facility in Ghayathi, in the UAE, before travelling to Sudan through Somalia, Libya or Chad.</p>
+<p>The mission publicly named only people already designated by the UN Security Council’s Sudan sanctions committee, including retired Colombian colonel Alvaro Andres Quijano Becerra, based in Abu Dhabi, and his wife, Claudia Viviana Oliveros Forero, whom it said coordinated recruitment inside Colombia. Colombia acknowledged that Colombian companies and individuals had recruited contractors for deployment to Sudan, but said the state had neither directed nor supported their activities.</p>
+<h3>Civilians bearing the brunt</h3>
+<p>The same report said foreign-supplied drones had expanded the Sudanese Armed Forces’ long-range capabilities, allowing it to strike targets deep inside RSF-controlled territory. Mohamed Chande Othman, chair of the fact-finding mission, said the consequences of external support were being felt most acutely by civilians, adding that it had not brought greater protection but instead left people paying the price through attacks on homes, hospitals, schools, markets and places of refuge.</p>
+<p>The mission said more than 1,000 civilians were killed in drone attacks between January and May 2026 alone, according to figures cited in the report. It documented RSF strikes on a kindergarten, hospital and displacement shelter, as well as attacks by the Sudanese army on hospitals, markets, a wedding and a court session.</p>
+<p>In Kalogi, South Kordofan, successive RSF drone strikes hit Nabaa al-Hanan kindergarten, people responding to the first attack, and a nearby hospital on 4 December 2025. Investigators said 114 people were killed, including about 60 children, and 35 were wounded. They found no evidence that either the kindergarten or Kalogi Rural Hospital was being used for military purposes.</p>
+<p>The mission also said the RSF struck a former International Organization for Migration building sheltering displaced families in Kulba, killing at least five civilians, including children. It said direct attacks against civilians, hospitals and educational facilities may constitute war crimes.</p>
+<h3>Pressure for wider accountability</h3>
+<p>On the army side, the report attributed successive strikes on Ad-Da’ein Teaching Hospital in East Darfur to the Sudanese army on the first day of Eid al-Fitr in March, saying at least 70 people were killed and 146 injured, and the hospital was rendered inoperable. It said the mission examined claims that wounded RSF fighters had been treated there, but that caring for injured combatants did not strip the hospital of its protected status. It also attributed strikes on Abu Zaima market in North Kordofan and Yabus market in Blue Nile to the army, saying it found no identifiable military targets at the points of impact.</p>
+<p>The attacks failed to meet international humanitarian law requirements on target verification, distinction between civilian and military objects and precautions during attacks. It urged stronger investigations and enforcement action against companies and individuals allegedly operating from UAE territory, said it was retaining confidential dossiers on other suspects for possible sharing with judicial and accountability bodies, and called for inquiries covering the full chain of responsibility.</p>
+<p>Rights groups have also recently filed two communications with the International Criminal Court asking it to investigate the role of foreign actors, particularly senior officials from the UAE, in allegedly aiding and abetting RSF atrocities. The mission also urged the Security Council to expand the Darfur arms embargo to cover all of Sudan and called on states to halt weapons, drone and technology transfers where there was a substantial risk they could facilitate serious violations.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/foreign-weapons-and-mercenaries-fuelling-atrocities-sudans-darfur-un-finds" target="_blank" rel="noopener noreferrer" title="Middle East Eye / UAE-linked networks supplying weapons and fighters for Sudan atrocities, UN finds">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>Where access to freshwater is a daily struggle</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sharmin Begum, who lives in Barguna’s Patharghata upazila, is struggling to get drinking water in Padma Bahirchar village, where salinity has spread so widely that even tube-well water has turned saline. Stones underground also make it hard to install tube wells, and when one is installed, the water can still become unusable. After Cyclone Sidr, salty water inundated the area and left most ponds unfit for use. Sharmin said she needs at least 30 drums of water a month and carries pitchers on her shoulders after fetching water from a place about 1.5km away.</p>
+<p>Locals have identified a few ponds that still provide freshwater, but they must collect the water and process it before drinking. Several NGOs and the government have also tried to ease the crisis. CODEC has installed rainwater-collection systems and said it has put 183 rainwater-harvesting tanks beside houses in the area, while PKSF’s investment in reverse osmosis plants and rainwater harvesting systems totals about Tk 19.68 crore across six coastal districts. In Patharghata municipality, authorities said 2,900 of 5,600 holdings are receiving piped water, and the municipality plans to cover all holdings within two years.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/where-access-freshwater-daily-struggle-4265121" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Where access to freshwater is a daily struggle">TDSB #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="mail_guardian">
+  <summary>Ilembe finally set to get government psychiatric facility after years of waiting</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ilembe is set to get its first government-owned psychiatric facility after years of waiting, with a new R148 million project planned for the KwaZulu-Natal district. Ilembe has more than 800 000 people but no government psychiatric facility, so patients needing specialised mental healthcare have had to be transferred to facilities elsewhere in the province, including Fort Napier in Pietermaritzburg, more than 150km away.</p>
+<p>The shortage has also put pressure on General Gizenga Mpanza Regional Hospital, formerly Stanger Hospital, which has treated high numbers of mental health patients over the years. In some cases, psychiatric patients have been accommodated alongside other patients while waiting for transfers, and the situation has raised safety concerns for patients and healthcare workers because of incidents of violence. KwaZulu-Natal public works MEC Martin Meyer said the project had been in planning for “quite a long time” and that contractors should be on site within two years; the facility is also expected to serve as a training site for mental healthcare professionals.</p></div>
+  <div class="source-list"><a href="https://mg.co.za/news/south-africa/2026-09-04-ilembe-finally-set-to-get-government-psychiatric-facility-after-years-of-waiting" target="_blank" rel="noopener noreferrer" title="Mail &amp; Guardian / Ilembe finally set to get government psychiatric facility after years of waiting">Mail &amp; Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Bolivia Intervenes Fuel Regulator Amid Diesel Shortages</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Bolivia’s government on Thursday intervened the National Hydrocarbons Agency (ANH) as a persistent fuel shortage, especially diesel, deepened and long lines at service stations intensified. The move came one day after the government took similar action against state oil company YPFB. Hydrocarbons and Energy Minister Marcelo Blanco Quintanilla said the immediate objective was to restore fuel supplies and end the queues, adding: “Those three days of queues are inhumane, and we will not allow this to continue.” The measure takes effect immediately for 180 calendar days and may be extended once for another 90 days.</p>
+<p>The decree ordering the ANH intervention calls for corrective measures, an investigation into the agency’s deficiencies and the identification of possible responsibilities tied to the crisis in the sector under previous administrations. Blanco said “mismanagement” and “bureaucracy” were among the main reasons for the shortages. The commission overseeing the operation includes the ministries of Hydrocarbons and Energy; Sustainable Production, Environment and Water; and Public Works, Services and Housing, along with the Vice Ministry of Transparency, Legal Security and Public Integrity. Vice Minister of Transparency Yamil García Delfín said the government would continue legal action to prevent corruption, fuel diversion and preferential treatment of certain suppliers and distributors.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/bolivia-intervenes-fuel-regulator" target="_blank" rel="noopener noreferrer" title="Telesur English / Bolivia Intervenes Fuel Regulator Amid Diesel Shortages">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Apartheid police captain recalls ‘wrestling’ Biko during interrogation</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The reopened inquest into Steve Biko’s death heard new testimony from former apartheid security policeman Daniel Petrus Siebert, who described a struggle during interrogation in Gqeberha but said he could not say whether it caused the injury that killed Biko five days later.</p>
+<p>Siebert told the inquest in the Gqeberha High Court that several Security Branch officers wrestled with Biko at headquarters on 6 September 1977, and that one officer struck him with a cut garden hosepipe. In an affidavit read into the record by his legal representative, Advocate Marius Van Zyl SC, Siebert said Biko hit his head against a wall during the struggle, then fell to the floor and appeared dizzy and confused. He said the evidence was being given nearly 49 years later, and his memory of the events had become “extremely vague”.</p>
+<p>Siebert, now 80, nevertheless stood by the evidence he gave at the original inquest in 1977. But he told the reopened proceedings that he could not say whether the incident caused the head injury that ultimately led to Biko’s death on 12 September 1977, or whether it was the only time Biko had been assaulted. He also said he had no independent recollection of his testimony before the Truth and Reconciliation Commission in 1997.</p>
+<p>The hearing is continuing to examine the circumstances surrounding the death of the Black Consciousness Movement leader, who was 30. Former apartheid spy Craig Williamson is also expected to testify.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-09-04-apartheid-police-captain-recalls-wrestling-biko-during-interrogation" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Apartheid police captain recalls ‘wrestling’ Biko during interrogation">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="kompas">
+  <summary>Former Manager Testifies About Fadia Arafiq’s Artist Fees and Income Ahead of Pekalongan Regent Trial</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Former manager Titut Dwi Hartini testified at the Semarang Corruption Court in Central Java on Thursday (9/3/2026) that Fadia Arafiq’s fees when she was still active as an artist could reach Rp 50 million for a single appearance. Dwi appeared as a supporting witness in the case involving Fadia, the inactive Regent of Pekalongan, and said she had known Fadia since 1992 while accompanying her career in entertainment. She also said Fadia and her husband, Asraf, could earn up to Rp 1 billion within two weeks of performing.</p>
+<p>Dwi said she learned the fee amounts while managing Fadia and that her knowledge extended beyond income to several assets owned by Fadia, including properties in Cinere, Sawangan Golf and Legenda Wisata in Depok, as well as in the Bogor-Bekasi border area. In the same trial, Fadia gave a defense as a defendant, saying her wealth did not come from her position as Pekalongan Regent and that she had already owned money and run several businesses before leading the regency.</p></div>
+  <div class="source-list"><a href="http://regional.kompas.com/read/2026/09/05/060200578/eks-manajer-bongkar-tarif-fadia-arafiq-saat-jadi-artis-rp-50-juta-per-show" target="_blank" rel="noopener noreferrer" title="Kompas / Regional">Kompas #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China unveils mandatory standards for elderly care institutions</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China unveiled two mandatory national standards for senior care institutions in Beijing on Sept. 4 to improve safety and service quality in the sector. The standards are the basic specification for senior care organization and the determination criteria for major accident hazards of senior care organization. They were jointly issued by the State Administration for Market Regulation and the Ministry of Civil Affairs, and will take effect on Aug. 1, 2027. The basic standard sets 90 specific requirements across seven areas, including site selection, facilities and equipment, admission and discharge procedures, and safety management.</p>
+<p>One standard sets a baseline for compliant operations, while the other establishes a systematic procedure for identifying safety risks, based on lessons from nationwide management practices. Wang Yuhuan, an official with the State Administration for Market Regulation, said the mandatory standards will guide facilities to focus on key safety and service elements and strengthen risk-prevention capabilities and operational quality. China also has more than 320 million people aged 60 and above, the world’s largest elderly population. During the 15th Five-Year Plan period, 2026-2030, the country aims to renovate and upgrade 2,000 public care facilities and raise the share of nursing-care beds in such institutions to over 73 percent, according to the National Development and Reform Commission.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260904/784e6d0a6f3e47fb90701872efc8ea41/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China unveils mandatory standards for elderly care institutions">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China to implement revised regulation on power accident response, investigation</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China will implement a revised regulation on emergency response to, and investigation and handling of, electric power safety accidents, with the new rules taking effect on Jan. 1, 2027. Chinese Premier Li Qiang signed a State Council decree promulgating the regulation, which has 38 articles and is meant to strengthen safety governance amid rapid renewable energy development and the construction of a new power system.</p>
+<p>The regulation requires power companies and users to strengthen screening for potential accident hazards, adjusts criteria for classifying power accidents based on factors including grid scale, structural changes and the grid-related performance of power generation equipment, and clarifies the safety responsibilities of entities connected to the power grid other than power companies and users. It also says power companies should draw up emergency rescue plans and hold regular drills, while investigation teams must notify supervisory authorities and invite them to take part in investigations. The move comes as China says it has continued strengthening power safety governance in recent years, with workplace accidents and fatalities in the sector declining during the 14th Five-Year Plan period. In July, the National Energy Administration issued a 15th Five-Year Plan action plan that calls for preventive risk management, stronger safety standards for offshore wind power and desert-based new-energy bases, and more use of artificial intelligence in power safety equipment.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260904/fb6cc3d65cfc4f428cca6fedb64fac15/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China to implement revised regulation on power accident response, investigation">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Across rivers and ridges -- China ensures school access for children</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Nizhuhe Village in southwest China’s Yunnan Province, a school commute that once meant a three-hour climb along a cliffside trail now takes seconds on an elevator, easing a dangerous daily burden for children and parents while highlighting how geography still shapes access to education in remote frontier areas.</p>
+<p>At age 12, Lei Xin had already learned to navigate a treacherous trail in the dark just to get to school. For years, he and other children from Nizhuhe Village in Xuanwei City lived at the bottom of the Nizhu River Grand Canyon near the border with Guizhou Province, while Guanzhai Primary School sat more than 500 meters above them on the cliffs. Children left home well before sunrise and often came back exhausted, and Lei’s mother, Zhao Suzhen, said her fear was not tiredness but that “something might happen to him on the way.”</p>
+<p>The route has now changed sharply. The hardest stretch of the old path can be covered in 57 seconds by a new 288-meter-high cliffside elevator that carries students up the canyon wall at five meters per second. The broader trip from the village to school now takes about 30 minutes, using a shuttle bus to the cliff base, an elevator ride and then a cable car. Lei boarded the new elevator again on Aug. 30 as schools in Yunnan reopened, and said, “I feel like an immortal carrying me through the sky.”</p>
+<p>The Nizhuhe route is one example of a wider effort across China’s rugged frontier regions, where children face long journeys to school over cliffs, rivers and other difficult terrain. The story says the solutions vary with local conditions. In Funing County, Yunnan, seven dedicated ferries now serve 12 crossings for 329 primary and secondary school students and preschoolers in a reservoir area, after local authorities began coordinating school transport with schools, parents and transport officials in 2021. In Chengkou County in Chongqing, a “Hope Line” school bus service launched in March, and Panxi Town in Guizhou recently surveyed 121 students before opening three customized bus routes.</p>
+<p>The changes are also tied to policy. The efforts are backed by national policy aimed at ensuring geography does not determine a child’s access to education. A national plan to build a strong country through education by 2035 calls for more balanced compulsory education and greater integration of urban and rural education, while a separate plan for agricultural and rural modernization during 2026-2030 calls for better rural public services and improved conditions for rural schools.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0904/c90000-20496061.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Across rivers and ridges -- China ensures school access for children">PDE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="bbc,el_pais,guardian,scmp">
+  <summary>Mistrial declared in Lindsay Clancy murder case, after jury deadlocks</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Massachusetts judge declared a mistrial in Lindsay Clancy’s murder case after jurors said they could not agree on whether she should be held criminally liable for killing her three young children, leaving the case unresolved and setting up a hearing later this month on what comes next.</p>
+<p>The decision came after about a week of deliberations in Plymouth County. Judge William Sullivan told the jury on Friday, “I’m going to declare that the jury is deadlocked, and I’m going to declare a mistrial,” after the panel signalled deadlock three times. Clancy’s lawyer made a last-ditch attempt to stop the mistrial and force a verdict, but it was unsuccessful.</p>
+<p>Clancy, 36, remains held on the murder charges in the mental health facility where she is housed. She does not deny killing the children in 2023, but pleaded not guilty to three first-degree murder charges, with her lawyers arguing she was suffering from postpartum psychosis and should not be held criminally responsible. The case has drawn intense public attention, and even prompted remarks from US President Donald Trump.</p>
+<h3>Why the jury could not finish</h3>
+<p>The deadlock means the jury could not reach the unanimous verdict needed in the case. Court notes and the judge’s remarks indicated the panel had reached an impasse after weeks of testimony and nearly a week weighing Clancy’s fate.</p>
+<p>The children identified in the case are Cora, 5, Dawson, 3, and Callan, eight months. Prosecutors said Clancy killed them in their Massachusetts home. Her defence said she was not criminally responsible because of her mental state at the time.</p>
+<h3>What happens next</h3>
+<p>A hearing was scheduled for 29 September, when prosecutors could outline their next steps. The options described in the evidence include a new trial or a plea agreement with Clancy.</p>
+<p>For now, the mistrial leaves both the case and Clancy’s future in limbo.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cpwlrj2je1po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Mistrial declared in Lindsay Clancy murder case, after jury deadlocks">BBC #1</a><a href="https://elpais.com/sociedad/2026-09-04/el-juicio-a-lindsay-clancy-por-matar-a-sus-tres-hijos-es-declarado-nulo-por-el-bloqueo-del-jurado.html" target="_blank" rel="noopener noreferrer" title="El País / Lindsay Clancy&#x27;s trial for killing her three children is declared invalid due to juror blockage">El Pais #1</a><a href="https://www.theguardian.com/us-news/2026/sep/04/lindsay-clancy-trial-takeaways" target="_blank" rel="noopener noreferrer" title="The Guardian / Lindsay Clancy: five key moments from ‘America’s saddest murder trial’">Guardian #1</a><a href="https://www.theguardian.com/us-news/2026/sep/04/lindsay-clancy-trial-verdict-mistrial" target="_blank" rel="noopener noreferrer" title="The Guardian / Lindsay Clancy judge declares mistrial – what happens next?">Guardian #2</a><a href="https://www.theguardian.com/us-news/2026/sep/04/lindsay-clancy-mistrial" target="_blank" rel="noopener noreferrer" title="The Guardian / Judge declares mistrial in Lindsay Clancy case after jury deadlocked again">Guardian #3</a><a href="https://www.theguardian.com/us-news/live/2026/sep/04/lindsay-clancy-mistrial-live-updates?page=with%3A6a9b0c528f08fe90df702adb#6a9b0c528f08fe90df702adb" target="_blank" rel="noopener noreferrer" title="The Guardian / Lindsay clancy mistrial live updates">Guardian #4</a><a href="https://www.theguardian.com/us-news/live/2026/sep/04/lindsay-clancy-mistrial-live-updates?page=with%3A6a9b0cff8f08fe90df702ae1#6a9b0cff8f08fe90df702ae1" target="_blank" rel="noopener noreferrer" title="The Guardian / Lindsay clancy mistrial live updates">Guardian #5</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3366447/mistrial-declared-lindsay-clancy-child-killings-case" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Mistrial declared in Lindsay Clancy child killings case">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="peoples_daily_en,scmp,xinhua_en">
+  <summary>Letter from Gyirong: Mud, loss, scouring, a night in the heart of disaster</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Power has returned to the core area of Gyirong Port in Xizang after the mudslide on the China-Nepal border, but rescue and recovery work is still under way in a zone where landslides, rockfalls and missing people remain part of the landscape.</p>
+<p>The State Grid said on Thursday that power supply had been restored to the core area of the mudslide-hit port, and that frontline personnel had worked around the clock to restore temporary power lines there by 8 p.m. despite risks including landslides and frequent rockfalls. Photos from the site showed workers stringing power lines and transferring utility poles and insulators in the affected zone.</p>
+<p>The disaster hit Gyirong Port on Aug. 26, when a fast-moving chain mudslide triggered by a high-altitude glacier collapse in Nepal swept down the valley along the border. Xinhua said the debris flow was traced to an ice-rock avalanche from a high-mountain glacier in Nepal and that it struck the Chinese border port after traveling roughly 22 kilometers. A regional briefing cited in the reporting said 21 people had been confirmed dead and 541 remained missing as of midday Sept. 4.</p>
+<h3>Rescue work continues through mud and darkness</h3>
+<p>Recovery has moved in parallel with the search. Xinhua said more than 2,300 rescuers had been deployed, with multiple rounds of grid and blanket searches covering about 1.59 million square meters. In the core affected area, 336 rescuers had carried out repeated exhaustive searches, while 847 suspected personal belongings of the deceased and missing had been collected and registered for identification and handover.</p>
+<p>A dispatch from Gyirong described how, five days after the mudslide, rescuers were still moving through deep mud, clearing roads and working under headlamps while power and communications crews repaired lines in the distance. It also said the land route to Gyirong Port had been basically restored by Wednesday morning, allowing large machinery, specialized firefighters and life-detection equipment to move deeper into the site. Another batch of Chinese relief supplies and DNA experts arrived in Kathmandu on Thursday as part of the response.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0904/c90000-20496007.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Power restored at mudslide-hit border port in China&#x27;s Xizang">PDE #1</a><a href="https://en.people.cn/n3/2026/0904/c90000-20496179.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Rumors salt the glacier disaster wound">PDE #2</a><a href="https://www.scmp.com/news/china/article/3366291/chinas-xi-eyes-apec-trilateral-no-outrunning-deadly-nepal-floods-scmps-7-highlights" target="_blank" rel="noopener noreferrer" title="South China Morning Post / China’s Xi eyes Apec trilateral; no outrunning deadly Nepal floods: SCMP’s 7 highlights">SCMP #1</a><a href="https://english.news.cn/20260904/3ccea24922554bd9b11ae33b30600892/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Letter from Gyirong: Mud, loss, scouring, a night in the heart of disaster">XNAE #1</a><a href="https://english.news.cn/20260904/7107ca2e27234f73ab412896aa355d46/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Factbox: Latest relief and rescue progress at mudslide-hit border port in China&#x27;s Xizang">XNAE #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Lindsay Clancy trial highlights gaps in postpartum psychosis research, experts say</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Lindsay Clancy trial has pushed postpartum psychosis into public view, with experts and advocates saying the case exposed gaps in research, diagnosis and care for a severe illness that can appear after childbirth and remains poorly understood.</p>
+<p>Kristina Delaney described her own experience of the condition as her husband, on a Friday afternoon, noticed her “hyperactive” speech and stepped outside to make a phone call. When he came back, she said, she was rocking their two children and pleading, “Please save us, please save our family.” Delaney later said, “And I thought Jesus was returning.” She now believes she was in the throes of postpartum psychosis, which researchers estimate occurs in one to two per 1,000 women after delivery, or about 3,600 US mothers each year. Delaney, now 41 and the founder of the non-profit advocacy group Cherished Mom, said the episode “completely blind-sided our family,” and that she spent two weeks in a psychiatric unit “battling for my mind and my life.”</p>
+<p>Experts and advocacy groups say the Clancy case has brought attention to a scientific debate over whether, where and how postpartum psychosis should be included in the Diagnostic and Statistical Manual of Mental Disorders, or DSM-V. Delaney said it was “outrageous” that the illness became a viral topic only after “lives are lost and in a courtroom surrounding Lindsay Clancy.”</p>
+<p>Clancy, a former nurse, is accused of strangling her three young children and then attempting to end her own life. Her defense attorneys have argued she was suffering from postpartum psychosis at the time she is accused of killing her children. The evidence cited in the trial included anxiety, insomnia and depression; she also received inpatient treatment at McLean hospital, was prescribed psychiatric medications and searched for terms such as “psychosis” on her computer. Prosecutors argued Clancy was a deliberate killer who sent her husband out for errands so she could kill their children.</p>
+<p>On 4 September, Judge William Sullivan declared a mistrial after the jury remained deadlocked for more than a week. For Delaney and others, the case has underscored how little is still known about postpartum psychosis, even as they argue that better classification and awareness could help close gaps in care.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/sep/04/lindsay-clancy-trial-postpartum-psychosis-experts" target="_blank" rel="noopener noreferrer" title="The Guardian / Lindsay Clancy trial highlights gaps in postpartum psychosis research, experts say">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,guardian">
+  <summary>Watchdog report alleges misconduct by Trump’s former labour secretary</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A federal watchdog has detailed allegations that former US Labor Secretary Lori Chavez-DeRemer blurred the line between office and personal life, describing a workplace that employees called toxic and accusing her of using staff for private errands, drinking on duty and maintaining an inappropriate relationship with a security agent.</p>
+<p>The Department of Labor’s Office of Inspector General released the report on Thursday night. It said it drew on 500 documents and interviews with 53 current and former Labor Department employees, plus one employee from another federal agency. Thirty-eight interviewees described the secretary’s office as “toxic, intimidating and humiliating.” Chavez-DeRemer, a former Republican member of Congress from Oregon, was sworn in on March 11, 2025, and resigned in April.</p>
+<p>The report alleges that she directed government employees to carry out personal tasks during official time, including organising her closet, hanging laundry and arranging her clothing and purses at her home. It also says workers were sent to buy personal items such as gifts, picture frames, holiday decorations and alcohol. Investigators said another employee was directed to oversee workers at Chavez-DeRemer’s home, including a moving crew. The report further says she, her chief of staff Rebecca Wright and her deputy chief of staff regularly drank alcohol in the secretary’s study during duty hours, despite department policy requiring advance written approval for alcohol on federal property.</p>
+<p>Investigators also focused on what they called an “inappropriately close and unprofessional” relationship with a senior agent on her protective detail. Witnesses reported seeing Chavez-DeRemer massaging the agent’s shoulder, golfing and gambling with him, and leaving an event arm-in-arm. It did not find sufficient evidence to conclude the relationship was sexual, but it documented conflicts of interest and inappropriate work situations linked to the pair. It also described an April 2025 personal trip to Oregon in which Chavez-DeRemer asked her security detail to stop at a club with partially nude dancers.</p>
+<p>The watchdog also said she failed to report several gifts, including rodeo tickets, an alligator-hide wallet and cowboy hats given to her and her husband. In its recommendations, it called for structural changes at the Labor Department, including removing protective units from the secretary’s oversight, along with independent travel audits, stronger whistleblower protections and annual training for senior leaders.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/4/watchdog-report-alleges-misconduct-by-trumps-former-labour-secretary?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Watchdog report alleges misconduct by Trump’s former labour secretary">AJ #1</a><a href="https://www.theguardian.com/us-news/2026/sep/04/lori-chavez-deremer-misconduct-report" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump’s ex-labor secretary drank on job and created ‘toxic’ work environment, report alleges">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="daily_maverick">
+  <summary>LOCAL ELECTIONS 2026: Ramaphosa defends ANC’s late election candidate lists as party considers court action</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The ANC’s late submission of councillor candidate lists has put hundreds of nominations at risk ahead of the 4 November local government elections, while Cyril Ramaphosa says a solution can still be found and the party is weighing court action.</p>
+<p>The party missed the Electoral Commission’s 28 August deadline to finalise hundreds of nominated councillor candidates in some Eastern Cape and Free State municipalities, blaming technical glitches during the submission process. The IEC has rejected claims that its system malfunctioned, saying the platform operated as designed and that parties had been given access since June. It has also said it will not accommodate late submissions. In its account, about 2,300 candidates from 45 political parties were captured on the system but not finally submitted before the 5pm deadline, meaning they could not be accepted under the electoral process.</p>
+<p>For the ANC, the fallout has affected just under 200 ward and proportional representation candidates in the Mangaung metro and Lejweleputswa District Municipality in Free State; uMshwathi Local Municipality in KwaZulu-Natal; and Port St Johns, Ingquza Hill and Sundays River Valley in Eastern Cape. Ramaphosa said the problem was limited to “some glitches” in the interface with the IEC system and insisted the national lists had been submitted. He said the ANC was considering several options, including engagement with the IEC, the Political Party Liaison Committee and the Electoral Court, and added that he believed “a solution will be found.”</p>
+<p>The dispute was unfolding as Ramaphosa campaigned door-to-door in Tembisa on Friday, moving around the Nxiweni voting district in Ward 14. He was greeted by cheering ANC supporters, but residents also raised unemployment, crime and the rising cost of living. One resident told him that streetlights were needed to help reduce crime; another spoke about being unable to find work, drug use in the area and rising electricity and rent costs. Ramaphosa acknowledged unemployment as a major challenge, said the government was working to expand investment and jobs, and argued that organised communities could help pressure criminals.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-09-04-anc-list-glitches-are-containable-but-partys-considering-court-action-says-ramaphosa" target="_blank" rel="noopener noreferrer" title="Daily Maverick / LOCAL ELECTIONS 2026: Ramaphosa defends ANC’s late election candidate lists as party considers court action">DM #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian,middle_east_eye,politico">
+  <summary>Top Reform officials filmed allegedly plotting to break law on foreign donations</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">regional expansion</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nigel Farage and two senior Reform UK figures are under fresh scrutiny after undercover footage appeared to show them discussing how a foreign source could help fund party polling without the arrangement being publicly disclosed, just as the party conference opened in Birmingham and police began assessing the allegations.</p>
+<p>Channel 4 News broadcast the footage on Thursday night after investigative journalists from Verbatim, founded by the Centre for Climate Reporting, posed as a Reform supporter and a wealthy American father who would be an impermissible donor. In the film, the fake donor is said to have paid for £30,000 of polling commissioned by Reform and said to have benefited the party. The polling was not attributed to Reform, and was reported in the Telegraph and the Times without those newspapers knowing it had been commissioned by the party and paid for by the US donor.</p>
+<p>The footage also shows conversations with Reform’s head of policy, James Orr, who discussed polling that would be paid for by the US-based father. Orr is heard saying Farage “doesn’t know, won’t know” and that it was the kind of thing he would “rather not know”, while at another point describing it as “totally legit” and with “nothing untowards about it at all”. Dan Jukes, a close aide to Farage, was also filmed meeting the fake donor and appearing to introduce the undercover operative as a “key donor for off-the-book project”.</p>
+<p>Farage was later shown in a meeting with the fake donors after the arrangement was explained to him. In that footage, he says: “Thank you both.” Middle East Eye said the film also showed Farage celebrating the polling and discussing a potential £500,000 donation, with the son saying he would be the registered donor and his father would send the money through him.</p>
+<p>Reform said it had been “the target of a hoax perpetuated by foreign-funded climate-change activists posing as would-be party donors” and denied wrongdoing. After the broadcast, Reform suspended Jukes and Orr, and Orr said he had stepped down pending the outcome of the party’s internal investigation. The Metropolitan police are assessing the evidence, and the Electoral Commission said it was considering all relevant information.</p>
+<p>The episode has intensified scrutiny of Reform’s donation practices and finances, which are already the subject of a standards inquiry and police investigation.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/sep/03/reform-officials-plotted-to-break-law-on-foreign-donations-in-undercover-film" target="_blank" rel="noopener noreferrer" title="The Guardian / Reform officials ‘plotted to break law on foreign donations’ in undercover film">Guardian #1</a><a href="https://www.theguardian.com/politics/2026/sep/04/nigel-farage-seeks-shore-up-damaged-reform-leadership-scandal-engulfs-party-conference" target="_blank" rel="noopener noreferrer" title="The Guardian / Farage seeks to shore up damaged leadership as scandal engulfs Reform conference">Guardian #2</a><a href="https://www.middleeasteye.net/news/top-reform-officials-filmed-allegedly-plotting-break-law-foreign-donations" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Top Reform officials filmed allegedly plotting to break law on foreign donations">MEE #1</a><a href="https://www.politico.eu/article/nigel-farage-reform-uk-fresh-scandal-gripped-reset-conference" target="_blank" rel="noopener noreferrer" title="POLITICO / How a ‘dodgy money’ scandal hijacked Nigel Farage’s reset conference">POLITICO #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Tunisia arrests journalist amid crackdown on government critics</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tunisian police arrested prominent journalist Mohamed Yousfi, a vocal critic of President Kais Saied’s rule, the head of the National Syndicate of Tunisian Journalists said. Local journalists said police described Yousfi, the editor-in-chief of the investigative news website Al-Qatiba, as being brought in on Friday for questioning. The focus of the investigation is unknown, and Tunisian authorities have not yet commented.</p>
+<p>The arrest is the latest in a string of prosecutions of media figures and activists in Tunisia this year. Khaoula Boukrim, founder of TUMEDIA, was sentenced in June to four years in absentia after fleeing to France last year. Zied el-Heni was sentenced in May to one year in prison, while Mourad Zeghidi and Borhen Bsaies were sentenced in January to three and a half years. On Thursday, Tunisia’s Court of Cassation upheld a mass trial against 40 figures, including opposition leaders, lawyers and human rights defenders convicted of conspiring to overthrow Saied. Haifa Chebbi, a lawyer whose father Najib Chebbi was among those sentenced to 12 years, said: “The ruling confirms that the judiciary is not independent.”</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/4/tunisia-arrests-journalist-amid-crackdown-on-government-critics?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Tunisia arrests journalist amid crackdown on government critics">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Missouri supreme court congressional district map mail in voting us canada trade war executive orders latest news updates</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In the Oval Office on Friday, Donald Trump downplayed the war with Iran, calling it “small potatoes” and saying, “A lot of people don’t call it a war. I call it a military conflict because it’s small potatoes for us. It’s not a big thing.” He was responding to reporters after being asked how he would describe the conflict if not a war, and he pointed to the 18 US service members he said had been killed so far.</p>
+<p>When a reporter followed up about record-long deployments, Trump replied, “Why is it record long?” and repeated, “How long were we in Vietnam?” He also compared the Iran conflict with other US military actions, saying, “We did Venezuela and we did this.” The evidence says the war with Iran began in late February, nearly seven months ago, and that thousands of Iranians have been killed while more than 750 US service members have been wounded.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/sep/04/missouri-supreme-court-congressional-district-map-mail-in-voting-us-canada-trade-war-executive-orders-latest-news-updates?page=with%3A6a9b39e98f08fe90df702c48#6a9b39e98f08fe90df702c48" target="_blank" rel="noopener noreferrer" title="The Guardian / Missouri supreme court congressional district map mail in voting us canada trade war executive orders latest news updates">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Reform uk donations nigel farage james orr dan jukes channel 4 investigation conference jordan bardella latest news updates</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Reform UK said Nigel Farage would declare a “national emergency” on day one if the party takes power, and would make Parliament “sit day and night” until legislation is passed, including through summer for seven days a week if necessary. In a news release issued overnight ahead of the Reform UK 2026 national conference, the party said Farage would use his speech to attack the Conservatives’ “failed” 14 years in government, warn that “time is running out to save Britain,” and say the country “doesn’t have 10 years to be saved.”</p>
+<p>The release also said Farage would tell supporters that if the Lords, judiciary or civil service “get in our way” they would see how determined Reform is, and that the party would do “anything and everything to make the first 100 days work.” The same account said it was hard to gauge what “national emergency” actually means, adding that it could be largely rhetoric or “anything up to martial law.” As background, Middle East Eye said Reform UK had suspended two senior figures after a Channel 4 undercover report, with James Orr and Dan Jukes stepping down pending an internal party investigation.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/live/2026/sep/04/reform-uk-donations-nigel-farage-james-orr-dan-jukes-channel-4-investigation-conference-jordan-bardella-latest-news-updates?page=with%3A6a9a97838f08fe90df702375#6a9a97838f08fe90df702375" target="_blank" rel="noopener noreferrer" title="The Guardian / Reform uk donations nigel farage james orr dan jukes channel 4 investigation conference jordan bardella latest news updates">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,bbc,cnn,el_pais,nyt,scmp">
+  <summary>UN votes to adopt new map that makes our world look very different</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UN General Assembly voted on Friday to back a new world map that would show Africa’s size more accurately, a symbolic shift driven by African states that still leaves open whether governments and institutions will stop using the Mercator projection.</p>
+<p>The resolution, called “Correct the Map,” was sponsored by Togo and backed by African Union members. It passed with 164 votes in favor, six abstentions and the United States voting against it. France and the UK were among the supporters. The vote is non-binding, but it urges governments, international bodies, schools and other organizations to replace the traditional Mercator map with alternatives that better reflect the world’s landmasses, especially Africa.</p>
+<p>At the center of the dispute is the Mercator projection, which has been in common use since the 16th century. Created by Gerardus Mercator in 1569 for navigation, it preserves shapes and angles but distorts relative size on a flat surface. As a result, countries farther from the equator appear disproportionately large while equatorial regions appear smaller. In the version that has dominated classrooms, atlases and digital maps, Africa can look similar in size to Greenland even though it is 14 times larger.</p>
+<p>Supporters of the change say that distortion has consequences beyond cartography. The UN resolution says the current projection contributes to minimizing the perceived sizes of Africa, Latin America and South Asia and to an unbalanced view of the world. Campaigners behind #CorrectTheMap have argued that the issue is one of representation as much as measurement, with one saying it is about “cognitive justice” as well as geography.</p>
+<p>The replacement most often cited is the Equal Earth projection, created in 2018. In the resolution, it is described as a more accurate way to show the relative surface areas of the world’s regions. The African Union adopted the Equal Earth map earlier this year, and Togo asked UN member states in April to do the same. France has also said it will abandon the Mercator projection in favor of maps that depict countries’ surface areas more accurately.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/4/un-votes-to-adopt-new-world-map-that-reflects-africas-true-size?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / UN votes to adopt new world map that reflects Africa’s true size">AJ #1</a><a href="https://www.bbc.co.uk/news/articles/ce30vp55dnlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / UN votes to adopt new world map to reflect Africa&#x27;s true size">BBC #1</a><a href="https://www.cnn.com/2026/09/04/world/un-vote-new-world-map-intl-scli" target="_blank" rel="noopener noreferrer" title="CNN / UN votes to adopt new map that makes our world look very different">CNN #1</a><a href="https://elpais.com/planeta-futuro/2026-09-04/la-onu-adopta-un-nuevo-mapa-de-africa-mas-ajustado-a-las-dimensiones-reales-en-una-resolucion-no-vinculante.html" target="_blank" rel="noopener noreferrer" title="El País / The UN adopts a new map of Africa that is more accurate to real dimensions in a non-binding resolution">El Pais #1</a><a href="https://www.nytimes.com/2026/09/04/world/africa/world-map-projection-africa.html" target="_blank" rel="noopener noreferrer" title="The New York Times / U.N. Approves African Proposal for a New World Map">NYT #1</a><a href="https://www.scmp.com/news/world/article/3366446/un-adopts-new-map-africa-bigger-north-america-and-europe-smaller" target="_blank" rel="noopener noreferrer" title="South China Morning Post / UN adopts new map: Africa bigger, North America and Europe smaller">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Venezuela and Miyamoto International Sign Historic Earthquake Recovery Agreement</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Venezuela signed a contract with Miyamoto International on Friday to remove 3 million metric tons of debris left by the June 24 earthquakes. The agreement covers the first phase of debris removal and recovery over a one-year period, and Venezuela’s Ministry of Public Works said it is intended to strengthen the country’s technical capacities in structural engineering, seismic risk management and emergency response.</p>
+<p>The signing ceremony was attended by Juan José Ramírez, Venezuela’s Vice President of Public Works and Services and Minister of Public Works, along with vice-ministers and members of the Dignified and Safe Clearance Plan. Miyamoto International was represented by CEO H. Kit Miyamoto, Principal Director Sabine Kast, Executive Director Jesús Valdez and representative Daniel Fernández. The Ministry of Communication of Venezuela said the deal also includes technical knowledge exchange, stronger construction standards and advanced protocols for disaster prevention and population protection.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-miyamoto-intl-quake-recovery" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela and Miyamoto International Sign Historic Earthquake Recovery Agreement">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Venezuela Calls for Complete End to U.S. Sanctions</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">During a television interview on Thursday, Venezuelan Oil Minister Paula Henao called for the complete end of unilateral U.S. sanctions against Venezuela. She said the country is in a stage of opening to investment, but that the easing of some sanctions on Venezuelan oil, mining and financial activities is “not enough.” Henao said Acting President Delcy Rodriguez will keep pressing for a full end to sanctions so Venezuela can become an “energy power.”</p>
+<p>Henao also said Venezuela plays a “fundamental role” in the global energy balance and described the country as a reliable supplier. She called the agreements signed Sept. 2 a “historic milestone,” saying Rodriguez signed them alongside U.S. Energy Secretary Chris Wright after his visit to Caracas. The deals will allow the Carabobo 1 and Carabobo 2 blocks to join Petroindependencia, a joint venture between state-owned Petroleos de Venezuela (PDVSA) and Chevron, and Henao said the first drilling rigs have already begun moving toward those areas. She said output from companies with Chevron participation is expected to rise from about 270,000 barrels per day to more than 300,000 this year and later to 700,000.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-calls-for-complete-end-to-u-s-sanctions" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela Calls for Complete End to U.S. Sanctions">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Witkoff and Kushner will travel to ‘end’ Russia’s war in Ukraine: Trump</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump said on Friday at the White House that US special envoys Steve Witkoff and Jared Kushner are travelling this weekend with a proposal to try to revive peace talks between Ukraine and Russia. Trump said he sent the two to Kyiv and Moscow “to see whether or not we can get something done,” adding that “we have an idea for peace” and that there may be “a good chance” of success. According to Russian state news agency TASS, they are due in Moscow on Saturday and Sunday, while Ukrainian President Volodymyr Zelenskyy also said they would be in Ukraine on Sunday.</p>
+<p>The expected trip comes as both sides continue air attacks. Russia hit the headquarters of Ukraine’s SBU security services on Friday, and Kyiv Mayor Vitali Klitschko said at least 12 people were injured. Reporting from Kyiv, Al Jazeera’s Audrey MacAlpine said the strike raised questions among people there about what target could be hit next.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/4/witkoff-and-kushner-will-travel-to-end-russias-war-in-ukraine-trump?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Witkoff and Kushner will travel to ‘end’ Russia’s war in Ukraine: Trump">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Venezuela Seeks Faster Oil, Gas Output Through New Deals</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Venezuela has launched a new push to lift oil, gas and petrochemical output through fresh deals with international energy firms, including a 25-year alliance with GeoPark in the Orinoco Belt, while officials say the extra production and revenue are meant to support public services and social programs.</p>
+<p>This Friday, acting president Delcy Rodríguez led the signing of an international hydrocarbons agreement with representatives of the private sector, concluding the alliance between state-owned Petróleos de Venezuela (PDVSA) and GeoPark, which belongs to the Gilinski Group. The deal centers on the Bare field and is meant to improve the hydric recovery factor there, with the private sector covering all necessary financial investments.</p>
+<h3>The Bare field deal</h3>
+<p>The project covers about 1,100 wells, with current gross production of 11,000 barrels and an overall potential of up to 95,000 barrels per day. Jaime Gilinski, director of the Gilinski Group and a majority shareholder in GeoPark, said the company was committed to environmental standards and community responsibility. He also said the work would be carried out under strict environmental management standards and responsibility toward surrounding local communities.</p>
+<p>Rodríguez welcomed the entry of Colombian capital into Venezuela’s national energy recovery plan. She said she was pleased that “a company from Colombia” was joining the effort to recover the oil industry and increase production, and she reaffirmed that revenues from oil trading would continue to be used to strengthen public services, health, education and social welfare.</p>
+<p>Wider investment framework.</p>
+<p>The GeoPark accord is part of a broader effort to speed up production of oil, natural gas and petrochemicals through new agreements with international energy companies. Hydrocarbons Minister Paula Henao said the arrangements bring together Venezuela’s technical capabilities, specialized workforce and hydrocarbon resources with investors’ capital, advanced technology and operational expertise.</p>
+<p>Henao pointed to a partial reform of the Hydrocarbons Law that took effect on Jan. 29, saying it created new forms of cooperation such as joint ventures, Hydrocarbon Production Participation Contracts, technical and financial partnerships, and exploration licenses. She said those changes “open the doors” to business models designed to encourage local and international capital.</p>
+<p>She also said Venezuela ranks 20th worldwide in production relative to its reserves, and that the development plan covers 17 oil fields nationwide, eight of them greenfield projects. The infrastructure will include well clusters, wells, pipelines and transportation centers, and the government is also creating a University Council for Hydrocarbons to align training with industry needs.</p>
+<p>For the next four months, Henao said, the government will focus on new agreements and on supervising how recent contracts are being implemented.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-geopark-25-year-energy-deal" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela and GeoPark Sign 25-Year Energy Strategic Deal for Orinoco Belt">TE #1</a><a href="https://www.telesurenglish.net/venezuela-oil-gas-output-new-deals" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela Seeks Faster Oil, Gas Output Through New Deals">TE #2</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="al_jazeera_en,scmp">
+  <summary>5 EU nations plan to send rejected migrants to non-EU ‘return hubs’, target 2027</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Five EU countries moved closer to a deal to send rejected asylum seekers to non-EU “return hubs,” with ministers saying the first arrangement could come by early 2027 even though the proposed host countries and locations are still not set.</p>
+<p>An official said Denmark and four other EU countries agreed on Friday on a model for the hubs after a one-day meeting in Copenhagen. The countries were Germany, Austria, Greece, Denmark and the Netherlands. Danish immigration and integration minister Morten Bodskov said the talks marked “a fundamental transformation of the common European migration and asylum system,” and he briefed reporters alongside counterparts from Germany, the Netherlands, Austria and Greece.</p>
+<p>The five governments have been negotiating mainly with countries in Africa over possible sites, presenting the plan as a way for EU states to send people whose asylum claims have been rejected to third countries outside the bloc. Bodskov said the term “return hubs” was not a euphemism for detention and deportation centres, and said the International Organization for Migration and the UN Refugee Agency would monitor the facilities. He described them as “opportunities” for irregular migrants who cannot return home and have no legal grounds to stay in the EU.</p>
+<p>The UNHCR said it had not been approached with details of the proposal and could not comment on the specific arrangements or any potential role it might play. The ministers also did not say which third countries were being considered, though Bodskov said they expected to reach their first deal by early 2027. Another unresolved question is what the partner countries would receive in return.</p>
+<p>Human rights groups have criticised similar plans to move migrants to centres or prisons in third countries, arguing that European states cannot guarantee their rights will be respected there. The ministers in Copenhagen said the hubs would comply with European and international law. Their push follows a June vote by European lawmakers allowing member states to set up centres outside the EU on their own or in small coalitions and send rejected asylum seekers there instead of to their home countries.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/4/five-eu-nations-inch-towards-deal-on-migrant-return-hubs-by-2027?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Five EU nations inch towards deal on migrant ‘return hubs’ by 2027">AJ #1</a><a href="https://www.scmp.com/news/world/europe/article/3366443/5-eu-nations-plan-send-rejected-migrants-non-eu-return-hubs-target-2027" target="_blank" rel="noopener noreferrer" title="South China Morning Post / 5 EU nations plan to send rejected migrants to non-EU ‘return hubs’, target 2027">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="yonhap">
+  <summary>Police to push for legal grounds to track locations of missing adults</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Police in Seoul said Friday they will seek legal grounds to track the locations of adults reported missing, after a recent high-profile missing person case. The National Police Agency said it wants provisions that would let investigators confirm or track the data of missing adults, similar to the current system used for missing children. Police said the change would address cases where investigators are now restricted from tracking the locations of missing adults’ mobile devices unless there are signs of a crime.</p>
+<p>The agency also said it plans to strengthen management of missing person cases by creating a dedicated organization to oversee them. The move comes amid public outcry over a missing woman case on Jeju, where a police officer was found to have closed the case shortly after she was first reported missing in May without confirming her safety. Her body was found last week after an intensive police search.</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20260904010000315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Police to push for legal grounds to track locations of missing adults">YNA #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="al_jazeera_en,cnn">
+  <summary>Romanian prosecutors indict Andrew Tate for trafficking minors, money laundering</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Romanian prosecutors have formally indicted Andrew Tate and his brother Tristan, escalating a long-running case with trafficking, money laundering and other charges while the brothers remain in US custody and face separate extradition questions in Britain and Romania.</p>
+<h3>What prosecutors say happened</h3>
+<p>Romanian prosecutors officially indicted social media influencer Andrew Tate on Friday for trafficking minors, money laundering, sex with a minor and witness tampering, and said Tristan Tate was charged with complicity. The case follows years of investigation: the brothers were mainly based in Romania since 2017 and have been under criminal investigation there on charges including human trafficking since December 2022.</p>
+<p>DIICOT, the Romanian anti-organized crime unit, said one of Andrew Tate’s victims was 15 when he seduced her in Britain in 2012, then moved her to Bucharest and used physical violence and mental intimidation to sexually exploit her by forcing her to produce pornographic content for social media sites. Prosecutors said Tristan Tate acted as an accessory and used physical aggression to coerce the victim.</p>
+<p>The unit also said the brothers kept $1.25 million from the victim’s videochat income, about 80% of her gains, and tried to launder the funds by buying four luxury cars. The alleged recruitment method described by prosecutors was to seduce victims and falsely claim to want a relationship or marriage before forcing them into pornographic work for a webcam business.</p>
+<p>The Tates have denied all wrongdoing. Their Romanian lawyer, Eugen Vidineac, said in a statement: “We will examine every aspect of (the indictment) with the same level of scrutiny and we will challenge any evidential, procedural or legal deficiencies through the appropriate judicial process.” He added: “Our clients continue to reject the allegations against them.”</p>
+<h3>Custody, extradition and the next legal step</h3>
+<p>The brothers were arrested in Miami in late July after Britain requested their extradition. They remain in jail in the US while a judge decides on the request to send them to Britain, where they are wanted on rape charges. A source close to the case, DIICOT’s spokesperson, said it was not immediately clear whether the unit will seek their extradition from the United States.</p>
+<p>Romanian law allows the Tates to be tried in absentia, but the trial will not start immediately. The indictment now goes to a preliminary court chamber, where a judge will review the case files to check legality. The law gives the preliminary chamber judge 60 days to finalize the report, though indictments often take longer.</p>
+<p>The case also has a procedural history in Romania. Prosecutors had previously indicted the brothers on human trafficking charges, but in late 2024 the Bucharest court of appeals sent that case back to prosecutors after finding some evidence inadmissible.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/4/andrew-tate-indicted-in-romania-for-trafficking-minors-money-laundering?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Andrew Tate indicted in Romania for trafficking minors, money laundering">AJ #1</a><a href="https://www.cnn.com/2026/09/04/europe/andrew-tate-indicted-romania-trafficking-intl" target="_blank" rel="noopener noreferrer" title="CNN / Romanian prosecutors indict Andrew Tate for trafficking minors, money laundering">CNN #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian,scmp,telesur_en">
+  <summary>Trump threatens to cut trade with some countries if Fed doesn’t lower rates</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump threatened on Friday to stop trading with countries that run deficits with the US unless the Federal Reserve cuts interest rates, widening a long-running fight over monetary policy into a threat aimed at some of America’s biggest trading partners.</p>
+<p>He made the demand in a Truth Social post after August’s stronger-than-expected jobs report, saying “LOWER THE RATE OR I’LL STOP TRADING WITH COUNTRIES WITH WHICH WE HAVE A DEFICIT.” Trump also urged the Fed Board and its “great new leader,” Kevin Warsh, to “get smart” and “BE PATRIOTS for a change.” He said the strong jobs numbers justified lower rates.</p>
+<p>The US has trade deficits with dozens of countries, including Mexico, Canada and China. Trump has repeatedly pushed the central bank to lower borrowing costs, while Warsh has hinted the Fed may instead raise rates to curb inflation, which remains above its 2% target. Warsh floated the possibility of a rate hike in a speech at Jackson Hole, Wyoming, late last week.</p>
+<p>The Fed’s rate-setting committee is due to meet on 15-16 September and will announce whether it raises, holds or cuts rates. One report said Trump’s threat to use trade embargoes could almost certainly trigger a legal challenge, but it remained unclear how such a move would help lower US borrowing costs.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/sep/04/missouri-supreme-court-congressional-district-map-mail-in-voting-us-canada-trade-war-executive-orders-latest-news-updates?page=with%3A6a9ad7c18f0865844a4bdd06#6a9ad7c18f0865844a4bdd06" target="_blank" rel="noopener noreferrer" title="The Guardian / Missouri supreme court congressional district map mail in voting us canada trade war executive orders latest news updates">Guardian #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3366445/trump-threatens-cut-trade-some-countries-if-fed-doesnt-lower-rates" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump threatens to cut trade with some countries if Fed doesn’t lower rates">SCMP #1</a><a href="https://www.telesurenglish.net/trump-to-escalate-his-trade-war-if-interest-rates-dont-come-down" target="_blank" rel="noopener noreferrer" title="Telesur English / Trump To Escalate His Trade War if Interest Rates Don’t Come Down">TE #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="la_jornada">
+  <summary>Gabriela Rodríguez*: Social housing and the new composition of households</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gabriela Rodríguez argued that housing demand in Mexico is a demographic phenomenon first, driven more by the formation and transformation of households than by economic factors. She cited a study, *Adequate Housing and households of lower income: from structural exclusion to the new housing policy*, by Edna Vega Rangel, Sedatu’s current secretary of Territorial and Urban Development, and Cirse Díaz Duarte, Sedatu’s Director General of Housing Policy. The study says Mexico built a housing system that produced millions of homes and credits over much of the 20th century and into the 21st, but still left a significant portion of the population without adequate housing, especially households whose incomes do not exceed two minimum wages.</p>
+<p>It also says the right to adequate housing is recognized in Article 4 of the Mexican Constitution, is a priority in the National Development Plan 2025-2030, and appears among government commitments. The study explains that the new policy focuses on the population excluded from the previous model and on the State’s role in directly building the Housing Program for Well-being. It adds that in 30 years the population rose from 81.2 million to 126 million, while households increased from 16.2 million to 35.2 million and average household size fell from five people to 3.6.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/09/04/politica/014a1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Gabriela Rodríguez*: Social housing and the new composition of households">LJ #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="vanguard_ng">
+  <summary>Mbah working, Enugu changing!</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Enugu State’s development conversation has shifted under Governor Peter Mbah, whose administration is pushing a wide-ranging programme of schools, hospitals, roads, transport reforms and new urban projects, even as the open question remains whether the changes will endure beyond the current push.</p>
+<p>Enugu’s modern statehood dates to August 27, 1991, when General Ibrahim Babangida’s military administration carved it out of old Anambra State, but its identity predates that. The name comes from the Igbo expression “Énú Ụ́gwụ́,” meaning “top of the hill” or “hilltop,” and its modern history was reshaped by the discovery of coal at the Udi Hills in 1909. That discovery turned the settlement into an industrial centre and gave it the name “Coal City,” while the Eastern Railway line to Port Harcourt in 1916 strengthened its economic role. Enugu later became capital of the former Eastern Region and, in 1967, the short-lived Republic of Biafra. Since the return to democratic rule in 1999, the state has moved through Chimaroke Nnamani, Sullivan Chime and Ifeanyi Ugwuanyi before Mbah took office in 2023.</p>
+<h3>Mbah’s push to remake the state</h3>
+<p>Mbah’s administration has framed its programme around “Tomorrow Is Here!” and tied it to an ambition to grow Enugu’s economy from an estimated $4.4 billion to $30 billion. The plan reaches across education, healthcare, roads, urban renewal, transportation, security, water, electricity, agriculture, industry and technology.</p>
+<p>The most visible pieces include about 268 Smart Green Schools, three technical and vocational colleges, and 260 Type-2 Primary Healthcare Centres across the wards. The government is also building the Enugu International Hospital as a specialist facility. On the urban side, it has proposed the New Enugu City on about 10,000 hectares along the Enugu-Abakaliki Expressway, alongside road projects and efforts to restore landmarks such as the Hotel Presidential, Nigergas and the International Conference Centre.</p>
+<p>Transport and infrastructure are being recast too. The administration has introduced CNG buses and electric taxis, planned new interchanges and terminals at Holy Ghost, Abakpa and Gariki, and advanced the Enugu Air initiative with fleet expansion and cargo facilities at Akanu Ibiam International Airport. It is also pursuing an AI-powered security architecture, expanding water infrastructure, setting up the Enugu State Electricity Regulatory Commission, backing a ₦100 billion revival plan for United Palm Products Limited, and planning land-banked farmland in each senatorial district.</p>
+<p>The larger test, as the programme is presented, is whether these projects become lasting institutions and productive assets rather than isolated works.</p></div>
+  <div class="source-list"><a href="https://www.vanguardngr.com/2026/09/mbah-working-enugu-changing" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / Mbah working, Enugu changing!">VN #1</a></div>
+</details>
+
+
+<details class="story" data-section="technology_and_ai_society" data-sources="peoples_daily_en">
+  <summary>APEC role in AI cooperation draws praise</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At the 2025 APEC Economic Leaders’ Meeting in Gyeongju, South Korea, APEC adopted the APEC Artificial Intelligence Initiative (2026-2030), which experts said marks a step from strategic consensus to concrete AI cooperation. The initiative is the first APEC leaders’ outcome focused specifically on AI, with directives to promote secure, accessible and reliable AI ecosystems and to expand participation in AI transformation through cooperation and capacity-building. Zhang Jingjia, an associate researcher at the APEC Study Center of Nankai University, said APEC’s value lies in bringing AI-leading economies and emerging economies into the same framework to widen the distribution of technological benefits.</p>
+<p>A second thread came in July, when APEC member economies adopted the Chengdu Statement at the APEC Digital and AI Ministerial Meeting in Chengdu. The document focuses on universal and meaningful digital connectivity and on using digital technologies and AI for economic growth. At another APEC forum in Chengdu, China announced plans to establish a center in Qianhai, Shenzhen, to promote cooperation on cross-border data flows; the planned center is meant to support policy research, regulatory alignment and services for businesses.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0904/c90000-20496283.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / APEC role in AI cooperation draws praise">PDE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Compile by Training: Turning Natural-Language Specifications into Local Neural Functions</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced Compile by Training, a method that turns a natural-language specification into a reusable neural function. The setup is aimed at text functions that are easy to describe but awkward to write with rules, and at avoiding the repeated cost, latency, and provider dependency of calling a large remote model for every input. At compile time, teacher models generate task-specific examples, which are used to train a small adapter for a compact interpreter. The resulting function can run without the teachers and can be stored, versioned, and composed like ordinary software.</p>
+<p>On FuzzyBench-Hard, a subset where the Program-as-Weights fast compiler produced no exact matches, Compile by Training reached 83.6% semantic accuracy. That higher accuracy came with a higher compile-time cost: roughly a minute rather than seconds for the fast compiler. The compiler was also deployed in a public interactive service, with demonstrations including a multi-site website helper, a language-controlled 3D avatar, and a bidirectional English-Claudish translator.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.04199v1" target="_blank" rel="noopener noreferrer" title="arXiv / Compile by Training: Turning Natural-Language Specifications into Local Neural Functions">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Terminal-Universe turns terminal-agent trajectories into reusable environments for post-training, addressing a gap the preprint describes between abundant agent logs and scarce realistic, executable environments. Applied to public terminal agent trajectories, it produces 37.3k task-sufficient environments. The framework reconstructs environments from tool-execution history in the trajectories themselves, rather than generating them from scratch.</p>
+<p>It does this by replaying recorded file operations to restore files before the agent modified them, creating a partial workspace, then using a completion agent to supply missing files and dependencies. On that recovered workspace, it reconstructs the original intent task and synthesizes new ones. The system also scales tasks along two axes: breadth, by mining directional dependency relations and creating cross-workspace queries across multiple codebases, and depth, by extending a single-turn query into a multi-round session with iterative user feedback and requirement refinement via a user agent. The preprint says supervised fine-tuning of Qwen3.5-27B on this corpus improves single-round performance on Terminal-Bench 2.1 by 11.9 points and multi-round performance on EvoCode-Bench v2 MT@4 by 13.8 points.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.04148" target="_blank" rel="noopener noreferrer" title="arXiv / Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduced LLaDA-Image, a unified image-generation framework that pairs a 6B Diffusion Transformer trained from scratch with a frozen vision-language understanding module built on the LLaDA2.0-Mini diffusion language model backbone. The model is trained first with image-only pre-training and mid-training rather than relying heavily on paired image-text data from the start. Its generation pipeline uses 220M samples, including 98 real images, and the DiT uses parameter-free RMSNorm together with the Muon optimizer. The result, the paper says, is a unified model that can produce highly photorealistic images while following fine-grained editing instructions.</p>
+<p>The researchers also distilled the system into LLaDA-Image-Turbo for fast inference in 2-4 sampling steps. On Qwen-Image-Bench, they report overall scores of 53.53 on the English track and 53.38 on the Chinese track, which they say is a new state-of-the-art among open-source models on both tracks. They also released the model weights, training code, and detailed recipes to support further research.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.03796v1" target="_blank" rel="noopener noreferrer" title="arXiv / LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Knowing When Not to Reuse: Conditional Experience Transfer in Autonomous LLM Post-Training</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces Boundary-Calibrated Intervention Transfer (BCIT) for autonomous LLM post-training, arguing that repeated updates in evolving domains make it important to know when past experience should not be reused. The work says an update’s effect depends on its parent model, data, and training stage, and that treating a previous success as blanket permission can waste compute or, if a child model is promoted, degrade the later training trajectory. On one 4B model adapted across finance reasoning, text-to-SQL, and function calling, the candidate updates showed different target and retention effects across the evaluated contexts. Under matched candidates, evidence, and compute, BCIT authorized fewer harmful updates and reached higher equal-budget final-model quality than the alternatives it was tested against.</p>
+<p>BCIT is described as binding an observed effect to its source context, checking applicability conditions, vetoing candidates with named hard conflicts, and using a bounded training trial to get current-state evidence when needed. The preprint says fully trained candidates still face a shared adoption rule, and only observed events extend memory.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.26730" target="_blank" rel="noopener noreferrer" title="arXiv / Knowing When Not to Reuse: Conditional Experience Transfer in Autonomous LLM Post-Training">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Random Attention proposes a different way to evict KV cache entries for long-reasoning large language models: keep the prompt and evict uniformly at random within each attention head, with no scoring step. The preprint says long chains of thought make the KV cache a severe memory bottleneck, and that existing compression methods mostly score cached tokens by how much they will matter later. Across four models and six reasoning tasks, it says Random Attention matched the strongest prior evictor while serving 32-43% higher throughput than it in vLLM deployment.</p>
+<p>The authors say controlled experiments explain the result in two ways. First, the prompt is the fragile part of the cache, and much of the gap between selectors depends on whether their scoring happened to keep it. Second, the reasoning trace appears to protect itself through redundancy both in the text, as the model restates what it still needs while working, and across attention heads, where each keeps its own copy of the trace. The code is publicly available on GitHub.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.03430" target="_blank" rel="noopener noreferrer" title="arXiv / Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>LatentPress: Context Compression Beyond Text and Vision</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">LatentPress proposes a new way to compress conversational histories and long documents for language models: instead of turning context into human-readable text or rendered images, it writes them into continuous memory tokens that a frozen decoder reads directly through its input-embedding interface, with no text reconstruction at inference. The system’s reader-matched writer compresses context by 4-16x while training only an adapter with 4.2M-26.2M parameters, about 0.1% of the decoder. On LongMemEval, it reached 0.504 accuracy at 7.70x compression, compared with 0.490 for uncompressed evidence, and it outperformed text summaries (0.184) and OCR-based compression (0.426 to 0.312).</p>
+<p>On LongBench-QA, in-domain writers matched or exceeded raw-context reading at 4-8x compression, while 16x lagged behind raw. The system’s writing step took 43 ms per conversation, roughly an order of magnitude faster than text summarization or OCR reconstruction, and reading was 5-9x faster than raw context or cached OCR. The preprint also says it was validated in two transfer settings: zero-shot from UltraChat to LongMemEval memory QA and from LongMemEval-derived QA to unseen LongBench document domains.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.01507" target="_blank" rel="noopener noreferrer" title="arXiv / LatentPress: Context Compression Beyond Text and Vision">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Hybrid LLMs with Gated DeltaNet (GDN) were tested under 4-bit quantization in a study of Qwen3.8-27B, which has 48 GDN layers and 16 attention layers. Early community 4-bit quantizations had left the GDN block in 8- or 16-bit precision, especially its decay and write-strength gates, because errors in recurrence were expected to accumulate over long contexts. The new recipe, called Minima, uses NVFP4 W4A4 on all 496 linear layers, including GDN. Across perplexity at 4K/32K, MMLU-Pro, GSM8K, AIME’25, GPQA-Diamond, LiveCodeBench, and RULER retrieval to 64K, it matches BF16 within seed noise, with a 5-task average of -0.52, while being the smallest recipe at 17.5 GiB and the fastest-prefill at +14-19%.</p>
+<p>The authors also give a four-part mechanism study for why the recurrent half quantizes well. They say NVFP4’s 16-element block scaling localizes extreme outliers in the residual stream, the gate projections are the least sensitive layers, the delta-rule recurrence holds injected noise at a flat plateau over 32K tokens, and per-token quantization cost washes out with context rather than compounding. They also report fixing a global-scale mismatch when per-module-calibrated NVFP4 checkpoints are served by kernels that fuse those modules into one GEMM, and say calibrated FP8 KV-cache scales are performance-free.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.04098" target="_blank" rel="noopener noreferrer" title="arXiv / Why Gated DeltaNet Survives 4-Bit Quantization: NVFP4 W4A4 for the Recurrent Half of a Hybrid 27B LLM">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Rethinking On-Policy Distillation of Large Language Models II: One Training Example</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint on arXiv examines on-policy distillation (OPD) in large language models by testing it at the data-minimal limit: training on a single query. The work says OPD combines student-generated rollouts with dense token-level supervision from a teacher, and that existing studies had focused mainly on algorithmic behavior rather than the role of training data. In this setup, one-shot OPD kept improving for hundreds of steps and recovered most of full-data OPD’s gain across task domains and model families. The authors say a single query already reached 71.5% state coverage, most of it within the first 100 steps, and that adding semantically distinct queries raised coverage and validation accuracy together until 16 queries reached 98.9% and matched full-data training.</p>
+<p>The paper explains the result through the states visited during training and the rate at which the student aligns with the teacher. It also says alignment slowed at a similar pace whether OPD trained on one query or the whole dataset, and even a fixed set of states took hundreds of steps to absorb. The state-coverage finding extends to multi-teacher OPD, where 16 semantically diverse queries per domain matched full-data MOPD, and to stress tests with content-light templates and off-domain WildChat queries, which also approached the real-query baseline.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.04172" target="_blank" rel="noopener noreferrer" title="arXiv / Rethinking On-Policy Distillation of Large Language Models II: One Training Example">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Bunsen burners’ reputation for sterilizing workplaces flames out</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A study of Bunsen burners in microbiology labs found that the flames do not clean up bacteria-laden particles and can even make contamination worse. The work, published in August in *Microbiology Spectrum*, tested whether the long-used lab tool really decontaminates airspace and surfaces the way many scientists have assumed. Hannah Gavin, a microbiologist at Providence College in Rhode Island and a co-author, said the burners’ supposed sterilizing effect had long been part of lab lore, but the study found no experimental evidence in the literature supporting that idea.</p>
+<p>In the experiments, Gavin and colleagues used *Gordonia rubripertincta* and contaminated the air above lab benches by spraying bacteria or shaking dry towels laced with the bacteria. They then compared Petri dishes opened next to an active burner with dishes beside an inactive one. In almost every trial, the dish near the active burner had the same or higher bacterial level. Amir Mitchell, a systems biologist at the University of Massachusetts Chan Medical School in Worcester, said the results could be the “nail in the coffin” for Bunsen burners in biology labs.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02758-0" target="_blank" rel="noopener noreferrer" title="Nature / Bunsen burners’ reputation for sterilizing workplaces flames out">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Revealed: inside the US military&#x27;s plan to tap huge sums from the NIH</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The NIH is moving to redirect research projects worth hundreds of millions of dollars from its National Institute of Allergy and Infectious Diseases to military biodefence programmes at the Department of Defense, a shift that could redirect work at NIAID and hinges on whether the funding transfer is lawful.</p>
+<p>Two NIH employees said the NIH and the DOD have signed an agreement for the arrangement. A third NIH employee, a senior agency official, said the NIH is now identifying projects it would transfer and aims to complete the deal by the end of September, when the fiscal year ends and some funds expire. The sources said the full agreement has not yet been finalized. An NIH spokesperson said the partnership would happen only on a project-by-project basis, that all research would remain within NIH’s mission, and that there would be no blanket transfer of funds.</p>
+<p>The senior NIH official said the new arrangement would untangle civilian public-health initiatives from defence priorities and move research that is “more Department of War-related” back to the Department of War. The official also said public perceptions of NIAID biodefence work make it seem as if the institute is developing bioweapons, adding that NIH wants out of that business.</p>
+<p>Federal law does allow agreements between US agencies to share funding in some circumstances, Samuel Bagenstos said, but he warned that using NIH money to cover military budget shortfalls would be illegal if it served DOD purposes rather than NIH’s. NIH director Jay Bhattacharya defended the partnership on X, saying it would focus on research that improves the health of American citizens and military members. The three NIH sources said the pathway to move funding out of NIAID would last 10 years.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-02799-5" target="_blank" rel="noopener noreferrer" title="Nature / Revealed: inside the US military&#x27;s plan to tap huge sums from the NIH">Nature #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Stanford scientists discover a seafood that can reverse signs of aging</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In aged mice, dietary supplements containing compounds from sea squirts reversed several signs linked to aging, including memory loss and visible physical changes, prompting researchers to ask whether plasmalogens could help protect the aging brain.</p>
+<p>The work involved scientists from Xi&#x27;an Jiaotong-Liverpool University, Stanford University, Shanghai Jiao Tong University, and the University of Chinese Academy of Sciences. Sea squirts are marine animals eaten in parts of Asia, including Korea, where they are known as meongge, and Japan, where they are called hoya. They can be eaten raw and contain high levels of plasmalogens, a type of lipid that forms part of cell membranes.</p>
+<p>Plasmalogens occur naturally throughout the human body and are especially abundant in the brain, heart, and immune cells. Their levels tend to decline with age, and reduced levels have also been observed in several neurodegenerative diseases, including Alzheimer&#x27;s disease and Parkinson&#x27;s disease. That connection led the researchers to test whether restoring plasmalogens might ease some age-related changes.</p>
+<p>To do that, the team added plasmalogens to the diets of aged mice and looked at both behavior and body changes. After five days of training in the Morris water maze, the treated mice reached the hidden platform significantly faster than aged mice on a normal diet, performing much more like younger animals. The researchers also found more synapses in the treated mice, and those synapses appeared to be in better condition. Brain inflammation was substantially lower as well.</p>
+<p>The study also reported visible changes. Professor Lei Fu, the corresponding author, said the results suggest plasmalogens may not just stop cognitive decline but may reverse cognitive impairments in the aging brain. He added that aged mice fed plasmalogens grew new black hair that was thicker and glossier than that of untreated mice.</p>
+<p>The team said the work provides the first detailed look at how plasmalogens may influence the aging brain. It also points to several possible mechanisms, including effects on molecules that aid neurone and synapse growth, changes to synaptic membrane flexibility, and a possible role for the gut-brain connection.</p>
+<p>Still, the findings come from an animal model. The researchers say additional work would be needed to learn whether similar effects happen in people, what doses might work, and whether long-term supplementation is safe.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260902234518.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Stanford scientists discover a seafood that can reverse signs of aging">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>New injectable treatment helps the brain rebuild after stroke</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Duke University injectable biomaterial helped mice recover some function after ischemic stroke by turning a dead-tissue cavity into a repair-friendly space, offering a possible way to rebuild brain tissue that current stroke treatments can save but not replace.</p>
+<p>Ischemic strokes happen when a blood clot blocks blood flow to part of the brain. Emergency drugs and clot-removal procedures can restore circulation and protect tissue that is still viable, but once brain tissue has died, restoring blood flow cannot bring it back. In severe strokes, that can leave a cavity where healthy tissue used to be, and recovery then depends largely on rehabilitation, which helps surviving circuits adapt but does not directly rebuild the damaged region.</p>
+<h3>How the scaffold worked</h3>
+<p>Tatiana Segura, a biomedical engineering professor at Duke, said the goal was to “engineer the injured space” so immune, vascular and neural repair could work together. Her team used MAPS, or microporous annealed particle scaffolds, made of hydrogel microparticles that assemble into a porous structure. They also used extracellular vesicles, or EVs, collected from lab-grown astrocytes and attached them to the microparticle surfaces so the repair signals would stay concentrated in the scaffold rather than dispersing.</p>
+<p>In the mouse experiments, that setup changed the stroke cavity into a more favorable environment for healing. One signal pair, IL-4 and C1q, was especially good at drawing immune cells into the injured area, including macrophages and a persistent population of neutrophils. When the researchers reduced the neutrophil-rich population, blood vessel formation fell and the scaffold remodeled less, suggesting those cells were part of the repair response in this setting.</p>
+<p>The treatment was also linked to new blood vessel growth, more axonal fibers inside and around the injured region, and better movement in the animals. Mice treated with the optimized scaffold did better on a grid-walking test, and by eight weeks their performance was not statistically distinguishable from healthy control mice. The improvements lasted for the rest of the study. The findings were published in *Cell Biomaterials*.</p>
+<p>The work is still preclinical. The researchers have tested it only in mouse models by injecting the material directly into the damaged area of the brain. They say further research is needed on safety, on how different immune cells affect recovery, and on whether the treatment works in larger models. As a next step, the lab is looking at EVs produced by human induced pluripotent stem cell-derived astrocytes.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260902234512.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / New injectable treatment helps the brain rebuild after stroke">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>A longer exhale may push your brain toward bolder decisions</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Deliberately lengthening the exhale may make people more willing to take risks, according to a study of 41 healthy participants that linked breathing rhythm to heart activity and reward-related brain responses, raising the question of how far simple breath control can steer judgment.</p>
+<p>Researchers from the German Institute of Human Nutrition Potsdam-Rehbruecke (DIfE) and Charité -- Universitätsmedizin Berlin asked whether consciously changing breathing could influence decisions by shifting activity in both the heart and brain. The work builds on the idea that decision-making is not shaped only by outside information or brain processes alone, but also by a person’s bodily state.</p>
+<p>The team, led by Prof. Soyoung Q Park, studied people making risky choices under controlled breathing conditions. Participants followed visual instructions and either breathed at their normal pace or slowed their breathing with a longer exhalation phase, using a 2:8 inhale-exhale ratio. While they completed a series of risk-related decisions, the researchers monitored breathing, heart activity, skin conductance, pupil responses and brain activity with functional magnetic resonance imaging.</p>
+<p>The main result was that extending the exhale slowed heart rate, increased heart rate variability and was associated with bolder choices. The brain also became more responsive to rewards, with stronger activity in the ventromedial prefrontal cortex and the precuneus, regions involved in reward processing and in regulating the timing between heartbeats. The researchers said the change seemed to come from greater attention to possible rewards rather than from a weaker response to losses, because participants still reacted to losses in a similar way.</p>
+<p>That matters because fast breathing and an elevated heart rate are often linked with rapid decision-making, while pressure can make people more cautious as they try to avoid losses, whether they are investing, dealing with a tense workplace situation or choosing a meal quickly. In this study, slower breathing and a calmer cardiovascular state appeared to push judgment in the other direction.</p>
+<p>“Our decisions are rarely determined solely by external information,” Park said, describing the research question. “Rather, our judgment emerges from the interplay between cognitive processes and our current bodily state.” Lead author Wenhao Huang said the findings underscore “the transformative role of breath-based interventions” and suggest that breathing and cardiac dynamics can make the brain more receptive to rewards.</p>
+<p>The findings were published in Neuron, and the researchers said the approach could be useful as a simple, inexpensive tool for self-regulation. They also said future studies will need to see whether the same effects appear in broader clinical populations, including people with overweight, and whether breath regulation could influence food-related decisions.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260904000320.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A longer exhale may push your brain toward bolder decisions">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists reveal the hidden instructions that build the human brain</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two studies published in *Cell* and *Science* have narrowed the focus on radial glia, the stem cells that help build the human cortex before birth, by showing that these cells answer both metabolic cues and physical signals from the developing brain.</p>
+<p>Before birth, the human brain is assembled through an enormous series of cellular choices, and radial glia sit at the center of that process. They produce large numbers of the neurons and support cells that make up the cerebral cortex, the brain region involved in thought, memory and language. Aparna Bhaduri of UCLA said the cells are “really key to making us human,” but also sit at the center of many neurodevelopmental and neuropsychiatric disorders, as well as cancer.</p>
+<h3>Metabolism and contact both shape cell fate</h3>
+<p>The *Cell* study built a detailed map of metabolism in the developing human cortex using donated human tissue and brain organoids grown from stem cells. The team, a collaboration between Bhaduri’s lab and Heather Christofk’s lab, found that metabolism is not just background support for development: it can actively influence which kinds of cells are produced.</p>
+<p>The researchers reported that radial glia depend heavily on the pentose phosphate pathway, a glucose-based process used by rapidly dividing cells. When they lowered available glucose or interfered with that pathway, the stem cells changed what they produced and began generating more inhibitory neurons and other cell types that normally appear later in development. Bhaduri said that was surprising because metabolism can “really control how stem cells make decisions.”</p>
+<p>The second study, published in *Science* and led by Claudia Nguyen, looked at a different source of information: signals from the thalamus. Using human stem cell-derived brain assembloids, the researchers found that thalamic projections physically touch radial glia while the brain is still developing. That contact changed the stem cells’ behavior and caused them to produce more excitatory neurons, especially upper-layer neurons that are particularly expanded in the human brain.</p>
+<p>The team linked that interaction to NRXN1, a gene known for helping neurons form connections and previously associated with autism spectrum disorder. In assembloids made from patient-derived cells carrying an NRXN1 mutation, altered thalamic signals shifted the balance between stem cells and the neurons they generated.</p>
+<p>Together, the studies suggest that radial glia are shaped by more than one kind of instruction as the cortex takes form, and that those same developmental pathways may help researchers understand disease vulnerability and, potentially, similar stem-cell programs in brain cancer.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260904000308.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists reveal the hidden instructions that build the human brain">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
