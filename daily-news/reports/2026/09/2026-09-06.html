@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-09-06</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-09-06</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Tennessee says child rapists deserve to die. Now it prepares to execute one of their victims</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Christa Pike, once sentenced to death as a 20-year-old after the murder of Colleen Slemmer, now faces lethal injection in Tennessee even as her lawyers press a clemency bid built on the childhood abuse and rape history they say the jury never heard.</p>
+<h3>The video that began the story</h3>
+<p>The case is anchored by a video timestamped 30 March 1996. Pike appears with her auburn hair in a white scrunchie, crying quietly as a female judge reads the sentence: “It is ordered that you shall be put to death by execution as prescribed by law,” followed by the explanation that her body would be subjected to electric shock “that you shall die.” Pike turns toward the camera, searches for her mother in the courtroom, and begs, “Can I please hug my mom before I go,” before being taken away without that hug.</p>
+<p>Pike had just turned 20. She had been 18 on the night of 12 January 1995, when she and her then boyfriend, Tadaryl Shipp, brutally beat and murdered Colleen Slemmer, 19, on a University of Tennessee campus. Now 50, Pike is scheduled to be put to death by lethal injection at Riverbend maximum security institution in Nashville on 30 September 2025. Tennessee has described her as among the “worst of the worst,” while her lawyers are asking Governor Bill Lee to spare her life.</p>
+<h3>The abuse case her lawyers say was hidden</h3>
+<p>The clemency petition, filed on Wednesday, argues that Pike’s case cannot be separated from what happened to her before the murder. It says she was subjected to repeated sexual and physical abuse from early childhood onward, beginning with rape by her paternal grandmother’s boyfriend, Ernest Johnson, when she was between two and five. A forensic evaluation by psychologist Bethany Brand, based on 13 hours of clinical interviews at the Debra Johnson rehabilitation center in Nashville, says Johnson orally raped her in preschool, threatened her with harm, and locked her in a dark chicken coop where spiders crawled on her.</p>
+<p>Other abuse surfaced later. At 11, Pike was raped outside her house by a 37-year-old neighbor, Claude Davis, and later attacked at 17 by a stranger who dragged her into the woods and raped her. The evidence says law enforcement knew about the later assaults, and that child protective services became involved only after Pike developed an infection from the attack by Davis. Pike’s lawyers say the jury never heard any of this at trial, nor the years of physical abuse, neglect, or the suicide attempts she made as a child.</p>
+<p>The petition also points to her mental health. Pike was only diagnosed years after the trial with bipolar disorder, which her lawyers say helped explain the violent outburst that ended in Slemmer’s death. Sandra Babcock, who has been involved in Pike’s representation since 2019, told the Guardian that if Tennessee executes her, it will show the death penalty is reserved “not for the worst of the worst, but for the most damaged and vulnerable among us.”</p>
+<h3>A governor’s decision, and a state law in tension</h3>
+<p>Tennessee has not disputed the abuse details. At a recent hearing, state attorney Will Ayers said, “I think everybody in this courtroom wishes that those things had never happened to Ms Pike. We all wish that we were not here today and that she was not on death row.” Governor Lee now holds the power to commute Pike’s sentence to life without parole, which would be a first; Pike’s lawyers say he has never granted clemency in a death case and is “zero for eight.”</p>
+<p>The case also sits against the backdrop of Tennessee’s 2024 expansion of capital punishment. In May 2024, Lee signed legislation extending the death penalty to people who rape a child, after lawmakers argued that such crimes cause lasting psychological, emotional and sometimes physical harm. The measure was described in the evidence as unconstitutional under long-standing US Supreme Court precedent because no one is murdered in a rape-only case. Against that political message, Tennessee is now preparing to execute a woman whom the clemency petition describes as a victim of multiple child rapes.</p>
+<p>Pike’s lawyers say she has spent almost three decades in solitary confinement since the video of her sentencing. They say she was held for years in an 8ft-by-10ft cell for up to 24 hours a day, and that her isolation was especially severe because she was the only woman on Tennessee’s death row. Two years ago, she won a lawsuit that slightly loosened those conditions. Her lawyers say she is now receiving treatment for bipolar disorder, has become a mentor to newer prisoners, and shows remorse for Slemmer’s death.</p>
+<p>Even so, the execution date has become a countdown. Her lawyer, Kelleigh Gleason, said Pike has had to ask herself whether each milestone is her last Thanksgiving, Christmas or birthday. If last-minute legal challenges fail, her lawyers have asked that only female corrections staff be present in the death chamber. Tennessee has not guaranteed that, leaving Pike with the possibility that men will restrain her and search for a vein for the lethal injection needle — a prospect she fears would repeat the violations of her childhood.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/ng-interactive/2026/sep/05/christa-pike-death-row-clemency-petition" target="_blank" rel="noopener noreferrer" title="The Guardian / Tennessee says child rapists deserve to die. Now it prepares to execute one of their victims">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>Even in safe-haven Massachusetts, trans care is at risk. Young people are fighting to protect it</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Trans activists from across Massachusetts occupied attorney general Andrea Campbell’s Boston office building on Wednesday, taking hormone replacement therapy in the lobby and bringing needles, gels, pills and sharps containers to demand stronger protection for youth gender-affirming care. Their protest exposed a gap between Massachusetts’ legal protections and the care some hospitals are still withdrawing.</p>
+<p>The youth-led group Protect Trans Futures said it would not leave without a commitment to protect trans kids’ civil rights. Organizers asked Campbell to order hospitals to reinstate care, or to investigate or sue those that had stopped providing it. Some allies feared that confronting a sympathetic attorney general could backfire; others said the action was simply forcing the state to meet its own standards.</p>
+<h3>Why activists chose Campbell</h3>
+<p>Teddy Walker, a 21-year-old with Protect Trans Futures, said Massachusetts politicians at the local, state and federal level were “very naive” to think there was not a massive loss of care. “The Trump administration’s policies are working exactly as intended,” he said.</p>
+<p>The group’s argument was that Massachusetts remains one of the legally “safest” places for trans people, but safety on paper has not stopped barriers from appearing in practice. Gender-affirming care is still legal for all in the state, yet the Trump administration’s attempt to undermine state laws has created what activists described as a chilling effect.</p>
+<h3>Care is still legal, but access has shrunk</h3>
+<p>The pressure on Massachusetts hospitals began after the federal fight over trans health care intensified. In the first weeks of Donald Trump’s second term, he signed an executive order threatening to cut off federal funding for hospitals that provide gender-affirming medical care to trans youth. Later, health secretary Robert F Kennedy Jr sought to target Medicaid funding to hospitals providing youth gender-affirming care.</p>
+<p>Even though many of those efforts have been tossed, the evidence says the fallout has still reached Massachusetts. At least three local hospitals or health systems ended gender-affirming care programs for patients under 19: Fenway Health, Outer Cape Health Services and Baystate Health. A fourth Massachusetts hospital canceled all appointments for a gender-affirming surgery for adult trans women, even though adults were not the subject of Trump’s executive order.</p>
+<p>Fenway’s move was a particular blow. The state’s largest LGBTQ+ health provider stopped youth hormone care and puberty blockers last October. Other clinics and hospitals took in some of those patients, but not all of them found a quick replacement. One 18-year-old, Josh, said restarting the intake process after Fenway stopped his care took over a year. He said it shattered his trust that his home state would be able to protect him.</p>
+<p>The strain has also changed the choices people make about where to live. Safara Malone, a senior at Harvard University, moved to Massachusetts from Texas in 2024 because she expected fewer barriers and more explicit support. With graduation less than a year away, she said she is now unsure where she will feel safe living next.</p>
+<h3>The protest ended in arrests, not a deal</h3>
+<p>Campbell has repeatedly said that trans health care “remains legal and protected” in Massachusetts, and she has warned hospitals that ending youth gender-affirming care may amount to discrimination under state law. She met with a group of trans youth advocates in April after some hospitals ended care, and on the same day as the protest she joined 21 other state attorneys general in suing the Trump administration over its attempt to block Medicaid coverage for youth gender-affirming care.</p>
+<p>Still, organizers said they had come because Campbell had not gone far enough. Some advocates wanted to avoid weakening a sympathetic attorney general by escalating the fight, but many trans organizers saw the action as holding the government to its own standards.</p>
+<p>After the attorney general’s building closed, organizers were handed a phone and offered a meeting by an assistant attorney general. They refused, saying they had already taken that step months earlier without results. After a few hours, nine organizers, including Walker, were arrested by state troopers. The attorney general’s office said it was not involved in the decision to arrest the protesters.</p>
+<p>For Protect Trans Futures and its allies, the dispute remains unresolved: whether Massachusetts will simply say trans youth care is legal, or use its power to make sure it is still available.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/sep/05/massachusetts-trans-care-protections" target="_blank" rel="noopener noreferrer" title="The Guardian / Even in safe-haven Massachusetts, trans care is at risk. Young people are fighting to protect it">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Fuel tanker blast in western Iran kills at least 10</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 10 people were killed in a fuel tanker blast in western Iran, Iranian national broadcast media (IRIB) reported. The tanker exploded on Saturday after a road crash on the Hamedan-Sanandaj highway. The governor of Sanandaj, the capital of Iran’s Kurdistan province, said the accident was caused by a technical fault in the braking system of the vehicle carrying the tanker, according to Reuters reporting. He also said at least six other people were injured and that the casualty figures were based on initial reports.</p>
+<p>Local officials said the resulting fire was immediately brought under control. They did not give further details on the identities of those killed. The blast was the latest deadly tanker accident in Iran, where poor road conditions, ageing vehicle fleets and heavy freight traffic have made such crashes recurring hazards. The evidence also cites a 2018 case near Sanandaj in which at least 13 people were killed when a fuel tanker hit a bus.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/5/fuel-tanker-blast-in-western-iran-kills-at-least-10?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Fuel tanker blast in western Iran kills at least 10">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="scmp">
+  <summary>Bolivian military barracks explosion leaves 2 dead, 14 missing and dozens injured</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An explosion at a military barracks in Viacha, about 30km (20 miles) from La Paz, killed at least two people and injured dozens on Friday, Defence Minister Ernesto Justiniano said. His ministry said 14 people were missing. Authorities said the blast happened around 2.30pm in an area used to store pyrotechnic material, and the cause had not yet been established.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/americas/article/3366452/least-10-dead-62-injured-after-explosion-bolivian-army-base" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Bolivian military barracks explosion leaves 2 dead, 14 missing and dozens injured">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="guardian">
+  <summary>After overtourism besieged Big Sur, the worst finally happened: ‘People kept saying someone is going to die’</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Big Sur’s summer of wildfires, road closures and heavy visitor traffic has pushed a tourism-dependent coast into a sharper reckoning, after recent traffic deaths and a series of congested events made residents ask how many visitors the place can carry before the damage becomes irreversible.</p>
+<p>The 120-mile stretch of rocky promontories, beaches and redwood forests at the foot of the Santa Lucia mountains had already been living through what residents described as a long summer of hell. Wildfires, repeated closures and disruptions to hotels, restaurants and campsites hit in a region where tourism accounts for about 90% of the local economy.</p>
+<h3>Fires, closures and a strained road network</h3>
+<p>One large fire broke out in the highlands east of Big Sur in early August and remained less than 25% contained. Two weeks later, a second fire erupted 30 miles to the south; firefighters could barely reach it, and it grew larger than the first. Residents know natural catastrophe is part of life in a remote place, but this summer’s fires sharpened questions about whether mass tourism is sustainable in an era of climate change and unpredictable weather.</p>
+<p>The trouble had started earlier in the year, when Highway 1 reopened after three years of repair work following heavy landslides. That reopening restored access to Big Sur from the Monterey peninsula in the north to Cambria in the south, but it also brought a surge of visitors back to the coast. Local officials and residents said many of them were mainly interested in selfies at a handful of well-advertised spots, especially Bixby Bridge, where people stopped in the road to take pictures and blocked traffic for miles.</p>
+<p>Visitors also trampled plants, camped illegally and tossed trash around, according to local reports described by residents and officials. Kate Daniels, who represents Big Sur on the Monterey county council, said she successfully pressed for a parking moratorium at Bixby Bridge after what she called a change in visitor behavior. “This is one of the most beautiful places you’ve ever seen, yet people have decided their goal is to take a picture of themselves on a bridge … It’s really difficult and dangerous, and that road cannot handle it,” she said.</p>
+<h3>Car Week and the warning that came true</h3>
+<p>The low point for many residents came in mid-August during Monterey county’s annual Car Week, which draws thousands of vintage and exotic cars and about 100,000 visitors. Some attendees repurposed the Big Sur coastline as a playground for souped-up coupes and convertibles even as the Timber fire was raging and fire crews were trying to set up defensive lines.</p>
+<p>Photos and videos showed car fans making high-speed runs on Highway 1, doing doughnuts at intersections and gathering in groups for photos while fire trucks struggled to move through the congestion. Daniels called it “a nightmare” and said, “People kept saying that someone is going to die.”</p>
+<p>By the end, people did die. On the final weekend, a 20-year-old out-of-towner driving a Dodge Challenger struck Brian Roberts, a well-known Big Sur figure nicknamed Brewski. Friends said Roberts had spent many of the previous days railing against Car Week behavior. Accounts differed on how the crash happened: some friends said he was crossing Highway 1 to watch the sunset, while others said he was in the road yelling at cars after they blocked the turn-off to Palo Colorado Road, where he lived.</p>
+<p>Days later, an 80-foot skid mark was still visible near the scene, along with circular burn marks where vehicles appeared to have been doing doughnuts. A friend who arrived shortly after said he found bloodstains on the median and tarmac. The following day, another 20-year-old visitor from outside San Francisco crashed a silver BMW convertible into a tree a few miles north of Big Sur, killing one passenger and injuring himself and two friends. Police said the driver recorded a blood alcohol level of 0.13 and were investigating the death as gross vehicular manslaughter.</p>
+<h3>Mourning, income and the question of how many is too many</h3>
+<p>Traffic deaths happen in Big Sur every few months, either because drivers go too fast on the narrow, winding road or because they are distracted by the scenery and plunge off the side. Even so, Roberts’s death hit especially hard. “The community felt disrespected because the land was on fire,” Lindsey Kirk, a friend from the San Francisco Bay Area, said. “It’s crazy that the fire services couldn’t get through because of all the cars they brought in.”</p>
+<p>Some residents blamed Monterey county officials for using Big Sur’s beauty to attract big events — including marathons, golf tournaments and Car Week — while doing little to protect the people who live there. See Monterey, the tourism body promoting the region, had urged visitors to drive the speed limit, park legally and show “Big Sur Deserves Big Respect.” It also encouraged Car Week attendees to explore the Big Sur coast. Eleven days after Roberts’s death, the organization announced a “banner year,” saying hotel revenue was up, visitor spending exceeded $100 million and more than $4 million had been raised for charity. Left out were the businesses that shut for the week or hired security and put up fences so their lots would not become impromptu motor sports rallies.</p>
+<p>Then another flare-up in the Timber fire sent sparks and ash down from Mount Manuel and prompted what many residents said should have happened earlier: a comprehensive closure of Highway 1, including most hotels and restaurants and some of the most visited spots, such as Pfeiffer Beach and McWay Falls. Authorities gave residents 24 hours either to stock up on essentials or leave town. Mourners cheered the decision, but others pointed out the cost: when Big Sur shuts down, hourly workers at hotels and restaurants lose income, and those who are evacuated can face housing and other expenses.</p>
+<p>The community tried to help.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/sep/05/california-big-sur-overtourism" target="_blank" rel="noopener noreferrer" title="The Guardian / After overtourism besieged Big Sur, the worst finally happened: ‘People kept saying someone is going to die’">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="rappler">
+  <summary>Gamified abuse: How a PH forum rewards submissions of non-consensual intimate content</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 430,000-member Philippine forum rewards users for uploading non-consensual intimate content, turning stolen videos and photos into status, traffic and ad revenue while victims such as Mishy confront how their private moments were reposted and monetized.</p>
+<p>Shortly after discovering that intimate videos of her had been uploaded online, Mishy kept returning to one question: why would someone share something that was never theirs in the first place? Her answer was blunt in the evidence: there is something to gain.</p>
+<h3>How NSFWPH turns abuse into participation</h3>
+<p>The forum at the center of the story is NSFWPH, which has more than 430,000 registered members. Unlike a conventional pornographic website, it operates as an internet forum where members create threads, comment, react to posts and earn points. Those interactions feed a merit system that unlocks additional privileges and promotes users through ranks such as “Established Member,” “Elite,” “Contributor” and, at the top, “Legendary.”</p>
+<p>Higher-ranked members can gain access to locked content, including additional information attached to posts such as the names of victims or links to their Facebook and Instagram accounts. The structure, as described in the evidence, encourages members to find material worth posting, whether by obtaining videos from former partners, redistributing Telegram content or manipulating women into sending intimate images. On NSFWPH, participation itself becomes part of the exploitation.</p>
+<p>The system is not only about forum status. It also rewards posting in ways that can be monetized. The evidence says users can earn advertising revenue through download links and, in some cases, sell access to collections on other channels. The platform itself is built around traffic: according to Semrush, NSFWPH receives more than 10 million page views each month, with users viewing an average of 25 pages per visit and staying for more than 14 minutes. Each page displays around five advertisements using ExoClick.</p>
+<h3>The money trail behind the uploads</h3>
+<p>One of the platform’s most prolific contributors is a user known as Mikey Kun. He holds the “Legendary” rank, has amassed 4,902 posts and ranks third-highest by post count on the site. Among those uploads are sexually explicit videos of Filipina women, including livestreamers on BIGO and material described as “leaks” and “scandals.”</p>
+<p>Most of Kun’s posts use shrinkme.io for monetization. A user who wants to download one of his videos clicks a shrinkme.io link, passes through a series of pop-up ads and then reaches the download link. For every 1,000 users that click, Kun gets a payout. In the Philippines, shrinkme.io’s official payout rate is US$4 per 1,000 views.</p>
+<p>The evidence says a scan found more than 200 posts with corresponding shrinkme.io links in just July and August 2026. In random sampling of those posts, the majority reached at least 1,000 views on the forum, with one post reaching at least 12,000 and a few reaching only 600 or 700. The story calculated that if 100 of those 200 posts reached at least 1,000 clicks, that would mean Kun earned $400, or roughly P24,000.</p>
+<p>Kun also directs audiences outside NSFWPH. Under the same identity, he maintains Facebook pages and Discord communities that point followers toward more content. His two Discord servers, Mikey’s Vault and The Nowhere, collectively host nearly 6,000 members. One advertises a VIP-only section offering “Exclusive” and “SHS” sets to paying members. His Facebook page has 4,400 followers. Access costs P500, according to a post on his Discord channel Mikey’s Vault, payable through GCash.</p>
+<h3>What the law, police and victims say</h3>
+<p>The evidence says Philippine law already prohibits much of what is happening. The Anti-Photo and Video Voyeurism Act of 2009 makes it illegal not only to record sexual acts or private parts without consent, but also to copy, distribute, publish, sell or broadcast such recordings without the written consent of everyone involved, even if the recording was initially consensual. The later Safe Spaces Act further strengthened protections by penalizing gender-based online harassment, including the non-consensual uploading or sharing of photos, audio or videos with sexual content.</p>
+<p>Lawyer Dana Batnag said consent has to be informed, specific and freely given. A person can consent to documentation but not to posting, and manipulation can mean consent was not freely given. She also said consent to take a photo or record a video does not mean consent to distribute, share or post it, and that a person can retract that right at any time.</p>
+<p>Respicio Law, as cited in the evidence, says a person who receives leaked private photos and forwards them may also face liability. “I only shared it” is not always a defense, and group chat members, page admins, channel operators and social media users should not repost, save, mock or circulate intimate images.</p>
+<p>Batnag said the administrators and owners of NSFWPH should be identified because the forum is trafficking sensitive personal information in the form of intimate photos and videos. She said the data subject has the right to know who looked at the picture, who gave it to the site, how it was obtained and to whom it was shared. She also said that even if the website is hosted in another country, its owners could still face consequences under the Data Privacy Act because it deals with information of Filipinos.</p>
+<p>Liza Garcia, executive director of the Foundation for Media Alternatives, said a platform like NSFWPH inflicts “a lot of harm” on victims, especially young women, including emotional harm, psychological harm, reputational harm and financial harm.</p>
+<p>For the Philippine National Police Anti-Cybercrime Group, NSFWPH sits inside a wider pattern of online sexual exploitation and non-consensual sharing of intimate material. From 2025 through August 2026, the unit conducted 138 operations involving cyber warrants, entrapment operations, arrest warrants and rescue operations, leading to the arrest of 160 people involved in violations of the Anti-Photo and Video Voyeurism Act. Authorities also rescued minors and apprehended seven children in conflict with the law.</p>
+<p>But going after the platform itself is harder.</p></div>
+  <div class="source-list"><a href="https://www.rappler.com/newsbreak/investigative/gamified-abuse-non-consensual-intimate-content-submissions" target="_blank" rel="noopener noreferrer" title="Rappler / Gamified abuse: How a PH forum rewards submissions of non-consensual intimate content">Rappler #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="axios,bbc,cnn,el_pais,guardian,nyt,scmp">
+  <summary>US military says it struck three Iranian tankers after American warships came under missile attack</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">U.S. forces struck three Iranian oil tankers on Saturday after ballistic missiles were fired at two U.S. Navy warships, deepening the ship-for-ship fight between Washington and Tehran and leaving the next retaliation, if any, unresolved.</p>
+<p>U.S. Central Command said a U.S. aircraft carrier and guided-missile destroyer evaded “multiple unprovoked Iranian attacks” before the American strike. CENTCOM said the attack “permanently disabled” the M/T Downy and the M/T Stark 1 and “completely destroyed” the M/T Kylo in the Gulf of Oman after the crew was warned to abandon ship. It also posted footage of the strikes on social media.</p>
+<h3>What the U.S. said it hit</h3>
+<p>CENTCOM said the three vessels were Iranian or Iran-linked oil tankers, with one struck off Kharg Island, another near Jask, and the unladen M/T Kylo destroyed in the Gulf of Oman. The U.S. military said the ships were part of a “multi-billion-dollar shadow network” that funds the Islamic Revolutionary Guard Corps and its regional proxies.</p>
+<p>Adm. Brad Cooper, head of CENTCOM, said, “Let the message to the IRGC be clear: If you shoot at two of our ships, we will impose an even higher economic cost — taking out three of yours.” Defense Secretary Pete Hegseth had already written on social media: “It’s simple: if Iran shoots at U.S. ships, we will destroy (and sink) their oil tankers. All they have to do is stop shooting at @USNavy.”</p>
+<p>CNN said no U.S. personnel were injured. The Guardian reported that the Pentagon said two of the tankers were “permanently disabled” and the third was destroyed, while the U.S. statement described the action as a response to attacks on the carrier and destroyer.</p>
+<h3>Iran’s account and the risk of another round</h3>
+<p>Iranian state media gave a different account of the fighting around the same time. Tasnim reported that four U.S. missiles struck a tanker near Kharg Island, and said the crew was being evacuated. IRIB later said there were no casualties in the U.S. strike on that tanker and that the crews aboard the two attacked tankers in the Gulf of Oman were taken to shore in lifeboats.</p>
+<p>Iran’s state media also said Tehran retaliated against six ships in the region: three oil tankers in the Strait of Hormuz and three vessels “affiliated” with the U.S. in other areas. IRIB said the IRGC warned other ships not to use “unauthorised” routes through the strait. The BBC said it could not immediately confirm Iran’s claims.</p>
+<p>The exchange came after about a month of relative calm and followed earlier strikes between the two sides. BBC and CNN said the latest attacks raised the risk of another retaliatory cycle. Iran’s foreign ministry called the U.S. strikes “illegal and aggressive” and an “overt threat to international peace and the security of commercial shipping,” while saying they were a “clear violation” of the UN Charter.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/09/05/us-iran-war-oil-tankers-warships" target="_blank" rel="noopener noreferrer" title="Axios / U.S. attacks 3 Iranian tankers in tit-for-tat response">Axios #1</a><a href="https://www.bbc.co.uk/news/articles/cj64rrne643o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / US and Iran trade retaliatory attacks on ships as conflict flares">BBC #1</a><a href="https://www.cnn.com/2026/09/05/middleeast/iran-us-tanker-kharg-intl" target="_blank" rel="noopener noreferrer" title="CNN / US military strikes three Iranian tankers in retaliation for missile attacks">CNN #1</a><a href="https://elpais.com/internacional/2026-09-05/varias-explosiones-cerca-de-la-isla-de-jarg-principal-terminal-del-crudo-de-teheran-y-blanco-de-las-amenazas-de-trump.html" target="_blank" rel="noopener noreferrer" title="El País / Estados Unidos bombardea tres petroleros iraníes, uno de ellos cerca de la estratégica isla de Jarg, en respuesta a ataques de Teherán">El Pais #1</a><a href="https://www.theguardian.com/world/2026/sep/05/us-military-iran-tankers" target="_blank" rel="noopener noreferrer" title="The Guardian / US military says it struck three Iranian tankers after American warships came under missile attack">Guardian #1</a><a href="https://www.nytimes.com/2026/09/05/world/middleeast/iran-us-kharg-oil-tanker-attack.html" target="_blank" rel="noopener noreferrer" title="The New York Times / U.S. Strikes Three Iranian ‘Shadow Network’ Oil Tankers, Military Says">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3366498/us-disables-or-destroys-3-iran-oil-tankers-after-warships-targeted" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US strikes 3 Iranian oil tankers after warships targeted, military says">SCMP #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Civilians among at least 60 killed in Yemen as ground fighting escalates</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Clashes between Yemen’s Saudi-backed government forces and the Iran-aligned Houthi rebel movement have killed more than 60 people, including civilians, as the Houthis pushed an offensive along Yemen’s western coast. On Saturday in the country’s south-west, 26 government troops and 31 Houthi fighters were killed during several hours of fighting, medical and military sources told AFP. A missile strike in Taiz also killed six civilians and injured seven others traveling by bus.</p>
+<p>The fighting was described as among the deadliest in years after the collapse in July of the 2022 ceasefire. On Friday, an AFP tally said 129 people were killed in fighting between rebel and government forces. The Houthis have been advancing in western Taiz and southern Hodeidah along the Red Sea coast, and a government military officer in Taiz said “the coming hours will be decisive” after Houthi positions were taken near the city a day earlier. They added that reinforcements had been arriving from Aden to try to stem the advance.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/sep/05/yemen-ground-fighting-escalates-houthi-rebels-government-forces" target="_blank" rel="noopener noreferrer" title="The Guardian / Civilians among at least 60 killed in Yemen as ground fighting escalates">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Gaza’s destroyed sewage system linked to ‘rare’ algae bloom shutting Israeli desalination plants</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Untreated sewage from Gaza may have helped trigger a huge algae bloom along Israel’s Mediterranean coast, temporarily shutting five of Israel’s six major desalination plants, including Ashkelon, Ashdod, Palmachim, Sorek A and Sorek B. The plants provide at least 65 percent of Israel’s drinking water, and Mekorot spokesperson Lior Gutman called it an “extremely rare event.” Israel’s water authority said the water sector remained stable as authorities increased supplies from the Sea of Galilee, groundwater wells and reservoirs while restricting some agricultural and public irrigation.</p>
+<p>Gaza’s wastewater treatment system has been heavily damaged during the war, with some 40,000 cubic metres of untreated wastewater reportedly flowing into the sea each day, according to figures cited by Ynet and Palestinian authorities. Avner Gross, head of Ben-Gurion University’s Climate Change Laboratory, said algae blooms need warm water and nutrients such as phosphorus and nitrogen, and cited satellite imagery showing similar algae-filled waters around Egypt’s Nile Delta. The exact cause of the Israeli bloom has not been definitively identified, and other possible contributors mentioned include warm Mediterranean waters, strong sunlight, currents and a recent storm.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/gaza-destroyed-sewage-system-linked-rare-algae-bloom-shutting-israel-desalination-plants" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Gaza’s destroyed sewage system linked to ‘rare’ algae bloom shutting Israeli desalination plants">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Cuban and Afghan immigrants deported from US under Trump arrive in Guyana</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Guyana says it received six people deported from the United States, after a group of Cuban and Afghan nationals arrived in the South American country on Saturday. Guyana’s Foreign Secretary Robert Persaud said they were deported over immigration issues, and he told The Associated Press that none had criminal backgrounds. He also said the US had not made any further requests at this time for non-citizen deportations to be sent to Guyana.</p>
+<p>Persaud said Guyana reached an agreement with the US after months of negotiations to accept deportees, and that the deal will last one year and does not amount to permanent resettlement. The removals come as the Trump administration expands so-called third-country deportations, a practice that sends foreign nationals to places outside their country of origin. Amnesty International estimates that more than 30 countries have entered into such agreements since Trump returned to office, including 15 in the Americas region.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/5/cuban-and-afghan-immigrants-deported-from-us-under-trump-arrive-in-guyana?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Cuban and Afghan immigrants deported from US under Trump arrive in Guyana">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>John Healey warns of tough first budget as Middle East war puts pressure on economy</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">John Healey said the conflict in Iran would probably have a strong influence on his first budget on 28 October, as he warned of a tough budget next month and said he wanted to leave the country with a robust “buffer against uncertainty” amid increasing global instability. Economists have predicted he may need to raise taxes or make significant cuts to protect the £24bn fiscal headroom that Rachel Reeves had after her March statement, while soaring global bond yields, which hit an 18-year high earlier this week, are also putting pressure on public finances.</p>
+<p>Healey said the Middle East conflict was “hitting inflation, it’s hitting growth, it’s hitting borrowing costs,” and said it was part of a more dangerous and uncertain world. He declined to say how much headroom he wanted, but said he and Andy Burnham were “in lockstep in our determination to meet the fiscal rules”. The newspaper said he planned to stick to Labour’s 2024 manifesto pledges not to raise taxes on “working people” such as income tax, national insurance or VAT, and was not expected to raise corporation tax. He has also faced criticism for not committing to raising defence spending to 3% of GDP by 2030.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/sep/05/john-healey-warns-of-tough-first-budget-as-middle-east-war-puts-pressure-on-economy" target="_blank" rel="noopener noreferrer" title="The Guardian / John Healey warns of tough first budget as Middle East war puts pressure on economy">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Grogi Restaurants Company, linked to the salmonella outbreak that sickened 135 doctors</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Por adjudicación del Hospital General de México Dr. Eduardo Liceaga (HGM), la empresa Restaurantes Grogi SA de CV obtuvo el contrato HGMEL-LPN-0876-2025 para ofrecer el servicio de comedor a los médicos residentes, entre los que se detectó el 31 de agosto un brote de gastroenteritis infecciosa aguda por salmonela que afectó a 135 especialistas, y que hasta este jueves, de acuerdo con datos del sector salud, reportaba a 41 de ellos bajo “vigilancia y tratamiento”.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/09/05/politica/005n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Grogi Restaurants Company, linked to the salmonella outbreak that sickened 135 doctors">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>‘Governments continue to fail’: Freedom Flotilla sails again, vowing to challenge Israel’s Gaza blockade</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Freedom Flotilla Coalition has announced a new international effort to break Israel’s blockade of Gaza, with ships sailing between European ports before a planned attempt to reach the Palestinian territory in October. The coalition said the latest mission would go ahead despite what it described as violence and torture against flotilla volunteers on previous attempts, including severe beatings, repeated tasering and sexual assault. It also accused Israel of blocking the entry of food, medicine and fuel into Gaza and said the humanitarian situation required renewed international action.</p>
+<p>Zohar Chamberlain Regev, a FFC steering committee member, said the flotilla was sailing again because “our governments continue to fail to uphold their obligations.” The coalition said two ships have already made the port-to-port trip: Handala II visited Norway, Sweden and Denmark in June and July, while the vessel Kate left Bristol earlier this month and has since stopped in Ireland, Germany and France. The flotilla is to call at Spain, Portugal and Italy before heading for Gaza, with human rights advocates, trade union activists, elected representatives, journalists, medical professionals and other Palestinian rights supporters on board.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/freedom-flotilla-sails-again-vows-challenge-israels-gaza-blockade" target="_blank" rel="noopener noreferrer" title="Middle East Eye / ‘Governments continue to fail’: Freedom Flotilla sails again, vowing to challenge Israel’s Gaza blockade">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>A resident in training is in grave condition, UNAM asserts; Health denies it</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">UNAM authorities said one medical resident affected by an outbreak of acute infectious gastroenteritis due to Salmonella at the Hospital General de México Dr. Eduardo Liceaga was in grave condition, while Health Secretariat sources said everyone was progressing favorably. Ana Carolina Sepúlveda Vildósola, director of UNAM’s Faculty of Medicine, said a hospital note reported 57 doctors hospitalized, with all but one stable, and that the number had risen from 41 in the official figures reported by SSA last Thursday.</p>
+<p>Sepúlveda Vildósola also said the hospital director, Alma Rosa Sánchez, did not inform UNAM when the residents fell ill on August 31 and that the university learned of the episode through social networks. She said a faculty commission later went to see the affected doctors, and that by Friday they were told a resident had a more complicated condition and was under closer monitoring. She added that the residents would be allowed to return to their activities no later than Monday the 7th, once fully recovered. UNAM also said at least 131 of the 135 doctors who presented symptoms were affiliated with the university.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/09/05/politica/005n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / A resident in training is in grave condition, UNAM asserts; Health denies it">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="agencia_brasil,folha">
+  <summary>Deltan attaches fiscal secrecy data of Zanin to Electoral Justice, and minister asks for accountability</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Cristiano Zanin asked the Electoral Court in Paraná to hold accountable the people who exposed his fiscal and bank secrecy data, after documents from a 2019 breach were attached to Deltan Dallagnol’s Senate candidacy filing and made public.</p>
+<p>In a letter sent on Saturday, the Supreme Federal Court minister asked the president of the Paraná electoral court, judge Luciano Carrasco Falavinha Souza, for responsibility for those involved, “including in the criminal sphere.” He also notified the presidencies of the Supreme Federal Court and the Superior Electoral Court about the case.</p>
+<p>Zanin said the exposure followed reporting by Metrópoles, according to which his data were disclosed by Dallagnol’s defense, which attached the material to challenge an objection to the candidacy. The documents had been obtained in 2019, when Dallagnol headed Lava Jato in Paraná and Zanin was a lawyer for Luiz Inácio Lula da Silva, now president.</p>
+<p>The secrecy breach had been ordered by then judge Marcelo Bretas, who was responsible for the Lava Jato branch in Rio de Janeiro. At that time, the fiscal and bank secrecy of Zanin’s wife, lawyer Valeska Teixeira Zanin Martins, was also breached under the stated aim of investigating alleged misuse of Sistema S funds, and those records were exposed as well.</p>
+<p>Dallagnol’s defense said the material about Zanin appeared in complaints Zanin himself had filed against the former prosecutor at the National Council of the Public Prosecutor’s Office. The lawyers said those proceedings were under judicial secrecy and argued that presenting the files in full was necessary to show the regularity of Dallagnol’s candidacy and allow the Electoral Justice to assess it “in a transparent and careful way.”</p>
+<p>The same records were later annulled by federal courts for lack of evidence, and the complaints against Dallagnol at the CNMP did not result in punishment and were archived. After the exposure became public, the reporting says the rapporteur for Dallagnol’s candidacy, judge Vanessa Jamus Marchi, imposed secrecy again on the documents. The TRE-PR also reportedly sent the matter to the Public Prosecutor’s Office and gave Dallagnol 24 hours to explain what happened.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/dallagnol-expoe-sigilo-fiscal-de-zanin-que-pede-responsabilizacao" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Dallagnol releases Zanin’s tax secrecy, who requests accountability">AB #1</a><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/09/deltan-anexa-dados-de-sigilo-fiscal-de-zanin-na-justica-eleitoral-e-ministro-pede-responsabilizacao.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / Deltan attaches fiscal secrecy data of Zanin to Electoral Justice, and minister asks for accountability">Folha de S.Paulo #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="scmp">
+  <summary>US ambassador calls violent Israeli settlers ‘terrorists’ after weeks of West Bank unrest</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The United States ambassador to Israel, Mike Huckabee, condemned Israeli settler violence in the occupied West Bank on Saturday, calling it an “act of terror” while visiting Palestinian American residents in Turmus Ayya. He described incidents including settlers putting up their own flags, burning cars, torching mosques, entering homes, and painting graffiti, saying such conduct was “a criminal act” that “extends beyond” that and is “an act of terror.” Huckabee said the village had reported frequent attacks over the past year, and he told residents he was addressing US citizens living in the area.</p>
+<p>Huckabee also said the violence had to be addressed by the host government, while noting the US embassy cannot investigate criminal activity. The UN humanitarian office has said such attacks have surged since the war in Gaza began with the Hamas-led attack on southern Israel on October 7, 2023. Huckabee had used the term “terrorists” last month after unrest in Qusra, and days later residents of Bazariya said settlers burned a mosque and left graffiti reading “Huckabee regards from the terrorists” in Hebrew. A week ago, Israeli Prime Minister Benjamin Netanyahu condemned “a handful of rioters,” and the foreign ministry called the settlers’ actions “a disgrace.”</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/middle-east/article/3366501/us-ambassador-calls-violent-israeli-settlers-terrorists-after-weeks-west-bank-unrest" target="_blank" rel="noopener noreferrer" title="South China Morning Post / US ambassador calls violent Israeli settlers ‘terrorists’ after weeks of West Bank unrest">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Abel Barrera Hernández: The Cracks in the Master Plan</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">general_news</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Abel Barrera Hernández pressed for “más seguridad,” asking for it “con desesperación,” in a brief statement that frames insecurity as the central problem. The line appears as part of the piece titled *The Cracks in the Master Plan* and presents Barrera Hernández as reacting directly to a painful reality rather than describing a detailed plan or policy.</p>
+<p>He also said, “El Plan Maestro no debe maquillar esta dolorosa realidad,” making the point that the master plan should not cover up what he sees as the underlying situation. The evidence provided does not include more details about the plan itself, only that Barrera Hernández linked his call for greater security to criticism of any attempt to soften or obscure the reality he was describing.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/09/05/politica/012a1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Abel Barrera Hernández: The Cracks in the Master Plan">LJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Suspect in Gizri acid attack case arrested in Punjab: police</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A suspect in the Upper Gizri acid attack case was arrested in Punjab after allegedly attacking a woman with acid in Karachi recently, South Deputy Inspector General Syed Asad Raza said on Saturday. Police said the suspect fled to his native Rajanpur and was apprehended there with the help of Sindh Police. The victim, 35, suffered burns on Thursday and was moved to the Burns Centre at Dr Ruth Pfau Civil Hospital Karachi in an Edhi ambulance.</p>
+<p>Police Surgeon Dr Summaiya Syed earlier said the woman suffered burns over 15 per cent of her body, affecting her face, neck and abdomen. Police also said she worked at a bungalow in Clifton and was returning home when the attack happened. DIG Raza said he had written to the Karachi additional inspector general of police to seek permission to send a police team to Rajanpur and bring the suspect back to Karachi.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2027717/suspect-in-gizri-acid-attack-case-arrested-in-punjab-police" target="_blank" rel="noopener noreferrer" title="Dawn / Suspect in Gizri acid attack case arrested in Punjab: police">Dawn #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Colombian government reports three killed in rebel attack on military post</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least three soldiers were killed and several more injured after an attack on a military compound in Ocaña, in the area bordering Venezuela, Colombian authorities said. The Colombian army said on Saturday that the rebel National Liberation Army (ELN) carried out the attack the night before in Norte de Santander. Authorities said drones dropped explosives onto the compound before fighting took place inside the facility. Two soldiers were killed in the clashes, and a third died after receiving medical attention; four were injured.</p>
+<p>President Abelardo de la Espriella condemned the attack in a statement on social media, saying: “To the ELN I say with absolute clarity: for every police officer or soldier you kill, I will bring down on you the full weight and legitimate force of the State.” AFP reported, citing an unnamed security official, that at least 20 drones loaded with explosives were used in the attack. The assault took place in the northeastern Catatumbo region, where the ELN is based.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/9/5/colombian-government-reports-three-killed-in-rebel-attack-on-military-post?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Colombian government reports three killed in rebel attack on military post">AJ #1</a></div>
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>Rangpur killings: Charge sheet within days</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Four members of a family were killed in Rangpur city, and Disaster Management and Relief Minister Asadul Habib Dulu said the actual perpetrators would be brought to justice through a fair investigation. He said the case could reach the charge-sheet stage within a few days, during a visit to Rangpur Medical College Hospital around noon. Police recovered the bodies of former Rangpur Zilla School teacher Ganapati Chakraborty, 65, his wife Pritilata Chakraborty, 50, daughter Agami Chakraborty Prarthi, 25, and son Priyam Chakraborty, 12, from their house in the Daspara (Machhuapara) area of Rangpur city around 11:00pm on August 22.</p>
+<p>Jinnat Ali, officer-in-charge of Rangpur Metropolitan DB and the investigating officer, said the Criminal Investigation Department had collected 35 pieces of evidence from the crime scene and sent them to the CID forensic laboratory on Thursday for DNA testing. Police said the four were strangled to death on August 21. Two youths from the same area, Siddhartha Das, 19, and Mugdha Das, 23, were arrested on August 23 in connection with the killings.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/crime-justice/news/rangpur-killings-charge-sheet-within-days-4265801" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Rangpur killings: Charge sheet within days">TDSB #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en,xinhua_en">
+  <summary>Letter from Gyirong: A flag, a ruin and a promise to bring them home</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gyirong Port on the China-Nepal border is still a site of loss and search after a mudslide destroyed roads, buildings and power supplies, leaving 31 confirmed dead and 531 missing according to the local command center, while rescuers work around blocked routes and unstable ground.</p>
+<p>The mudslide struck Gyirong Port in southwest China’s Xizang Autonomous Region on Aug. 26. Xinhua described a Chinese national flag standing above the ruins on Sept. 5, rising from about four meters of debris-flow deposits, with flowers at the base of the pole and the joint inspection building gone. The disaster also destroyed a section of the G216 highway leading to the port, sharply complicating the response.</p>
+<h3>Rescue across blocked routes</h3>
+<p>The response has moved by air, water and foot. Officials said China mobilized helicopters, speedboats and rubber rafts to carry rescuers to the port, while ground teams spent 12 hours traversing steep mountain roads to reach the area. Xinhua also said rescue boats searched the river, firefighters rappelled down from a village on the east side, and helicopters carried rescuers, equipment and supplies into the valley.</p>
+<p>The scale of the deployment has been large. Some 2,300 rescue personnel, more than 400 search-and-rescue vehicles, over 8,000 sets of professional equipment, more than 800 drone flights and 24 helicopter flights have been sent to the area. As of Wednesday, 172 experts and technical personnel from meteorological, natural resources, water resources and emergency management authorities, together with researchers from the Chinese Academy of Sciences and the China Academy of Safety Science and Technology, were operating at the site to watch for secondary disasters.</p>
+<p>Officials said inspections along the G216 rescue route had identified 58 potential geological disaster sites. They also completed inspections and risk assessments in three affected villages, selected sites for two temporary emergency shelters and guided the construction of emergency evacuation facilities.</p>
+<h3>What rescuers have found</h3>
+<p>Rescuers have recovered 987 pieces of personal belongings from the area. In Xinhua’s account, the items included a Spider-Man T-shirt covered in mud and a damaged stuffed bunny. They were cleaned, recorded and preserved.</p>
+<p>The same account described how the search continued when heavy machinery approached places where victims were believed to be buried. Operators slowed down, hand-tool teams moved forward carefully, and before digging they poured a cup of liquor onto the ground and said, “We’re here to take you home.”</p>
+<p>For families waiting for news, the uncertainty has been immediate and personal. A relative of one missing person wrote online: “She only sent one message: ‘I think there has been an earthquake.’ We never heard from her again.” At a temporary shelter in a hotel in Gyirong Town, dozens of evacuees from Laojiang and Risur villages were staying, and some elderly residents had struggled to sleep for days after the disaster.</p>
+<p>Medical workers there used Horme therapy, a traditional Tibetan treatment similar to moxibustion, to help ease anxiety and improve sleep. A doctor from Xigaze Tibetan Hospital, Doje Cering, said: “We can only rest easy when they can sleep soundly.”</p>
+<h3>The hazard that still matters</h3>
+<p>In a related Xinhua report, the region’s emergency management department said the barrier lake above the core area of the mudslide-hit Gyirong Port had been drained, the river channel had returned to normal flow and the associated hazard had been largely eliminated.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0905/c312369-20496512.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / 31 dead, 531 missing after mudslide hits border port in China&#x27;s Xizang">PDE #1</a><a href="https://english.news.cn/20260905/2ada816f2e954ca28710856af531b213/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Letter from Gyirong: A flag, a ruin and a promise to bring them home">XNAE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China&#x27;s long-term care insurance covers over 320 million people</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s long-term care insurance system now covers more than 320 million people, and its cumulative spending has reached 114.2 billion yuan (16.85 billion U.S. dollars), a health insurance official said at a State Council Information Office news conference in Beijing on Sept. 4. Wang Wenjun, deputy head of the National Healthcare Security Administration, said more than 4.6 million people have received care services under the program. He added that 22 provincial-level regions have issued implementation plans, and the scheme has been established in 121 localities, a figure expected to rise to 247 nationwide by the end of this year.</p>
+<p>The program provides care services or financial support to people who have partially or completely lost the ability to care for themselves, helping cover basic daily needs and related medical care. It is also described as a priority under China’s five-year plan for improving medical security as the country responds to a rapidly aging population. China said it aims to have the system in place nationwide by the end of 2028.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/0905/c312369-20496507.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China&#x27;s long-term care insurance covers over 320 million people">PDE #1</a></div>
+</details>
+
+
+<details class="story" data-section="china_domestic" data-sources="xinhua_en">
+  <summary>China Focus: China moves to create phone-free classrooms, help minors navigate digital age</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Chongqing, a local law on minor crime prevention that took effect on Sept. 1 turned school phone bans into legal rules, barring students from bringing phones, tablets and other smart devices into school. For Ye Hui, a parent in southwest China’s Chongqing municipality, the change brought relief after a summer of battling her 10-year-old son over a tablet, and she said teachers would be “more persuasive” now that the ban was no longer just a school policy. Official statistics showed China has close to 200 million underage internet users, with over 97 percent of minors having online access.</p>
+<p>Wang Peng, a deputy research fellow at the Beijing Academy of Social Sciences, said minors’ attention being eroded by algorithms is a problem faced by countries across the world in the digital age, and that putting a mobile device school ban into law gives schools legal support. Chongqing is the latest place to elevate a phone ban from policy to legislation, following similar legal bans in Guangzhou, Zhengzhou and places across Fujian Province. Jiang Yongsong, a supervisor from the 29th Middle School, said it is not a one-size-fits-all ban and that parents can file a written application if students need phones in school.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260905/7bd28c1729b2482a912617242ca5b797/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / China Focus: China moves to create phone-free classrooms, help minors navigate digital age">XNAE #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>The Government Takes Control of Ceuta Port to relocate more than 1,000 migrants amid renewed resistance from Vivas</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Spanish government has taken control of Ceuta port to move more than 1,000 migrants into a temporary tent site after the port board blocked the plan, triggering a confrontation with Juan Jesús Vivas’s city government over where the relocation can go.</p>
+<p>On Friday, the port board voted against placing the migrants on two unused parcels in the port, even though the location had already been agreed with Vivas, Ceuta’s president, in earlier meetings with the government, the command and the National Security Council. The decision interrupted work that had already started, and port officials halted it on Friday.</p>
+<h3>A ministerial order overrides the local veto</h3>
+<p>Transport Minister Óscar Puente responded by signing an order under article 73.3 of the Ports Law to take control of the port and authorize the Ministry of Inclusion to install the tents. The order allows the government to use 16,000 square meters of port public domain in the Poniente Expansion, Phase I, in the port’s service area.</p>
+<p>The reported aim is to create a temporary location for the migrants in the area farthest from the population. The government says the move is needed so the work can proceed without further blockage.</p>
+<h3>Why the government says it had to step in</h3>
+<p>The port authority’s report acknowledged that the temporary occupancy could raise risks tied to critical infrastructure, sensitive installations and port operations, but said there were “general interest reasons” to grant the authorization, as long as the necessary measures are taken to preserve security and normal operation.</p>
+<p>The port’s refusal cited legal and practical objections. It argued that the port cannot host “residences or living quarters,” while the government says the installation is a temporary tent site, not a building. The port report also said the parcels are connected to one of the city’s main commercial hubs, border a kindergarten, a primary school and a sports field used by hundreds of minors, and are near 42,000 tons of fuel, with a risk of sabotage.</p>
+<p>According to the government’s account, those concerns were already known when Vivas accepted the location. The plan was said to have been agreed in advance, including during visits by representatives of both governments before the Council of Ministers’ decree. Vivas also reportedly endorsed it in two official meetings with the government, the command and the National Security Council.</p>
+<h3>A break with a consensus model</h3>
+<p>The government describes the decision as unprecedented in the handling of the crisis, which it says had always been managed by consensus. It now says it can no longer accept further delays or blockages from the city. The tension is sharpened by the fact that the port is controlled by the city of Ceuta as an autonomous community, and the board that rejected the plan is chaired by Juan Manuel Doncel, who was Vivas’s chief of staff and later Minister of Development.</p>
+<p>Puente’s move is described as similar to what was done in the Canary Islands during the hantavirus crisis, when there was also opposition from the autonomous community. In this case, the government says the order resolves the blockage and lets the relocation work go ahead.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-09-05/el-gobierno-toma-el-control-del-puerto-de-ceuta-para-ubicar-a-mas-de-1000-inmigrantes-ante-la-resistencia-de-vivas.html" target="_blank" rel="noopener noreferrer" title="El País / The Government Takes Control of Ceuta Port to relocate more than 1,000 migrants amid renewed resistance from Vivas">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Surviving a police officer convicted of abuse: “When I told him to leave my house, the greatest ordeal of my life began”</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 53-year-old psychologist says leaving her husband, a local police subinspector convicted of habitual violence and psychological abuse, unleashed years of surveillance, intimidation and court battles that still leave her trying to understand how the abuse continued despite a protective order.</p>
+<p>Maribel divorced from Víctor G. B. in 2022, but she says the break only began after she told him to leave her house. “I told him to gather his things and leave my house… Then began the greatest ordeal of my life,” she says. The couple married in 1992, and Maribel says the relationship was “always complicated, though not always bad.” It started to sour, she says, after the birth of their second child.</p>
+<p>She says she adapted her life around Víctor’s work after he began working as a local police officer in Motril, in Granada, and even took a job in a nursing home in the coastal city so he would not feel threatened. Almost 20 years later, when she wanted to work in the capital and continue her education, she says he “began to shoot up/accelerate.” In 2017, Maribel defended her doctoral thesis and earned a cum laude distinction. Instead of congratulating her, she says, he told her, “You’ve gotten your way.”</p>
+<p>According to the sentence, her account of the relationship turned into one of escalating “control, jealousy and contempt towards her person.” Maribel says she prepared a divorce settlement, but Víctor told her he would get treatment and change, so she agreed not to formalize the divorce yet. She insisted on liquidating the community assets first, and says she protected what was hers. Looking back, she says she now regrets not moving faster.</p>
+<h3>The turning point in 2022</h3>
+<p>Maribel places the decisive break in 2022, when she told him to leave her home. Víctor left in September, and she says that was when the ordeal she describes for herself and her two daughters truly began. The sentence that sent him to prison in July documents what happened next.</p>
+<p>In the three years between her first report, in July 2023, and his entry into prison in Granada, the abuser used what the sentence describes as a full technological deployment, taking advantage of his police knowledge to monitor and harass her. It also says he repeatedly breached the judge’s protective order.</p>
+<p>Maribel says he kept entering her home even after she changed the locks, and she believes he stole or moved objects to let her know he was still there. She installed surveillance cameras, but says he neutralized them by cutting the power. When she realized the cameras were off, she would rush home, only to find that he had also installed a tracker in her car, allowing him to know where she was at all times.</p>
+<p>She says he followed her on several trips for no reason, and she recalls one episode in which a man dressed like him was sent to intimidate her. The sentence also says that during cohabitation he showed aggressive behavior, including breaking furniture and throwing objects, and that he was hostile toward his daughters. It further records that the eldest daughter witnessed verbal and psychological violence against her mother from childhood, while the younger daughter told the judge she had been left “without food, phone, cold and isolated from friends” during a weekend with her father.</p>
+<h3>Living with the aftereffects</h3>
+<p>Maribel says the case that led to his prison sentence was one of several legal proceedings between them. She also says the stress and danger are still present, and that she has not yet fully recovered. She has described the path to safety as difficult, and says her profession as a psychologist helped her keep going even as the legal process hurt her.</p>
+<p>She also says she was disappointed by some judicial authorities. At the same time, she praises the Civil Guard, the National Police and the government subdelegation in the province. Beyond her own case, she argues that victims of gender-based violence should not be treated as if they all fit the same profile.</p></div>
+  <div class="source-list"><a href="https://elpais.com/sociedad/2026-09-05/sobrevivir-a-un-policia-condenado-por-maltrato-cuando-le-dije-que-saliera-de-mi-casa-empezo-el-mayor-calvario-de-mi-vida.html" target="_blank" rel="noopener noreferrer" title="El País / Surviving a police officer convicted of abuse: “When I told him to leave my house, the greatest ordeal of my life began”">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="cna">
+  <summary>‘Worried’ and ‘confused’: Sarawakians grapple with worst haze since 2019</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sarawak is dealing with its worst haze since 2019, and residents from pregnant patients to traders are trying to work out how to live with air that has turned hazardous, disrupted school and business routines, and left some people unclear about what the emergency rules mean.</p>
+<p>In Kuching, 39-year-old Azie Nurazrin Aziz said the haze has made daily life feel “restricted”. She is in her third trimester, has asthma and runs her own restaurant, while her doctors have classified her pregnancy as high-risk. With air quality worsening, she now plans errands carefully so she spends less time outside. “I have to divide my errands so I am not too exposed outside, it’s suffocating,” she told CNA. “I am worried, I am anxious, what if I get an asthma attack? It’s quite dangerous for me, I have to be really careful.”</p>
+<p>Among Malaysian states, Sarawak has been the worst hit by transboundary haze linked to forest fires in neighbouring Indonesia. Parts of the state have recorded deteriorating air quality over the past week, and Serian became the first district to declare a haze-related state of emergency this year on Friday after its Air Pollutant Index exceeded 500. Under Malaysia’s API scale, readings above 400 are classified as “very hazardous”.</p>
+<p>The emergency has not removed uncertainty on the ground. Some Serian residents told CNA they were still confused about how the restrictions would apply. “Many of us are confused. We have still not been properly told what can and cannot be done during this emergency,” 26-year-old Yasmina R.C Holland said. Sarawak Deputy Premier Douglas Uggah Embas said the emergency area would be confined to a 20km radius in Serian and would not affect other divisions. He also said the declaration was not a lockdown, but was intended to keep the public at home. Still, residents said they were unsure how the rules would affect commuting, markets and roadside vendors.</p>
+<p>The haze has already disrupted daily life across Sarawak. Outdoor events, including carnivals, community runs and sporting activities, have been cancelled, poor visibility has disrupted some flights, and 647 schools across 12 districts are set to close for five days from Sep 7 to Sep 11. Businesses say takings have fallen as residents stay indoors, clinics are seeing more patients with respiratory symptoms, and masks have sold out at many pharmacies.</p>
+<p>MetMalaysia told CNA that this is Sarawak’s “worst” haze episode since 2019, when the API reached 405. The department said haze conditions could persist for at least another week because of hot weather, lack of rainfall and the southwest monsoon, which it said carries haze from hotspots towards the west and south of Sarawak.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/sarawak-haze-kuching-serian-businesses-state-emergency-forest-fires-6364401" target="_blank" rel="noopener noreferrer" title="CNA / ‘Worried’ and ‘confused’: Sarawakians grapple with worst haze since 2019">CNA #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Jenrick to promise £15,000 income tax threshold</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Robert Jenrick is set to unveil a £15,000 income tax threshold pledge at Reform UK’s conference in Birmingham today, with the party’s treasury spokesman expected to tell the final day of the event that he would raise the tax-free personal allowance within the first 100 days of taking office. The threshold has been £12,570 since 2021 and is due to remain there until 2031. Reform said the plan would save the average taxpayer £500 a year and take 2.9 million people out of income tax altogether, at a cost of £17.7 billion in the first year.</p>
+<p>Jenrick is also expected to use the speech to set out about £80 billion in spending cuts, mainly through slashing the welfare budget. The party has previously said it wants to increase the personal allowance to £20,000, and Jenrick is expected to say he would reach that figure “step-by-step” when it is affordable. He is also expected to say: “The hard choice for Burnham and for us is exactly the same. It’s either welfare waste, foreign aid and migrants — or the British worker. We choose the worker.”</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/live/2026/sep/05/nigel-farage-robert-jenrick-reform-uk-politics-latest-news-updates?page=with%3A6a9be71f8f0834a1091dff98#6a9be71f8f0834a1091dff98" target="_blank" rel="noopener noreferrer" title="The Guardian / Jenrick to promise £15,000 income tax threshold">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,scmp">
+  <summary>Egypt sentences TV presenter, 11 others to death in drugs case</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An Egyptian court sentenced television presenter Sarah Khalifa and 11 others to death in a drugs case, official media reported on Saturday. Khalifa, 39, is best known for her TV programme *Mission Impossible*, which dealt with security and crime issues. The case involved accusations of manufacturing and trafficking narcotics, and state-linked Al-Ahram said the Cairo court sentenced “Khalifa and 11 other defendants to death by hanging” on charges including forming an organised criminal gang, procuring materials used to make narcotics, and possessing unlicensed firearms and ammunition.</p>
+<p>The verdict came after the court consulted Egypt’s Grand Mufti for a religious opinion, a step required in capital cases, and it is subject to appeal. Al-Ahram also reported that authorities seized more than 750kg (1,653 pounds) of narcotics and raw materials, and found two flats used as laboratories, along with unlicensed firearms and ammunition.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c5y7gk9knnlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / TV presenter among 11 sentenced to death in Egypt drugs case">BBC #1</a><a href="https://www.scmp.com/news/world/africa/article/3366504/egypt-sentences-tv-presenter-11-others-death-drugs-case" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Egypt sentences TV presenter, 11 others to death in drugs case">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Miliband calls Gaza situation ‘horrific’, says UK must act more decisively</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">British foreign secretary Ed Miliband said the situation unfolding in Gaza was “horrific” and that the UK government needed to act “more decisively than we have”. In an Instagram video released by the Foreign, Commonwealth and Development Office, he said he had just come from a meeting about Gaza with people “who’ve been there and are there on the ground,” and cited stories of medicines being blocked and children dying while waiting for vital life-saving treatment. He added that, as the prime minister had said, the UK government had to “act more decisively than we have”.</p>
+<p>On Tuesday, Miliband told British MPs that his government plans to impose a “comprehensive” package of sanctions in the coming weeks. He also said Israel’s new plan in area E1 “risks making a Palestinian state unviable” and that the government was looking at its wider economic relationship with the occupied territories. Miliband said the government did not want British companies “financing, constructing, or advertising new settlements” and condemned what he called “appalling settler terrorism” in the occupied West Bank.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/miliband-says-gaza-situation-horrific-uk-must-act-more-decisively" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Miliband calls Gaza situation ‘horrific’, says UK must act more decisively">MEE #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,cnn,guardian,scmp">
+  <summary>Black-clad protesters in balaclavas block road at port of Dover in Kent</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Dozens of people dressed in black and wearing balaclavas blocked roads at the Port of Dover on Saturday, stopping traffic in and out of the ferry hub and leaving open questions over who organised the protest and how it was able to unfold.</p>
+<p>Hundreds of protesters were heard chanting “stop the boats” as they stood across roads near the port, with video showing masked demonstrators and lorries held up in traffic. The Port of Dover said all traffic in and out was stopped because of an “ongoing public order incident,” while the government condemned “the behaviour in Dover and the travel disruption it has caused.”</p>
+<p>Kent Police said officers were “engaging with the protesters” and later moved the crowd from the port to Dover Priory railway station at about 11:30 BST, saying all involved had dispersed by 12:00. The force made no arrests. By lunchtime, the Port of Dover said operations had returned to normal and routes in and out of the town had reopened.</p>
+<p>The disruption drew criticism from local and national politicians. Dover and Deal MP Mike Tapp said the incident, which he said started at about 07:00, caused “absolutely awful disruption” for residents. He also questioned whether police had known about it in advance. Paul King, the Reform UK councillor for Dover West, said he had been told it was a “stop the boats protest.”</p>
+<h3>Questions over who was behind it</h3>
+<p>The demonstrators did not speak to the media when approached, although one said “send them back” and another said “stop the boats.” Chris Vinson, the Conservative group leader on Dover District Council, said the protest appeared to be related to “illegal migration,” while also saying he was not aware of any violence.</p>
+<p>Kent Police has not yet commented on who was behind the demonstration. Anti-hate organisation Hope Not Hate claims the Patriot Platform network arranged it, saying the group began meeting in July and has brought together members of anti-migrant groups from around the country.</p>
+<p>Far-right activists Tommy Robinson and Danny Thomas both posted about the protest on X, praising those involved. Thomas wrote that “the overwhelming majority of the women and local people we spoke to were thankful that people were actually doing something.”</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cy8znyzgkjjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Disruption at Port of Dover as masked &#x27;stop the boats&#x27; protesters block roads">BBC #1</a><a href="https://www.cnn.com/2026/09/05/europe/england-dover-port-protest-intl-gbr" target="_blank" rel="noopener noreferrer" title="CNN / Masked men block traffic to UK’s Port of Dover in apparent anti-immigrant protest">CNN #1</a><a href="https://www.theguardian.com/politics/live/2026/sep/05/nigel-farage-robert-jenrick-reform-uk-politics-latest-news-updates?page=with%3A6a9bea578f0834a1091dffa1#6a9bea578f0834a1091dffa1" target="_blank" rel="noopener noreferrer" title="The Guardian / Nigel farage robert jenrick reform uk politics latest news updates">Guardian #1</a><a href="https://www.theguardian.com/uk-news/2026/sep/05/black-clad-protesters-balaclavas-block-road-port-of-dover-kent" target="_blank" rel="noopener noreferrer" title="The Guardian / Black-clad protesters in balaclavas block road at port of Dover in Kent">Guardian #2</a><a href="https://www.scmp.com/news/world/europe/article/3366495/uk-government-condemns-masked-anti-immigrant-protesters-blocking-dover-port" target="_blank" rel="noopener noreferrer" title="South China Morning Post / UK government condemns masked anti-immigrant protesters blocking Dover port">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Ukraine war: how escalating attacks are upending lives in Kyiv</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Escalating attacks are disrupting daily life in Kyiv, where commuters have been stranded, children rushed underground during the school day, festivals cancelled, and walks interrupted by booming air defences. Near-constant drone attacks are now the stark reality in the city, and daily life is likely to get harder. Kyiv has already lived through many traumas since Russia’s full-scale invasion in February 2022; after the initial shock of war, residents adapted and managed to impose a semblance of normality.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/russia-central-asia/article/3366478/ukraine-war-how-escalating-attacks-are-upending-lives-kyiv" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Ukraine war: how escalating attacks are upending lives in Kyiv">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Argentina threatens to sanction oil projects around Falkland Islands</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Argentina said on Friday that it had opened proceedings to “investigate and penalise” 45 entities linked to oil exploration and exploitation around the Falkland Islands, after President Javier Milei said the “winds of change” were favourable to Argentina’s claim to the archipelago. The statement did not name the entities involved. Argentine media said they included British, US, Canadian, Israeli, Danish and Dutch companies. The Falklands, administered by Britain, are about 600km east of Argentina’s southernmost tip, and Britain and Argentina fought a 10-week war over the islands in 1982.</p>
+<p>Milei had renewed Argentina’s claim in a speech on Thursday and announced tougher sanctions on companies linked to oil projects nearby. He said, “There are winds of change in the world that are favourable to our claim.” On Saturday afternoon, Schlumberger, Halliburton and Baker Hughes said they do not and will not work on hydrocarbon projects near the islands. Later, Milei shared a news item about those statements on social media, along with an acronym that translates to “everything is going according to plan.”</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/americas/article/3366511/argentina-threatens-sanction-oil-projects-around-falkland-islands" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Argentina threatens to sanction oil projects around Falkland Islands">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Ceuta port residents mobilize against works for a new migrant relocation: &#x27;We don’t want them here, period&#x27;</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Residents in Ceuta’s port have mobilized against construction works for a new migrant relocation site, with excavators, trucks, cranes and about 30 workers already active in two public-owned areas. One worker said, “At this pace, by Monday it will be ready,” referring to white tents that will hold 1,000 people. The smaller site is next to the food bank, and both are in the port’s industrial area, near logistics buildings and fuel tanks for ships.</p>
+<p>Raul Fernandez, president of the Neighborhoods of the Port association, said residents reject the project because “we don’t want them here,” arguing that shops and schools are nearby and that the facility will bring “many problems.” Residents walked the docks in protest during the week, and about a hundred people gathered at the Poniente dock later in the day, chanting against the installation. Fernandez said neighborhood groups met with the City on Friday, but were told the government would not stop the construction. The Port Board of Directors had already rejected the project by 11 votes to 4, according to the evidence.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-09-05/los-vecinos-del-puerto-de-ceuta-se-movilizan-contra-las-obras-para-una-nueva-ubicacion-de-los-migrantes-no-los-queremos-aqui-punto.html" target="_blank" rel="noopener noreferrer" title="El País / Ceuta port residents mobilize against works for a new migrant relocation: &#x27;We don’t want them here, period&#x27;">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Migration crisis stirs elections to which the people had turned away in Morocco</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Morocco’s approaching legislative elections have been pulled back into public debate by the Ceuta migration crisis, as sovereignty claims over Ceuta and Melilla surface again even though many citizens had been turning away from the vote and turnout is still expected to be weak.</p>
+<p>Four months ago, there were 12 million electors in the voluntary registration census, or 57% of those eligible. Five years ago, only half of the 17.5 million voters were eligible to vote, and current polls suggest turnout could fall to about a third of those registered. The pre-campaign phase has already been shaped by the issue, even though it does not officially begin until Friday and parties are still closing their lists.</p>
+<h3>Ceuta and Melilla back in the campaign</h3>
+<p>El País says the sovereignty question over the two Spanish autonomous cities has stirred political debate again. Up to three ministers opened what it described as “the Pandora’s box” of ignoring “the mutual commitment to avoid unilateral sovereignty claims” that Rabat and Madrid agreed in 2022, after Spain shifted its position on the Sahara.</p>
+<p>A week ago, Nizar Baraka, Morocco’s minister of Public Equipment and Water and leader of Istiqlal, warned that Morocco “will not cede an inch of its national territory” in reference to Ceuta and Melilla. He also stressed “the importance of the partnership and strategic with Spain,” which Morocco sees as its main trading partner and second-largest investor.</p>
+<p>Earlier, Ahmed Tufiq, the Minister of Islamic Affairs, alluded to Morocco’s historic claim over Ceuta and Melilla at a religious event presided over by the king. He referred to Ceuta natives who predated Spanish sovereignty in 1580 and to their “sacred struggle to liberate the occupied cities.”</p>
+<p>The most visible government voice for negotiation over sovereignty has been Justice Minister Abdelatif Uahbi, a member of the Authenticity and Modernity Party, which was founded in 2008 by Fuad Ali el Himma, now a royal adviser. In interviews, Uahbi has defended Morocco’s “historic right” to the two Spanish enclaves.</p>
+<p>Spain has pushed back. After Uahbi’s latest statements, the Foreign Ministry said on August 21 that Ceuta and Melilla “form part of Spain’s territorial integrity and sovereignty, internationally recognized, and are likewise part of the EU territory.” Prime Minister Pedro Sánchez also said the Deputy Head of the Moroccan Embassy in Madrid was summoned to present a formal protest.</p></div>
+  <div class="source-list"><a href="https://elpais.com/internacional/2026-09-05/la-crisis-migratoria-agita-unas-elecciones-a-las-que-el-pueblo-daba-la-espalda-en-marruecos.html" target="_blank" rel="noopener noreferrer" title="El País / Migration crisis stirs elections to which the people had turned away in Morocco">El Pais #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc">
+  <summary>Trump&#x27;s response is key as Argentina&#x27;s Falklands demands get louder</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In a Thursday address, President Javier Milei reopened Argentina’s claim to the Falkland Islands, or Malvinas, saying they “rightfully belong” to Argentina and arguing that the British had invaded and colonially occupied the islands in 1833. The dispute had already been sharpening in Argentina before that speech, and Milei framed the issue around his country’s position and his warm relationship with President Trump.</p>
+<p>Milei said “winds of change” were blowing after Trump said he was “re-evaluating” the US position on the Falklands, a stance the evidence says had traditionally been neutral while recognizing Britain’s rule over the territory. The UK government said support for the Falkland Islands was “unwavering” after Argentina restated its claims. The tensions also showed up in sport this summer, when Argentine players celebrating their World Cup win over England held up a banner reading “Las Malvinas son Argentinas,” prompting Fifa to fine the Argentine Football Association for breaching rules against political messaging.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c980g0g7yyjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Trump&#x27;s response is key as Argentina&#x27;s Falklands demands get louder">BBC #1</a></div>
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Alzheimer’s trial to test drug on people without symptoms to see if it can be prevented</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">People without memory loss will be screened for an Alzheimer’s prevention trial in the UK on Monday, as the Surrey and Borders Partnership NHS foundation trust begins testing the first European participants in the PrevenTRON study. The phase III trial is recruiting about 1,600 people aged 55 to 80 from around the world, and healthy middle-aged people deemed to be at higher risk of developing the condition will be eligible. Participants from across the UK will first be checked for memory problems and then offered a blood test for p-tau217, a biomarker that can predict cognitive decline and the development of Alzheimer’s.</p>
+<p>Those who have elevated p-tau217 and meet the trial criteria may be offered trontinemab, an experimental drug developed by the Swiss pharmaceutical company Roche that attacks amyloid plaques. Earlier research found it cleared amyloid plaques in nine out of 10 people with early-stage Alzheimer’s or mild cognitive development within 28 weeks. Prof Ramin Nilforooshan, the trial’s chief investigator, said the study asks whether researchers can act earlier, before symptoms begin. The trial is expected to run for four to six years, with participants randomly assigned to trontinemab or a placebo and monitored for signs of dementia.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/sep/05/alzheimers-trial-drug-dementia" target="_blank" rel="noopener noreferrer" title="The Guardian / Alzheimer’s trial to test drug on people without symptoms to see if it can be prevented">Guardian #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="bbc,guardian">
+  <summary>Thousands of jobs to be cut at Jaguar Land Rover after slump in profits</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jaguar Land Rover is preparing to offer redundancies and says it must save about £1.7bn over the next two years, with as many as 4,000 jobs said to be at risk at Britain’s largest car manufacturer as profits have been hit by falling sales, cyber-attack disruption and US tariffs.</p>
+<p>JLR told workers and their union on Saturday that it would open a voluntary redundancy programme for salaried and management staff, according to the BBC and Sunday Times. The company, owned by Tata Motors, told the BBC it had not yet confirmed the number of cuts. The Guardian reported that about 30,000 of JLR’s 44,000 employees are based in the UK, mostly across 14 plants in the West Midlands, where it is one of the region’s largest employers.</p>
+<p>The squeeze follows a difficult period for the carmaker. After halting production for several weeks last year because of a cyber-attack, JLR said the disruption led to a 27% drop in overall production and cost about £200m. It was one of several factors behind profit before tax falling to £14m from £2.5bn the year before. The company has also been affected by tariffs on vehicles imported into the US, which Donald Trump raised to 25% before a deal for 10% for the UK.</p>
+<h3>Talks over the cuts</h3>
+<p>Unite general secretary Sharon Graham told the BBC she and business secretary Jonathan Reynolds would meet JLR chief executive PB Balaji next week, after a weekend of talks aimed at mitigating job losses.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c4gkr3p0ql7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Jaguar Land Rover confirms planned job cuts">BBC #1</a><a href="https://www.theguardian.com/business/2026/sep/05/thousands-jaguar-land-rover-offered-redundancies-after-falling-profits" target="_blank" rel="noopener noreferrer" title="The Guardian / Thousands of jobs to be cut at Jaguar Land Rover after slump in profits">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>‘The chancellor is in a bind’: is No 11 at odds with Burnham’s big vision?</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Andy Burnham’s early political lift has met a harder economic reality: after a bond sell-off pushed borrowing costs to their highest since the 2008 financial crash, John Healey’s first budget as chancellor now has far less room for manoeuvre, sharpening the tension between fiscal caution and Burnham’s costly agenda.</p>
+<p>For just over six weeks, Burnham had avoided a major domestic crisis, Reform had been on the back foot and his approval ratings were rising. But that mood changed with the end of summer recess, when anxiety over oil prices, sticky inflation and higher defence spending fed into a global bond sell-off. Economists reckon about half of the £24bn fiscal breathing space built up by Rachel Reeves has since been wiped out by higher inflation and interest rates, leaving Healey with what one Treasury source called a bind.</p>
+<p>Healey has just returned from the G20 finance ministers’ meeting in North Carolina and is conscious that the Office for Budget Responsibility’s forecasts will be hit by forces beyond his control, including the rising cost of oil after bombing resumed in Iran. He has stressed that fiscal responsibility is the “bedrock” of his approach and that he will stick to Reeves’s fiscal rules. But that careful tone sits uneasily beside Burnham’s larger programme, which includes more public control of utilities, reform of the social care system and a mass social home building drive.</p>
+<p>The friction is already visible inside Labour. Healey suggested in a television interview last week that Burnham was running a “continuity” government, prompting pushback from No 10 insiders. Meanwhile, a report due this weekend argues that Manchester’s economic success could be replicated across England and unlock untapped growth potential of up to £80bn, with housing, transport and health devolution presented as central to that case.</p>
+<p>Healey is expected to give a speech on growth on Monday, stressing devolution and public investment while also urging confidence for the private sector. That has raised questions over whether he will back one of the revenue-raising measures urged by progressive economists and the TUC: a windfall tax on banks. For Burnham’s supporters, the issue is whether his promise of “much more substantial change” can be matched by a chancellor determined to keep the public finances under tight control.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/sep/05/john-healey-andy-burnham-labour-economics" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘The chancellor is in a bind’: is No 11 at odds with Burnham’s big vision?">Guardian #1</a><a href="https://www.theguardian.com/politics/live/2026/sep/05/nigel-farage-robert-jenrick-reform-uk-politics-latest-news-updates?page=with%3A6a9c40938f0834a1091e0249#6a9c40938f0834a1091e0249" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘The chancellor is in a bind’: is No 11 at odds with Burnham’s big vision?">Guardian #2</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="xinhua_en">
+  <summary>Asia-Pacific Media Forum unveils consensus on shared prosperity</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Media leaders from across the Asia-Pacific used a Shenzhen forum to back a shared-prosperity consensus and to defend journalistic responsibility in the AI era, while leaving open how regional media will balance new technology with truth, credibility and a distinct voice.</p>
+<p>The Asia-Pacific Media Forum opened on Saturday in Shenzhen, south China’s Guangdong Province, under the theme “Building a Path to Shared Prosperity for the Asia-Pacific Community: Media Consensus and Action.” More than 400 representatives from over 40 countries and regions, along with UN agencies and international organizations, attended, and 16 founding organizations from China and abroad formed the Organizing Committee of the Asia-Pacific Media Partnership Program at the opening ceremony.</p>
+<p>The forum unveiled a consensus on jointly promoting the prosperity and development of the Asia-Pacific region. The Shenzhen Consensus said APEC is the region’s highest-level, most extensive and most influential economic cooperation mechanism, and said that since its establishment more than three decades ago it has helped drive the region’s development. Representatives pointed to openness, innovation and cooperation as important to the region’s prosperity, and said they would champion openness, safeguard the multilateral trading system, report on the Free Trade Area of the Asia-Pacific, regional connectivity, and the stability of industrial and supply chains, and help present the region’s progress across sectors.</p>
+<h3>AI, credibility and the region’s own voice</h3>
+<p>The forum also placed heavy emphasis on artificial intelligence and media ethics. Nur-ul Afida Kamaludin, chief executive officer of Bernama, said AI can help journalists but can also create misinformation and deepfakes on an unprecedented scale. She said technology should enhance journalism rather than replace its fundamental values, and that accuracy, balance, fairness, transparency and human accountability must remain central.</p>
+<p>Other speakers made similar arguments about the need to protect trust while using new tools. Felix Paz Quiroz, general director of Peru’s Andina, said the question is how to pursue digital transformation without losing journalistic responsibility, and said verification, transparency, neutrality, ethics and responsibility cannot be replaced by digital technology. U Ye Tint, deputy minister for information of Myanmar, warned about fake and false news in the AI era and said responsible journalism, quality content and greater cooperation can help bring people closer together.</p>
+<p>Several participants also argued that the region needs to tell its own stories more fully. Aminath Namza, chairperson of Public Service Media of Maldives, said it is important to highlight the achievements and contributions of the Global South, while Nur-ul Afida said the Asia-Pacific is more than crises, disputes and economic statistics. The consensus also called for deeper media exchanges, joint interview programs and other collaborative projects to strengthen mutual understanding, trust and friendship.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20260905/f4e8357c2cd640dca58069df83718497/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Xinhua Headlines: Asia-Pacific media vow responsibility, champion own voice in AI era">XNAE #1</a><a href="https://english.news.cn/20260905/3740751b69e84488b2a9850851eb993c/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / Asia-Pacific Media Forum unveils consensus on shared prosperity">XNAE #2</a><a href="https://english.news.cn/20260905/ef6d5dd114674af991e502171746d1fd/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency English / InPics | Tech exhibition highlights Asia-Pacific Media Forum">XNAE #3</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Compile by Training: Turning Natural-Language Specifications into Local Neural Functions</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from the University of Waterloo and Harvard University introduced a way to turn a natural-language specification into a reusable local neural function, aiming to avoid the repeated cost, latency, and provider dependence of calling a large remote model for every input.</p>
+<p>The preprint describes <strong>compile by training</strong> as a middle path between handwritten rules and one-off large-model calls. It starts from a task description, then uses teacher models to generate task-specific examples. Those examples train a small adapter for a compact interpreter, producing a function that can run without the teachers and can be stored, versioned, and composed like ordinary software. The paper frames the idea around recurring text jobs such as email triage: the intended behavior is easy to explain, but tedious to encode as rules and too narrow to justify repeated large-model calls.</p>
+<p>Compile by training builds on Program-as-Weights by keeping the same program format and run-time interface while investing more work at compile time. On FuzzyBench-Hard, a subset where the Program-as-Weights fast compiler produced no exact matches, it reached 83.6% semantic accuracy. That gain came with higher compile-time cost: about 50.9 seconds in the deployed setup, compared with 3.5 seconds for the fast amortized compiler. The paper also reports that a 2:1 mix of GPT-5.4-mini and GPT-5.5 supervision improved mean LEM from 0.746 to 0.851 in one sweep, and that more data generally helped, rising to 0.866 with 7,200 unique pairs.</p>
+<p>The system was also deployed in a public interactive service. The authors demonstrate compiled functions in a multi-site website helper, a language-controlled 3D avatar, and a bidirectional English–Claudish translator. In one deployment, the paw-helper pack contained 30 compiled programs, with 28 used in live routing, and the English-to-Claudish demo completed 100,747 successful translation requests between its August 22 launch and September 2, 2026. The paper’s stated limitation is that synthetic supervision may inherit teacher errors.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.04199" target="_blank" rel="noopener noreferrer" title="arXiv / Compile by Training: Turning Natural-Language Specifications into Local Neural Functions">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">LLaDA-Image is trying to answer a practical systems question for image generation: whether a strong model can be trained from scratch with a fully open recipe, while still matching or beating open-source rivals on bilingual image benchmarks.</p>
+<p>The system pairs a 6B Diffusion Transformer, trained from scratch, with a frozen vision-language understanding module built on the LLaDA2.0-Mini diffusion language model backbone. The authors say the model is designed to do more than text-to-image generation: it is built for unified generation and editing, and the same framework is used for understanding, generation, and instruction-guided image editing.</p>
+<p>A central part of the recipe is that LLaDA-Image does not rely heavily on paired image-text data from the start. Instead, the authors say they first build a visual generative prior through image-only pre-training and mid-training. The generation pipeline uses about 220 million samples, and 98% of them are real images. Image-only samples make up more than 90% of the total. For optimization, it uses parameter-free RMSNorm throughout the DiT together with the Muon optimizer.</p>
+<p>The model is then distilled into LLaDA-Image Turbo, which the authors say enables fast inference in 2–4 sampling steps. In examples, the system is presented as handling both text-to-image generation and instruction-guided editing, including style changes, text replacement, object removal, colorization, gesture edits, background swaps, and adding objects.</p>
+<p>On Qwen-Image-Bench, the authors report overall scores of 53.53 on the English track and 53.38 on the Chinese track, which they say sets a new state of the art among open-source models on both tracks. The same report also frames the release as fully open, with checkpoints, code, and training recipes made available.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.03796" target="_blank" rel="noopener noreferrer" title="arXiv / LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>RoboTok: An Internet-Scale Data Engine for Human Demonstration Retrieval and Dexterous Manipulation Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">RoboTok is meant to make internet video usable as a scalable source of robot supervision, using human manipulation clips to retrieve training demonstrations for dexterous policies; the key question is whether hand-trajectory matching can outperform existing retrieval methods without relying on task labels or visual similarity.</p>
+<p>Researchers from Rice University and NVIDIA introduced RoboTok as an internet-scale data engine for human demonstration retrieval and dexterous manipulation learning. They said robot learning needs broader demonstrations, but collecting robot data is expensive and does not cover the long tail of real-world tasks. Their answer is to take a query human manipulation video and search web video for manipulation-relevant demonstrations that can train dexterous robot policies.</p>
+<h3>Retrieving motion, not just appearance</h3>
+<p>RoboTok learns a latent motion space from 3D hand trajectories expressed in estimated actor-centered reference frames. The system is designed to compare manipulation behaviors across differences in camera viewpoint, scene appearance, and occlusions while staying compact enough for efficient search and continual indexing over large video collections. In the paper’s description, the retrieval model indexes human demonstration clips by their 3D egocentric hand trajectories, then uses that representation for nearest-neighbor search at query time.</p>
+<p>The authors say this matters because visual or semantic similarity does not necessarily mean the underlying manipulation is similar. They also note that semantic labels are not used for curation or retrieval, yet the learned embeddings still organize into coherent categories. A t-SNE visualization is used to show the learned embeddings, and the figure description says the motion space is organized with a spatiotemporal motion-alignment metric.</p>
+<p>Reported gains on retrieval and robot policy training.</p>
+<p>The paper says RoboTok was evaluated against existing robot-data retrieval approaches on retrieval benchmarks and downstream robot policy performance. For training data, it processes segments from Action100M, and it also tests transfer on AssemblyHands, a held-out corpus of two-hand assembly clips with ground-truth 3D hand poses.</p>
+<p>Across the reported experiments, the authors say RoboTok retrieved more relevant manipulation demonstrations and improved downstream task success. In the downstream policy tests, they report that RoboTok outperformed the best reported baseline on average by 7.45% for seen objects and 5.83% for unseen objects across six modified HARDER VTDexManip task formulations. The paper presents those results as evidence that hand-pose trajectory-aware retrieval can make web video a continuously growing source of supervision for robot learning.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.03199" target="_blank" rel="noopener noreferrer" title="arXiv / RoboTok: An Internet-Scale Data Engine for Human Demonstration Retrieval and Dexterous Manipulation Learning">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Puffin-World: Scaling a Unified Multimodal Model with Native 3D World States</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Kang Liao and coauthors propose Puffin-World, a unified multimodal model meant to keep 3D world generation, reconstruction, and camera-aware perception aligned in one system, with the open question being how far a single model can carry appearance, geometry, and physics together across changing views.</p>
+<p>In the paper’s arXiv preprint posted on 03 Sep 2026, the team says Puffin-World integrates physical understanding, spatial simulation, and 3D world generation and reconstruction without external offline modules. The model is built around three native world states: physics, described with gravity field and latitude; geometry, described with depth; and appearance, described with image content. It also uses a unified Omni-Camera representation to support diverse tasks and flexible motions.</p>
+<h3>Scaling the model with Puffin-16M</h3>
+<p>To extend the system to more complex settings, the authors constructed Puffin-16M, a dataset with 15 million vision–language–camera triplets and 1 million trajectories that include various and challenging motions. The preprint also says the model propagates physical dynamics across future frames, grounds absolute camera properties in the real world, and couples appearance and geometry inside one generative process so that each future view can be synthesized while its underlying geometry is reconstructed.</p>
+<p>The paper frames this as enabling interleaved closed-loop uses such as mimic and self-calibrated world exploration. It also says the authors released the code, models, and datasets, and that Puffin-World’s world-perception ability was used to annotate 28 widely used public datasets.</p>
+<p>On evaluation, the authors say Puffin-World achieved the best median error and the best AUC at 5° across four public benchmarks for camera-to-world understanding. In the generation results table, it also reports much lower orientation and gravity-related errors, plus a lower FID, than the compared image-generation and camera-controllable methods. The preprint presents those results as evidence that scaling data and explicitly modeling 3D world states can improve physical-world perception, free-viewpoint spatial simulation, and 3D world reconstruction within a single framework.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.04196" target="_blank" rel="noopener noreferrer" title="arXiv / Puffin-World: Scaling a Unified Multimodal Model with Native 3D World States">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Scal3R: Learning Efficient Multi-Relative Pose Query for Scalable Online 3D Reconstruction</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Scal3R is a new approach for online 3D reconstruction on long video streams, aiming to stop the geometric collapse that appears when existing models keep regressing camera pose from a fixed first-frame anchor. The unresolved issue it targets is whether global motion can stay stable without retraining a full backbone.</p>
+<p>The preprint says online 3D reconstruction models perform poorly on long videos because direct pose regression must extrapolate far beyond the training distribution. In that setting, small drift accumulates and can snowball into severe failure. But the authors say the breakdown is unusually localized: per-frame depth stays stable, and the backbone’s local geometry remains intact while only the global pose head fails.</p>
+<p>Scal3R is built around that split. Instead of predicting absolute camera pose, it reformulates online reconstruction as multi-reference relative pose querying. The system uses lightweight learnable tokens, said to make up about 1% of the parameters, and injects them into a completely frozen backbone through asymmetric attention. Those tokens query poses relative to multiple past keyframes, and an online pose-graph optimization system with loop closure is used to suppress long-range drift. The paper describes the result as a scalable online pipeline that can keep the backbone’s pointmap quality while adding globally consistent motion estimates.</p>
+<p>The reported efficiency and accuracy numbers are central to the claim. Scal3R reaches convergence in 8 hours on a single GPU. On KITTI, it reduces the average ATE by over 60% compared with the online baseline. The paper also says it produces geometrically consistent reconstructions on sequences spanning hundreds of meters. In its evaluation summary, Scal3R is reported to outperform both offline and online baselines on Virtual KITTI and to generalize to unseen domains, with results listed on Sintel, TUM-Dynamic, and ScanNet.</p>
+<p>One remaining constraint the authors note is scale handling: because the backbone is frozen and supervision is done in a scale-normalized space, the trajectory operates in the backbone’s internal scale rather than metric scale. The paper also says performance degrades when the number of references is pushed too far beyond the training setup, with K = 24 performing worse than K = 12.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.04201" target="_blank" rel="noopener noreferrer" title="arXiv / Scal3R: Learning Efficient Multi-Relative Pose Query for Scalable Online 3D Reconstruction">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Editable Visual Design</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers proposed a design workflow that tries to turn visual generation into something users can still edit after creation, with draggable layers, real text, and layout changes on a GUI; the open question is whether coding agents and image models can together deliver both polish and flexibility.</p>
+<p>The preprint frames the problem as a split between two imperfect approaches. Diffusion models such as GPT-Image-2 and Nano-Banana can make expressive images, but the paper says their output is a flattened bitmap with error-prone text and no layer-wise post-editing. Code-based generation, by contrast, can produce structured HTML, SVG, and CSS with clean layers and later modification, but the authors say it still lacks global aesthetic intuition and struggles with complex visual assets.</p>
+<p>Editable Visual Design tries to combine the strengths of both. A VLM acts as the “creative brain” for requirement understanding, planning, and aesthetic judgment, while an image model serves as a “visual world simulator” that produces imagined visuals and standalone assets. In the workflow reported here, Codex driven by GPT-5.6 Sol generates native HTML/CSS/SVG under an “imagine first, then act” loop, then the system compares rendered screenshots against the design intent and patches problems such as overflow, overlap, or text-image occlusion. The paper says this process is serialized as Agent Design Replay, so the creative and reasoning trajectory can be revisited and adjusted.</p>
+<p>The examples span posters, infographics, marketing materials, and long-text layouts. In one comparison, the paper says GPT-image-2 returned a locked bitmap with disordered Chinese characters, while code-only generation left blank areas and a chaotic layout; Editable Visual Design kept print-clean typography and separable layers. The authors also point to a red panda encyclopedia infographic with 120 editable layers in 13 groups and a travel poster with 6 layers in 1 group. They say the approach can deliver refined aesthetics and production-grade editability, while also noting that multi-page decks and full websites still need consistency across pages.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.04034" target="_blank" rel="noopener noreferrer" title="arXiv / Editable Visual Design">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>The Missing Temporal Link: Temporal Context Routing for Script-Driven Audio-Video Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Script-driven audio-video generation can keep image and sound in sync while still missing the script’s own timeline, and a new preprint proposes a routing method to fix that timing gap without sacrificing visual quality.</p>
+<p>The paper argues that current joint generators align video and audio on a shared temporal axis, but the precise timing of shots and dialogue is often encoded only in the prompt text. In script-driven content creation, that can leave the generated clip synchronized internally yet out of step with the screenplay. To address that, the authors introduce Temporal Context Routing, or TCR, which maps script timing onto the shared video-audio timeline and sends each prompt’s guidance to the matching positions in both modalities.</p>
+<p>The method is built for structured scripts with multiple prompt types. In the setup described by the authors, shot prompts and dialogue event prompts carry their script-specified intervals, global prompts cover the full clip, and reference prompts are tied to the shots where the entity appears. TCR converts each prompt’s timing into a duration-normalized routing score and adds it to the cross-attention used for video-text and audio-text conditioning. The paper says this lets each prompt keep its own timing rather than forcing all prompts into one shared segment.</p>
+<p>On a test set of 200 scripts, TCR outperformed the baseline on the timing measures reported in the paper. Shot Boundary MAE fell by 96%, from 1.11 seconds to 0.042 seconds, and Dialogue Acc@0.5s rose from 28.3% to 84.1%. The authors also say TCR kept visual quality and audio-video synchronization comparable to the baselines.</p>
+<p>A user study backed that result: participants preferred TCR on all five evaluated dimensions. The paper presents the result as evidence that extending temporal alignment from just video and audio to the structured script can make script-driven generation follow the intended scene and dialogue timing more closely.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.02367" target="_blank" rel="noopener noreferrer" title="arXiv / The Missing Temporal Link: Temporal Context Routing for Script-Driven Audio-Video Generation">arXiv #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">S3Gym asks whether large language models can turn their own trial-and-error into better future behavior, but it finds that self-testing, self-judging, and self-improvement do not line up automatically when agents are evaluated across different text games.</p>
+<p>The benchmark is built for models that interact with external environments rather than sit behind a fixed prompt. The researchers say existing agent benchmarks usually measure a model as a fixed policy, which makes it hard to tell whether the model can use past interaction to improve later decisions. S3Gym separates a permissive exploration phase from a stricter held-out evaluation phase, then checks whether experience gathered earlier transfers to new conditions. It instantiates that setup in seven text-based games with executable environment verifiers: Chess, Minesweeper, Nullify, Tetris, Snake, PvZ, and Trust Evolution.</p>
+<h3>How S3Gym measures improvement</h3>
+<p>The framework tests three ways of using interaction experience: direct History ICL, score-conditioned Summary Memory, and parameter Training. The paper says each self-improvement cycle runs through explore, judge, consolidate, update, and evaluate, with the model also producing its own judgment of what happened along the way. That makes it possible to compare the model’s self-judgments with the environment’s verified outcomes instead of relying only on the model’s internal assessment.</p>
+<p>Across the experiments, the researchers report that self-improvement is “neither automatic nor uniform.” Context-level experience improves performance for several model-game pairs, but which approach works best depends on the task. Summaries help when experience can be compressed into reusable strategic rules, while raw history often works better when success depends on precise, state-contingent information. Parameter training can produce substantial gains on some tasks, but it also shows unstable improvement and severe negative transfer on others.</p>
+<p>The benchmark also highlights a limit of self-judgment itself. The paper says self-judging is only partially reliable, and that accurate local judgment is not enough on its own to produce self-improvement. Instead, agents also need to turn feedback into reusable state abstractions, decision rules, and exploration strategies. S3Gym is presented as a unified way to diagnose where that translation breaks down.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2608.31100" target="_blank" rel="noopener noreferrer" title="arXiv / S3Gym: Can LLMs Turn Self-Testing and Self-Judging into Self-Improvement?">arXiv #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Quantum oscillations defy expectations in this exotic material</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A *Nature Communications* study has found unusual quantum oscillations in zirconium pentatelluride, or ZrTe5, a three-dimensional topological insulator, after experiments at extremely low temperatures and strong magnetic fields showed electrons behaving in ways that challenge standard expectations about when oscillations should disappear.</p>
+<p>The research was led by scientists from the University of São Paulo, Los Alamos National Laboratory, the University of Washington and other U.S. institutions. They combined electrical transport experiments in magnetic fields as strong as 60 tesla and at temperatures near 0.7 kelvin with detailed theoretical calculations. Julio Larrea Jiménez of USP said the work expands understanding of electron transport in exotic phases of matter and suggests that topological insulators may carry not only electric charge but also electron spin.</p>
+<p>Topological insulators have insulating interiors but conducting surfaces, a behavior tied to the topology of their electronic bands. ZrTe5 is especially useful for this kind of study because it sits close to the boundary between different topological phases, so small changes in temperature, strain, chemical composition or magnetic field can strongly alter its electronic behavior.</p>
+<p>The team found that ZrTe5 did not follow the usual pattern for Shubnikov-de Haas oscillations, which are normally periodic in 1/B, where B is the magnetic field. Instead, the magnetoresistance oscillations were not conventionally periodic in 1/B and continued beyond the quantum limit, where the familiar oscillations should have faded away. The researchers describe the effect as reentrant Landau levels: under strong fields, some energy levels bend back toward the Fermi level and cross it again, creating new oscillations.</p>
+<p>According to the study, this unusual behavior comes from the interplay between cyclotron energy and the Zeeman effect, with strong spin-orbit coupling making electron spin and orbital motion inseparable. The researchers say many-body effects were not needed to explain what they saw; a single-particle model based on a three-dimensional Dirac Hamiltonian with strong spin-orbit coupling reproduced the experimental regimes. Larrea said the effect does not stem from many-body interactions but from a nontrivial topology of the electronic bands.</p>
+<p>The findings may also help explain why different ZrTe5 samples have shown different kinds of quantum oscillations. In the sample studied here, the carrier density was very low, about 10^16 per cubic centimeter, and angular magnetoresistance suggested a three-dimensional, roughly ellipsoidal Fermi surface. The authors say this places the material extremely close to a topological phase transition and strengthens its value as a platform for exploring more exotic electronic states.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260901010715.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Quantum oscillations defy expectations in this exotic material">ScienceDaily #1</a></div>
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Life uses 4 DNA letters. Scientists just made 8 work</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the University of California San Diego showed that RNA polymerase, the enzyme that reads DNA and produces RNA, can accurately read and transcribe an expanded genetic alphabet with eight letters. In the Nature Communications study published Sept. 2, 2026, the team captured detailed structural views of *Escherichia coli* RNA polymerase as it recognized and incorporated two synthetic base pairs. The finding suggests cells can use their existing molecular machinery to handle synthetic genetic information, pushing beyond the four-letter DNA alphabet found in nature.</p>
+<p>The researchers combined biochemical experiments with high-resolution cryo-electron microscopy to see how the enzyme handled the non-natural letters. The images showed that RNA polymerase identifies the synthetic DNA letters using many of the same biochemical and structural signals it relies on for natural base pairs. In a related PNAS study published Aug. 12, 2026, the same team found that RNA polymerase can also recognize another pair of synthetic base pairs even though they lack the hydrogen bonds that normally help hold DNA base pairs together.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260904000310.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Life uses 4 DNA letters. Scientists just made 8 work">ScienceDaily #1</a></div>
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
