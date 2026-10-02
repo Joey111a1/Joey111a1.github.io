@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-10-02</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-10-02</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency English</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-section="global_front_page" data-sources="al_jazeera_en">
+  <summary>Israeli drone kills Palestinian in Gaza, settlers kill another in West Bank</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An Israeli drone strike hit a tent sheltering displaced Palestinians in al-Mawasi, west of Khan Younis in southern Gaza, on Thursday, killing 42-year-old Tamer al-Hamayda and wounding three others, who were taken to Nasser Medical Complex. Medical personnel there said another Palestinian later died from wounds sustained in a Tuesday drone strike on a gathering in Jabalia refugee camp. Israeli forces also carried out a large-scale demolition operation targeting buildings east of Gaza City’s al-Tuffah neighbourhood.</p>
+<p>In the occupied West Bank, settlers raided Yasuf, north of Ramallah, on Thursday, killing 51-year-old Mashhour Yassin and wounding another Palestinian, according to the Palestinian Health Ministry. Yasuf Mayor Jumaa Abdel Fattah said dozens of settlers armed with sticks and firearms attacked homes; he said Yassin was shot after going outside to defend his house and that Yassin’s nephew was also wounded. The Palestinian Foreign Ministry alleged that Israeli forces detained an ambulance during the attack and described the incident as part of escalating organised settler violence. Gaza’s Health Ministry separately reported eight deaths and 26 wounded over the previous 24 hours, bringing its reported toll since the October 2025 ceasefire to 1,439 killed and 5,052 wounded.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/10/1/israeli-drone-kills-palestinian-in-gaza-settlers-kill-another-in-west-bank?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Israeli drone kills Palestinian in Gaza, settlers kill another in West Bank">AJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_front_page" data-sources="axios,bbc,nyt,scmp">
+  <summary>UK-Iranian dual national arrested over RAF Fairford incident, police say</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A UK-Iranian dual national has been arrested in Westminster on suspicion of preparing terrorist acts in connection with a security incident at RAF Fairford, the Gloucestershire airbase used by the US Air Force. Five other men remain on bail, while police investigate possible foreign-state involvement and Iran denies any role.</p>
+<p>Counter Terrorism Policing said the dual national was arrested on Thursday afternoon under Section 5 of the Terrorism Act 2006. Two properties in the Westminster area were searched. Police have not publicly detailed how the man is alleged to be connected to the incident at RAF Fairford, which prompted a major security response after three suspicious vehicles were reported travelling towards the base.</p>
+<p>The man’s age has been given inconsistently. An initial police account described him as 27, while a later update identified him as 25. Police also initially said that a second man had been questioned under caution, but later stated that this had not happened. An earlier account described the second person as a 26-year-old British man who had been questioned.</p>
+<h3>Five men remain on bail after the Sunday incident</h3>
+<p>The arrest follows the detention of five men in their 20s near RAF Fairford in the early hours of Sunday. They were arrested on suspicion of explosives offences and later on suspicion of preparing a terrorist act. All five were British nationals from London, aged between 23 and 25, and remain on police bail after being released on Monday.</p>
+<p>Police said searches of vans near the site found a quantity of petrol but no explosive devices. Four of the five men live in Westminster and one in Camden, and their homes were searched. The arrests followed reports of three suspicious vehicles moving towards the base. A local farmer alerted police after seeing what was described as a large group of masked men near the vehicles; one of the men had also called the emergency number about an hour earlier.</p>
+<p>The decision to release the five men on bail was described by police as an investigative decision grounded in experience and strategy. Their release does not resolve what happened at the base or establish whether they were involved in a planned attack.</p>
+<p>Senior National Coordinator for Counter Terrorism Policing Vicki Evans described the investigation into events in Gloucestershire as “hugely complex”. She said specialist teams were pursuing multiple lines of inquiry and examining “all possible angles – including possible foreign state involvement”.</p>
+<h3>Claims of an Iranian role remain disputed</h3>
+<p>Prime Minister Andy Burnham said there were “strong indications” that Iran played a part in the incident, but he did not provide further details. US Secretary of State Marco Rubio separately said that “the hands of a foreign actor” had clearly been involved. Tehran has strongly denied any involvement.</p>
+<p>The police investigation is therefore considering a possible foreign-state connection, but the public statements cited have not identified a state as responsible or set out evidence linking Iran to the incident. The arrest of the dual national is an allegation under investigation, not a public finding that the incident was directed by Iran.</p>
+<p>RAF Fairford has been used by the US Air Force as a forward operating location. Earlier this year, the British government allowed the United States to use the base for what it described as limited defensive strikes against Iranian missile capabilities. In July, Iran’s Islamic Revolutionary Guard Corps said US B-1 bombers had flown from RAF Fairford and warned that any base used for aggression against Iranian territory would be considered a legitimate target.</p>
+<p>The new arrest, the continuing bail arrangements and the police searches form part of the same investigation. Police have not announced whether further arrests or charges will follow.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/10/01/uk-iranian-national-arrested-raf-fairford-terror-plot-probe" target="_blank" rel="noopener noreferrer" title="Axios / British Iranian arrested in U.K. terror plot probe">Axios #1</a><a href="https://www.bbc.co.uk/news/articles/cmdx5xw36492o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / UK-Iranian dual national arrested over RAF Fairford incident, police say">BBC #1</a><a href="https://www.nytimes.com/2026/10/01/world/europe/uk-iran-terrorism-raf-fairford.html" target="_blank" rel="noopener noreferrer" title="The New York Times / U.K.-Iranian Man Arrested in London in Connection to Air Base Incident">NYT #1</a><a href="https://www.scmp.com/news/world/europe/article/3369483/uk-iranian-man-arrested-over-suspected-fairford-airbase-plot" target="_blank" rel="noopener noreferrer" title="South China Morning Post / UK-Iranian man arrested over suspected Fairford airbase plot">SCMP #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Seven Children Die from Ebola Each Day in DR Congo: Save the Children</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Save the Children warned on Thursday that seven children are dying from Ebola each day in the Democratic Republic of the Congo (DRC), where the outbreak affects seven provinces. The organization said children aged 0 to 4 face a 61% case-fatality rate, compared with a global rate of 48.4%. It calculated the daily estimate after analyzing Congolese Health Ministry data showing 961 child deaths, including 623 children under age 5.</p>
+<p>The outbreak was officially declared in eastern DRC on May 15. Since then, at least 2,071 minors have contracted Ebola, while 180 have lost both parents or their primary caregivers and are described as traumatized and in need of long-term support. Babou Rukengeza, Save the Children’s Ebola Response Lead in the DRC, said children account for at least one in four confirmed deaths and face fear, grief, stigma and social exclusion when parents die. Congolese authorities’ data updated through September 29 recorded 8,224 confirmed cases and 3,982 deaths across 63 health zones. Save the Children called for stronger infection prevention, treatment services, support for children without parental care, community engagement and assistance for affected families.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/seven-children-die-from-ebola-each-day-in-dr-congo-save-the-children" target="_blank" rel="noopener noreferrer" title="Telesur English / Seven Children Die from Ebola Each Day in DR Congo: Save the Children">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="bbc">
+  <summary>Crypto thieves attack man in home and threaten to kill pregnant wife&#x27;s baby in &#x27;horrific&#x27; robbery</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A businessman in Solihull was beaten with hammers during a 45-minute home invasion in which three masked men threatened his seven-months-pregnant wife and demanded hundreds of thousands of pounds in cryptocurrency. The couple feared for their unborn child; the baby survived and was born at full term.</p>
+<p>The man, referred to as James, said the intruders forced their way into the home and attacked him in the face, head and ribs. One held his wife down on a sofa with a pillow over her face while she screamed that she could not breathe. The couple said they did not initially know what the attackers wanted.</p>
+<p>The men took James’s phone and appeared to receive instructions through a live video call from someone who knew he held cryptocurrency. After the caller identified a wallet containing substantial funds, the threats escalated, James said. The attackers threatened to stab his wife in the stomach and kill the baby unless he transferred the money.</p>
+<p>James eventually sent his crypto savings—worth hundreds of thousands of pounds—to the wallet controlled by the caller. The group also stole several luxury Rolex watches before leaving in a car driven by a getaway driver. James said he heard the caller tell the attackers they could have £10,000 each while he kept the rest.</p>
+<p>The couple, who have asked not to be identified, described the incident as “horrific”. James’s wife said she feared he had been killed after he became unresponsive on the floor, and that she worried the stress might cause her to lose the baby. James suffered multiple major injuries to his head, hands and ribs. He said he has lost everything and has little hope of recovering the cryptocurrency.</p>
+<p>Police are investigating, but the attackers have not been identified. Crimestoppers is offering a £10,000 reward for information leading to progress in the case. The charity said investigators are seeking information about the three attackers, the driver waiting outside and the person directing the robbery by phone. The attackers are thought to be in their late teens or early twenties; one was described as a Black male with a scar beneath his left eyebrow.</p>
+<p>The robbery is part of a type of violent theft targeting cryptocurrency holders that experts call a “wrench attack”. Chainalysis researchers said $30m (£22.6m) had been stolen in such robberies by June this year, potentially making the year the worst on record for violent crypto attacks. Unlike funds held in conventional bank accounts, cryptocurrency can be controlled directly through digital wallets, and transfers can be difficult to reverse.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c6eq84eygz0qo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Crypto thieves attack man in home and threaten to kill pregnant wife&#x27;s baby in &#x27;horrific&#x27; robbery">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israel kills eight gaza ceasefire violations continue year</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least eight Palestinians were killed across the Gaza Strip on Wednesday as violations of the ceasefire continued a year after the agreement was signed, Middle East Eye reported. In the most deadly incident, an Israeli air strike hit a civilian transport vehicle in Tal al-Hawa, western Gaza City, killing five people and wounding 15, including women and children. The vehicle was a cart attached to a minibus used amid severe fuel shortages and rising transport costs; such vehicles can carry dozens of passengers. Separate attacks in Gaza City and Khan Younis killed three more people.</p>
+<p>Motaz Ayoub, a civil defence ambulance officer who reached the Tal al-Hawa site, said people were scattered across the street and that many of the wounded were in critical condition. He said a nearby bus was also hit, wounding several passengers. Ayman Shubair, a 47-year-old shopkeeper about 100 metres away, described the explosion and said residents feared moving around Gaza. The report said Israeli forces had killed at least 1,430 people since the ceasefire was signed, including at least 300 children, while near-daily strikes and restrictions on aid and commercial goods continued.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israel-kills-eight-gaza-ceasefire-violations-continue-year" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israel kills eight gaza ceasefire violations continue year">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Seven killed in Syria after gunmen open fire on bus in Homs</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gunmen opened fire on a civilian bus carrying company employees home from work as it crossed the Masyaf Bridge in western Homs province on Wednesday evening. The attack was reported to have killed seven people and wounded four, although Maan Mahmoud Fahd, director of Homs Grand Hospital, told Sana that four people were declared dead on arrival with severe gunshot wounds to the head and chest. The injured were taken to hospitals across the governorate.</p>
+<p>Security units secured the scene and investigators began collecting evidence, according to Homs Internal Security Forces commander Brig Gen Bassem Mohammad Shaaban, who said authorities were working to identify those responsible and determine a motive. No group had claimed responsibility and no suspects had been named. Shaaban called the shooting an attempt to undermine security in Homs and said it would not go unpunished. Syrian military analyst Brig Gen Munir al-Hariri told Syria TV that former Assad loyalists were most likely behind the attack, but that attribution remained a claim.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/syria-hit-gas-explosion-deadly-bus-attack-and-israeli-shelling" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Seven killed in Syria after gunmen open fire on bus in Homs">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="rappler">
+  <summary>‘Mabuting dumaan sa legal’: Mary Jane Veloso gives advice to future OFWs</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mary Jane Veloso urged Filipinos planning to become overseas Filipino workers (OFWs) to avoid illegal recruiters and use the legal process for overseas employment. She gave the advice at a Department of Justice press conference in Manila on October 1, days after her release from prison. Veloso warned against being drawn by “free visa” offers or promises of quick departure, and advised prospective workers to seek guidance from the Department of Migrant Workers on legitimate job offers and procedures. She said she hoped sharing her experience would prevent others from facing a similar ordeal.</p>
+<p>Veloso had been intending to work in Malaysia when she was arrested in Indonesia in 2010 after Indonesian airport authorities found 2.6 kilograms of heroin in her suitcase. The source says she was allegedly deceived by recruiters and that the drugs were allegedly placed in the suitcase by them. Indonesia granted her a last-minute reprieve from execution in 2015. After her repatriation to the Philippines in December 2024, President Ferdinand Marcos Jr. later pardoned her, allowing her release. Justice Undersecretary Nicholas Felix Ty said her case should not be interpreted as a reason for others to risk illegal recruitment or assume they would receive the same protection.</p></div>
+  <div class="source-list"><a href="https://www.rappler.com/philippines/overseas-filipinos/mary-jane-veloso-advice-future-ofws" target="_blank" rel="noopener noreferrer" title="Rappler / ‘Mabuting dumaan sa legal’: Mary Jane Veloso gives advice to future OFWs">Rappler #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>‘Not South African enough’ — how police allegedly target citizens and migrants across Joburg</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Police in Johannesburg are accused of using xenophobic profiling against foreign nationals and South African citizens alike, with residents describing document checks, threats of detention and alleged demands for bribes. The claims raise questions about how migration enforcement is being carried out and who can challenge police conduct.</p>
+<p>Tendai Musikavanhu, the founder and chief executive of One Stone Capital Group, said police stopped the Uber carrying him and his wife outside their Northcliff home on Sunday, 27 September, as they returned from church. Officers first asked the driver for his licence, then demanded the couple’s identity documents.</p>
+<p>Musikavanhu and his wife are South African citizens. Born in the UK to Zimbabwean parents of Limpopo heritage, he has lived in South Africa since 1994 and is a naturalised citizen. He said an officer questioned his Shona surname, asked where he was from and dismissed his explanation of his citizenship. The officer allegedly called the documents fake, threatened to detain and arrest the couple until Home Affairs verified them, and demanded that Musikavanhu name five generations of ancestors to prove his South African heritage.</p>
+<p>Musikavanhu said his wife resisted arrest until the officer threatened force. In a recording made inside the police station, he can be heard asking why he was being detained while identifying himself as a South African citizen. He also claims the officer said police had a daily quota of 15 migration-related arrests. The couple were eventually released without charge after his lawyer intervened.</p>
+<h3>Claims of wider targeting</h3>
+<p>Nicolene Jonker, the councillor for Ward 88, said Musikavanhu was the third resident to approach her with a similar complaint. She said reports had emerged from Fairlands, Linden and Parkview, including allegations that officers stopped people walking in the street. Residents in Rosettenville also described encounters involving migrants.</p>
+<p>An East African migrant with valid asylum-seeker papers said an officer’s attitude changed after learning he was not South African. He alleged that the officer placed him in a police van, negotiated a bribe during a drive and released him after he paid R1,500 without checking his papers. He said many migrants avoid reporting such incidents because they fear further harassment.</p>
+<p>A 2026 Lawyers for Human Rights report described migrants’ interactions with police as a significant site of alleged corruption and abuse. It recorded claims that officers demanded between R500 and R2,500, or more, under threats of arrest, detention or withholding documents.</p>
+<p>Gauteng police spokesperson Colonel Dimakatso Nevhuhulwi said SAPS was aware of Musikavanhu’s complaint and would process a formal allegation. She denied that any blanket quota required officers to make a set number of immigration-related arrests, saying migration status was verified by Home Affairs. SAPS said allegations of harassment, unlawful detention and bribery should be formally reported for investigation.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-10-01-not-south-african-enough-how-police-allegedly-target-citizens-and-migrants-across-joburg" target="_blank" rel="noopener noreferrer" title="Daily Maverick / ‘Not South African enough’ — how police allegedly target citizens and migrants across Joburg">DM #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Lyft agrees to pay California $272.5m in largest-ever wage theft settlement</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Lyft has agreed to pay California $272.5 million to settle claims that it misclassified drivers as independent contractors and consequently stole their wages. The settlement, reached Thursday and subject to court approval, covers alleged violations from April 2016 through December 2020. If approved, more than $237 million will go to thousands of drivers involved in the lawsuit. California Attorney General Rob Bonta called it a “landmark win for workers” and the largest settlement involving wage-theft claims in the state’s history.</p>
+<p>Lyft said drivers have always been properly classified under the law and that it was glad to put the case behind it. The lawsuit was filed by California in 2020, with Los Angeles, San Francisco and San Diego later joining; it was eventually merged with other suits brought on behalf of thousands of drivers. The dispute concerns benefits and protections generally unavailable to independent contractors, including minimum-wage protections, paid sick days, overtime, health insurance and Social Security. A related lawsuit against Uber is continuing.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/technology/2026/oct/01/lyft-largest-ever-wage-theft-settlement" target="_blank" rel="noopener noreferrer" title="The Guardian / Lyft agrees to pay California $272.5m in largest-ever wage theft settlement">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>Man hurt in late-night chaos in Banglamotor</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 45-year-old man, Md Sohan, was injured during an argument with Ferdous Ahmed Simon, an expelled convenor of Hatirjheel Thana Jubo Dal, in a lane north of Banglamotor in Dhaka around 8:10pm last night, police said. Hatirjheel Police Station Officer-in-Charge Md Asaduzzaman said Sohan was struck on the head and suffered bleeding injuries before being taken to Dhaka Medical College Hospital. Police also received allegations that Simon fired two blank rounds.</p>
+<p>The incident led to tension in the area. Locals gathered outside Simon’s residence, accusing him of extortion, while a motorcycle was seen burning beside the Banglamotor-Moghbazar road around 11:15pm, with Fire Service personnel present. Several residents alleged that law enforcers were protecting Simon rather than detaining him. Police later escorted him from the building into custody at about 12:10am, the OC said, adding that action would be taken according to law. A local resident, Sohail, separately alleged that residents had long been frustrated with Simon’s activities and extortion.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/man-hurt-late-night-chaos-banglamotor-4288506" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Man hurt in late-night chaos in Banglamotor">TDSB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="vanguard_ng">
+  <summary>Troops rescue 10 prospective corps members abducted in Imo</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Troops of Operation UDO KA rescued 10 prospective National Youth Service Corps (NYSC) members abducted in Imo, an operational report said. The victims were reportedly taken by suspected kidnappers from two commercial buses at Umonuwa village along the Onitsha–Owerri Road in Mbaise Local Government Area at about 6:30 a.m. on Thursday. Personnel of the 34 Artillery Brigade, working with the Nigerian Navy, Nigerian Air Force, Nigeria Police Force and Department of State Services, were trailing the kidnappers to rescue the remaining victims, the report said.</p>
+<p>In Adamawa, the report said Nigerian Army troops repelled simultaneous attacks on 226 Battalion at Garkida in Gombi Local Government Area and 232 Battalion at Garaha in Hong Local Government Area at about 1 a.m. on Thursday. It said the army’s Spartan element pursued fleeing attackers and neutralised 16 terrorists, while troops recovered three AK-47 rifles, two pump-action guns, one Dane gun, six AK-47 magazines and cartridges. Follow-up operations and the reorganisation of defensive positions were ongoing, according to the report.</p></div>
+  <div class="source-list"><a href="https://www.vanguardngr.com/2026/10/troops-rescue-10-prospective-corps-members-abducted-in-imo" target="_blank" rel="noopener noreferrer" title="Vanguard Nigeria / Troops rescue 10 prospective corps members abducted in Imo">VN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>TRE-RJ suspends firearm license and authorizes police inquiry against deputy</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Regional Electoral Court of Rio de Janeiro (TRE-RJ) suspended state deputy and re-election candidate Alexandre Knoploch’s (PL) firearm license until October 5, after the first round of elections. Knoploch must hand over all firearms registered in his name to the Federal Police within 24 hours of notification. The court also authorized a police inquiry, supervised by TRE-RJ, with an initial 30-day period for completion.</p>
+<p>The measures followed a dispute involving Knoploch and members of state deputy Flávio Serafini’s (Psol) re-election campaign at Praça Saens Peña in Tijuca on Monday (28). According to the Regional Electoral Prosecutor’s Office documents cited in the case, there were provocations from both sides; Knoploch allegedly discharged pepper spray toward people on the sidewalk, including elderly people, threatened those present and displayed a firearm under his shirt. He is barred from entering Serafini’s campaign committee and from contacting Serafini, Maria de Lourdes do Carmo—known as Maria dos Camelôs—and campaign members until October 5. The restriction does not prevent him from attending the Rio de Janeiro State Legislature to perform his parliamentary duties. Knoploch said in a video that he had handed over the weapons and would comply with the order.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/tre-rj-suspende-porte-de-arma-e-autoriza-inquerito-contra-deputado" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / TRE-RJ suspends firearm license and authorizes police inquiry against deputy">AB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Bolivian Prosecutor’s Office Denounces ‘Kidnapping’ Of Attorney General</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Bolivia’s Attorney General’s Office denounced the alleged “kidnapping” of Attorney General Roger Mariaca and Santa Cruz departmental prosecutor Alberto Zeballos after the two officials were intercepted inside Viru Viru International Airport in Santa Cruz during the night. They were reportedly apprehended by personnel whose institutional affiliation had not been established. The authority behind the operation, its legal basis and the reason for the apprehensions remained unclear, as did whether either official was subject to a prior judicial order or where they were taken.</p>
+<p>An intense police operation followed at the airport, where Interpol personnel were also present, while access to the terminal was restricted for the press. According to the Attorney General’s Office, police also intervened at the Santa Cruz Departmental Prosecutor’s Office and searched Mariaca’s home in northern Santa Cruz. Mariaca and Zeballos were among officials whose U.S. visas were revoked over allegations that they had denied entry to people linked to corruption and drug trafficking. The circumstances surrounding the operation remained under investigation.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/bolivian-kidnapping-of-attorney-general" target="_blank" rel="noopener noreferrer" title="Telesur English / Bolivian Prosecutor’s Office Denounces ‘Kidnapping’ Of Attorney General">TE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China&#x27;s September PMIs return to expansion amid firming recovery</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s manufacturing PMI rose to 50.1 in September 2026, up 0.3 percentage points from August and back above the 50-point expansion threshold, according to the National Bureau of Statistics. The production sub-index climbed 1.3 points to 51.7, while new orders reached 50.5. Twelve of the 21 industries surveyed recorded expansion, four more than the previous month, NBS chief statistician Huo Lihui said. Equipment, high-tech and consumer-goods manufacturing posted PMIs of 51, 52.5 and 50.7, respectively. However, medium-sized and small manufacturers remained below the threshold at 49.7 and 48.9.</p>
+<p>Non-manufacturing activity also returned to expansion, with its business activity index rising 1.2 points to 50.2. Construction increased 3.4 points to 50.3, its highest level this year, while services rose 0.9 points to 50.2. The China Logistics Information Center attributed stronger demand in transportation, tourism and related consumer services partly to the traditional peak season and the approaching National Day holiday. The data came as authorities accelerated support measures, including a 62.5 billion yuan final allocation for consumer-goods trade-in programs, bringing this year’s total to 250 billion yuan, and expanded relending quotas for technological upgrades, agriculture and smaller businesses.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/1001/c90000-20505331.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China&#x27;s September PMIs return to expansion amid firming recovery">PDE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>DNC sues Trump administration over last-minute changes to overseas voting form</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Democratic National Committee has sued the Trump administration over emergency changes to the Federal Post Card Application, the form used by overseas citizens to register and request absentee ballots. The dispute centers on a removed option that could affect eligible Americans abroad who have never lived in the United States.</p>
+<p>The lawsuit, filed on Thursday in federal court in Washington DC, alleges that the administration unlawfully rushed through the change shortly before overseas ballots were due to be sent. Until recently, the FPCA offered four choices describing an overseas voter’s circumstances. Applicants could identify themselves as serving in the military, living abroad while intending to return to the United States, or living abroad without knowing whether they would return. A fourth option covered US citizens who had never lived in the country.</p>
+<p>That category applies to citizens born abroad who may still be eligible to vote in US elections. Thirty-eight states and the District of Columbia allow such citizens to vote in at least some elections, even if they have never resided in the United States.</p>
+<h3>Pentagon sought emergency revisions</h3>
+<p>In August, as the deadline for sending overseas ballots approached, the Pentagon submitted two emergency requests to modify the form. One of the proposed changes removed the option for citizens who had never lived in the United States. The Office of Management and Budget quickly approved the requests.</p>
+<p>In an August letter to the OMB, Sean O’Keefe, the deputy under-secretary of war for personnel and readiness, said the Pentagon had only recently become aware of the option. He argued that the existing versions of the form could confuse voters about the information they were required to provide under federal law. Because the election was less than 90 days away, he said, the changes could not pass through the normal process and had to be expedited.</p>
+<p>DNC lawyers called that explanation “pretextual and implausible”. They said the government had at least 15 years of experience issuing guidance to US citizens born and remaining abroad, reviewing public comments on the FPCA and adjusting the form to serve eligible voters.</p>
+<p>The DNC alleges that the accelerated changes violated the Administrative Procedure Act, which requires agencies to consider the effects of rule changes before implementing them. It also says the OMB failed to follow proper procedure by not allowing public comment in the Federal Register. The lawsuit asks a judge to declare that the government violated the law and set aside the changes.</p>
+<p>The Pentagon did not return a request for comment.</p>
+<h3>Advocates warn of confusion for voters</h3>
+<p>The change does not, according to Susan Dzieduszycka-Suinat, president and CEO of the US Vote Foundation, itself remove the voting rights of eligible citizens abroad. She said the Uniformed and Overseas Citizens Absentee Voting Act guarantees voting rights to US citizens overseas, including service members and their families, and does not require them to have a plan to return to the United States.</p>
+<p>But Dzieduszycka-Suinat said the revised form could affect whether applicants recognize themselves among the available choices. A DNC official who spoke anonymously about the lawsuit said voters would see that the familiar checkbox had disappeared and might find that the remaining options did not describe their circumstances accurately. Applicants must sign the form under penalty of perjury, the official said, which could make them reluctant to select an alternative they did not consider correct.</p>
+<p>Experts cited in the case said the revision could confuse or discourage citizens who have never lived in the United States from registering and casting ballots. The number potentially affected is unclear. A 2016 government report estimated that about 11,590 US citizens in this category were eligible to vote, while DNC lawyers believe the number has increased.</p>
+<p>The wider overseas electorate is considerably larger: the Federal Voting Assistance Program estimates that 2.2 million US citizens living abroad are eligible to vote. About 11% of eligible overseas citizens voted in 2024. The largest groups live in Canada and the United Kingdom.</p>
+<h3>Parties clash over “never-resident” voting</h3>
+<p>The form change comes amid Republican efforts to prevent citizens who have never lived in the United States from having their ballots counted. The Republican National Committee has sued in nine states over policies involving these voters. One North Carolina court agreed with the Republicans, while several other courts rejected their arguments and other lawsuits remain pending.</p>
+<p>In August, the RNC said it was leading an effort to close what it called a loophole allowing people who had never lived in a state to vote in its elections. It said the effort was intended to protect residency requirements and prevent “never-resident” voting from spreading nationwide.</p>
+<p>DNC chair Ken Martin accused Trump and Republicans of trying to eliminate a way for some Americans abroad to register and request mail ballots. He said the party was defending the voting rights of eligible citizens at home and overseas. The federal case will determine whether the administration’s accelerated procedure and the revised FPCA complied with federal law.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/oct/01/dnc-lawsuit-trump-changes-overseas-voter-citizens" target="_blank" rel="noopener noreferrer" title="The Guardian / DNC sues Trump administration over last-minute changes to overseas voting form">Guardian #1</a><a href="https://www.theguardian.com/us-news/live/2026/oct/01/tennessee-governor-halts-executions-christa-pike-lethal-injection-donald-trump-hegseth-musk-us-politics-latest-news-updates?page=with%3A6abeb44f8f087df2fad7e2d2#6abeb44f8f087df2fad7e2d2" target="_blank" rel="noopener noreferrer" title="The Guardian / Tennessee governor halts executions christa pike lethal injection donald trump hegseth musk us politics latest news updates">Guardian #2</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="scmp">
+  <summary>Why US Himars missile shortfalls raise stakes for a potential Taiwan Strait conflict</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A potential Taiwan Strait conflict could involve crossfire between the US-made High Mobility Artillery Rocket System (Himars) and mainland China’s counterpart, the PHL-16, also known as the PCL-191. Taiwan is set to receive all 29 Himars systems from its initial orders by the end of this year. A follow-on deal has approved another 82 systems, bringing Taiwan’s planned total to 111. That figure excludes Himars systems operated by the US military.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/military/article/3369442/why-us-himars-missile-shortfalls-raise-stakes-potential-taiwan-strait-conflict" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Why US Himars missile shortfalls raise stakes for a potential Taiwan Strait conflict">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>Voting Calculator | Will the housing decree pass? Simulate the votes by party</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Spain’s Congress will debate and vote on Friday on two royal decrees approved Tuesday by the Council of Ministers to address the housing crisis. Both require more yes votes than no votes. The first would prohibit evictions of vulnerable people without housing alternatives until 2030, limit rent increases and ban speculative purchases by so-called vulture funds. It is expected to receive support from PSOE, Sumar, Podemos, the PNV and Coalición Canaria. With Junts abstaining, it would pass narrowly, 172 votes to 171, below the 176-seat absolute-majority threshold; Junts ruled out abstaining on Thursday.</p>
+<p>The second decree includes automatic, unlimited renewal of rents and would require landlords to compensate tenants for ending active contracts, except in specified cases. The voting arithmetic is less favorable: the PNV has said it will vote against, making approval unviable unless there is a major surprise. The government has said it will maintain both decrees until the vote, while housing campaigners have criticized Junts’ decision to oppose them.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-10-01/calculadora-de-votos-saldra-adelante-el-decreto-de-vivienda-simule-las-votaciones-por-partidos.html" target="_blank" rel="noopener noreferrer" title="El País / Voting Calculator | Will the housing decree pass? Simulate the votes by party">El Pais #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Brazil attorney general says meddling ‘cannot be tolerated’ after Trump funding plans revealed</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Brazil’s attorney general, Jorge Messias, said foreign interference in Brazil’s institutions and democracy “cannot be tolerated,” three days before the presidential election. His remarks followed a report that the Trump administration was pushing to direct more than $175m from the State Department’s flagship human-rights fund to various awards, including a $1m grant for groups opposing what it describes as judicial overreach and censorship by Brazil’s supreme court. Messias called the information “an important alert for Brazilian sovereignty” and said foreign political interests must not influence choices belonging to Brazilians. According to GloboNews, the attorney general’s office filed a criminal complaint on Thursday to investigate potential wrongdoing in response to the report.</p>
+<p>The election pits leftwing incumbent Luiz Inácio Lula da Silva against Trump ally Flávio Bolsonaro, with the two described as neck and neck in polls. Washington has been accused of trying to influence the contest, including through tariffs and the designation of two Brazilian organised-crime groups as foreign terrorist organisations. The dispute also follows last year’s sanctions and tariffs targeting Lula’s government and the supreme court over the coup trial of Flávio’s father, former president Jair Bolsonaro. Bolsonaro was convicted and sentenced to 27 years for trying to seize power after losing the 2022 election to Lula.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/oct/01/brazil-attorney-general-election-meddling-trump-funding-plans" target="_blank" rel="noopener noreferrer" title="The Guardian / Brazil attorney general says meddling ‘cannot be tolerated’ after Trump funding plans revealed">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Key disability benefit for young people may be axed under major welfare changes</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ministers are developing a major welfare package that could remove the health element of universal credit for many under-25s, including some existing claimants, while expanding employment support. The proposals would affect disabled young people and could reduce income for households already facing poverty, although the final policy has not been decided.</p>
+<p>The central option under consideration is to remove the health element of universal credit for claimants under 25 and replace it with intensive help to enter work. The payment has already been almost halved to £217 a month for most new claimants from next April. About 184,000 people aged 16 to 24 currently receive the health element, and ministers are considering whether changes should apply to existing as well as new claimants.</p>
+<p>The proposed support package could include subsidised jobs, more targeted “back to work” schemes and mental-health assistance. It is intended to help more of the UK’s estimated one million 16- to 24-year-olds who are not in education, employment or training. Ministers have framed the plans as reform rather than straightforward cuts, while Andy Burnham has said he wants to avoid “crude cuts”.</p>
+<p>The wider package could also replace personal independence payment (Pip), a non-means-tested benefit claimed by about four million people to help with the extra costs of sickness or disability. Officials are examining new eligibility criteria and assessments, including a possible separate system for under-25s with reduced or withdrawn entitlements. People with the most severe and debilitating disabilities would not lose money under the options described. Officials have also revisited possible future cuts to the Motability scheme, which allows disabled people to use Pip to lease cars.</p>
+<p>The plans remain under review. The Alan Milburn review is examining young people’s employment, while the Timms panel is reviewing Pip; both are due to report in the autumn. Ministers and officials are considering legislation combining Pip’s replacement with changes to the under-25 system in the next parliamentary session.</p>
+<p>The proposals could revive Labour’s internal divisions after last year’s welfare rebellion. More than 40 charities warned earlier this year that cuts or tougher sanctions could push vulnerable young people deeper into poverty. Scope estimates that about half of households with someone under 22 receiving the universal credit health element are already in poverty, potentially rising to more than nine in 10 if the support were removed. Action for Children said tailored employment support was important but could not by itself overcome a lack of jobs.</p>
+<p>The government said it would not pre-empt the reviews and would maintain a safety net for people unable to work. It pointed to £3.5bn in employment support for disabled people and those with long-term conditions, alongside changes including the youth guarantee and restored face-to-face assessments.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/politics/2026/oct/01/welfare-changes-under-debate-disability-benefit-young-people-uk" target="_blank" rel="noopener noreferrer" title="The Guardian / Key disability benefit for young people may be axed under major welfare changes">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="politico">
+  <summary>Macron’s final budget hinges on Le Pen’s backing … for now</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">France’s government on Thursday proposed a 2027 budget built around €43 billion in savings, aiming to cut the deficit from an estimated 5.4% of GDP this year to 5%. The plan includes €9 billion in state-spending cuts, a freeze on inflation adjustments to pensions and an extension of a temporary tax on large companies expected to raise €5 billion. Economy and Finance Minister Roland Lescure said measures already adopted would save a further €11 billion in 2027, while France will increase its annual contribution to the European Union budget by €2.5 billion.</p>
+<p>The proposal appears designed to secure the National Rally’s support in a hung parliament. Lawmakers said provisions delaying welfare spending and allowing the next government to modify key measures could give Marine Le Pen room to back the budget without abandoning the possibility of changing it if she wins the spring presidential race. Le Pen has pledged to amend rather than simply block the text, but centrist lawmaker Charles de Courson warned that the party could still bring down Prime Minister Sébastien Lecornu’s government. The stakes are heightened by borrowing costs at their highest since 2008, a 130-basis-point spread between French and German 10-year bonds, inflation reported at 3% in September and debt at 119% of GDP at the end of June.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/france-emmanuel-macron-final-budget-hinges-on-marine-le-pen-backing-for-now" target="_blank" rel="noopener noreferrer" title="POLITICO / Macron’s final budget hinges on Le Pen’s backing … for now">POLITICO #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>Democratic senators accuse Trump administration of worsening childcare crisis</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Democratic senators led by Elizabeth Warren have accused the Trump administration of deepening the United States’ childcare crisis, warning that higher operating costs, programme funding disruptions and regulatory changes are leaving families with fewer affordable options while childcare providers face closure.</p>
+<p>The senators made the allegations in a letter addressed to Alex Adams, assistant secretary of the Administration for Children and Families (ACF). They argue that federal cuts and policy changes affecting childcare programmes, including Head Start, are destabilising an already fragile system.</p>
+<p>The letter notes that childcare costs rose faster than overall inflation in 2025. It says daycare and preschool costs increased by 3.5% in the year to May 2026, while providers have faced rising expenses for food, supplies, insurance, rent and utilities. Those pressures, the senators write, are forcing providers to choose between raising tuition fees and shutting down.</p>
+<p>The letter cites more than 400 daycare-centre closures in Oklahoma since November and more than 300 programme closures in Indiana since September of last year. The senators warn that such closures reduce the supply of care available to families and can make it harder for parents to find affordable arrangements.</p>
+<h3>Funding disputes and Head Start concerns</h3>
+<p>The senators also criticise the administration’s handling of Head Start, the federal programme that provides early education and other services to low-income children. They say the Department of Health and Human Services unlawfully froze funding for grantees weeks after President Trump took office, forcing some Head Start programmes to close temporarily and leaving thousands of vulnerable families uncertain about their childcare.</p>
+<p>They further allege that funding was withheld from grantees until they complied with what the letter calls the administration’s rigid requirements. The senators say the disruption threatened the stability of programmes serving children who depend on publicly supported early education and care.</p>
+<p>The letter highlights an ACF decision in January to freeze $2.4bn in Child Care and Development Fund grants for five states. That freeze was later rescinded after legal challenges, but the senators warn that a similar action could happen again.</p>
+<h3>Regulatory changes could raise family costs</h3>
+<p>The lawmakers say regulatory changes could add to the financial pressure on families and providers. In May, ACF finalised a rule rescinding requirements from the Biden administration, including a federal requirement that states cap eligible families’ childcare co-payments at 7% of income. The rule also rescinded provisions requiring states to pay providers based on enrolment.</p>
+<p>The senators argue that removing the co-payment cap could increase what eligible families pay and push more providers out of business. They ask whether ACF calculated how much families’ costs might rise and how many childcare centres could close as a result.</p>
+<p>They also raise concerns about proposed changes to Head Start, including loosening or eliminating rules on child-to-teacher ratios and rolling back wage and benefits requirements for staff. The senators say those changes could worsen staff turnover and reduce access to high-quality, affordable care.</p>
+<p>The letter, signed by Warren and six other Democratic senators—Raphael Warnock, Jeffrey Merkley, Andy Kim, Peter Welch, Ben Ray Luján and Angela Alsobrooks—asks ACF to provide information by 14 October. The requested data include the number of childcare centres that have closed since January 2025, changes in average childcare costs, monthly information on Head Start and Child Care and Development Fund grants, and support available to centres facing closure.</p>
+<p>The senators also request an analysis of how the regulatory changes could affect family costs and the number of childcare providers, including an estimate of how many centres might shut if the 7% co-payment cap is removed.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/oct/01/tennessee-governor-halts-executions-christa-pike-lethal-injection-donald-trump-hegseth-musk-us-politics-latest-news-updates?page=with%3A6abe3fa18f0881a4fbc3bc9f#6abe3fa18f0881a4fbc3bc9f" target="_blank" rel="noopener noreferrer" title="The Guardian / Tennessee governor halts executions christa pike lethal injection donald trump hegseth musk us politics latest news updates">Guardian #1</a><a href="https://www.theguardian.com/us-news/2026/oct/01/childcare-crisis-trump-administration" target="_blank" rel="noopener noreferrer" title="The Guardian / Democratic senators accuse Trump administration of worsening childcare crisis">Guardian #2</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>New Washington DC law bans landlords from imposing dog breed restrictions</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Washington DC’s final provision of the Pets in Housing Amendment Act, known as “Roscoe’s Law,” took effect on Thursday. It aims to prevent landlords from rejecting tenants’ dogs because of breed, size or weight, or charging special fees based on those factors. The restrictions had particularly affected pit bulls, rottweilers and dobermans. Animal welfare organizations and shelters applauded the change, saying breed bans and high pet fees can make housing inaccessible and separate people from their pets. The provision applies to residential leases beginning after 1 October 2026, so immediate changes may not be evident.</p>
+<p>The law’s earlier provisions have been partially in effect since 2025. They cap pet security deposits at 15% of monthly rent, limit pet rent to 1% of monthly rent and prohibit other non-refundable pet fees. The DC Landlord Association said the law’s goal of keeping families and pets together was valid, but raised concerns that the caps might not cover damage associated with pets and called for “adequate” deposits and rent. Property owners had defended breed restrictions as a way to reduce risks from aggressive dogs, while animal groups argued that behavior is generally linked to owner management rather than breed.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/oct/01/washington-dc-landlords-dog-breed-restrictions" target="_blank" rel="noopener noreferrer" title="The Guardian / New Washington DC law bans landlords from imposing dog breed restrictions">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="bbc,guardian,scmp">
+  <summary>French school protests spread as fires, blockades deepen unrest</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">French high-school protests over overcrowded classrooms, teacher shortages and deteriorating facilities have spread across the country, bringing fires, blockades and clashes with police. The disruption has closed schools, injured hundreds and prompted Prime Minister Sébastien Lecornu to convene a crisis cabinet meeting over threats to public education.</p>
+<p>The protests began in the Paris region last week and expanded nationwide by Thursday. Police said about 900 demonstrations, blockades and related incidents were taking place outside high schools, with more than 160 schools shut down. Access was also blocked at about 30 university campuses, including in Paris and Marseille, as university students joined the movement.</p>
+<p>The interior ministry said nearly 3,000 lycée students, aged 15 to 18, had been detained since the protests began, including 1,949 on Thursday. More than 300 police officers, along with dozens of firefighters, teachers and pupils, were reported injured. Riot police were deployed as rubbish bins were set alight outside schools and more serious fires were attempted inside buildings.</p>
+<p>In Nantes, fire damage at one school was extensive enough for authorities to close it for a month. In Marseille, fires were reportedly attempted inside two schools, and a teacher at one was splashed with petrol. Strasbourg temporarily suspended tram services after protesters obstructed tracks, while damage to a bus stop was reported in Lille.</p>
+<p>The government has described the escalation as “urban violence” and said many schools would move classes online to protect pupils and staff. Lecornu’s office said the violence was making it “virtually impossible” to maintain the continuity of public education and exposing staff and students to danger. The prime minister ordered ministers to cancel travel plans for Thursday’s crisis meeting.</p>
+<p>Students say their concerns include overloaded timetables, overcrowded classes, inadequate staffing, poor heating and air conditioning, and buildings in disrepair. One Strasbourg student said classes held 35 pupils, while the school lacked enough toilets, had water leaks and offered too little cafeteria space. Some teachers have supported the blockades, while others and several headteachers have reported threats or attacks.</p>
+<p>The interior ministry said injuries resulted mainly from objects thrown by protesters, but some involved police-fired riot-control projectiles. It announced an internal investigation after accusations that officers used excessive force against three pupils. Education Minister Édouard Geffray is due to meet pupil representatives on Friday, while the government has accused the radical-left La France Insoumise party of encouraging the protests. The party says it supports non-violent action and has raised concerns about police violence.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c6d080d1e3l4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Fires break out at French schools as students protest over funding">BBC #1</a><a href="https://www.theguardian.com/world/2026/oct/01/france-school-protests-escalate-pm-crisis-cabinet-meeting" target="_blank" rel="noopener noreferrer" title="The Guardian / France school protests escalate into ‘urban violence’ as PM calls crisis cabinet meeting">Guardian #1</a><a href="https://www.scmp.com/news/world/europe/article/3369482/french-school-protests-spread-fires-blockades-deepen-unrest" target="_blank" rel="noopener noreferrer" title="South China Morning Post / French school protests spread as fires, blockades deepen unrest">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>El Salvador Sets Feb. 28, 2027 Date For General Elections</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">El Salvador’s Supreme Electoral Tribunal (TSE) unanimously approved the electoral call on Sept. 30, setting general elections for Sunday, Feb. 28, 2027. Voters will choose the president and vice president, Legislative Assembly members and municipal authorities. The electoral registry as of Sept. 15, 2026, listed 6,534,389 eligible voters: 5,551,707 in El Salvador and 982,682 registered abroad. The election will fill 582 positions, including 60 principal and 60 alternate legislative seats, 44 mayors, 44 trustees, 196 principal council seats and 176 alternate council seats.</p>
+<p>Salvadorans abroad will be able to vote online from Jan. 30 through election day if they have a national identity document and registered foreign address, while the TSE will provide in-person electronic voting for others using a passport or an identity document listing a domestic address. The authority plans 92 voting centers in 29 countries and 66 cities, including 53 in the United States. TSE President Roxana Soriano said voters abroad would participate through their own constituency and elect six legislators. The president and vice president elected in 2027 will serve from June 1, 2027, to June 1, 2033; legislators and municipal officials will serve three-year terms.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/el-salvador-feb-2027-general-elections" target="_blank" rel="noopener noreferrer" title="Telesur English / El Salvador Sets Feb. 28, 2027 Date For General Elections">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="guardian">
+  <summary>UK airlines to be banned from charging parents to sit with children</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">UK airlines would be barred from charging parents extra to sit with their children under government plans being considered by MPs. The proposed rule would require airlines to seat passengers under 14 beside a parent or accompanying adult free of charge. Passengers would also be able to correct a simple booking-name mistake without paying a fee. Ministers are understood to be seeking implementation before the start of next year’s summer holidays. The Department for Transport says arranging adjacent seats can currently cost a parent and child up to £104 on a return journey.</p>
+<p>The measures are part of the civil aviation (consumer protection and regulatory reform) bill, which would give ministers flexible powers to define passenger rights and the duties of airlines and airports. Prime Minister Andy Burnham described the charges as “little” costs that add up for families. Earlier this year, Ryanair changed its family-seating policy after an investigation into fees for parents travelling with children aged two to 11; the Competition and Markets Authority found the mandatory family-seat fee was typically about £8 each way. Under Ryanair’s revised policy, parents may still pay to choose specific seats, while children are seated alongside them without an additional charge.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/2026/oct/01/uk-airlines-to-be-banned-from-charging-parents-to-sit-with-children" target="_blank" rel="noopener noreferrer" title="The Guardian / UK airlines to be banned from charging parents to sit with children">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="telesur_en">
+  <summary>Chilean Police Crack Down on Student March Against Budget Cuts</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Carabineros used tear gas and chemical-laced water against thousands of students marching through downtown Santiago on Thursday, October 1, 2026, in a protest against President José Antonio Kast’s proposed 2027 budget cuts. The march, organized by the Confederation of Chilean Students (Confech), had been authorized by authorities and proceeded under the slogan “To transform Chile, not one peso less for education!” Students were traveling from Baquedano Metro station toward Los Héroes Metro station when police in riot-control gear intervened, preventing them from continuing, the account said.</p>
+<p>The mobilization was part of a call for nationwide action supported by the United Workers’ Central of Chile, the Feminist Coordinating Committee 8M and the Teachers’ Association of Chile. El Hilo Chileno, cited in the account, reported that at least five people were detained and two injured. It also said thousands continued joining the Santiago march, with students and workers moving through Lastarria and Pío Nono while clashes elsewhere reportedly forced a Carabineros group near Santa Lucía to retreat.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/chilean-police-crack-down-on-student-march-against-budget-cuts" target="_blank" rel="noopener noreferrer" title="Telesur English / Chilean Police Crack Down on Student March Against Budget Cuts">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="folha">
+  <summary>Medical entities call on Anvisa to ban beauty chips</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Twelve medical and scientific organizations have asked Brazil’s health regulator, Anvisa, to prohibit the manipulation, sale, promotion and use of hormonal implants known as “beauty chips,” citing safety concerns, limited clinical evidence and the difficulty of stopping treatment once an implant is inserted.</p>
+<p>The joint letter, released on Thursday (1st) during the 20th World Congress of Menopause, calls for action involving Anvisa and the Ministry of Health, medical and pharmacy councils, prosecutors, public defenders, consumer-protection bodies and lawmakers. Signatories include the Brazilian Society of Endocrinology and Metabolism, the Brazilian Diabetes Society and the International Menopause Society.</p>
+<p>The organizations say compounded implants containing substances such as testosterone, gestrinone and estradiol are being offered for menopause symptoms, gynecological conditions, sexual dysfunction, weight loss, muscle gain, increased energy, improved physical performance and anti-aging. They argue that these uses lack high-quality clinical trials demonstrating advertised benefits or safety.</p>
+<p>The letter associates the products with possible cardiovascular and metabolic changes, liver problems, thromboembolism, stroke and cancer risks. It also says unanswered questions include effects on the endometrium and breasts, lipid metabolism, repeated exposure and long-term safety. Because hormone release can continue for months, the organizations say doses cannot be promptly reduced or stopped; removal may also be difficult or incomplete, particularly for bioabsorbable pellets.</p>
+<p>The groups distinguish these products from evidence-supported menopause hormone therapy when properly indicated and used with its contraindications. They also reject “bioidentical” as a marketing term that does not guarantee efficacy, pharmaceutical quality or lower risk. The letter says only carefully assessed postmenopausal women with hypoactive sexual desire disorder have an internationally supported indication for testosterone, at doses within the female physiological range.</p>
+<p>Anvisa suspended the manipulation, sale, advertising and use of compounded hormonal implants in October 2024 after complaints from medical organizations, later retaining restrictions on androgenic and anabolic hormone implants for aesthetic purposes, muscle gain and sports performance.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/equilibrioesaude/2026/10/entidades-medicas-pedem-a-anvisa-proibicao-de-chips-da-beleza.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / Medical entities call on Anvisa to ban beauty chips">Folha de S.Paulo #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="el_pais">
+  <summary>The City Council presents a photo of a knife next to bread and hummus as evidence of the danger of Sol campout</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Madrid City Council has submitted a photograph of a knife beside slices of bread and a jar of hummus as evidence of safety risks at the Sol square campout, where thousands of housing-rights demonstrators have gathered since Saturday after the eviction of Maricarmen, an 87-year-old woman. The material sent to Madrid’s Government Delegation also includes photographs of cobblestones and alleged vandalism of historic heritage. Mayor José Luis Martínez-Almeida said the council had documented knives, stoves and cobblestones at the camp, but did not initially explain how the objects were found or how they were used. The council has demanded intervention and warned of legal action.</p>
+<p>The dispute has become a confrontation between Madrid authorities over whether the camp should be evicted. Community of Madrid president Isabel Díaz Ayuso said on Thursday that her government would file a contentious-administrative appeal against Government delegate Francisco Martín, seeking urgent provisional measures for the camp’s “immediate dissolution.” Martín has rejected National Police intervention while the protest remains peaceful, citing the fundamental right of assembly. He said the submissions do not prejudge the merits of the eviction request or alter established legal timelines. The council’s complaint indicates that some photographed objects may have been utensils used to cut food or cook, while some cobblestones were used to secure tents.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/madrid/2026-10-01/el-ayuntamiento-presenta-una-foto-de-un-cuchillo-junto-a-pan-y-hummus-como-prueba-del-peligro-de-la-acampada-de-sol.html" target="_blank" rel="noopener noreferrer" title="El País / The City Council presents a photo of a knife next to bread and hummus as evidence of the danger of Sol campout">El Pais #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="korea_herald">
+  <summary>Lee pushes ahead with serious crimes agency chief pick despite backlash - The Korea Herald</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Lee Jae Myung is moving forward with Kim Ji-yong’s nomination to lead South Korea’s new Serious Crimes Investigation Agency, despite objections from prosecution-reform advocates. The decision revives a stalled confirmation process just as a major criminal-justice overhaul is due to take effect, separating investigative and prosecutorial powers.</p>
+<p>The presidential office said Thursday that it planned to ask the National Assembly to hold Kim’s confirmation hearing as early as Thursday or Friday. The process had been suspended since mid-September while Kim underwent additional vetting. Lee’s decision came a day before the launch of the Serious Crimes Investigation Agency and the Public Prosecution Service, which will formally replace the existing prosecution structure. The reform will abolish the original prosecution office after 78 years and divide its investigative and prosecutorial functions between the new agencies.</p>
+<p>Kim was recommended for the post by Interior Minister Yun Ho-jung on Sept. 7 after a public selection process and approval by an independent candidate recommendation committee. Lee nominated him the following day. The nomination soon faced resistance from hard-line prosecution-reform advocates within the ruling Democratic Party and allied progressive circles, who questioned whether a career prosecutor should head the new investigative agency. Some also alleged that Kim had been aligned with former President Yoon Suk Yeol.</p>
+<p>Senior Presidential Secretary for Public Relations and Communication Seong Ghi-hong defended the decision during a televised briefing, saying the additional vetting had found nothing that changed the initial assessment. Seong said some allegations were inconsistent with the facts or amounted to vague speculation, and that they were not serious enough to deny Kim the opportunity to explain himself at a National Assembly hearing.</p>
+<p>Seong also rejected the claim that Kim was a prosecutor aligned with Yoon. He cited Kim’s order for a renewed investigation in 2021 into an alleged perjury case involving Yoon’s mother-in-law, and said Kim was later transferred from a senior post after the Yoon administration took office. Lee separately posted two lengthy messages on X between Wednesday night and early Thursday disputing claims about Kim’s relationship with Yoon and opposing the exclusion of former prosecutors from consideration.</p>
+<p>Seong argued that excluding Kim because of his prosecutorial background would undermine the selection process and deprive the new agency of investigative expertise. He urged an end to what he called unnecessary political debate as the government begins implementing the criminal-justice restructuring.</p></div>
+  <div class="source-list"><a href="https://www.koreaherald.com/article/10890727" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Lee pushes ahead with serious crimes agency chief pick despite backlash - The Korea Herald">TKH #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="peoples_daily_en">
+  <summary>China extends trade barrier probes into U.S. actions to Dec. 27</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Ministry of Commerce has extended until Dec. 27 its investigations into U.S. actions that China says harm global production and supply chains and impede trade in green products. The probes, launched on March 27, were extended under China’s rules on foreign trade barrier investigations, the ministry said on Wednesday, citing the complexity of the cases.</p>
+<p>The ministry said the investigations concern U.S. practices that may seriously harm the trade interests of Chinese companies, with some potentially violating World Trade Organization rules or other agreements between China and the United States. Preliminary evidence cited by the ministry included restrictions or bans on high-tech exports to China, limits on bilateral investment in key sectors, restrictions on green-product exports to the United States, delays in deploying new-energy projects, and limits on technology cooperation involving green products.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/1001/c90000-20505332.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China extends trade barrier probes into U.S. actions to Dec. 27">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Manchester City’s Emirati chair&#x27;s diplomatic immunity complicates legal action</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Premier League announced on Tuesday that an independent commission had found Manchester City guilty of 115 breaches of its financial rules, involving the alleged artificial inflation of the club’s finances by more than £900 million. The commission found that City’s owners had concealed the true state of the club’s finances from auditors and football regulators between 2008 and 2018, including through “sham” commercial contracts that inflated revenues and reduced costs by more than $1 billion. It said the club’s financial statements had not been prepared and audited according to applicable legal and regulatory principles, describing its conduct as “reckless” and not undertaken with “utmost good faith.”</p>
+<p>The findings could lead to further legal proceedings, including civil action by other Premier League clubs that believe City’s conduct harmed them competitively, while police could investigate if they suspect a crime. Such action may be complicated by the diplomatic immunity granted in the UK in 2020 to Khaldoon al-Mubarak, City’s chair since 2008 and managing director and group CEO of Mubadala, whose main shareholder is the Abu Dhabi government. The immunity generally protects individuals from criminal prosecution and certain legal proceedings in the country where they serve. There is no suggestion that Mubarak personally engaged in wrongdoing. City has denied the charges, rejected the findings and said it would appeal.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/manchester-city-chairs-uk-diplomatic-immunity-could-complicate-legal-action" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Manchester City’s Emirati chair&#x27;s diplomatic immunity complicates legal action">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="politics_and_power" data-sources="kompas">
+  <summary>Gibran’s Diploma Proceedings Continue; MK Calls Education Ministry and Education Attaché to KBRI Australia-Singapore</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Constitutional Court (MK) continued proceedings on Friday, 2 October 2026, over the qualification requirements for Gibran Rakabuming Raka’s candidacy as vice president in the 2024 election. In the proof hearing for case 01/PHPU.PRES-XXIV/2026, MK Deputy Chairman Saldi Isra said the court had summoned three witnesses for the next session: representatives of the Ministry of Education and Culture (Kemendikdasmen), the Education Attaché at the Indonesian Embassy (KBRI) in Singapore, and the Education Attaché at KBRI Australia. Saldi said the invitations were issued at the judges’ discretion, not at the request of the applicants, respondent or related parties, and that only MK judges would ask questions. He said the court hoped the three would attend.</p>
+<p>The dispute has passed through stages covering the applicants’ petition, the response from Indonesia’s General Elections Commission (KPU), submissions by related parties, applicant witnesses and experts, and KPU evidence. The applicants, led by Denny Indrayana and 11 others, allege problems with Gibran’s diploma equivalency and KPU Regulation No. 19 of 2023. Their eight demands include disqualifying Gibran as vice president, annulling the KPU’s decisions on his candidacy and the 2024 election results, and ordering the People’s Consultative Assembly to hold a new vice-presidential election.</p></div>
+  <div class="source-list"><a href="https://nasional.kompas.com/read/2026/10/02/05320021/sidang-ijazah-gibran-berlanjut-mk-panggil-kemendikdasmen-dan-atase" target="_blank" rel="noopener noreferrer" title="Kompas / Gibran’s Diploma Proceedings Continue; MK Calls Education Ministry and Education Attaché to KBRI Australia-Singapore">Kompas #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-section="economy_and_business" data-sources="cnn">
+  <summary>Bond market bust: A key rate just blew through another decades-old record</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US Treasury yields surged during Thursday’s trading, with the 10-year benchmark reaching 5.34%, its highest level since 2002, before ending at 5.24%, still the highest closing level since 2007. The 30-year Treasury yield rose as high as 5.69%, a 24-year high. The sell-off is increasing borrowing costs for Americans: rates linked to government bonds, including mortgages and auto loans, are rising, while the rate on a 30-year home loan topped 7% last week for the first time since early 2025.</p>
+<p>The pressure reflects several forces cited in the coverage: a stronger-than-expected US economy, massive and expanding AI investment, inflation above the Federal Reserve’s target, and higher fuel costs. Investors are also demanding greater returns at government bond auctions amid concerns about US government debt and expectations that the Fed may continue raising its benchmark rate. Neil Wilson, a strategist at Saxo, described the market as experiencing “carnage” and said investors were worried that US growth was stronger than expected. The sell-off is also international: the UK’s 30-year government yield reached 6% on Thursday, its highest level since 1998, while France’s 10-year yield climbed to 4.95%, its highest since 2002.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/10/01/business/bond-market-treasury-yields" target="_blank" rel="noopener noreferrer" title="CNN / Bond market bust: A key rate just blew through another decades-old record">CNN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="guardian">
+  <summary>US borrowing costs hit 24-year high as global bond sell-off intensifies</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Global bond markets sold off sharply on Thursday, pushing the yield on 10-year US Treasuries to 5.34%, its highest level since 2002. The surge in borrowing costs came as investors feared renewed inflation, particularly because of persistently high oil prices and disruptions linked to the Middle East conflict. Traders remained concerned that central banks would keep interest rates high, even after US inflation data came in below forecasts. Concerns about government borrowing and debt issuance also weighed on markets.</p>
+<p>The pressure spread across other assets and countries. The yield on 30-year UK government bonds briefly reached 6% for the first time since 1998, while five- and 10-year UK yields also rose. The FTSE 100 fell almost 1.7%, its worst daily decline since May; Germany’s DAX lost 1% and France’s CAC 40 fell 1.6%. Japan’s 10-year yield moved towards a 30-year high, while French 10-year yields reached 4.96%, their highest since 2002. Oil prices rose 3% to about $101 a barrel. Neil Wilson of Saxo UK described the bond market as experiencing “carnage” that was hitting stocks hard.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/2026/oct/01/global-bond-sell-off-uk-long-term-borrowing-costs-us-bond-yield" target="_blank" rel="noopener noreferrer" title="The Guardian / US borrowing costs hit 24-year high as global bond sell-off intensifies">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="telesur_en">
+  <summary>Lula Vows State Fuel Control Days Before Brazilian Elections</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Brazilian President Luiz Inácio Lula da Silva said his government would seek to acquire a fuel distributor to gain greater control over domestic fuel prices, four days before the first round of elections. Speaking in an interview, Lula framed the proposed purchase as reclaiming Brazilians’ ability to influence pricing in the energy sector, but provided no details on how the acquisition would be carried out. He is seeking reelection amid volatile international crude markets.</p>
+<p>Lula also defended government intervention to cushion higher oil prices, which he linked to the war in the Middle East. The government confirmed continuation of a 2.12-real-per-liter subsidy for diesel—about $0.41—and announced penalties of up to 500 million reais ($96 million) for companies raising prices “without just cause.” He criticized the earlier privatization of BR Distribuidora, formerly owned by Petrobras and sold during Jair Bolsonaro’s government between 2019 and 2022, questioning what Brazil gained by giving up that state-linked pricing tool.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/lula-vows-state-fuel-control-brazil" target="_blank" rel="noopener noreferrer" title="Telesur English / Lula Vows State Fuel Control Days Before Brazilian Elections">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="axios">
+  <summary>The Fed&#x27;s long-term interest rate problem</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The rise in long-term interest rates is beginning to affect more parts of the economy, Kansas City Fed President Jeff Schmid said Thursday at a Federal Reserve conference on investing in rural America in Asheville, North Carolina. He pointed to friction for multifamily housing and commercial lending, and said mortgage rates were starting to affect home prices by changing the cost of credit relative to property valuations.</p>
+<p>Richmond Fed President Tom Barkin linked higher rates to what he described as a roughly trillion-dollar artificial-intelligence buildout, arguing that stronger demand can push borrowing costs higher. Boston Fed President Susan Collins said AI investment was helping sustain solid economic growth despite higher rates and that its effects extended beyond particular sectors. She also said it remained uncertain whether investment would continue at its current pace. Schmid described the Fed’s challenge as distinguishing demand-driven pressures from supply-driven inflation, comparing the economy to a seven-layer dip with too much “beans”—his shorthand for AI and data-center investment—and not enough “chips.”</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/10/01/federal-reserves-long-term-interest-rate-problem" target="_blank" rel="noopener noreferrer" title="Axios / The Fed&#x27;s long-term interest rate problem">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="axios,cnn">
+  <summary>Mortgage rates just hit 7.28%. But there are ways to get a lower rate</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mortgage borrowing costs have climbed to 7.28%, their highest level since November 2023, increasing monthly payments for prospective buyers and refinancers while pushing some borrowers toward riskier loans and prompting sellers and builders to offer concessions.</p>
+<p>The average 30-year fixed mortgage rate rose from 7.03% last week, according to Freddie Mac data released Thursday. Rates have increased for six consecutive weeks, with this week’s 0.25-point jump marking the largest one-week increase in nearly four years. The rate is up 0.94 points from a year ago.</p>
+<p>The increase is adding pressure to an already slow housing market, where limited inventory and high borrowing costs have restrained sales. The Mortgage Bankers Association said applications for the week ending Sept. 25 fell 6% from the previous week. MBA CEO Bob Broeksmit said affordability and borrower demand had weakened as higher rates affected both home buyers and homeowners seeking to refinance.</p>
+<p>Mortgage rates closely follow 10-year Treasury yields. Those yields have risen by more than 1.25 percentage points since the start of the Iran war in February, as investors have weighed inflation risks and increased government spending. Capital Economics economist Thomas Ryan said rates could retreat if energy prices fall and expected Federal Reserve tightening does not fully materialize. The firm projected that 30-year mortgage rates would average 6.25% by the end of 2027.</p>
+<p>Some buyers are seeking lower rates through alternatives to the standard 30-year fixed loan. A 15-year mortgage generally carries a lower interest rate, but its monthly payments are substantially higher. Adjustable-rate mortgages made up 10.3% of recent applications—the highest share since October 2025—and were around 80 basis points cheaper than fixed-rate loans, according to MBA economist Joel Kan.</p>
+<p>ARMs typically offer a fixed rate for five, seven or 10 years before resetting with market rates. That can create sharply higher payments if rates rise; Chase Home Lending executive Jeremy Luke said such a loan may suit borrowers expecting to move or refinance within several years but will not work for everyone.</p>
+<p>Other options include assuming a seller’s existing mortgage, although not all loans qualify and buyers may need substantial cash to cover the gap between the remaining balance and the purchase price. Borrowers can also pay upfront for a permanent or temporary rate buydown, or negotiate for a seller or builder to cover it. In September, 66% of builders reported using sales incentives, including rate buydowns and closing-cost credits.</p>
+<p>Rates also vary with credit scores, debt-to-income ratios and down payments. Experts recommend comparing at least three lenders, including their fees and closing costs. Federal programs such as VA and USDA loans, along with some bank relationship discounts, may provide additional options for eligible borrowers.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/10/01/mortgage-rates-housing-sales" target="_blank" rel="noopener noreferrer" title="Axios / Mortgage rates approach 3-year high as new applications plunge">Axios #1</a><a href="https://www.cnn.com/2026/10/01/economy/how-to-get-a-lower-mortgage-rate" target="_blank" rel="noopener noreferrer" title="CNN / Mortgage rates just hit 7.28%. But there are ways to get a lower rate">CNN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="economy_and_business" data-sources="cna">
+  <summary>First EC tender under new rules draws record-high bid from developers</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Singapore’s first executive condominium (EC) Government Land Sales tender under new rules drew 13 bids for the 11,535 sq m Canberra Drive site, which is expected to yield about 185 units. The tender closed on Thursday, Oct 1. HDB’s provisional results showed a top joint bid of S$163.903 million from SNC3 Realty, HS Invesco and Kay Lim Realty, equivalent to a record S$825 per square foot per plot ratio (psf ppr). That surpassed the previous record of S$794 psf ppr, submitted by Sim Lian Group for a Woodlands Drive 17 EC site in January.</p>
+<p>The result came after rules announced in May doubled the minimum occupation period to 10 years, removed the Deferred Payment Scheme, and increased the quota and priority period for first-time buyers. The monthly household income ceiling was also raised in August to S$18,000. Analysts had expected more cautious bidding; National Development Minister Chee Hong Tat said the measures were intended to encourage lower developer bids and EC prices. PropNex said the number of bids and the top price exceeded expectations, while ERA Singapore described developer interest as undiminished. If the site is awarded to the top bidders, PropNex projects an average selling price of about S$1,900 psf.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/canberra-drive-ec-tender-new-rules-record-high-bid-6424671" target="_blank" rel="noopener noreferrer" title="CNA / First EC tender under new rules draws record-high bid from developers">CNA #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-section="technology_and_ai_society" data-sources="sciencedaily">
+  <summary>This light-powered AI can spot deepfakes with nearly 98% accuracy</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A UCLA team has developed a hybrid optical-neural processor that screens multiple videos for deepfakes in parallel, using light to perform part of the detection. In experiments, it reached 97.79% accuracy across 15 videos at once, offering a potentially faster and less energy-intensive first filter for large video collections.</p>
+<p>The system is designed to address two problems with conventional deepfake detection: heavy digital computation and sequential processing. A lightweight digital encoder extracts spatial, spectral and temporal information from each video, then converts it into a phase pattern displayed on a programmable spatial light modulator. The resulting light wave passes through a passive optical decoder, while paired optical detectors produce an authenticity score for each video.</p>
+<p>The study, published in *eLight*, describes a processor intended not to replace more sophisticated digital detectors but to work as their first stage. Large volumes of video could be screened optically, with suspicious material then sent to computationally heavier systems for closer assessment. The researchers say this architecture could support large-scale content moderation, media authentication, surveillance and other security-focused applications.</p>
+<p>In tests with 15 Celeb-DF videos, the processor achieved an average accuracy of 97.79%, sensitivity of 99.86% and specificity of 95.72%. Its sensitivity corresponded to an average false-negative rate of about 0.14% in those experiments. When the researchers increased the capacity to 18 videos per optical pass, average accuracy was 96.13%.</p>
+<p>The team also tested more difficult cases. Adding two optimized passive diffractive layers improved accuracy by about 6.8% when the system faced harder manipulations, without substantially increasing energy use or inference latency. On previously unseen videos generated with Google’s VEO-3, the processor achieved 94.80% accuracy and 97.61% sensitivity after minimal fine-tuning.</p>
+<p>The researchers report that the system resisted black-box adversarial attacks and offered inherent protection against white-box attacks because some model parameters are embedded in the physical optical hardware, making them harder to measure or reproduce. It also continued operating under image noise, blur, JPEG compression and experimental misalignments. These findings come from the reported experiments; the proposed role is a high-throughput screening layer alongside conventional digital analysis.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260929053534.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / This light-powered AI can spot deepfakes with nearly 98% accuracy">ScienceDaily #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-section="undercovered_watchlist" data-sources="middle_east_eye">
+  <summary>‘We are vulnerable’: Kurds fear renewed attacks as US‑led coalition departs Iraq</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The US-led coalition has ended its more than decade-long mission in Iraq as drone attacks hit Iraqi Kurdistan, leaving Kurdish officials and residents worried that the region lacks the air defence, intelligence and military capacity needed to confront Islamic State remnants and other threats.</p>
+<p>On 28 September, residents of Erbil heard military aircraft overhead as the coalition prepared to withdraw. That night, three Iranian drones struck a camp belonging to an Iranian Kurdish opposition party in Koya. Two days later, Koya was hit again, in what was described as the first such attack after the coalition’s departure.</p>
+<p>The coalition mission began in 2014, after the Islamic State group seized large areas of Iraq and Syria and committed mass atrocities. Although IS was declared defeated in Iraq in 2017 and Syria in 2019, coalition forces remained to help contain its remnants. Under a 2024 agreement between Baghdad and Washington, troops gradually withdrew from bases across Iraq before consolidating in the Kurdistan Region. The final pullout was scheduled for 30 September.</p>
+<p>The last contingent included about 1,500 coalition troops at Erbil Air Base, compared with roughly 2,500 personnel across Iraq before the drawdown. Pentagon spokesperson Sean Parnell said Iraqi security forces, including the Peshmerga, would now lead efforts to secure Iraq and combat remaining IS forces, with the United States continuing targeted training and intelligence support.</p>
+<p>Kurdish officials argue that this support does not replace the coalition’s operational capabilities. A 27 September statement from the Ministry of Peshmerga Affairs said Iraqi Kurdistan had endured more than 1,000 drone and ballistic-missile attacks since 28 February, causing casualties and significant material damage. The ministry urged Baghdad to protect the region’s airspace, while KRG Prime Minister Masrour Barzani said: “The threat is real – we are vulnerable, we are being attacked.”</p>
+<p>Canel, a 19-year-old Kurdish student at the American University of Iraq, Sulaimani, said the coalition’s presence had given residents a sense of safety. He feared that without its equipment, air power and intelligence, IS or another extremist threat could again endanger the region. Two Kurdish teenagers were killed on 27 September during clashes between IS cells and Iraqi Counterterrorism forces in Pirde, in Kirkuk governorate, prompting Kurdish protests.</p>
+<p>Baghdad maintains a more optimistic assessment. Iraqi Air Force Commander Lieutenant-General Khalid al-Tamimi said the air force could now operate independently, while Prime Minister Ali al-Zaidi declared that Iraq would assume full responsibility for its security and called 1 October “Sovereignty Day.” Kurdish officials and security experts dispute that readiness, citing continuing threats from IS, militias, armed groups and Iran-linked attacks. The Democratic Party of Iranian Kurdistan’s Hejar Berenji said ending the coalition mission would not itself end the danger, particularly because no replacement air-defence system is accompanying the withdrawal.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/we-are-vulnerable-kurds-fear-renewed-attacks-us-led-coalition-departs-iraq" target="_blank" rel="noopener noreferrer" title="Middle East Eye / ‘We are vulnerable’: Kurds fear renewed attacks as US‑led coalition departs Iraq">MEE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>The Teacher Is a Direction, Not a Destination: Extrapolating RL-Induced Representation Residuals in On-Policy Distillation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint proposes RIDE (RL-Induced Direction Extrapolation), a method for on-policy distillation that uses reinforcement learning’s effect on a model’s internal representations. On-policy distillation trains a student to match a teacher’s next-token distributions on the student’s own trajectories, while generalized versions try to surpass the teacher through output-space extrapolation. The authors argue that this approach can be unstable because changes in hidden states are attenuated unevenly by the language-model head, while noisy sampled-token log-probability ratios are amplified during extrapolation.</p>
+<p>RIDE instead measures the residual between an RL-trained teacher and its pre-RL base checkpoint at every layer and token position. It then trains the student toward targets displaced beyond the teacher along that residual, while a quadratic penalty limits deviation from the teacher. The authors describe this as maximizing a linear reward along the RL-induced direction under that constraint. Across four base/RL-teacher pairs covering different scales, architectures and pre-training lineages, RIDE reportedly approached or exceeded the RL-trained teacher on every pair and was the only evaluated method whose mean did so. It also consistently outperformed output-space extrapolation, which the authors say degraded students when the teacher remained close to its base.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.36484v1" target="_blank" rel="noopener noreferrer" title="arXiv / The Teacher Is a Direction, Not a Destination: Extrapolating RL-Induced Representation Residuals in On-Policy Distillation">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Rethinking Latent Visual Reasoning: Grounding Latent Reasoning in Visual Evidence</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A proposed training framework, ReaLVR, aims to improve latent visual reasoning in multimodal large language models (MLLMs). Latent visual reasoning performs intermediate computation in continuous tokens rather than expressing every step in words, but those tokens are difficult to supervise. The preprint identifies a “latent evidence-credit gap”: the tokens respond only weakly when image changes alter the correct answer. It hypothesizes that reinforcement training with a final-answer reward, including GRPO, gives too little guidance about which visual evidence to preserve and how credit should be assigned across tokens.</p>
+<p>ReaLVR applies visual-evidence supervision to models’ free-running latent trajectories. It contrasts correct answers with model-generated wrong answers to identify where stronger supervision is needed, then compares relevant and mismatched visual evidence to indicate what should be retained. Across three model families, the framework reportedly outperformed evaluated latent-reasoning baselines, reaching a highest five-task average of 63.7% on Qwen2.5-VL-7B. The preprint also reports improvements at model scales up to 235B, along with more question-sensitive latent-token positions, stronger alignment with relevant visual regions, and greater dependence on the most attended tokens in fixed-context analyses.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.34563" target="_blank" rel="noopener noreferrer" title="arXiv / Rethinking Latent Visual Reasoning: Grounding Latent Reasoning in Visual Evidence">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">UniEvo-VL is a preprint framework for multimodal models to improve themselves using self-correction feedback during test-time compute. It uses one model in two roles rather than a separate, potentially larger teacher: the student receives only the original question, while the teacher receives a privileged self-critique. Training then minimizes the divergence between their denoising-diffusion distributions along the student’s own sampling trajectories.</p>
+<p>Built on the open-source Qwen-image-2512 model, the reported experiments improved image-generation scores from 0.747 to 0.808 on GenEval and from 32.97 to 35.53 on GenEval2 Soft-TIFA. Experiments using more powerful external critics, including GPT5.6-Luna, suggest that models with stronger judging abilities may reach a higher self-improvement ceiling. However, the reported gains were not uniform: mixed text-rendering results indicate that self-improvement varied across tasks. The work is presented as a preprint and is not peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.38721v1" target="_blank" rel="noopener noreferrer" title="arXiv / UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An arXiv preprint identifies “co-cheating” as a failure mode in self-evolving search agents, which jointly optimize a proposer that generates questions and a solver that answers them. The researchers argue that the two can increasingly agree on shared errors, causing internal rewards to rise without corresponding improvements in external correctness. Audits against source evidence found co-cheating worsening over successive self-evolution rounds, while pseudo-label correctness stagnated or declined.</p>
+<p>The preprint evaluates multi-sample verification (MSV), which queries a model three times with the source and three times without it to screen tasks and replace unreliable pseudo-labels. MSV only partly reduced false agreement, leaving six additional labeler generations per candidate. The proposed CrossFit method instead splits source documents into groups A and B and has an auxiliary solver trained on one group evaluate questions generated from the other. In tests with Qwen3.5-4B and Qwen3.5-9B, CrossFit reduced false-agreement mass to 3.0% and 3.7%, compared with 5.7% and 7.2% for MSV. Source-excluded replay reduced it further to 0.4% and 0.1%. Across seven search benchmarks, CrossFit improved average performance over standard coupled self-evolution by 8.8 and 8.4 points, and over Search-R1 by 8.7 and 7.8 points, at 4B and 9B.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.39102" target="_blank" rel="noopener noreferrer" title="arXiv / False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint presents AREX-2, a framework for improving large-language-model agents through iterative refinement at test time. It defines self-improvement as producing better solutions over repeated rounds, combining reflection—generating an improved solution—with long-horizon execution that sustains useful iteration. The researchers synthesize improvement trajectories from machine-learning and algorithmic-programming tasks, where feedback can be verified and sustained progress rewarded.</p>
+<p>An agent built on Qwen3.8-27B achieved reported scores of 81.8 on MLE-bench Lite and 70.7 on Frontier-CS. The preprint also reports transfer to deep-research benchmarks: 84.0 on BrowseComp, 52.6 on HLE, 92.2 on GAIA and 93.8 on DeepSearchQA. Its performance continued to improve as the number of available rounds increased. The authors hypothesize that reflection and long-horizon execution are domain-agnostic and conclude that long-horizon reflective data is an effective route toward self-improving agents. These are preprint findings and have not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.38288" target="_blank" rel="noopener noreferrer" title="arXiv / AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Terminal agents can generate useful commands without executing them reliably: a poor action, such as installing the wrong package, may alter the environment and hinder later progress. A preprint introduces Mid-Harness, a method that samples and verifies candidate actions at the boundary between a model and its execution harness, then forwards one for execution while leaving the generator and harness unchanged.</p>
+<p>The study reports that additional sampling is most useful when verification is capable. With a TMAX-9B generator on TerminalBench-Lite, a GPT-5.6 Sol verifier increased Pass@1 from 50.00% for the base agent to 68.03% using eight sampled actions. When TMAX-9B performed verification itself, pairwise verification was the strongest of the evaluated mechanisms, and distilling responses from the stronger verifier further improved Pass@1 without changing the action generator. Combining action scaling with trajectory scaling also achieved higher success at lower estimated token cost than generating more trajectories alone, with improvements reported across additional models, benchmarks, and harnesses.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.39982" target="_blank" rel="noopener noreferrer" title="arXiv / Mid-Harness: Scaling Actions Between Model and Harness for Terminal Agents">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An arXiv preprint introduces EvoDuet, a bilevel optimization method designed to prevent evolutionary search with large language models (LLMs) from stalling when solutions require external knowledge. With model parameters fixed, the system co-evolves candidate solutions and web-search queries. A retrieval gate lets the LLM decide whether to fetch new documents, reuse stored ones, or proceed without retrieval. An inner loop refines queries and ranks documents by their predicted usefulness, while an outer loop generates candidates in parallel and records their evaluated outcomes for later searches.</p>
+<p>Across 21 optimization tasks using one candidate per iteration, EvoDuet increased OpenEvolve’s normalized discovery gain from 74.1% to 78.0% with GPT-5.6-Luna and from 61.3% to 82.3% with Gemini-3.8-Flash; Qwen3.5-9B did not benefit. The authors report that their best runs exceeded previously reported best scores on eight tasks, including Swap Reduction on Q20 and Rosetta, and matched them on three others. They also report improvements when EvoDuet was combined with other evolutionary-search scaffolds, including Top-K and EvoX, on Sums/Diffs and Denoising.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.40340" target="_blank" rel="noopener noreferrer" title="arXiv / EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_cs_ai" data-sources="arxiv">
+  <summary>WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces WorldAuditBench, a benchmark for testing multimodal agents that audit interactive 3D environments for anomalies such as floating objects, traversable walls and objects inconsistent with their surroundings. The benchmark contains 213 anomaly tasks across 13 environments built with Unreal Engine 5 and Three.js, covering five anomaly families. It is designed to assess whether agents can combine systematic navigation and exploration with visual reasoning to identify and validate potential problems.</p>
+<p>The study evaluates five frontier models under a fixed exploration budget using two approaches: VLA-based exploration followed by VLM-based anomaly identification, and an end-to-end VLM agent whose visual reasoning guides its actions. Across both paradigms, reported success rates range from 6.6% to 42.3%, compared with 83.4% for human performance. The authors present the benchmark as a testbed for studying how agents connect action with visual reasoning, while identifying limitations in their ability to gather and interpret evidence during exploration.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2609.40325" target="_blank" rel="noopener noreferrer" title="arXiv / WorldAuditBench: Interactive 3D World Auditing with Multimodal Agents">arXiv #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>Can pancreatic cancer be stopped in its tracks? Radical tactic raises hopes</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers are pursuing “cancer interception” for pancreatic cancer: detecting abnormal tissue early and treating it before it becomes invasive or spreads. The strategy could change outcomes for patients whose disease is usually found late, but its most promising evidence so far comes from early-stage monitoring and studies in mice.</p>
+<p>The approach gained momentum at the American Association for Cancer Research conference on pancreatic cancer in San Diego, held after the US Food and Drug Administration approved daraxonrasib (Rasonque) in August. The drug is currently approved only for advanced cancers, but its reported ability to suppress pancreatic tumours has encouraged researchers to consider using it earlier, potentially after surgery for precancerous growths or early-stage tumours.</p>
+<p>Early detection is central because pancreatic cancer often produces vague symptoms. More than half of cases are diagnosed only after the disease has spread to other organs, while five-year survival can exceed 80% when tumours are found early, Diane Simeone of the University of California San Diego Health said.</p>
+<p>Simeone’s PRECEDE clinical study aims to enrol 20,000 people with a family history of pancreatic cancer, certain pancreatic growths or genetic risk factors. It has enrolled slightly more than 12,000 so far, and more than 50 participants have been diagnosed, many at the earliest stages. Researchers are testing frequent monitoring, experimental blood tests and artificial-intelligence analysis of scans.</p>
+<p>Simeone said combining early detection with interception could raise five-year survival from 13.7% to 50%, a projection she described at the conference. Supporting the concept, Ben Stanger’s team found that a drug targeting cancer-promoting KRAS-related proteins improved survival in mice with tiny precancerous pancreatic growths. Stanger called the result exciting but said it could take years to determine how the strategy should be used in people.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-03119-7" target="_blank" rel="noopener noreferrer" title="Nature / Can pancreatic cancer be stopped in its tracks? Radical tactic raises hopes">Nature #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="nature">
+  <summary>The ‘missed disease’ that affects 190 million: endometriosis drug shows early promise</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers have modified niclosamide, a drug used against parasitic infections such as tapeworms, to target cells implicated in endometriosis and tested the treatment in mice. The study, published in *Advanced Healthcare Materials*, points to a possible non-surgical, non-hormonal approach for a painful chronic condition affecting around 190 million people. Endometriosis occurs when cells from the uterine lining grow outside the uterus, forming lesions that can cause severe abdominal and pelvic pain and fertility problems.</p>
+<p>Current treatment relies mainly on surgery, hormone therapy, or both. These approaches can have complications and may not work over the long term: nearly half of people who undergo surgery to remove lesions experience a recurrence within five years, while hormone therapies can prevent pregnancy and cause side effects including depression, hot flushes and osteoporosis. The researchers previously found that niclosamide reduced the growth of implanted endometrial tissue in mice, but the drug is poorly absorbed because it has low water solubility, meaning high doses can cause nausea, appetite loss and stomach cramps. Co-author Kanako Hayashi said the findings could be a breakthrough if replicated in people; molecular biologist Elise Courtois called the study a first step toward alternative therapies.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-03042-x" target="_blank" rel="noopener noreferrer" title="Nature / The ‘missed disease’ that affects 190 million: endometriosis drug shows early promise">Nature #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Alzheimer’s risk gene APOE4 may have a reversible weakness</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mount Sinai researchers have identified two ways APOE4 may damage the brain: by turning blood-vessel support cells into scar-producing cells and by disrupting the removal of abnormal proteins. The findings suggest that some disease processes may be reversible and offer a stem-cell-based platform for testing treatments.</p>
+<p>Two studies published in *Cell* and *Cell Stem Cell* examined how APOE4, the strongest known genetic risk factor for Alzheimer’s disease, may contribute to brain injury. Alzheimer’s gradually damages memory, thinking and behavior and affects more than 7 million older adults in the United States. Although deterioration of the brain’s blood vessels is especially common in people carrying APOE4, it has been unclear whether that damage merely follows the disease or helps drive it.</p>
+<p>For the *Cell* study, the researchers combined existing datasets to create a single-cell transcriptomic atlas of human brain blood vessels. The map showed gene-activity patterns across the cells that form and support the vascular system. It revealed that APOE4 altered pericytes, cells that normally stabilize small blood vessels and help maintain the blood-brain barrier.</p>
+<p>In the presence of APOE4, the pericytes changed into myofibroblast-like cells that produce scar tissue. The transformation promoted vascular fibrosis and increased amyloid buildup around blood vessels, changes that could interfere with blood flow and create conditions favorable to neurodegeneration. Blocking TGF-β signaling restored pericyte coverage and reduced fibrosis and amyloid around the vessels. The researchers reproduced this result in aged APOE4 mice, indicating that the vascular degeneration could be therapeutically reversed in those models.</p>
+<h3>A human tissue model reveals a second pathway</h3>
+<p>The second study used “miBrains,” three-dimensional human brain tissue created from induced pluripotent stem cells. The models contain neurons, glial cells, myelin-producing cells and blood-vessel cells, allowing researchers to observe disease-related processes in complex human brain-like tissue. The team compared miBrains with preclinical models, postmortem human brain tissue and transcriptomic data.</p>
+<p>APOE4-carrying miBrains developed higher levels of abnormal alpha-synuclein, a protein associated most strongly with Parkinson’s disease and Lewy body dementia. The researchers found that APOE4 caused cholesterol to accumulate inside astrocytes, support cells involved in brain maintenance. The excess cholesterol disrupted the cells’ lysosomal waste-disposal system, making them less able to break down alpha-synuclein. The protein then accumulated and spread to neurons, contributing to harmful deposits.</p>
+<p>The findings identify blood-vessel repair, TGF-β signaling, cholesterol metabolism and lysosomal function as possible treatment targets. Mount Sinai researchers say cryopreserved miBrains could improve the reproducibility and scale of drug testing, while patient-derived versions may eventually help study individual disease pathways and treatment responses. The results are laboratory and preclinical findings, not evidence that a treatment for APOE4-related disease is currently available.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260930225450.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Alzheimer’s risk gene APOE4 may have a reversible weakness">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>Caltech physicists finally measure a quantum energy ladder predicted 40 years ago</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Caltech physicists and collaborators have directly measured the discrete energy levels predicted by two conformal field theories, using laser-controlled atoms as a quantum simulator. The result experimentally tests a 40-year-old prediction about universal behavior at quantum critical points near absolute zero.</p>
+<p>When very different physical systems undergo major changes, their microscopic details can sometimes become less important, leaving the systems governed by the same mathematical rules. Physicists call this property universality and describe it using conformal field theory. The new experiment examined the Ising and tricritical Ising theories, which model behavior that can emerge when a quantum system reaches a critical point between more- and less-ordered states.</p>
+<p>Unlike familiar transitions such as water boiling, this transition is not driven by temperature. It arises from quantum effects at temperatures close to absolute zero. At the critical point, the system can be excited into a sequence of distinct energy states—an “energy ladder”—whose spacing should follow precise ratios calculated by the theories. Those levels had not previously been directly measured.</p>
+<p>The collaboration joined Caltech’s experimental group led by Manuel Endres with Jason Alicea’s theory group and theorists from Université Paris-Saclay and the Technical University of Munich. The researchers arranged strontium atoms in a line using optical tweezers, then used additional lasers to place them in highly excited Rydberg states. Strong interactions between neighboring atoms made the chain behave collectively rather than as separate particles.</p>
+<p>To reveal the ladder, the team developed a technique called many-body modulation spectroscopy. They gently changed the laser fields at selected frequencies and measured how strongly the atomic chain responded. Peaks in that response indicated the system’s energy levels, much as a wine glass resonates when disturbed at its natural frequency.</p>
+<p>The researchers repeated the measurements on chains of up to 35 atoms. After accounting for the system’s size, the Ising spectra collapsed onto a single universal curve, matching the theory’s prediction. They also tuned the system to the tricritical point and measured its lowest energy levels, finding the different ratios expected from the tricritical Ising theory.</p>
+<p>Because each atom could be controlled individually, the researchers classified excitations by their symmetry and exposed a second set of energy levels hidden in the initial measurement. They also changed the behavior at the ends of the chain, rearranging the ladder into patterns that matched further tricritical-Ising predictions.</p>
+<p>The team plans to extend the work from one-dimensional chains to two-dimensional grids. The researchers said this could enable studies of quantum systems whose behavior cannot yet be calculated precisely, including regimes beyond the reach of classical computers.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260928100554.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Caltech physicists finally measure a quantum energy ladder predicted 40 years ago">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>This common mistake can add nearly 7 points to your blood pressure reading</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Johns Hopkins Medicine-led study found that leaving a patient’s arm unsupported during an automated blood-pressure check can raise the systolic reading by about 6.5 mmHg, potentially shifting results across diagnostic thresholds and making hypertension appear worse than it is.</p>
+<p>Researchers compared three seated arm positions in 133 adults: the arm supported on a desk, supported on the patient’s lap, or hanging unsupported at the side. The study was reported in *JAMA Internal Medicine*. Participants were randomly assigned to different testing sequences, and measurements were taken under controlled conditions, including an appropriate cuff, five minutes of seated rest, supported backs and feet, and no talking or phone use.</p>
+<p>Compared with desk support, resting the arm on the lap overestimated systolic pressure by 3.9 mmHg and diastolic pressure by 4.0 mmHg. An unsupported arm produced larger differences: systolic pressure was overestimated by 6.5 mmHg and diastolic pressure by 4.4 mmHg.</p>
+<p>That gap could affect clinical interpretation. Study author Sherry Liu said an overestimate of 6.5 mmHg could turn a systolic reading of 123 into 130, or 133 into 140—the latter described as stage 2 hypertension. Tammy Brady, the study’s senior author, said arm position makes a “huge difference” to measurement accuracy.</p>
+<p>The researchers said the findings reinforce American Heart Association recommendations: the cuff should be correctly sized, the back supported, feet flat and uncrossed, and the arm supported at mid-heart level on a desk or table. They noted that blood pressure is often measured on exam tables where arm support is limited.</p>
+<p>The findings may apply only to automated devices and may not extend to other blood-pressure equipment. Because hypertension often has few noticeable symptoms and can raise the risk of heart attack and stroke, accurate measurement is important for diagnosis and management.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260928100606.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / This common mistake can add nearly 7 points to your blood pressure reading">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-section="science_general" data-sources="sciencedaily">
+  <summary>New “plant armor” more than triples strawberry yields</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A knitted, three-dimensional textile called Plant Armor helped strawberry plants produce up to 3.56 times more fruit than uncovered plants in tunnel field trials. Designed to sit directly over the plants, the fabric forms a barrier against insects while allowing sunlight, rain and air to pass through. Researchers found no reduction in light availability or harmful effect on relative humidity or plant health.</p>
+<p>The study found that the covering also created a steady warming effect across three growing seasons, helping the protected plants reach fruiting earlier. Gabriel Olawuyi, a North Carolina State University graduate research assistant and lead author, said the result was unexpected because the seemingly opaque fabric was expected to reduce light and shift plant growth toward leaves and stems rather than fruit. Researchers say the physical insect barrier could reduce reliance on conventional pesticides and may help lower water use. The paper, published in *Agriculture*, describes Plant Armor as technology that grew out of research on textiles designed to protect soldiers from mosquito bites and improve body-armor comfort.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/09/260930020257.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / New “plant armor” more than triples strawberry yields">ScienceDaily #1</a></div>
+  
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
