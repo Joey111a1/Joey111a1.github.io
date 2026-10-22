@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-10-22</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .story-group {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+    .related-stories {
+      margin-left: 16px;
+    }
+    .related-stories > h3 {
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-10-22</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-cluster-id="cluster-0139" data-section="global_front_page" data-original-section="global_front_page" data-sources="guardian">
+  <summary>Besieged Yemeni city on verge of ‘unmanageable’ crisis, aid workers warn</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The humanitarian crisis in Taiz, Yemen, is worsening as fighting and a blockade restrict water, fuel, food and medical supplies for more than 900,000 people. Aid workers warn that continued inaccessibility could bring deaths from hunger, illness and missile injuries across the city.</p>
+<p>Iran-allied Houthi forces have largely encircled Taiz, cutting most supply routes. Heavy fighting this week around the old airport has damaged a densely populated residential area. The conflict intensified after forces loyal to Yemen’s internationally recognised government and the Saudi-led coalition launched airstrikes on the Houthi-held airport in Sana’a in July, ending a ceasefire that had largely halted fighting since 2022.</p>
+<p>Fatma Jaffar, an Oxfam advocacy manager based in Yemen, said the city’s entrances were blocked, fuel had not entered for two or three weeks, and even residents with money could not reliably buy food. Hospitals were struggling to obtain medicines, while attempts to evacuate wounded people were blocked. Oxfam staff also reported sharply higher prices, including petrol rising from about $20 to $80 for a 20-litre container.</p>
+<p>The World Food Programme said wheat-flour reserves were nearly exhausted by mid-October. Waste was accumulating because it could not be removed, and Oxfam warned that disease could follow if the situation continued; this was a forecast, not a reported outbreak.</p>
+<p>The UN has called for humanitarian access. Donors have funded only 23% of this year’s Yemen relief programme, while Oxfam urged the UK to provide more aid.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/oct/21/besieged-yemeni-city-taiz-houthis-humanitarian-crisis-aid-workers" target="_blank" rel="noopener noreferrer" title="The Guardian / Besieged Yemeni city on verge of ‘unmanageable’ crisis, aid workers warn">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-cluster-id="cluster-0264" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Drone strike on market in disputed Sudan border region kills at least 153</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Sudan’s Abyei border region, a drone strike hit Amiet Market and a nearby fuel depot, killing at least 153 people, according to a local official. Yohanna Akol Ngor, caretaker information minister for the Abyei administration, blamed Sudan’s military for Monday’s attack north of Abyei town. Ngor told the Associated Press that the death toll was still rising while the fire continued to burn.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/africa/article/3371608/drone-strike-market-disputed-sudan-border-region-kills-least-153" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Drone strike on market in disputed Sudan border region kills at least 153">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0117" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>‘I never saw my son, until they handed him over in a bag’: inside El Salvador’s brutal crime crackdown</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">El Salvador’s long-running crime crackdown has left tens of thousands detained, including people whose families say they had no gang links. As authorities move toward mass trials, relatives and former prisoners describe deaths in custody, alleged torture, prolonged detention and a justice system unable to distinguish innocent people from the guilty.</p>
+<p>In December 2021, soldiers and police entered Sandra Carolina Velasco Mena’s home at midnight searching for her 22-year-old son, Jefferson Alexánder Hernández Velasco. She says officers indicated they were trying to fill an arrest quota. Hernández was taken away and later transferred to Cecot, the maximum-security prison, despite a judge ordering his release, according to his mother. She has not seen or communicated with him since.</p>
+<p>The arrest was part of President Nayib Bukele’s campaign against criminal groups. After an alleged government-gang truce appeared to collapse in March 2022, when gangs reportedly killed 87 people in three days, Bukele declared a nationwide state of emergency. An estimated 90,000 people have been arrested, while about 120,000 remain imprisoned—roughly 2% of the population. Human rights groups say tens of thousands had no proven gang connection.</p>
+<p>The policy has brought sharply lower homicide rates and greater security for many Salvadorans after years of gang control. But it has also produced severe reported costs. Cristosal says at least 513 people died in state custody during the emergency; Amnesty International says most were not convicted of crimes. Former detainees describe beatings, inadequate food and water, denied medicine and degrading conditions. Víctor Barahona, a journalist detained for nearly a year, says he lost 80 pounds and developed health problems in prison.</p>
+<p>Almost four years into the crackdown, authorities are trying hundreds of defendants simultaneously by video link. Human Rights Watch says defendants cannot properly consult lawyers, defence teams face obstacles to calling witnesses, and some witnesses and lawyers have been threatened. It also found police pressure to meet arrest targets, which allegedly encouraged accusations based on weak or fabricated evidence, particularly against people in poor neighbourhoods.</p>
+<p>Bukele acknowledged in 2024 that 8,000 detainees had been innocent and released, while rejecting human rights groups’ higher estimates of wrongful arrests. The emergency powers, initially presented as temporary, remain in force.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/global-development/2026/oct/21/el-salvador-crackdown-president-bukele-mass-arrest-allegations-torture-killing-prison" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘I never saw my son, until they handed him over in a bag’: inside El Salvador’s brutal crime crackdown">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0235" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="peoples_daily_en">
+  <summary>&quot;There is a medical approach that works&quot;: A New Practice of the China-Guyana Health Silk Road Seen Through the Bilateral Training Program</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">technology_and_ai_society</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A bilateral medical training program has begun in Georgetown, Guyana, bringing Chinese health officials, experts and more than 60 Guyanese trainees together around digital healthcare and workforce development. The initiative is presented as a move from building facilities to strengthening the people and systems needed to operate them.</p>
+<p>Sponsored by China’s Ministry of Commerce and co-organized by its International Business Officers Training Institute and Sinopharm International, the program was attended by Chinese Ambassador Yang Yang, Guyana’s Health Minister Anthony, Chinese health-company representatives and an expert team. Sinopharm described it as its first overseas medical training workshop of this kind.</p>
+<p>Yang said the initiative would support talent development and capacity building in response to digital changes in healthcare. China also expressed willingness to train more Guyanese professionals and improve coordination between staff, technology and facilities. Anthony highlighted digital technology’s potential to improve medical-service efficiency and management, and urged trainees to apply their learning in Guyana.</p>
+<p>The training is linked to six regional hospitals built by Chinese enterprises along Guyana’s coast and inland areas. The hospitals collectively provide 450 beds and equipment including CT scanners, digital X-ray systems and emergency devices, addressing a healthcare system previously described as heavily concentrated in Georgetown.</p>
+<p>The account says the hospitals have become operational and that the broader project combines construction with equipment, technical support and continuing staff training.</p></div>
+  <div class="source-list"><a href="http://health.people.com.cn/n1/2026/1021/c14739-40818888.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / &quot;There is a medical approach that works&quot;: A New Practice of the China-Guyana Health Silk Road Seen Through the Bilateral Training Program">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0076" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="cna">
+  <summary>&#x27;Nobody will call you&#x27;: The long road back after retrenchment for workers in their 50s</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Singaporeans in their 50s are taking longer to return to work after retrenchment, despite continued hiring and 1.48 vacancies for every unemployed person. Older jobseekers face financial pressure, reduced re-employment prospects and, in some cases, a shift from established careers to lower-paid or contract work.</p>
+<p>Francis Lee, 59, lost his director position at a multinational packaging company during restructuring. His employment ended in February 2025 after more than three decades mostly with one employer. Although he received severance and had savings, Lee said rising living costs meant he could not retire and that he wanted to keep working.</p>
+<p>He spent months applying for full-time positions and studying artificial intelligence, but obtained just one interview, through a former colleague, and no offer. He then tried taxi driving using a licence obtained as a contingency, but abandoned it because the hours, earnings and effect of prolonged sitting made the arrangement unsustainable. He later began offering workflow-automation services and training on a contract basis, establishing APAC Edge and seeking its first paying client and course participant.</p>
+<p>The Ministry of Manpower said resident workers aged 50 to 59 recorded the highest retrenchment rate among age groups in the April-to-June quarter: 3.6 per 1,000 workers. In June, unemployment in this group was 3.1 per cent and long-term unemployment was 1.2 per cent. Their six-month re-employment rate dropped to 41.9 per cent from 51.8 per cent in the previous quarter; the comparable figure for all age groups fell to 54.9 per cent from 60.7 per cent.</p>
+<p>Other cases show the range of outcomes. Rahmat Mohamad, 53, made more than 400 applications while retraining for information-technology work, then accepted a lower-paying logistics job after more than a year without work. Doris Lim, who lost her garment-merchandising role at 59, moved into biomedical manufacturing through a career-conversion programme, taking a 10 to 20 per cent salary reduction.</p>
+<p>Experts said formal courses may be less effective without workplace experience and professional contacts. The government is considering traineeships and fractional work for older employees, while the Workplace Fairness Act is scheduled to take effect in 2027 and will identify age as a protected characteristic.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/retrenched-workers-50s-older-work-find-jobs-6477801" target="_blank" rel="noopener noreferrer" title="CNA / &#x27;Nobody will call you&#x27;: The long road back after retrenchment for workers in their 50s">CNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0280" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>UN Experts Raise Concerns Over Meta’s Handling of Political Expression During Brazil Elections</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Wednesday, United Nations human rights experts raised concerns about restrictions on political expression in Brazil linked to Meta’s handling of its platforms during the presidential election. They warned that campaign accounts may have faced disproportionate limits and urged equal treatment for the candidates. The experts said such restrictions could affect freedom of expression, association, political participation and access to audiences, citing findings from international election observers.</p>
+<p>Observers reported temporary interruptions to Lula da Silva’s campaign account, reduced reach and engagement, limits on Instagram posts, and differences in feeds, views, search results, stories and political-content distribution that could benefit Flavio Bolsonaro’s campaign. They also reported suspensions, reduced visibility and sharing limits affecting journalists, human-rights defenders, civil-society groups and content creators. Brazil’s Superior Electoral Court had ordered Meta to apply the same rules to both candidates through the runoff, including for reach, recommendations and search results; the account also says the company was given 24 hours to demonstrate equal treatment. UN experts urged Meta to examine whether its moderation, recommendation and artificial-intelligence systems disproportionately restricted one side.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/un-experts-raise-concerns-over-metas-handling-of-political-expression-during-brazil-elections" target="_blank" rel="noopener noreferrer" title="Telesur English / UN Experts Raise Concerns Over Meta’s Handling of Political Expression During Brazil Elections">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0113" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="global_voices">
+  <summary>Palestine is already living under the Big Tech authoritarianism the world is being sold</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Palestinians are living with surveillance, data extraction, censorship and AI-assisted military systems that affect safety, communication and collective memory. The analysis argues that these tools are not speculative future risks: in Gaza, they have become part of systems used to classify, target and control people.</p>
+<p>Israel’s military and intelligence institutions, technology companies and investors are described as operating through an intertwined security industry. Investigations cited in the analysis associate systems including Lavender, The Gospel and Where’s Daddy with identifying and targeting Palestinians in Gaza. A presentation by Elbit Systems reportedly attributed 850,000 real-time intelligence targets across Gaza and Lebanon to one digital command system between October 2023 and the end of 2025; the company later said the figure represented aggregate system activity. Amnesty International and more than 100 signatories warned that such systems can obscure human responsibility for potential international crimes.</p>
+<p>The consequences extend beyond battlefield decisions. Palestinian speech has been restricted on platforms, while archives, cultural records and evidence of violence face destruction or removal. The analysis calls this broader loss of digital spaces “platformicide.”</p>
+<p>It also cites research showing that poisoned online material can steer AI assistants toward false answers, and reports that Israel awarded Clock Tower X a $46.5 million contract to shape chatbot-facing content about Gaza. Palantir and Babel Street technologies are additionally linked, by Amnesty, to monitoring migrants and people expressing support for Palestinian rights.</p></div>
+  <div class="source-list"><a href="https://globalvoices.org/2026/10/21/palestine-is-already-living-under-the-big-tech-authoritarianism-the-world-is-being-sold" target="_blank" rel="noopener noreferrer" title="Global Voices / Palestine is already living under the Big Tech authoritarianism the world is being sold">GV #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0175" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Gaza’s breast cancer patients face a deadly wait for treatment amid Israel’s genocide</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gaza’s breast cancer patients are waiting for radiotherapy, medicines and permission to leave for care unavailable in the enclave. For Najat Abu al-Sheikh, a February treatment deadline has passed; doctors say the delay increases recurrence risk, while thousands of other patients remain in limbo.</p>
+<p>In Gaza City, 46-year-old Najat Abu al-Sheikh is receiving targeted therapy at the partly destroyed al-Shifa Hospital after eight rounds of chemotherapy and a mastectomy. Diagnosed with stage-two breast cancer on 5 January 2026, she says she still needs radiotherapy abroad because it is unavailable in Gaza. She registered for medical evacuation in April but has not secured a place, despite doctors saying she should have left in February. Dozens of women are waiting for treatment in al-Shifa’s oncology department.</p>
+<p>The Palestinian health ministry estimates that about 11,000 cancer patients are struggling to obtain care. Physicians for Human Rights Israel says around 21,000 patients have been waiting to leave Gaza, with at least 1,570 dying while waiting, including 505 cancer patients and 264 children.</p>
+<p>Dr Mohammed Abu Nada of the Gaza Cancer Centre says more than 500 breast-cancer diagnoses were recorded in 2024 and 2025, though disrupted diagnostics mean the actual figure may be higher. Only three mammography machines remain, compared with about 15 before the war. Shortages of chemotherapy, targeted medicines, equipment and laboratory supplies have forced doctors to delay or alter treatment; Abu Nada says radiotherapy remains unavailable.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/gazas-breast-cancer-patients-face-deadly-wait-treatment-amid-israels-genocide" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Gaza’s breast cancer patients face a deadly wait for treatment amid Israel’s genocide">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0003" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>STF decides that ISS does not form part of the PIS/Cofins calculation base</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Brazil’s Supreme Federal Court (STF) ruled by majority on Wednesday the 21st that the Tax on Services (ISS) must be excluded from the calculation base for PIS and Cofins contributions. The decision ended a case pending before the court since 2008 and is expected to affect the federal government’s accounts by R$35 billion. The dispute arose from an appeal by a bus company challenging a Federal Court ruling that had upheld including ISS in the contribution base.</p>
+<p>The court held that ISS does not belong to companies’ revenue because it is collected for transfer to municipalities and the Federal District. It therefore passes temporarily through businesses’ accounts and cannot be included in the basis of contributions owed to the federal government. ISS applies to services including medical clinics, schools, events and technical assistance. The STF also formulated a legal thesis intended to govern similar cases pending nationwide, potentially changing how those disputes are decided.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-10/stf-decide-que-iss-nao-integra-base-de-calculo-do-piscofins" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / STF decides that ISS does not form part of the PIS/Cofins calculation base">AB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0075" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="cna">
+  <summary>Prabowo berates countries that &#x27;insult&#x27; Indonesia over wildfires</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Indonesia’s President Prabowo Subianto said at a Cabinet meeting on Wednesday, October 21, that Indonesia would eventually identify companies responsible for the wildfires if investigations establish violations. He said corporations bear much of the responsibility and ordered police, prosecutors, the Forestry Ministry, the armed forces and intelligence services to investigate the fires, which he argued were not entirely natural. He also said companies breaking the law could lose their licenses.</p>
+<p>The fires have continued for months, with Nusantara Atlas, an independent satellite-data monitor, estimating that they burned more than 1.9 million hectares in the nine months to September. The resulting haze has pushed air pollution to dangerous levels in Indonesia, Malaysia, Singapore and Timor-Leste, prompting ASEAN to convene a meeting. Prabowo’s remarks followed criticism from some neighbouring countries, although their leaders have also offered assistance. A Malaysian lawmaker recently called for Indonesia to be treated as a regional outcast. Experts attributed much of the fires to slash-and-burn land clearing, damaged forest cover and drained peatlands, with this year’s blazes intensified by severe El Niño-related drought.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/president-prabowo-berates-countries-insult-indonesia-wildfires-haze-6478676" target="_blank" rel="noopener noreferrer" title="CNA / Prabowo berates countries that &#x27;insult&#x27; Indonesia over wildfires">CNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0136" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>First a strip-search goes too far, then a boy is isolated in a cell … the former detainees who tell all-too-similar stories</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Former detainees across Australia are describing recurring allegations of sexual and physical abuse in youth detention, with survivors and advocates saying the consequences include lasting trauma, substance addiction and continued imprisonment. A psychiatrist who has spoken to up to 200 survivors says reports are increasing as more people break years of silence.</p>
+<p>Dr Sivasankaran Balaratnasingam says accounts often involve invasive strip-searches, isolation, and assaults during escorts to toilets. He says abuse has been alleged by other detainees, some staff and rehabilitation personnel, but most often by guards and custodial officers, particularly at night. These are allegations and survivor accounts, not findings against every institution or individual.</p>
+<p>A five-month investigation involving former detainees, lawyers and advocates describes claims spanning decades and affecting children disproportionately from Aboriginal and Torres Strait Islander backgrounds. Survivors say detention centres that were meant to rehabilitate them instead left them traumatised, struggling with drugs or alcohol, and caught between juvenile and adult prisons.</p>
+<p>The allegations are now reaching courts and inquiries. A 2023 Tasmanian inquiry found evidence of widespread sexual abuse and rape at the state’s youth detention centre, while class actions in Western Australia and Victoria allege sexual and physical assaults, forced isolation, unlawful strip-searches and inadequate support. In South Australia, a 73-year-old man with access to Magill youth training centre was charged last month over alleged abuse of dozens of detainees.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/ng-interactive/2026/oct/22/youth-detention-sexual-abuse-in-custody-allegations-australia-ntwnfb" target="_blank" rel="noopener noreferrer" title="The Guardian / First a strip-search goes too far, then a boy is isolated in a cell … the former detainees who tell all-too-similar stories">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0112" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="global_voices">
+  <summary>When Big Tech becomes a tool of state control in Kenya</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Kenya’s government is seeking greater leverage over X, TikTok and Meta by requiring them to establish physical offices in the country within three months, raising concerns about pressure on platforms and the online space used by protesters.</p>
+<p>The ICT Cabinet Secretary told the Senate that non-compliant platforms could lose operating approval. The government presents the demand as a child-safety measure, but the move could also give officials greater access to local staff and create opportunities to seek content removals without public scrutiny. For Kenyans who use social networks to organize and express dissent, the dispute could affect how freely political information circulates.</p>
+<p>The proposal follows a series of restrictions. During June 2024 tax protests, authorities shut down internet connectivity for about seven hours; OONI reported that at least three networks also blocked Telegram’s web version, with access restored the same day. During protests in June 2025, a communications authority ordered media organizations to stop live coverage, while Telegram was blocked again. Access Now said that action breached a High Court injunction protecting internet and Telegram access.</p>
+<p>The government has also pursued legal powers over digital access. President William Ruto signed amendments in October 2025 that expanded the National Computer and Cybercrimes Coordination Committee’s ability to make websites and applications inaccessible. Human Rights Watch said the law risked criminalizing legitimate speech; the Nairobi High Court later suspended key provisions and, by July 2026, declared the website-blocking powers unconstitutional.</p></div>
+  <div class="source-list"><a href="https://globalvoices.org/2026/10/21/when-big-tech-becomes-a-tool-of-state-control-in-kenya" target="_blank" rel="noopener noreferrer" title="Global Voices / When Big Tech becomes a tool of state control in Kenya">GV #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-cluster-id="cluster-0237" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China: Domestic &#x27;Auditory Brainstem Implant&#x27; Approved for Market, More Congenitally Deaf Children Will Have &#x27;Sound&#x27; Hope</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s National Medical Products Administration approved a domestically developed active Class III Auditory Brainstem Implant for market on the 20th. Developed by Professor Wu Hao and colleagues at the Ninth People’s Hospital affiliated with Shanghai Jiao Tong University School of Medicine, the device is intended for children with severe inner-ear malformations or an absent cochlear nerve, conditions in which cochlear implants cannot transmit signals to the brain. The development could provide an alternative for children who otherwise attend schools for deaf students.</p>
+<p>The implant places an electrode array on the brainstem’s cochlear nucleus, bypassing the cochlea and auditory nerve to stimulate central auditory neurons. The team began work in 2019, developing a 16-electrode array, a high-rate stimulation chip and a Chinese four-tone coding strategy; it also obtained five invention patents. In 2024, the team completed the implantation surgeries and follow-up for its clinical trial. It reported a 96.67% effective rate 12 months after activation, describing the result as a successful clinical trial of domestically produced auditory-brainstem technology. The market approval marks the transition from development and clinical testing to an approved intervention.</p></div>
+  <div class="source-list"><a href="http://health.people.com.cn/n1/2026/1021/c14739-40818566.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Domestic &#x27;Auditory Brainstem Implant&#x27; Approved for Market, More Congenitally Deaf Children Will Have &#x27;Sound&#x27; Hope">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0308" data-section="china_domestic" data-original-section="china_domestic" data-sources="xinhua_en">
+  <summary>China steps up efforts to build stronger emergency response system</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China plans to strengthen natural-disaster response and workplace safety during its 15th Five-Year Plan period, from 2026 to 2030, officials said in Beijing on Oct. 21. The stated aim is to better protect lives and property. Over the next five years, Vice Minister of Emergency Management Song Yuanming said China will improve disaster monitoring and early warnings, reinforce grassroots risk reduction, train emergency professionals, expand disaster research and develop practical response equipment using artificial intelligence.</p>
+<p>The workplace-safety measures include a proposed regulation defining major accident hazards, companies’ investigation duties and regulators’ accountability. Song said 31 government departments have so far issued 67 standards for identifying such hazards. In mining, Zhang Ruiting of the National Mine Safety Administration said China will strengthen accountability, pursue more preventive safety management and use digital technologies to improve safety and upgrade equipment for difficult environments. The measures build on recent use of high-tech tools: during this year’s flood season, drones, fiber-optic sensors and electromagnetic devices were used to inspect embankments for piping and seepage risks.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261021/1c0467427ca14f66934ba479947e64e1/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China steps up efforts to build stronger emergency response system">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0240" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Sichuan steps up protection of giant panda habitats through synergy of heritage site, national park</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sichuan Province in southwest China is coordinating its World Natural Heritage site and the Giant Panda National Park, created in 2021, to protect panda habitat and involve nearby communities. The park’s Sichuan area has rehabilitated 340,000 mu (about 22,667 hectares) and established wildlife links over a further 21,300 mu. Habitat is managed through 106 units, with satellite, aerial and ground surveys. In monitored areas, the recorded annual panda population increased from 178 to 185. Baoxing County, where 181 wild pandas are reported and over 81 percent of the territory falls within the park, has daily ranger patrols.</p>
+<p>Protection also covers more than 8,000 other rare species, including snow leopards, golden snub-nosed monkeys and dove trees. Field observations cited in the account include abandoned mines, retired small hydropower facilities and more connected ecological corridors. In Guanba village, roughly 30 percent of households participate in conservation or associated businesses; a honey cooperative reported that its buying price doubled after gaining permission to use the park’s brand. China’s captive panda population exceeded 800 by the end of 2025, up from fewer than 100, while Sichuan has released nine captive-bred pandas. Li Desheng said additional releases may strengthen the genetic diversity of wild pandas and help small wild populations.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/1021/c90000-20510820.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Sichuan steps up protection of giant panda habitats through synergy of heritage site, national park">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0231" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Investment push to fuel domestic demand</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China is preparing to increase effective investment and encourage greater private-sector participation to support domestic demand and stabilize economic growth in the fourth quarter, officials said Tuesday. The National Development and Reform Commission (NDRC) will lead the effort. Recent data showed fixed-asset investment declined 7.2% year on year in the first three quarters, while a 0.07% monthly increase in September ended a downward trend. Economist Luo Zhiheng said investment had improved slightly but remained weak overall.</p>
+<p>The NDRC plans to coordinate 109 projects in the 2026–30 Five-Year Plan and advance six infrastructure networks covering water, power, computing, communications, urban pipelines and logistics. The Ministry of Finance has allocated 250 billion yuan ($37 billion) in unused local-government bond quotas for investment, while the NDRC intends to accelerate deployment of 800 billion yuan through new policy-based financial instruments. Analyst Wang Qing forecast that infrastructure investment could return to growth before year-end, though it fell 4.2% year on year in the first three quarters. Officials also said recovery would depend on attracting private capital: projects offered to private enterprises in September represented 113.8 billion yuan in planned investment, with a target of 31.1 billion yuan from private investors.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/1021/c90000-20510757.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Investment push to fuel domestic demand">PDE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-cluster-id="cluster-0277" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="telesur_en">
+  <summary>China Condemns U.S. Legal Action Against Raul Castro</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China on Wednesday criticized U.S. legal action against former Cuban President Raúl Castro, 95, after Florida authorities obtained a state arrest warrant. Foreign Ministry spokeswoman Mao Ning said Beijing opposed using the courts to exert pressure on Cuba, supported Havana’s defense of its sovereignty and urged Washington to lift its blockade. She also accused the United States of infringing on the Cuban people’s ability to live and develop.</p>
+<p>Florida Attorney General James Uthmeier announced the warrant on Monday. U.S. authorities are seeking to prosecute Castro for alleged conspiracy to commit first-degree murder, linking him to the command structure behind the 1996 destruction of two civilian aircraft associated with “Brothers to the Rescue,” which killed four Florida residents. The state action follows a federal indictment filed last May; Castro has been retired from public life since 2021. Cuban President Miguel Díaz-Canel dismissed the case as a spectacle designed for political appeasement, while Foreign Minister Bruno Rodríguez described it as another effort by South Florida anti-Cuban politicians to increase pressure on Cuba.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/china-condemns-u-s-legal-action-against-raul-castro" target="_blank" rel="noopener noreferrer" title="Telesur English / China Condemns U.S. Legal Action Against Raul Castro">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0018" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>What happened during Witkoff and Kushner’s latest meeting with Putin</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russia’s President Vladimir Putin met US envoys Steve Witkoff and Jared Kushner in Saint Petersburg on Wednesday, as Moscow released American retiree Stephen Hubbard and agreed to resume US-mediated talks with Ukraine, while proposed security and leaders’ meetings remained prospective.</p>
+<p>Witkoff met Putin at Constantine Palace, while Kushner joined virtually; the two envoys have taken a leading role in the Trump administration’s negotiations. Their previous meeting with Putin was in Moscow in September.</p>
+<p>Putin agreed to restart US-mediated peace negotiations with Ukraine for the first time in months. A US official said Witkoff and Kushner proposed a technical-level trilateral meeting focused on security guarantees for Ukraine and Russia after the war, and said Ukraine accepted the proposal during talks with US officials in Oslo.</p>
+<p>The Kremlin said the new negotiations could take place in Abu Dhabi as soon as next month. That describes a possible venue and timetable, not an implemented agreement.</p>
+<p>The meeting also produced Hubbard’s release. The 74-year-old retired American teacher had been held in Russia for more than four years after being arrested in 2022 and sentenced on accusations of being a Ukrainian mercenary; the US said he was wrongfully detained, and he is headed home to his family.</p>
+<p>Witkoff’s praise of Putin as a humanitarian after the release drew bipartisan criticism from US lawmakers and human-rights activists.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/10/21/what-happened-during-witkoff-and-kushners-latest-meeting-with-putin?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / What happened during Witkoff and Kushner’s latest meeting with Putin">AJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0049-integrity-child-01" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">war_and_conflict</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A missile attack struck Kyiv, Ukraine, on Wednesday night, damaging several houses and injuring six people, according to Mayor Vitaliy Klitschko. The assault came hours after Russia said it was prepared in principle to restart peace talks and as US-led diplomacy sought a path toward ending the war.</p>
+<p>The attack followed a meeting in St Petersburg between Russia’s President Vladimir Putin and US envoy Steve Witkoff, who had met Ukrainian President Volodymyr Zelensky the previous day. Donald Trump said he believed negotiations were closer to ending the conflict than before, while Witkoff described the meeting as constructive. Jared Kushner, another Trump envoy, joined by video.</p>
+<p>The details of the proposals remain unclear. Zelensky said discussions had covered security guarantees for Ukraine and a possible ceasefire covering energy infrastructure. Putin aide Yuri Ushakov said the ideas presented were not particularly useful. Ushakov suggested another round of talks could take place around 10 November in Abu Dhabi, focused on postwar security arrangements for Russia and Ukraine.</p>
+<p>Zelensky said Ukraine would accept a deal freezing the conflict along the current front line as an initial step, with security guarantees addressed afterward. Russia, however, said Putin had told Witkoff that Russian forces were advancing across the front and held the strategic initiative. Ukraine and its European allies disputed that assessment, describing the battlefield as effectively stalled.</p>
+<p>The talks come after earlier three-way negotiations were paused in February. Since then, the source says, Russia intensified attacks while Ukraine faced shortages of Western-supplied missile interceptors. Kyiv has also accused Washington of withholding intelligence about incoming Russian ballistic missiles; US Secretary of State Marco Rubio rejected that accusation, while Zelensky later said intelligence sharing was functioning again.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0127" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>NSW passes ‘human compost’ laws with several MPs saying they will utilise practice after they die</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">New South Wales, Australia, has passed legislation creating a third legal option for handling human remains alongside burial and cremation. The bill, passed on Wednesday, was introduced by independent Sydney MP Alex Greenwich and supported in the legislative council by MPs including John Ruddick, Cameron Murphy and Dr Amanda Cohn. Ruddick said he expected to request terramation—also called natural organic reduction or human composting—in his will. The option will be voluntary.</p>
+<p>The process places a body in a temperature-controlled vessel with organic material such as alfalfa, straw or mulch. Air circulation and naturally occurring microbes drive decomposition, producing heat that can turn the body into soil in about 30 days, followed by roughly another month of resting. Greenwich told the legislative assembly that this results in approximately 110kg of soil. Animal Justice MP Emma Hurst said the practice could reduce the land required for burial and avoid the emissions associated with cremation, while Liberal MP Susan Carter urged safeguards to ensure the dead and grieving families are treated respectfully. The law gives the NSW government 18 months to establish regulations, and the practice will be restricted to specialised facilities.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/2026/oct/22/nsw-passes-human-compost-laws-with-several-mps-saying-they-will-utilise-practice-after-they-die" target="_blank" rel="noopener noreferrer" title="The Guardian / NSW passes ‘human compost’ laws with several MPs saying they will utilise practice after they die">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0071" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>Burnham defends Jackdaw decision as Badenoch urges PM to overturn ban on new oil and gas licences</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UK government approved production at the Jackdaw gas field in the North Sea on 21 October 2026, promising near-term supply and economic benefits while reviving arguments over household bills, energy security and climate commitments.</p>
+<p>Located 150 miles (241km) east of Aberdeen, Jackdaw is operated by Adura, a Shell–Equinor joint venture.</p>
+<p>Adura estimates the field could account for 6% of UK gas output, sufficient for 1.4 million homes; after imports, that would equal about 2% of national demand.</p>
+<p>Gas is due to travel to the Shearwater platform for processing before reaching the St Fergus terminal in Aberdeenshire.</p>
+<p>The government projects that the field’s 11-year operating period will bolster supply, support hundreds of jobs and contribute £2.9bn to the economy.</p>
+<p>Ministers said production could begin by the end of October and announced a £2bn initial fund for renewable and low-carbon projects, while Energy Secretary Miatta Fahnbulleh said Jackdaw would not reduce bills this winter.</p>
+<p>Kemi Badenoch pressed Labour to remove its prohibition on new oil and gas licences, while Andy Burnham defended the approval and said the previous Conservative government had mishandled the issue by overlooking climate duties.</p>
+<p>Environmental campaigners said the project would have little effect on energy security and hinder climate action; a decision on production at the Rosebank oil field off Shetland has not yet been made.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cy4zdgk081eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Burnham defends Jackdaw decision as Badenoch urges PM to overturn ban on new oil and gas licences">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0092" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="el_pais">
+  <summary>After the Constitutional Court’s ruling on the ‘grandchildren law,’ is the vote still suspended? Will they be able to participate on November 29?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Spain’s Constitutional Court has declined to lift the suspension affecting the electoral rights of about 163,000 naturalized Spaniards living abroad under the “grandchildren law,” leaving their participation in the November 29 general elections uncertain.</p>
+<p>The court rejected an amparo request from Defensor del Pueblo Ángel Gabilondo, saying it was premature to intervene while proceedings before the Supreme Court remain unresolved. The Supreme Court’s measure therefore remains in force: voting is suspended for affected people already registered in the Census of Electoral Residents Abroad, while registration is also suspended for eligible naturalized citizens who were not previously included.</p>
+<p>The rules distinguish between cases. People with consular certification showing that they are children or grandchildren of exiles who lost or renounced Spanish nationality may vote. Those who obtained nationality through a Justice Ministry instruction that broadly treated Spaniards who left the country between July 18, 1936, and December 31, 1955, as exiles may not.</p>
+<p>The Supreme Court said the restriction would remain until the circumstances surrounding the acquisition of nationality were clarified, prioritizing what it described as a census free of doubts over the voting rights of more than 160,000 people.</p>
+<p>Affected citizens can submit arguments in the Supreme Court case and seek consular certification. A further Constitutional Court appeal may follow after the Supreme Court considers those submissions. The Central Electoral Board is sending voting materials abroad with a warning that eligibility may be affected.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/elecciones-generales/2026-10-21/tras-la-decision-del-constitucional-sobre-la-ley-de-nietos-sigue-suspendido-el-voto-podran-participar-el-29-n.html" target="_blank" rel="noopener noreferrer" title="El País / After the Constitutional Court’s ruling on the ‘grandchildren law,’ is the vote still suspended? Will they be able to participate on November 29?">El Pais #1</a><a href="https://elpais.com/espana/2026-10-21/el-constitucional-rechaza-el-amparo-por-la-ley-de-nietos-con-el-voto-en-contra-de-dos-magistrados-progresistas.html" target="_blank" rel="noopener noreferrer" title="El País / The Constitutional Court rejects the Defensor del Pueblo’s appeal over the ‘grandchildren’s law’ and leaves the 160,000 Spaniards’ vote in limbo">El Pais #2</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0077" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="cnn">
+  <summary>From the dark fleet to Russian diesel, there are no ‘silver bullets’ for bringing down fuel prices</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Trump administration has launched several measures in the United States to ease historically high fuel costs before the midterm election, including aid for farmers, a proposed Russian diesel import, tax relief for truckers and a plan involving sanctioned tankers. Analysts say none is likely to quickly restore cheap fuel.</p>
+<p>Fuel prices have reached about $4 a gallon for gasoline and near-record levels for diesel, increasing pressure on farmers, truckers and drivers. In recent weeks, administration officials have announced an $8 billion one-time payment program for farmers, an executive order allowing truckers to use red-dyed diesel, and proposals to increase fuel supplies and reduce shipping costs.</p>
+<p>The farm aid responds to diesel prices rising from $3.76 a gallon nationally before the Iran war to $6.53 in late September. A typical Kansas farm spent about $31,000 on diesel last year, and that cost could double this year, according to agricultural economist Gregg Ibendahl. Payment rates will not be announced until next month, while Ohio State economist Gabriel Lade warned that the assistance may help some farmers more than others.</p>
+<p>The proposed Russian shipment would involve about 2.2 million barrels, compared with roughly 4 million barrels of daily US consumption including heating oil. Prices have risen slightly since the plan was announced. The tanker proposal also faces legal, insurance and repair obstacles, with analysts expecting limited impact.</p>
+<p>Energy analyst Bob McNally said the measures would not solve the underlying supply problem.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/10/21/economy/trump-oil-gas-diesel-election" target="_blank" rel="noopener noreferrer" title="CNN / From the dark fleet to Russian diesel, there are no ‘silver bullets’ for bringing down fuel prices">CNN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0110" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="folha,telesur_en">
+  <summary>US Supreme Court Rules Against Trump Administration and Allows Gender Transition for Trans Inmates</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The U.S. Supreme Court has left in place a lower-court order blocking the Trump administration from ending gender-affirming treatment for transgender people in federal prisons. The interim ruling means as many as 1,000 inmates diagnosed with gender dysphoria can continue receiving care while litigation proceeds.</p>
+<p>On Wednesday (21), the court rejected the administration’s emergency request to suspend the injunction. The unsigned order offered no explanation; Justices Clarence Thomas and Samuel Alito said they would have granted the request.</p>
+<p>The Federal Bureau of Prisons had adopted policies that would have ended hormone therapy and other medical care for transgender inmates. The policy has been suspended since June 2025, and the Supreme Court’s action keeps that suspension in effect for now. Nearly 800 of the roughly 1,000 inmates represented in the case are estimated by the American Civil Liberties Union (ACLU) to have been prescribed hormone therapy.</p>
+<p>The case began after three transgender people in federal custody challenged the rules. They had been diagnosed with gender dysphoria by prison health professionals and prescribed treatment. Their lawsuit argues that withdrawing the care would violate the Eighth Amendment’s protections against cruel and unusual punishment.</p>
+<p>The Justice Department said the decision is not final and plans to continue its appeal before the U.S. Court of Appeals for the District of Columbia Circuit. The broader litigation over the prison policy remains unresolved.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/10/suprema-corte-dos-eua-contraria-governo-trump-e-permite-transicao-de-genero-em-detentos-trans.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / US Supreme Court Rules Against Trump Administration and Allows Gender Transition for Trans Inmates">Folha de S.Paulo #1</a><a href="https://www.telesurenglish.net/us-supreme-rejects-trumps-bid-to-end-gender-affirming-care-for-trans-inmates" target="_blank" rel="noopener noreferrer" title="Telesur English / US Supreme Rejects Trump’s Bid to End Gender-Affirming Care for Trans Inmates">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0061" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>The &quot;trillion pound&quot; oil fund the government believes Britain could have built</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The United Kingdom announced an Energy Wealth Fund on Wednesday, with Chancellor John Healey saying £2bn would be redirected from the existing National Wealth Fund. The announcement accompanied approval for the Jackdaw gas project in the North Sea. Healey said proceeds from oil and gas produced now could be invested for future generations.</p>
+<p>The government’s “trillion pound” figure is a hypothetical estimate from internal Treasury modelling, not the value of an existing fund. It assumes the UK had invested £200bn in historical North Sea receipts, made no withdrawals and achieved growth comparable to Norway’s. Norway’s sovereign wealth fund is valued at about $2.4tn, while the UK’s national debt reached £3tn that week. The new British fund is intended to invest domestically in green energy rather than follow Norway’s overseas-investment model. North Sea production is expected to slow, and the government does not expect the initial £2bn to grow to £2tn by 2056.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cm4g1zrl2nrqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / The &quot;trillion pound&quot; oil fund the government believes Britain could have built">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0153" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="korea_herald">
+  <summary>Police seek arrest warrant for man over Seoul arson attacks that injured 19</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Korean police said Wednesday they had sought a formal arrest warrant for a man suspected of setting fires at two patent firms in Seoul’s Gangnam district on Tuesday. The suspect was detained hours later. Nineteen people were injured, including one who was taken to hospital in cardiac arrest. Police said he told investigators that he had bought two jerrycans, a lighter and flammable material near his western Seoul home. He allegedly claimed the firms had defrauded him with fake patent certificates and that he wanted to frighten them and publicize the matter.</p></div>
+  <div class="source-list"><a href="https://www.koreaherald.com/article/10910540" target="_blank" rel="noopener noreferrer" title="The Korea Herald / Police seek arrest warrant for man over Seoul arson attacks that injured 19">TKH #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0179" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Azerbaijan bans 31 Turks from entering country as headscarf ban dispute escalates</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Azerbaijan has barred 31 Turkish citizens from entering the country over social-media remarks that authorities allege threatened national security and promoted the forcible overthrow of President Ilham Aliyev’s government. The Azerbaijani Interior Ministry said those targeted also used violent rhetoric linked to religious radicalism. The list includes politicians, journalists and academics, including New Welfare Party chairman Fatih Erbakan, who criticized Aliyev after Israeli President Isaac Herzog met him in Baku last week.</p>
+<p>The restrictions further escalate a dispute between Azerbaijan and Turkey after Azerbaijan introduced a headscarf ban in primary and high schools last month, prompting protests in Turkey and a diplomatic crisis. Separately, Azerbaijan’s prosecutor general’s office said on Monday that a Baku district court had issued international arrest warrants in absentia for seven people living in Turkey who organized or attended demonstrations outside Azerbaijani diplomatic missions. The ministry said it would take additional measures against similar activities. The named individuals include conservative politicians, journalists, writers and religious figures; the supplied account does not state whether the entry bans or warrants have led to arrests or other immediate consequences.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/azerbaijan-bans-31-turks-headscarf-ban-dispute" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Azerbaijan bans 31 Turks from entering country as headscarf ban dispute escalates">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0054" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="axios">
+  <summary>United States: Democrats accuse Trump of using prosecution threats to pressure election officials</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Democrat-aligned groups, including the Democratic Congressional Campaign Committee, filed a lawsuit against the Trump administration in the United States on Tuesday. They allege that federal officials are using voter-fraud accusations and threats of prosecution to influence state election administration. The plaintiffs want a judge to rule the conduct unlawful and stop further intervention. Their complaint challenges demands that states examine federally supplied lists of alleged noncitizens and potentially exclude registered voters from casting ballots.</p>
+<p>The lawsuit points to disputed cases in Nevada and California. It says the Department of Homeland Security initially identified almost 16,000 supposed noncitizens on Nevada’s rolls, then reported confirming 185; state records, according to the suit, showed all 185 were citizens. It also alleges that the Justice Department asked California to withhold ballots from over 20,000 people on a federal list. A preliminary Los Angeles County inquiry found that more than one-quarter of those listed reported a U.S. birthplace, while some registrations had already been removed. The groups characterize warnings of imprisonment or prosecution as intimidation. The Justice Department said its election-integrity actions comply with federal law and that California declined to verify the people identified.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/10/21/trump-election-interference-lawsuit-democrats" target="_blank" rel="noopener noreferrer" title="Axios / Democrats accuse Trump of using prosecution threats to pressure election officials">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0106" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="el_pais">
+  <summary>An act by Abascal in A Coruña ends with police charges and antifascist youths wounded</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Santiago Abascal’s first pre-election rally in Galicia ended in A Coruña, Spain, with police charges, several young protesters injured and two arrests. The confrontation exposed sharply conflicting accounts of how violence began and left demonstrators, officers and nearby businesses affected.</p>
+<p>Abascal addressed supporters in María Pita square on Wednesday while about 5,000 people, according to the city hall, protested nearby. The march had been organized by Galiza Nova, the Housing Union and the Coordinadora da Mocidade Socialista. Police charges began after Abascal and his followers had left, and clashes then spread through central streets.</p>
+<p>The Government Delegation in Galicia defended the operation, saying officers moved against demonstrators who ignored instructions and threw street furniture and other objects. It said two people were arrested, including a member of the BNG’s youth organization, and that about a dozen officers were injured.</p>
+<p>Three young women who attended the rally but were not part of its organizing groups said riot police advanced on peaceful demonstrators, using shields, rubber bullets and tear gas. Organizers accused police of excessive force and reported multiple serious injuries. About 2,000 people later gathered outside the Government Sub-delegation to protest the operation.</p>
+<p>A Coruña’s Socialist mayor condemned the violence, supported those injured and said businesses had been affected, while blaming violent individuals for the disturbances. The BNG demanded explanations from Pedro Sánchez’s government and called the charges unjustifiable.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/galicia/2026-10-21/un-acto-de-abascal-en-a-coruna-acaba-con-cargas-policiales-y-jovenes-antifascistas-heridos.html" target="_blank" rel="noopener noreferrer" title="El País / An act by Abascal in A Coruña ends with police charges and antifascist youths wounded">El Pais #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0080" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="cnn">
+  <summary>Trump welcomes Britain’s decision to approve new North Sea gas field</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UK government has approved development of the Jackdaw gas field in the North Sea, 150 miles east of Aberdeen, Scotland. US President Donald Trump welcomed the decision, saying Britain should expand North Sea drilling in a Wednesday Truth Social post. The government said Jackdaw could begin supplying British homes and businesses by the end of this month, raise domestic gas production by about 6% at its peak, operate for up to 11 years, support hundreds of jobs and add an estimated £2.9 billion to the UK economy. Adura, the Shell and Equinor joint venture developing the field, said peak output could provide enough gas to heat about 1.4 million UK homes.</p>
+<p>The government also announced a £2 billion Energy Wealth Fund, funded by North Sea oil and gas tax revenues for renewable and low-carbon projects. Prime Minister Andy Burnham called the approval pragmatic, while environmental groups criticized its climate impact. Energy consultant Sam Street said Jackdaw would reduce import dependence only to a limited extent and would not materially lower household bills because UK prices remain linked to European and global liquefied-natural-gas markets.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/10/21/business/jackdaw-gas-field-uk-intl" target="_blank" rel="noopener noreferrer" title="CNN / Trump welcomes Britain’s decision to approve new North Sea gas field">CNN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0125" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>‘Huge moment’: long-awaited extension to Sydney’s metro line to open next week</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">technology_and_ai_society</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sydney’s south-west metro extension in Australia is scheduled to open on Friday 30 October, New South Wales Premier Chris Minns announced. The government says the first service will run at 4.31am, completing a continuous 66km driverless line from Tallawong in the north-west, through the central business district, to Bankstown. The opening is expected to end more than two years of replacement-bus use for commuters affected by the conversion of the former T3 heavy rail line, although pink buses will continue on the opening day and its first weekend.</p>
+<p>The extension will connect 10 former heavy-rail stations, including Marrickville, Canterbury, Lakemba and Bankstown, with the metro network. The government expects Bankstown-to-Central journeys to take 28 minutes, six minutes faster than before, and says the line will provide peak capacity for an additional 17,000 people. The opening follows delays involving regulator approval and the final safety data supplied by Sydney Metro to the Office of the National Rail Safety Regulator. Six of the line’s 360 doors will initially remain out of use at stations with the widest platform gaps while data is collected on mechanical gap-fillers.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/2026/oct/22/sydney-southwest-metro-extension-opening-friday-chris-minns" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘Huge moment’: long-awaited extension to Sydney’s metro line to open next week">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-cluster-id="cluster-0009" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="al_jazeera_en">
+  <summary>Canada wants to expand its LNG business. Critics raise red flags</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Canada is backing a $33bn expansion of LNG Canada in Kitimat, British Columbia, intended to double production, even as equipment problems have caused major gas flaring and residents describe noise, altered territory and worsening asthma. Critics also question the environmental and human-rights records of companies involved.</p>
+<p>LNG Canada began operations in mid-2025 as Canada’s first major export facility. In late September, it approved the expansion, with construction scheduled to begin immediately and five compressor stations added to Coastal GasLink, the pipeline supplying the plant. The federal government has placed LNG Canada and Ksi Lisims LNG on its major projects list, promising support for nationally significant infrastructure.</p>
+<p>The Kitimat facility has faced flaring problems since commissioning. A technical issue with its main flare stack led it to burn 350 million cubic metres of gas in 2025. Residents reported unusually loud flaring, changes to their home territory and reduced visibility of the night sky; one said a friend’s asthma had worsened after returning temporarily.</p>
+<p>Marc Lee of the Canadian Centre for Policy Alternatives said the government was prioritising investment and fast-tracking projects at the expense of environmental protection and community impacts. LNG Canada is owned by Shell, Petronas, Korea Gas, PetroChina and Mitsubishi, with Shell the largest shareholder. The expansion would increase gas flows through Wet’suwet’en territories, where the pipeline faced opposition from hereditary Indigenous leaders. Shell rejected criticism of its record in Nigeria, citing contested conditions including oil theft and sabotage.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/longform/2026/10/21/canada-wants-to-expand-its-lng-business-critics-raise-red-flags-2" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Canada wants to expand its LNG business. Critics raise red flags">AJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0089" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="dawn">
+  <summary>Canada: EA to shutter BioWare studio, cut jobs as it narrows game slate</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Electronic Arts plans to close BioWare’s studio in Edmonton, Canada, end development of an early-stage next *Mass Effect* project and lay off employees as it narrows its game slate, the company said in an email to staff. BioWare, the developer behind *Mass Effect* and *Dragon Age*, said its closure would end more than three decades of operations. EA also plans to cut about 400 jobs—roughly 3% of its workforce—including approximately 50 at BioWare, according to Bloomberg News, which cited a person familiar with the plans.</p>
+<p>EA said it would focus on fewer large-scale action-adventure games while continuing work on *Marvel’s Iron Man* and the next *Star Wars Jedi* title. It also plans to restructure the team developing the skateboarding simulation *skate* into a smaller studio. The company said it would help affected employees seek other roles within EA, but the evidence does not specify when the closures or job cuts will take effect.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2038817/ea-to-shutter-bioware-studio-cut-jobs-as-it-narrows-game-slate" target="_blank" rel="noopener noreferrer" title="Dawn / EA to shutter BioWare studio, cut jobs as it narrows game slate">Dawn #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0257" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="scmp">
+  <summary>BBC slashes 100 jobs, pulls channels amid ‘immediate cost pressures’</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The BBC, the UK broadcaster, announced more than 100 job cuts and the closure of two channels on Tuesday amid immediate cost pressures. BBC News director Rachel Jupp said an internal note described a net reduction of just over 100 roles, expected to save £5.5 million. The cuts form part of a broader plan under which the organisation is considering about 2,000 job reductions to help achieve £500 million in savings over the next two years.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/europe/article/3371572/bbc-slashes-100-jobs-pulls-channels-amid-immediate-cost-pressures" target="_blank" rel="noopener noreferrer" title="South China Morning Post / BBC slashes 100 jobs, pulls channels amid ‘immediate cost pressures’">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0172" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="middle_east_eye">
+  <summary>Gulf exports more oil than it did before Iran war despite surge in Hormuz attacks</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gulf countries exported 24.6 million barrels of oil per day in the week ending 18 October, above the 23.3 million bpd recorded before the US-Israeli war on Iran began on 28 February, according to energy analytics firm Kpler. The increase came as attacks on vessels in the Strait of Hormuz intensified: the United Kingdom Maritime Trade Operations recorded at least 12 attacks in the preceding week, and a fully loaded UAE-owned container ship sank after likely being struck by a projectile.</p>
+<p>The higher export total reflects workarounds rather than a return to normal Hormuz traffic. Gulf states are transferring crude from smaller vessels to very large crude carriers outside the strait, often using national fleets because of insurance costs and private operators’ safety concerns. More than one-third of shipments through Hormuz remain below prewar levels; Kpler estimated that 40% of non-Iranian Gulf crude bypassed the strait in September, compared with 17% before the war. Saudi Arabia has also used Red Sea routes and an alternative pipeline through Egypt. Longer voyages have increased demand for tankers, contributing to higher shipping costs, while Brent remained around $109 per barrel and refined-product prices, particularly diesel, rose.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/gulf-exports-more-oil-it-did-iran-war-despite-surge-hormuz-attacks" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Gulf exports more oil than it did before Iran war despite surge in Hormuz attacks">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0261" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="scmp">
+  <summary>The EU will ‘pull its punches’ on China despite growing trade war talk: analysts</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The European Union is likely to avoid a full-scale trade confrontation with China, a prominent research firm projects, citing divisions within the bloc and fears of retaliation. The assessment comes as speculation grows that the EU-China relationship is nearing a trade war. European policymakers have warned of a potential “China shock 2.0” and advocated stronger measures to shield domestic producers from Chinese competition, but the bloc is expected to respond cautiously rather than adopt its toughest possible trade measures.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/economy/china-economy/article/3371655/eu-will-pull-its-punches-china-despite-growing-trade-war-talk-analysts" target="_blank" rel="noopener noreferrer" title="South China Morning Post / The EU will ‘pull its punches’ on China despite growing trade war talk: analysts">SCMP #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-cluster-id="cluster-0140" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="guardian">
+  <summary>Government, popular websites go dark as developers race to patch newly-discovered vulnerability</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Government agencies in the Netherlands and Finland took websites offline as a precaution after two critical PHP vulnerabilities were disclosed, while operators elsewhere in Europe and beyond worked to protect their systems. PHP developers said Tuesday that they had identified the flaws and urged users to update, then announced Wednesday that a version fixing them was available.</p>
+<p>The shutdowns came amid reports that hackers were exploiting the weaknesses to break into websites. PHP supports large parts of the internet, prompting concern that a significant number of sites could be vulnerable to attack. The Netherlands and Finland acted before the fixed version became available. As background, related reporting said PHP underlies popular web-design platforms used by online stores, news outlets and government services.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/oct/21/us-russia-ukraine-putin-witkoff-zelenskyy-france-italy-protests-europe-latest-news-updates?page=with%3A6ad8c95d8f08356542e9ea9d#6ad8c95d8f08356542e9ea9d" target="_blank" rel="noopener noreferrer" title="The Guardian / Government, popular websites go dark as developers race to patch newly-discovered vulnerability">Guardian #1</a></div>
+  <div class="field-label">Context sources</div><div class="source-list"><a href="https://www.scmp.com/news/world/article/3371694/websites-go-dark-worldwide-ai-exposes-critical-security-flaws" target="_blank" rel="noopener noreferrer">SCMP #1</a></div>
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0267" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="scmp">
+  <summary>Websites go dark worldwide as AI exposes critical security flaws</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Government agencies and companies worldwide shut down websites on Wednesday after two critical PHP flaws came to light, involving a language that underpins a large share of the internet. The weaknesses potentially affect many kinds of sites, including online stores, news outlets and government services, because PHP supports popular web-design platforms. Related reporting said researchers found the bugs partly with an OpenAI model, presenting the discovery as an example of AI-assisted cybersecurity research.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/article/3371694/websites-go-dark-worldwide-ai-exposes-critical-security-flaws" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Websites go dark worldwide as AI exposes critical security flaws">SCMP #1</a></div>
+  <div class="field-label">Context sources</div><div class="source-list"><a href="https://www.axios.com/2026/10/21/php-openai-ai-bug-hunting-cyberattacks" target="_blank" rel="noopener noreferrer">Axios #1</a></div>
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-cluster-id="cluster-0170" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="middle_east_eye">
+  <summary>&#x27;There is no life left&#x27;: How volunteers buried 600 bodies in Sudan&#x27;s North Kordofan</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Fifty volunteers have collected and buried more than 600 bodies in Bara and nearby villages in Sudan’s North Kordofan state, while local sources say hundreds more remain exposed, leaving residents facing a grave sanitation emergency amid continuing cleanup efforts.</p>
+<p>Bodies were found along Bara’s streets, inside homes and public spaces, in surrounding villages and on the road to el-Obeid. Activists and volunteers involved in the retrieval told Middle East Eye that most of the dead were civilians; the remainder were fighters from the Sudanese Armed Forces (SAF) and the paramilitary Rapid Support Forces (RSF).</p>
+<p>The burials followed intense fighting in July, when the SAF retook the area from the RSF. Eyewitnesses and local resistance members accused the RSF of revenge killings and massacres around Bara. Those accounts were attributed to local sources. Volunteers said they had opened 200 mass graves and buried 400 other bodies, while further remains were reported in Geraigikh, Jabrat al-Sheikh and Umm Syala.</p>
+<p>Some bodies had decomposed or become skeletons after months outdoors, including those of children and older people. Volunteers wearing protective clothing and masks are continuing collection, cleaning and sanitisation. They said the accumulation of remains is associated with the rapid spread of an unidentified disease and that they still need fuel, gloves, disinfectant, bags and other supplies. The Sudanese Red Crescent and local health authorities provided some bags and containers, according to a volunteer.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/there-no-life-left-how-volunteers-buried-600-bodies-sudans-north-kordofan" target="_blank" rel="noopener noreferrer" title="Middle East Eye / &#x27;There is no life left&#x27;: How volunteers buried 600 bodies in Sudan&#x27;s North Kordofan">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0134" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="guardian">
+  <summary>to the Conversation After weeks of protests and a weekend of riots in which a town hall was set ablaze, 2,000-plus shops...</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">France is facing continuing social and economic fallout after weeks of protests and a weekend of riots. A town hall was set on fire, more than 2,000 shops were looted, 2,300 people were arrested and 1,000 police officers were injured. Allegations of police brutality emerged, while the unrest was linked to a debt sell-off and borrowing costs reportedly rising above Greece’s. The protests included 550,000 people demonstrating on Saturday.</p>
+<p>The crisis comes about six months before a closely contested presidential election. Europe correspondent Jon Henley put France’s national debt at 119% of gross domestic product, its highest level since 1946, and its budget deficit at 5.1%, among the highest in the European Union. He said the government had little financial room to relieve the cost-of-living squeeze. Columnist Paul Taylor argued that the violence could strengthen Marine Le Pen by encouraging a law-and-order backlash, although worsening finances might favor a candidate seen as stronger on security and fiscal policy. A Guardian editorial warned that the weekend’s disorder could foreshadow further conflict. France-based columnists Rokhaya Diallo and Alexander Hurst were scheduled to discuss the riots, their causes and the country’s political direction.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/oct/21/france-riots-protests-reader-questions-rokhaya-dallio-alexander-hurst?page=with%3A6ad7541e8f08ed94496495a5#6ad7541e8f08ed94496495a5" target="_blank" rel="noopener noreferrer" title="The Guardian / Welcome to the Conversation">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-cluster-id="cluster-0022" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Focused Omni-Modal GUI Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint proposes <strong>FocusGUI</strong>, an adapter for GUI agents that process streaming inputs such as screenshots, audio, video, interaction history and device states. It argues that feeding every modality into every decision can turn previously useful signals into distractions; because actions alter later context, these errors may accumulate into “Sequential Distraction” and cause trajectory drift. The proposed alternative, called Focused Perception, selects evidence according to each step’s decision needs.</p>
+<p>FocusGUI dynamically prioritizes multimodal channels, compresses relevant information into a compact latent representation and injects it into a frozen decoder’s embeddings without changing the decoder’s parameters. It is trained using action supervision alone, without modality-relevance labels or backbone fine-tuning. Across four omni-modal backbones, the preprint reports an average Type Match improvement of 33.2 points and a threefold Exact Match increase over the frozen backbones. It also reports a 30.1-point Type Match gain over the strongest existing enhancement method. These are preprint results rather than peer-reviewed findings.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.26203v1" target="_blank" rel="noopener noreferrer" title="arXiv / Focused Omni-Modal GUI Agents">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0034" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint presents Ropedia W0, a claimed first egocentric world foundation model for loco-manipulation spanning humans and robots with different embodiments. The researchers assembled Xp-Data with 10,000 hours of egocentric human footage and 3,000 hours of robot data, using unified multimodal annotations and quality control. Their representation models locomotion through camera poses and manipulation through projected skeletons, combining robot-specific forward kinematics with manually corrected keypoints.</p>
+<p>The work also introduces Xp-Teleop, a long-horizon benchmark built from dexterous humanoid teleoperation data. The authors report state-of-the-art results on five cross-embodiment benchmarks—DreamDojo, Ψ_0, ω-HOME, Xp-Teleop and AgiBot—as well as on held-out human egocentric video, covering zero-shot, few-shot and full-data post-training settings. They report that more human pre-training data improves both human and robot evaluations. After distillation, the model reportedly produces real-time rollouts lasting minutes for live virtual-reality interaction, with additional demonstrations in policy evaluation, model-based planning and world-action modeling.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.26855v1" target="_blank" rel="noopener noreferrer" title="arXiv / Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0029" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new method called Progress-Aligned Recurrence (PAR) is designed to help looped language models use additional test-time iterations to solve longer sequential state-tracking problems. It addresses two issues: final-answer training does not indicate what each intermediate iteration should represent, and repeated updates can alter the recurrent state’s scale. On the swap-S_5 task, a Qwen2.5-0.5B model trained on no more than 32 moves reached 95.5% mean full-state accuracy on 512 moves—16 times the training length. The reported result compares with 55.7% for RLT and 0.8% for explicit chain of thought using the same backbone.</p>
+<p>PAR trains iteration *k* to predict the state after the first *k* operations and anchors recurrent-state norms to those at the first iteration. Controlled S_5 tests reported that removing this norm anchoring reduced extrapolation to below 2.2 times the training length, while replacing progress-aligned targets with final-answer supervision limited it to at most eight times. The preprint also describes a learned readout that decides when to answer without a preset stopping depth, plus prefix self-distillation for settings without intermediate labels. It reports gains across sequential state-tracking tasks, while presenting the findings as support for jointly training intermediate predictions and state scale.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.27628" target="_blank" rel="noopener noreferrer" title="arXiv / PAR: Progress-Aligned Recurrence for Length Generalization in State Tracking">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0026" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>S-Agent 2.0: Spatial Reasoning with a General Coding Agent</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">S-Agent 2.0 is an arXiv preprint proposing a spatial-reasoning agent for questions about objects’ locations, relationships and movement in 3D. It equips a general coding agent with a command-line perception toolkit so a vision-language model can gather scene evidence, retain it in persistent memory and interpret readings as spatial conclusions. The design aims to address cases where perception tools obtain relevant evidence but the model fails to use it correctly.</p>
+<p>On MMSI-Bench and ReVSI, the authors report gains over the same agent without tools of 13.9 and 20.5 points for Qwen3.8-27B, and 11.2 and 9.6 points for Gemini-3.8-Flash. S-Agent 2.0 scored 66.5 and 82.3 with the open model, exceeding SpatialClaw’s 62.6 and 74.5, while the Gemini configuration scored 74.1 and 90.5 versus 67.0 and 79.7. The reported tool gains narrowed with more capable backbones, but less sharply than SpatialClaw’s on ReVSI. The system also operated through coding-agent harnesses including Codex and Claude Code.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.28354v1" target="_blank" rel="noopener noreferrer" title="arXiv / S-Agent 2.0: Spatial Reasoning with a General Coding Agent">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0038" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Sage-A1.5 preprint introduces a 35B Mixture-of-Experts agentic model built on A1 for long-horizon problem solving through adaptive capability composition. It claims the model can organize work and revise its approach during execution, rather than only solving individual tasks. The proposed system uses task delegation and parallel collaboration among subagents with separate contexts, allowing complex work to be divided and pursued concurrently.</p>
+<p>The report identifies three areas of improvement: orchestration, verification, and open scientific discovery. Its verification approach includes checking progress, validating evidence, and changing strategy when a search path proves unproductive. The model is also presented as capable of exploratory research beyond predefined questions, combining interactive analysis with inspectable research artifacts. The authors say they demonstrate these capabilities through complex agentic tasks and multidisciplinary scientific applications, and propose Sage-A1.5 as an accessible foundation for collaborative, verifiable scientific exploration. These are claims from a preprint and have not been presented here as peer-reviewed findings.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.28578v1" target="_blank" rel="noopener noreferrer" title="arXiv / Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0027" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>VLA-Rolling: Fewer Denoising Steps, Better Control via Adaptive Action Reuse</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Flow-matching vision-language-action models repeatedly denoise Gaussian noise to produce action chunks, then execute only an initial portion before replanning. A not-yet-peer-reviewed arXiv preprint introduces VLA-Rolling, which preserves the unused “tail” of each chunk instead of discarding it and restarting from fresh noise. The method combines tail inheritance, per-action confidence estimates, and confidence-guided choices about renoising and denoising budgets, without changing the underlying VLA model.</p>
+<p>Tests involving π_0.5, SmolVLA, X-VLA, and MolmoAct2 across LIBERO, MetaWorld, LIBERO-Plus, and RoboTwin 2.0 found lower action-chunk inference cost in all 16 model–benchmark combinations. The authors report speedups of up to 1.48 times and higher success rates in 14 combinations, with gains reaching 15.08 percentage points. Their results indicate that partially denoised action tails can be reused to produce control actions with fewer denoising steps, although the best budget varies between samples and must be adapted to updated environments.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.25043v2" target="_blank" rel="noopener noreferrer" title="arXiv / VLA-Rolling: Fewer Denoising Steps, Better Control via Adaptive Action Reuse">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0036" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces CoEvo-RSI, a framework for recursive self-improving agents whose language models and execution harnesses evolve together. It addresses a “brain–body” mismatch: a changing harness may require behaviors the model has not learned, or constrain abilities it already has. The framework uses a shared archive of earlier designs and execution feedback. A meta-agent develops harnesses from those designs, selects or merges model checkpoints, and adapts the chosen model to the resulting harness.</p>
+<p>In experiments, the researchers report that Qwen3.5-9B, trained only through supervised fine-tuning on rejection-sampled trajectories, was competitive with larger models in multi-agent failure attribution, role-aware text-to-SQL, and smart-home instruction following. They report gains over DeepSeek-V4-Pro on TraceElephant, where agent accuracy was 14.16 points higher, and over GLM-5.3 on HomeBench VM, with a 4.90-point increase in success rate. These are results claimed by the preprint; the evidence identifies it as not peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.25078v1" target="_blank" rel="noopener noreferrer" title="arXiv / CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0028" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Learning the 4D World through Point Trajectory Forecasting</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The proposed Video-Point Model (VPM) uses synchronized videos from multiple cameras and a language instruction to predict future views from arbitrary angles alongside the 3D paths of persistent scene points. Its camera-aware architecture combines information across viewpoints and adds a trajectory component that follows each physical point through time, linking visual changes in different cameras to a shared motion representation.</p>
+<p>For training and evaluation, the work introduces VPM-Data, a simulated dataset pairing multi-view footage with point trajectories, and VP-WorldBench, a benchmark covering simulated and real settings. VPM is also adapted for robot control by representing actions as tokens generated jointly with future video. The preprint reports that point-based supervision outperforms a video-only version on video fidelity and 3D-motion accuracy across VP-WorldBench and existing 4D-generation benchmarks; simulated and real-robot tests also showed higher manipulation success for the action-enabled model.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.28594v1" target="_blank" rel="noopener noreferrer" title="arXiv / Learning the 4D World through Point Trajectory Forecasting">arXiv #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-cluster-id="cluster-0183" data-section="science_general" data-original-section="science_general" data-sources="nature">
+  <summary>To heal sick cities, scientists and residents must work together</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tolullah Oni’s UrbanBetter combines local data collection, scientific analysis and civic advocacy to address urban health risks in cities including Lagos, Nairobi, Bogotá and Bangkok, where pollution, heat, transport and inadequate infrastructure affect residents’ daily lives.</p>
+<p>In 2016, while jogging in Dakar, Oni saw a man exercising in a traffic roundabout surrounded by vehicle fumes and intense heat. The scene reinforced her view that urban environments must be treated as public-health systems. More than half of the world’s population lives in cities, yet many lack measurements of air quality, temperature, green space, energy use and waste—information needed to identify risks and guide responses.</p>
+<p>Oni, a University of Cambridge researcher, argues that residents must help diagnose their own cities rather than leaving decisions to distant experts. She founded the non-profit UrbanBetter in 2019 to connect research with action. Its UrbanBetter Academy supports research, while Cityzens Hubs operate in 11 African cities and in Bogotá and Bangkok. The organization trains residents and local researchers to gather and analyse evidence that can support advocacy.</p>
+<h3>From local measurements to policy</h3>
+<p>In Nairobi in 2025, Cityzens participants collected air-pollution data and held a community assembly that proposed cleaner public transport, more trees and green spaces, and reduced open burning. Their recommendations contributed to Nairobi City County’s air-quality action plan.</p>
+<p>In Lagos, residents ran the marathon route monthly in the lead-up to the 2025 Lagos City Marathon, using air-quality sensors and a mapping app. Some recorded a 60% fall in pollution on race day, when cars were kept off the roads. The findings informed transport-policy changes involving walking, cycling, public transport and air-quality monitoring.</p>
+<p>Heat then became a priority identified by the Lagos hub. In 2025, UrbanBetter, local partners and the Lagos Transport Authority received a £2-million Wellcome grant for Hotsteppers, a project examining heat exposure and health risks.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-03161-5" target="_blank" rel="noopener noreferrer" title="Nature / To heal sick cities, scientists and residents must work together">Nature #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0254" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Rejuvenation breakthrough: Scientists reverse 60 years of aging in human cells</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers in Germany have converted blood-cell precursors from an 80-year-old person into neural stem cells whose molecular age markers resembled those of someone younger than 20. The result could help scientists study cellular aging and neurological diseases, but it does not demonstrate that aging can be reversed in people.</p>
+<p>Researchers at the University Hospital of Bonn, the University of Bonn and RWTH Aachen University reprogrammed immature red blood-cell precursors directly into neural stem cells. These cells can develop into brain-related cell types. The approach used transcription factors—proteins that alter which genetic instructions a cell follows—to change the cells’ identity.</p>
+<p>The team bypassed the pluripotent stem-cell stage used in some earlier reprogramming methods. Instead, the conversion unfolded gradually and was tracked for more than 100 days. The researchers reported that molecular-age markers fell sharply, with rejuvenation of roughly 60 years highlighted after about 50 days.</p>
+<p>To assess the change, they examined epigenetic clocks: patterns of chemical modification on DNA that tend to shift as cells age. These modifications do not change the DNA sequence, but influence how genes are used. Cells taken from the 80-year-old participant eventually showed age signatures associated with people under 20. Professor Oliver Brüstle said the researchers also observed characteristics associated with younger cellular behavior.</p>
+<p>The gradual process gives scientists a way to observe rejuvenation as it happens rather than only comparing cells before and after a rapid reset. The Bonn researchers said the model could help identify molecular pathways involved in aging and test substances that might accelerate or slow the process.</p>
+<p>The work may be particularly useful for studying neurodegenerative diseases, including Alzheimer’s, because age is a major risk factor for such conditions. However, the evidence described concerns laboratory-grown cells and molecular markers, not a treatment for an older person or proof that a human body has been made younger. The findings were reported as published in *Aging Cell*.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261020085013.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Rejuvenation breakthrough: Scientists reverse 60 years of aging in human cells">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0255" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>A massive asteroid slammed into the North Sea and unleashed a 330-foot tsunami</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers led by Uisdean Nicholson of Heriot-Watt University say they have resolved the long-running debate over the Silverpit Crater beneath the North Sea, identifying it as the remnant of an asteroid impact whose modeled tsunami exceeded 100 meters and whose preserved geology could improve understanding of impacts on Earth and other worlds.</p>
+<p>The crater lies about 700 meters beneath the seabed, roughly 80 miles off Yorkshire, and is approximately three kilometers wide. Scientists first identified it in 2002, but competing explanations included underground salt movement and volcanic activity rather than an extraterrestrial collision.</p>
+<p>The new research combines improved seismic imaging, microscopic analysis of rock cuttings from an oil well near the crater, and computer simulations. The researchers report finding shocked quartz and feldspar at the same depth as the crater floor. They say these minerals contain pressure-related structures that ordinary geological processes generally cannot produce, providing the physical evidence they regard as decisive.</p>
+<p>Their reconstruction indicates that an asteroid about 160 meters across approached from the west at a shallow angle and struck the seabed 43–46 million years ago. The impact is modeled as having thrown rock and seawater about 1.5 kilometers upward before the material fell back into the North Sea, generating a tsunami more than 100 meters high.</p>
+<p>The wave height is a simulation-based estimate, not a direct observation. The findings, reported as published in *Nature Communications*, place Silverpit among the relatively small number of confirmed impact craters on Earth. Its buried and comparatively well-preserved structure offers researchers an opportunity to examine how a high-speed ocean impact fractured and reshaped the seabed—evidence that is usually erased by erosion, sedimentation or tectonic activity.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261020085727.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A massive asteroid slammed into the North Sea and unleashed a 330-foot tsunami">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0256" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>A train was delayed by a solar storm. But something didn&#x27;t add up.</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A historical investigation has corrected the date of a train delay in Exeter, England, once described as an 1841 disruption caused by solar activity. The event occurred in 1848, researchers say, refining the early record of space weather’s effects on electrical technology and its continuing risks to infrastructure.</p>
+<p>The incident took place during the 1840s, as telegraph networks and railway systems were expanding. A 1871 account in *Nature* described a magnetic disturbance on October 18, 1841, that interfered with railway signals and delayed a scheduled 10:05 p.m. train by 16 minutes. If accurate, it would have been the earliest known example of space weather disrupting technology.</p>
+<p>Researchers led by Lancaster University found that the account’s date could not be right: the Exeter-to-Starcross railway line mentioned in it did not open until 1846. The international team, which included scientists from RMIT University, the British Geological Survey, Natural Resources Canada, Baylor University and RAL Space, re-examined the historical record.</p>
+<p>They compared railway timetables and newspaper coverage with records of solar activity, auroras and Earth’s magnetic field. Those sources pointed to October 18, 1848—seven years later—as the date of the Exeter disruption. The finding resolves the mismatch between the reported event and the railway’s construction timeline.</p>
+<h3>An early warning about technological vulnerability</h3>
+<p>The corrected incident remains one of the earliest credible cases of solar activity affecting technology, but it is no longer considered the first. The researchers identify an earlier documented episode of telegraph interference on Britain’s Midland Railway in March 1847.</p>
+<p>Space weather occurs when activity on the Sun disturbs Earth’s magnetic field. Such disturbances can generate unwanted electrical currents and interfere with systems connected to electrical or satellite networks. The study links the Exeter delay to a period when emerging communications technology first began exposing everyday infrastructure to these effects.</p>
+<p>The researchers say the historical evidence also provides perspective on present-day risks. Modern systems are more advanced, but power grids, railway signalling, satellite navigation and communications remain susceptible to strong solar disturbances. The investigation’s authors argue that combining archival records with scientific observations can help reconstruct past events and improve understanding of hazards that may affect increasingly interconnected infrastructure.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261020085021.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A train was delayed by a solar storm. But something didn&#x27;t add up.">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0251" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Astronauts’ hearts just passed a surprising test for Mars</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A study of 13 astronauts who spent about six months aboard the International Space Station found that their hearts adapted to prolonged weightlessness and showed no major strain during a ground-based simulation of Martian gravity, offering evidence relevant to future crewed Mars missions.</p>
+<p>Researchers from Northwestern Medicine, UT Southwestern and UT Houston tracked the astronauts’ hearts before, during and after their missions using echocardiograms—ultrasound scans that measure cardiac structure and performance. During the first two weeks in space, cardiac filling and stroke volume declined, meaning the hearts temporarily filled with and pumped less blood per beat. Those measures later improved toward preflight levels.</p>
+<p>The astronauts exercised for up to two hours daily under NASA’s Exercise Countermeasures program, including endurance and resistance training. The researchers say this demanding routine helped preserve cardiovascular function as the body adapted to microgravity, where the heart and muscles no longer work against Earth’s full gravitational pull.</p>
+<p>After the missions, the team tilted each astronaut upward by 22 degrees from a lying position to shift blood toward the lower body and approximate some circulatory effects of Martian gravity. Mars has about 38% of Earth’s surface gravity. In the test, the astronauts’ hearts performed as well as they had while standing on Earth before launch, with no significant cardiovascular strain reported.</p>
+<p>The findings, published in *Circulation*, address a key concern for a Mars journey: whether astronauts can transition from months of weightlessness to a weaker gravitational environment. The study is an exploratory observational investigation involving a small group, and its gravity test was a simulation rather than an actual Mars landing. Still, senior author James Thomas said the results provide reason to think astronauts could reach Mars and work on its surface.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261020085016.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Astronauts’ hearts just passed a surprising test for Mars">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0253" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>NASA’s Perseverance Mars rover just shattered the all-time off-world driving record</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">attributed source material (republished)</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">NASA’s Perseverance rover has traveled farther on another world than any vehicle before it, reaching 28.10 miles on Mars while heading toward ancient terrain that could preserve evidence about the planet’s past environments and potential habitability.</p>
+<p>On October 11, Perseverance’s odometer reached 28.10 miles (45.22 kilometers), exceeding the 28.06-mile (45.16-kilometer) record set by NASA’s Opportunity rover. Opportunity operated on Mars from 2004 to 2018 and took nearly 15 years to reach its total; Perseverance covered the distance in five and a half years, on its 2,006th Martian day, or sol.</p>
+<p>The rover set the record while traveling toward Idubi through Lac de Charmes, an area beyond the western rim of Jezero Crater. NASA says the region may contain some of the oldest terrain examined in the solar system. At Idubi, scientists are looking for signs of ancient hydrothermal systems—places where heated water circulated through rock and may have created conditions suitable for life.</p>
+<p>Perseverance’s pace has been aided by AutoNav, its autonomous driving system. The rover photographs its surroundings, builds three-dimensional maps of obstacles and selects routes between destinations chosen by mission controllers. NASA says AutoNav has evaluated more than 90% of Perseverance’s driving distance, compared with about 5% for the autonomous systems used by Opportunity and Spirit. The rover can travel as far as 1,351 feet (412 meters) in one Martian day.</p>
+<p>The mileage milestone supports a broader scientific goal: reaching more geological formations and sampling different environments. Perseverance has collected 29 rock and regolith samples from the crater floor, an ancient river deposit and the crater rim. NASA has approved an extension running approximately through the end of 2028, during which the rover is expected to continue along the rim and later head toward the 100-meter-wide Rainbow Falls formation.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261020084818.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / NASA’s Perseverance Mars rover just shattered the all-time off-world driving record">ScienceDaily #1</a></div>
+  
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        for (const group of reportSection.querySelectorAll('.related-stories, .story-group')) {
+          group.hidden = !Array.from(group.querySelectorAll('details.story')).some(story => !story.hidden);
+        }
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
