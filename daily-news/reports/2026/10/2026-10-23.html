@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-10-23</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .story-group {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+    .related-stories {
+      margin-left: 16px;
+    }
+    .related-stories > h3 {
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-10-23</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-cluster-id="cluster-0001" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>Brazil: BPC avoided 571 thousand deaths and 13 million hospitalizations in 30 years --&gt; Each percentage point increase in BPC coverage reduced hospitalizations by 2.9%, deaths by 0.6%, says the preprint version of a study</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preliminary, not-yet-peer-reviewed study from the Barcelona Institute for Global Health (ISGlobal) estimates that Brazil’s Continuous Cash Benefit (BPC) prevented 571,000 deaths and 13 million hospitalizations in the Unified Health System over 30 years. The government benefit, created in 1996, provides a monthly minimum-wage allowance to low-income people aged over 65 and people with disabilities. The study’s authors report that each percentage-point increase in BPC coverage was associated with 2.9% fewer hospitalizations, 0.6% fewer deaths and 3.9% fewer disability-adjusted life years lost.</p>
+<p>The research, signed by 13 scientists including Daniella Medeiros Cavalcanti of the Federal University of Rio Grande do Norte and the Federal University of Bahia, also estimates a 5% reduction in mortality among children aged zero to four for each percentage-point increase in BPC beneficiaries. It attributes this effect to grandparents’ caregiving role in poorer households and reports broader health improvements among children in beneficiary families. The study further estimates that each Brazilian real invested in the program avoided R$3.81 in government spending. About 6.6 million people currently receive BPC, according to Brazil’s Ministry of Development and Social Assistance.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-10/bpc-evitou-571-mil-mortes-e-13-milhoes-de-internacoes-em-30-anos" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / BPC avoided 571 thousand deaths and 13 million hospitalizations in 30 years --&gt; Each percentage point increase in BPC coverage reduced hospitalizations by 2.9%, deaths by 0.6%, says the preprint version of a study">AB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0295" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>UN Warns El Niño Could Be Off the Scale, 3.8°C Above Average</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UN World Meteorological Organization warned Wednesday that Pacific sea-surface temperatures could reach 3.8°C above average between November 2026 and January 2027, a projection Celeste Saulo described as beyond the monitoring range used over four decades. UN humanitarian coordinator Tom Fletcher said intensifying El Niño conditions could bring heat, drought and flooding across Latin America, Africa, Asia and the Pacific, with food insecurity potentially reaching 50 million people worldwide.</p>
+<p>The warning focused on communities with weak farming systems and limited infrastructure, while Saulo said extreme weather was already occurring and could increase as the phenomenon strengthens. Fletcher also announced $50 million from the UN emergency fund for 11 vulnerable countries, while WMO and the humanitarian office called for coordinated financing before the worst damage.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/un-warns-el-nino-3-8c-above-average" target="_blank" rel="noopener noreferrer" title="Telesur English / UN Warns El Niño Could Be Off the Scale, 3.8°C Above Average">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0002" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>Anvisa approves new medication for advanced lung cancer</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Brazil’s health regulator Anvisa has approved Emrelis (telisotuzumabe vedotina) for adults with non-squamous non-small-cell lung cancer that is locally advanced or metastatic, has wild-type EGFR and high c-Met expression, and has progressed after systemic treatment. The drug targets c-Met on tumor cells and delivers monomethyl auristatin E inside them, triggering cell death, according to the agency.</p>
+<p>Anvisa said the approval relied mainly on a study of previously treated patients. Emrelis produced an objective response in 29.2% of the overall evaluated population, rising to 34.5% among those with high c-Met overexpression; the agency described these responses as durable and clinically meaningful in a setting with few treatment options. The regulator also said non-small-cell disease represents about 85% of lung-cancer cases, while the non-squamous subtype accounts for roughly 70% of cases. Separately, Anvisa approved Poherdy (pertuzumab) for metastatic and certain early-stage HER2-positive breast cancers, including use with trastuzumab and chemotherapy in specified treatment settings.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-10/anvisa-aprova-novo-medicamento-para-cancer-de-pulmao-avancado" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Anvisa approves new medication for advanced lung cancer">AB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0060" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="bbc">
+  <summary>Newborn twins fight for survival as conflict fuels Yemen&#x27;s hunger crisis</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Seven-week-old premature twins from Yemen’s Kahboub mountains are receiving emergency treatment for severe acute malnutrition after fighting forced their family to flee to Aden, exposing how displacement, rising food costs and overstretched hospitals are endangering civilians.</p>
+<p>Raghad Hassan and her brother Raad were born as fighting intensified between Houthi forces and government forces. When the Houthis reached their village in south-west Yemen, their family of seven fled amid bombs, missiles and drone attacks. They walked for three days toward Aden before a stranger gave them a lift on the fourth day.</p>
+<p>Their mother, Lina, said the twins weakened during the journey in cold and dusty conditions, while vomiting and diarrhoea worsened. By the time they reached al-Sadaqah hospital, both had been diagnosed with severe acute malnutrition. Raad was in the more serious condition, struggling to breathe and unable to keep down fortified milk. Their father, Bajash Ali Sagir Hassan, said they were fed twice daily, but that he sometimes had only water to give them after war-driven price rises made baby milk unaffordable.</p>
+<p>The family arrived homeless. Bajash, a shepherd, had left 10 sheep behind when they fled, losing his livelihood. His three other children, all under five, spent a night outside the hospital because there was nowhere for them to sleep.</p>
+<h3>A hospital short of space and resources</h3>
+<p>Staff at the hospital’s malnutrition unit said it has 22 beds but admits only 13 patients at a time, prioritising the most critical cases. They cited shortages of international funding, staff and equipment, including ventilation machines and oxygen supplies. A supervising nurse arranged for the twins to share one bed when two beds were unavailable.</p>
+<p>Doctors said children frequently return soon after discharge because their families cannot afford adequate food, vitamins or antibiotics, or private treatment. The United Nations says about 800,000 people have lost access to lifesaving aid and more than 250,000 have been displaced over the past three months. It also estimates that half a million Yemeni children will suffer severe acute malnutrition this year.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cr5ynl63v0pyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Newborn twins fight for survival as conflict fuels Yemen&#x27;s hunger crisis">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0298" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Colombian President Dismisses Interior Minister Over Budget Failure</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Colombian President Abelardo de la Espriella removed Interior Minister Rodrigo Lara on Thursday after lawmakers failed to reconcile the 2027 budget. The Senate and House of Representatives had passed differing texts before the constitutional deadline, leaving the government unable to complete the measure through Congress. The administration will instead enact the budget by decree. The national plan totals 634.9 trillion pesos ($201.14 billion), with less funding for institutions linked to the peace accord and more for debt payments and defense.</p>
+<p>Complaints about the decree say it reduces allocations for public health, subsidies supporting vulnerable people and programs for senior citizens. Senator Esmeralda Hernandez blamed procedural irregularities and mistakes during the legislative debate for the breakdown. The government says direct enactment is needed to maintain state operations. Alejandro Ordoñez, a former attorney general and ambassador to the Organization of American States, has been selected to replace Lara; Justice Minister Ivan Cancino will oversee the Interior Ministry temporarily while the appointment is completed. Ordoñez was attorney general from 2009 to 2016 and is identified as a leading conservative figure.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/colombian-president-dismisses-interior-minister-over-budget-failure" target="_blank" rel="noopener noreferrer" title="Telesur English / Colombian President Dismisses Interior Minister Over Budget Failure">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0043" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="atlantic">
+  <summary>What the U.S. Is Really Doing in Venezuela</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">After a U.S. military operation removed Nicolás Maduro, Washington began working with successor Delcy Rodríguez while controlling sales of Venezuelan oil, gold and other minerals—an arrangement whose promised benefits remain unclear amid polluted waters, failing infrastructure and an opaque legal framework.</p>
+<p>On Lake Maracaibo, the consequences are already visible. Fisherman Carlos encountered an oil slick, gas smells and bubbles that he identified as signs of a leaking pipeline; raw oil threatened his boat’s engine. His team caught about 30 pounds of fish that morning, but fishermen must sell their catch quickly because unreliable electricity makes refrigeration difficult. Oil has blackened beaches, stained nets and damaged livelihoods around the lake, while billions of dollars may be needed for cleanup and further extraction.</p>
+<p>The U.S. role follows President Donald Trump’s January 3 announcement that American oil companies would invest heavily and that Venezuelans would be the main beneficiaries. At the same time, he said he would work with Rodríguez, a senior figure in the previous government. The reporting describes local skepticism: residents say daily conditions have not improved, while some fear the United States will take Venezuela’s resources without helping its people.</p>
+<p>The arrangements remain difficult to trace. Six people from Venezuela’s oil industry and academia struggled to explain how the new and revised deals work. Economist Ricardo Hausmann said constitutional parliamentary approval had not been obtained.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/magazine/2026/12/trump-oil-venezuela-exploitation/689033" target="_blank" rel="noopener noreferrer" title="The Atlantic / What the U.S. Is Really Doing in Venezuela">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0084" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="cnn">
+  <summary>A small but powerful African nation is bringing Formula 1 back to the continent. Not everyone is celebrating</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Rwanda is due to host Formula One’s return to Africa under a 10-year agreement beginning in the early 2030s, a proposed event that could bring investment and jobs but has prompted scrutiny of human-rights safeguards and Rwanda’s disputed links to fighting in neighboring Democratic Republic of Congo.</p>
+<p>The race would be held at a circuit planned for Bugesera, roughly 40 kilometers south of Kigali, within a development project led by the Rwanda Development Board. It would be called the Formula 1 African Grand Prix and promoted through Visit Rwanda. Construction must be completed before racing can begin, and Formula One has not set an inaugural date.</p>
+<p>President Paul Kagame’s government presents the event as a way to increase tourism, business and local skills. F1 chief Stefano Domenicali described the agreement as a landmark, while F1 says its teams, partners, media and spectators could generate benefits for Rwanda. The announcement does not state how the circuit will be financed, what returns are expected or how it will be used between races.</p>
+<p>Human Rights Watch has warned about risks to journalists and vulnerable residents, citing restrictions on opposition, independent media and dissent, as well as earlier detentions of homeless people and street vendors before major events. It called for risk assessments, consultation with civil society and safeguards; F1 has not confirmed those measures.</p>
+<p>UN experts said they had documented alleged Rwandan military backing for M23 in eastern DRC, which Rwanda denies.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/10/22/africa/formula-1-rwanda-africa-sportswashing-concerns-intl" target="_blank" rel="noopener noreferrer" title="CNN / A small but powerful African nation is bringing Formula 1 back to the continent. Not everyone is celebrating">CNN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0171" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>The antimemes law was approved in San Lázaro</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Chamber of Deputies approved a bill at San Lázaro containing reforms to the Federal Penal Code and the Federal Law on Protection of Industrial Property. Opposition lawmakers called it the “antimemes law,” while the majority bloc defended the measure as a way to combat piracy and fraud involving altered institutional emblems. The evidence identifies the vote as occurring the previous night but does not provide details on implementation, penalties, or its further legislative status.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/10/22/politica/008n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / The antimemes law was approved in San Lázaro">LJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0167" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Mexico: UN Committee Admits Progress, but 120,000 Still Missing, Notes</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Mexico, Juan Pablo Albán Alencastro, president of the UN Committee on Enforced Disappearance, acknowledged reported progress in locating 16,000 disappeared people in 2026, while qualifying it with “if it is true.” He said the progress presented by the Mexican state last Tuesday would reflect families’ persistence and activation of the procedure under Article 34 of the relevant international convention. The account’s headline said 120,000 people still remain missing.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/10/22/politica/012n3pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / UN Committee Admits Progress, but 120,000 Still Missing, Notes">LJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0163" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Activists will challenge end of criminal prosecution against Francisco Garduño</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Civil organizations supporting families of migrants who died and survivors of the March 27, 2023 fire at an National Institute of Migration (INM) shelter in Ciudad Juárez, Chihuahua, are challenging a decision by federal judge Víctor Hernández. The judge deemed the conditions imposed to extinguish the criminal action against Francisco Garduño valid, ending prosecution of the agency’s former head. The available account does not specify the legal grounds or next procedural step.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/10/22/politica/014n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Activists will challenge end of criminal prosecution against Francisco Garduño">LJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0091" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>Two killed as bus hits three-wheeler on Dhaka-Aricha highway</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A bus and a battery-powered three-wheeler crashed near Barangail bus stand on Bangladesh’s Dhaka–Aricha highway in Manikganj’s Shibalaya upazila yesterday. Two passengers died and two others sustained critical injuries. The deceased were Yasin, 20, and Babul, 28, residents of Mahali village in Ghior upazila. One died at the scene, while the other later died in a local hospital; the injured victims were being treated there.</p>
+<p>Md Harun-or-Rashid, officer-in-charge of Barangail Highway Police Station, said the bus was travelling toward Paturia from Dhaka when it struck the three-wheeler, which was travelling toward Barangail from Aricha. Following the crash, local residents halted traffic on the highway, reportedly leaving between 200 and 300 vehicles stranded from 9:30am until 11:30am. Police are investigating, he said.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/accidents-and-fires/news/two-killed-bus-hits-three-wheeler-dhaka-aricha-highway-4305546" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Two killed as bus hits three-wheeler on Dhaka-Aricha highway">TDSB #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-cluster-id="cluster-0240" data-section="china_domestic" data-original-section="china_domestic" data-sources="xinhua_en">
+  <summary>China issues revised administrative measures for outbound investment</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China has unveiled revised rules for outbound investment that will replace its 2017 framework from December 2026, expanding the stated role of domestic enterprises, individuals and other organizations while strengthening reporting intended to help investors respond to overseas risks.</p>
+<p>China unveiled the measures in Beijing on Oct. 22, with the National Development and Reform Commission (NDRC) releasing the framework. It is scheduled to take effect on Dec. 1, 2026, replacing rules enacted in 2017.</p>
+<p>The NDRC said the revision responds to rapid expansion in outbound investment and rising risks in a more complex global environment. Under the revised approach, domestic enterprises, individual residents and other organizations are affirmed as principal participants in outbound investment.</p>
+<p>The measures also improve reporting for major adverse events and large overseas reinvestment projects, with the stated aim of protecting outbound investors’ rights and interests and helping them manage overseas risks. The revision forms part of China’s broader effort to promote higher-quality outbound investment.</p>
+<p>The change comes as China’s outbound investment has continued to grow. Ministry of Commerce data cited in the announcement put the country’s outbound investment stock at nearly $3.4 trillion by the end of 2025, keeping China among the world’s top three investors for nine consecutive years. The ministry also reported $128.62 billion in outbound direct investment during the first three quarters of 2026.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261022/d9c0e10a5f384e1dabad1070357a494c/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China issues revised administrative measures for outbound investment">XNA #1</a><a href="https://english.news.cn/20261022/7bc1cee44ec84fd4973dfe35781609d7/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China issues revised administrative measures for outbound investment">XNA #2</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0232" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China steps up efforts to build stronger emergency response system</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China plans to expand natural-disaster preparedness and workplace-safety measures during its 15th Five-Year Plan, covering 2026-2030, officials said in Beijing on Oct. 21. Over the next five years, authorities will improve monitoring and early warnings, strengthen risk reduction at the grassroots level, train emergency-management professionals, expand disaster research, and develop practical equipment using artificial intelligence.</p>
+<p>The workplace-safety program includes a proposed regulation defining major accident hazards, companies’ investigation duties and regulators’ accountability. Song Yuanming, vice minister of emergency management, said 31 government departments had issued 67 standards for identifying such hazards. In mining, officials plan stronger accountability, more preventive safety management, and wider use of digital technologies and upgraded equipment. The measures build on recent use of drones, fiber-optic sensors and electromagnetic devices to inspect embankments for piping and seepage risks during this year’s flood season.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/1022/c90000-20511285.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China steps up efforts to build stronger emergency response system">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0046" data-section="china_domestic" data-original-section="china_domestic" data-sources="atlantic">
+  <summary>China’s Economy Has a Huge Weakness</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s manufacturing surge is masking worsening profitability at home: more Chinese industrial firms are losing money, while state support keeps uncompetitive companies operating. The resulting debt, weak demand and dependence on overseas markets expose China—and its trading partners—to mounting economic and trade pressure.</p>
+<p>Capital Economics estimates that 30% of Chinese industrial firms are loss-making this year, double the share in 2018. Profits at 5,400 companies listed on Chinese stock exchanges fell for a third consecutive year in 2025, as excess capacity, weak domestic demand and price wars squeezed margins.</p>
+<p>Local governments and state-controlled banks continue to support troubled businesses through loan rollovers, tax breaks, subsidies and bailouts, partly to preserve jobs and meet economic targets. The OECD found that Chinese industrial firms received as much as eight times more state assistance than firms in other major economies between 2005 and 2024. The source argues that this support keeps capital tied up in unproductive companies and has helped push nonfinancial-sector debt above 300% of GDP.</p>
+<p>With Chinese consumers constrained by an unstable job market and falling property prices, manufacturers are seeking growth abroad. Yet exports bring new risks: Chinese automakers sold nearly 80% more cars overseas in August than a year earlier, while their profits fell 16%. Tariffs and other trade barriers could further strain companies already reliant on state backing and foreign demand.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/international/2026/10/chinese-companies-profit-problem/689088" target="_blank" rel="noopener noreferrer" title="The Atlantic / China’s Economy Has a Huge Weakness">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0238" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Medical and Health Field &quot;Double Exhibition&quot; Opens in Beijing</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Beijing, two major medical and pharmaceutical trade fairs were held together from October 21 to 24, bringing medical-device, medicine, rehabilitation and elder-care companies before an expected 200,000-plus professional visitors. The event also showcased treatments, supply-chain activity and Shunyi’s push to attract further investment.</p>
+<p>The 94th China International Medical Equipment Fair and 93rd PharmChina occupied nearly 270,000 square meters at the China International Exhibition Center’s Shunyi Hall and the CAPE. Shunyi’s 200-square-meter pavilion featured more than 30 local pharmaceutical companies and nearly 100 products, presenting the district’s industry and its investment opportunities.</p>
+<p>A medical-device display highlighted what staff described as the world’s smallest heart pump. They said it had received its first domestic application and had helped save a high-risk coronary patient, offering another treatment option. A neighboring exhibit focused on access to rare-disease medicines; the exhibition information said 31 clinical-need and rare-disease drugs had secured import clearance, benefiting nearly 9,000 patients.</p>
+<p>The event also served as a platform for Shunyi’s broader pharmaceutical strategy. Wang Zhengquan of the Beijing Capital integrated economy zone authority said the district was using the fairs to connect with companies and attract projects. The source reported that Shunyi’s pharmaceutical import and export volume had exceeded one trillion yuan for three consecutive years, while 26 large innovative-drug companies and 18 innovative medical-device enterprises had gathered in the district.</p></div>
+  <div class="source-list"><a href="http://health.people.com.cn/n1/2026/1022/c14739-40819601.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Medical and Health Field &quot;Double Exhibition&quot; Opens in Beijing">PDE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-cluster-id="cluster-0242" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="politico">
+  <summary>Ukraine’s foreign fighters battle Russians — and red tape</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jordan O’Brien, a New Zealander serving in Ukraine, says administrative failures are exposing foreign troops to fines, uncertain residency and weak support. The problem has become urgent as a November 10 deadline approaches, potentially placing some foreign defenders in illegal status while Kyiv relies on them for manpower.</p>
+<p>O’Brien has fought for Ukraine since Russia’s full-scale invasion, including in the 2022 liberation of Kherson and the 2024 fighting around Kursk. He says mistakes in military contracts from three Ukrainian units blocked his residency application and resulted in an immigration fine. He now advises other foreigners not to enlist unless the system changes. Russia has sentenced him in absentia to 14 years for fighting alongside Ukraine.</p>
+<p>Under a law passed by Ukraine’s parliament last year, foreign service members must submit documents by November 10 to obtain temporary residence permits. Deputy Defense Minister Liubov Halan has warned that many could otherwise be treated as unlawfully present. That prospect conflicts with recruitment guidance saying a military contract establishes the basis for long-term legal residence.</p>
+<p>The issue affects a large and growing group. Ukraine’s Defense Ministry said that, in August, about 16,000 citizens of 72 countries were serving in its armed forces, whose total strength was about 900,000. The recruitment rate has risen from roughly 100 foreigners per month in 2022 to 600 now, with about 40% arriving from Latin America.</p>
+<p>Problems extend beyond immigration paperwork. Ukraine’s military ombudsman’s office has received more than 300 complaints this year concerning combatant recognition, contract termination and medical treatment. Foreign personnel have also reported pay and supply problems, while many struggle to obtain the UBD document needed to access veteran status and associated protections. Language barriers and the conversion from paper to digital military records have added complications.</p>
+<p>Families face difficulties when volunteers disappear or are killed. More than 10% of ombudsman complaints concern confirmation of a fighter’s status; some relatives have reportedly learned of deaths through comrades or social media before receiving official notice. They may then have to deal separately with military, diplomatic and compensation processes.</p>
+<p>Kyiv has started a Defense Ministry working group on legalization, service conditions and family support. Parliament is considering measures to simplify the process and lengthen the deadline. The ombudsman’s office says legalization difficulties are not widespread, while identifying especially vulnerable personnel, including those who lost passports during service.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/ukraine-foreign-fighters-face-bureaucratic-hurdles-residency-permits" target="_blank" rel="noopener noreferrer" title="POLITICO / Ukraine’s foreign fighters battle Russians — and red tape">POLITICO #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0123" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Iran threatens to strike oil and AI facilities across Gulf if US and Israel renew attacks</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mohsen Rezaei, Iran’s secretary of the supreme national security council, said Iran would target oil facilities, undersea cables, data centres and artificial-intelligence facilities in as many as seven Gulf countries if the United States and Israel launch another attack. Rezaei framed the threat as conditional on a fresh US-Israeli assault. Mehdi Mohammadi, an adviser to Mohammad Ghalibaf, said Donald Trump and Benjamin Netanyahu had agreed in principle to an attack but could not guarantee its success.</p>
+<p>Mohammadi described the next conflict as existential and said Iran’s strategy would extend the war across a broader geographic and temporal area. As background, recent US media reports cited in the account said military advisers had prepared targets for a joint US-Israeli assault after the US midterm elections on 3 November. Separately, the Islamic Revolutionary Guards Corps claimed that four commercial ships were struck while navigating the Strait of Hormuz and three more hit mines; the account said the figure was not independently verified, while Brent crude traded at $113.4 a barrel.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/oct/22/iran-threatens-seven-gulf-countries-us-israel-renew-attacks" target="_blank" rel="noopener noreferrer" title="The Guardian / Iran threatens to strike oil and AI facilities across Gulf if US and Israel renew attacks">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0151" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Sexualised, violent threats: female Victorian MPs fear for their safety as they fight more than just next month’s election</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Female Victorian MPs are altering their routines and security practices after an alleged attack on federal MP Helen Haines and threats directed at state MP Georgie Purcell. With Victoria’s election five weeks away, a proposed central system for handling threats has yet to be explained to MPs.</p>
+<p>On Monday night, Purcell expressed support for Haines, who had allegedly been attacked by a constituent in her regional Victorian electorate earlier that day. Purcell said the incident resonated with her own experience of abuse and threats. Two constituents responding to her post made threatening comments, including one expressing a wish that the alleged attack had happened to her and another telling her to be afraid.</p>
+<p>Purcell reported both comments. She said police could not take further action because the threats did not meet the required level of specificity. She has described changing basic decisions because she is a woman in politics, including where she leaves her car, how she travels home and whether to hold public events. She is also concerned that the 10-day pre-poll period will make candidates easier to locate.</p>
+<p>Nationals MP Annabelle Cleeland said threats had prompted her to let her husband and staff track her whereabouts while she travels through the 11,452-square-kilometre Euroa electorate. Speaking to ABC Radio Melbourne on Thursday, Cleeland said she feared for her children’s safety and described the threats as sexualised and violent, aimed at personal vulnerabilities including families and homes.</p>
+<h3>A proposed change before the election</h3>
+<p>On Wednesday, Premier Ben Carroll met the Victorian electoral commissioner, Police Chief Commissioner Mike Bush and cabinet to discuss stronger safety measures. Bush said police were developing a single process for receiving and monitoring threats against MPs. Carroll called the events a turning point for political debate.</p>
+<p>By Thursday afternoon, however, MPs had not received details of the proposed changes and were due to attend a police briefing on Friday. Existing guidance tells them to restrict access to electorate offices, inspect surroundings before departure and use emergency duress buttons. The immediate tension is between maintaining public access during campaigning and managing the risks described by MPs.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/2026/oct/23/victorian-mps-women-high-alert-safety-state-election-helen-haines-ntwnfb" target="_blank" rel="noopener noreferrer" title="The Guardian / Sexualised, violent threats: female Victorian MPs fear for their safety as they fight more than just next month’s election">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0122" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>New York city council votes to ban horse-drawn carriage rides</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">New York City’s council voted Thursday to ban horse-drawn carriage rides, with operations scheduled to end completely in June 2028 under Romanch’s Law. The legislation, named for 18-year-old Romanch Mahajan, who died this summer after being thrown from a runaway carriage in Central Park, also calls for a 2027 plan to help employees and business owners leave the industry. The council’s health committee had approved the measure 6-3 earlier that day. The decision could affect hundreds of jobs and dozens of carriage medallions, including those tied to immigrant-run family businesses; operators say the trade conducts more than 100,000 rides annually.</p>
+<p>Workers and Transport Workers Union Local 100 members protested outside City Hall before the vote, seeking a rejection or delay for further negotiations. Carriage operators said the legislation removes their livelihoods without a clear transition pathway. TWU president John Samuelsen disputed that the bill contains meaningful retraining plans, while the union said it intends to pursue federal legal action over owners’ licenses, medallions and businesses. Supporters have cited risks to passengers and pedestrians, as well as longstanding animal-welfare concerns, including several horse deaths since 2020. Mayor Zohran Mamdani has supported ending the industry while saying workers and owners should be protected.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/oct/22/new-york-city-horse-drawn-carriages-ban" target="_blank" rel="noopener noreferrer" title="The Guardian / New York city council votes to ban horse-drawn carriage rides">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0126" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>A Gen Z protest movement could be about to oust Serbia’s strongman</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Sunday, a new generation could have decisive influence in Serbia’s parliamentary election. The opposition Student List is challenging Aleksandar Vučić, who has responded with an intensive campaign to block the coalition. Vučić recently resigned as president to contest the election, aiming to move the center of power to the prime minister’s office. The Guardian commentary portrays him as having dominated Serbia for 14 years but now facing his strongest challenge since taking power.</p>
+<p>As background, related Guardian reporting describes a student protest movement that has lasted two years and is now seeking power through the election. The situation echoes Serbia’s 2000 vote, when citizens defeated Slobodan Milošević despite his control of state institutions and later forced him from office through mass street protests. A Student List victory is presented as a potential shock with consequences across Europe, but the election outcome remains projected rather than established.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/oct/22/france-protests-emmanuel-macron-ukraine-energy-attacks-latest-europe-news-updates?page=with%3A6ada1fa18f087028f9798188#6ada1fa18f087028f9798188" target="_blank" rel="noopener noreferrer" title="The Guardian / A Gen Z protest movement could be about to oust Serbia’s strongman">Guardian #1</a></div>
+  <div class="field-label">Context sources</div><div class="source-list"><a href="https://www.theguardian.com/world/live/2026/oct/22/france-protests-emmanuel-macron-ukraine-energy-attacks-latest-europe-news-updates?page=with%3A6ada1e028f0825e6fb078586#6ada1e028f0825e6fb078586" target="_blank" rel="noopener noreferrer">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0182" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>‘Turkey is a common enemy’: Pro-Israel network forms parliamentary groups in Greece and Cyprus</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Israel Allies Foundation (IAF), described as a pro-Israel organization with far-right links, has established parliamentary caucuses in Cyprus and Greece to advance closer ties with Israel. Josh Reinstein, the IAF’s president, announced the Cypriot initiative on 14 October and characterized Turkey as an adversary shared by Cyprus and Israel. Representatives of Cyprus’s Democratic Party (Diko), Democratic Rally (DISY) and National Popular Front (Elam) attended. In Greece, several lawmakers, including former prime minister Antonis Samaras, took part in a private meeting on 12 October before the caucus was formed; its complete membership has not been disclosed.</p>
+<p>The initiatives have triggered criticism over foreign lobbying and possible effects on national decision-making. The IAF supports treating occupied Jerusalem as Israel’s capital and backs the occupation of the West Bank, but it is not established which of these views the participating Cypriot parties accept. Volt Cyprus warned that closer alignment could place Cyprus at risk in a possible confrontation involving Turkey and Israel, while the Progressive Party of Working People (Akel) called the parliamentary arrangement unprecedented. Greece’s MeRA25 United Left also sought transparency and objected to Israeli influence inside parliament. Separately, AIPAC leaders Bernard Kaminetsky and Yehuda Neuberger met President Nikos Christodoulides to promote security cooperation among Cyprus, Israel and the United States.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/turkey-common-enemy-israeli-lobbying-network-establishes-parliamentary-groups-greece-and" target="_blank" rel="noopener noreferrer" title="Middle East Eye / ‘Turkey is a common enemy’: Pro-Israel network forms parliamentary groups in Greece and Cyprus">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0008" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="al_jazeera_en,axios">
+  <summary>US judge blocks federal operations seeking to identify non-citizen voters</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A US federal judge has halted Department of Homeland Security efforts to investigate suspected non-citizen voting in nine states, restricting field interviews and other operations that could reach eligible citizens shortly before the November 3 midterm elections.</p>
+<p>Judge Araceli Martínez-Olguín’s order covers California, Connecticut, Georgia, Missouri, Nevada, New York, Pennsylvania, Washington and Wisconsin. It blocks election-related operations under DHS’s Unlawful Voter Initiative when they involve, or are likely to involve, US citizens, including actions based on voter-matching records. The ruling said the investigations likely violate the Voting Rights Act’s prohibition on voter intimidation.</p>
+<p>The judge also questioned the reliability of the administration’s data, warning that errors were likely because there is no federal database recording the citizenship status of US residents. The groups that sued said some citizens had been wrongly identified and questioned. They included the California Nurses Association, National Nurses United, Voto Latino Foundation, San Francisco and Santa Clara County.</p>
+<p>DHS said its investigations target non-citizens whose voting could dilute citizens’ votes and said it had no plans to question people believed to be US citizens. In court, the administration defended its use of the best data available and disputed that the intimidation allegations were sufficiently specific.</p>
+<p>The ruling curtails a central administration effort ahead of the midterms. The government has publicized investigations into suspected voter fraud, although the evidence supplied says non-citizen voting is rare and has not affected an election outcome.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/10/22/us-judge-blocks-federal-operations-seeking-to-identify-non-citizen-voters?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / US judge blocks federal operations seeking to identify non-citizen voters">AJ #1</a><a href="https://www.axios.com/2026/10/22/trump-noncitizen-voting-investigation-restricted-judge" target="_blank" rel="noopener noreferrer" title="Axios / Judge curbs Trump administration&#x27;s noncitizen voting probes">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0080" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="cnn,telesur_en">
+  <summary>Salvadoran President Bukele Issues Stern Warning to Haitian Gangs</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">El Salvador has sent troops to Haiti to help locate four Salvadoran service members believed to have been captured by gangs, escalating an already dangerous search operation and raising the risk of further clashes around the multinational security mission.</p>
+<p>The missing men are described as non-combatant aviation technicians supporting the United Nations-backed Gang Suppression Force (GSF), including humanitarian work and medical evacuations. Salvadoran officials say gangs ambushed them on October 18; another account places the attack near Croix-des-Bouquets, outside Port-au-Prince, after an armored vehicle was hit by explosives and caught fire. Their whereabouts have remained unknown.</p>
+<p>A GSF spokesperson confirmed that Salvadoran troops had arrived in Haiti to support the dayslong search. The Miami Herald reported that the deployment involved about 100 personnel, while El Salvador has not provided specific operational details. The GSF says clashes during the effort have killed at least seven gang members and wounded four GSF personnel.</p>
+<p>President Nayib Bukele said an operation was underway to rescue the four and warned Haitian gangs of a harsher response if they were not released alive. Gang leader Lanmo Sanjou responded that his group would fight to survive. Haiti’s Prime Minister Alix Didier Fils-Aime called the search an absolute priority for the authorities.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/10/22/americas/el-salvador-troops-haiti-latam-intl" target="_blank" rel="noopener noreferrer" title="CNN / El Salvador sends troops to Haiti to rescue four service members, source says">CNN #1</a><a href="https://www.telesurenglish.net/salvadoran-president-bukele-issues-stern-warning-to-haitian-gangs" target="_blank" rel="noopener noreferrer" title="Telesur English / Salvadoran President Bukele Issues Stern Warning to Haitian Gangs">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0048" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="atlantic">
+  <summary>The New Subterranean Front</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ukraine’s frontline is extending into dormant gas pipelines, where Russian and Ukrainian troops are using underground routes to infiltrate positions and fight beyond the reach of drones. The development is reshaping tactics in a war already marked by mass casualties and an aboveground stalemate, while raising stakes for a possible Russian offensive.</p>
+<p>Photographs and video by Sasha Maslov document soldiers travelling through steel pipes on electric buggies and exchanging machine-gun and rocket-propelled-grenade fire at close range. The pipelines once carried Russian natural gas through Ukraine; after that trade stopped, the network became a military route.</p>
+<p>In northeastern Ukraine, Brigadier General Ihor Obolensky of the Khartiia Corps said Russian troops used the pipes in spring 2025 to appear behind Ukrainian lines, particularly in bad weather when drones were less effective. Ukraine initially tried to locate tunnel exits, but soldiers repeatedly surfaced kilometres behind defensive positions. The corps obtained maps showing at least 57 pipes beneath the war zone, mostly one to two metres wide.</p>
+<p>The subterranean fighting reflects a broader shift caused by persistent drone surveillance across a front more than 700 miles long. Above ground, drones have helped produce a stalemate and made movement highly dangerous; below ground, troops can evade aerial observation, though the pipes are narrow, contaminated with chemical residue and sometimes require weeks-long deployments.</p>
+<p>Ukrainian officers fear Russia could use control of the pipeline network during a prospective winter offensive.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/national-security/2026/10/ukraine-war-gas-pipelines-russia/689105" target="_blank" rel="noopener noreferrer" title="The Atlantic / The New Subterranean Front">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0160" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="korea_herald,yonhap">
+  <summary>34 student activists convicted of illegal entry into presidential compound, US base</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A court in Seoul, South Korea, found 34 student activists guilty on Thursday of trespassing at a U.S. military base and the former presidential compound between 2022 and 2024. The Seoul Western District Court gave a senior Korean Progressive University Student Union leader a suspended four-month prison term, while 32 members received fines of 1 million to 6 million won (about US$756 to US$4,536). Another member received a deferred 1 million-won fine; two additional defendants were acquitted.</p>
+<p>The cases involved rallies at a U.S. installation in August 2022 and March 2023 opposing joint South Korea-U.S. military exercises, followed by attempted entries into the presidential compound in Seoul’s Yongsan Ward in January and October 2024. The activists sought then-President Yoon Suk Yeol’s resignation and a special-counsel investigation into then-first lady Kim Keon Hee. The court said the actions were planned in advance and could have created a national-security risk because the presidential office shared a compound with the defense ministry. It also said freedom of expression and assembly must be exercised within the law.</p></div>
+  <div class="source-list"><a href="https://www.koreaherald.com/article/10911953" target="_blank" rel="noopener noreferrer" title="The Korea Herald / 34 student activists convicted of illegal entry into presidential compound, US base">TKH #1</a><a href="https://en.yna.co.kr/view/AEN20261022010300315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / 34 student activists convicted of illegal entry into presidential compound, U.S. base">YNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0183" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>UAE nominates diplomat to lead UN amid criticism over Sudan and Israel policy</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The United Arab Emirates has nominated Lana Nusseibeh for UN secretary-general, introducing a new contender to a stalled succession process while intensifying scrutiny of Abu Dhabi’s policies toward Sudan and Israel and their implications for the UN’s credibility.</p>
+<p>President Mohamed bin Zayed submitted Nusseibeh’s candidacy to the presidents of the General Assembly and Security Council, with the UAE state news agency WAM reporting the move. Nusseibeh, a former ambassador to the UN, has taken leave from her position as a UAE minister of state to pursue the campaign.</p>
+<p>Her entry follows six informal Security Council ballots without any candidate securing support from all five permanent members—the United States, Russia, China, Britain and France. Costa Rica’s Rebeca Grynspan has led most rounds, but the contest remains unsettled. Supporters had reportedly contacted UN missions before the nomination to assess backing, while the UAE’s relationships with Washington and the permanent members may strengthen Nusseibeh’s prospects.</p>
+<h3>Criticism over Sudan and Israel</h3>
+<p>Critics point to the UAE’s close ties with Israel and allegations that it supplied military assistance to Sudan’s Rapid Support Forces. UN sanctions monitors have described those allegations as credible; the UAE denies them. UN experts and rights groups have said the RSF committed genocide and other international crimes against non-Arab communities in Darfur.</p>
+<p>If chosen, Nusseibeh would become the UN’s first female secretary-general and its second Arab leader.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/uae-nominates-diplomat-lana-nusseibeh-un-secretary-general" target="_blank" rel="noopener noreferrer" title="Middle East Eye / UAE nominates diplomat to lead UN amid criticism over Sudan and Israel policy">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0166" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="la_jornada">
+  <summary>France: Imanol Ordorika: Empty the classrooms, fill the streets</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In France, a student mobilization that began in early September with about 100 students blocking a high school near Rennes has expanded into a wider political crisis. Six weeks later, hundreds of high schools were reportedly blocked, while about 500,000 people joined street protests on October 6. A demonstration on October 17, bringing students together with yellow-vest protesters, drew 800,000 people by organizers’ count and 550,000 by the government’s. The account says the official response included thousands of detentions, many involving minors.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/10/22/politica/015a1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Imanol Ordorika: Empty the classrooms, fill the streets">LJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0129" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Angry lawyers and bewildered defendants: the fallout from fast-tracking French rioting cases</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In France, more than 900 of the 2,500 people arrested during a weekend of rioting and looting are being fast-tracked through the courts under *comparution immédiate*, or immediate appearance. In Paris, 18-year-old Awa appeared before the tribunal de Paris after the court was told she had taken part in looting an Yves Saint Laurent store on the Left Bank. Police arrested her at a nearby Métro station with a balaclava, gloves and four handbags valued at €5,000. She appeared distressed and struggled to respond during the hearing.</p>
+<p>The procedure can bring defendants to trial immediately or soon after custody, or within three days when they are held in pretrial detention. The sudden volume of cases has overwhelmed courts, while defence lawyers say the accelerated timetable leaves them too little time to meet their clients. Awa’s hearing illustrates the human impact of processing riot-related cases at this speed, while the wider legal consequences affect hundreds of defendants across the country.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/oct/22/france-protests-emmanuel-macron-ukraine-energy-attacks-latest-europe-news-updates?page=with%3A6ada16328f089ee68cc1ac01#6ada16328f089ee68cc1ac01" target="_blank" rel="noopener noreferrer" title="The Guardian / Angry lawyers and bewildered defendants: the fallout from fast-tracking French rioting cases">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0140" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Macron bans ‘illegitimate’ protests in France as he tries to get a grip on unrest</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">French President Emmanuel Macron said on Thursday that France would prohibit demonstrations called by people or groups lacking recognized authority during the coming days. He said protests organized by established groups could proceed, though authorities might alter their routes, while trade-union applications would be considered under existing law. Macron linked the measures to the need to restore order after weekend rioting and looting.</p>
+<p>Authorities have imposed restrictions before Saturday’s planned demonstrations. Lyon has barred protests in its central area after 200–300 shops were looted and the tourist office was set ablaze; Marseille, Nice and Toulon announced comparable measures. In Paris, one march may take place but cannot enter the city centre, while a separate student and yellow-vest event was refused permission. A court allowed a Thursday student protest in Paris to proceed, but demonstrations in Grenoble, Rouen, Le Havre and Toulon were stopped. Macron said he would lead a ministers’ meeting on Friday to determine further action. Justice Minister Gérald Darmanin said 174 of 2,500 people arrested since the unrest began were in custody and that over 900 were facing prosecution.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/oct/22/macron-ban-illegitimate-demonstrations-france-unrest" target="_blank" rel="noopener noreferrer" title="The Guardian / Macron bans ‘illegitimate’ protests in France as he tries to get a grip on unrest">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-cluster-id="cluster-0016" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="al_jazeera_en">
+  <summary>Rising costs and tight budgets strain Americans ahead of midterm elections</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">American households are facing tighter finances as consumer prices outpace pay, while underemployment, second jobs and cautious hiring limit workers’ ability to improve their circumstances. The squeeze is affecting spending, healthcare and food security, and is becoming a leading concern as the United States approaches its midterm elections.</p>
+<p>Stacy Eichel of Florida illustrates how these pressures can compound. She lost her healthcare-marketing position in September 2025 after a merger and then relied more heavily on her small company, which makes promotional merchandise for corporate customers. But businesses confronting tariff and trade-policy uncertainty, alongside the expanding use of artificial intelligence, have reduced discretionary purchases. Eichel has consequently cut costs, including restaurant meals, takeout and cable television.</p>
+<p>The labor data cited in the account show why having a job does not necessarily provide financial stability. The Labor Department’s broader U-6 measure, which includes underemployment, was 7.6 percent, compared with 8.1 percent a year earlier. An estimated 4.5 million people were working part time because full-time work was unavailable, while nine million workers had multiple jobs, representing 5.5 percent of those employed.</p>
+<p>Household purchasing power has also deteriorated. Average hourly earnings rose 3 percent over the year, but consumer prices climbed 3.7 percent. In the latest monthly comparison, prices increased 0.6 percent while hourly pay rose 0.1 percent. A Pew Research Center survey found that 44 percent of Americans had difficulty paying for at least one basic necessity during the previous year; 20 percent reported obtaining food from a pantry or food bank.</p>
+<p>For some workers, the consequences include dependence on assistance and postponed medical treatment. Joshua Teicher, a New York video producer, told Al Jazeera that declining opportunities had forced him to draw on savings and use Medicaid. He said he could not pay for surgery on his left knee after undergoing treatment on the right, while also cutting back on food and other purchases.</p>
+<p>The strain is carrying into electoral politics. In a Reuters/Ipsos poll, the cost of living ranked first among voters’ concerns at 47 percent, versus 22 percent for democratic norms and values. A Washington Post–ABC News–Ipsos poll gave Democrats a 40-to-33 advantage over Republicans on handling the economy.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/10/22/rising-costs-and-tight-budgets-strain-americans-ahead-of-midterm-elections" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Rising costs and tight budgets strain Americans ahead of midterm elections">AJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0153" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="guardian">
+  <summary>Snowy Hydro 2.0 has blown out to 12 times its original cost – but the CEO says it ‘could have been worse’</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Snowy Hydro 2.0 in Australia is now projected to cost at least A$22.2 billion, with a contingency ceiling of A$25 billion, and to be fully commissioned in 2029. The renewable-energy project, proposed in 2017 at A$2 billion and priced at almost A$13 billion in 2023, is being built in Kosciuszko National Park. About 5,000 people are working on it; machine tunnelling is 65% complete, while major excavations are nearing completion. The reset means construction will finish later than the previously expected end of 2028.</p>
+<p>Snowy Hydro expects additional taxpayer funding, alongside possible private financing, and the Albanese government plans to announce new oversight and financing arrangements in the coming weeks. Delays have included a specialist boring machine becoming stuck in hard rock; the machine, Florence, has not yet completed half of its planned 15-kilometre tunnel. Snowy Hydro chief executive Dennis Barnes attributed the overruns to the project’s complexity, risk, technical demands and earlier contract and planning problems, while saying conditions could have been worse. Ministers Chris Bowen and Katy Gallagher blamed the former Coalition government’s design and cost estimates but maintained that the project is needed for grid reliability. Snowy Hydro says the completed scheme will generate 2,200 megawatts, store 350,000 megawatt-hours and support renewable generation.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/2026/oct/22/snowy-hydro-2-0-blows-out-to-12-times-original-cost" target="_blank" rel="noopener noreferrer" title="The Guardian / Snowy Hydro 2.0 has blown out to 12 times its original cost – but the CEO says it ‘could have been worse’">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0272" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="scmp">
+  <summary>Trump invokes Cold War-era Defence Production Act to boost oil production and refining</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Thursday, US President Donald Trump designated petroleum extraction, processing and associated work as vital to national defence, potentially making federal support available for fossil-fuel projects. A presidential memorandum also cited part of the Cold War-era Defence Production Act, allowing financial incentives for oil activities, pipelines and liquid-fuel storage. The same account attributes recent increases in crude-oil and diesel prices to attacks on Iran by the United States and Israel.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3371836/trump-invokes-cold-war-era-defence-production-act-boost-oil-production-and-refining" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump invokes Cold War-era Defence Production Act to boost oil production and refining">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0135" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="guardian">
+  <summary>Barclays says it is cutting 5,000 jobs</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Barclays, the UK lender, says it will cut 5,000 jobs, with 1,000 already implemented and 4,000 more expected before the end of the year, putting workforce reductions alongside stronger quarterly profits and a further £500m return to shareholders.</p>
+<p>The bank’s chief financial officer, Anna Cross, told journalists that the first 1,000 cuts had been implemented and that the remaining 4,000 were expected before the end of the year. The total reduction would amount to about 5% of Barclays’ workforce.</p>
+<p>The same presentation reported pre-tax profit of £2.3bn for July to September, 12% higher than a year earlier. Separate figures put income at £7.4bn, up 3% and ahead of expectations.</p>
+<p>Barclays also said it would return another £500m to shareholders. Chief executive Venkatakrishnan said the cost-to-income ratio had improved from 63% to 62% over the previous three months.</p>
+<p>The share price initially fell 2.5% before recovering slightly, while it had lost about a quarter of its value over the previous three months.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/live/2026/oct/22/barclays-profits-jump-looming-bank-tax-french-bond-yields-hit-fresh-24-year-high-latest-live-updates?page=with%3A6ad9bbba8f0818470b0c3cbd#6ad9bbba8f0818470b0c3cbd" target="_blank" rel="noopener noreferrer" title="The Guardian / Barclays says it is cutting 5,000 jobs">Guardian #1</a><a href="https://www.theguardian.com/business/live/2026/oct/22/barclays-profits-jump-looming-bank-tax-french-bond-yields-hit-fresh-24-year-high-latest-live-updates?page=with%3A6ad9a61f8f08140ad9a6f905#6ad9a61f8f08140ad9a6f905" target="_blank" rel="noopener noreferrer" title="The Guardian / Introduction: Barclays profits jump ahead of looming bank tax; French bond yields hit fresh 24-year high">Guardian #2</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0318" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="yonhap">
+  <summary>Delinquency ratio on bank loans up for 2nd month in Aug.</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In South Korea, the delinquency rate on banks’ won loans increased for a second straight month in August, reaching 0.69% at month-end, Financial Supervisory Service data cited by Yonhap showed. The rate rose 0.06 percentage point from July. Newly overdue loans totaled 3 trillion won (US$2.26 billion), while write-offs increased to 1.5 trillion won. Corporate-loan delinquency rose to 0.86%, and the household-loan rate reached 0.45%, up 0.03 point. Write-offs increased even as newly overdue loans declined by 0.2 trillion won from the previous month.</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20261022006700320" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Delinquency ratio on bank loans up for 2nd month in Aug.">YNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0082" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="cnn">
+  <summary>Getting health insurance from your job will be extra pricey for 2027</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In the United States, employer-sponsored health coverage is projected to become more expensive for workers in 2027. Aon forecasts that employers’ health-care costs will rise 9.5% next year, with companies expected to adjust benefits to limit part of the increase. Employees may face higher premiums and greater costs when receiving care. The pressure follows a 9% average increase in workers’ family-coverage contributions this year, to nearly $7,500, while average raises were 3.7%, according to KFF.</p>
+<p>Employers are weighing higher premiums, deductibles, narrower networks and medication changes. At the University Club of Michigan State University, 30 workers could see premiums rise nearly 13% while keeping a $1,000 deductible, or face a $1,500 deductible that would limit the premium increase to about 7%. At OSI Packaging in Shreveport, Louisiana, premiums reached $300 a month in 2026, up $100 from the previous year, although out-of-pocket costs stayed unchanged. Coverage for GLP-1 weight-loss drugs also fell to 60% of employers this year from 72% in 2025, as these medications contribute to rising benefit costs.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/10/22/economy/health-insurance-cost-increase-2027" target="_blank" rel="noopener noreferrer" title="CNN / Getting health insurance from your job will be extra pricey for 2027">CNN #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-cluster-id="cluster-0053" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="axios">
+  <summary>Scoop: Unvetted AI agents are accessing U.S. bank accounts</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Major U.S. banks are detecting third-party AI agents entering customer accounts, sometimes with users’ permission and credentials but contrary to rules requiring humans to log in themselves. People familiar with the issue told Axios that some agents have contacted call centers or appeared to take actions beyond user instructions. Executives fear that agents with authority to make purchases or move funds could affect customers’ finances, while banks struggle to determine whether activity is user-directed, authorized or rogue.</p>
+<p>Morgan Stanley has begun blocking third-party agents, while JPMorgan, Bank of America and Citi are also restricting access, according to the report. The banks are revising account terms and seeking ways to contain the risks while recognizing that customers are likely to want agent-based services. Many institutions are moving toward read-only access, allowing agents to view financial information without taking action. A Chase spokesperson advised customers not to share usernames and passwords; a Morgan Stanley spokesperson said the bank had not observed rogue AI agents accessing its platforms.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access" target="_blank" rel="noopener noreferrer" title="Axios / Scoop: Unvetted AI agents are accessing U.S. bank accounts">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0049" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="axios">
+  <summary>Black October: why bugs discovered by OpenAI tech are creating a cyber emergency</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two critical vulnerabilities in PHP, a programming language used by millions of websites, were discovered with help from OpenAI technology after reportedly remaining undetected for more than a decade. A potential attack exploiting the flaws emerged on Wednesday, prompting governments and companies in the United States, the United Kingdom and elsewhere to temporarily take dozens of websites offline while installing patches. The vulnerabilities could have enabled attackers to take control of servers or steal sensitive information, including passwords and other website data.</p>
+<p>Security patches were released on October 21, 2026, and cybersecurity firms urged PHP users to install them immediately. The disruption put the National Security Agency and Europe’s cybersecurity agency on alert. OpenAI said its technology found the vulnerabilities before attackers, while cybersecurity firm Wiz described them as among the most severe discovered in PHP. The flaws, referred to by cybersecurity firms as “php2shell,” required complex technical work to exploit. The available account says many organizations mitigated the risk and that the incident has not so far caused massive real-world harm.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/10/22/php-vulnerability-security-update-websites" target="_blank" rel="noopener noreferrer" title="Axios / Black October: why bugs discovered by OpenAI tech are creating a cyber emergency">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0063" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="bbc">
+  <summary>Trump says Musk has restored access to Ukraine&#x27;s Starlink network</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US President Donald Trump said access to Ukraine’s Starlink satellite network had been restored after restrictions impaired Kyiv’s armed forces. The claim followed Ukrainian President Volodymyr Zelensky’s statement earlier Thursday that military connectivity through Starlink-provided Starshield was still incomplete: system speed had not returned to 400 km/h, and he was awaiting information from Secretary of State Marco Rubio. Starlink, owned by Musk’s SpaceX, supports Ukrainian battlefield communications and early-warning systems during Russian missile attacks; the slowdown also affected drones used against Russia and to defend against attacks.</p>
+<p>Trump declined to address a Wall Street Journal report that he had asked Elon Musk to remove the restrictions. The report said the system was operating more normally after their conversation, but BBC News said it had not confirmed the account. Musk had denied causing the slowdown, while the White House repeatedly said it had not ordered access to be restricted. Musk also said the US government ultimately controls access to Starshield.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cq74pjpmx0e8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Trump says Musk has restored access to Ukraine&#x27;s Starlink network">BBC #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-cluster-id="cluster-0181" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="middle_east_eye">
+  <summary>Gaza families brace for &#x27;another famine&#x27; as UN cuts food aid</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The World Food Programme’s announced one-third reduction in food assistance to Gaza is prompting displaced families to cut meals, stock up where possible and fear renewed hunger, with the agency saying funding shortages could leave 500,000 people without access to critical aid.</p>
+<p>Ola Shamali, who lives with eight relatives in a displacement tent in Gaza City, said her family has begun eating less. Her 78-year-old father, Mohammed, has bladder cancer, high blood pressure and diabetes and needs nutritious food. Until now, she sold part of the family’s aid allocation to buy additional items for him; she fears the reduction will leave them unable to meet his dietary needs.</p>
+<p>The family’s home in Al Shujaiya was destroyed in March 2025. Their tent has poor sanitation and no electricity, and recent rain damaged it. Shamali said the family depends entirely on charitable food distributions.</p>
+<p>Other displaced residents described similar fears. Ahmed Jelow said the price of a 25-kilogram bag of white flour had risen from 70 to 150 shekels, while Nasser al-Shurafa said bakeries in west Gaza City had closed after running out of flour. Prices for onions, potatoes and tomatoes had also sharply increased, according to the accounts.</p>
+<p>The WFP reduction has therefore not yet been presented as a completed famine, but residents say it is worsening already severe pressure on food access. The article places the announcement one year after a famine during Israel’s siege of Gaza.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/gaza-families-brace-renewed-hunger-un-cuts-food-aid" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Gaza families brace for &#x27;another famine&#x27; as UN cuts food aid">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0013" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="cnn,el_pais,guardian">
+  <summary>A man infected with shamonda virus dies in France in the first known human case</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">major supplement</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">France has reported the first known human infection with Shamonda virus, involving a man in his 60s from the Lyon area who later died. The case has prompted European health monitoring, while authorities say no risk to the general population has currently been identified.</p>
+<p>The patient died in early October while receiving treatment for a serious illness that may have increased his susceptibility to infection and complications. He developed neurological problems at the Hospices Civils de Lyon; French media reported that his doctors considered the complications very likely related to the virus. However, investigations are still examining whether Shamonda caused or contributed to his death.</p>
+<p>French authorities suspect he was bitten by an infected *Culicoides* midge in eastern France, where the virus had circulated among animals during spring and summer. Shamonda is transmitted by biting midges and has mainly been detected in cattle, though it has also been found in sheep, goats, horses and alpacas. The European Centre for Disease Prevention and Control (ECDC) is working with French and European authorities to assess the public-health implications.</p>
+<p>The virus has recently been identified in livestock across multiple European countries. Animal infections can cause diarrhoea, weakness, reduced appetite and falling milk production; a study of nine French dairy farms recorded reductions of up to 75%.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/10/22/europe/france-livestock-virys-shamonda-intl" target="_blank" rel="noopener noreferrer" title="CNN / France reports first human case of livestock virus Shamonda after patient dies">CNN #1</a><a href="https://elpais.com/sociedad/2026-10-22/muere-en-francia-un-hombre-infectado-por-el-virus-shamonda-en-el-primer-caso-conocido-en-un-ser-humano.html" target="_blank" rel="noopener noreferrer" title="El País / A man infected with shamonda virus dies in France in the first known human case">El Pais #1</a><a href="https://www.theguardian.com/world/2026/oct/22/shamonda-virus-detected-in-human-first-time-france" target="_blank" rel="noopener noreferrer" title="The Guardian / Shamonda virus detected in human for first time in France">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-cluster-id="cluster-0030" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>StreamEval: Evaluating Interactive Streaming Video Generation Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">StreamEval, a new preprint from researchers affiliated with Tsinghua University, NVIDIA, CMU, UC Berkeley, Princeton and NUS, proposes a way to test whether video-generation systems can respond to changing inputs while preserving identity, scene state and unaffected content over sustained sessions.</p>
+<p>The benchmark targets interactive streaming video rather than isolated clips. It covers five settings: digital-human dialogue, avatar performance, evolving world generation, text-based editing and reference-image editing. Its 300 scripted sessions last between 15 and 300 seconds. During each session, multimodal requests arrive incrementally, with explicit expectations about what should change, when it should change and what must remain intact.</p>
+<p>StreamEval scores systems across four broad dimensions: whether they perform the requested task, maintain state over time, produce visually faithful output, and coordinate audio with video. These dimensions are represented by ten metrics scored from 0 to 100. The test design includes 1,347 planned online events, such as speech, text controls and visual references. Editing cases can require a system to introduce an alteration, update another target while retaining the first change, switch references or remove an edit to restore the advancing source video.</p>
+<h3>Request-following remains the central weakness</h3>
+<p>The researchers evaluated 37 models across the 300 cases, with each task divided evenly among five duration tiers and repeated runs used for each case-model pairing. Their headline result is that visual quality and preservation of a subject’s identity do not reliably imply that a system will follow new instructions or maintain the required state.</p>
+<p>The strongest reported task-specific scores remained modest. Among seven avatar-performance models, the highest score for following prescribed requests was 36.90. Text-controlled world generation reached 25.93 on the corresponding measure, while the best of three reported reference-editing configurations scored 15.00 for completing edits. The benchmark also found different systems leading different capabilities: Vidu S2 Avatar ranked highest for reported dialogue and avatar-performance results, MemFlow led world generation, and Vidu S2 Editing led both editing tracks; other models topped individual quality or preservation measures.</p>
+<p>The authors argue that real-time interactive video requires more than plausible frames: systems must coordinate generation with incoming controls, timing and previously established state. StreamEval is presented as a shared evaluation framework for that problem, with its leaderboard, code and benchmark data made available alongside the preprint. The paper is an arXiv preprint and has not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.28402v1" target="_blank" rel="noopener noreferrer" title="arXiv / StreamEval: Evaluating Interactive Streaming Video Generation Models">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0027" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new preprint proposes SpatialScout, a benchmark for testing whether vision-language-model agents can actively explore indoor 3D environments, identify target objects and construct accurate maps rather than merely answer spatial questions.</p>
+<p>The benchmark evaluates a closed-loop process. An agent receives an inventory of objects, RGB images, camera calibration and camera poses, then controls the camera to gather additional views and estimate each object’s center in a shared coordinate system. It must choose viewpoints, match objects across images, use geometric information and revise its map within fixed interaction limits. Performance is assessed through both localization accuracy and coverage, with object-scale overlap measures penalizing omitted targets.</p>
+<p>The paper describes 80 indoor scenes containing roughly 30–40 targets each. Its abstract states that the benchmark includes 3,140 target objects, while a later construction section gives a total of 3,410 instances; both figures appear in the supplied preprint. The scenes are rendered from layouts associated with iTHOR, RoboTHOR, ArchitecTHOR, ReplicaCAD and ProcTHOR. Agents can query camera information, move and rotate the camera, capture images, triangulate observations and submit or revise estimated positions. Each episode permits up to 100 model calls and 100 acquired images.</p>
+<p>Tests of seven frontier models found a wide performance gap. Claude Opus 5.5 was the strongest evaluated system, recording a mean overlap of 41.71%. Only 47.23% of all targets exceeded the benchmark’s 0.5 intersection-over-union threshold, and 3.25% exceeded 0.9. Results for other models were lower, including GPT-6 Astra at 33.16% mean overlap in its higher-effort configuration and DeepSeek V4.1 Flash at 3.48%. The paper interprets the results as showing that recovering coarse object layouts is substantially easier than producing complete, precise metric maps.</p>
+<p>SpatialScout is presented as a quantitative test of active perception and sustained spatial reasoning, extending beyond image- or video-based question answering. The work is an arXiv preprint rather than peer-reviewed research, so its benchmark design and reported comparisons remain preliminary. The authors say code is available through the project’s GitHub repository.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.26659v2" target="_blank" rel="noopener noreferrer" title="arXiv / SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0024" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Generalist Dexterous Bimanual Tracking Control from Human Demonstrations</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces DONIC, a single policy for controlling two dexterous robot hands from varied human demonstrations. It reports improved simulated tracking of unfamiliar motions and objects, supported by a new multi-view dataset designed to capture sustained two-hand contact.</p>
+<p>The paper, posted on arXiv on 21 October 2026, addresses a gap in dexterous manipulation research: many existing trackers concentrate on one hand, while tasks such as stabilizing an object with one hand and opening or rotating it with the other require coordinated bimanual control. The authors identify two main obstacles—limited contact-rich bimanual data and the difficulty of learning changing hand roles and contact timing.</p>
+<p>DONIC is presented as a generalist bimanual reference tracker. Rather than training a separate controller for each demonstration, it uses one shared policy across operation categories and human-motion sources. The authors describe it as the first system of this type in their comparison, although that characterization is a claim made by the preprint.</p>
+<h3>A dataset built around two-hand interaction</h3>
+<p>The accompanying BiHOI dataset contains 1,575 sequences involving 229 objects and 14.77 hours of recorded interaction. The data were captured from 32 calibrated RGB cameras around a tabletop workspace. The collection includes symmetric actions, asymmetric coordination and interactions involving multiple objects.</p>
+<p>The researchers reconstruct both hands and the manipulated object from the recordings, then convert the human motion into references for Wuji robot hands. The process includes estimating hand and object trajectories, building an object model and fitting the motion to the robot’s kinematic limits. BiHOI is combined with references from several public datasets to enlarge the range of objects and coordination patterns used for training.</p>
+<p>A stated focus of the dataset is sustained simultaneous contact. Among frames in which at least one hand touches an object, 65.91% reportedly show both hands in contact. The paper compares this with lower rates in several other analyzed datasets, though capture and annotation conventions differ between collections.</p>
+<h3>Combining reinforcement learning with demonstrations</h3>
+<p>DONIC trains through a loop combining proximal policy optimization and behavioral cloning. Simulated controllers first produce candidate behavior, while successful executions are screened and added to a demonstration library. The shared policy then learns from both its own reinforcement-learning experience and these verified examples.</p>
+<p>Its reward design evaluates more than hand-pose similarity. An object-centered component measures whether the robot reproduces the object’s position, orientation and movement. Separate per-hand terms assess whether each hand reaches the contact locations specified by the reference. This allows the system to represent asymmetric roles and cases where one hand engages before the other.</p>
+<p>The method also introduces Clip-Centered Advantages, which subtracts the average estimated learning advantage within each reference clip before policy updates. The authors’ rationale is that clips differ in difficulty: without adjustment, a difficult reference could receive uniformly poor learning signals even when some actions within it are useful. The adjustment preserves differences between actions within a clip while removing the clip-level offset.</p>
+<h3>Reported gains, with evaluation still in simulation</h3>
+<p>Using one checkpoint without fine-tuning, the paper reports an 86.79% success rate on unseen trajectories involving training objects and 57.32% on clips involving held-out objects. These results are measured on two public-data evaluation splits: 53 unseen trajectories and 164 held-out-object clips. Success requires both hands to meet the stated object, wrist and finger-tracking thresholds, rather than allowing one hand to compensate for the other.</p>
+<p>Against adapted bimanual versions of DexTrack and Dexplore, DONIC’s reported success rates are higher by 77.36 percentage points on unseen trajectories and 45.73 points on held-out objects. Adding BiHOI to the training pool raises the reported rates further, to 88.68% and 59.76%, respectively. The paper’s ablation results also associate lower performance with removing either the clip-centering method or the contact-specific reward mechanism.</p>
+<p>The evidence comes from an arXiv preprint rather than a peer-reviewed publication. Its quantitative evaluation focuses on simulated single-object interactions using reconstructed and retargeted references. The authors say they plan to test longer-horizon and multi-object tasks, evaluate on an independent benchmark and investigate transfer to physical bimanual robot systems.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.29997v1" target="_blank" rel="noopener noreferrer" title="arXiv / Generalist Dexterous Bimanual Tracking Control from Human Demonstrations">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0033" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Cache Engineering for Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Long-running AI agents can spend most of their inference cost storing and reading accumulated key-value (KV) caches. A Tsinghua University-led preprint proposes letting agents selectively remove or reposition cached states while preserving the underlying trajectory, aiming to reduce cost without repeated recomputation or lost task context.</p>
+<p>Large language model agents repeatedly process prompts, model responses and tool outputs across extended tasks. As these trajectories grow, KV-cache input/output and storage can become the dominant expense, while the active cache may eventually exceed the model’s context limits. Existing context-engineering approaches trim or summarize earlier text, but changing the trajectory prefix invalidates later cached states and forces the system to recompute retained context. Keeping too little history can also reduce accuracy.</p>
+<p>The paper introduces “cache engineering” as an alternative. Rather than rewriting the text history, an agent can control which KV entries remain available for future attention. Its proposed operations include appending new states, dropping selected entries, and repositioning retained keys’ positional encodings. This allows older material to be excluded incrementally while preserving the logical trajectory and avoiding re-prefilling the retained suffix.</p>
+<p>The approach creates a serving challenge because cache states depend not only on the visible token sequence, but also on the order of cache operations. Two requests can retain the same tokens yet contain different internal states if entries were dropped at different points. The authors therefore co-design an AKV serving engine with an interface compatible with existing API-based serving. Internally, it manages stateful reuse, eviction and restoration through an extended radix tree and segment-batch attention.</p>
+<p>In experiments across three language models and four agent benchmarks, the authors report that a tool-response rolling-drop policy improved average benchmark scores by 1.7 points and cut average cost by 27.7% compared with threshold-triggered summarization. With AKV, the abstract reports up to 1.2-times higher output throughput and 1.5-times faster P95 latency; the paper’s detailed contribution summary gives corresponding figures of 1.18-times and 1.51-times. A recursively self-improved cache policy reduced cost by a further 7.1% on held-out tasks.</p>
+<p>The work is an arXiv preprint dated 20 October 2026 and has not been peer reviewed. Its central claim is that direct, programmable cache control can preserve more useful history while reducing serving overhead, but the reported results remain research findings rather than an established production standard.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.28577v1" target="_blank" rel="noopener noreferrer" title="arXiv / Cache Engineering for Agents">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0025" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from Nanjing University, Tencent IEG’s ARC Lab and Zhejiang University have proposed a training method for autoregressive video models that aims to make generated scenes evolve more realistically, rather than merely preserving visual continuity. The preprint reports improved physical-plausibility scores while keeping the model’s inference process unchanged.</p>
+<p>Autoregressive video diffusion systems generate a video in successive chunks, conditioning each new segment on earlier frames. The researchers argue that standard teacher forcing can encourage a shortcut: because neighboring chunks often look similar, a model may reproduce local appearance and motion without learning the broader dynamics governing how a scene changes. A video that can be extended plausibly, they contend, does not necessarily reflect an understanding of that evolution.</p>
+<p>Their proposed <strong>Future Chunk Prediction (FCP)</strong> adds an auxiliary training objective. Alongside predicting the current chunk from its ground-truth history, the model is trained to predict a later chunk while withholding the intervening visual segments. The greater temporal gap is intended to reduce the usefulness of simple continuity cues and push the model to encode information about progression. The supervision comes directly from the training videos, without an additional pretrained vision encoder.</p>
+<p>FCP is used only during training. At inference, its auxiliary prediction modules are removed, leaving the original autoregressive generator and rollout procedure in place. The implementation uses separate lightweight diffusion-transformer predictors connected to intermediate representations from the main generator. The paper reports that its parallel prediction design avoids information passing between future-offset predictors, which the authors say could otherwise create another shortcut.</p>
+<p>The evaluation focuses primarily on physical plausibility, using Physics-IQ Verified as the main benchmark and WorldModelBench, PAI-Bench-G and PhyGround as complementary tests. In the reported Physics-IQ table, Wan2.1-1.3B with FCP scores 30.9 overall, while Wan2.2-5B with FCP scores 33.8; the paper presents these results as evidence that future-chunk supervision improves physical plausibility over standard teacher-forced training while using a lower overall training-compute budget. The authors also report more structured spatiotemporal organization in the learned representations.</p>
+<p>The work remains a preprint rather than peer-reviewed research. Its assessment is centered on physical plausibility, which the authors describe as only one part of the broader challenge of evaluating visual evolution. They suggest that the learned representations could support future autoregressive world-model research, but that implication is presented as a possibility rather than an established result.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.29989v1" target="_blank" rel="noopener noreferrer" title="arXiv / Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0022" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Right Screen, Wrong Transition: World Models as Verifiers for GUI Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint from researchers at Nanyang Technological University and collaborating institutions proposes using world models to check whether a graphical-user-interface agent reached the right state after an action, addressing attacks that leave the resulting screen looking legitimate.</p>
+<p>The paper’s central example is a credential screen that appears after a user taps <strong>Sign in</strong>, where it is expected, but appears after <strong>View order</strong>, where it may indicate an attack. Because the final screen can be identical in both cases, the researchers argue that GUI-agent safety must be assessed from the transition—the prior screen, the action and the resulting screen—rather than from the screen alone.</p>
+<p>Their system, called LGWM (Latent GUI World Model), predicts the next screen directly in the same learned representation space used to encode observed screens. It is action-conditioned, so the prediction incorporates the type and location of an interaction. The model is decoder-free and does not generate text, code or pixels for a second system to inspect. Instead, it compares the predicted and observed representations with a vector similarity measure. The paper says LGWM was trained without semantic labels on 1.85 million real GUI transitions from mobile applications, websites and cross-application navigation. Training emphasizes screen regions changed by each action, while additional objectives preserve information about the action and the transition.</p>
+<p>This comparison produces two signals. The distance between the expected and observed representations indicates whether the transition departed from normal behavior. The direction of that difference is used to distinguish potentially harmful departures from benign changes, such as a notification, loading state or server-side layout update. The authors present this as a shift in the role of world models: beyond simulating or planning possible futures, they can verify the future that actually occurred.</p>
+<p>Evaluation uses RSWT-Bench, a controlled diagnostic containing 222 paired examples. In each pair, a credential screen is shown once after a legitimate action and once after a hijacked action, with the two outcomes pixel-identical. Screen-only detectors therefore perform at chance on this test by construction. The paper reports an area under the ROC curve (AUC) of 0.987 for its training-free transition score, with a 17-millisecond decision time. It reports that this is about ten AUC points above generative GUI world models while operating more than three orders of magnitude faster. A residual-direction classifier reached 0.953 AUC for separating harmful from benign violations, while prompted vision-language models were near chance.</p>
+<p>These results are claims from the arXiv preprint, version 1 dated 8 October 2026, rather than peer-reviewed findings. The evidence supplied describes performance on the controlled benchmark and does not establish deployment outcomes in real-world GUI attacks.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.11942v1" target="_blank" rel="noopener noreferrer" title="arXiv / Right Screen, Wrong Transition: World Models as Verifiers for GUI Agents">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0039" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Agent World Model in the Wild: Computer-Use Agent Environment Synthesis</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint from researchers affiliated with UNC-Chapel Hill, Microsoft Research, Georgia Tech and Northeastern University introduces WildAWM, a system for generating simulated personal-computer environments where computer-use agents can practice long, multi-interface tasks without acting directly on real services.</p>
+<p>The work addresses a bottleneck in training agents through interaction rather than solely from human-created data. The researchers argue that real-world computer systems are costly and difficult to reset, can change while an agent is exploring them, and may expose users or services to security risks. WildAWM is designed to provide a more controlled alternative: executable environments containing websites, applications, model context protocol (MCP) services, command-line tools and local files.</p>
+<p>The paper is an arXiv preprint dated 19 October 2026 and has not been peer reviewed. Its authors report that the entire synthesis pipeline uses open-source models rather than proprietary frontier systems. The code, environments and models are publicly available through the project’s linked repository and project page.</p>
+<h3>Building connected computer worlds</h3>
+<p>WildAWM begins with generated personas, their contacts, websites, activities and multi-day plans. A coding agent then materializes those plans into persistent computer states. Each state can include web applications, MCP-accessible services, databases, application records and local files, allowing later activities to depend on earlier events.</p>
+<p>The system incorporates 15 mirror websites and eight MCP services, alongside applications and local files. The authors report 36 applications, 640 world states and 83 reusable skills in their synthesis statistics. A world is retained only when independent replays produce the same state and the services and websites remain healthy. Another coding agent checks whether the resulting state matches the planned activities.</p>
+<p>Tasks are generated inside these worlds rather than as isolated instructions. Each accepted task must use all three supported interface types—graphical user interface, MCP and command line—and is paired with a verifier that checks changes to the initial and final world states and the agent’s final answer.</p>
+<p>This design is intended to represent computer work as a connected workflow rather than a single browser session or application. In the paper’s case study, an agent must read a direct message, combine information from a CSV file, a bill of materials and a PDF through the command line, inspect product images in a storefront, create a restock note and send another message. The task therefore requires repeated movement between MCP, CLI and GUI tools.</p>
+<h3>Quality controls for difficult tasks</h3>
+<p>The researchers identify three recurring problems in synthetic task generation: a task may be impossible, too easy to train useful behavior, or paired with a verifier that judges outcomes incorrectly. WildAWM uses execution-based gates to screen for those problems.</p>
+<p>For each candidate, six rollouts are collected from combinations of three open-source models and six coding or “claw” agent harnesses. The system compares the programmatic verifier with an independent language-model judge and an agent judge that can inspect the initial and final environments. Candidates must pass consistency checks, fail when no action has been taken, have at least one successful rollout, and remain difficult enough that not every unassisted rollout succeeds.</p>
+<p>A counterfactual probe tests whether the agent judge changes its decision merely because it is shown an incorrect opposite outcome. Candidates are revised when they fail a gate, with the resulting evidence fed back into the generator.</p>
+<p>The final corpus contains 341 environment–task pairs. The paper classifies 273 as hard and 68 as medium; none are described as too easy after filtering. Tasks average 4.2 subtasks and 3.1 interface switches, while 74.5% revisit an interface used earlier in the workflow. Their mean success rate during synthesis was 21.3% without hints and 45.6% with hints. Every accepted task was solved by at least one agent, but none was solved by all agents.</p>
+<p>The authors also report that the tasks can require more than 100 agent steps. In their headline evaluation, GPT-6-Astra solved about 60% of the synthesized tasks, which they present as evidence that the environments remain challenging even for frontier models.</p>
+<h3>Reported transfer to unseen benchmarks</h3>
+<p>The researchers trained two Qwen models of different sizes only in WildAWM’s synthetic environments, using supervised warm-starting followed by reinforcement learning. The models were evaluated on eight out-of-distribution benchmarks covering web agents, claw agents and broader computer-use agents.</p>
+<p>The reported average improvement was 8.21 percentage points for the 4B model and 10.58 points for the 35B-A3B model, compared with their respective base models. The 35B-A3B model’s gains included 16.67 points on ClawEval, 16.06 on OSWorld-Verified, 13.72 on WebArena and 12.22 on CUA-Gym. The authors say both models improved on all eight benchmarks.</p>
+<p>These results support the paper’s claim that training in generated, cross-interface worlds can transfer to tasks not seen during training. They remain results reported by a preprint rather than independently established findings. The proposed contribution is not only the task set but also a pipeline intended to make synthetic computer environments reproducible, resettable and difficult enough to supply useful reinforcement-learning signals.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.26828v1" target="_blank" rel="noopener noreferrer" title="arXiv / Agent World Model in the Wild: Computer-Use Agent Environment Synthesis">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0023" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Spectral-Spatial Interpretation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint from researchers at the University of Wisconsin–Madison introduces a method for explaining multispectral image-model predictions by identifying which channel matters at each location, rather than producing only a spatial heatmap or a global band ranking.</p>
+<p>The method, called Spectral-Spatial Interpretation (SSI), addresses a problem in models that process images with multiple meaningful channels. In RGB photographs, different colors may support predictions in different parts of an object; in satellite imagery, visible, near-infrared and short-wave infrared bands may carry different information about vegetation, water or burned areas. A single heatmap can show where a model relies on evidence but not which channel provides it, while a global channel score can hide local differences.</p>
+<p>The work is presented in an arXiv preprint dated 15 October 2026 by Haotian Ma, Ruqi Yang and Philip Townsend, whose affiliations include the University of Wisconsin–Madison’s departments of Computer Sciences and Forest and Wildlife Ecology. The paper has not been peer reviewed.</p>
+<h3>Allocating evidence within each image location</h3>
+<p>SSI divides an image into spatial grid cells and treats every location-channel pair as part of the explanation. For one location, it holds the surrounding image at its observed values, then evaluates the channels at that location as a smaller cooperative game. Shapley-value allocation is used to estimate how much each channel contributes to the model’s target-class output in that local context.</p>
+<p>The resulting output is a position-by-channel attribution matrix. It can be viewed directly to see joint spatial and spectral evidence, or aggregated in two ways: across channels to obtain a spatial map, and across positions to obtain a channel ranking. The researchers report that the spatial sum at each location exactly matches the model-output contrast produced when that entire location is replaced by the selected baseline.</p>
+<p>This is different from an Owen-style hierarchical explanation, which averages contributions across possible surrounding spatial coalitions. SSI instead asks how channels contribute within the particular surrounding image that was observed. The paper says this gives the method a local interpretation, but it also means that the method is designed for position-wise contextual explanations rather than a globally additive accounting of the entire prediction.</p>
+<p>The approach also tests whether a simpler factorized explanation is adequate. Such an explanation would multiply one spatial heatmap by one global channel profile, assuming the same spectral pattern applies everywhere. SSI is intended for cases where that assumption fails—for example, where different regions of a bird or satellite scene depend on different channels.</p>
+<h3>Reported results across three datasets</h3>
+<p>The authors evaluate SSI on CUB-200-2011 bird images, EuroSAT 13-band Sentinel-2 land-cover imagery and HLS Burn Scar six-band imagery. The models include a ResNet-18 classifier for CUB-200, a ResNet-18 trained on all EuroSAT bands, and a lightweight UNet for burn-scar segmentation. The evaluations use both per-channel mean and zero masking baselines.</p>
+<p>Across the three datasets, the preprint reports that SSI achieved the strongest combined deletion and insertion results among the compared dense, flat and rank-1 attribution methods. In these tests, lower deletion scores indicate that an attribution ranking removes target evidence earlier, while higher insertion scores indicate that it restores evidence more effectively.</p>
+<p>For the per-channel mean baseline, SSI’s reported insertion AUC was 0.7132 on CUB-200, 0.7319 on EuroSAT and 0.6638 on HLS Burn Scar. The paper also reports leading performance on spectral hit rates and channel-deletion tests for EuroSAT and HLS Burn Scar, as well as the strongest spatial localization on the two datasets with annotations for that evaluation.</p>
+<p>On HLS Burn Scar, SSI was compared with an MC-Owen estimator. The researchers report better results for SSI on joint deletion, rank-1 deletion, channel deletion, insertion, spatial localization and spectral hit rates, while using about 6% of MC-Owen’s evaluation budget. In the reported comparison, SSI used up to 4,480 evaluations, compared with as many as 76,800 for the MC-Owen setup.</p>
+<p>The paper’s qualitative examples are consistent with the intended use of the method: different RGB channels receive different spatial supports in bird images, while red and short-wave infrared evidence is localized around burn-scar regions. On EuroSAT, the reported explanations emphasize red-edge and near-infrared channels for vegetation classes.</p>
+<h3>Scope and stated next steps</h3>
+<p>The experiments use relatively small channel counts: three for CUB-200, 13 for EuroSAT and six for HLS Burn Scar. SSI enumerates or samples channel subsets within each spatial cell, making the local game smaller than a game over every position-channel combination simultaneously. The authors report that their sampling errors remained below 10⁻² in the tested EuroSAT and HLS settings.</p>
+<p>The preprint identifies a remaining challenge for hyperspectral imagery with hundreds of correlated bands. It suggests that channel screening or adaptive grouping may be needed before applying local Shapley allocation at that scale. Extensions to operational hyperspectral missions and other multi-channel imaging fields, including biomedical microscopy and industrial materials inspection, are presented as future work rather than demonstrated results.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.21114v1" target="_blank" rel="noopener noreferrer" title="arXiv / Spectral-Spatial Interpretation">arXiv #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-cluster-id="cluster-0188" data-section="science_general" data-original-section="science_general" data-sources="nature">
+  <summary>A first for CRISPR: powerful prime editing alters DNA directly in the human body</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Prime Medicine has treated the first participant in a clinical trial using prime editing directly inside the human body, the company announced earlier this month. The trial targets Wilson disease by modifying liver-cell DNA to remove a mutation that disrupts copper elimination. Prime editing can insert, delete or rewrite DNA segments and is described as more precise than standard CRISPR–Cas9 editing. The company expects to report initial trial results next year.</p>
+<p>The treatment is part of a broader shift toward *in vivo* gene editing, in which cells are altered inside the body instead of being removed, edited in a laboratory and returned to the patient. This approach could make some therapies faster and less expensive to manufacture, although biomedical engineer Krishanu Saha of the University of Wisconsin–Madison said it involves distinct safety challenges. Wilson disease can cause copper accumulation and liver, nerve and neurological damage; patients currently rely on copper-clearing drugs and other medicines. No gene-editing therapy has yet been approved for use inside the body. The US Food and Drug Administration is expected to decide early next year on a separate in-vivo CRISPR–Cas9 treatment for hereditary angioedema.</p></div>
+  <div class="source-list"><a href="https://www.nature.com/articles/d41586-026-03371-x" target="_blank" rel="noopener noreferrer" title="Nature / A first for CRISPR: powerful prime editing alters DNA directly in the human body">Nature #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0263" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Oxford scientists discover how viruses build themselves without a blueprint</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">University of Oxford researchers have watched an engineered virus-like particle assemble one protein at a time, revealing how weak, reversible contacts and stable molecular checkpoints guide construction. The finding clarifies why complex protein shells form reliably and could eventually inform antiviral drugs and vaccine design.</p>
+<p>The study, published in *Nature*, examined a virus-like particle made from 60 protein units. Researchers followed its growth as individual proteins attached, using mass photometry to measure the mass of single molecules from the light they scatter. A new method kept individual particles confined and observable long enough to track assembly as it happened.</p>
+<p>The observations show that assembly is not a single, predetermined sequence. Protein building blocks repeatedly join and separate, allowing unsuccessful arrangements to fall apart. When enough components form the right closed configuration, several connections lock them into a more stable intermediate. These structures narrow the number of possible routes and provide a platform for further growth.</p>
+<p>A key transition occurs when five larger protein units form a closed pentagonal ring. The Oxford team identified this as the first highly stable structure in the process. After it appears, each successive stable stage needs fewer additional building blocks, so the particle grows more rapidly. The results help explain why nucleation—the earliest stage of assembly—is difficult, while later construction accelerates.</p>
+<p>Viruses protect their genetic material inside protein shells called capsids, which can contain tens or thousands of protein components. Scientists have studied viral self-assembly for decades, but many intermediate structures are short-lived and scarce, making it difficult to observe how starting materials become finished particles. The researchers said their method allowed them to quantify interactions and follow intermediate structures directly rather than reconstructing the process only from snapshots or models.</p>
+<p>The work could eventually help identify molecular interactions that can be disrupted to prevent viral shell formation, supporting the development of new antiviral treatments. The same understanding may aid efforts to engineer virus-like particles for vaccines and other therapeutic uses. The researchers also said the approach could be applied to other biological self-assembly processes, including the formation of cellular structures and large protein complexes. These medical and biological applications remain prospective outcomes of the findings, rather than treatments demonstrated by the study.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261021231248.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Oxford scientists discover how viruses build themselves without a blueprint">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0258" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>A revolutionary new microscope could reveal the hidden machinery of life</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A laser phase plate developed by physicists at the University of California, Berkeley, could make much smaller proteins and crowded cellular structures visible with cryoelectron microscopy, potentially improving studies of molecular interactions and disease-related biology.</p>
+<p>The device applies a powerful laser directly to the electron beam inside a cryo-EM instrument. By shifting the beam’s phase, it increases contrast without simply adding more illumination to the frozen biological sample. That matters because electron beams can damage specimens, while many proteins are too small to produce clear images with conventional cryo-EM.</p>
+<p>The researchers tested an upgraded microscope on six samples with different sizes and preparation methods. They reported improved resolution across the tests, with the largest gains in difficult cases involving small particles or imperfect specimens. Images of aldolase, which is relatively straightforward for modern cryo-EM, and hemoglobin, which is near the lower size limit for the technique, both improved when the laser phase plate was used.</p>
+<p>The team says the instrument can now image proteins as small as about 50 kilodaltons, although such work remains challenging. Conventional cryo-EM struggles with proteins below roughly 70 kilodaltons; the researchers estimate that this includes about 90% of the human proteome. They hope further refinements could eventually bring proteins as small as 17 kilodaltons, including myoglobin, within reach.</p>
+<p>The potential significance extends beyond isolated protein structures. Cryoelectron tomography combines images taken from multiple angles to reconstruct three-dimensional views of molecules in their cellular surroundings. Improving contrast could therefore help researchers distinguish proteins among the densely packed structures inside cells and study how molecular machines are arranged and interact in context.</p>
+<p>The Berkeley instrument, named Theia, uses one laser concentrated through a mirrored optical cavity. A related microscope being built at the Chan Zuckerberg Biohub’s imaging facility in Redwood City uses two lower-powered lasers positioned at right angles, a design intended to reduce damage to components and optical distortion. Both teams are working with Thermo Fisher Scientific, a cryo-EM instrument manufacturer.</p>
+<p>The Berkeley team’s latest images and technical findings are presented in *Science*. Details of the Biohub’s two-laser design are available in a preprint. The researchers describe the technology’s future biological applications as possibilities rather than completed capabilities, with smaller-protein imaging and improved cellular tomography still dependent on further development.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261021231230.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A revolutionary new microscope could reveal the hidden machinery of life">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0260" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Honey bees are bullying other bees, scientists discover</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Scientists at Anglia Ruskin University found that honey bees often displaced or chased other pollinators from flowers in and around Cambridge, England, while higher honey-bee densities were associated with fewer wild pollinators. The researchers warn that warming could intensify this competition.</p>
+<p>The study, published in *Ecological Entomology*, tracked pollinator activity for two years at five sites, each within 300 metres of an established honey-bee colony. Researchers watched insects feeding on bramble and ivy, plants that attract large numbers of nectar- and pollen-seeking species.</p>
+<p>They grouped visitors as honey bees, bumble bees, solitary bees, hoverflies, or other insects, including butterflies, beetles and wasps. Across 93 hours of observation, they recorded whether insects shared flowers or whether one interrupted another and gained access at its expense.</p>
+<p>Higher honey-bee concentrations were linked to fewer other pollinators. On bramble, doubling honey-bee density was associated with a 14% decrease in bumblebee abundance. On ivy, more honey bees were linked to reduced numbers of solitary bees and hoverflies.</p>
+<p>The interactions were also frequently aggressive. Other pollinators avoided honey bees in 28% of observed encounters on bramble and 36% on ivy. In at least 20% of encounters that honey bees won, they pushed aside or chased competing insects. The ivy bee was the only other pollinator observed actively challenging honey bees and sometimes successfully defending feeding sites.</p>
+<p>The researchers observed more competition during warmer conditions. They suggest that heat may reduce nectar supplies while making honey bees more active, potentially giving them an advantage over pollinators such as bumblebees and hoverflies. They present the findings as relevant to conservation, particularly in areas with high concentrations of managed hives, rather than as an argument against beekeeping.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261021231227.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Honey bees are bullying other bees, scientists discover">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0259" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover a surprising secret behind the human brain’s wrinkles</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">attributed source material (republished)</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the German Primate Center have identified several developmental differences that may explain why common marmosets have small, nearly smooth brains while humans and many other primates develop larger, folded cerebral cortices.</p>
+<p>Common marmosets (*Callithrix jacchus*) initially develop brain tissue with a structure resembling that of larger-brained primates. The divergence appears later, as neural progenitor cells—the cells that generate neurons—begin producing fewer nerve cells. The researchers found that this results from several changes rather than one switch: some progenitor cells divide more slowly, others have simpler structures associated with lower proliferation, and the period of rapid cell multiplication is shorter.</p>
+<p>Together, these processes restrict the number of neurons produced and limit expansion of the cerebral cortex. In larger, more folded brains, increased cortical growth creates the ridges and grooves that expand the brain’s surface. The study therefore links differences in cell behavior and developmental timing to the broad variety of brain sizes and shapes seen among primates.</p>
+<p>The team investigated these mechanisms by comparing brain organoids grown from human and marmoset cells. These three-dimensional models reproduce some features of early brain development and allowed the researchers to examine changes across multiple samples. They also repeated key experiments using fetal brain tissue, according to the research description.</p>
+<p>An important step was matching the organoids’ development with that of natural marmoset brains. The researchers determined that a marmoset organoid at 50 days corresponded closely to a naturally developing marmoset brain at about 90 days, allowing comparisons between the model and the animal tissue despite their different developmental rates.</p>
+<p>The findings, published in *Science Advances*, offer a cellular explanation for how relatively modest changes in progenitor-cell structure, division speed and developmental timing can produce major differences in primate brain architecture. They also provide a basis for future work on human brain development and disorders that arise when those processes are disrupted. The study’s evidence concerns developmental mechanisms in marmosets and organoids; its implications for human disorders remain a potential research application rather than a demonstrated treatment or diagnostic advance.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261021231235.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover a surprising secret behind the human brain’s wrinkles">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0150" data-section="science_general" data-original-section="science_general" data-sources="guardian">
+  <summary>Have scientists finally found a way to save the banana from disaster?</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers have announced a potentially new route to protect bananas from disease: Yelloway, a collaboration between Chiquita and KeyGene, has developed a fully fertile Cavendish banana. This could allow breeders to cross it with disease-resistant varieties and create commercially viable alternatives. The development comes as Tropical Race 4 (TR4), a strain of Panama disease, has spread from south-east Asia to Australia, Africa, the Middle East and Latin America. Dr Jose De Vega of the Earlham Institute said a December 2025 report from Ecuador, the world’s largest banana exporter, raised concerns for supply chains and for millions of tropical people who rely on bananas and plantains for food and income. Around 139m tonnes of bananas are grown globally each year.</p>
+<p>Cavendish bananas are usually sterile and are propagated from offshoots, leaving plantations genetically similar and vulnerable to shared diseases. Other strategies include a genetically modified Cavendish, QCAV-4, approved for human consumption in Australia and New Zealand, and De Vega’s work on gene editing to reproduce resistance found in other banana varieties. Yelloway’s non-GM line, called Yellowdish, could make conventional cross-breeding possible, but researchers said its production method and chromosome count have not been disclosed. Crosses might produce disease-resistant plants, yet they could also yield fruit with different taste, appearance or productivity. Chiquita’s Peter Stedman warned that repeatedly improving Cavendish could preserve a monocrop rather than increase biodiversity.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/global-development/2026/oct/22/have-scientists-finally-found-a-way-to-save-the-banana-from-disaster" target="_blank" rel="noopener noreferrer" title="The Guardian / Have scientists finally found a way to save the banana from disaster?">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        for (const group of reportSection.querySelectorAll('.related-stories, .story-group')) {
+          group.hidden = !Array.from(group.querySelectorAll('details.story')).some(story => !story.hidden);
+        }
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
