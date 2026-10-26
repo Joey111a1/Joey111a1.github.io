@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-10-26</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .story-group {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+    .related-stories {
+      margin-left: 16px;
+    }
+    .related-stories > h3 {
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-10-26</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-cluster-id="cluster-0111" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian,middle_east_eye,scmp">
+  <summary>Israeli soldiers raze neighbourhood in Hebron, driving families from homes</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli forces have demolished or marked for demolition parts of Ein Deir Baha in Hebron, displacing hundreds of Palestinian families after a deadly checkpoint attack, according to local authorities and residents; Israeli officials attributed the operation to security concerns and links they alleged between residents and Hamas.</p>
+<p>By Saturday afternoon, the Hebron municipality estimated that 35 hectares had been destroyed or designated for destruction and that about 1,500 people had been evicted. Videos sent by a Hebron resident showed several blocks of flattened homes, soldiers marking houses with black crosses and a bulldozer demolishing a stone wall. A municipality spokesperson said about 300 families had been displaced; some found shelter with relatives and friends, while community halls and children’s play areas were opened for others.</p>
+<p>The demolitions followed Friday’s attack on an Israeli military checkpoint outside Hebron, in which two Israeli soldiers were killed, three were injured and the two gunmen were killed. The Israel Defense Forces said approximately 2,000 residents of the target area belonged to a clan it described as associated with Hamas and said civilians who wished to leave were allowed to pass through designated screening points. Separately, the IDF said it was demolishing structures it considered illegally built to enforce law and remove potential security risks.</p>
+<p>Issa Amro, a Hebron civil-rights activist whose sister’s family was among those displaced, said residents were being collectively punished despite having no connection to the attack. Israel also announced that all West Bank land crossings would be closed to Palestinians on the day of its Tuesday election, while Palestinian workers would be barred from entering Israeli settlements from Sunday through Tuesday, cutting off income for many workers.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/oct/24/israel-soldiers-raze-west-bank-neighbourhood-hebron-families-from-homes" target="_blank" rel="noopener noreferrer" title="The Guardian / Israeli soldiers raze neighbourhood in Hebron, driving families from homes">Guardian #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3372058/israel-widens-west-bank-crackdown-displacing-hebron-families-after-attack" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israel widens West Bank crackdown, displacing Hebron families after attack">SCMP #1</a><a href="https://www.middleeasteye.net/news/israeli-press-review-israel-close-west-bank-crossings-netanyahu-orders-hebron-lockdown" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israeli press review: Israel to lockdown West Bank as Netanyahu orders Hebron siege">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0162" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Israeli forces release Palestinian &#x27;doctor of the poor &#x27; with visible signs of abuse</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Israeli forces released Palestinian physician Mazen al-Rantisi, 71, from Ofer prison on Sunday after almost four months in custody. A photograph shared after his release showed him appearing severely thin, with a red injury on his forehead. Al-Rantisi, who reportedly waived fees and supplied medicines to low-income Palestinians, had been detained during a June 21 raid at his home in Ramallah, in the West Bank. Prosecutors later indicted him over his chairmanship of the Union of Health Work Committees, a Palestinian nonprofit providing medical services.</p>
+<p>Al-Rantisi told his lawyers that he had faced physical mistreatment and inadequate medical care in detention. He said authorities withheld his regular medication for 10 days and continued withholding another drug. Healthcare Workers Watch said 80 Palestinian health workers from Gaza and 14 from the West Bank remained detained. Dr Ahmed Muhanna, released in January after 665 days, told the group that doctors received especially harsh treatment and said he lost nearly one-third of his body weight in custody. HWW’s Dr Rebecca Inglis said keeping nearly 100 health workers detained violated international humanitarian law and raised serious concerns about their welfare.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/israeli-forces-release-palestinian-doctor-poor-visible-signs-abuse" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Israeli forces release Palestinian &#x27;doctor of the poor &#x27; with visible signs of abuse">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0216" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="rappler">
+  <summary>Philippines: What schools will do amid intense heat during El Niño</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Philippines’ Department of Education is preparing schools for projected unusually high temperatures as El Niño intensifies, with officials warning that heat-index conditions could increase lost school days and disrupt students’ learning. In an October 23 interview, Undersecretary Malcolm Garma said existing class-suspension rules provide continuity measures while formal El Niño guidelines remain pending. Under the system, face-to-face classes continue at Level 1 with water breaks and adjusted outdoor activities; Level 2 allows modified schedules and home-based or hybrid learning; and Level 3 can be used when heat risks or water shortages become serious. At 42°C or higher, Level 4 suspends academic activities and shifts attention to safety and psychosocial support.</p>
+<p>The education department plans to preposition self-learning materials, activity sheets and other alternative-learning resources before the hottest period. Schools are also being directed to maintain drinking-water facilities, address leaks, prepare for rationing, and equip clinics for dehydration or heat stroke, with local governments and the Department of Health available for emergency support. Feeding programs are to develop contingency menus and maintain shelf-stable food stocks. Schools may buy additional fans, while future classrooms are expected to incorporate higher or insulated ceilings and improved airflow. School heads may recommend localized suspensions, but these decisions must be assessed with division offices or local governments.</p></div>
+  <div class="source-list"><a href="https://www.rappler.com/philippines/deped-schools-el-nino-measures-2026" target="_blank" rel="noopener noreferrer" title="Rappler / What schools will do amid intense heat during El Niño">Rappler #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0130" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>‘Gaza’s suffering has become campaign fodder’: Palestinians fear the worst from Israel election</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">As Israel prepares to vote, Palestinians in Gaza are bracing for an outcome they fear could shape their future. Nearly a million displaced Palestinians face dire sanitation conditions, water shortages and continuing danger from Israeli strikes, while Gaza has received little attention in the campaign.</p>
+<p>Benjamin Netanyahu’s far-right coalition and Gadi Eisenkot’s opposition Yashar party have instead emphasized destroying Hamas after the 7 October attacks; neither has presented a detailed proposal for Gaza’s future. Both support Donald Trump’s controversial peace plan and have vowed to end Hamas rule, while Eisenkot has promised to improve Israel’s international standing after three years of conflict. Meanwhile, residents say commercial shipments have stopped for roughly a week, flour is now over triple its earlier price, and dwindling aid is leaving families vulnerable to another food crisis. Displaced residents express little confidence that a new government would change conditions as families struggle to secure food, water, schooling and medical care. Some still follow the election closely, fearing candidates are competing over tougher positions on Gaza rather than offering a better future.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/oct/25/gaza-suffering-campaign-fodder-palestinians-fear-worst-israel-election" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘Gaza’s suffering has become campaign fodder’: Palestinians fear the worst from Israel election">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0076" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>‘This thing is killing us’ — residents bear the cost of Tshwane’s water failures</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Residents of Bronkhorstspruit and nearby Rethabiseng in South Africa are relying on broken pipes and scarce tankers after unchlorinated, sewage-polluted municipal water was supplied for weeks, with more than 400 reported gastrointestinal illness cases, disrupted schooling and sewage backing up into residential streets.</p>
+<p>The water treatment plant ran out of chlorine in late September. Residents were later warned not to drink, cook with or bathe in municipal water while reservoirs were drained and flushed. Most of those who became seriously ill were children under four, according to the supplied account.</p>
+<p>The shortage has left households without enough water for drinking, washing or flushing toilets. Susan Mashilo, who survives on child-support grants, said she could not afford water sold locally at R1 a litre and sometimes collected it from a ruptured pipe. In Rethabiseng, residents said promised tanker deliveries were absent or insufficient; the City of Tshwane said it had deployed 36 tankers.</p>
+<p>Blocked sanitation systems have worsened the danger, with raw sewage flowing from drains onto streets. Residents reported children becoming ill and missing school because clothes, bedding and bodies could not be washed.</p>
+<p>Warnings had preceded the crisis: the national Department of Water and Sanitation cited critical plant deficiencies, while a corrective plan submitted by Tshwane was not implemented within its stated timeframes. Mayor Nasiphi Moya placed the plant manager on precautionary suspension and ordered an independent investigation into chemical supplies and communication failures.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-10-25-this-thing-is-killing-us-residents-bear-the-cost-of-tshwanes-water-failures" target="_blank" rel="noopener noreferrer" title="Daily Maverick / ‘This thing is killing us’ — residents bear the cost of Tshwane’s water failures">DM #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0231" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Louie Shum’s death: heart disease in Hong Kong and what to do in an emergency</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Louie Shum Chun-ying, a veteran Hong Kong stock-market commentator, has died, prompting renewed attention in Hong Kong to heart disease. A police source said he had a history of heart disease and diabetes. The Department of Health reported more than 6,500 heart-disease deaths in 2024, making the condition one of the territory’s leading causes of death. The source advises at-risk residents to monitor their health and seek care promptly, and notes a local cardiologist’s emphasis on the role of bystanders during emergencies.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/hong-kong/health-environment/article/3372082/louie-shums-death-heart-disease-hong-kong-and-what-do-emergency" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Louie Shum’s death: heart disease in Hong Kong and what to do in an emergency">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0051" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="bbc">
+  <summary>Israel to close West Bank crossings on election day as crackdown escalates</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Tuesday, Israel’s election day, the military says it will shut all crossings from the West Bank and prevent Palestinian workers from entering settlements. Under the IDF order, workers would also be unable to enter or leave Judea and Samaria, the Jordan Valley and industrial areas on Tuesday; most settlement access was to end Sunday, apart from limited exceptions. More than 100,000 Palestinians had been allowed into Israel before 7 October 2023, but only a small fraction have since regained permits.</p>
+<p>The measures follow an operation in Hebron after two Palestinian gunmen killed two Israeli soldiers at a checkpoint; three more soldiers were wounded and the gunmen died. Israel’s military has demolished homes and businesses there, with hundreds of families displaced; Defence Minister Israel Katz said about 2,000 residents had been displaced, while restrictions have sharply limited movement for the city’s 200,000 residents.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c6y93ylpl5p2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Israel to close West Bank crossings on election day as crackdown escalates">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0118" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Myanmar’s Aung San Suu Kyi ‘sounds strong’ but is isolated, son says</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Aung San Suu Kyi’s son, Kim Aris, said she sounded physically and mentally well during their first conversation in more than five years, but remained almost completely isolated in Myanmar. Aris spoke with his 81-year-old mother on Thursday at the Myanmar embassy in London. He said he was unsure of her exact location, though he believed she was being held at a fenced residence in Naypyidaw, with only military or police personnel around her. Suu Kyi was detained after the military coup in 2021.</p>
+<p>Aris welcomed the opportunity to speak with her but described the invitation as part of a “public relations” effort by Myanmar’s military leaders. He said Suu Kyi had no access to newspapers, radio or television and remained cut off from the outside world. Activists have demanded evidence of her condition, and she was photographed during a Red Cross visit in August; government images released the following week showed her receiving gardening books. Aris characterized such appearances as staged efforts to suggest she was being treated fairly.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/oct/25/myanmar-aung-san-suu-kyi-speaks-son-pr-move" target="_blank" rel="noopener noreferrer" title="The Guardian / Myanmar’s Aung San Suu Kyi ‘sounds strong’ but is isolated, son says">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0011" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Kenya bus crash kills at least 24 as government vows road safety crackdown</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At least 24 people died and 24 others were hurt when a passenger bus carrying mourners and a cement truck crashed in Kenya’s Kanga area near Mtito Andei on October 25, police and hospital officials said. The collision occurred around 7:45am on the Nairobi–Mombasa highway. The bus was operated by Power of the Word Church International in Mombasa and was carrying people home after their pastor’s funeral in western Kenya. Survivor Violet Mwandonyi said she heard passengers seeking assistance and was uncertain about the fate of her two children, who were travelling with her.</p>
+<p>Investigators have not established the cause. Makueni County Commissioner Abdullahi Khalif said the bus had been passing other vehicles before hitting the truck, while Kenya’s National Transport and Safety Authority cited hazardous overtaking as one possible explanation. Another survivor said the truck hit the bus from behind. President William Ruto ordered checks of public-service vehicles, and Transport Minister Davis Chirchir announced planned action against speeding and dangerous overtaking, along with road improvements and tighter commercial-driver training and inspections. The crash followed another highway collision about three weeks earlier that killed 17 people.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/10/25/kenya-bus-crash-kills-at-least-24-as-government-vows-road-safety-crackdown?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Kenya bus crash kills at least 24 as government vows road safety crackdown">AJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0103" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="folha">
+  <summary>Woman stabbed at Tietê terminal after attack with alleged political motivation and homophobia</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A young woman was stabbed in the hand at the Tietê Bus Terminal in northern São Paulo, Brazil, at about 4 p.m. on Sunday the 25th, after a man approached her and other women shouting “Bolsonaro 22,” according to witness accounts. Witnesses said she was with her girlfriend and friends, asked him to move away, and was then attacked with a knife. They attributed the incident to a combination of political intolerance and homophobia, noting that the victim is homosexual; the evidence does not establish this as a confirmed motive.</p>
+<p>The attack left blood on the floor and caused panic among passengers. Women nearby confronted the assailant, who retreated and fled, while a witness traveling to Campinas had to be supported after becoming distressed. Witnesses said security staff took about 10 minutes to arrive and that the victim remained bleeding until terminal employees provided assistance. Socicam, the company managing the terminal, did not respond to requests for comment before publication. São Paulo’s Public Security Secretariat said it would check whether police had been called.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/10/mulher-e-esfaqueada-no-terminal-tiete-apos-ataque-com-suposta-motivacao-politica-e-homofobica.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / Woman stabbed at Tietê terminal after attack with alleged political motivation and homophobia">Folha de S.Paulo #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0015" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="al_jazeera_en">
+  <summary>Uganda orders 21-day Ebola quarantine for citizens returning from DR Congo</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Uganda is requiring nationals who return from the Democratic Republic of the Congo (DRC) to spend 21 days in quarantine, a measure announced by Health Minister Chris Baryomunsi in Kampala on October 25, 2026. The returning travellers must cover the quarantine costs. Screening has also been expanded at Entebbe International Airport and land borders, and arrivals must submit contact information. Uganda says it currently has no active Ebola infections after declaring its Bundibugyo outbreak over on July 28; the Health Ministry recorded 20 infections and two deaths during that outbreak.</p>
+<p>The precautions follow Ebola cases in Kenya and Nigeria and disagreement over the possible source of one infection. Swiss authorities said a Ugandan-born woman contracted Ebola during a September visit to Uganda, while Nigeria confirmed her infection on October 20 after she reached Abuja. Baryomunsi questioned whether exposure could instead have occurred through relatives who had visited the DRC and later met her in Kampala. The World Health Organization said the information available to it did not show that the woman had herself travelled to the DRC. Nigerian and Ugandan authorities are examining her movements and the infection’s possible origin.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/10/25/uganda-orders-21-day-ebola-quarantine-for-citizens-returning-from-dr-congo?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Uganda orders 21-day Ebola quarantine for citizens returning from DR Congo">AJ #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-cluster-id="cluster-0207" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Illegal Pier Continues to Expand (Things Around Us)</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A pier at the mouth of the Sandao Gou Minxing River in Laobian District, Yingkou, Liaoning, China, continues operating despite a district government notice issued in February recognizing that it had not legally obtained sea-area use rights. Fishermen say the pier was built without a permit in 2011, expanded from one berth to eight, and shifted from personal use to commercial operations. It reportedly moors several vessels year-round in a river section just over 30 meters wide, narrowing the space available for passing ships and affecting navigation safety.</p>
+<p>The fishermen say they have reported the pier to relevant departments, but that it remains in normal operation. They warn that it could expand further if action is delayed and are asking authorities to close it in accordance with the law and restore safe, unobstructed navigation.</p></div>
+  <div class="source-list"><a href="http://society.people.com.cn/n1/2026/1026/c1008-40821208.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Illegal Pier Continues to Expand (Things Around Us)">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0198" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en,xinhua_en">
+  <summary>China Focus: Health work, emergency facilities back post-quake resettlement in China&#x27;s Xizang</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">material_harm</span><span class="badge">regional expansion</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Health teams and emergency facilities are supporting more than 12,000 people evacuated after a 7.0-magnitude earthquake in Baqen County, Nagqu, in China’s Xizang Autonomous Region, as authorities organize temporary resettlement in a high-altitude area entering cold weather.</p>
+<p>Local authorities said the earthquake killed 16 people, injured 76 and damaged or destroyed 339 homes and 20 livestock sheds. By Saturday morning, all injured people were receiving medical treatment, with five of 11 initially classified as seriously injured improving to mild condition.</p>
+<p>Disease-control teams are monitoring more than 3,600 residents across 35 resettlement sites, while disinfecting public areas and contamination risks and testing drinking water, according to the Nagqu earthquake relief headquarters.</p>
+<p>Mobile medical stations provide treatment for common illnesses and minor injuries, medicine, checkups and basic psychological counseling. Hospitals near the disaster zone also sent medical workers, including to treat an injured villager and check a 23-year-old woman who was 28 weeks pregnant.</p>
+<p>New emergency facilities put into use include a mobile kitchen, a water-purification station and an eco-friendly toilet. The kitchen can prepare meals for 300 to 500 people in two hours, while a purification unit can process two tonnes of well water hourly and operate at temperatures as low as minus 30 degrees Celsius.</p>
+<p>Tents, prefabricated housing and other relief supplies continue arriving as residents gradually move toward better-insulated temporary accommodation.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/1025/c90000-20511996.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / China Focus: Rescue efforts continue after 7.0-magnitude quake in China&#x27;s Xizang">PDE #1</a><a href="https://english.news.cn/20261025/b6bc358529d94bae88e6cd604edf9560/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China Focus: Health work, emergency facilities back post-quake resettlement in China&#x27;s Xizang">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0201" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China: How do People&#x27;s Jurors Perform Their Roles? Supreme Court Examples in the Miu Case of Abuse</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In China, the Supreme People’s Court recently held a press conference on People’s jurors and released typical cases, including the abuse case involving Miu. The court described measures intended to broaden and balance juror participation: selection is mainly random, appointments are separated from courtroom use, and jurors generally face an annual limit of no more than 30 cases. Jurors are also to participate more often in matters with major public or social significance; certain serious criminal, public-interest, land, environmental, and food-safety cases require a seven-member panel of judges and jurors.</p>
+<p>In the Miu case, the court said Miu repeatedly quarrelled with and insulted his girlfriend, Chen, whose name was changed, and pressured her to terminate a pregnancy, causing severe psychological pressure. Jurors examined the couple’s cohabitation, its duration, and their financial dealings while considering whether premarital cohabitation created a family relationship for the crime of abuse. They concluded that the long-term, stable relationship qualified and that Miu’s sustained verbal and emotional mistreatment constituted abuse. The Supreme People’s Court presented their reasoning as supporting the panel’s verdict and sentence and as recognizing mental harm within the offense.</p></div>
+  <div class="source-list"><a href="http://society.people.com.cn/n1/2026/1025/c1008-40821083.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / How do People&#x27;s Jurors Perform Their Roles? Supreme Court Examples in the Miu Case of Abuse">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0200" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Keeping the Migratory Birds Through Four Seasons</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Rushan, Shandong, Yin Beach is being reshaped from a summer resort into a year-round coastal living and wellness destination, with services aimed particularly at older residents and other long-stay visitors. The effort addresses seasonal population swings through food, healthcare, transport, infrastructure and community activities.</p>
+<p>In autumn, the beach remains active: visitors walk the coast, older residents gather in public spaces, and local markets continue to draw customers. Rushan has traditionally attracted summer visitors from May through October, but its resident population typically declined in winter. The city’s current approach is designed to make longer stays more practical.</p>
+<p>Community canteens are central to the effort. Officials have identified nine suitable sites for hotels and restaurants, adapted canteen services for those locations, developed 12 health-oriented dishes, and added telephone ordering and home delivery for older and disabled residents.</p>
+<p>Healthcare has also been expanded. Three community health stations provide consultations and follow-ups, while a free patient transport service connects Yin Beach residents with medical facilities and referrals across the city. Infrastructure upgrades include renovations to older housing areas and improvements to drainage, water and electricity. Nine bus routes serve the area, with free rides for residents aged 60 and above, alongside nearby markets and shopping centers.</p>
+<p>Year-round sports and cultural programming is another part of the plan.</p></div>
+  <div class="source-list"><a href="http://health.people.com.cn/n1/2026/1025/c14739-40821028.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Keeping the Migratory Birds Through Four Seasons">PDE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-cluster-id="cluster-0141" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Ten days that could shake the world: democratic norms at stake in four pivotal elections</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Four elections across four continents are scheduled within 10 days, putting Brazil, Serbia, Israel and the United States at a possible political turning point. The contests could affect constitutional checks, judicial independence, minority rights, environmental protections and the ability of legislatures to restrain executive power.</p>
+<p>Brazil’s presidential runoff on Sunday pits Luiz Inácio Lula da Silva against far-right candidate Flávio Bolsonaro, who is reported to hold a narrow lead. Bolsonaro has proposed constitutional changes, a pardon for his father Jair Bolsonaro, who was sentenced for attempting to retain power through a coup, and looser environmental rules affecting the Amazon. He has also backed tougher criminal policies and judicial changes that critics fear could weaken the courts.</p>
+<p>Serbia votes the same day, where President Aleksandar Vučić’s long rule faces its strongest challenge from a student-led movement. The movement emerged after 16 people died in the collapse of a railway-station canopy in Novi Sad and is running academics and technocrats selected through decentralized assemblies. The source describes Vučić’s allies as having dominated much of the broadcast media and state institutions. A close result could bring demonstrations or violence, with both the ruling party and student movement prepared to mobilize.</p>
+<p>Israel’s parliamentary election on Tuesday will test Benjamin Netanyahu’s coalition with far-right, settler-backed parties. The opposition is expected to win more seats but may not secure a majority, potentially requiring cooperation with Palestinian citizens, who are under-represented in the Knesset. The account says Netanyahu’s government has sought to curb judicial independence, pressure the press and politicize security institutions; the opposition largely shares its position on the war in Gaza but promises to reverse those domestic changes.</p>
+<p>The United States then holds midterm elections on 3 November. Democrats could win the House and may take the Senate, but the source forecasts limited immediate restraint: President Donald Trump could veto legislation, while Congress might face refusal to cooperate with investigations or funding conditions.</p>
+<p>The Sweden-based V-Dem Institute says global democratic freedoms have fallen to levels last recorded in 1978. The four outcomes are presented as potentially interconnected: victories for authoritarian-aligned forces could reinforce one another, while gains by democratic challengers could encourage counterparts elsewhere.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/ng-interactive/2026/oct/25/ten-days-shake-world-democratic-norms-pivotal-elections-brazil-israel-serbia-us" target="_blank" rel="noopener noreferrer" title="The Guardian / Ten days that could shake the world: democratic norms at stake in four pivotal elections">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0106" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="folha">
+  <summary>Lula team prepares constitutional amendment to hit the fiscal target center and plans less subsidized credit</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Brazil’s incoming Lula administration is preparing a constitutional amendment that could allow deeper budget restraint if revenues fall short, while considering reduced subsidized lending and a larger primary surplus. The proposals are intended to reassure financial markets but could affect public spending, credit access and campaign commitments.</p>
+<p>President Luiz Inácio Lula da Silva’s team is drafting a PEC, or constitutional amendment proposal, to let the new government pursue the center of its fiscal target and freeze additional budget resources if needed to improve the public-debt trajectory. Lula was reelected on Sunday the 25th, but the amendment has not been formally submitted: that will depend on his decision and on the composition of the new government, particularly the officials leading Finance, Planning and the Civil Affairs Ministry.</p>
+<p>The economic team is also considering raising the primary surplus above the R$18.6 billion included in the proposed 2027 budget. The surplus measures revenue minus expenditure before debt-service costs, but the team has not disclosed how it would achieve a higher result. Other measures under consideration include reviewing mandatory spending, submitting rates for new consumption taxes created by tax reform, and ending salary supplements for public servants, especially in the judiciary.</p>
+<p>A central part of the plan is to slow subsidized credit. The government may avoid renewing programs such as Move Brasil, which finances vehicles for app-based drivers and taxi drivers and motorcycles for delivery workers. The source reports that subsidized lending expanded during Lula’s third term and has been criticized by specialists; such transfers are classified as financial expenses and therefore fall outside the spending-cap and primary-result rules. More credit could also complicate the Central Bank’s efforts to control inflation.</p>
+<p>The proposals must be reconciled with campaign promises including debt relief for microentrepreneurs, a R$5,000 payment for individual microbusiness owners, a higher Bolsa Família benefit, free urban transport and purchases of individuals’ old debts. An economic-team member said the Executive would fit these commitments into the 2027 budget while seeking a somewhat larger surplus.</p>
+<p>The rules currently allow a tolerance of 0.25 percentage points of GDP around the annual fiscal target. The proposed amendment would make it easier to contain spending beyond the usual floor if revenue disappoints. Whether Lula adopts the broader package—including a possible change to Health and Education spending floors—remains undecided.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/10/equipe-de-lula-prepara-pec-para-buscar-centro-da-meta-fiscal-e-preve-menos-credito-subsidiado.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / Lula team prepares constitutional amendment to hit the fiscal target center and plans less subsidized credit">Folha de S.Paulo #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0235" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="scmp">
+  <summary>Eye on China: Japan reopens taboo debate over nuclear-powered submarines</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Japanese Prime Minister Sanae Takaichi said on October 14 that Japan would seriously examine acquiring nuclear-powered submarines for the Maritime Self-Defence Force, reopening a long-taboo policy debate. The proposal comes as China expands its naval activity across the Pacific and Japan-China tensions remain high. Japan is also expected to revise its core security documents by the end of the year, while the submarine plan is dividing the ruling coalition. No acquisition has been announced; the proposal remains under consideration.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/military/article/3372066/eye-china-japan-reopens-taboo-debate-over-nuclear-powered-submarines" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Eye on China: Japan reopens taboo debate over nuclear-powered submarines">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0113" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Almost two-thirds of Australians bulk-billed for all GP care amid extra incentives for doctors</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Australia, 63% of people had all their general-practice visits covered through bulk billing, compared with 56% in each of 2024 and 2025. The Royal Australian College of General Practitioners’ (RACGP) annual health of the nation report, scheduled for publication on Wednesday, based this finding on responses from 2,766 GPs. Among respondents, 26% said they bulk-billed every patient, up from 12% in 2025. The increase followed November’s introduction of a 12.5% bonus for practices providing all eligible Medicare services without patient charges, shared between practices and doctors. The proportion postponing GP treatment because of cost declined from 8.8% in 2023–24 to 7.7% in 2024–25.</p>
+<p>The 63% patient figure remains below the 70% recorded in 2019. RACGP president Dr Michael Wright described the results as evidence of better affordability. Health economist Dr Luke Slawomirski said the survey represented roughly 7% of GPs, so its results reflected clinicians’ reports rather than administrative records or patient outcomes. Medicare data measured consultations, not patients: 81% were bulk-billed in 2025–26, versus 78% the previous year. The survey also indicated that around one-third of patients could not see a GP when necessary, underscoring the distinction between affordability and access.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/2026/oct/26/almost-two-thirds-of-australians-bulk-billed-for-all-gp-care-amid-extra-incentives-for-doctors" target="_blank" rel="noopener noreferrer" title="The Guardian / Almost two-thirds of Australians bulk-billed for all GP care amid extra incentives for doctors">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0075" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="daily_maverick">
+  <summary>IEC under fire after unqualified sign language interpreter used at election workshop</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A complaint to South Africa’s Cultural, Religious and Linguistic Rights Commission has intensified scrutiny of the Electoral Commission’s vetting after an inadequately trained interpreter was used at a disability election workshop in Pietermaritzburg, limiting Deaf participants’ access to electoral information.</p>
+<p>The workshop took place at Msunduzi City Hall on 16 October. Thabo Nxele, who interpreted during the event, acknowledged that he knew the alphabet but did not have full South African Sign Language skills. Deaf activists and interpreting professionals said his signing was incomprehensible or amounted only to random fingerspelling, and accused the IEC of denying Deaf citizens meaningful access to information about elections.</p>
+<p>IEC Deputy CEO Victor Shale said the commission normally relies on interpreters volunteered by local organisations rather than hiring them directly. He said a participating organisation, Liberation of Disabled Peoples Ability (LDPA), had provided Nxele and that IEC staff did not know beforehand that he failed to meet interpreting standards. The IEC apologised.</p>
+<p>LDPA officials disputed that account. Secretary Simphiwe Zuma accused the IEC of shifting responsibility, while deputy chairperson Phathisiwe Mkhize said the IEC had contacted her about Nxele weeks before the workshop. Mkhize and Nxele also said he received R50 for transport after interpreting for about two hours.</p>
+<p>The CRL commission said it would investigate, while PanSALB said it could examine the alleged linguistic-rights violation. Professional bodies called for the IEC’s selection and accessibility procedures to be reviewed.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-10-25-iec-under-fire-after-unqualified-sign-language-interpreter-used-at-election-workshop" target="_blank" rel="noopener noreferrer" title="Daily Maverick / IEC under fire after unqualified sign language interpreter used at election workshop">DM #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0102" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="el_pais">
+  <summary>The Story of Baby Poppy: From Surrogacy Birth to the Youngest Victim in Los Angeles&#x27; &#x27;Mansion of Horrors&#x27;</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Social workers removed 21 children from Silvia Zhang and Guojun Xuan’s Arcadia, California, residence after authorities alleged severe abuse inside the luxury home. Poppy, born through a surrogacy arrangement, was about two months old and became the youngest child placed in Los Angeles County care.</p>
+<p>Poppy was born in Las Vegas on February 21, 2025. In 2023, Zhang had offered Tronderrica James, a Nevada woman, $135,000 to carry the pregnancy. James and her husband later sued in federal court, alleging fraud and emotional distress; the lawsuit says Zhang and Xuan were absent at the birth and directed hospital staff to assume immediate responsibility for the baby.</p>
+<p>The children were taken after prosecutors accused the couple of using violent discipline, including beatings that allegedly left one child hospitalized. Prosecutors also described surveillance cameras and nannies at the residence. Authorities are investigating the children’s parentage; at least 14 were reportedly born through surrogacy.</p>
+<p>Zhang and Xuan were arrested earlier this month and remain jailed on child-abuse charges that could result in more than a decade in prison. Both have pleaded not guilty. A judge set bail at $20 million. The FBI is pursuing a separate investigation into possible additional crimes, while Poppy and the other children remain under county protection.</p></div>
+  <div class="source-list"><a href="https://elpais.com/us/2026-10-25/la-historia-de-la-bebe-poppy-de-nacer-por-vientre-de-alquiler-a-ser-la-victima-mas-joven-de-la-mansion-del-horror-de-los-angeles.html" target="_blank" rel="noopener noreferrer" title="El País / The Story of Baby Poppy: From Surrogacy Birth to the Youngest Victim in Los Angeles&#x27; &#x27;Mansion of Horrors&#x27;">El Pais #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0123" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>How did the student movement come about?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Serbia’s student movement grew from protests after 16 people died in the 2024 collapse of a Novi Sad station canopy into a decentralised, non-partisan political challenge now trying to take power through an electoral slate.</p>
+<p>Inquiries into the disaster described slipshod construction and allegations of fraud and corruption, prompting protests demanding transparency and accountability. Three weeks later, Belgrade students blocking a road during a vigil for the victims were attacked by a pro-government mob, after which the demonstrations spread nationwide.</p>
+<p>The movement later became political without becoming partisan. It remained decentralised and leaderless, relying on nationwide marches, door-to-door canvassing and collective efforts rather than a single figure. University faculties mostly nominated its 250 candidates, alongside farmers and people from other professions; the slate included more than 160 doctorates, and protest plenaries approved every nomination.</p>
+<p>The Student List said it would place representatives in every polling station, alongside more than 15,500 domestic observers—three times the 2023 level. That scrutiny reflects earlier allegations of vote-buying, voter intimidation and ballot-box stuffing, as well as an OSCE assessment that Serbia’s 2023 election created unfair conditions favouring the ruling party. CRTA later reported voter pressure at roughly a third of polling stations and ballot-paper photographs at as many as 40%, while cautioning that social-media reports of security incidents remained unverified.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/oct/25/europe-serbia-elections-aleksander-vucic-student-list-protests-bulgaria-latest-news-updates?page=with%3A6ade2f168f08a448dcadda8a#6ade2f168f08a448dcadda8a" target="_blank" rel="noopener noreferrer" title="The Guardian / How did the student movement come about?">Guardian #1</a><a href="https://www.theguardian.com/world/live/2026/oct/25/europe-serbia-elections-aleksander-vucic-student-list-protests-bulgaria-latest-news-updates?page=with%3A6ade34a48f0890335a1991a3#6ade34a48f0890335a1991a3" target="_blank" rel="noopener noreferrer" title="The Guardian / Look out for allegations of irregularities, fraud, polling station incidents">Guardian #2</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0047" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc,guardian">
+  <summary>Funding set to double for plan to get rough sleepers off streets by Christmas</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">England’s government has indicated an extra £432m for Andy Burnham’s pledge to give every person sleeping rough access to accommodation or other support by Christmas, taking planned investment to £874m.</p>
+<p>The proposed funding would supplement an initial £442m package for emergency accommodation and practical help, with the programme intended to continue through the current parliamentary term. The announcement comes before Monday’s first Downing Street Rough Sleeping Summit and alongside Wednesday’s Budget.</p>
+<p>Ministers say the Christmas commitment covers people moving into accommodation or receiving help designed to stop them sleeping rough; those who decline housing would still be offered support.</p>
+<p>The government says outreach teams and additional accommodation are operating in Coventry, while provision is being introduced in Plymouth and Camden. More than 30 organisations have backed the initiative, and housing associations are being asked to identify at least 2,000 possible homes and bed spaces.</p>
+<p>The available capacity has not been fully defined: it is unclear how many spaces would be self-contained or how many occupants they could serve. Official figures estimated 4,793 people were sleeping rough in England on one night in autumn 2025.</p>
+<p>Conservatives criticised the spending, while homelessness organisations said preventing people from losing their homes would be necessary to make the longer-term ambition work.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c3n04yxn2yqro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Funding set to double for plan to get rough sleepers off streets by Christmas">BBC #1</a><a href="https://www.theguardian.com/society/2026/oct/25/homelessness-rough-sleeping-double-spending-burnham" target="_blank" rel="noopener noreferrer" title="The Guardian / Burnham to double spending on homelessness amid drive to end rough sleeping by Christmas">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0104" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="folha">
+  <summary>Lula&#x27;s Turn: The Only Elected Official to Serve Four Times and the First Worker to Become President Reaches Another Historic feat</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Lula defeated Senator Flávio Bolsonaro in Brazil’s 2026 presidential runoff, overturning an unfavorable first-round result and securing a fourth elected presidential term. The result extends his record in office and is expected to produce another landmark in Brazil’s democratic history.</p>
+<p>The reversal, described as unprecedented in the country until Sunday the 25th, adds to Lula’s political milestones. He was Brazil’s first working-class president, received the country’s highest recorded presidential approval rating in 2010, became the only president elected after imprisonment, and in 2022 became the first to defeat an incumbent president, Jair Bolsonaro.</p>
+<p>By the end of a fourth term, Lula would have spent 16 years in power. The account places him behind only Getúlio Vargas in total time governing Brazil, while noting that Vargas’s time included periods established by coups and indirect election. By that comparison, Lula would be the country’s longest-serving president chosen by voters under democracy.</p>
+<p>The new mandate is also likely to be Lula’s last, according to the account. At 80, nearly 81, he would be 85 when it ends in 2030 and cannot seek another term four years later. The potential record for total votes is also identified as an outcome of the election, although no final vote figure is provided.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/10/virada-de-lula-leva-unico-eleito-4-vezes-e-1o-operario-na-presidencia-a-outro-feito-historico.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / Lula&#x27;s Turn: The Only Elected Official to Serve Four Times and the First Worker to Become President Reaches Another Historic feat">Folha de S.Paulo #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0119" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Motivated opposition voters turn out in Belgrade in closely-monitored high-stake election</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Thousands of voters turned out early in Belgrade, Serbia, for a closely monitored, high-stakes election, with the available account describing record levels of early turnout. Ana Milosavljevic, 42, arrived at 6:20 a.m. and said she saw no reason not to vote. Dragana Milić, a polling-station committee member in Voždovac, said the crowds around 8 a.m. were the largest she could recall in at least 15 years. The account portrays many voters as motivated by opposition to the authorities.</p>
+<p>Voting was briefly delayed at two polling stations after observers found that the special ink used to mark voters’ fingers could be removed with wet wipes. Marica, a 55-year-old volunteer observer from the grassroots group “IT in Blockade,” said replacement sprays were delivered and tested, after which voting resumed without reported problems at that point. The ink is intended to prevent people from voting more than once. Marica said she was monitoring the election to guard against manipulation or fraud. Milić also said media reports predicting significant unrest had frightened her, although she described voters as polite and orderly.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/oct/25/europe-serbia-elections-aleksander-vucic-student-list-protests-bulgaria-latest-news-updates?page=with%3A6ade36a98f0890335a1991ac#6ade36a98f0890335a1991ac" target="_blank" rel="noopener noreferrer" title="The Guardian / Motivated opposition voters turn out in Belgrade in closely-monitored high-stake election">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0070" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="cnn">
+  <summary>Rent control doomed this mayor’s re-election campaign. He has no regrets</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Providence, Rhode Island, Mayor Brett Smiley lost his primary after vetoing a city rent-control bill, turning a dispute over immediate relief for renters versus longer-term housing construction into a decisive test of his re-election strategy.</p>
+<p>Smiley, elected in 2022 after promising more housing, worked with city and state leaders to loosen zoning rules and reduce construction barriers. Providence added more apartments in its latest fiscal year than in any year in two decades, with 40% classified as affordable.</p>
+<p>But in April, during a close campaign against state lawmaker David Morales, Smiley vetoed a City Council bill that would have capped annual rent increases at 4%. The measure exempted many owner-occupied properties, newly built apartments for up to 20 years, and existing apartments for five years after construction.</p>
+<p>Smiley argued that rent control would discourage developers and worsen Providence’s housing shortage. The city’s median rents have risen 40% since 2020, while pressure from students and higher earners and the deterioration of older housing have reduced available homes. Providence was ranked the least affordable metro for renters last year.</p>
+<p>Morales, a Democratic Socialist of America member, condemned the veto and pledged to sign rent control within his first 100 days. Smiley then became the first Providence mayor defeated in a primary. He maintains that rent control offers a misleading solution, despite its political appeal to renters facing soaring costs.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/10/25/business/rent-control-providence-mayor" target="_blank" rel="noopener noreferrer" title="CNN / Rent control doomed this mayor’s re-election campaign. He has no regrets">CNN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0110" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Dirt cheap: welcome to the delightful Queensland town that can’t seem to give land away</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Australia’s remote Queensland town of Quilpie has announced 62 residential lots and a $20,000 building grant in an effort to attract residents, but its earlier giveaway produced only six takers and two completed homes, highlighting the costs of building far from labour, ports and major markets.</p>
+<p>Quilpie, nearly 1,000km west of Brisbane, has just over 500 residents. The local council says its latest land release is intended to expand the population and stimulate housing in the outback town.</p>
+<p>The initiative follows a 2021 scheme offering free blocks of roughly 1,000 square metres. It drew hundreds of inquiries, but only six blocks were taken up. Applicants had to construct a house and live there for at least six months. A target of five new homes within two years was described at the time as a major success; five years later, two homes have been built.</p>
+<p>For Heather and Matt Stennett, who moved from Brisbane and built their own home, the practical obstacle has been cost. Labour must compete with mining-sector wages, while materials travel long distances from the coast. They estimated their house would have cost about $1.2m if contractors had built it.</p>
+<p>The council’s mayor says even 20 new residents would make a significant difference, while acknowledging Quilpie is unlikely to replicate the success of Jandowae, another Queensland town where $1 blocks helped create a new neighbourhood.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/ng-interactive/2026/oct/26/dirt-cheap-welcome-to-the-delightful-queensland-town-that-cant-seem-to-give-land-away" target="_blank" rel="noopener noreferrer" title="The Guardian / Dirt cheap: welcome to the delightful Queensland town that can’t seem to give land away">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0049" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>Suspect in deadly Paris suburb shooting sent for psychiatric observation</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A suspect in Friday’s shooting in France’s Paris region has left police custody and been placed under psychiatric observation, the National Anti-Terrorist Prosecutor’s Office (PNAT) said. The evaluation, prompted by a psychiatric expert’s guidance, is expected to last about 48 hours and will help determine whether he can remain in custody and continue to be interrogated. The shooting killed one person and injured five after gunfire was directed from a car in Trappes and nearby La Verrière. Three injured people were hospitalized in serious condition, including a 12-year-old girl reported to be in critical condition; the mayor of La Verrière later said she was doing better.</p>
+<p>French media identified the suspect as 39-year-old Kevin T. PNAT said cannabis and cocaine were found in his bloodstream. Le Monde and AFP, citing a source close to the investigation, reported that a Bible, Quran and Adolf Hitler’s *Mein Kampf* were found at his home. President Emmanuel Macron described the attack as racist terrorism and said people were targeted because of their skin color or religion. The lawyer for Pengo Bossio Wangi, the fatality, alleged that psychiatric observation could portray the suspect as irresponsible rather than deliberate.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c6e3xek2457wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Suspect in deadly Paris suburb shooting sent for psychiatric observation">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0134" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>United Kingdom: Retail leads the way on paternity leave as government urged to improve offer</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Retail employers and the shop workers’ union Usdaw discussed expanded paternity provision at a parliamentary roundtable hosted by Labour MP Connor Rand in the United Kingdom. Research compiled by The Dad Shift and Ian Dinwiddy of Inspiring Dads identifies Marks &amp; Spencer and Tesco as among the stronger providers: both give six weeks on full salary, while M&amp;S raised its entitlement from two weeks in 2024. Joe Erskine, an M&amp;S employee, said the arrangement enabled him to support his partner and adjust to becoming a parent. Retailers including Asda, Waitrose and Lidl have helped extend improved leave to nearly 650,000 workers through five employers.</p>
+<p>The statutory entitlement remains two weeks, with payment limited to £194.32 weekly or 90% of average earnings, whichever is lower. Campaigners argue that provision is particularly inadequate for lower-paid fathers and many self-employed workers, who are not currently covered by paid paternity leave. More than 100 Labour MPs are seeking six weeks at 90% of earnings, subject to a £1,200 weekly ceiling, alongside coverage for self-employed fathers. An 18-month government review of parental leave is expected to publish its findings later this year.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/2026/oct/25/retail-leads-way-paternity-leave-government-urged-improve-offer" target="_blank" rel="noopener noreferrer" title="The Guardian / Retail leads the way on paternity leave as government urged to improve offer">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0078" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="daily_star_bangladesh">
+  <summary>Tarique to meet Takaichi tomorrow</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Prime Minister Tarique Rahman left Dhaka early today for a four-day official visit to Japan, where he is scheduled to meet Japanese Prime Minister Sanae Takaichi in a summit tomorrow. The Prime Minister’s Office said a Biman flight carrying Rahman, his wife Dr Zubaida Rahman and the delegation departed Hazrat Shahjalal International Airport at about 12:15am. Rahman is expected to meet Japanese parliamentary and business representatives, Japan International Cooperation Agency officials and the Nippon Foundation’s honorary chairman. His itinerary also includes visits to an LNG terminal and power plant, a logistics hub, UNIQLO’s office, a Toyota factory and other Japanese institutions.</p>
+<p>The visit could produce several agreements, but these remain expected rather than completed. Officials involved in the preparations said Bangladesh and Japan may sign five to eight memorandums covering financial support, agriculture, civil aviation, business conditions, local development, Coast Guard security assistance and energy cooperation. They said the countries are likely to agree on roughly $2 billion in loans and financial support, including budgetary and infrastructure funding. Separately, a Nikkei report cited in the account said Japan is expected to arrange about 1 trillion yen—around $6.36 billion—in private-sector investment in Bangladesh over five years. Japanese company JERA is also expected to support energy-reserve infrastructure under Bangladesh’s Moheshkhali Integrated Development Initiative.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/bangladesh/news/tarique-meet-takaichi-tomorrow-4307516" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Tarique to meet Takaichi tomorrow">TDSB #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-cluster-id="cluster-0151" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="la_jornada">
+  <summary>Maricarmen&#x27;s eviction becomes a symbol of Spain&#x27;s housing struggle ahead of the November general strike</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">general_news</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Spain, police evicted 87-year-old María del Carmen Abascal Martín, known as Maricarmen, from her Madrid home on 23 September under a magistrate’s order. She had lived there for 70 years, after moving in at 17 in 1957. Press information cited by *La Jornada* says the company Urbagestión raised her monthly rent from €500 to €2,600, while her pension was €1,400, leaving the new amount unaffordable.</p>
+<p>Maricarmen had resisted the eviction since 2023 with support from the Madrid Tenants’ Union. Her case has become a symbol of opposition to property speculation in Madrid’s Retiro district, and she is expected to feature in various ways during Spain’s general strike scheduled for 11 November. The account also cites national housing pressure: rents reportedly rose 40% over the past decade, while wages increased by 20%.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/10/25/politica/011a1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Alberto Betancourt Posada*: Maricarmen no está sola">LJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0167" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="nikkei_asia">
+  <summary>Australia: Sydney&#x27;s new international airport opens to passengers</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sydney’s Western Sydney International Airport opened to passengers in Australia on Sunday, after more than a decade of planning. The A$5.6 billion facility is in Badgerys Creek, about 60 kilometres west of central Sydney. Jetstar, Qantas’ budget airline, was due to operate the first outbound passenger flight to the Gold Coast.</p>
+<p>The airport is designed to operate around the clock, unlike Sydney’s existing airport, where takeoffs and landings are restricted to the period between 6 a.m. and 11 p.m. That gives airlines greater scheduling flexibility and access to Western Sydney’s growing population. The airport says it can handle more than 80 million passenger movements a year. Passenger operations began after cargo flights had started at the site, which was completed in July 2025 following a seven-year construction period. Prime Minister Anthony Albanese described the opening as a major milestone for Sydney and Australia.</p></div>
+  <div class="source-list"><a href="https://asia.nikkei.com/business/transportation/sydney-s-new-international-airport-opens-to-passengers" target="_blank" rel="noopener noreferrer" title="Nikkei Asia / Sydney&#x27;s new international airport opens to passengers">NA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0239" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="scmp">
+  <summary>Trump hails tariffs for new US$4.2 billion Audi plant in Georgia</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">President Donald Trump announced at a campaign rally in Perry, Georgia, that Volkswagen had agreed to build a US$4.2 billion Audi plant in the state. He said the facility would produce 200,000 cars annually and described it as the largest investment in modern US auto-industry history. Trump also defended his tariffs, claiming they had made the United States richer and were responsible for attracting the project, which remains an announced agreement rather than an operating plant.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/united-states-canada/article/3372051/trump-hails-tariffs-new-us42-billion-audi-plant-georgia" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump hails tariffs for new US$4.2 billion Audi plant in Georgia">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0129" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="guardian">
+  <summary>Nationwide to slash 275 jobs in latest round of cuts since takeover of Virgin Money</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nationwide building society has announced plans to cut 275 jobs as it integrates Virgin Money, which it acquired for £2.9bn. Staff were told on Wednesday that the reductions are intended to simplify operations and eliminate overlapping roles. The affected positions are expected across retail, including mortgages, as well as human resources, the chief operating officer’s office, customer operations, communications and finance. Nationwide said the plans would not put customer-facing employees at risk and said it would support affected staff through retraining and redeployment. It has also pledged to keep its 700 branches open until at least 2030.</p>
+<p>The announcement follows 600 job losses disclosed in June. Virgin Money had more than 7,000 employees when Nationwide formalised the takeover in late 2024, while Nationwide then had about 18,000 staff, according to its 2025 annual report. The combined workforce is now roughly 27,000. Executives had previously said the integration would involve limited workforce changes and a formal review of overlapping roles. Nationwide said the latest reductions were not linked to increased use of artificial intelligence.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/2026/oct/25/nationwide-to-cut-275-jobs-in-latest-round-since-takeover-of-virgin-money" target="_blank" rel="noopener noreferrer" title="The Guardian / Nationwide to slash 275 jobs in latest round of cuts since takeover of Virgin Money">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0236" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="scmp">
+  <summary>Gulf economies accelerate diversification as recession looms over Iran war</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gulf economies are reported to be accelerating diversification as recession looms over the war in Iran. Before the war’s February outbreak—described as triggered by a US-Israeli attack on Iran—the Gulf monarchies were portrayed as enjoying exceptional prosperity. Their hydrocarbon-fuelled economies were described as insulated from the Gaza conflict, while Saudi Arabia, the United Arab Emirates and Qatar appeared in a wider account of Gulf prosperity supported by longstanding US security guarantees and mediation by billionaire sheikhs.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/week-asia/economics/article/3371922/gulf-economies-accelerate-diversification-recession-looms-over-iran-war" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Gulf economies accelerate diversification as recession looms over Iran war">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0272" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="xinhua_en">
+  <summary>China&#x27;s mini excavators make a big impact in global markets</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jining, in China’s Shandong province, is expanding its compact construction-equipment export business as manufacturers respond to overseas demand for mini excavators and other small machinery. The companies are combining lower costs with product innovation, according to the report. During the first three quarters of this year, Jining’s exports of small construction machinery and related products totaled 10.8 billion yuan (about $1.62 billion), a 39% increase from the same period a year earlier.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261026/e2d5f9a83df64a9780de047d6024f140/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China&#x27;s mini excavators make a big impact in global markets">XNA #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-cluster-id="cluster-0054" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="bbc,cnn">
+  <summary>Musk says SpaceX restricted Ukraine&#x27;s Starlink connection as service restored</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">SpaceX restricted Ukraine’s Starlink connection last week, Elon Musk said, while Ukraine reported that access to Starlink and Starshield had been restored. The disruption limited military communications and hindered efforts to intercept fast-moving Russian drones.</p>
+<p>Ukraine’s Defence Ministry said on Saturday that monitoring systems showed restored speeds exceeding 400km/h, after restrictions reportedly limited Starlink and Starshield terminals to about 100 miles per hour for more than a week. Ukrainian officials said the slowdown affected defensive operations, while President Volodymyr Zelensky said speeds had returned to required levels.</p>
+<p>Musk attributed the restriction to an alleged violation of Starlink’s terms of service, saying Ukraine’s armed forces had used the civilian commercial system for offensive drone strikes. He said Starshield was a separate system controlled by the US government and denied responsibility for a simultaneous problem affecting that service.</p>
+<p>Ukrainian presidential adviser Serhiy Beskrestnov disputed the accusation, saying commercial Starlink was unavailable over Russian territory and technically could not support Ukraine’s medium- and long-range strikes there. Former Ukrainian Ministry of Defense adviser Serhiy Sternenko also denied Musk’s account, saying such missions required Starshield.</p>
+<p>The restoration followed US President Donald Trump’s statement that he had asked Musk to lift restrictions, although Trump and senior officials had denied ordering the throttling. Ukraine’s Defence Ministry said full access to both services had returned.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Musk says SpaceX restricted Ukraine&#x27;s Starlink connection as service restored">BBC #1</a><a href="https://www.cnn.com/2026/10/25/europe/starlink-musk-violation-accusations-intl" target="_blank" rel="noopener noreferrer" title="CNN / Musk accuses Ukraine of violating Starlink’s terms of service following dispute over coverage">CNN #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-cluster-id="cluster-0115" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="guardian">
+  <summary>‘Unusually large’ multi-state storm causing severe weather for Australia’s east – with more on the way</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Severe-thunderstorm alerts covered broad areas of eastern Australia on Sunday afternoon, while further storms and flooding were forecast for Monday. The Bureau of Meteorology warned Sydney, greater Wollongong and districts around the Blue Mountains, Hawkesbury, Gosford, Wyong, Wollondilly and Wingecarribee.</p>
+<p>BoM reported that storms had crossed western New South Wales, and eight flood warnings were active in southern Queensland after several days of intense rain. It said storms could bring hail, destructive winds, flash flooding and power outages across southern Queensland, western New South Wales, the Australian Capital Territory and eastern Victoria. Gusts of up to 100km/h were recorded in central-western New South Wales, and bureau meteorologist David Crock described the system as unusually large. Activity was expected to continue into Monday in northern New South Wales and southern Queensland, while the Mary River downstream of Gympie was forecast to reach major flood levels at Tiaro. Areas around the Sunshine Coast had received 200mm to 400mm of rain during the previous week.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/2026/oct/25/unusual-multi-state-storm-causing-flood-warningd-and-severe-weather-for-australias-east" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘Unusually large’ multi-state storm causing severe weather for Australia’s east – with more on the way">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-cluster-id="cluster-0021" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Spectral-Spatial Interpretation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces Spectral-Spatial Interpretation (SSI), an attribution method for multispectral models that combines spatial and channel-level explanations. Instead of producing only a spatial heatmap or a global ranking of channels, SSI evaluates position-channel pairs across the full image grid. At each position, it holds the surrounding context fixed, models the channels as a local conditional game, and applies Shapley values. The resulting matrix is intended to show which channels matter at which locations. The method satisfies Shapley fairness within each position, and its channel attributions sum to the contextual contrast produced when that position is replaced by a baseline.</p>
+<p>In the reported evaluations on CUB-200, EuroSAT and HLS Burn Scar, SSI achieved the strongest combined deletion and insertion AUC among dense, flat and rank-1 baselines under both per-channel-mean and zero baselines. It also recorded the strongest spectral hit rates and channel-deletion results, and led spatial localization on both annotated datasets. On HLS Burn Scar, it reportedly outperformed an MC-Owen estimator across retained-attribution metrics while using about 6% of that estimator’s evaluation budget. These are results reported in a preprint, and code is available through the project’s GitHub repository.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.21114v1" target="_blank" rel="noopener noreferrer" title="arXiv / Spectral-Spatial Interpretation">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0028" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>StreamEval: Evaluating Interactive Streaming Video Generation Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint presents StreamEval, a benchmark for interactive streaming video generation covering five areas: avatar dialogue and performance, world creation, instruction-based changes, and reference-based changes. It contains 300 scripted cases lasting 15–300 seconds, with starting assets, sequential multimodal requests, and rules for updating and preserving content. Models are scored on four dimensions—carrying out requests, maintaining state, visual quality, and synchronization between sound and images—through 10 metrics ranging from 0 to 100.</p>
+<p>Tests of 37 models found that strong visual output and preservation of a subject’s identity did not consistently produce accurate request handling or stable results as interactions continued. The best task-specific results for request execution were 36.90 among seven avatar-performance models, 25.93 for text-driven world generation, and 15.00 among three reference-editing models. The researchers identify dependable execution under timing and content-preservation constraints as a major challenge for real-time interactive video systems. The leaderboard is available at streameval.ai.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.28402v1" target="_blank" rel="noopener noreferrer" title="arXiv / StreamEval: Evaluating Interactive Streaming Video Generation Models">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0022" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>WeVisOne-VL: Unified Visual Perception from Objects to Pixels</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The arXiv preprint presents WeVisOne-VL (WeChat Vision All-in-One), a vision-language model designed to handle object- and pixel-level perception in one system. It supports detection, referring localization, counting, OCR, segmentation, and matting, with outputs ranging from points and boxes to masks and alpha mattes. Its architecture adds a lightweight pixel decoder, and training uses three-stage supervised fine-tuning followed by mixed-task reinforcement learning. The authors report leading results across more than 30 benchmarks and robust rejection of object-absent queries. These are preprint findings, not peer-reviewed results.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.31329v1" target="_blank" rel="noopener noreferrer" title="arXiv / WeVisOne-VL: Unified Visual Perception from Objects to Pixels">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0020" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Right Screen, Wrong Transition: World Models as Verifiers for GUI Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new GUI-agent verification method treats safety as a question of whether an action leads to the expected next state, rather than whether the resulting screen looks legitimate. A login page after selecting “Sign in” may be normal, while the same page after selecting “View order” may indicate an attack. The preprint introduces LGWM, which predicts the next screen’s internal representation directly from the current state and action. It was trained without semantic labels on 1.85 million real GUI transitions.</p>
+<p>On the RSWT-BENCH diagnostic, where identical credential screens follow both legitimate and hijacked transitions, the authors report a training-free score of 0.987 AUC with 17-millisecond decisions. They say this is about 10 AUC points above generative GUI world models while using more than three orders of magnitude less latency, and comparable to leading closed-source vision-language models. A related residual signal reportedly separates harmful from benign violations at 0.953 AUC, while prompted vision-language models perform near chance. The work is a preprint and has not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.11942v1" target="_blank" rel="noopener noreferrer" title="arXiv / Right Screen, Wrong Transition: World Models as Verifiers for GUI Agents">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0027" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Editing Images into Reusable Layers via Compositional Edit-Prior Distillation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The preprint presents LayerEditor, a framework designed to edit specific image regions while preserving unrelated content and producing reusable RGBA layers rather than only a flattened result. It combines instruction-based image editing with controllable layer generation through In-Context RGB-Alpha Token Modeling, which places the edited canvas and an ordered set of RGB-alpha layers in one token sequence. This is intended to allow semantic edits alongside direct control of individual layers.</p>
+<p>The proposed Compositional Edit-Prior Distillation transfers the capabilities of a pretrained editor to both the generated canvas and the image reconstructed from its predicted layers. The work also introduces LayerEditor-100K, a paired dataset with ordered RGBA annotations, plus benchmarks for layered editing. Its reported experiments indicate that the system preserves editing fidelity while producing accurate layers for layer-level manipulation and multi-layer decomposition. These results are claims from a preprint and have not undergone peer review.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.24738v1" target="_blank" rel="noopener noreferrer" title="arXiv / Editing Images into Reusable Layers via Compositional Edit-Prior Distillation">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0023" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint proposes Factor-Aware Predictive Learning (FAPL) for cinematic video generation from sparse inputs rather than frame-by-frame guidance. It argues that multimodal large language model (MLLM) representations can provide useful priors for temporal inference and control over characters, scenes, actions, and cameras, but are not automatically usable by a Video Diffusion Transformer (DiT). The method first grounds the DiT in MLLM latents using a frozen MLLM and connector. It then uses paired videos, where one factor changes while others remain stable, to train factor-aware editing through factor-span replacement.</p>
+<p>For temporal inference, FAPL aligns text-only and complete-video observations with the same video target, then freezes the DiT while optimizing the MLLM and connector. This trains representations that support generation from limited inputs while retaining reconstruction from complete observations. The reported experiments cover three tasks—sparse-to-video generation, factor-aware editing, and multi-shot generation—and claim consistently better performance than baselines, along with improvements in MLLM feature use, temporal control, and coordination among video factors.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.30926" target="_blank" rel="noopener noreferrer" title="arXiv / Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0036" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint proposes Future Chunk Prediction (FCP) to improve how autoregressive video diffusion models represent scene evolution. The method adds an auxiliary training objective that predicts temporally distant video chunks without seeing the intervening frames, addressing a shortcut in teacher-forced training where nearby visual continuity may dominate. It uses supervision from the training videos, requires no additional pretrained visual encoder, and does not alter inference. The authors report greater physical plausibility than standard training with lower overall training compute, while noting that visualizations suggest more structured representations.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.29989" target="_blank" rel="noopener noreferrer" title="arXiv / Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0019" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces SpatialScout, a benchmark for testing whether vision-language model (VLM) agents can actively explore indoor 3D scenes and build object-level maps. It covers 80 scenes with 3,140 target objects. Agents receive an object inventory, RGB images, camera calibration and camera poses, then control a camera to gather views and estimate each object’s center in a shared coordinate system. The task combines viewpoint selection, matching objects across views, geometric estimation and map updates within limited interactions.</p>
+<p>The benchmark measures both localization accuracy and coverage, using object-scale overlap scores that penalize missing targets. In the reported experiments, the strongest evaluated model, Claude Opus 5.5, achieved a mean overlap of 41.71%; 47.23% of targets exceeded an intersection-over-union score of 0.5, while only 3.25% exceeded 0.9. The results indicate a gap between identifying rough object layouts and producing complete, precise metric maps. The preprint presents SpatialScout as a testbed for improving active 3D perception.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.26659" target="_blank" rel="noopener noreferrer" title="arXiv / SpatialScout: Can VLM Agents Actively Explore and Map 3D Scenes?">arXiv #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-cluster-id="cluster-0117" data-section="science_general" data-original-section="science_general" data-sources="guardian">
+  <summary>Koalas are cute, furry, iconic – and dying of chlamydia. But how well does the approved vaccine work?</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Koalas across eastern Australia are suffering a disease that can cause painful bladder inflammation, blindness, wasting and infertility, while researchers and regulators debate whether an approved vaccine meaningfully reduces chlamydia-related illness or deaths.</p>
+<p>Chlamydiosis, usually caused by *Chlamydia pecorum* and spread through mating or close contact, is described as the most significant disease affecting koalas. In some populations, infection prevalence reaches two in three, with northern populations generally more affected than those in southern states. Antibiotics are difficult to use because disrupting gut microbes can prevent koalas from digesting toxic eucalyptus leaves, causing weight loss, diarrhoea and potentially fatal microbial imbalance. Some strains are also antibiotic-resistant.</p>
+<p>Two Queensland vaccine programmes have developed over more than a decade. A QUT team is testing a two-dose vaccine and a biodegradable implant that releases the second dose after the initial injection, avoiding the challenge of recapturing wild koalas. Trials involving more than 500 koalas near the Gold Coast produced encouraging signs, including fewer chlamydia-related wildlife-hospital admissions, but the researchers have not conducted placebo-controlled studies.</p>
+<p>The main dispute concerns a single-dose protein-based vaccine developed by University of the Sunshine Coast researchers and approved by the Australian Pesticides and Veterinary Medicines Authority (APVMA) in September 2025. A preprint by University of Queensland researchers identified a data-analysis error in a 2024 paper that had reported a 64% reduction in chlamydia deaths over 10 years. After correcting the analysis, they said, the apparent survival and disease benefits were no longer statistically significant and argued that veterinary use should not be recommended.</p>
+<p>The APVMA rejected the claim that granting the permit represented regulatory failure, stressing that its authorised wording says the vaccine “may aid” in reducing clinical signs, not that it prevents disease or death. UniSC defended its broader research programme.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/2026/oct/26/koalas-australia-chlamydia-vaccine" target="_blank" rel="noopener noreferrer" title="The Guardian / Koalas are cute, furry, iconic – and dying of chlamydia. But how well does the approved vaccine work?">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0218" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover a hidden flaw that challenges 40 years of superconductor science</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A University of Warwick team has found that a cuprate superconductor studied for four decades is not structurally uniform. Its hidden atomic patchwork and unusually broad internal boundaries may hinder superconductivity, forcing scientists to reconsider theories built on a simpler picture of these materials.</p>
+<p>The research focused on copper-based cuprates, which can conduct electricity without resistance at unusually high—though still very cold—temperatures. Such materials are important because superconductors could enable low-loss electrical systems and exceptionally powerful magnets for applications including power grids, medical scanners and quantum computers.</p>
+<p>Working with the European Synchrotron Radiation Facility in France, researchers used scanning three-dimensional X-ray diffraction to examine the inside of a crystal. The method maps atomic arrangements in three dimensions, analogous in principle to a medical CT scan but at the scale of a crystal. It revealed regions with two slightly different atomic configurations rather than one consistent structure throughout.</p>
+<p>The boundaries between those regions were hundreds of times wider than expected. Instead of acting as narrow dividing lines, the transition zones were extensive enough to behave almost like separate structures. The researchers say these areas may affect how electricity moves through the material and could work against superconductivity.</p>
+<p>For around 40 years, theories of cuprate superconductivity have generally treated the materials as structurally consistent through their interiors. Professor Mark Senn, who led the Warwick study, said that assumption does not hold for the crystal examined and that some bulk measurements may need reinterpretation. The findings could help explain why apparently similar superconductors perform differently, while future models may need to include the internal complexity of real crystals.</p>
+<p>The study, published in *Physical Review Letters*, also raises the possibility that comparable structural patterns occur in other cuprates and in related materials studied under extreme pressure. The researchers further suggest that the upgraded synchrotron facility’s high-intensity X-rays could help investigate hidden structures in other materials. Whether the discovery leads to better superconductors remains a future prospect, but it identifies an overlooked structural factor that may influence performance.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261023023731.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover a hidden flaw that challenges 40 years of superconductor science">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0221" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>New evidence suggests spinosaurus spent most of its life underwater</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Yale research team has used machine-learning analysis of fossil anatomy to reassess how extinct vertebrates occupied land and water, concluding that Spinosaurus was predominantly submerged while some early marine reptiles retained a regular connection to land.</p>
+<p>Published in *Current Biology*, the study addresses a persistent difficulty in paleontology: fossil remains can point in different directions when researchers try to infer whether an extinct animal lived on land, in water, or across both environments. The researchers analyzed hundreds of modern and fossil specimens from the Yale Peabody Museum and other institutions, compiling more than 11,000 measurements alongside photographs and CT scans.</p>
+<p>Their models were trained on living animals whose lifestyles are known, allowing the team to compare skeletal proportions with aquatic behavior. Forelimb structure was especially informative. The researchers also adapted a statistical method developed in the 1940s to estimate whether extinct species possessed swimming adaptations that were not preserved directly. They report that the approach predicted soft-tissue flippers and strongly aquatic habits with accuracy above 90%.</p>
+<p>For Spinosaurus, which lived about 113 million to 94 million years ago in what is now northern Africa, the results support a more water-dependent life than the animal’s debated shoreline-wading interpretation. Researchers have disagreed over whether the giant dinosaur pursued prey beneath the surface or mainly searched in shallow water. The analysis favors frequent submersion, though it does not resolve every question about its hunting behavior.</p>
+<p>The study reached a contrasting conclusion about mesosaurs, small marine reptiles that lived 290 million to 274 million years ago in regions now including South Africa and eastern South America. Their anatomy indicates repeated movement between aquatic and terrestrial settings rather than permanent life at sea. The researchers say this may reflect a wider pattern: Paleozoic marine reptiles remained amphibious, even when their bodies showed substantial aquatic specialization.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261024221956.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / New evidence suggests spinosaurus spent most of its life underwater">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0224" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover how pancreatic cancer rewrites its DNA to escape treatment</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Pancreatic ductal adenocarcinoma can contain multiple cancer-cell populations that change identity, resist treatment and spread, researchers at NYU Langone Health and Perlmutter Cancer Center report. Their laboratory findings point to MYC as a possible way to make aggressive cells less dangerous and more visible to immune defenses.</p>
+<p>The study, published October 13 in *Nature Genetics*, examined gene activity in 443,451 individual cells from 62 tumors taken from 56 people with pancreatic ductal adenocarcinoma. Six patients supplied samples before and after chemotherapy, allowing the researchers to examine changes associated with treatment.</p>
+<p>Rather than treating each tumor as a uniform mass, the team identified between two and 11 genetically distinct clones within individual tumors. These populations could behave differently: some showed features linked to treatment resistance, while others were better equipped to invade tissue and spread. The findings help explain how cells can shift between the traditionally recognized classical, less aggressive state and basal, more aggressive state as tumors develop.</p>
+<p>A key result involved <strong>MYC</strong>, which was unusually active in some of the most aggressive basal cells. In laboratory experiments, blocking MYC caused those cells to move toward the classical state. The altered cells also became more exposed to immune cells, suggesting that interfering with MYC-related processes could potentially make tumors easier for the immune system to recognize. The experiments do not establish that a MYC-targeting treatment works in patients.</p>
+<p>The analysis also identified differences in immune-evasion signals. Some cell clones had increased activity of <strong>TIGIT</strong>, a gene associated with mechanisms that help tumors avoid immune detection, alongside reduced <strong>PD1</strong> activity. The researchers said this pattern may help explain why treatments aimed at PD1 have had limited effectiveness against pancreatic cancer.</p>
+<p>The findings offer a more detailed account of how pancreatic tumors evolve and adapt, but the researchers said larger studies are needed to understand the range of cell states and how treatments might be tailored to them. According to co-senior investigator Aristotelis Tsirigos, clinical trials of drugs targeting MYC or TIGIT are already underway for pancreatic ductal carcinoma and other cancers. Nearly 85% of patients with this cancer die within five years of diagnosis, according to the supplied research summary.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261024221849.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover how pancreatic cancer rewrites its DNA to escape treatment">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0220" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Three giant black holes discovered in a galaxy from the dawn of time</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Three actively accreting supermassive black holes have been identified in J0148-4214, a galaxy whose light has traveled about 12.5 billion years to reach Earth. The discovery offers a rare view of black-hole growth and possible mergers when the universe was only 1.2 billion years old.</p>
+<p>An international team led by the Max Planck Institute for Extraterrestrial Physics found the system using the James Webb Space Telescope’s Near Infrared Spectrograph in integral-field mode. The galaxy’s redshift, measured at <strong>z = 5.02</strong>, places it more than 12.5 billion light-years away. Researchers inferred the black holes from distinctive hydrogen-emission patterns produced by rapidly moving gas around them. Because two central signals appeared blended, they used spectro-astrometry to map subtle positional changes in the light and distinguish the pair.</p>
+<h3>A crowded, rapidly growing system</h3>
+<p>Two black holes lie roughly 620 light-years apart near the galaxy’s center; a third is about 5,500 light-years from it. Researchers estimate their masses at approximately 80 million, 600,000 and two million times the Sun’s mass. The smallest of the three is accreting material at a rate above the maximum predicted by basic black-hole growth models, while the most massive is not feeding fastest. The galaxy itself contains about 1.3 billion solar masses in stars, according to the team’s calculations.</p>
+<p>The central pair is expected to merge within the next few hundred million years, potentially creating a still more massive black hole. The researchers say this kind of merger could have helped produce enormous black holes unusually early in cosmic history. They suggest the outer black hole may be a remnant displaced by an earlier merger’s gravitational recoil, or may gradually move inward, but its history remains unresolved. The observations also indicate that similar multiple-black-hole systems could be hidden in other distant galaxies.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261024222000.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Three giant black holes discovered in a galaxy from the dawn of time">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0223" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>This mysterious mushroom makes people see hundreds of tiny humans</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the University of Utah have linked reports of vivid visions of tiny, moving people in China and the Philippines to the mushroom *Lanmaoa asiatica*, identifying a possible biological cause while leaving its active chemical unknown.</p>
+<p>The study, published in *Mycologia*, examined a phenomenon reported for decades after people ate wild mushrooms. Those experiencing it describe dozens or hundreds of miniature figures, often brightly dressed, that seem to obey ordinary physical rules: moving around objects, crossing surfaces and interacting with their surroundings. The visions are known as Lilliputian hallucinations.</p>
+<p>Researchers previously suspected that similar accounts from widely separated communities might reflect shared cultural expectations. The new investigation instead connected the Chinese mushroom known as “Jian shou qing” and the Philippine mushroom called “Sedesdem” to the same species. Colin Domnauer and Bryn Dentinger interviewed residents, collected specimens in Yunnan and the northern Philippines, and used DNA sequencing to establish their identities and evolutionary relationships.</p>
+<p>Chemical and genetic analyses found no known psychoactive compounds, including psilocybin. The researchers therefore suspect that *L. asiatica* produces an unidentified hallucinogenic substance, but that compound has not yet been isolated or characterized. The mushroom’s effects remain a research claim rather than a fully explained mechanism.</p>
+<p>The evidence does not yet establish the identity of the mushroom involved in the original Papua New Guinea reports: unusually dry conditions prevented the team from collecting comparison samples there. Even so, the researchers say the matching accounts in three regions support a shared chemical and neurological explanation.</p>
+<p>The project also analyzed 53 *Lanmaoa* specimens, identifying 17 species, including four previously unknown to science. Isolating the suspected compound is the team’s next objective, with potential implications for studying how the brain produces detailed visual experiences.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/10/261024222021.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / This mysterious mushroom makes people see hundreds of tiny humans">ScienceDaily #1</a></div>
+  
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        for (const group of reportSection.querySelectorAll('.related-stories, .story-group')) {
+          group.hidden = !Array.from(group.querySelectorAll('details.story')).some(story => !story.hidden);
+        }
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
