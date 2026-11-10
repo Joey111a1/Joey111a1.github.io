@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-11-10</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .story-group {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+    .related-stories {
+      margin-left: 16px;
+    }
+    .related-stories > h3 {
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-11-10</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-cluster-id="cluster-0104" data-section="global_front_page" data-original-section="global_front_page" data-sources="global_voices">
+  <summary>From a quiet life to the terror of armed gangs: The story of Haiti’s Kenscoff district</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Haiti’s Kenscoff district has been transformed by armed-gang attacks that killed 164 people, displaced residents and disrupted a farming area supplying Port-au-Prince. The violence also left hostages, destroyed homes and businesses, and exposed severe gaps in security preparations, according to a human-rights investigation.</p>
+<p>Kenscoff lies about 20 kilometres southeast of downtown Port-au-Prince, in the heights of Pétion-Ville, and is home largely to peasant farmers. Its terraced fields supply fruit, vegetables and flowers to markets, grocery chains and restaurants in the capital. The area was also known for day trips, horse riding and visits to Fort Jacques. Ranch le Montcel was burned during gang violence in 2025 and remains closed, while Chalet Le Refuge has also shut.</p>
+<p>That life was disrupted by attacks on July 7–8 and August 23–24. Houses were burned, people were killed, and others were kidnapped or forced to flee. The community had already suffered an attack from January 27–29, 2025, when residents sought shelter at the town hall. They were later moved to a school in the Robin area, which was considered safer but was attacked in July.</p>
+<p>Rosy Auguste Ducéna, programme director of the National Human Rights Defense Network (RNDDH), said the organization gathered testimony from local officials, police, self-defence members, about 100 survivors and relatives. She said armed groups built barricades to block police armoured vehicles before attacking Robin, where people were shot, burned and killed and the school shelter was set on fire.</p>
+<p>The RNDDH investigation also blamed government and senior security officials for failing to respond to warnings. The Kenscoff police chief reportedly requested more armoured vehicles and operational support on July 27 and 28, but received neither. The report says the police presence was then cut by nearly 60 percent, while gangs used local assistance and surveillance drones before the August assault.</p>
+<p>During that attack, which began around 10 p.m., gangs entered neighbourhoods and the town centre, attacking residents and a church shelter. Ducéna said women and girls were raped and people were killed or burned. More than 60 people, including children, babies, elderly people and sick residents, were kidnapped. UNICEF-supported mediation helped secure the release of several children and babies, but dozens reportedly remained captive.</p>
+<p>Police operations later released six hostages, according to the Haitian National Police, but authorities gave no account of the others. Although daily life is slowly resuming, fear persists, while gangs continue to threaten nearby areas.</p></div>
+  <div class="source-list"><a href="https://globalvoices.org/2026/11/09/from-a-quiet-life-to-the-terror-of-armed-gangs-the-story-of-haitis-kenscoff-district" target="_blank" rel="noopener noreferrer" title="Global Voices / From a quiet life to the terror of armed gangs: The story of Haiti’s Kenscoff district">GV #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0147" data-section="global_front_page" data-original-section="global_front_page" data-sources="guardian,middle_east_eye,telesur_en">
+  <summary>Witnesses recount struggle to save people buried in ‘horrifying’ Gaza landslide</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Five Palestinians, including three children and two women, were killed when a sand embankment collapsed onto displacement tents in Deir al-Balah, Gaza, during severe weather, while at least five others were rescued injured and searches for missing people continued.</p>
+<p>The collapse occurred late on Sunday at a makeshift camp for displaced families, crushing at least three tents. Mahmoud Basal, spokesperson for Gaza’s Civil Defence, said torrential rain and strong winds from a low-pressure weather system caused the embankment and surrounding earth to collapse.</p>
+<p>Witnesses described people digging through sand and rocks with shovels and breaking apart a boulder to reach those trapped. Abdul Karim al-Sahhar, whose own shelter was damaged, said a father had been outside his family’s tent when it collapsed and began shouting for his children to be saved.</p>
+<p>Accounts differ over the identities of those killed. Middle East Eye identified two as Mariam Nabhan and her son Salah, and the others as Reem al-Zain, Habiba al-Zain and Ibrahim al-Zain. Telesur English instead reported that Tahrir Nabhan and three children died, identifying the children as Salah, Mariam and Habiba; it said Tahrir was pregnant and that Habiba’s mother remained in critical condition.</p>
+<p>The incident occurred at the Ard ar-Ribat coastal camp, where dozens of tents house displaced people. The wider storms damaged shelters across Gaza: the UN said more than 26,000 households reported damage to shelters or belongings, while Gaza’s government media office said about 70,000 tents were flooded on the first day of rain.</p>
+<p>Munir al-Bursh, director general of Gaza’s Ministry of Health, called for shelter materials to be delivered immediately and for border crossings to reopen. Telesur English reported that he said thousands of tents remained blocked at crossing points because the Israeli military was preventing their entry.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/09/witnesses-struggle-save-people-buried-gaza-landslide" target="_blank" rel="noopener noreferrer" title="The Guardian / Witnesses recount struggle to save people buried in ‘horrifying’ Gaza landslide">Guardian #1</a><a href="https://www.middleeasteye.net/news/gaza-five-palestinians-killed-sand-embankment-collapses-displacement-tents" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Gaza: Five Palestinians killed as sand embankment collapses on displacement tents">MEE #1</a><a href="https://www.telesurenglish.net/gaza-woman-and-three-children-killed-after-sand-collapses-onto-their-tent" target="_blank" rel="noopener noreferrer" title="Telesur English / Gaza: Woman and Three Children Killed After Sand Collapses Onto Their Tent">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0075" data-section="global_front_page" data-original-section="global_front_page" data-sources="cnn">
+  <summary>Planetary extremes are ‘off the charts’ as world’s biggest climate talks kick off</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The World Meteorological Organization warned that climate extremes endured through 2026 are likely to persist into 2027, while a strengthening El Niño could intensify heat, floods, drought and fires as COP31 opens in Antalya, Türkiye, with deaths, food production and livelihoods already affected.</p>
+<p>The WMO analysis examined data from January 2025 through September 2026. It found that the previous 12 years were the warmest 12 on record, while January-to-September temperatures in 2026 were 1.47 degrees Celsius above the preindustrial period.</p>
+<p>WMO Secretary-General Celeste Saulo said heatwaves, tropical cyclones and rainstorms were intensifying faster than historical baselines anticipated. The report says the current El Niño could become the strongest on record, continue into 2027 and increase the likelihood of extreme weather; some scientists predict 2027 could be the hottest year recorded.</p>
+<p>Carbon dioxide, methane and nitrous oxide reached record levels in 2025 and continued rising this year, while sea levels and ocean temperatures also reached new highs. Glaciers lost enough ice in 2025 to fill five Olympic-sized swimming pools every second for a year.</p>
+<p>The human consequences are already visible: heatwaves in Europe this summer were estimated to have killed more than 50,000 people, and a rock-and-ice avalanche on the Nepal-China border killed more than 1,300. Flooding in Vietnam and low monsoon rainfall in India have damaged food production, eroded livelihoods and increased poverty.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/11/09/climate/climate-extremes-el-nino-cop31-wmo" target="_blank" rel="noopener noreferrer" title="CNN / Planetary extremes are ‘off the charts’ as world’s biggest climate talks kick off">CNN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0140" data-section="global_front_page" data-original-section="global_front_page" data-sources="guardian">
+  <summary>At least 20 people have died over the weekend trying to reach Crete, authorities say</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Greek authorities reported that 20 or more people died during weekend attempts to reach the island of Crete. According to the Greek coast guard, one boat yielded eight bodies and another 12, while about 40 people were rescued from the two vessels.</p>
+<p>Mediterranean routes bring many undocumented migrants to Greece, with nearby Turkey and northern Africa often among their points of departure. Last month, Frontex identified the eastern Mediterranean as migrants’ most active pathway into the European Union, while reporting that irregular crossings into the bloc were down by a third this year. Many people making these journeys are trying to escape climate change, famine, oppressive governments or war, and may not be eligible to seek asylum from their home countries. Human rights groups have accused Greece of forcibly returning migrants and asylum seekers at sea and on land borders; Greece denies the practice.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/nov/09/polands-krakow-attack-ukraine-russia-france-germany-europe-latest-news?page=with%3A6af19d498f08975ecf4b6cd4#6af19d498f08975ecf4b6cd4" target="_blank" rel="noopener noreferrer" title="The Guardian / At least 20 people have died over the weekend trying to reach Crete, authorities say">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-cluster-id="cluster-0296" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Paraguayan Teachers to Protest Over Frozen Pension Funds</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Paraguayan public-sector teachers plan nationwide protests on Monday over pension funds held at Ueno Bank. The Federation of Paraguayan Educators is seeking the return of $60 million in the public pension system and about $355 million invested by the Social Security Institute, along with money belonging to other affected pension institutions. Demonstrations are expected in Asunción and major cities across all 17 departments, according to the federation. Teachers will also seek an 8% pay rise and increased education funding in the 2027 budget. Several other education unions, including Sinadi, are expected to support the action.</p>
+<p>The protest follows Ueno Bank’s financial crisis and the freezing of funds deposited there. The Central Bank of Paraguay ordered a resolution process on Tuesday after saying the bank’s solvency ratio had dropped below half the required minimum. The bank was placed under receivership amid a corruption scandal, according to the supplied account. The crisis has become a major political issue: the account links it to the impeachment and removal of President Santiago Peña and says Pedro Alliana took office on Friday, making Monday’s action the first major protest of his administration. In September, Peña’s government had agreed to a 5% increase with some teachers after a two-day strike.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/paraguayan-teachers-frozen-pension-funds" target="_blank" rel="noopener noreferrer" title="Telesur English / Paraguayan Teachers to Protest Over Frozen Pension Funds">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0183" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="mail_guardian">
+  <summary>Idac investigator allegedly attempts to take his own life days before Matlala was due to testify</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Independent Directorate Against Corruption (Idac) chief investigator Dylan Perumal reportedly attempted suicide on Friday, days before Vusimuzi “Cat” Matlala was due to testify before the Madlanga Commission on Monday; reports said Perumal was taken to a hospital in East London and placed on life support. Matlala told the commission that he had been pressured to accept an eight-year plea agreement after Idac investigators allegedly threatened him over a 12-year deal recommended by the court.</p>
+<p>Matlala said three Idac investigators visited him during a June 2026 transfer from Kokstad to C-max, where Perumal and two others served a warrant. His lawyer, advocate Annelene van den Heever, said Perumal and senior investigator Brian Padayachee sought evidence in Medicare24 corruption investigations involving National Police Commissioner Fannie Masemola and Crime Intelligence head Dumisani Khumalo. Matlala told the commission he had been coerced into agreeing to provide false evidence and that investigators repeatedly pressured him for information about Masemola, Nhlanhla Mkhwanazi and Khumalo.</p></div>
+  <div class="source-list"><a href="https://mg.co.za/news/south-africa/2026-11-09-idac-investigator-allegedly-attempts-to-take-his-own-life-days-before-matlala-was-due-to-testify" target="_blank" rel="noopener noreferrer" title="Mail &amp; Guardian / Idac investigator allegedly attempts to take his own life days before Matlala was due to testify">Mail &amp; Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0164" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="kompas">
+  <summary>Fires in Kupang: 50-Year-Old Woman Killed with Cash-Tilled Bag Worth Tens of Millions</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A fire at a house and family kiosk in Maulafa, Kupang, East Nusa Tenggara, Indonesia, killed Marlina, 50. She was found dead inside with severe burns. A bag containing an estimated tens of millions of rupiah in cash was found near her body, and the money was destroyed in the blaze. The incident was reported on Monday, 9 November 2026.</p>
+<p>Maulafa village chief Buyung Benu said police scene examination indicated that the fire likely began inside the house. He said the suspected trigger was the transfer of Pertalite fuel from a jerrycan into bottles for sale at the kiosk: some fuel may have spilled onto the floor, while one of two stoves inside was lit. According to information from Marlina’s son, Muhammad Nur Alif Hidayat, she had been resting when the fire grew and could not escape; he managed to get out after being unable to reach her. The son had reportedly been serving customers at the kiosk shortly before the fire. The total material loss, including groceries and other valuables, had not yet been determined.</p></div>
+  <div class="source-list"><a href="https://regional.kompas.com/read/2026/11/10/063938378/kebakaran-di-kupang-ibu-50-tahun-tewas-dengan-tas-berisi-uang-puluhan-juta" target="_blank" rel="noopener noreferrer" title="Kompas / Fires in Kupang: 50-Year-Old Woman Killed with Cash-Tilled Bag Worth Tens of Millions">Kompas #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0084" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>Schoolgirl stabbed by ‘stalker’ in Kushtia</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A class 10 student, Jakiya Sultana Momo, was stabbed and injured outside her home in Kushtia town, Bangladesh, on the previous afternoon after returning from an SSC test examination. Police said she was waiting at her house gate when Imon, a local youth, allegedly attacked her with a sharp weapon. Her injuries affected her hand and other parts of her body.</p>
+<p>Momo is receiving treatment at the 250-bed Kushtia General Hospital. Resident physician Dr Iqbal Hasan said she was out of danger. A video of the attack later circulated on social media and identified Imon as the alleged attacker; police had not arrested him by that evening. Momo’s father said Imon had harassed her while she travelled to school for some time and called for exemplary punishment.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/crime-justice/news/schoolgirl-stabbed-stalker-kushtia-4319766" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Schoolgirl stabbed by ‘stalker’ in Kushtia">TDSB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0271" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="scmp">
+  <summary>At least 44 people killed in air strike near Yemeni capital, Houthi rebels say</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The death toll from air strikes on Al-Shariya village, east of Sanaa, Yemen, has risen to 44, according to Anees al-Asbahi, spokesman for the Houthi-run Health Ministry. He said 40 others were wounded, including eight children and nine women. The dead included 21 children and 10 women, according to health authorities linked to the Iran-backed Houthi rebels. The reported casualties make the strikes among the deadliest incidents in the latest bout of violence.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/middle-east/article/3373850/houthi-rebels-say-least-44-people-killed-air-strike-near-yemeni-capital" target="_blank" rel="noopener noreferrer" title="South China Morning Post / At least 44 people killed in air strike near Yemeni capital, Houthi rebels say">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0002" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>Rains leave injured, homeless, and roofs blown off in the South</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Heavy rain, strong winds, flash floods and hail affected Brazil’s three southern states between Thursday (5) and Saturday (7), leaving residents injured, displaced or without homes. In Rio Grande do Sul, three people were injured in Bento Gonçalves and about 1,500 houses lost their roofs. Cacique Doble and Pontão reported 75 and eight flooded homes, respectively; state Civil Defense recorded 42 displaced people and four homeless. In Santa Catarina, 278 people were homeless and 75 displaced. Rio do Sul reported about 580 affected homes and 190 homeless residents, while several municipalities declared emergencies.</p>
+<p>Dozens of cities organized emergency response teams and began distributing food baskets, mattresses, hygiene supplies and roofing materials. Santa Catarina municipalities requested state assistance, including drinking water and cleaning supplies; the state also recorded landslides, flooding and fallen trees. In Paraná, the storms disrupted electricity for as many as 493,100 customer units, which the state government and utility Copel described as the year’s most severe weather event for the power network. By about 7:30 p.m. on the 9th, service had been restored to 99% of affected customers, while roughly 6,300 properties remained without power. The source attributed the severe weather to El Niño.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/geral/noticia/2026-11/chuvas-deixam-feridos-desabrigados-e-casas-destelhadas-no-sul" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Rains leave injured, homeless, and roofs blown off in the South">AB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0292" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Colombia Issues Urgent Alert on Southern Bolivar Violence</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Colombia’s state ombudsman issued an urgent warning on Monday, November 9, over worsening violence in southern Bolívar, two days after explosives struck the Army Military Canton in Santa Rosa del Sur. The attack reportedly killed three soldiers and wounded dozens; the source also gives a separate figure of four dead and 44 wounded. The violence followed the murder of three people on Friday and unfolded as a local security council met.</p>
+<p>The ombudsman said the events reflected a broader crisis linked to territorial fighting in San Lucas among the National Liberation Army (ELN), the Gulf Clan and dissident factions under commander Calarcá. From May through September 2026, its office recorded 22 humanitarian emergencies involving forced confinement and mass displacement, affecting more than 11,100 people from nearly 5,000 families, including peasant and Indigenous communities. The office urged national, departmental and municipal authorities to act urgently and called for investigations into the killings and attacks. Colombia’s Defense Ministry blamed the ELN and said the assault was retaliation for the capture of a man identified as Carrito, whom it described as the financial chief of the Guamocó Resistance Front.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/colombia-alert-on-bolivar-violence" target="_blank" rel="noopener noreferrer" title="Telesur English / Colombia Issues Urgent Alert on Southern Bolivar Violence">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0080" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>Matlala turns tables on Idac investigator Perumal in explosive testimony</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Vusimuzi “Cat” Matlala’s testimony before South Africa’s Madlanga Commission has challenged the conduct of suspended Idac investigator Dylan Perumal, while exposing disputed accounts of alleged payments linked to a police tender and claims of intimidation.</p>
+<p>Matlala testified in Pretoria on 9 November 2026, three days after Perumal was reportedly taken to hospital in East London following an alleged suicide attempt. Matlala alleged that Perumal and senior investigator Brian Padayachee pressured him to sign a plea-and-sentence agreement.</p>
+<p>The commission examined Matlala’s Section 204 statement after chairperson Justice Mbuyiseli Madlanga rejected a defence application seeking to block its use. The arrangement can provide an accused person with indemnity from prosecution in exchange for evidence, subject to statutory requirements. Matlala said the statement, commissioned by Idac investigator Suneel Bellochun on 14 June, had been altered three or four times and included material he had not supplied.</p>
+<p>His evidence also revived allegations involving former senior police officer Shadrack Sibiya. Matlala claimed Sibiya threatened his wife and that he had been pressured to conceal their dealings from Parliament. But his accounts of payments connected to the Medicare24 contract conflicted: he disputed saying that R500,000 had been delivered to Sibiya in cash, maintaining instead that it was transferred to a company owned by Given Makofane. Commission evidence and investigator notes recorded a different version, including an alleged cash delivery.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-11-09-matlala-turns-tables-on-idac-investigator-perumal-in-explosive-testimony" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Matlala turns tables on Idac investigator Perumal in explosive testimony">DM #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0071" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="cna">
+  <summary>Singapore: CNA Explains: What could happen to Simba customers if IMDA takes action against alleged unauthorised spectrum use?</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Singapore’s IMDA is investigating Simba over six allegations, including alleged unauthorised spectrum use, while customers’ services, plans and wallet balances remain unaffected for now. Any eventual penalties could range from a fine to restrictions on spectrum rights, with possible effects on network capacity and service quality.</p>
+<p>IMDA alleged that Simba used dynamic spectrum sharing at about 133 sites intermittently in 2022 and 2023, allowing 4G and 5G services on the 2100MHz band even though it was authorised to use it only for 5G. It also alleged unauthorised use of the 2340MHz-to-2360MHz band at about 92 sites between 2023 and 2026, deployment of 5G indoor equipment at two locations before approval, and deliberate failures involving regulatory compliance and document production. The regulator alleged that senior management approved the spectrum use.</p>
+<p>Simba has said customers are fully unaffected while investigations continue. Its parent company, Tuas, said on Oct 26 that IMDA had reached no conclusions on whether to act or what action to take.</p>
+<p>Experts said a fine or modified licence conditions was more likely than cancellation of Simba’s licence, which would be an unprecedented step for a major Singapore telco. A fine would not immediately affect service, but withdrawing spectrum could mean slower data, congestion or poorer quality during busy periods. In the most serious scenario, customers might need to switch providers, while recovery of unused prepaid balances could depend on Simba’s financial position.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/simba-customers-unauthorised-spectrum-allegations-imda-6531436" target="_blank" rel="noopener noreferrer" title="CNA / CNA Explains: What could happen to Simba customers if IMDA takes action against alleged unauthorised spectrum use?">CNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0119" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Commerce department stopped investigation into data company led by alleged Chinese spy after Nvidia intervention - report</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Guardian, citing the New York Times, reported that Nvidia General Counsel Tim Teter’s intervention brought a US Commerce Department investigation of Megaspeed to a stop; the data company is led by a Singaporean executive described as a suspected Chinese spy. Teter reportedly contacted investigators after Commerce official Jeff Kessler authorized him to seek details about the probe. The case focused on whether Megaspeed was smuggling Nvidia artificial-intelligence chips into China.</p>
+<p>According to current and former government officials and others familiar with the incident who spoke with the Times, Kessler’s dealings with Nvidia might have departed from government procedure and could have compromised the inquiry. Late last year, the matter moved to the Justice Department, leaving unresolved questions about what Kessler might have told Commerce Secretary Howard Lutnick and the broader Trump administration. The Times’s sources reported that Megaspeed is the subject of a criminal investigation by the Justice Department.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/nov/09/donald-trump-stephen-miller-immigration-midterms-iran-qatar-economy-latest-news-updates?page=with%3A6af1f3bb8f082a3892f6b214#6af1f3bb8f082a3892f6b214" target="_blank" rel="noopener noreferrer" title="The Guardian / Commerce department stopped investigation into data company led by alleged Chinese spy after Nvidia intervention - report">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0102" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="folha">
+  <summary>City Council Member Senival Moura Takes Leave of Office in São Paulo After New Arrest</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Council member Senival Moura has taken a 31-day leave from São Paulo’s City Council after his second arrest in an investigation into an alleged money-laundering scheme involving the PCC and a public transportation company. The Chamber said the request was submitted on November 3, retroactive to October 29, one day after his arrest, and described as leave for personal matters. Moura is independent after requesting departure from the PT. His substitute, Manoel Del Rio (PT), representing a PT, PCdoB and PV federation, took office on November 4.</p>
+<p>The arrest was carried out in an operation involving DEIC and Gaeco. The investigation alleges links between PCC members and people with leadership or influence at Transunião, along with suspicious financial activity and concealed assets. After the police inquiry concluded, prosecutors filed charges, and the court ordered preventive detention without a fixed term for Moura and six other investigated individuals. Moura had previously been arrested on June 25 in the same case and released on August 4 after obtaining habeas corpus. His lawyer, Márcio Sayeg, opposed the new arrest, arguing that there were not sufficient concrete grounds to justify depriving him of liberty.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/vereador-senival-moura-se-licencia-da-camara-apos-nova-prisao-em-sao-paulo.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / City Council Member Senival Moura Takes Leave of Office in São Paulo After New Arrest">Folha de S.Paulo #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-cluster-id="cluster-0281" data-section="china_domestic" data-original-section="china_domestic" data-sources="scmp,xinhua_en">
+  <summary>14 dead, dozens injured in northern China high-rise building fire</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A fire at the Haosheng International Apartment building in Taiyuan, capital of China’s Shanxi Province, killed 14 people and sent dozens to hospital on Sunday, local authorities reported. The blaze began at about 4:59 p.m. in Yingze District and was extinguished around 7 p.m.; rescue operations ended roughly 90 minutes later. Thirty-eight people were hospitalized that night, including five who later died, while the death toll had reached 14 by Monday morning.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/politics/article/3373750/fire-northern-china-high-rise-building-kills-14-injures-dozens-more" target="_blank" rel="noopener noreferrer" title="South China Morning Post / 14 dead, dozens injured in northern China high-rise building fire">SCMP #1</a><a href="https://english.news.cn/20261109/0211b8c05c444145bfef227b39c4aabb/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / Death toll rises to 14 in north China building fire">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0241" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China: At the Wuzhen Summit, discussing trust, interconnection, and interoperability of intelligent agents</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At the 2026 World Internet Conference Wuzhen Summit in Wuzhen, China, intelligent agents capable of carrying out tasks were a central focus. Chen Gang, a technician at a smart travel service platform, said that in suitable cases, work formerly requiring three days could be completed in three hours using intelligent agents or other AI tools. He also said domestic agents can divide tasks into 20 steps, with relatively high accuracy and subtask success rates. At a forum on agent trust and cooperation, Wu Hequn said agents can already call and collaborate with one another in groups of up to 60.</p>
+<p>Participants discussed expanding internet connections beyond people, machines and physical things to include agents, data, models and capabilities. Wang Xiaoyun forecast that the number of connections could eventually grow from billions to hundreds of billions or trillions, while attendees identified secure cooperation, identity, authorization and interoperability as unresolved requirements.</p></div>
+  <div class="source-list"><a href="http://finance.people.com.cn/n1/2026/1110/c1004-40830943.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / At the Wuzhen Summit, discussing trust, interconnection, and interoperability of intelligent agents">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0251" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Near-sightedness Prevention is a Tug-of-War in Growth</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">material_harm</span><span class="badge">technology_and_ai_society</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Myopia prevalence has remained high in China in recent years, while rising prescription levels among children are causing concern among parents. Myopia-control lenses are increasingly being chosen for young people who need glasses, but misconceptions remain. Song Hongxin, chief physician at Beijing Tongren Hospital, describes two common designs: defocus micro-structure lenses, which create a peripheral image in front of the retina, and lenses that reduce peripheral contrast through a less-clear outer zone. Both are intended to slow axial eye elongation and the progression of myopia.</p>
+<p>Song said clinicians generally no longer recommend ordinary single-vision lenses alone for most myopic children, reporting a progression rate of about 100 diopters a year with such lenses, with some cases faster. He said myopia-control lenses can delay worsening, but do not stop it completely and their effect varies by child. He urged parents to assess products through rigorous clinical evidence, especially multicenter randomized trials and prospective studies, rather than brand claims. The interview also linked increasingly early, severe and rapid-onset myopia among minors to longer near-work and screen exposure, academic pressure and insufficient outdoor time; it described prevention as a long-term balance between healthier eye use and those pressures, alongside parental genetics.</p></div>
+  <div class="source-list"><a href="http://health.people.com.cn/n1/2026/1110/c14739-40830948.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Near-sightedness Prevention is a Tug-of-War in Growth">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0250" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>&quot;Shadowed&quot; farm machinery cannot hide (Supervision Post)</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Fengyang County, Anhui Province, a disciplinary and supervisory official found irregularities while reviewing agricultural-machinery subsidy applications. The investigation found that Wang Moumou, the former head of the county’s Puzhen Town Agricultural Machinery Management and Service Station, secretly controlled a dealership. The shop allegedly organized villagers to make sham purchases and issue invoices for subsidy applications. Similar machinery models and purchase times appeared across applications, while some farmers could not clearly identify their machines or prices.</p>
+<p>According to the account, Wang used advance knowledge of applicants to move unsold machinery to verification sites and persuade villagers to cooperate, creating the appearance of genuine on-site checks before diverting subsidy funds. He was dismissed from public office, and suspected criminal matters were transferred to the Procuratorate for legal review and prosecution. Ethicists cited in the report said the case exposed weaknesses in subsidy distribution and called for stricter restrictions on public workers’ related commercial activities, along with independent third-party checks, cross-location verification and technology-assisted supervision.</p></div>
+  <div class="source-list"><a href="http://society.people.com.cn/n1/2026/1110/c1008-40830898.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / &quot;Shadowed&quot; farm machinery cannot hide (Supervision Post)">PDE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-cluster-id="cluster-0180" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="la_jornada">
+  <summary>Murat: Latino votes decisive in US election</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Murat says the Latino vote played a decisive role in the United States’ congressional elections and some gubernatorial races, a conclusion he says is gaining support as demographic studies examine electoral behavior. He notes that Democrats won both chambers of Congress, unusually strongly for a midterm election, when opposition parties often benefit. Murat argues that Latino voters’ contribution to the overall and territorial results deserves greater emphasis.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/11/09/politica/013a1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Murat: Latino votes decisive in US election">LJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0047" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="atlantic">
+  <summary>Biden: What Trump Did on January 6 ‘Should Follow Him to His Grave’</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Joe Biden has renewed his condemnation of Donald Trump’s role in the January 6, 2021, attack on the US Capitol, arguing that it should remain part of Trump’s historical record. He links that judgment to pardons for rioters, climate-policy reversals and broader damage to democratic institutions.</p>
+<p>In an adapted excerpt from his forthcoming book, Biden recounts meeting Trump at the White House eight days after the 2024 election. Biden says the encounter, attended by Jill Biden and the two presidents’ chiefs of staff, lasted nearly two hours instead of the scheduled 30 minutes. He describes Trump as unexpectedly warm and complimentary before the discussion turned to foreign policy and the incoming administration’s plans.</p>
+<p>Biden writes that Trump’s presidency had already reversed major policies from his administration. He cites withdrawal from the Paris climate accord, executive orders supporting oil drilling and ending federal backing for electric vehicles and wind and solar projects, and says these measures would worsen climate change and weaken US competitiveness with China.</p>
+<p>His sharpest criticism concerns January 6. Biden says Trump led an effort to remain in power after losing the 2020 election and rejects the description of the attackers as peaceful protesters. He writes that nearly 1,600 people convicted for their actions that day were later pardoned by Trump, which Biden says erased accountability and insulted Capitol Police officers.</p>
+<p>Biden also warns that the consequences extend beyond the riot itself. He portrays Trump’s administration as threatening federal workers serving vulnerable people, targeting birthright citizenship, expanding immigration enforcement, reducing vaccine support and weakening international cooperation on disease. He further argues that attacks on Congress, courts, newspapers, nonprofits and civil-society organizations would make the United States less democratic and more fearful.</p>
+<p>The account is ultimately a warning about the durability of American institutions. Biden says recovering democratic norms may take a generation or more, but argues that earlier crises—including the Civil War, the Great Depression and the Gilded Age—show that the country can rebuild after periods of institutional failure.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/politics/2026/11/biden-trump-democracy-elections/689343" target="_blank" rel="noopener noreferrer" title="The Atlantic / Biden: What Trump Did on January 6 ‘Should Follow Him to His Grave’">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0068" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>Phones to be banned from pupils&#x27; bags or pockets under stricter rules for schools in England</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Under tighter government rules scheduled for September 2027, pupils in England will not be permitted to keep mobile phones in either their pockets or bags during the school day. Although statutory guidance introduced in June places schools and trusts under a legal duty to maintain phone-free days, some schools continue to permit devices to stay in bags as long as they are neither seen nor heard. Schools will decide how to enforce the tighter rules, using measures such as sealed pouches, secure lockers, collection at the start of the day or complete site bans.</p>
+<p>Head teachers’ unions said the stronger measures would require significant government funding, particularly if every pupil needs secure storage. Paul Whiteman of the NAHT called phones possible safety concerns and sources of distraction; Pepe Di’Iasio, who represents the Association of School and College Leaders, said schools could not simply make them disappear. The government said phone access can draw children away from learning and one another. England’s Children’s Commissioner and the Generation Focus campaign group welcomed the changes, with Generation Focus arguing that existing policies have not stopped pupils using phones during the day.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c51kdk422w8jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Phones to be banned from pupils&#x27; bags or pockets under stricter rules for schools in England">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0142" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>A Ukrainian drone attack has hit Russia’s second-largest oil refinery in Kirishi, in the Leningrad region, the regional governor, Aleksandr Drozdenko, said.</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Ukrainian drone attack struck Russia’s second-largest oil refinery in Kirishi, Leningrad region, during the overnight hours, regional governor Aleksandr Drozdenko said. He said the strike caused a fire that was later extinguished and that a woman was killed by falling drone debris.</p>
+<p>The refinery is about 800km from Ukraine’s border and has reportedly been hit by several Ukrainian drone attacks this year. It is a major supplier of diesel for Russia’s domestic market and exports, and is reported to produce more than 6% of the country’s refined oil. The attack forms part of Ukraine’s broader campaign against Russian oil infrastructure, including pipelines, ports, refineries and tankers, which has been described as an effort to weaken Russia’s war economy.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/live/2026/nov/09/polands-krakow-attack-ukraine-russia-france-germany-europe-latest-news?page=with%3A6af18dc68f08975ecf4b6c8a#6af18dc68f08975ecf4b6c8a" target="_blank" rel="noopener noreferrer" title="The Guardian / A Ukrainian drone attack has hit Russia’s second-largest oil refinery in Kirishi, in the Leningrad region, the regional governor, Aleksandr Drozdenko, said.">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0118" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Trump to meet Qatari PM as effort to end Iran war ramps up</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump is due to meet Qatar’s prime minister on Monday as diplomatic efforts to end the Iran war intensify after last week’s midterm elections. Senior US and Gulf officials reportedly doubt that an agreement is imminent. The conflict has lasted more than eight months since it began alongside Israel on 28 February, while Trump has rejected an existing Iranian truce proposal. Fighting continues: Iranian state media reported a US strike on Qeshm island, while Iran has attacked Gulf shipping and Houthi allies have struck Saudi Arabia.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/nov/09/donald-trump-stephen-miller-immigration-midterms-iran-qatar-economy-latest-news-updates?page=with%3A6af1aef78f082a3892f6aecf#6af1aef78f082a3892f6aecf" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump to meet Qatari PM as effort to end Iran war ramps up">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0274" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="scmp">
+  <summary>French PM brings forward minimum wage hike to calm protesters</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">France’s Prime Minister Sebastien Lecornu said on Monday that the government would move a planned minimum-wage increase forward from January to December, seeking to ease a cost-of-living crisis and defuse mounting unrest. Protests that began over underfunded schools have broadened in recent weeks, including riots in major cities on October 17 that reportedly surprised security forces. The wage increase was presented as a planned measure; the evidence does not state whether it has been implemented or whether it ended the protests.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/europe/article/3373836/french-pm-brings-forward-minimum-wage-hike-calm-protesters" target="_blank" rel="noopener noreferrer" title="South China Morning Post / French PM brings forward minimum wage hike to calm protesters">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0018" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="al_monitor,axios,cnn,nyt,politico">
+  <summary>White House cautiously upbeat about Russia-Ukraine peace talks this week</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russia, Ukraine and the United States are preparing to resume peace talks in Abu Dhabi, with Washington expressing guarded hope of progress while territorial disputes, postwar security and the absence of a cease-fire plan keep the stakes high.</p>
+<p>The three-sided talks are scheduled for Tuesday and Wednesday, the first meeting with US mediators since February and the first such negotiations aimed at ending the war since then.</p>
+<p>White House officials said they saw a chance to make significant progress, after envoys Steve Witkoff and Jared Kushner spent weeks urging Russian President Vladimir Putin to restart negotiations. US officials have described the discussions as a new starting point for security guarantees and a postwar security framework.</p>
+<p>Ukrainian President Volodymyr Zelenskiy said his forces’ battlefield results, long-range strikes and reported Russian losses were improving Kyiv’s negotiating position. The front line has remained largely static, while Ukrainian officials say Russia’s advance in Donetsk has slowed, according to his account.</p>
+<p>But the parties remain far apart over possible Ukrainian territorial concessions. Russia’s continuing attacks on Ukrainian cities and Putin’s refusal to accept a cease-fire have also weakened expectations of immediate progress; a cease-fire is not expected to be discussed at these meetings.</p>
+<p>The EU plans to send senior representatives, while advisers from France, Germany and the United Kingdom are expected in Abu Dhabi. It remains unclear whether the European representatives will participate inside the negotiating room.</p></div>
+  <div class="source-list"><a href="https://www.al-monitor.com/originals/2026/11/zelenskiy-says-ukrainian-battlefield-successes-strengthen-kyivs-position-talks" target="_blank" rel="noopener noreferrer" title="Al-Monitor / Zelenskiy says Ukrainian battlefield successes strengthen Kyiv&#x27;s position in talks">AM #1</a><a href="https://www.axios.com/2026/11/09/ukraine-russia-zelensky-putin-peace-abu-dhabi" target="_blank" rel="noopener noreferrer" title="Axios / White House cautiously upbeat about Russia-Ukraine peace talks this week">Axios #1</a><a href="https://www.cnn.com/2026/11/09/europe/russia-ukraine-us-peace-talks-preview-intl" target="_blank" rel="noopener noreferrer" title="CNN / Ukraine peace talks to restart after 9 months. What makes them different this time?">CNN #1</a><a href="https://www.nytimes.com/2026/11/09/world/europe/ukraine-russia-peace-talks.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Ukraine Peace Talks Are Restarting After 9 Months. Here’s What to Expect.">NYT #1</a><a href="https://www.politico.eu/article/ukraine-europe-abu-dhabi-talks-officials-russia" target="_blank" rel="noopener noreferrer" title="POLITICO / EU sends 2 senior officials to Ukraine talks in Abu Dhabi">POLITICO #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0007" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Russian investigative newspaper Novaya Gazeta closes citing gov’t clampdown</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Novaya Gazeta closed its newsroom in Moscow on November 9, 2026, after holding what it described as its final editorial meeting. The Russian investigative newspaper said it had been forced to shut after Moscow designated it a “foreign agent” in September, and that banks subsequently stopped processing reader donations that supported its operations.</p>
+<p>The closure removes one of the few Russian outlets that openly criticized the Kremlin and the war in Ukraine. In the months before it shut, authorities searched editor-in-chief Sergei Sokolov’s home and questioned him, while another editor, Oleg Roldugin, was arrested in April. Cofounder Dmitry Muratov said the closure showed that people advocating peace were losing access to information and that constitutional protections for political and civil rights had effectively stopped functioning. UN human rights chief Volker Turk called the shutdown another major blow to independent media in Russia. The Kremlin described it as part of a normal cycle of change.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/11/9/russian-investigative-newspaper-novaya-gazeta-closes-citing-govt-clampdown?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Russian investigative newspaper Novaya Gazeta closes citing gov’t clampdown">AJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0157" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Australia: ‘Settle down’ and ‘do your own swabs’: how alleged rape victims are treated in Queensland revealed in major report</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new Australian Institute of Criminology study has found that sexual-assault investigations in Queensland can be delayed or deprioritised as detectives manage competing demands, leaving victim-survivors facing unsuitable interview settings, barriers to forensic testing and prolonged uncertainty over their cases.</p>
+<p>The report examined more than 19,000 sexual-assault allegations made to Queensland police between 2018 and 2022. Police considered 36% solved; 31% were withdrawn by victim-survivors, 11% were deemed unsubstantiated and 22% remained unsolved.</p>
+<p>Interviews with detectives and support workers described investigators handling sexual-assault cases alongside youth and property crime, domestic and family violence, and complex fraud. Some said cases could remain unattended for months. Others described interviews taking place in ordinary office areas, and one support worker recounted a victim-survivor being told to calm down or face arrest.</p>
+<p>The study also identified problems obtaining rape-kit examinations at public hospitals. Detectives described journeys of up to seven hours for testing, lengthy waits and unavailable staff; one recounted a victim-survivor waiting 14 hours before being told to collect their own samples.</p>
+<p>The Queensland Sexual Assault Network said the withdrawal rate reflected wider systemic barriers and that delays could make victim-survivors feel their cases were not a priority. The researchers recommended specialist domestic, family and sexual-violence investigation units, foundational training for general-duty officers, and personal notification when police or prosecutors decide not to proceed.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/2026/nov/10/settle-down-do-your-own-swabs-how-alleged-victims-are-treated-in-queensland-revealed-in-major-report" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘Settle down’ and ‘do your own swabs’: how alleged rape victims are treated in Queensland revealed in major report">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0051" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="axios">
+  <summary>AI&#x27;s &quot;too big to fail&quot; CEO is facing a crisis with no backup</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jensen Huang’s admission of an extramarital relationship with Alice Huang, who has been described in reports as a suspected Chinese operative, has triggered an independent Nvidia board investigation and raised questions about the company’s leadership, security and influence over the AI industry.</p>
+<p>Huang apologized to employees on Sunday. Nvidia’s board said it remains confident in his leadership and has found no reason to believe company secrets or national security were compromised. China denied the allegations. Three Republican House committee chairs have requested a briefing from Huang on the relationship and Nvidia’s safeguards against foreign threats.</p>
+<p>The immediate concern extends beyond Huang’s personal conduct. Nvidia is unusually dependent on its founder, who has more than 60 direct reports and has not publicly groomed a successor. An analyst quoted in the account said investors would struggle to assess the company without him, making any forced departure a potential shock for markets.</p>
+<p>Huang has also served as a source of financing and credibility for companies building AI infrastructure. Nvidia has backed firms such as CoreWeave and provided investment or computing access to startups, while major laboratories are only beginning to diversify their chip supplies. Any disruption would therefore be a projected risk, not an observed industry failure.</p>
+<p>The investigation may also intensify scrutiny of Huang’s advocacy for selling advanced chips to China.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/11/09/jensen-huang-nvidia-ceo-crisis" target="_blank" rel="noopener noreferrer" title="Axios / AI&#x27;s &quot;too big to fail&quot; CEO is facing a crisis with no backup">Axios #1</a><a href="https://www.axios.com/2026/11/09/jensen-huang-china-spy-nvidia-fbi-doj" target="_blank" rel="noopener noreferrer" title="Axios / Sex, secrets and spies: The history of suspected honey traps">Axios #2</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0136" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>High fossil fuel prices spread inflation ‘like a cancer’, UN climate chief tells Cop31</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">At the opening of UN climate talks in Turkey on Monday, climate chief Simon Stiell warned that a global fossil-fuel price crisis was spreading inflation worldwide and hitting households hard. He joined Turkey and Australia in promoting renewable energy and electrification as alternatives to continued reliance on oil, coal and gas.</p>
+<p>The negotiations faced increased pressure because of dissatisfaction with their slow results, while Stiell said vulnerable communities were paying the price of global heating. A proposed electrification goal would raise electricity’s share of final energy consumption from one-fifth to one-third over the next 10 years. The talks also opened amid climate scientists’ assessment that global heating would reach at least 1.8C, beyond the 1.5C goal countries adopted at the 2015 Paris talks. Jess Gasper, an environmental official from the Marshall Islands, said securing international finance for one protective seawall had taken eight years.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/2026/nov/09/high-fossil-fuel-prices-spread-inflation-like-cancer-cop31egotiator-tells-cop31" target="_blank" rel="noopener noreferrer" title="The Guardian / High fossil fuel prices spread inflation ‘like a cancer’, UN climate chief tells Cop31">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0094" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="el_pais">
+  <summary>Spain: These are the minimum transport services and other areas for the general strike on November 11</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Spain’s general strike on Wednesday, November 11, backed by CC OO and UGT, is set to proceed with minimum staffing and transport services largely defined. Renfe will operate 75% of Cercanías services during peak periods and 50% at other times; regional trains will run at 65%, high-speed and long-distance services at 73%, and freight services at 26%. A separate Semaf drivers’ strike is scheduled at Renfe on November 10 and 12, with freight minimum services of 20%.</p>
+<p>Transport Ministry rules set minimum air services of 56% to 85% for routes involving the Balearic Islands, Canary Islands, Ceuta and Melilla. Peninsula flights requiring at least five hours by public transport will have 39%-64% coverage, while shorter connections will have 18%-37%; international flights will have 39%-64%. Minimum services vary by region and sector. Catalonia has set 25% peak-hour public transport and guaranteed emergency healthcare and specified education staffing. Madrid proposes 80% of Metro trains at peak times and 50% of buses, while Valencia proposes 80% of regional rail and 70%-80% of metropolitan transport. Security services for essential facilities are set at 80%, rising to 90% for transport and telecommunications, and at least 20% of fuel stations in each comarca must remain open.</p></div>
+  <div class="source-list"><a href="https://elpais.com/economia/2026-11-09/estos-son-los-servicios-minimos-de-transporte-y-otras-areas-para-la-huelga-general-del-11-de-noviembre.html" target="_blank" rel="noopener noreferrer" title="El País / These are the minimum transport services and other areas for the general strike on November 11">El Pais #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0008" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Cyprus rivals agree new crossings across island’s dividing line</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Greek Cypriot leader Nikos Christodoulides and Turkish Cypriot leader Tufan Erhurman agreed on Monday to open two additional crossings across Cyprus’s dividing line, coordinate emergency responses and exchange archival material. The agreement followed their meeting with UN envoy Maria Angela Holguin in the UN-controlled buffer zone. The crossings have been agreed but are not reported as open; if implemented, they would raise the number operating across the island to 11, according to Cypriot media.</p>
+<p>The arrangement is part of a UN-backed effort to restart peace negotiations and is described as the first tangible easing after years of stalemate. The UN called the meeting positive and said the leaders would meet again in the coming weeks with outgoing Secretary-General Antonio Guterres. Christodoulides said the goal was to resume talks before Guterres’s term ends at the close of the year. The two sides still disagree over the rules for those negotiations, so the crossing agreement has not resolved the broader political dispute.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/11/9/cyprus-rivals-agree-new-crossings-across-islands-dividing-line?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Cyprus rivals agree new crossings across island’s dividing line">AJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0159" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>New Zealand’s Opportunity party takes aim at populist politics as it prepares to enter parliament</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">New Zealand’s Opportunity party is set to enter parliament after winning 5.9% of the party vote, clearing the threshold and securing seven MPs. Led by businesswoman Qiulae Wong, it is the first new party not formed from an existing MP or party to enter parliament since the mixed-member proportional system began in 1996. Wong is also the first Asian-ethnicity leader of a New Zealand political party. The final election result is due on 27 November, after about 400,000 special votes are added.</p>
+<p>The election left the centre-right and centre-left blocs separated by only a few seats, creating the possibility that Opportunity will help determine the next government. Wong says the party’s supporters want a more pragmatic alternative to populist politics. Its stated priorities include addressing the supermarket duopoly, limiting political donations, creating a 10-year cross-party health plan, ending bottom trawling and strengthening climate commitments. Opportunity plans to negotiate first with whichever party wins the most seats, while basing its decision on its vision for a low-emissions and inclusive New Zealand. National leader Christopher Luxon, who had previously ruled out cooperation, said he would seek common ground with Wong.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/09/nz-elections-opportunity-party-qiulae-wong-speech-first-day-in-parliament" target="_blank" rel="noopener noreferrer" title="The Guardian / New Zealand’s Opportunity party takes aim at populist politics as it prepares to enter parliament">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0111" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Stephen Miller, immigration hardliner, in his own words</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In the United States, Stephen Miller was due to begin serving as White House chief of staff, giving Donald Trump’s influential immigration aide still greater power. The Guardian reported that many were horrified by the promotion. Miller, 41, has worked with Trump since the 2016 presidential campaign and helped drive first-term policies including family separation at the US-Mexico border and a travel ban affecting people from many Muslim-majority countries.</p>
+<p>In remarks from 2023, Miller portrayed immigration as an ongoing national resettlement and warned that Americans a generation from now might not recognize their country. He said reversing that change would require deportations on a massive scale, involving millions of people. The account presents these as Miller’s stated views and forecasts as he assumes the chief-of-staff role.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/nov/09/stephen-miller-in-his-own-words" target="_blank" rel="noopener noreferrer" title="The Guardian / Stephen Miller, immigration hardliner, in his own words">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0253" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="politico">
+  <summary>EU offers cash for Black Sea attack response</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">During her visit to Romania, European Commission President Ursula von der Leyen said the EU would allocate €50 million to speed up work on a Black Sea Maritime Security Hub and another €10 million to support Romania’s search-and-rescue operations. The Romania-Bulgaria control center, unveiled last year, is projected to be operating at full capacity before the year ends. The facility is designed to track activity at sea in real time, safeguard power and communications cables beneath the water, and provide the two nations with a common assessment of threats.</p>
+<p>The announcement follows reported violence affecting commercial shipping. At least nine ships have been attacked in Romania’s and Bulgaria’s exclusive economic zones since early October, leaving four vessels sunk and 34 sailors dead or unaccounted for. Ships have also come under attack near Russia’s shoreline. Romania has blamed Russia for the attacks, while Bulgaria has not assigned blame. The EU funding comes as the United States leads separate talks on a Black Sea ceasefire and safe passage. Ukraine supports such an arrangement, but the source says Russia has rejected a freedom-of-navigation proposal.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/eu-offers-cash-for-black-sea-attack-response" target="_blank" rel="noopener noreferrer" title="POLITICO / EU offers cash for Black Sea attack response">POLITICO #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-cluster-id="cluster-0151" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="guardian">
+  <summary>More than $300bn wiped off Nvidia&#x27;s valuation</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nvidia’s shares reportedly fell almost 7.5% when trading opened in New York, reaching $172.75 from $186.64 on Friday night, amid investor reaction to reports concerning CEO Jensen Huang. The Guardian calculated that the decline erased $335bn from Nvidia’s valuation, taking it to about $4.16tn from $4.5tn.</p>
+<p>The fall followed the board’s decision to launch an independent investigation into whether Huang had been targeted by a foreign intelligence effort. The Guardian also said investors were responding to reports that Huang had admitted an extramarital affair reportedly involving a Chinese spy. As background, related reporting described Huang as Nvidia’s public face for more than 30 years and said he co-founded the company in 1993.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/live/2026/nov/09/nvidia-jensen-huang-scandal-investigation-ai-industry-tech-stocks-recovery-slump-latest-news-updates?page=with%3A6af1d6348f082a3892f6b0a7#6af1d6348f082a3892f6b0a7" target="_blank" rel="noopener noreferrer" title="The Guardian / More than $300bn wiped off Nvidia&#x27;s valuation">Guardian #1</a></div>
+  <div class="field-label">Context sources</div><div class="source-list"><a href="https://www.theguardian.com/technology/2026/nov/09/jensen-huang-image-nvidia" target="_blank" rel="noopener noreferrer">Guardian #1</a></div>
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0072" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="cna,straits_times">
+  <summary>Nvidia, CEO Jensen Huang sued over disclosures related to suspected Chinese spy</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nvidia and chief executive Jensen Huang face a proposed shareholder class action in the United States over alleged nondisclosure of Huang’s relationship with Alice Huang, while the company’s shares fell 4.3% on Nov 9, cutting its market value by about US$190 billion.</p>
+<p>The complaint, lodged in a San Jose, California, federal court, alleges that Nvidia and Huang misled investors by concealing the relationship and its alleged national-security ramifications. Alice Huang, described as a former executive of Singapore-based Megaspeed and unrelated to Huang, was identified in the complaint as the other party.</p>
+<p>The complaint says the matter threatened Nvidia’s reputation and business prospects. The New York Times reported that US authorities had determined Alice Huang was a Chinese intelligence asset.</p>
+<p>Nvidia announced an investigation on Nov 8. Huang had told employees that he was unfaithful to his wife but did not provide details of the alleged relationship.</p>
+<p>Trading in the United States had ended five minutes before the complaint was lodged. Mark Kistenmacher is leading shareholders in the pursuit of unspecified damages, while Nvidia had yet to answer a request for comment.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/world/jensen-huang-nvidia-sued-chinese-spy-6537296" target="_blank" rel="noopener noreferrer" title="CNA / Nvidia, CEO Jensen Huang sued over disclosures related to suspected Chinese spy">CNA #1</a><a href="https://www.straitstimes.com/world/united-states/nvidia-ceo-jensen-huang-sued-over-disclosures-related-to-suspected-chinese-spy" target="_blank" rel="noopener noreferrer" title="The Straits Times / Nvidia, CEO Jensen Huang sued over disclosures related to suspected Chinese spy">TST #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-cluster-id="cluster-0048" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="atlantic">
+  <summary>The Used-Battery Gold Rush Is Coming</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Retired electric-vehicle batteries are beginning to move into a second market as stationary energy storage, with European projects already supplying homes, businesses and factories. In the United States, millions of batteries could become available for reuse by the mid-2030s, potentially supporting outage resilience, grid capacity and lower electricity bills.</p>
+<p>Lithium-ion vehicle batteries eventually lose capacity. At roughly 70% to 80% of their original charge, they may no longer provide sufficient range for cars but can still store substantial energy for buildings. Hobbyists are adapting old packs, including Andrew Austin, known as Battery Man, who connected a Nissan battery to his parents’ solar system at their home in the U.K. The household met its own electricity needs and sold some power back to the grid.</p>
+<p>Europe has supported larger-scale reuse for years. Projects have installed retired Renault batteries in solar-equipped British homes, used former Audi batteries in forklifts at a German factory, and built backup systems from Nissan batteries at an Amsterdam soccer arena and in Melilla, Spain. Moment Energy installed a system using retired EV batteries to fast-charge vehicles at Vancouver International Airport in 2024.</p>
+<p>The U.S. market remains largely prospective. Batteries can take 15 to 20 years to wear out, so the expected mid-2030s wave depends on the aging of the American EV fleet. Colorado and New Jersey have adopted producer-responsibility laws modeled on European rules, while growing solar adoption and rising manufacturing costs could improve the economics of reuse. AI companies and data-center operators are also seeking additional energy supplies, and start-ups are developing storage systems for facilities such as hospitals and airports.</p>
+<p>Redwood Materials says it is working to deploy retired Rivian batteries and expects reused EV batteries could supply half of the energy-storage market by 2030. That forecast is disputed by practical constraints: a 2024 Stanford study suggested batteries may last longer than expected, extracting them can be difficult, and lithium-ion systems can catch fire. U.S. utilities still generally install new batteries in homes, and no company is yet marketing old EV batteries directly to American homeowners.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/science/2026/11/electric-vehicle-battery-reuse/689326" target="_blank" rel="noopener noreferrer" title="The Atlantic / The Used-Battery Gold Rush Is Coming">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0137" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="guardian">
+  <summary>Parents and teachers decry Google pledge to yank Search if schools block AI: ‘This threat is nothing but extortion’</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Google has announced new AI tools for US schools and classrooms, with controls allowing teachers and administrators to restrict student access. The company also said schools that block its AI tools will lose access to Google Search. Chris Phillips, Google’s vice-president for education, said schools should control how AI is used, while access to Gemini, Gemini Notebook, Gemini in Classroom and Google Search would remain off for K–12 student accounts unless administrators activate the products.</p>
+<p>Parents and teachers criticized the policy, warning that AI could weaken students’ critical-thinking skills and objecting to the growing role of major technology companies in education. Some urged schools to use alternatives such as DuckDuckGo, academic databases, JSTOR and arXiv instead of depending on Google Search. A Hawaii teacher said Google should not develop or test AI with minors, while a Virginia father called the company’s conditional access approach “nothing but extortion” and said even advanced models can produce plainly wrong answers. Others opposed blanket bans, arguing that schools should teach responsible AI use and help students evaluate unreliable outputs rather than prevent access altogether.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/nov/09/parents-teachers-google-search-schools-ai" target="_blank" rel="noopener noreferrer" title="The Guardian / Parents and teachers decry Google pledge to yank Search if schools block AI: ‘This threat is nothing but extortion’">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-cluster-id="cluster-0103" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="global_voices">
+  <summary>Big Tech, AI, and the quiet expansion of digital surveillance in Nigeria</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nigeria’s growing use of AI-powered services is intensifying concerns over who controls personal information, how companies use it, and whether digital inclusion could come with reduced privacy and accountability for users.</p>
+<p>Searches, social-media activity and interactions with AI tools can generate data about people’s interests, habits and behaviour. As technology companies use such information to develop products, personalize services and generate revenue, the analysis warns that users may have limited understanding of what is collected, how long it is retained, and whether it helps train automated systems.</p>
+<p>The risks extend beyond privacy. Large data sets can enable profiling, targeted persuasion and predictions about individual behaviour. If information is shared without adequate safeguards, or automated decisions cannot be challenged, corporate data systems could make surveillance easier for businesses, governments or other actors. Concentration among companies controlling widely used platforms and AI services can also leave users with few practical alternatives.</p>
+<p>Nigeria’s Data Protection Act 2023 created the Nigeria Data Protection Commission and a framework for lawful and accountable processing. But effective protection depends on implementation, public awareness and regulatory enforcement. The analysis also highlights a representation problem: systems that inadequately reflect Nigerian languages, cultures and social realities may distribute AI’s benefits unevenly.</p>
+<p>It calls for data minimization, clearer policies, meaningful user choices and stronger safeguards, arguing that AI inclusion should be measured not only by access, but by whether people can understand and control how their information is used.</p></div>
+  <div class="source-list"><a href="https://globalvoices.org/2026/11/09/big-tech-ai-and-the-quiet-expansion-of-digital-surveillance-in-nigeria" target="_blank" rel="noopener noreferrer" title="Global Voices / Big Tech, AI, and the quiet expansion of digital surveillance in Nigeria">GV #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-cluster-id="cluster-0020" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>SplatAnything: Gaussian Spacing Normalization for Feed-forward 3DGS across Arbitrary Scenes</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An arXiv preprint proposes SplatAnything, a feed-forward 3D Gaussian Splatting (3DGS) method for arbitrary scenes. Its authors argue that existing methods normalize Gaussian attributes using global radial distance, while neighboring Gaussian spacing can vary with scene scale and camera configuration, producing shifted scale targets and ambiguous supervision. SplatAnything’s Gaussian Spacing Normalization (GSNorm) instead standardizes a robust scene-level spacing statistic. The authors also introduce a benchmark across datasets, input sparsity levels and extrapolated viewpoints, reporting state-of-the-art performance and strongest gains under large scale and viewpoint changes.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.08264v1" target="_blank" rel="noopener noreferrer" title="arXiv / SplatAnything: Gaussian Spacing Normalization for Feed-forward 3DGS across Arbitrary Scenes">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0023" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>P^2-MOPD: Accelerating Multi-Teacher On-Policy Distillation via Parameter Priors</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">P²-MOPD, proposed in an arXiv preprint, combines multi-teacher on-policy distillation with trainable parameter mixing. It jointly learns the student weights and mixing coefficients, using expert models as priors without restricting the student to their parameter span, unlike task arithmetic. Across four domains and model sizes of 1.7B and 4B parameters, the authors report faster, more balanced recovery than MOPD from the same initialization. Their 1.7B model reached 94.7% average recovery, compared with 80.9% for MOPD. The findings are from a preprint that has not undergone peer review.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.03953v2" target="_blank" rel="noopener noreferrer" title="arXiv / P^2-MOPD: Accelerating Multi-Teacher On-Policy Distillation via Parameter Priors">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0025" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint introduces LongBanana, a benchmark for long-context, multi-reference image synthesis in which systems must retrieve dispersed visual evidence, ignore distractors, bind entities and relationships, and compose a coherent image. It contains 90 tasks arranged in a 3-by-3 taxonomy. Across its tasks, the benchmark uses roughly 32 reference images, 20 constraints and 50 evaluation items per task, for a total of 4,670 atomic checks specified by experts.</p>
+<p>An entity-relation graph underpins the benchmark, whose checklist measures assess fidelity to content, correct relational binding and satisfaction of constraints across the entire task. The authors say 15% of expert labels were double-checked, with 89.4% exact agreement and a quadratic weighted kappa of 0.83. The authors additionally describe an agent-harness framework called LongBanana-Gen for generating images over extended horizons. Their experiments report that minimal harnesses outperform direct generation, while a ReAct-Plan-Exec-Reflect workflow provides gains that vary by harness, particularly through evidence grounding and repair. The work is a preprint and has not been peer reviewed; code and data are listed at the project website.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.06856" target="_blank" rel="noopener noreferrer" title="arXiv / LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0037" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Confucius4-R2T2 is a preprint model for real-time automatic speech recognition that keeps previously emitted text unchanged while audio continues arriving. The authors say this stable-prefix design is intended for systems such as translators and voice agents, where revising a token can waste computation or trigger an incorrect action. They report that the model maintains high accuracy and low latency while producing text with a low emission lag.</p>
+<p>The model was created by post-training Qwen3-ASR-1.7B on 1,500 hours of Chinese and English audio, while leaving its pretrained audio encoder and projector frozen. Its training uses a proposed Longest Stable Prefix concept, which the authors characterize as monotonic, consistent with full-audio output, and maximal under defined earlier-output conditions. They report that this converts a full-context model into a stable streaming system without architectural changes, with streaming quality close to the base model’s full-context performance. They also say the gains extend beyond the post-training languages and have released the weights and code. These findings come from an arXiv preprint that has not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.06043" target="_blank" rel="noopener noreferrer" title="arXiv / Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0028" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Beneath the Surface: What We Overlook When We Talk About Agent Evolution</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint examines whether AI agents can improve recursively through changes to their operating “harness”—the surrounding system—without changing model weights. It tests four methods across different harnesses and general-purpose and coding tasks, using repeated evaluations, controlled expansion of agents, component interventions, and admission replays. Across the study, all 16 evolved agents solved some previously uncovered tasks but lost others they had already covered. In one general-task case, reliability increased by 5.2 points while 10 previously covered tasks were lost.</p>
+<p>The results suggest that higher benchmark scores do not necessarily mean more reliable, efficient, or transferable improvement. Most reliability gains increased deployment costs, and targeted changes generally performed better than generic reminders, although combinations could alter their effects. The highest-scoring agent was not the one with the largest average improvement in any of the four evaluation pools, while stricter admission rules could exclude useful alternatives. Transfer was also selective: coverage generally declined on general-task targets, but increased on coding targets with an outer-layer-only harness. The preprint proposes preservation-aware evaluation and tested decision rules, and describes EvoAudit as a follow-up system that applies these diagnostics to agent selection, analysis, mutation, and gating.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.07624" target="_blank" rel="noopener noreferrer" title="arXiv / Beneath the Surface: What We Overlook When We Talk About Agent Evolution">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0030" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>LLMs Don&#x27;t Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A not-yet-peer-reviewed preprint introduces FinDendro, a benchmark designed to test whether large language models (LLMs) know when financial information falls within their learned knowledge. It contains 2,226 dated U.S. facts from 1999–2026, including monthly macroeconomic data, month-end stock prices and Federal Reserve decisions. Each fact generates four tests covering the value itself, whether the model claims to know or is guessing, and whether it can answer when given a historical date. Controls put chance accuracy near 0.27.</p>
+<p>The preprint reports that most frontier models understate what they know. GPT-5 answered 76% of the controlled facts correctly while claiming knowledge of 38%, and it answered 61% of facts it said it did not know. Knowledge claims could continue up to seven quarters beyond the measured boundary. Asking for a historical date removed most claims of prior knowledge without changing accuracy. The authors therefore conclude that self-reports, instructions and stated vendor cutoffs cannot certify that backtests within a model’s training window are free of information leakage; they propose selecting backtest periods through measured temporal behavior instead.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.06808" target="_blank" rel="noopener noreferrer" title="arXiv / LLMs Don&#x27;t Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0026" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Steerable Multi-Objective Group-Relative Preference Optimization with Jointly Trained Low-Rank Adapters</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Language-model deployment often requires different trade-offs as user preferences change, while standard post-training typically produces one policy for fixed objective weights. A preprint introduces LambdaMix, which jointly trains one low-rank adapter for each objective on a frozen base model. At inference, a preference vector selects the adapter mixture and weights separately normalized rewards during online, group-relative reinforcement learning, allowing preferences to change without additional optimization.</p>
+<p>The study evaluates four models on helpfulness versus harmlessness and on instruction-following mathematical problem solving. Additionally, the two largest models were assessed on comment rewriting, with the aim of preserving wording while reducing clues about personal attributes. Across all four models, the study reports that LambdaMix achieves higher hypervolume than every evaluated conditioned and policy-merging baseline on the first two tasks. Relative to a collection of specialist GRPO policies, LambdaMix requires fewer training completions and stores fewer adapter parameters. With architecture and initialization held fixed, jointly varying adapter mixtures and objective weights produces wider score ranges and greater coverage than varying either alone.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.09634" target="_blank" rel="noopener noreferrer" title="arXiv / Steerable Multi-Objective Group-Relative Preference Optimization with Jointly Trained Low-Rank Adapters">arXiv #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-cluster-id="cluster-0262" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>A quantum breakthrough makes light behave like both a solid and a liquid</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An international team reports creating a quantum “supersolid” in a device that operates at room temperature, combining crystal-like order with nearly frictionless flow. The result could make exotic quantum behavior easier to study and may eventually support light-based computing and highly sensitive optical sensors.</p>
+<p>A supersolid has two properties that ordinarily seem incompatible: an orderly, repeating structure like a crystal and the flow characteristics of a superfluid, whose internal resistance can vanish under the right conditions. Supersolidity was experimentally observed in ultracold atomic Bose–Einstein condensates in 2017, but those systems generally require temperatures close to absolute zero.</p>
+<p>The new experiment used a different platform. Researchers from the University of Warsaw’s Faculty of Physics, the Military University of Technology in Poland, IBM Research Zurich and France’s National Centre for Scientific Research created a device containing a liquid-crystal microcavity and an organic semiconductor. Instead of ultracold atoms, the system produced exciton polaritons—short-lived particles formed when light and matter become strongly coupled.</p>
+<p>The microcavity could operate at temperatures approaching 60°C, according to Professor Wiktor Piecek of the Military University of Technology. The researchers reported that the resulting particles formed a condensate with supersolid behavior without the extreme cooling normally associated with such experiments.</p>
+<p>Evidence for the state came from light emitted by the sample. When the system entered the supersolid phase, regularly spaced bright fringes appeared, indicating a repeating variation in particle density. The position of those fringes changed between laser pulses, suggesting that the system was selecting among several equivalent arrangements—a phenomenon known as spontaneous symmetry breaking.</p>
+<p>The team also observed a repeating pattern in the polarization of the emitted light, called a persistent spin helix. The intensity pattern and polarization pattern represented two forms of order occurring simultaneously, helping identify the unusual quantum state.</p>
+<h3>A more controllable platform</h3>
+<p>The experiment faced a practical limitation: the organic semiconductor gradually reacted with the liquid crystal, leaving each sample usable for only a few hours. Measurements had to be planned in advance, since repeating one required fabricating a new sample. The crucial device layers were produced and measured through work involving IBM Research Zurich and the Military University of Technology.</p>
+<p>The findings, published in *Science Advances*, establish a room-temperature and electrically tunable platform for studying supersolid exciton-polariton condensates. Applying voltage can change the system’s optical properties, giving researchers more control than earlier approaches described in the account.</p>
+<p>Possible applications include ultrafast photonic devices, neuromorphic computing systems and optical sensors sensitive to small changes in polarization. These remain prospective uses, but avoiding cryogenic cooling could make such technologies more practical to investigate and develop.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261105224536.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A quantum breakthrough makes light behave like both a solid and a liquid">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0261" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>A simple supplement may help clear brain fog after cancer</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">UCLA researchers report that an eight-week oxaloacetate supplement improved perceived cognition, fatigue and some test-measured abilities in a small group of breast cancer survivors, offering a possible treatment for lingering brain fog while leaving its effectiveness unproven.</p>
+<p>Cancer-related cognitive problems can continue after treatment, affecting memory, concentration, processing speed and everyday energy. Because oxaloacetate occurs naturally in the body, the researchers focused on its roles in producing cellular energy and helping regulate glutamate, a neurotransmitter involved in nerve-cell communication.</p>
+<p>Researchers enrolled 18 women with early-stage breast cancer who had received their diagnoses one to five years earlier and were experiencing substantial cognitive difficulties. The participants were about 50 years old on average. Chemotherapy had been part of treatment for most participants, while almost 90% continued to receive endocrine therapy. The treatment plan called for 500 milligrams of oxaloacetate twice a day over eight weeks.</p>
+<p>Sixteen women completed the treatment. All of them reported significant improvement in their cognitive symptoms. The average result on the primary questionnaire measuring perceived cognitive impairment increased from 29.1 at baseline to 55.5 after treatment, placing the group in the researchers’ normal, rather than impaired, range. Improvements were reported by four weeks and generally became stronger over the treatment period.</p>
+<p>Participants also reported less fatigue and better physical functioning. Standardized tests indicated gains in processing speed and executive function, including abilities related to attention, planning and managing tasks. Researchers additionally evaluated participants’ sleep, anxiety, depression, physical health and mental well-being.</p>
+<p>The results remain preliminary. The trial had only 18 participants, and it did not include a placebo or comparison group, so the findings cannot establish that oxaloacetate itself caused the improvements. The supplement was generally tolerated, but reported digestive side effects included indigestion, bloating, constipation, diarrhea and nausea. Gastrointestinal symptoms led two participants to discontinue the supplement, although the study recorded no serious adverse events.</p>
+<p>Patricia Ganz, who led the study and is a UCLA professor, said that few effective treatments are available for cognitive impairment following cancer. The UCLA team is preparing a larger randomized, placebo-controlled phase II trial, expected to begin enrolling breast cancer survivors in late 2026. That study is intended to test whether the supplement provides benefits beyond those associated with taking a placebo.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261104084013.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A simple supplement may help clear brain fog after cancer">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0264" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Hidden climate superpower: Why some ocean “snow” carries six times more carbon</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A collaboration between UC San Diego’s Scripps Institution of Oceanography and the University of Lincoln found that marine snow’s stickiness substantially influences carbon delivery to the deep ocean, as the gooier particles carried over six times more than those with lower viscosity.</p>
+<p>Marine snow is made of sinking fragments of waste, dead organisms, mucus, animal feces, silt and microscopic plankton. Some of that carbon can stay cut off from the atmosphere for centuries or more after the particles sink toward the seafloor.</p>
+<p>Each year, marine snow draws over 10 gigatons of carbon out of surface waters, according to researchers, yet only roughly two gigatons descend far enough for long-term storage. The new findings, described in research published October 8 in *Science*, identify particle viscosity as an important reason for that difference.</p>
+<p>Bacteria consume marine snow as it sinks, breaking particles apart and releasing some of their carbon before it reaches deeper water. The researchers found that bacteria tend to settle in less viscous areas near a particle’s surface. Denser, more adhesive material inside the particles is harder for them to penetrate and degrade.</p>
+<p>Bryce Inman, who was then a Scripps postdoctoral researcher, launched the work in 2021. After several unsuccessful attempts, the team developed a technique in 2025 that combined three-dimensional confocal microscopy with fluorescent molecules. This allowed them to map the internal structure of individual particles while observing how living bacteria moved through them.</p>
+<p>Laboratory experiments indicated that more viscous particles resisted bacterial breakdown and fragmentation for longer. Computer simulations then suggested that they could sink farther before disintegrating. Using those findings, the team calculated that highly viscous marine snow may carry over six times more carbon into the deep ocean than less viscous particles.</p>
+<p>A companion study in *Nature Communications* described the imaging approach. The researchers said it provides a way to examine the microscopic physical environments where bacteria interact with mucus—an interaction also relevant to coral reefs, kelp forests, plant roots and animal digestive systems.</p>
+<p>The findings add particle structure and viscosity to scientists’ understanding of the ocean carbon cycle. They do not imply that all marine snow stores carbon equally: composition, structure and the conditions encountered during sinking vary from particle to particle.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261105224558.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Hidden climate superpower: Why some ocean “snow” carries six times more carbon">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0108" data-section="science_general" data-original-section="science_general" data-sources="guardian">
+  <summary>Medical breakthrough offers hope to people with same stiff person syndrome as Céline Dion</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">science_journalism</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US neurologists at Mayo Clinic have reported early, dramatic improvements in people with stiff person syndrome after treatment with CAR-T cell therapy, in results published in *JAMA Neurology*. The rare autoimmune disease attacks the central nervous system, causing severe rigidity and painful spasms; there is currently no cure. The experimental approach extracts patients’ T cells, engineers them to target disease-causing cells, and returns them to the body. Doctors said some participants who had needed help walking or managing daily tasks regained substantial independence, with some returning to work and hobbies.</p>
+<p>Jonathan Walden said he resumed working and activities such as hunting and fishing after treatment. Shari St Germain, who had experienced severe cramps, difficulty walking, rigidity and falls, described a major improvement in her mobility. Mayo neurologist Anastasia Zekeridou said the extent of functional recovery was unusual compared with existing treatments, which may ease symptoms but rarely restore patients’ previous abilities. The results have been described by the doctors as encouraging rather than conclusive: a central unanswered question is whether the benefits will last. Céline Dion disclosed her SPS diagnosis in 2022, saying it had affected her daily life and voice.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/science/2026/nov/09/medical-breakthrough-offers-hope-to-people-with-same-stiff-person-syndrome-as-celine-dion" target="_blank" rel="noopener noreferrer" title="The Guardian / Medical breakthrough offers hope to people with same stiff person syndrome as Céline Dion">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0265" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>NASA reveals bold new plan to return astronauts to the Moon in 2028</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">attributed source material (republished)</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">NASA’s accelerated Artemis effort targets a 2028 astronaut landing on the Moon, while SpaceX and Blue Origin develop competing landers for a crewed orbital rehearsal in 2027 that will test both systems.</p>
+<p>At an October 23 briefing, NASA Administrator Jared Isaacman, together with other agency leaders, presented updated plans for Artemis III and Artemis IV. Artemis III is scheduled as a 14-day test mission in Earth orbit, carrying four astronauts aboard Orion on NASA’s Space Launch System rocket. The crew is expected to rendezvous and dock first with a Blue Origin Blue Moon test vehicle, then with a SpaceX Version 3 Starship lunar-lander test vehicle. NASA says the demonstrations are designed to verify key operations before astronauts attempt a surface landing.</p>
+<p>Artemis IV is intended to carry astronauts to the Moon in 2028. SpaceX’s approach would use Starship, refueled in Earth orbit before traveling toward the Moon. After employing additional propulsion stages, Blue Origin’s Blue Moon Mark 2 would rendezvous with Orion in a comparatively low lunar orbit and then descend to the surface. Keeping both systems in development gives NASA an alternative as testing continues, according to the agency.</p>
+<p>NASA also reported that preparation timelines for Artemis III hardware have been reduced by about 50%. Its engineers redesigned and tested a critical rocket fuel-line component in five months at roughly one-tenth of an earlier outside estimate. The agency is considering two upper-stage options for Artemis IV’s SLS launch.</p>
+<p>NASA and Axiom Space have developed a lighter suit called Sortie for early lunar excursions; it weighs about half as much as Axiom’s primary suit. NASA presents these measures as steps toward longer missions near the lunar south pole, a lasting human presence on the Moon and, eventually, crewed missions to Mars.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261108233054.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / NASA reveals bold new plan to return astronauts to the Moon in 2028">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0260" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover a surprising link between acorns and lyme disease</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A 35-year ecological study in Dutchess County, New York, suggests that Lyme disease risk is shaped less by deer than by interactions among mice, oak trees, ticks, other wildlife and weather. The findings could improve forecasts of tick surges, although climate effects remain difficult to predict.</p>
+<p>Researchers at the Cary Institute of Ecosystem Studies have tracked ticks, mammals, oak trees, predators and weather on a 2,000-acre forested property. The study, published in the *Proceedings of the National Academy of Sciences*, combines nine findings from the long-running project and illustrates how decades of observation can reveal patterns that brief studies may overlook.</p>
+<p>One central result concerns deer, long assumed to drive tick increases because adult female ticks feed on them. Researchers found no statistically significant link at the site between the number of deer and the abundance of nymphal blacklegged ticks, the immature ticks responsible for much of Lyme disease transmission to people. The researchers did observe a weak relationship in shorter portions of the data, but it disappeared when the full record was examined.</p>
+<p>Mice were a stronger predictor. The following year brought approximately 40% more nymphal ticks after years when white-footed mouse populations were especially large. Mice provide effective blood meals for tick larvae and efficiently transmit *Borrelia burgdorferi*, the bacterium that causes Lyme disease.</p>
+<p>The connection extends back to oak trees. In years when oak trees produce exceptionally large, synchronized acorn crops, known as mast years, the trees provide an unusually abundant food supply. The additional food can increase rodent populations the following year, which in turn supports more young ticks. Researchers found that heavy acorn production could predict a rise in nymphal ticks two years later, potentially offering an earlier warning of elevated exposure.</p>
+<p>However, more mice did not consistently mean a higher percentage of infected ticks. Skunks, squirrels and opossums also host feeding ticks but are generally less effective at transmitting the bacterium. When more larvae feed on those animals, the number of infected nymphs can fall even if the total tick population rises. This means risk depends on both tick abundance and the proportion carrying the pathogen.</p>
+<p>The long-term observations also challenged assumptions about temperature. Ticks survived intense heat and cold in natural settings, possibly by sheltering under leaves or deeper in soil. Yet warmer years were generally followed by fewer nymphal ticks, while warmer conditions could also support more mice. The opposing effects make the consequences of climate change uncertain.</p>
+<p>Lyme disease is the most frequently reported tick-borne illness in the United States, with nearly 500,000 diagnoses reported annually in the source account. The researchers plan to continue monitoring how climate shifts, landscape changes and invasive species affect the forest community and future human exposure.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261106174518.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover a surprising link between acorns and lyme disease">ScienceDaily #1</a></div>
+  
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        for (const group of reportSection.querySelectorAll('.related-stories, .story-group')) {
+          group.hidden = !Array.from(group.querySelectorAll('details.story')).some(story => !story.hidden);
+        }
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
