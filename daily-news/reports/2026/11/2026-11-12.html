@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-11-12</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .story-group {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+    .related-stories {
+      margin-left: 16px;
+    }
+    .related-stories > h3 {
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-11-12</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-cluster-id="cluster-0304" data-section="global_front_page" data-original-section="global_front_page" data-sources="telesur_en">
+  <summary>DR Congo Surpasses 11,000 Ebola Cases, With 5,387 Deaths</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Data collected through November 9 show that the Democratic Republic of the Congo&#x27;s Ebola epidemic has produced 11,042 confirmed cases and 5,387 deaths, the INSP reported, with an estimated case-fatality rate of 48.8%. It said 2,990 patients had recovered and 651 remained hospitalized or in isolation. Eight provinces contain the outbreak&#x27;s 67 affected health zones: Ituri, North Kivu, Tshopo, Bas-Uélé, Haut-Uélé, South Kivu, South Ubangui and North Ubangui.</p>
+<p>Ituri, identified as the epicenter, accounted for 57.7% of reported cases on November 9, while North Kivu represented 32.7%. Health authorities put contact tracing at 79.7% and attributed the faster spread than in earlier outbreaks to delayed detection, armed conflict and strained health services. Many deaths occurred outside treatment centers, complicating containment. The WHO is testing two vaccines in phase-one human trials for the Bundibugyo strain; meanwhile, the DRC began an immunization campaign in late August using Ervebo, which was developed for another Ebola variant but has shown efficacy signals against Bundibugyo in animal studies.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/dr-congo-surpasses-11000-ebola-cases-with-5387-deaths" target="_blank" rel="noopener noreferrer" title="Telesur English / DR Congo Surpasses 11,000 Ebola Cases, With 5,387 Deaths">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0156" data-section="global_front_page" data-original-section="global_front_page" data-sources="guardian">
+  <summary>Thousands without shelter face lethal conditions in storm-hit Gaza as they wait for 150,000 tents</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Weekend storms have left tens of thousands of Palestinians in waterlogged or damaged tents in Gaza, while 150,000 new shelters remain outside the territory awaiting Israeli approval to enter, aid agencies say.</p>
+<p>According to the Palestinian health ministry, floodwater drowned one child, while a collapsing sand dune killed at least three children and their mother in their tent. Sanitation infrastructure has also been destroyed, with sewage entering people’s tents.</p>
+<p>Displaced Palestinian Raed Jamal said his children were sick after their clothes became soaked, while rain entered his damaged tent and he collected it in pots. Medical Aid for Palestinians warned that cold, damp and overcrowded conditions could bring more respiratory illnesses and other complications, and increase the risk of children dying from hypothermia.</p>
+<p>The UN said 940,000 people are in makeshift tents exposed to flooding, while storm-water pumps are not operating because of a lack of power. The UN reported that 26,000 households had requested assistance after the rains, while at least 3,900 were left without shelter.</p>
+<p>With its emergency tents held outside Gaza for nearly two years, Shelterbox said it had resorted to using tarpaulins and wooden pallets to create shelters, though those materials are also restricted. Israel said it had allowed 10,000 tents into Gaza, while the UN said 150,000 were awaiting entry. The Israeli NGO Gisha said tighter limits and a lack of transparency were restricting supplies.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/global-development/2026/nov/11/thousands-without-shelter-lethal-cold-storm-gaza-israel-tents-displaced-people-flood" target="_blank" rel="noopener noreferrer" title="The Guardian / Thousands without shelter face lethal conditions in storm-hit Gaza as they wait for 150,000 tents">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-cluster-id="cluster-0172" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Federal government highlights historic drop in perceived insecurity</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The federal government reported that the average daily number of intentional homicides fell 50%, from 86.9 in September 2024 to 43.4 in October 2026. Figures presented by the Executive Secretariat of the National Public Security System (SESNSP) indicate that the decline stalled in August and September, when the average was 43.3. In October, the average rose by one tenth from the previous month, suggesting the reported reduction did not continue during that period.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/11/11/politica/004n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Federal government highlights historic drop in perceived insecurity">LJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0321" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="xinhua_en">
+  <summary>Chinese VP urges Global South solidarity to achieve green development</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Chinese Vice President Han Zheng used climate meetings in Antalya, Türkiye, on Nov. 11 to call for stronger Global South cooperation, while outlining Chinese-backed projects on energy access, early-warning systems and training. The proposed benefits remain future commitments or planned initiatives rather than completed outcomes.</p>
+<p>As President Xi Jinping’s special representative, Han attended the Antalya Leaders’ Summit of COP31 and delivered a national statement. He said climate change required joint action by all countries and urged developed nations to lead emissions cuts and meet climate-finance commitments, while all parties should implement and strengthen their national climate pledges.</p>
+<p>At a forum on South-South cooperation on climate change, Han set out three proposals. He called for cooperation on green development, climate resilience and long-term capacity building, with the Global South also improving livelihoods during the shift to low-carbon economies. China, he said, was ready to expand work with developing countries on clean energy, green transport and low-carbon industries.</p>
+<p>Han said China&#x27;s South-South climate projects would, over the next five years, deliver lighting solutions to 50,000 African households without electricity and create 100 clean-stove demonstration villages for partners in the Global South. These are announced plans, not reported results. He also said China had supplied early-warning equipment and that its MAZU meteorological system offered more than 200 cloud-based services to over 50 countries.</p>
+<p>China said it plans to launch a climate-change training system called the China South-South school and, with the UNFCCC secretariat and other partners, a broader climate-action leadership program. The initiatives are intended to train climate professionals in developing countries.</p>
+<p>At the leaders’ summit, Han presented a separate four-part framework covering collective action under the UN climate convention and Paris Agreement, faster green transition, disaster resilience, and more open international cooperation. He cited China’s 2030 targets of raising non-fossil energy to 50 percent of electricity generation and electricity’s share of final energy consumption to 35 percent, while reaffirming its carbon-peak and carbon-neutrality goals.</p>
+<p>The forum was hosted by China’s Ministry of Ecology and Environment and the China Meteorological Administration. China also announced new initiatives and signed climate-cooperation documents with Comoros, Nigeria, the UNFCCC secretariat and the Asian Infrastructure Investment Bank.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261112/a1ea483fa7ae493eae2cc575c20f6a50/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / Chinese VP urges Global South solidarity to achieve green development">XNA #1</a><a href="https://english.news.cn/20261112/12559a95eb704da7a866b8383a64ac93/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / Chinese VP attends COP31 Antalya Leaders&#x27; Summit">XNA #2</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0300" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Three Months After Colombia Earthquake, Housing Response Still Pending</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Three months after the Aug. 10 earthquake in Colombia struck Chocó, Risaralda, Valle del Cauca and Caldas, affected residents were still awaiting a housing response. The disaster reportedly killed 335 people, injured thousands and damaged homes, health centers and schools. Many families remained in temporary shelters or tents in public spaces. National Unit for Disaster Risk Management (Ungrd) data cited in the account recorded damage to about 238,266 homes nationwide: 201,939 were affected and 36,327 completely destroyed; 759 buildings collapsed entirely.</p>
+<p>The response also faced questions over funding and oversight. A judge recently ordered the Colombia Luz y Sonrisas Foundation, legally represented by first lady Ana Lucía Pineda, to submit a report on what it received and distributed after the earthquake. Pineda had said the organization received more than $17 million from private-sector donors but had not detailed how the money would benefit affected families. She also faced criticism after attending the inauguration of billboards advertising housing-restoration works in Risaralda, where more than 70,000 families were affected.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/three-months-after-colombia-earthquake-housing-response-still-pending" target="_blank" rel="noopener noreferrer" title="Telesur English / Three Months After Colombia Earthquake, Housing Response Still Pending">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0130" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Killing of journalist underscores deteriorating conditions in Ecuador</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Tomás Beltrán, an Ecuadorian journalist who ran a Facebook news page serving Calceta in Manabí province, was shot dead on Sunday night while driving into his garage. Armed attackers fled, and police and prosecutors have released few details. It remains unclear whether the killing was connected to Beltrán’s reporting, although he had previously covered corruption allegations involving local officials.</p>
+<p>Reporters Without Borders said Beltrán had previously disclosed threats and fears, and that efforts had been made to move him to safety. The organisation said he had been placed in a protection programme operated by the prosecutor’s office, but it was unknown whether he remained protected when he was killed. It is urging an investigation into any connection to his journalism and protection for his relatives and colleagues. Six journalists were killed in Ecuador the previous year, while the civil-society group Fundación Periodistas Sin Cadenas says at least 19 have gone into exile since gang violence escalated in 2023. The group also says threats and violence have driven journalists, particularly in coastal provinces, to avoid reporting on crime.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/11/ecuador-journalist-killing" target="_blank" rel="noopener noreferrer" title="The Guardian / Killing of journalist underscores deteriorating conditions in Ecuador">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0296" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Argentina Presses Malvinas Claim at Hamburg Maritime Court</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Argentina asked the International Tribunal for the Law of the Sea in Hamburg, Germany, on Tuesday, November 10, 2026, to order the United Kingdom to halt oil exploration and extraction around the Malvinas Islands. The request seeks precautionary measures that would suspend the Sea Lion project in the North Malvinas Basin, being developed by Navitas Petroleum and Rockhopper Exploration. Argentina’s delegation, led in the hearings by Legal and Technical Secretary María Ibarzabal Murphy, is also pursuing its sovereignty claim over the Malvinas, South Georgia and the South Sandwich Islands.</p>
+<p>The tribunal is deciding whether to impose preventive measures; no ruling has yet been reported. Argentina’s ambassador to the tribunal, Mario Oyarzábal, argued that extracting hydrocarbons would permanently remove non-renewable resources and alter the marine ecosystem. The British delegation rejected the tribunal’s jurisdiction, maintaining that Argentina’s case is fundamentally a territorial sovereignty dispute rather than a maritime-law matter. London also argued that there is no urgency or imminent risk of irreparable harm warranting suspension of the project. Hearings continue, with a decision on provisional measures expected to determine whether Sea Lion activity is constrained while the broader dispute proceeds.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/argentina-malvinas-claim-hamburg-court" target="_blank" rel="noopener noreferrer" title="Telesur English / Argentina Presses Malvinas Claim at Hamburg Maritime Court">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0298" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Venezuela Approves Energy Law Opening Generation to Private Actors</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Tuesday, Venezuela’s National Assembly gave final approval, after committee amendments, to a partial overhaul of the Organic Law of the Power Grid and Energy Service. The measure opens electricity generation and self-generation to private actors while, according to Assembly President Jorge Rodríguez, stopping short of privatizing the sector. The measure seeks to upgrade infrastructure, make service more reliable nationwide and increase electricity availability for major users, industrial facilities and shopping centers.</p>
+<p>Under the law, the Ministry of Electric Energy may issue concessions for generation exceeding 50 megawatts and for projects tied to public-domain property, backbone transmission networks, exclusive service territories or integrated regional systems. When a concession ends, operators must transfer their assets without liens to state-owned Corpoelec or its designee. A new Superintendency will oversee service, tariffs, self-generation and network protection, while non-compliance can draw fines of up to 2% of the previous year’s gross income. The law also establishes prison terms for equipment theft and for profitable electricity theft through unauthorized connections exceeding 5,000 kilowatt-hours per month. Oil companies must ensure reliable power for their core activities through self-generation, cogeneration or third-party contracts.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/venezuela-approves-energy-law-opening-generation-to-private-actors" target="_blank" rel="noopener noreferrer" title="Telesur English / Venezuela Approves Energy Law Opening Generation to Private Actors">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0171" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="la_jornada">
+  <summary>Health Council approves use of controversial drug for type 2 diabetes</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In the Official Journal of the Federation, the Ministry of Health&#x27;s General Health Council released the 2025 update to the National Compendium of Health Inputs. Among the additions are treatments for type 2 diabetes, including semaglutide, the active ingredient used in medicines such as Ozempic and Wegovy. The medicine is controversial because these products can be expensive on the market, where semaglutide is also commercially used for weight loss.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/11/11/politica/010n1pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Health Council approves use of controversial drug for type 2 diabetes">LJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0114" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="global_voices">
+  <summary>Restoring social media access comes at a cost in Gabon</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gabon restored access to major social-media platforms on October 24, 2026, after 248 days of disruption affecting more than 1.84 million people, while new rules and state-platform cooperation raised concerns over privacy and freedom of expression.</p>
+<p>On February 17, the High Communication Authority (HAC) suspended Facebook, Instagram, TikTok and YouTube, citing content linked to national security, defamation, cyberbullying, hate speech and threats to social cohesion.</p>
+<p>The disruption initially appeared limited, but the presidential spokesperson said it would affect only Meta services; Gabon Media Time later reported access problems on YouTube and TikTok, sometimes requiring a VPN.</p>
+<p>Internet Society Pulse recorded major anomalies affecting Meta, Telegram, TikTok and YouTube, while Le360 Afrique reported increased VPN use in the following months.</p>
+<p>The reinstatement is backed by a legal framework enacted on February 26, including ordinances regulating digital platforms and amendments to the HAC’s governing law. Another law addresses AI-generated and AI-amplified content.</p>
+<p>The rules impose joint liability on people who create and share illegal content and require users to provide personal identification, prompting concerns about anonymity, data protection and political expression.</p>
+<p>On July 13, TikTok and Gabon signed a 12-month cooperation agreement, and TikTok said it had removed more than 23,500 sensitive items in Gabon during the first quarter of 2026.</p>
+<p>The technical operation of the government’s cooperation with platforms remains unspecified. The continuing test is whether restored access permits criticism and public debate without arbitrary sanctions or disproportionate restrictions.</p></div>
+  <div class="source-list"><a href="https://globalvoices.org/2026/11/11/estoring-social-media-access-comes-at-a-cost-in-gabon" target="_blank" rel="noopener noreferrer" title="Global Voices / Restoring social media access comes at a cost in Gabon">GV #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0269" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Pope Leo draws 3-million-strong crowd at Argentina’s holiest shrine</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">More than three million people gathered around Argentina’s Basilica of Luján on Wednesday as Pope Leo visited the country’s holiest shrine, according to authorities. Some attendees climbed fences, barriers, trees and lamp posts to see the 71-year-old pontiff, while crowds chanted “Thank you, Leo!” The appearance was the final day of his visit before he traveled to Peru, where he had spent nearly two decades as a missionary. Leo’s trip is a 12-day tour of Uruguay, Argentina and Peru.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/americas/article/3374124/pope-leo-draws-3-million-strong-crowd-argentinas-holiest-shrine" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Pope Leo draws 3-million-strong crowd at Argentina’s holiest shrine">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0043" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="atlantic">
+  <summary>India: Modi Is Facing ‘A Million Mutinies’</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In India, protests have widened from youth anger over education and jobs to a movement challenging voter-roll revisions that removed 130 million names, with activists warning that electoral rights, welfare access and confidence in democracy are at stake.</p>
+<p>The fall movement followed summer demonstrations in Delhi, where tens of thousands of young people demanded the education minister’s resignation. Police used pellet guns, tear gas and batons against one march, but the protests persisted and culminated in the minister’s ouster. The demonstrations drew support from many privileged Hindu families traditionally seen as Prime Minister Narendra Modi’s constituency, while mocking government attempts to appeal to younger protesters.</p>
+<p>The newer mobilization contests a voter-roll revision announced in June 2025. The process reduced the electorate by 130 million names. Although many deletions involved deaths, relocations or duplicate registrations, the Sabar Institute reported that Muslims made up about 70 percent of 2.7 million cases deleted in West Bengal after review, while women accounted for more than half. In one constituency where Muslims were 20 percent of the population, they represented 95 percent of deletions, the institute’s co-leader said.</p>
+<p>The source reports that deleted voters in West Bengal also lost welfare entitlements, despite a Supreme Court clarification that the revision was not a citizenship test. Security forces detained thousands during flash protests, yet the movement continued, joined by opposition parties and other demonstrations over labor, displacement, caste discrimination and infrastructure projects.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/international/2026/11/modi-india-cockroach-party/689370" target="_blank" rel="noopener noreferrer" title="The Atlantic / Modi Is Facing ‘A Million Mutinies’">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0182" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="middle_east_eye">
+  <summary>Retrial of Egyptian journalist Lina Attalah adjourned amid criticism of media crackdown</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An Egyptian court has postponed journalist Lina Attalah’s retrial until 18 November while it considers the defence’s request to remove the judge, leaving her facing prison, financial penalties and the possible closure of Mada Masr, the independent outlet she edits.</p>
+<p>Attalah is charged with publishing false information and running a website without a licence. She received a one-year prison sentence in absentia in 2024 and, according to Mada Masr, learned of it on 27 October while completing release procedures after a separate ruling. The defence says it will explain why Judge Mohamed Mubarak should be removed, arguing through lawyer Hassan al-Azhari that he had prejudged the case.</p>
+<p>Attalah was fined three million Egyptian pounds (about $56,000) in the separate licensing case, while the court also ordered Mada Masr’s closure and the confiscation of its equipment. Attalah was detained after the ruling and released when the fine was paid. Her appeal is scheduled for 25 November. Mada Masr said its lawyers were denied time to examine the file, submit documents or call witnesses, while Egypt’s Supreme Judicial Council rejected claims that the proceedings had been unfair.</p>
+<p>The case before the court stems from questioning that began in November 2023 after the Supreme Council for Media Regulation filed a complaint over coverage published following the outbreak of the Gaza war. Prosecutors questioned Attalah again in February 2024 over reporting on movement through the Rafah crossing.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/mada-masr-chief-lina-attalah-trial-adjourned-egypt" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Retrial of Egyptian journalist Lina Attalah adjourned amid criticism of media crackdown">MEE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-cluster-id="cluster-0243" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>How to give county middle schools&#x27; students more and better opportunities for advancement</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China is revising its university admissions program for students from rural and underdeveloped areas, shifting eligibility toward county-school attendance and sustained family registration. The change is intended to widen advancement opportunities for county students while strengthening local schools and developing talent for rural revitalization.</p>
+<p>Four years ago, twins He Zhonghao and He Zhongjie from Tiejian Village in Guiding County, Guizhou Province, entered Sun Yat-sen University through the national special program. During their studies, one joined the “Zhongshan University Polar” icebreaker expedition and the other participated in laboratory research.</p>
+<p>The program began in 2012 under the Ministry of Education and other departments. By 2025, it had admitted 1.235 million students, according to the supplied account. The ministries of Education, Public Security, and Agriculture and Rural Affairs have now issued a notice proposing that the existing scheme become the Special Plan for University Admissions Serving Rural Revitalization.</p>
+<p>The main change is how applicants are identified. In principle, candidates must be graduating in the relevant gaokao year, have continuous household registration for themselves and a parent or legal guardian in the locality, and have attended and actually studied at a county-level general high school there. Their household registration, student status and schooling in the county must each reach at least three years by the examination year.</p>
+<p>A Ministry of Education official said the criteria move away from rural household identity and toward whether students have had equal access to education within the same county. Wu Zhiwei of Northeast Normal University said the approach could allow urban- and rural-registered students in the same county school to apply, while reducing problems caused by household-registration-only verification. Guiding High School official Li Guangzhou said the adjustment could help county schools retain strong students and improve teaching quality.</p>
+<p>The plan will have national and local implementation areas. National areas include key rural-revitalization counties and specified areas in Tibet and Xinjiang, while provinces will determine local areas according to economic and educational conditions. Xi’an Jiaotong University said its special admissions allocations would remain at least 3% for the national program and 2% for the university program, with places adjusted to applicant numbers and local needs.</p>
+<p>From 2027 to 2029, the existing rules will continue; the revised program is scheduled to operate in college entrance examinations from 2030.</p></div>
+  <div class="source-list"><a href="http://edu.people.com.cn/n1/2026/1111/c1006-40831774.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / How to give county middle schools&#x27; students more and better opportunities for advancement">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0240" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Water Law of the People&#x27;s Republic of China</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China has revised its national Water Law, with the changes adopted by the 25th meeting of the Standing Committee of the 14th National People’s Congress on November 6, 2026, and scheduled to take effect on March 22, 2027.</p>
+<p>Promulgated as Order No. 88 of President Xi Jinping, the revised law governs the protection, development, use and conservation of water resources throughout the People’s Republic of China. It covers surface water and groundwater, while seawater remains subject to other applicable laws and regulations. The law states that water resources belong to the state, with ownership exercised through the State Council. Water held in ponds and reservoirs built and managed by rural collective economic organizations is reserved for use by those organizations.</p>
+<p>The framework gives priority to conservation and requires water management to be coordinated across river basins and administrative regions. It establishes responsibilities for the State Council’s water administration department, basin agencies and local governments, while retaining a four-level river-and-lake chief system at provincial, city, county and township levels. The government is also directed to strengthen water infrastructure, monitoring, forecasting, early warning and emergency response for water-related disasters.</p>
+<p>The revised law requires national and basin-wide planning for water allocation, protection, conservation and disaster prevention. Plans must be based on scientific water-resource assessments, coordinated with economic, social and land-use planning, and supported by public participation and expert consultation. In water-scarce areas, urban expansion and water-intensive industrial, agricultural and service projects are to be restricted in line with available resources.</p>
+<p>It also provides for water-intake permits and paid use, with an exception for rural collective organizations and their members drawing water from collectively managed ponds and reservoirs. Projects that cause groundwater depletion, subsidence, declining river or lake functions, seawater intrusion or worsening water quality must undertake remediation and bear corresponding governance responsibilities.</p></div>
+  <div class="source-list"><a href="http://society.people.com.cn/n1/2026/1112/c1008-40832356.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Water Law of the People&#x27;s Republic of China">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0308" data-section="china_domestic" data-original-section="china_domestic" data-sources="xinhua_en">
+  <summary>China to build world-leading accounting system in next five years</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Ministry of Finance has released a plan for the 2026–2030 15th Five-Year Plan period to build an internationally leading accounting system with Chinese characteristics. Announced in Beijing on Nov. 11, the proposal covers seven areas, including legal frameworks, professional talent, services, supervision, digital transformation, international governance and accounting theory. It also calls for stronger monitoring of financial-fraud risks and faster resolution of existing cases, while seeking unified standards, secure operations and more efficient digital services across accounting, auditing and industry management.</p>
+<p>The plan’s objectives are framed as targets rather than completed outcomes. Ministry accounting official Lin Qiyun said the strategy would expand international cooperation, improve efficiency and encourage greater specialization in accounting services. As background, China had more than 10,000 accounting firms and over 100,000 practicing certified public accountants by the end of 2025, serving 4.2 million enterprises and public institutions annually. Ministry-led campaigns from 2023 to 2025 inspected accounting-information quality at 18,000 enterprises and conducted 7,010 practice-quality inspections of accounting firms. The accounting law was amended in 2024, while the certified-public-accountants law was amended in 2026, according to the ministry.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261111/2c7699a4d5c24e06bf7d739c289486dc/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China to build world-leading accounting system in next five years">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0154" data-section="china_domestic" data-original-section="china_domestic" data-sources="guardian">
+  <summary>BMI alternative for identifying obesity ‘could prevent misdiagnosis in millions’</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Doctors and researchers testing an alternative obesity definition say it could reduce misdiagnosis worldwide by combining BMI with waist measurements, waist-to-height ratio and organ-function tests. The approach was tested using health records from more than 800,000 people in the UK, US, China and Spain, followed for up to 15 years. The analysis suggests BMI alone misses obesity in 5% to 9% of adults and wrongly classifies as obese up to 3%, which Francisco Rubino of King’s College London said could affect tens of millions of people.</p>
+<p>Under the proposed system, people with a BMI above 40 would be considered obese, while those with lower BMIs would be assessed for excess body fat using additional measurements. It also separates “clinical” obesity, where excess fat is impairing organ function, from “pre-clinical” obesity, where it presents a risk but has not caused active disease. The approach reportedly increased overall obesity estimates only slightly, while identifying clinical obesity in about one-quarter to one-third of people classified as obese, or 5% to 10% of the wider population. Among those with pre-clinical obesity, 80% to 90% did not develop clinical obesity over the following 10 years. The system is more complex than BMI alone and remains a proposed approach for clinical use.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/society/2026/nov/11/bmi-alternative-obesity-diagnosis-body-mass-index" target="_blank" rel="noopener noreferrer" title="The Guardian / BMI alternative for identifying obesity ‘could prevent misdiagnosis in millions’">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-cluster-id="cluster-0050" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="atlantic">
+  <summary>The Christian Nationalists Have a Plan</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Joel Webbon is advancing a six-year strategy to move Christian nationalism from the far-right fringe toward control of the Republican presidential pipeline, beginning with a conference near Dallas and a planned 2028 candidacy designed to shape the 2032 race.</p>
+<p>Webbon, a Texas pastor and podcaster, says Republicans’ recent midterm defeat cleared the way for his next steps rather than damaging his movement. His company, NXR Studios, is hosting a three-day gathering outside Dallas this week, with speakers including Alex Jones and Buckley Carlson. The event reflects a broader search among far-right figures for a successor to Donald Trump, after several publicly criticized his decision to go to war in Iran.</p>
+<p>The most specific proposal is to recruit James Fishback for the 2028 Republican presidential primary. Fishback, 31, previously ran unsuccessfully for Florida governor in a campaign described as racist and antisemitic. Webbon expects Fishback to lose but wants him on the debate stage to normalize Christian-nationalist politics before 2032. Fishback has said he intends to win and has circulated a plan under which his running mate would act as president until Fishback reached the constitutional minimum age of 35 in 2030.</p>
+<p>Webbon also anticipates Republicans losing the 2028 general election, allowing Democrats to govern and, in his forecast, generating backlash that would prepare voters for a far-right presidency in 2032. He has named Nick Fuentes, Fishback and himself as possible future leaders. These are projections and political plans, not implemented changes.</p>
+<p>The proposed program would have major consequences for women, racial and religious minorities, immigrants and citizens. Webbon has advocated repealing women’s suffrage, sharply increasing deportations and limiting voting to people he considers net contributors to public funds. He has also described eligibility for belonging to the nation in ancestry-based terms. The article characterizes his rhetoric as antisemitic, racist and hostile to other groups, while Webbon denies being racist and antisemitic.</p>
+<p>His influence is difficult to measure, but the evidence identifies more than 133,000 followers on X, 189,000 YouTube subscribers and support from figures including Steve Bannon. A Georgetown scholar described him as part of a far-right faction gaining traction. The immediate test is whether his conference and organizing effort can push those ideas further into Republican politics.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/politics/2026/11/christian-nationalism-trump-elections/689373" target="_blank" rel="noopener noreferrer" title="The Atlantic / The Christian Nationalists Have a Plan">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0155" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>‘The world we know is over’ without urgent climate action, leaders tell Cop31</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Pacific island leaders at the COP31 summit in Turkey warned that failing to accelerate climate action could leave their countries facing eroding shores, destroyed public facilities and worsening ecological damage, while current policies are projected by speakers to drive warming beyond the Paris temperature threshold.</p>
+<p>Hilda Heine, president of the Marshall Islands, told fellow leaders that exceeding the 1.5C threshold would bring waves onto island shores and floods capable of destroying towns, schools and hospitals. She also described seeing bright coral around her home island turn white within months, and said the world’s future depended on an overwhelming response.</p>
+<p>Barbados Prime Minister Mia Mottley said governments had not done enough to reduce emissions since the Paris agreement. Citing UN projections, she said that delivering every existing pledge would still lead to 2.6C of warming, while current policies pointed to 2.8C. She argued that exceeding the threshold was not a new goal but accumulated “heat debt” imposed on future generations.</p>
+<p>UN Secretary-General António Guterres blamed what he called a deceitful fossil-fuel industry and countries that continue expanding production while claiming to support the 1.5C limit. He called for an extraordinary acceleration of climate action and a windfall tax on oil and gas profits to help vulnerable countries recover.</p>
+<p>The summit’s host arrangements exposed the tension between climate warnings and continued fossil-fuel development. Turkish President Recep Tayyip Erdoğan urged countries to act rather than make promises, but had celebrated the discovery of two oilfields estimated to contain 135 million barrels. Australian Prime Minister Anthony Albanese called COP31 a historic moment and governments’ response a solemn responsibility, although he was criticised for not mentioning fossil fuels; Australia is a major coal and liquefied-gas exporter.</p>
+<p>The gathering brought 91 national leaders, but the supplied account said major figures including Donald Trump and Xi Jinping were absent. It also described most countries as lagging on emissions cuts, with inadequate finance for nations exposed to extreme heat, floods and fires. The UN Environment Programme said temperature overshoot was now inevitable and should be kept as brief and limited as possible.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/2026/nov/11/the-world-we-know-is-over-marshall-islands-president-cop31" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘The world we know is over’ without urgent climate action, leaders tell Cop31">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0131" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>‘I’d steal 10-15 times a day’: ex-offenders on the addictions driving prolific shoplifting</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UK government has announced plans to target 500 prolific shoplifters in 17 areas, including restrictions on repeat offenders and electronic tagging. Former offenders in Birmingham and Wigan say drug addiction, mental-health crises and homelessness often drive repeated theft, while support helped some of them stop.</p>
+<p>The home secretary’s proposed measures include police crackdowns, bans from high streets and town centres, closer judicial monitoring and electronic tags. The plans have not yet produced an observed outcome, while former shoplifters and support organisations argue that enforcement alone will not resolve the problem.</p>
+<p>Rhys, 34, said he began stealing within a week of taking crack cocaine for the first time in 2019, using shoplifting to fund his addiction. He said he sometimes stole 10 to 15 times a day across Birmingham, was imprisoned several times and could spend hours taking goods without having enough money for food or water. He eventually stopped after receiving help from an outreach navigator who connected him with housing, healthcare and other services. He has been in recovery for 18 months and now volunteers.</p>
+<p>Keeley, 44, was once described as Birmingham’s most prolific shoplifter, taking goods worth between £5,000 and £9,000 a day and serving 28 prison sentences. She said drug dependence, including fear of withdrawal, made stealing feel unavoidable. Her recovery began after a security guard referred her to a drug-support service, where she received buprenorphine injections for opioid dependence.</p>
+<p>Other former offenders described similar cycles. Sean, who has been imprisoned 42 times since 2000, said prison did not address the addiction linked to his crimes; therapy and an addiction-recovery service met him when he left custody. He now runs a fitness programme for people recovering from addiction. Roy, who was repeatedly jailed and once stole wine while intoxicated, now mentors young men through his fitness organisation.</p>
+<p>The social justice charity Revolving Doors said addiction, poor mental health and homelessness frequently overlap among prolific shoplifters. It said retailers’ anger and abuse directed at staff were justified, but argued that stable housing and routes into recovery were needed if authorities wanted fewer thefts rather than simply more arrests.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/business/2026/nov/11/drug-addiction-shoplifting-rehabilitation" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘I’d steal 10-15 times a day’: ex-offenders on the addictions driving prolific shoplifting">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0053" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="axios">
+  <summary>Scoop: Lutnick stalled curbing Nvidia chip sales to China — again — after Oval Office showdown</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">For the third time this year, President Donald Trump reportedly approved measures targeting firms suspected of rerouting Nvidia’s most advanced AI chips to China, although the source said the controls remained unimplemented. At a Thursday Situation Room meeting, Treasury Secretary Scott Bessent confronted Commerce Secretary Howard Lutnick over resistance to controls involving Megaspeed, and the other officials sided with Bessent. Lutnick appeared to agree before saying he needed to consult Trump; officials described this as another delay after previous expected Commerce action failed to materialize.</p>
+<p>At about 5 p.m., the group went to the Oval Office, where Trump called technology adviser Elon Musk and agreed to proceed. Musk backed the case for imposing the controls, while Lutnick warned they would trigger a trade war with China. Afterward, Lutnick proposed developing options and returning later, despite what one source described as a decision already made. Kristen Eichamer, a Commerce Department spokesperson, disputed the account that Bessent confronted Lutnick and offered no immediate response to the remaining allegations. According to the report, Trump authorized steps on at least three dates—May, August and November 5—while Lutnick and Commerce Undersecretary Jeffrey Kessler pushed back against efforts to implement them.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/11/11/trump-lutnick-nvidia-china-chip-export-controls" target="_blank" rel="noopener noreferrer" title="Axios / Scoop: Lutnick stalled curbing Nvidia chip sales to China — again — after Oval Office showdown">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0086" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="cnn,el_pais,guardian,nyt,telesur_en">
+  <summary>Millions join Spain’s first general strike in 14 years in protest at housing costs</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Millions of people across Spain joined a 24-hour general strike on Wednesday, November 11, over housing costs, rents and broader living pressures; the Confederation of Tenants’ Associations said about four million had participated by midday.</p>
+<p>The walkout was backed by UGT and CCOO, Spain’s two largest unions, as well as tenants’ organizations campaigning against rising rents and evictions. It was the country’s first general strike since 2012, when workers protested austerity measures during the eurozone debt crisis.</p>
+<p>The mobilization began with tenants’ associations and expanded into a broad call over wages, housing and prices rather than a single legislative proposal or government policy. For many younger workers, it was their first opportunity to join a general strike as employees; some said that secure work still did not allow them to obtain housing without family assistance.</p>
+<p>Participation varied across Spain. Unions reported particularly strong support in automotive, port and waste-collection sectors, while schools and universities were closed or operating with minimal capacity in some areas. In Barcelona, roadblocks brought public transport close to a standstill and blocked key roads, including the AP-7 motorway.</p>
+<p>Street turnout figures were disputed. In Madrid, the government delegation estimated that more than 120,000 people joined the main march, while organizers put the figure between 600,000 and 750,000. In Barcelona, organizers claimed 400,000 participants, compared with a local police estimate of 55,000.</p>
+<p>The housing pressure behind the strike is substantial: Spain has an estimated shortfall of about 750,000 homes, projected by the central bank to exceed one million by 2028. The average rent of €1,176 was reported as equivalent to about 98.7% of a young person’s average monthly salary.</p>
+<p>The strike also carried an electoral message ahead of the November 29 election. Union leaders said the next government, regardless of its composition, would have to negotiate with workers’ organizations and address their demands.</p>
+<p>Most demonstrations proceeded peacefully, but clashes occurred in Madrid and Barcelona. El País reported police charges in Madrid and looting and attacks involving pyrotechnics in Barcelona; government officials said more than 50 people were arrested nationally over minor incidents.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/11/11/europe/spain-strike-housing-latam-intl" target="_blank" rel="noopener noreferrer" title="CNN / Millions of Spaniards stage first general strike in 14 years as anger rages over housing">CNN #1</a><a href="https://elpais.com/espana/2026-11-11/la-primera-huelga-general-de-toda-una-generacion-es-una-protesta-contra-un-problema.html" target="_blank" rel="noopener noreferrer" title="El País / The first general strike of a whole generation: &#x27;It’s a protest against a problem&#x27;">El Pais #1</a><a href="https://elpais.com/economia/2026-11-11/la-huelga-general-culmina-con-un-seguimiento-desigual-y-grandes-protestas-en-la-calle.html" target="_blank" rel="noopener noreferrer" title="El País / General strike ends with uneven participation and large street protests">El Pais #2</a><a href="https://www.theguardian.com/world/2026/nov/11/spain-general-strike-housing-costs" target="_blank" rel="noopener noreferrer" title="The Guardian / Millions join Spain’s first general strike in 14 years in protest at housing costs">Guardian #1</a><a href="https://www.nytimes.com/2026/11/11/world/europe/spain-general-strike.html" target="_blank" rel="noopener noreferrer" title="The New York Times / General Strike Ripples Across Spain Weeks Before National Elections">NYT #1</a><a href="https://www.telesurenglish.net/spain-strike-puts-housing-crisis-and-public-services-in-focus" target="_blank" rel="noopener noreferrer" title="Telesur English / Spain Strike Puts Housing Crisis and Public Services in Focus">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0268" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="scmp">
+  <summary>World leaders begin UN climate talks amid concerns action on global warming too slow</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">World leaders arrived in Turkey on Wednesday for formal UN climate discussions, seeking concrete measures to curb global warming after a year of deadly floods, heatwaves and other climate-related disasters. The 11-day COP31 conference’s achievable results remain uncertain. Previous talks have drawn criticism over promises that failed to deliver, while some prominent participants are absent this year.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/africa/article/3374065/world-leaders-begin-un-climate-talks-amid-concerns-action-global-warming-too-slow" target="_blank" rel="noopener noreferrer" title="South China Morning Post / World leaders begin UN climate talks amid concerns action on global warming too slow">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0160" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Democrats push to rein in Trump on immigration after voter backlash to ICE raids</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Democratic lawmakers in the United States are seeking immediate bipartisan immigration legislation after the midterm elections, arguing that voters reacted against the Trump administration’s enforcement campaign. Their proposals would create legal protections for some long-term undocumented residents while preserving border-security measures, but none has yet been enacted.</p>
+<p>On Wednesday, current and incoming Democrats gathered outside the US Capitol in Washington to press for changes before they assume control of both chambers next year. The group included progressive and moderate lawmakers, signaling internal unity around a more practical approach. Representative Veronica Escobar of Texas said comprehensive reform would require Republican support because Donald Trump remains president and Democrats lack a Senate supermajority.</p>
+<p>The lawmakers highlighted two existing bipartisan measures. The American Dream and Promise Act would provide routes to permanent residency for undocumented people brought to the country as children and for people with temporary protections linked to crises in their home countries. Representative Sylvia Garcia said Congress could begin work on that proposal before the new Democratic majority takes office.</p>
+<p>They also discussed the Dignity Act, a broader bill combining stricter border controls with protections for some undocumented people. It has 35 Democratic and 20 Republican sponsors, and Florida Representative Maria Salazar is its lead sponsor, although she did not attend the event. Escobar said Democrats intend to revise the measure before reintroducing it in the next legislative session.</p>
+<p>The push follows a campaign in which Trump’s mass deportation effort, expanded detention and aggressive interior enforcement became politically damaging for Republicans, according to the supplied account. The administration’s actions have also affected immigrants with existing papers or long-term legal options. Trump has made tentative statements about helping some law-abiding undocumented residents while continuing policies that point in the opposite direction.</p>
+<p>No detailed plan to abolish or substantially restructure Immigration and Customs Enforcement was presented. Democrats instead said they would pursue legislation, oversight and funding restrictions. Representative Henry Cuellar, who is expected to lead a House homeland-security appropriations subcommittee, said he was preparing limits intended to return ICE to its pre-second-term role.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/nov/11/democrats-trump-immigration-agenda" target="_blank" rel="noopener noreferrer" title="The Guardian / Democrats push to rein in Trump on immigration after voter backlash to ICE raids">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0143" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Belgian plan for ICE-style immigration raids on homes criticised as ‘law of fear’</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Belgian MPs have approved a law allowing police to enter homes without consent to remove people who lack legal status, though the measure is not due to take effect until next spring. The immigration office will be able to ask an investigating judge to authorise entry into residences, including homes where migrants are staying with friends or relatives. With a warrant, police could enter between 5am and 9pm, potentially while children are present, detain people and search for identity documents.</p>
+<p>The vote followed months of debate and more than 60 protests across Belgium, alongside criticism from NGOs, judges and lawyers’ associations. Officials say the measures target people denied asylum who have ignored orders to leave or are considered threats to public order or national security. Critics argue that “public threat” is too vague and that the legislation lacks effective appeal mechanisms; Amnesty International says judges would have limited powers to seek additional information. Carine Thibaut of Amnesty’s French-speaking Belgian section called it a “law of fear”, warning about effects on children and people hosting migrants. Rights groups and the Platform for International Cooperation on Undocumented Migrants say the law risks treating irregular immigration as delinquency and turning private homes into sites of immigration enforcement.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/11/belgium-ice-style-home-raids-immigration" target="_blank" rel="noopener noreferrer" title="The Guardian / Belgian plan for ICE-style immigration raids on homes criticised as ‘law of fear’">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0328" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="yonhap">
+  <summary>South Korea: Regulator unveils steps to boost fairness, transparency in CEO selection for bank holding firms</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Korea’s Financial Services Commission (FSC) unveiled measures on Nov. 12 aimed at making chief executive selection at bank holding companies fairer and more transparent. The proposals would require CEO recommendation committees to consist of independent outside directors and impose stricter approval thresholds for candidates. A candidate would need support from more than two-thirds of committee members, rather than the current requirement of more than half.</p>
+<p>The FSC also proposed higher hurdles for reappointing a CEO: approval from more than three-fourths of the committee, plus support from more than half of shareholders and holders of at least one-fourth of all voting shares. It said CEO evaluations should include nonfinancial factors and that companies should create a more competitive environment for candidates. These are proposed measures, not implemented changes; the FSC said it would seek to draft revisions to related laws this year.</p></div>
+  <div class="source-list"><a href="https://en.yna.co.kr/view/AEN20261112001000320" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Regulator unveils steps to boost fairness, transparency in CEO selection for bank holding firms">YNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0049" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="atlantic">
+  <summary>The Worst Thing About AI Writing</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Thélyson Orélien’s rapid rise in France’s literary scene collapsed after allegations that his novel was AI-generated and that earlier work contained plagiarism. The fallout included disqualification from the Prix Goncourt, the loss of a Quebec publisher, and an unresolved dispute over literary judgment, technology and race.</p>
+<p>Orélien’s novel, *C’était ça ou mourir*, about a Haitian teacher fleeing gang violence and traveling north toward Canada, had become a French bestseller. It won the Prix du Roman Fnac and was competing for major awards. On September 21, an anonymous X account used the AI-detection tool Pangram on several chapters; the tool claimed that all the analyzed text was AI-written. *Le Point* then reported alleged plagiarism in Orélien’s earlier work, which he later admitted to and apologized for.</p>
+<p>The Académie Goncourt disqualified him. Late the following month, his Quebec publisher announced that Orélien had used AI despite his denials and ended their relationship. Éditions Grasset, his French publisher, continued selling the book. Orélien called the backlash a “media lynching” in a recent public statement and did not respond to requests for comment.</p>
+<p>The scandal has revived comparisons with Yambo Ouologuem, whose acclaimed 1968 novel was later found to contain passages nearly identical to Graham Greene’s work, ending his publishing career. It has also exposed competing arguments: critics question AI-assisted writing and literary institutions, while supporters warn that accusations and attacks on Black writers can carry racist assumptions.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/books/2026/11/french-ai-literary-scandal-and-black-writers/689375" target="_blank" rel="noopener noreferrer" title="The Atlantic / The Worst Thing About AI Writing">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0011" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Hormuz Strait will ‘never return’ to pre-war status, Iran’s Ghalibaf says</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On November 11, 2026, Iran’s parliament speaker and top negotiator, Mohammad Bagher Ghalibaf, said the Strait of Hormuz would not return to its status before the US-Israel war on Iran. As part of Tehran’s seven-point plan to end the eight-month conflict, he said Iran and Oman had agreed on how to oversee the waterway.</p>
+<p>Ghalibaf said Tehran had conveyed seven conditions to the United States through a Qatari mediator and was awaiting an official response. The demands call for the US naval blockade and sanctions to be lifted, Iranian funds held abroad to be released, fighting to cease on every front and the war to be explicitly declared over. He said their implementation, under a June Islamabad memorandum of understanding, was required before negotiations could begin. He also maintained that the 1982 Law of the Sea convention was inapplicable to the strait, saying its rules were set by the two states along its shores. He said the United States had been asked to pursue direct talks through Russian President Vladimir Putin.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/11/11/strait-of-hormuz-will-never-return-to-pre-war-status-ghalibaf?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Hormuz Strait will ‘never return’ to pre-war status, Iran’s Ghalibaf says">AJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0073" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>United Kingdom: Some under-25s should get less benefits, Milburn review to say</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Alan Milburn’s government-commissioned review, due to be published Tuesday in the UK, is expected to propose removing under-25s from the health-related elements of Universal Credit and Personal Independence Payment. They would instead receive the basic Universal Credit rate, while some could qualify for an allowance covering additional daily costs caused by their conditions. The proposed changes would affect current and future claimants, and many would receive less financial support at the start of a claim.</p>
+<p>The plans remain recommendations, but the government is expected to develop them into legislation in the new year. Milburn is also expected to propose billions of pounds for employment support, including placements, wage subsidies and personal advisers. People with more severe disabilities who cannot work would receive a new, higher-rate benefit. The review addresses nearly one million 18- to 24-year-olds in the UK who are not in education, employment or training, according to Office for National Statistics data for April to June; that figure rose 3% from the same period a year earlier. Milburn argues the system should prioritize longer-term employment prospects, while the government says it will protect people unable to work.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cwn70l1628l0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Some under-25s should get less benefits, Milburn review to say">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0272" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="scmp">
+  <summary>Russia, Ukraine agree on prisoner exchange as talks end without major breakthrough</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Russia and Ukraine said Wednesday that they had agreed to a large prisoner-of-war exchange after two days of U.S.-mediated talks, but the delegations announced no major advance toward ending the conflict following Moscow’s full-scale invasion nearly five years ago. The meeting was the first between the delegations in nine months, and expectations for a significant result had been low. The two countries have conducted such exchanges periodically while remaining far apart in their demands.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/europe/article/3374117/russia-ukraine-agree-prisoner-exchange-talks-end-without-major-breakthrough" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Russia, Ukraine agree on prisoner exchange as talks end without major breakthrough">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0007" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="al_jazeera_en">
+  <summary>Iran designates Argentinian navy, air force as ‘terrorist organisations’</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Iran announced on Wednesday, November 11, 2026, that it would designate Argentina’s navy and air force as terrorist organisations, in a reciprocal response to Argentina’s March designation of Iran’s Islamic Revolutionary Guard Corps (IRGC). Iran’s Foreign Ministry said the measure followed the principle of reciprocity and warned that Argentina’s government would bear responsibility for any resulting consequences. The statement did not include Argentina’s army.</p>
+<p>Argentina’s Foreign Ministry rejected the designation, calling it baseless and unacceptable. The exchange follows longstanding tensions over the 1994 bombing of the AMIA Jewish community centre in Buenos Aires, which killed 85 people and injured hundreds. Argentina blames the Iran-backed group Hezbollah for the attack. On March 31, President Javier Milei’s office cited the bombing when announcing Argentina’s designation of the IRGC, saying the decision was intended to address what it described as a historic debt to victims’ families.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/11/11/iran-designates-argentinian-navy-air-force-as-terrorist?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Iran designates Argentinian navy, air force as ‘terrorist organisations’">AJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0250" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="politico">
+  <summary>Turkey-Greece maritime spat threatens to intrude on EU summit</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Greece is preparing to raise a maritime dispute with Turkey at Friday’s informal EU leaders’ meeting in Dublin, according to a senior Athens official. At issue is a 2019 Turkey-Libya accord, which eastern Libya’s rival authorities ratified on October 20 and which delineates a route across waters separating Greece and Cyprus. Athens maintains that the waters fall inside its exclusive economic zone and worries Ankara may invoke the accord against exploration south of Crete as well as the EU-backed Greece-Cyprus electricity link.</p>
+<p>The cable initiative has also suffered from the dispute, coming to a halt in 2024 during tensions involving Athens and Ankara. A French vessel sailed from Heraklion on Tuesday to resume work, while Greek Foreign Minister Giorgos Gerapetritis said Athens expects a Turkish reaction and would seek EU sanctions and support if tensions escalate. EU leaders have rejected the agreement as infringing third countries’ rights, while Turkey’s Foreign Ministry accused Brussels of adopting Greece’s and Cyprus’ positions. Egypt and several other countries have also rejected the pact.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/turkey-libya-maritime-deal-raises-greece-tensions-eu-leaders-summit" target="_blank" rel="noopener noreferrer" title="POLITICO / Turkey-Greece maritime spat threatens to intrude on EU summit">POLITICO #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-cluster-id="cluster-0319" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="xinhua_en">
+  <summary>Belt and Road links deepen as freight trains run loaded both ways</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China-Europe freight trains carried full loads in both directions during the first 10 months of 2026, with return services slightly ahead of outbound trips, officials said in Beijing on Nov. 11. The service operated 18,661 trains and moved 1.865 million TEUs, increases of 14.6% and 11.2% respectively from the same period a year earlier. Return trains numbered 9,360, compared with 9,301 outbound, while the container-loading rate remained at 100% for 50 consecutive months through October, according to National Development and Reform Commission official Liang Linchong.</p>
+<p>The transport network also expanded: the trans-Caspian route now runs daily, while northern, central and southern routes were described as stable. Beyond rail, air connections serve 159 cities in 66 Belt and Road partner countries, and a canal opened this year provides China’s southwestern inland regions with a direct sea route. Official data showed China’s imports from partner countries rose 17.9% in the first three quarters, 1.3 percentage points faster than its exports to them. Liang said the next phase would prioritize more efficient transport, safety governance, diversified routes and innovation.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261111/dc9aae3fa4d2404f8b36e6080232fd52/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / Belt and Road links deepen as freight trains run loaded both ways">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0293" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="straits_times">
+  <summary>Australian companies face ‘AI washing’ claims after wave of job cuts, offshoring</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Australia, blue-chip companies are increasingly linking job cuts to artificial intelligence while moving work offshore. On Nov. 10, Qantas announced plans to eliminate 850 jobs and outsource some corporate functions overseas through an overhaul with Accenture. WiseTech and Atlassian have also attributed job losses this year to AI, while Telstra cut positions connected to an AI venture with Accenture, with some work moved to India. Other companies have reduced domestic headcounts while expanding in India, the Philippines and Vietnam without explicitly citing AI.</p>
+<p>Unions argue that Australian workers are being replaced by lower-paid offshore employees, raising allegations of “AI washing”—presenting conventional cost-cutting or outsourcing as technology-driven restructuring. The Australian Services Union accused Qantas of using AI to disguise cuts, while ACTU secretary Melissa Donnelly called for transparency and consultation. Qantas said it would continue discussions with unions and support redeployment for affected staff. University of Sydney professor Uri Gal said the airline’s plan appeared primarily to involve conventional outsourcing, with AI used to justify the restructuring. The Reserve Bank of Australia said AI had not yet caused widespread job losses, although it noted early adjustments in AI-exposed occupations.</p></div>
+  <div class="source-list"><a href="https://www.straitstimes.com/asia/australianz/australian-companies-face-ai-washing-claims-after-wave-of-job-cuts-offshoring" target="_blank" rel="noopener noreferrer" title="The Straits Times / Australian companies face ‘AI washing’ claims after wave of job cuts, offshoring">TST #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0188" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="middle_east_eye">
+  <summary>HSBC &#x27;sharia-compliant&#x27; fund to exclude arms companies after Israeli-linked revenue exposed</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UK’s largest sharia-compliant fund is set to remove defence and weapons companies after its benchmark changed its screening rules. The S&amp;P Global 1200 Shariah Select Index updated its methodology in early November and is due to implement the changes on 23 November. Because HSBC’s Islamic Global Equity Index Fund passively tracks the index, it is expected to divest from RTX, Rolls-Royce, Honeywell International, BAE Systems and Palantir. The revised criteria exclude companies earning more than 5 percent of revenue from military contracting and several weapons-related sectors.</p>
+<p>The change follows Middle East Eye’s reporting that the fund bought more than $100 million in shares linked to the Israeli military during the first half of 2026, including $35.7 million in RTX, $18.9 million in Honeywell and $17.6 million in Rolls-Royce. The fund also held about $9.4 million in BAE Systems and reportedly purchased $38.3 million in Palantir. MEE linked these companies to military equipment or services used by Israel; some descriptions were attributed to the Campaign Against Arms Trade or other reporting. The fund is overseen by Islamic scholars, and HSBC said it would review concerns about the Palantir holding.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/hsbc-sharia-compliant-fund-exclude-arms-companies-after-spending-100m-israeli-military-linked" target="_blank" rel="noopener noreferrer" title="Middle East Eye / HSBC &#x27;sharia-compliant&#x27; fund to exclude arms companies after Israeli-linked revenue exposed">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0061" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="bbc,guardian">
+  <summary>Poundland set for more time to secure a rescue deal as emergency talks continue</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Poundland is seeking extra time to secure a buyer and avoid administration, with its owner releasing £10m to keep the UK and Ireland discount chain stocked and trading. The outcome could affect thousands of employees, suppliers and high-street stores as emergency talks continue before legal protection expires.</p>
+<p>Poundland’s directors are due to ask the High Court on Thursday for a further period of protection from creditors—described as up to two weeks, or 10 working days. The existing moratorium is due to expire then, while a deadline for finding a buyer is also approaching. Without an extension, administrators from AlixPartners are prepared to step in.</p>
+<p>Gordon Brothers, Poundland’s US owner, has told MPs it supports extending the deadline and has released £10m for new stock and continued trading. The move follows reports that about £50m had been frozen, leaving the retailer unable to restock some of its 600 stores and limiting cash available for wages and rent.</p>
+<p>The Commons business committee has questioned Gordon Brothers over allegations that it extracted millions from Poundland and restricted access to funds while the business was struggling. Committee chair Liam Byrne said the conduct may have put thousands of jobs at risk. Gordon Brothers has denied the claims and says Poundland remains vulnerable to a future downturn.</p>
+<p>The owner is discussing bids for the whole chain, including a management-backed proposal, but has indicated that selling stores and stock piecemeal could raise more.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c3702jjkez4ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Poundland set for more time to secure a rescue deal as emergency talks continue">BBC #1</a><a href="https://www.theguardian.com/business/2026/nov/11/poundland-owner-chain-mps-claim-high-court" target="_blank" rel="noopener noreferrer" title="The Guardian / Poundland owner extracted millions when chain was on ‘knife-edge’, MPs say">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0046" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="atlantic">
+  <summary>The Perverse Reason Health-Care Costs Are About to Surge</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In the United States, employer health-insurance costs are projected to rise by as much as 11% in 2027, affecting coverage for 160 million people. Employees may face higher premiums and out-of-pocket costs, while employers could reduce benefits, raises, or hiring.</p>
+<p>The projected increase would be roughly twice the average annual rise of the past decade, after employer-sponsored insurance costs already climbed 50% over ten years. A 2026 KFF survey put the average yearly cost of family coverage at about $28,300, with employees paying approximately $7,400.</p>
+<p>Three newer pressures are expected to add to underlying costs. GLP-1 weight-loss drugs could account for up to a quarter of the increase, with annual per-patient costs estimated at $7,000-$9,000 after discounts. AI systems that document visits and identify higher-complexity billing opportunities could account for another quarter, according to projections from Marsh and the Business Group on Health.</p>
+<p>The largest factor is linked to the No Surprises Act, which took effect in 2022 to protect patients from unexpected out-of-network bills. Providers and insurers now use independent dispute resolution when they cannot agree on payment. Instead of the roughly 17,000 annual cases initially anticipated, providers filed 2.6 million disputes in 2025, and the volume was 50% higher in the first half of 2026 than a year earlier.</p>
+<p>Providers won about 85% of submitted disputes in 2025, with median awards exceeding four times typical in-network costs.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/economy/2026/11/affordability-crisis-health-care-insurance/689365" target="_blank" rel="noopener noreferrer" title="The Atlantic / The Perverse Reason Health-Care Costs Are About to Surge">TA #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-cluster-id="cluster-0054" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="axios">
+  <summary>The AI industry&#x27;s week from hell</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Anthropic announced plans Tuesday to raise up to $64.4 billion through an initial public offering targeting a valuation of as much as $1.4 trillion. Axios reported that the target was about $600 billion below what investors had anticipated months earlier, as slower revenue growth, rising infrastructure costs and a market selloff weighed on expectations. By October, the company’s revenue on an annualized basis stood at $81 billion, while obligations for chips, data centers and computing infrastructure were nearing $901 billion. The offering remains planned, not completed.</p>
+<p>The proposed IPO follows a week of broader pressure on the AI industry. Across local ballots, 40 of 41 measures backed curbs on data-center construction; AI-skeptical Democrats are projected to join Congress and prioritize probes into safety and political influence. Axios said an espionage scandal engulfed Nvidia CEO Jensen Huang after he acknowledged an affair with someone described as a suspected Chinese spy; investigations by the board, FBI and Congress are underway. Nvidia’s market capitalization dropped by more than $1 trillion following earlier revelations, while the Nasdaq lost $2.5 trillion during a single session. SoftBank disclosed a $3.7 billion write-down on U.S. data-center equipment as OpenAI curtailed its plans to raise money.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/11/11/anthropic-ipo-ai-nvidia-midterms" target="_blank" rel="noopener noreferrer" title="Axios / The AI industry&#x27;s week from hell">Axios #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-cluster-id="cluster-0187" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="middle_east_eye">
+  <summary>In post-Assad Syria, 3D printing offers hope to a generation of child amputees</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">material_harm</span><span class="badge">technology_and_ai_society</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Syria, a Jordan-based nonprofit is using 3D printing and phone-based scans to provide custom prosthetic limbs to child amputees, including an 18-year-old injured by a landmine near Daraa. The service is restoring mobility for some patients, but more than 1,300 Syrian children remain on its waiting list.</p>
+<p>The nonprofit 3DP4ME fitted Ibrahim with prostheses after both legs were amputated above the knees following the blast. His mother said the family had spent more than $30,000 on treatment and could not have afforded custom limbs. After receiving them, Ibrahim was able to move independently and use the bathroom without assistance.</p>
+<p>The need extends beyond individual cases. The World Health Organization estimates that 86,000 people in Syria have undergone amputations over the past 15 years, with children accounting for nearly 30 percent. Shortages of prosthetics specialists, manufacturing supplies and affordable healthcare have made rehabilitation difficult; the source says 90 percent of the population lives below the poverty line.</p>
+<p>3DP4ME has worked with 56 children in Syria, fitting 21 with prostheses in September. Children require repeated adjustments as they grow. At Ibn al-Nafees Hospital in Damascus, patients include Younis, a 15-year-old who lost a leg near Homs, and Tasneem, who lost hers as a toddler in an air strike on Deir ez-Zor. The organization plans to expand its work with The Halo Trust, but its founder said the current effort reaches only a small part of the need.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/post-assad-syria-3d-printing-offers-hope-generation-child-amputees" target="_blank" rel="noopener noreferrer" title="Middle East Eye / In post-Assad Syria, 3D printing offers hope to a generation of child amputees">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0175" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="la_jornada">
+  <summary>There are 363 influenza cases and 2 deaths; CDMX higher in COVID-19</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mexico’s Health Secretariat reports 363 laboratory-confirmed seasonal influenza cases and two deaths during the current season of increased respiratory disease. Its latest epidemiological update also records 3,050 SARS-CoV-2 infections and 120 deaths so far this year. The figures cover influenza, COVID-19 and other respiratory viruses, with Mexico City identified in the headline as having the highest COVID-19 figures.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/11/11/politica/010n2pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / There are 363 influenza cases and 2 deaths; CDMX higher in COVID-19">LJ #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-cluster-id="cluster-0037" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Tree-Ising: Repairing Language Models with Bit-Level Ising Edits</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint proposes Tree-Ising, a bit-level method for repairing language-model weights without gradients or an LLM agent. On reported tests, it reduced a looping failure in Qwen3.5 models, improved benchmark accuracy, and cut the computational cost of the repair, though the results have not been peer reviewed.</p>
+<p>Tree-Ising addresses a failure in Qwen3.5-0.8B’s thinking mode, where the model repeatedly generates short text cycles instead of reaching an answer. The researchers report that 93% of MATH-500 problems reached the 32,768-token cap in this state, leaving the base model with 7.9% accuracy. A previous agent-based approach used GPT-6 Astra to inspect the weights, run 50 forward-pass requests and rewrite columns in layers 15 and 19. That edit raised reported MATH-500 accuracy to 48.1% in the earlier demonstration and to 51.7% under the comparison protocol used here.</p>
+<p>Tree-Ising formulates the repair as a sparse, discrete optimization task involving the model’s native BF16 weights. It uses forward-pass statistics to identify directions associated with looping and successful conclusions, then selects edits that weaken the former, preserve productive outputs and limit the number of changed weights. In its state-tree representation, the allowed changes are sign flips and exponent shifts for individual weights while preserving shared group exponents and mantissas. The resulting objective is decomposed into one quadratic unconstrained binary optimization (QUBO) problem per output row, which the researchers solve using GPU simulated annealing or simulated bifurcation.</p>
+<p>On the two layers targeted by the earlier agent, the preprint reports 54.6% MATH-500 accuracy for Tree-Ising, versus 51.7% for the agent edit and 7.9% for the base model under the stated evaluation. Simulated bifurcation produced a statistically indistinguishable 55.1% result. The authors say that, on five math benchmarks, Tree-Ising surpassed the agent edit, with 13% fewer modified weights and 2.2- to 2.3-fold fewer BF16 bit flips. The reported repair required four forward-pass requests, no LLM tokens, about 31 minutes and approximately $0.90 in GPU time, compared with 50 requests, 15.6 hours and $312 for the agent’s discovery run.</p>
+<p>The cost comparison has a defined limitation: for Qwen3.5-0.8B, Tree-Ising reuses the agent’s selected layers and calibrates its edit dose from that earlier work, whereas the agent had to discover the failure and target layers. Using only information from the base model, Tree-Ising raised greedy GSM8K accuracy on Qwen3.5-2B from 21.6% to 69.4%, the authors report. The findings come from the version posted to arXiv on 10 November 2026 and remain preliminary.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.14210v1" target="_blank" rel="noopener noreferrer" title="arXiv / Tree-Ising: Repairing Language Models with Bit-Level Ising Edits">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0029" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Few-Step Streaming Video Generation via Condition Shifting</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A research team from Tsinghua University, Shengshu Technology and Westlake University has proposed a method for generating long streaming videos with fewer model evaluations, aiming to reduce training costs while preserving instruction following, visual quality and continuity across 180-second sequences.</p>
+<p>An arXiv preprint released on 10 November 2026 applies APEX’s method of altering the conditioning signal to streaming video. Few-step generation is useful for streaming systems because each new video block otherwise requires repeated diffusion or flow-model evaluations. The challenge is to reduce those evaluations without losing characters, scenes, motion or responsiveness to changing instructions.</p>
+<p>The team replaces the separate fake-score network used by Distribution Matching Distillation (DMD) with an estimator inside the generator itself. The normal text condition selects video generation; a shifted version of that condition makes the same parameter set estimate the distribution of generated outputs. A frozen reference teacher still supplies guidance, while the method retains S2-Avatar’s Self-Replay Forcing and perceptual regularization. Self-Replay Forcing trains on segments replayed from the model’s own causal video history, allowing the approach to account for dependencies between successive blocks.</p>
+<p>For 180-second videos, the evaluation used three backbone function evaluations for each block, followed by a shared spatial Refiner operating in one step. Their tests covered all 320 scenarios in StreamAV-Bench and a human study of 70 paired comparisons against S2-Avatar. On the Progressive benchmark track, APEX scored 3.856 for video instruction fulfillment, compared with 3.831 for S2-Avatar. Its visual-aesthetics score across the reported tracks was 0.641898, versus 0.632606.</p>
+<p>Human raters gave APEX a net preference of 30% for instruction following, while consistency and overall video quality each received a 4.3% net preference. S2-Avatar was preferred for motion quality; audiovisual synchronization was mostly judged a tie, and usability did not change. With training settings held constant, the authors measured 4.4% less peak GPU memory allocated per GPU and a 9.2% reduction in mean iteration time relative to DMD.</p>
+<p>The work is an arXiv preprint and has not been peer reviewed, so the reported comparisons remain the authors’ evaluation rather than established consensus.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.14033v1" target="_blank" rel="noopener noreferrer" title="arXiv / Few-Step Streaming Video Generation via Condition Shifting">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0034" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Don&#x27;t Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">LLM agents can improve by consulting lessons from earlier tasks, but those lessons can also make them fail tasks they would otherwise solve. A preprint from KAIST and DeepAuto.ai proposes linking each lesson to the evidence behind it, aiming to reduce those memory-driven errors.</p>
+<p>The paper, posted to arXiv on November 10, 2026, identifies this problem as “memory-induced degradation.” External memory usually compresses earlier task trajectories—sequences of actions and observations—into short guidance. But a success or failure label does not show which individual actions caused the outcome. A lesson may therefore be wrong, applied outside its intended scope, or misunderstood. Because existing systems commonly provide the lesson without its originating trajectory, the agent has little ability to check it.</p>
+<p>The authors introduce WikiTrace, a memory system that preserves those connections. Each concise insight is linked first to a summary explaining the earlier run and then to the unmodified trajectory itself. When an insight is incomplete, conflicts with another, comes from a failed task, or leads to an unsuccessful action, the agent can navigate through these links and inspect the underlying observations before deciding what to do. The system keeps lessons from successful and failed runs, so the source evidence can also expose a misleading rule.</p>
+<p>In the paper’s analysis, 52% of failures on tasks that the agent repeatedly solved without memory were traced to a memory item it followed. The researchers say the result came from an analysis using an LLM judge, and they report that the most common category was an incorrect memory item. They distinguish this degradation from “Gain”—cases where memory turns a failure into a success—because average accuracy alone does not show whether memory helps while damaging previously reliable performance.</p>
+<p>WikiTrace was evaluated across eight suites drawn from five agentic benchmarks, including simulated text worlds and tool-use environments. The authors report that it achieved the best result on every suite: an average score of 90.2%, compared with 79.5% without memory and 87.0% for a baseline given the same insights without their linked evidence. They also report that the average Regression rate fell from 6.5% to 4.5%, while performance improved by 10.7 percentage points over the no-memory agent.</p>
+<p>These are results reported in a preprint, not a peer-reviewed study. The authors have released code for WikiTrace, and say the improvements also held when they used another model backbone.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.14320v1" target="_blank" rel="noopener noreferrer" title="arXiv / Don&#x27;t Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0035" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>dNaViT: Discrete Codes are General-Purpose Visual Representations</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">dNaViT, a preprint posted on arXiv on 9 November 2026, proposes a shared discrete code system for images that supports reconstruction, visual understanding, generation and editing. Its authors report competitive results across multiple benchmarks, aiming to bring vision closer to language-model-style token prediction.</p>
+<p>The system, described as a Discrete Native-resolution Vision Transformer, converts arbitrary-resolution images into sequences of discrete visual primitives. It starts with a frozen pretrained vision encoder, then adds a lightweight Residual Modulator that combines information from different encoder depths. This is intended to preserve semantic features while restoring fine visual detail that ordinary semantic representations may discard.</p>
+<p>The enriched features are compressed with grouped product quantization. Rather than using one very large codebook, dNaViT divides each feature into channel groups and assigns each group its own codebook. This increases the number of possible code combinations without increasing the spatial sequence length. Two reconstruction branches then train the shared codes: one aligns them with semantic features, while the other reconstructs pixels. Progressive training is used to balance these objectives.</p>
+<p>The authors report that the resulting tokenizer can feed a common representation into several downstream systems. At a spatial downsampling factor of 32, it achieves 28.12 dB PSNR and 0.81 SSIM when reconstructing 512-by-512 images. Paired with Qwen3-8B, it reportedly scores 885 on OCRBench and rivals Qwen3-VL-8B on selected document and reasoning evaluations. For generation and editing, the paper reports scores of 49.5 on GenEval2 and 52.2 on Qwen-Image-Bench, while also highlighting bilingual text rendering.</p>
+<p>Across 12 visual-understanding benchmarks, four generation benchmarks and one image-editing benchmark, the authors say dNaViT matches or exceeds specialized baselines, using a substantially smaller training-data budget than the compared models. They interpret these results as evidence that discrete visual codes are not inherently too restrictive, provided the representation and quantization process preserve both meaning and detail.</p>
+<p>These findings remain claims from the arXiv version 1 preprint rather than peer-reviewed results. The paper presents dNaViT as an extension of preliminary work in LongCat-Next and argues that a shared visual vocabulary could provide a common interface for language-aligned multimodal modeling.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.12426v1" target="_blank" rel="noopener noreferrer" title="arXiv / dNaViT: Discrete Codes are General-Purpose Visual Representations">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0028" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>MMDM: Measuring Massive Multitask Decision Making</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A new benchmark tests whether single-pass decision models can choose, rank and score options in realistic settings involving long contexts, large choice sets and interacting constraints. Its evaluation suggests that models strong on general knowledge often struggle when decisions require complete, jointly consistent selections.</p>
+<p>The preprint, released on arXiv on 10 November 2026, introduces MMDM, or Massive Multitask Decision Making. The benchmark contains 5,448 questions across 16 categories, covering situations such as tracking an agent’s state, selecting tools or skills, judging preferences and assigning rubric scores. It combines newly created questions with source-grounded rewrites and recomposed tasks intended to test decisions in fresh contexts rather than relying only on familiar public benchmarks.</p>
+<p>MMDM evaluates three forms of output: hard single-select questions with one correct option, hard multi-select questions requiring the complete set of valid options, and soft-label questions in which the model must match a probability distribution. The benchmark includes between two and 1,024 options per question, with 94 questions exceeding 255 options. Complete inputs range from short prompts to 64,817 tokens, measured with the Qwen3.5-4B tokenizer.</p>
+<p>The authors evaluated 28 decision models using accuracy for hard answers and distribution-based measures for soft predictions. They report a sharp gap between general knowledge and more structured decision tasks. On world-knowledge items, Perplexity Decider-V1.2 recorded 78.75% accuracy for hard single-select questions; its scores dropped to 53.95% for option logic and 47.95% for constraint planning. Across all evaluated models, the highest hard multi-select accuracy was 36.81%, indicating difficulty identifying every valid choice rather than just one plausible option. The strongest hard single-select result reported was 76.00%, achieved by WeMM-JEV 27B.</p>
+<p>The benchmark was assembled from public datasets and agent trajectories, alongside recomposed and newly constructed tasks. The authors describe answer checks using source evidence, executable verification and model review, followed by human expert review of borderline cases. The authors describe MMDM as a way to assess coordinated inference, choices governed by restrictions and identification of the full valid answer set, arguing that many established evaluations do not sufficiently measure those skills.</p>
+<p>This account comes from a preprint and represents the authors’ reported benchmark design and results; it has not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.14309v1" target="_blank" rel="noopener noreferrer" title="arXiv / MMDM: Measuring Massive Multitask Decision Making">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0032" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">DexForesight is a preprint framework for dexterous robot control that trains policies to anticipate changes involving the hand and its surroundings, then deploys them using RGB images, language and robot state; neither online depth reconstruction nor explicit future-output generation is required.</p>
+<p>The work targets a limitation of relying only on present-scene recognition: manipulation can require coordinated finger movements around objects, even when cameras cannot see some fingers. The researchers propose transferring predictive spatial information into a policy’s internal representations rather than requiring the policy to generate future images or states at every control step.</p>
+<p>During training, an action-conditioned spatial world model uses offline scene depth, robot kinematics and demonstration trajectories. It learns to predict both the motion of persistent 3D points attached to the robot hand and changes in visual features of the scene. The hand representation is intended to include fingers occluded in camera views, while the visual objective captures how the observed environment changes under demonstrated actions.</p>
+<p>The researchers then freeze this world model and align its predictive query features with queries inside the dexterous policy. These aligned features condition action generation, transferring information about hand and scene dynamics into the policy’s latent space. The world model is not retained for deployment: the resulting policy uses current RGB observations, language instructions and robot state, without depth input, online depth estimation or explicit future decoding.</p>
+<p>Its corpus contains demonstrations totaling approximately 370 hours from 60 tasks, organized into five categories: spatial arrangement; assembly and contact; rotation and articulation; deformable objects; and tool use. For the real-robot setting, depth was estimated offline from stereo demonstrations for a 100-hour subset. Evaluation covered 11 DexJoCo tasks in simulation, while physical-robot testing comprised Close Box, Insert Battery and Screw On Lid.</p>
+<p>The authors report that DexForesight raised the base policy’s overall simulation success rate from 49.4% to 60.5%. Its real-robot success rate was 58.3%, exceeding the strongest baseline’s 50.0% result. These are results reported by the researchers in the preprint, not independently established findings.</p>
+<p>The underlying research was posted on arXiv on November 8, 2026, and the cited version was updated on November 10; it was featured by Hugging Face on November 11. The document is a preprint and has not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.11166v2" target="_blank" rel="noopener noreferrer" title="arXiv / DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0022" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>MACaQ: Fast, Model Agnostic Calibrated Quantization for Low-Precision Weights and Activations</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">MACaQ is a proposed post-training quantization method for reducing neural-network weights and activations to MXFP4 W4A4 precision. Its layer-local design aims to lower memory and compute requirements while preserving model quality, shortening calibration time, and supporting models with different architectures.</p>
+<p>The preprint, dated 7 November 2026, addresses a common trade-off in low-precision inference. Existing quantization methods can require expensive optimization and may propagate basis transformations across neighboring layers, creating architecture-specific dependencies. MACaQ instead calibrates each linear layer independently. It applies per-channel scaling and a block-Hadamard rotation to activations during inference, while incorporating the corresponding inverse transformations into the weights during quantization. This keeps the transformations local to each layer and allows layers to be loaded and processed one at a time.</p>
+<p>The method combines four steps: channel balancing, block-Hadamard rotation, Hessian-weighted selection of MXFP4 block exponents, and “Flip-Refinement.” The latter is a Hessian-aware coordinate-descent procedure that improves an initial round-to-nearest assignment by moving individual four-bit codes to adjacent representable values when that reduces the estimated layer-output error. The paper describes MXFP4 blocks of 32 elements, with a shared exponent scale and individual FP4 codes.</p>
+<p>The reported evaluations suggest a speed-quality trade-off over the authors’ comparison methods. On Llama-3-8B, MACaQ matched the best perplexity reported for DuQuant++ and MR-GPTQ while using 11 times less quantization time; the authors also report lower perplexity than those methods in other comparisons. In vLLM, MACaQ added 2.3% end-to-end decoding overhead over pure MXFP4 on Qwen3-32B, while its kernels delivered up to three times the end-to-end speed of FP16. The paper also applies the same method without architecture-specific modifications to an image diffusion model and reports quantizing a 122-billion-parameter model in 64 minutes using 32.5GB of GPU memory.</p>
+<p>These results are claims from an arXiv preprint and have not been peer reviewed. The evidence supplied describes the method and reported benchmarks but does not establish independent validation or performance across a wider range of models and deployments.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.10649v1" target="_blank" rel="noopener noreferrer" title="arXiv / MACaQ: Fast, Model Agnostic Calibrated Quantization for Low-Precision Weights and Activations">arXiv #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-cluster-id="cluster-0256" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover why some mosquitoes love you and others don&#x27;t</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Florida International University researchers reported on November 10, 2026, that mosquito attraction varies by species rather than following a single human “magnet” profile. In a study published in *iScience*, they tested three disease-carrying species—*Aedes aegypti*, *Aedes albopictus* (Asian tiger mosquito) and *Culex quinquefasciatus*—against 119 human volunteers. No participant attracted all three species, and each mosquito favored a different subset of people based largely on skin odors, chemical compounds and microbial signals.</p>
+<p>The species showed distinct patterns. *Aedes aegypti* tended to favor people without added fragrances and with lower levels of some volatile compounds, while *Aedes albopictus* was more attracted to higher levels of ketones and plant-like volatiles. The nighttime-feeding *Culex quinquefasciatus* appeared especially responsive to the skin microbiome, with some bacterial families associated with greater attraction and others with less. The researchers linked these preferences to samples of body odor and skin microorganisms. They said identifying compounds and microbes that attract or deter particular species could eventually support more targeted repellents and disease-prevention strategies.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261106174541.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover why some mosquitoes love you and others don&#x27;t">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0261" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>A radical theory says the universe is twice as old as we thought</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A University of Ottawa cosmological model proposes that the Universe may be 26.7 billion years old rather than the widely accepted 13.8 billion, while explaining observations usually attributed to dark matter and dark energy through changing physical constants.</p>
+<p>Rajendra Gupta, an adjunct professor of physics, and postdoctoral researcher Nikolaos Samaras evaluated the framework, called CCC+TL, during 2025 and 2026. CCC+TL is short for a framework involving covarying coupling constants and tired light. The researchers propose that changes over time in fundamental constants could produce effects currently attributed to dark matter and dark energy.</p>
+<p>Their model modifies the Einstein and Friedmann equations governing gravity and cosmic expansion. They developed equations and computer programs adapted to CCC+TL for different tests, then compared its predictions with several astronomical observations. The reported results included matching calculations for the light elements formed shortly after the Big Bang and agreement with cosmic-chronometer measurements used to reconstruct the history of cosmic expansion.</p>
+<p>The team also tested galaxy rotation. Using the SPARC database’s full sample of 175 galaxies, the researchers said their model reproduced the measured rotation curves without introducing dark matter. Their treatment of the Bullet Cluster likewise predicted that the extra gravitational effect would follow the galaxies rather than the hot gas, although they described this as an initial proof of concept requiring more investigation.</p>
+<p>Additional support came from an analysis of supernova time dilation, but the relevant paper remains under review. The researchers also say the model addresses unexpectedly large and mature galaxies observed at very early cosmic times. Under standard cosmology, the Universe was about 300 million years old during cosmic dawn; at the same observed redshift, CCC+TL would place it at roughly 4.6 billion years. The model therefore gives early galaxies substantially more time to grow and predicts that they would be about 12 times larger and more massive than standard calculations suggest.</p>
+<p>That forecast could be examined through future observations. Through its GLIMPSE program, the James Webb Space Telescope is expected to look for galaxies with redshifts exceeding 50. Finding large galaxies at such distances would offer a comparison between the competing models, although the source notes that such a discovery alone would not establish CCC+TL.</p>
+<p>The proposal remains unconventional rather than an established replacement for the standard ΛCDM model. The researchers report success across several tests, but a cosmic-microwave-background challenge is described as not yet published, and further independent examination is needed. ΛCDM still accounts for many astronomical observations, meaning CCC+TL would have to achieve at least comparable results to replace it.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261108233040.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A radical theory says the universe is twice as old as we thought">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0255" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>The mystery of how hair knows where to grow may finally be solved</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">attributed source material (republished)</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the University of Geneva (UNIGE) report that hair-follicle patterns in mammals may emerge from simple interactions between moving cells and chemical signals, rather than from a detailed developmental blueprint. In findings described as published in *PNAS* and publicized on November 11, 2026, the team used a mathematical model to simulate embryonic skin development. The model reproduced the sequence of follicle formation in laboratory mice and the strongly aligned pattern of the spiny mouse (*Acomys dimidiatus*).</p>
+<p>The proposed mechanism involves dermal cells moving toward chemical signals released by the epidermis, a process known as chemotaxis. By varying cellular interactions, chemical properties and skin growth, the same basic process generated the different arrangements seen in the two species. This challenges the expansion-induction model traditionally used to explain mouse follicle formation, in which existing placodes chemically prevent nearby new ones from developing. The researchers say their results support a broader possibility: diverse structures such as hair, feathers and scales may arise through self-organization from shared cellular rules, with species-specific patterns produced by changes in those interactions.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261109205413.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / The mystery of how hair knows where to grow may finally be solved">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0260" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>237-million-year-old fossils reveal a bizarre armored sea amphibian</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two exceptionally well-preserved fossils from China indicate that a giant-salamander-sized amphibian lived entirely in the sea nearly 237 million years ago, raising new questions about how an animal with permeable amphibian skin could survive saltwater for its whole life.</p>
+<p>The animal, named *Gerrothorax maritimus*, lived during the Late Triassic period. The fossils were found in Guizhou Province, in deposits formed beneath an ancient ocean far from major landmasses. An international team from the University of California, Davis, Peking University and the Geological Museum of Guizhou studied the remains; their findings were published in *Nature Ecology &amp; Evolution*.</p>
+<p>The skeletons show a broad, flattened animal nearly three feet long. Unlike the elongated shape of modern salamanders, *G. maritimus* had a chunky, disc-like body covered by thick bony armor. Researchers believe the armor may have protected it from large marine predators, including ichthyosaurs. Its skull and body plan suggest a seafloor ambush predator that waited for prey and pulled it in with suction rather than pursuing it.</p>
+<p>The proposed marine lifestyle is significant because living amphibians are highly vulnerable to saltwater. Their permeable skin allows water and gases to pass through, supporting respiration and water intake but also exposing them to harmful salt concentrations. Among more than 8,000 living amphibian species, none is known to spend its entire life in the sea, and fewer than 2% can tolerate saltwater to any substantial degree.</p>
+<p>The researchers suggest that *G. maritimus* may have overcome this limitation through a combination of adaptations. Its extensive armor could have restricted water movement through the skin, reducing its dependence on skin-based water absorption. It may instead have taken in seawater through its mouth, while gills helped remove excess salt. The study presents this as a possible explanation rather than a directly observed behavior.</p>
+<p>Several lines of fossil evidence support a fully marine existence. The skeletons came from deep-marine sediments and retained delicate structures, including the fingers. That completeness suggests the bodies were not transported far after death. Chemical analysis of strontium isotopes in the fossils also produced signatures consistent with Late Triassic ocean water. Together, the geological setting, preservation and chemistry led the researchers to identify *G. maritimus* as the first known amphibian to appear fully adapted to life at sea.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261109205409.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / 237-million-year-old fossils reveal a bizarre armored sea amphibian">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0262" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>NASA reveals Earth&#x27;s ozone hole has grown to a size not seen in a decade</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">attributed source material (republished)</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In 2026, Antarctica’s ozone hole reached its largest extent in a decade, covering an average of 9.6 million square miles at its seasonal peak. The expansion was driven by unusual atmospheric conditions, although longer-term recovery of the protective ozone layer continued.</p>
+<p>The hole ranked seventh-largest across 48 years of observations. Between September 7 and October 13, its average area was about 25 million square kilometers—more than twice the area of the United States. It reached a maximum of 10.5 million square miles on September 18, roughly 90% of the record set in 2000.</p>
+<p>NASA and NOAA scientists attributed the unusually broad depletion mainly to a powerful polar vortex, the ring of winds that forms around Antarctica. Weather systems that normally disrupt the vortex were weaker than usual in August and September, allowing cold conditions favorable to ozone-destroying chemical reactions to persist across a wider region.</p>
+<p>The large geographic area did not correspond to the most severe ozone loss ever recorded. NOAA measurements from balloon instruments and a Dobson spectrophotometer found that ozone above the South Pole fell to 105 Dobson units on October 17; the lowest recorded there was 92 units in 2006. Satellite observations from NASA and NOAA missions also contributed to the assessment.</p>
+<p>Ozone in the stratosphere helps reduce exposure to harmful solar radiation. Scientists said the 2026 result also showed the continuing effect of international controls on ozone-depleting substances. Chlorine linked to those chemicals in the Antarctic stratosphere has fallen by about one-third from its peak, according to NOAA scientist Stephen Montzka. Without those reductions, the affected area could have been 1 to 2 million square miles larger.</p>
+<p>Despite seasonal fluctuations, scientists expect Antarctic ozone recovery to continue, with the hole projected to recover by the 2070s.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261110042546.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / NASA reveals Earth&#x27;s ozone hole has grown to a size not seen in a decade">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0259" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists find deadly virus DNA hidden in 1,000-year-old manuscripts</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An international team led by University College Dublin has reported recovering sheeppox-virus DNA from medieval parchment and Bronze Age sheep teeth, extending the documented history of a contagious livestock disease beyond 3,700 years and showing that old manuscripts can preserve biological evidence.</p>
+<p>The findings, described in a University College Dublin release dated November 11, 2026, include DNA detected in several historically important manuscripts. One is the roughly 1,000-year-old York Gospels; others include the Corpus Glossary at Corpus Christi College, Cambridge, and medieval works from Britain and continental Europe. The researchers examined animal skins used to make parchment, where biological material from the animal may survive for centuries.</p>
+<p>The evidence indicates that some infected animals supplied skins for the documents, providing genetic evidence that sheeppox was affecting European sheep populations long before modern disease records. The disease can spread rapidly and kill infected animals, especially young sheep, while reducing wool, meat and milk production.</p>
+<p>To trace the virus further back, the team also analyzed DNA from sheep teeth found at Bronze Age pastoralist settlements in the Eurasian steppe. Combining those results with the parchment evidence, the researchers reconstructed more than 3,500 years of sheeppox-virus evolution. Comparisons with modern viral sequences suggested that the virus changed little over that period, while the related sheeppox, goatpox and lumpy-skin-disease viruses may have separated between 11,500 and 3,700 years ago.</p>
+<p>The researchers also found viral DNA on calfskin and goatskin parchment. Because sheeppox primarily infects sheep, they said this could reflect infection in other livestock or contamination during parchment production.</p>
+<p>The work was published in *Science Advances*. Its significance is both historical and practical: the team said archived manuscripts may reveal past animal outbreaks, while ancient genomes could help explain how a pathogen that still damages livestock evolved. The release cited a sheeppox outbreak in Greece as a current economic concern.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261106174545.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists find deadly virus DNA hidden in 1,000-year-old manuscripts">ScienceDaily #1</a></div>
+  
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        for (const group of reportSection.querySelectorAll('.related-stories, .story-group')) {
+          group.hidden = !Array.from(group.querySelectorAll('details.story')).some(story => !story.hidden);
+        }
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
