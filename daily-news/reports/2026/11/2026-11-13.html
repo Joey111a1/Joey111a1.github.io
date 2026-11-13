@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-11-13</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .story-group {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+    .related-stories {
+      margin-left: 16px;
+    }
+    .related-stories > h3 {
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-11-13</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-cluster-id="cluster-0062" data-section="global_front_page" data-original-section="global_front_page" data-sources="bbc,cnn,daily_maverick,guardian,nyt,ocha,scmp">
+  <summary>Israeli airstrike on Nasser hospital in Gaza kills surgeon and five others</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span><span class="badge">humanitarian expansion</span><span class="badge">major supplement</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An Israeli airstrike hit Nasser Hospital in Khan Younis, southern Gaza, overnight Wednesday into Thursday, killing six people including surgeon Dr Rizk Abu Shaira, according to Palestinian health officials and the hospital director, while damaging critical medical services and injuring dozens.</p>
+<p>The strike hit a building containing surgical wards and intensive-care units, Gaza Civil Defense said. The hospital director reported that two missiles struck the complex, one of which did not explode. Accounts put the number of wounded between 20 and 40; a UN humanitarian update said 27 were injured. The attack destroyed part of the surgery department and suspended radiology, laboratory, surgical-operation and inpatient-surgical services, the director said.</p>
+<p>The Israeli military confirmed the attack and said it had targeted Muhammad Abu Ismail, identified as the commander of Hamas’s Khan Younis brigade, along with other fighters inside the hospital. Israeli authorities said Hamas had established a command center at the complex. Hamas rejected that account and called the strike an attack on a civilian medical facility.</p>
+<p>UN officials said the strike caused extensive damage and stressed that medical personnel and hospitals must be protected and must not be targeted or used for military purposes. The damage leaves a major Gaza hospital with several departments unable to operate while patients and medical workers remain exposed to the effects of the attack.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Israeli strike on Gaza hospital kills six Palestinians, health ministry says">BBC #1</a><a href="https://www.cnn.com/2026/11/12/middleeast/israeli-strike-gaza-hospital-kills-six-intl" target="_blank" rel="noopener noreferrer" title="CNN / Israeli strike on Gaza hospital kills at least 6, including doctor and child, Palestinian officials say">CNN #1</a><a href="https://www.dailymaverick.co.za/article/2026-11-12-israeli-strike-on-southern-gaza-hospital-kills-five-gaza-civil-defence-says" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Israeli strike on southern Gaza hospital kills five, Gaza civil defence says">DM #1</a><a href="https://www.theguardian.com/world/2026/nov/12/israeli-airstrike-nasser-hospital-gaza-kills-surgeon" target="_blank" rel="noopener noreferrer" title="The Guardian / Israeli airstrike on Nasser hospital in Gaza kills surgeon and five others">Guardian #1</a><a href="https://www.unocha.org/news/todays-top-news-occupied-palestinian-territory-yemen" target="_blank" rel="noopener noreferrer" title="UN OCHA updates / Occupied Palestinian Territory — humanitarian update">UN OCHA updates #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3374264/israeli-strike-gaza-hospital-kills-11-deadliest-attack-election" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Israeli strike on Gaza hospital kills 11 in deadliest attack since election">SCMP #1</a><a href="https://www.nytimes.com/2026/11/11/world/middleeast/nasser-hospital-gaza-strike-israel.html" target="_blank" rel="noopener noreferrer" title="The New York Times / Israeli Strikes on Gaza Hospital Kill 6 and Injure Dozens, Health Officials Say">NYT #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0063" data-section="global_front_page" data-original-section="global_front_page" data-sources="bbc">
+  <summary>Democratic Republic of Congo: Millions of Ebola dollars missing with staff unpaid while virus spreads, charity says</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Hundreds of millions of dollars allocated to the Ebola response in the Democratic Republic of Congo are reportedly not reaching intended recipients, while Médecins Sans Frontières says unpaid and under-equipped health workers are struggling to contain an outbreak that has killed thousands.</p>
+<p>On 12 November 2026, MSF warned that frontline workers were going unpaid, lacked adequate training and faced shortages of essential supplies. In some cases, it said, ambulances had run out of fuel. MSF called on the Congolese government and UN agencies to improve monitoring and direct money already distributed toward places facing the greatest needs.</p>
+<p>The supplied account records 11,000 infections and more than 5,400 deaths in DR Congo following the outbreak’s declaration in May. MSF said contact-tracing and surveillance were deeply deficient, with two-thirds of deaths occurring in communities rather than treatment centres. It also reported shortages of water, chlorine and triage systems at facilities in North Kivu and Haut-Uélé, warning that some could become sites of transmission rather than care.</p>
+<p>The warning follows an Africa CDC statement that $700 million of $962 million disbursed to Ebola-response organisations was unaccounted for. Jean Kaseya, who leads Africa CDC, said it was premature to label the matter embezzlement, characterizing it instead as a failure of transparency and financial reporting. Health Minister Samuel-Roger Kamba said only 22% of aid agencies had provided requested work details.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cx98757ymm6zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Millions of Ebola dollars missing with staff unpaid while virus spreads, charity says">BBC #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-cluster-id="cluster-0107" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="folha">
+  <summary>STF overturns penal immunity for patrimonial crimes committed within families</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Thursday (12), Brazil’s Supreme Federal Court (STF) unanimously abolished criminal immunity for family-related property offenses, including theft and fraud. The justices declared unconstitutional two Penal Code provisions that prevented punishment when the alleged victim was a spouse, parent or child, following rapporteur Dias Toffoli’s vote. The decision concerns crimes affecting a person’s goods or money and removes a legal protection that had prevented prosecution even when the conduct was criminal.</p>
+<p>The case initially focused on domestic and family violence against women and the compatibility of the immunity rule with the Maria da Penha Law. During the proceedings, ministers Luiz Fux and Alexandre de Moraes argued that the exemption should be removed in all family cases, not only those involving violence against women. Toffoli argued that the former rule was incompatible with the 1988 Constitution and perpetuated women’s unequal social position, while Moraes questioned why a parent should escape punishment for a property offense against a child. The justices did not reach agreement on when the ruling would take effect.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/stf-derruba-imunidade-penal-para-crimes-patrimoniais-cometidos-entre-familiares.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / STF overturns penal immunity for patrimonial crimes committed within families">Folha de S.Paulo #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0078" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="daily_maverick">
+  <summary>South Africa: Unlawful tariffs and soaring power costs threaten NMB jobs and investment</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nelson Mandela Bay manufacturers are challenging municipal electricity tariffs in South Africa’s Gauteng High Court, arguing that regulatory errors led them to overpay for power. The dispute threatens to deepen pressure on factories, workers, suppliers and investment in a metro already facing high unemployment and infrastructure losses.</p>
+<p>Coega Steels, based in Nelson Mandela Bay, is among the major industrial power users asking the court to overturn approvals covering five municipalities: Nelson Mandela Bay, Johannesburg, Ekurhuleni, Emfuleni and Madibeng. The applicants want credits applied to earlier electricity accounts, plus interest if repayment is late, or interim tariffs until Nersa completes a recalculation.</p>
+<p>Court documents say electricity charges in the affected metros exceeded the municipalities’ supply costs by 76% during the 2025/26 financial year. Nersa is said to have conceded that it approved applications containing major inaccuracies despite insufficient scrutiny of the figures behind them. The applicants consequently want the approvals ruled unlawful and cancelled, although the available evidence does not indicate how the court decided.</p>
+<p>The immediate economic concern is Nelson Mandela Bay’s manufacturing base, particularly its automotive and industrial sectors. Business chamber chief executive Denise van Huyssteen said electricity had become a larger expense for many manufacturers than wages, salaries or logistics, limiting growth, expansion and investment. She warned that any resulting damage could spread to employees, suppliers, service providers and families dependent on manufacturing. The source records an unemployment rate of 32.2% for the metro in the second quarter of 2026.</p>
+<p>The chamber was not a party to the case, but said it had previously pursued related tariff concerns and had challenged the municipality’s proposed average 12.8% increase for the 2026/27 cycle. Van Huyssteen also attributed R1.7-billion in electricity losses during the previous financial year to vandalism, theft and billing failures, forecasting R1.9-billion for the current year. Nersa and the Nelson Mandela Bay Municipality had not responded to questions about the errors by publication time.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-11-12-unlawful-tariffs-and-soaring-power-costs-threaten-nmb-jobs-and-investment" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Unlawful tariffs and soaring power costs threaten NMB jobs and investment">DM #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0082" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>BNP leader shot dead inside Khulna shop</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A BNP leader, Md Zakir Hossain, 43, was shot dead in a shop in Swalpobahirdia village in Rupsha upazila, Khulna, Bangladesh, around 10:30 p.m. last night, police said. Two helmeted men reportedly arrived by motorcycle; one entered the shop and shot Hossain in the head before both fled. Residents brought Hossain to the Rupsha Upazila Health Complex, but he died during treatment.</p>
+<p>Hossain lived in Khajadanga village and served on the committee created to reorganise the BNP’s TSB Union unit; he also worked in the sand trade. Hossain’s BNP affiliation was confirmed by Mizanur Rahman Milton, who is convener of the Khulna Metropolitan BNP media cell. Khulna Superintendent of Police Sarker Omar Faroque said authorities were pursuing those responsible, seeking to identify and arrest them while also determining the motive.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/crime-justice/news/bnp-leader-shot-dead-inside-khulna-shop-4322696" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / BNP leader shot dead inside Khulna shop">TDSB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0122" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>United Kingdom: Russell Brand accused of misconduct by six more women, according to report</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Six more women have accused Russell Brand of sexual misconduct and predatory behaviour, according to an investigation by The Times and Sunday Times. The allegations include having sex without consent and apologising afterward, continuing after a woman said he was hurting her, unwanted touching, coercive sexual demands and humiliating behaviour. The women’s accounts concern incidents in London, San Francisco and elsewhere between 2005 and 2015.</p>
+<p>The allegations became reportable after Brand’s criminal case ended. The Guardian said he received a prison sentence exceeding 10 years after being convicted of raping a 21-year-old woman and sexually assaulting three others in separate incidents from 2004 to 2009; the London court cleared him of two further rape charges and one charge of attempted indecent assault. According to The Times, substantial efforts were made to verify the new allegations, and the women received no payment. Brand’s lawyer was approached after the conviction and reportedly said he would consider an injunction, but no response to the allegations was provided by the stated deadline. Brand has previously denied wrongdoing and said his relationships were consensual.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/news/2026/nov/12/russell-brand-accused-of-misconduct-by-six-more-women-according-to-report" target="_blank" rel="noopener noreferrer" title="The Guardian / Russell Brand accused of misconduct by six more women, according to report">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0267" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Fujimori’s Approval Falls to 37% After 100 Days in Office</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ipsos Perú reported that Keiko Fujimori’s first 100 days as president ended with 37% approval and 53% disapproval, based on a Nov. 4–5 poll. The nationwide survey included 1,210 people. Approval was down three percentage points from October and 20 points from the poll’s first measurement in August; disapproval rose four points from October and 28 points over the same period. The findings coincided with calls for action on insecurity and escalating crime, especially in Lima and Peru’s northern coastal region.</p>
+<p>Support remained high for two of Fujimori’s security initiatives: 75% favored placing the National Police and Armed Forces under a unified command against organized crime, and 59% approved her late-October trip to El Salvador to study Nayib Bukele’s security approach. Fujimori defended her administration against criticism over limited immediate progress, saying that problems accumulated over years could not be resolved within 100 days. The poll also recorded low approval for senior officials and Peru’s legislature, with disapproval exceeding approval for both chambers.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/fujimoris-approval-falls-after-100-days" target="_blank" rel="noopener noreferrer" title="Telesur English / Fujimori’s Approval Falls to 37% After 100 Days in Office">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0109" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="folha">
+  <summary>National Treasury Department suffers hacker attack that exposes data of 30,000 registrations and 4,000 Pix keys</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The National Treasury Secretariat reported on Thursday the 12th that a security incident exposed personal data from about 30,000 registrations and 4,000 Pix keys belonging to beneficiaries of federal government payments. The agency said the unauthorized access was detected on November 4. It identified improperly accessed information in its e-Services portal, including names, CPF numbers and email addresses. A separate database used for internal queries contained the Pix keys, along with information about the related payments.</p>
+<p>The Treasury said the incident caused no financial impact and did not affect its structural systems. It warned that the exposed information could enable more convincing fraud attempts and advised users to be wary of messages or contacts seeking personal details, passwords or payments. The agency said it had increased monitoring, added protective measures and notified the National Data Protection Authority (ANPD) and the government’s Cyber Incident Prevention, Treatment and Response Center (CTIR Gov). Questions about the incident can be directed to the ministry’s data protection officer through the official Fala.BR platform.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/tec/2026/11/tesouro-nacional-sofre-ataque-hacker-que-expoe-dados-de-30-mil-cadastros-e-4000-chaves-pix.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / National Treasury Department suffers hacker attack that exposes data of 30,000 registrations and 4,000 Pix keys">Folha de S.Paulo #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0224" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="politico">
+  <summary>China’s diaspora crackdown reaches deep into Europe, report finds</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Safeguard Defenders report presented in The Hague says Beijing oversees nearly 1,250 overseas policing outposts in more than 90 countries, including hundreds across roughly two dozen European countries. The Spain-based organization said its researchers used open-source evidence linked to the Chinese Party-state to examine monitoring, surveillance and policing of the Chinese diaspora. It characterized the offices as instruments for community surveillance and enforcement abroad, claiming they expose efforts to control dissidents and other diaspora communities.</p>
+<p>The report builds on Safeguard Defenders’ 2022 identification of more than 100 facilities. Although some governments denounced the stations and pursued criminal investigations, and Beijing said they had been closed, the organization’s latest assessment says the network has expanded. Its count includes only offices it linked through open-source evidence to Chinese police or prosecutors, excluding broader alleged influence operations. China has previously denied operating overseas police stations or interfering in other countries’ internal affairs; a Chinese foreign ministry spokesperson said in 2023 that the institutions assisted overseas Chinese with services such as renewing driving licences. The findings arrive as EU officials balance trade ties with Beijing against cybersecurity, supply-chain and political-coercion concerns.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/china-diaspora-crackdown-reaches-deep-into-europe-report-finds" target="_blank" rel="noopener noreferrer" title="POLITICO / China’s diaspora crackdown reaches deep into Europe, report finds">POLITICO #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0138" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Rats, dengue and an all-day stench: can Panama City solve its waste crisis?</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Panama’s waste crisis is affecting daily life, public health and waterways in San Miguelito, where residents navigate rotting refuse, rats and blocked roads while government agencies and environmental groups attempt to restore collection and prevent plastic from reaching the Pacific.</p>
+<p>In San Miguelito, one of Panama City’s poorest districts, rubbish has accumulated along steep streets, beside homes and in the Juan Díaz River. Residents report persistent odours, flies and rodents; Yamileth says dengue is common and that a neighbour died from it, while families fear their children will become ill. During the rainy season, waste can obstruct roads and be swept through communities and waterways.</p>
+<p>The government announced an urgent intervention last December after President José Raúl Mulino warned that the sanitation crisis could become a health crisis. Funding has been pledged, while San Miguelito’s mayor, Irma Hernández, has introduced new collection routes and schedules and helped turn an illegal dumping site into a park. Collection remains inconsistent, particularly in higher areas, and trust is weak after years of inadequate service.</p>
+<p>Environmental groups are addressing the river pollution. The Siete Cuencas project, run by Marea Verde and the Ocean Cleanup, has deployed three floating barriers, with a long-term aim of stopping 800,000kg of waste reaching the Pacific annually. In Puente del Rey, resident Liska says flooding stopped after a barrier was installed last year, but project leaders stress that interception cannot replace reliable collection, recycling and enforcement.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/global-development/2026/nov/12/rats-dengue-and-an-all-day-stench-can-panama-city-solve-its-waste-crisis" target="_blank" rel="noopener noreferrer" title="The Guardian / Rats, dengue and an all-day stench: can Panama City solve its waste crisis?">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0108" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="folha">
+  <summary>Former law professor accused of sexual crimes in RS is arrested for the third time following STF order</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Conrado Paulino da Rosa, a former law professor in Brazil’s Rio Grande do Sul state, was arrested for the third time on Wednesday (11) following a determination by the Supreme Federal Court (STF). He surrendered to the Specialized Police Station for Women’s Assistance and awaited transfer to the state prison system. He is accused of sexual crimes against ten women.</p>
+<p>The Public Prosecutor’s Office indictment alleges 12 crimes against the women between 2013 and 2025, while 18 alleged victims and 16 witnesses were heard during the case. The accusations include rape, rape of a vulnerable person, psychological violence and confinement. Rosa denies parts of the accusations, saying he did not know some of the women and denying that he used substances to drug victims. He has also alleged flaws in the proceedings and forensic analyses, and said images from the custody hearing and complaints were leaked. He was previously held between September and October during investigations and arrested again in March after the February 24 accusation; the Superior Court of Justice revoked that arrest in June. The Prosecutor’s Office appealed to the STF.</p></div>
+  <div class="source-list"><a href="https://redir.folha.com.br/redir/online/cotidiano/rss091/*https://www1.folha.uol.com.br/cotidiano/2026/11/ex-professor-de-direito-acusado-de-crimes-sexuais-no-rs-e-preso-pela-terceira-vez-apos-ordem-do-stf.shtml" target="_blank" rel="noopener noreferrer" title="Folha de S.Paulo / Former law professor accused of sexual crimes in RS is arrested for the third time following STF order">Folha de S.Paulo #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0219" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="peoples_daily_en">
+  <summary>African coffee gains ground in Chinese market</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Coffee exports from Uganda and Kenya are gaining access to China through the ninth China International Import Expo (CIIE) and China’s zero-tariff policy for 53 African countries with which it has diplomatic relations. Uganda’s Kimco Processors attracted visitors and buyers at the expo, while Kenya’s Sumseron Coffee &amp; Tea signed a memorandum of understanding with a Chinese company during its first CIIE participation in 2025. China’s domestic coffee demand has also continued to grow.</p>
+<p>The policy, implemented from May 1, eliminated an earlier 8 percent tariff on Ugandan green coffee beans, according to Joseph Nkandu of Uganda’s National Union of Coffee Agribusiness and Farm Enterprises. The union represents more than 2 million Ugandan coffee-farming households, exports over 50,000 tonnes annually, and sends about 30 percent of its purchases to China. Sumseron founder John Seroney said his company has exported 50 tonnes under the policy. In Uganda’s Ntungamo district, the Inspire Africa Coffee Park is expanding local processing, including through training on freeze-drying equipment in China. Its director, Duncan Abigaba, said stronger processing capacity could help move the industry beyond raw-material exports.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/1112/c90000-20518446.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / African coffee gains ground in Chinese market">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0211" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="peoples_daily_en">
+  <summary>Hong Kong serves as first stop for mainland firms going global</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">According to the Hong Kong government, more than 360 mainland Chinese businesses have used the GoGlobal Task Force to establish or grow operations in the city while seeking markets abroad. Algernon Yau, the secretary for commerce and economic development, chairs the task force, which began operating on October 6, 2025, under Invest Hong Kong alongside the Hong Kong Trade Development Council and Hong Kong Productivity Council. Its support includes company formation, finding partners, tax incentives, industrial parks and university links.</p>
+<p>The initiative’s examples include Hangzhou-based Green Tea Group, which opened its first restaurant outside mainland China in Hong Kong before expanding into Singapore, Malaysia and Thailand, and Beijing robotics company Yunji Technology. Yunji established an international headquarters and research center at Cyberport; its robots now operate in hotels across more than 20 countries and regions. During the first half of 2026, Invest Hong Kong says, it assisted 413 mainland and overseas companies with setting up or expanding, an increase of roughly 10 percent from a year earlier. Those projects are expected to bring more than HK$53 billion in foreign direct investment and create over 8,600 jobs.</p></div>
+  <div class="source-list"><a href="https://en.people.cn/n3/2026/1112/c90000-20518451.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Hong Kong serves as first stop for mainland firms going global">PDE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-cluster-id="cluster-0282" data-section="china_domestic" data-original-section="china_domestic" data-sources="xinhua_en">
+  <summary>China Focus: China&#x27;s AI short-drama boom: cheaper production, bigger audiences, harder challenges</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s AI short-drama boom is producing large audiences at much lower cost. In China, *Armed into the Song Dynasty* follows a five-member modern military unit stranded in the Northern Song Dynasty. Since premiering on Aug. 22, it has reached 10 seasons and 1,000 episodes, each under two minutes, with more than 4 billion cumulative views. Millions of viewers reportedly pre-ordered future seasons. The six-member crew counts a former ride-hailing driver, a delivery worker and a former office employee among its members, and it can turn out about 100 episodes weekly. Xinhua-cited figures put the broader audience at at least 600 million and show that, during the year&#x27;s first 10 months, more than 550,000 micro and short dramas came out, with over 94 percent made using AI.</p>
+<p>The expansion is also exposing financial and creative limits. DataEye’s benchmark suggests that just 1.3 percent of AI short dramas both cross the 50-million-view mark and turn a profit, leaving most productions in the red despite cheaper tools. High-end models, computing, repeated rendering and promotion still cost money, while inconsistent faces, backgrounds, movement and plot continuity can undermine longer productions. Regulators require consent for using faces or voices and mandate review and traceability. In November, the National Radio and Television Administration began a two-month campaign against poor-quality, vulgar and formulaic micro- and short dramas.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261112/45c6f61bd80143cdabf3e4f6eea947c6/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China Focus: China&#x27;s AI short-drama boom: cheaper production, bigger audiences, harder challenges">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0296" data-section="china_domestic" data-original-section="china_domestic" data-sources="xinhua_en">
+  <summary>Across China: New findings further expose Japanese troops&#x27; wartime atrocities in China</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">New research presented at a symposium in Harbin, China, has added evidence about Japanese military atrocities during World War II. Wang Meng, a Wuhan University historian, said bones excavated at a former Japanese army medical-school site bore cut and drill marks consistent with brain surgery. In Nanjing, researchers detected the gene for *Vibrio cholerae* enterotoxin in skull remains from 41 victims found at Jiuhua Mountain. Wang said the findings indicate that Japanese forces conducted human experiments. The symposium, held in Heilongjiang from Monday through Wednesday and attended by dozens of scholars, focused on bacteriological and chemical warfare crimes.</p>
+<p>Researchers also examined the wartime and postwar chemical-weapons system. Jin Shicheng of Harbin’s Unit 731 evidence exhibition hall said records on Unit 516 describe a roughly 70-member team tasked after Japan’s surrender with transporting, burying and abandoning chemical weapons; the records could help identify disposal sites. Chinese researchers said soil testing at the former Unit 731 site confirmed research into weaponizing *Bacillus anthracis*. Chemical weapons left by Japanese forces have reportedly been found at more than 200 sites in 18 Chinese provinces, while many toxic bombs are believed to remain undiscovered.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261112/de321095205545e7aeb123e3769cedc6/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / Across China: New findings further expose Japanese troops&#x27; wartime atrocities in China">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0283" data-section="china_domestic" data-original-section="china_domestic" data-sources="xinhua_en">
+  <summary>(China Economic Roundtable) Xinhua Headlines: Technology reshapes China&#x27;s agricultural modernization</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">economy_and_business</span><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s autumn grain harvest in 2026 has largely survived disasters, while expanded use of improved seeds, machinery, irrigation and digital tools is changing both farm output and how Chinese agriculture is managed.</p>
+<p>Xinhua reported that, as of Nov. 12, over 90 percent of China’s autumn grain crop had been harvested and annual grain output was on course to top 700 million tonnes for the third year in a row. The assessment came during the 38th episode of China Economic Roundtable, where guests discussed technology’s growing role in agricultural modernization.</p>
+<p>Zhao Changbao, from the Rural Economy Research Center under the Ministry of Agriculture and Rural Affairs, said agricultural departments were shifting toward preparations for severe weather rather than acting only after damage occurred. They organized a 100-day field-management campaign and consulted regularly with meteorological, water-resources and emergency-management authorities.</p>
+<p>The approach combines improved farmland, seeds, machinery and farming methods, including closer planting, precision sowing and integrated water-and-fertilizer irrigation. Deputy agriculture official Zhu Huasheng said Heilongjiang, China’s largest grain-producing province, had kept its output above 80 million tonnes for two consecutive years and was expecting a record harvest in 2026.</p>
+<p>The province now has 125 million mu of high-standard farmland, near-universal access to improved seed and a 99.34 percent mechanization rate covering ploughing, sowing and harvesting. This year, a heat-tolerant rice variety resistant to lodging yielded over 13.5 tonnes per hectare in Hubei’s Dongjiao Village, where upgraded ponds and embankments improved drought management.</p>
+<p>For this autumn’s harvest, Inner Mongolia deployed 1,710 service providers and a fleet of over 19,000 agricultural machines to help limit losses. China’s agricultural shift is therefore being presented not only as an effort to raise field yields, but also to reduce losses and improve quality.</p>
+<p>Digital infrastructure is expanding alongside machinery. Digital farming is also advancing: 5G is available in over 95 percent of villages, rural internet penetration stands at 69.5 percent, and the use of digital information to guide farming is growing by roughly two percentage points each year.</p>
+<p>The 2026 central agricultural policy document calls for integrating artificial intelligence with agricultural development, while a 2026-2030 action plan identifies smart farms, intelligent breeding and AI applications as priorities. First Tractor has also unveiled an onboard AI agent, and its BeiDou-equipped tractors can maintain straight-line accuracy within 2.5 centimeters.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261112/4b1ffb86270047c98bafd079e54d9303/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / (China Economic Roundtable) Xinhua Headlines: Technology reshapes China&#x27;s agricultural modernization">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0297" data-section="china_domestic" data-original-section="china_domestic" data-sources="xinhua_en">
+  <summary>(China Economic Roundtable) Talent, digital tools playing bigger role in boosting China&#x27;s rural industries</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">technology_and_ai_society</span><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China is strengthening the role of skilled people and digital technologies in rural industries as it advances agricultural modernization, a development discussed in Beijing on Nov. 12. Guests at the latest China Economic Roundtable examined efforts to make returning migrant workers and technology-oriented young people a lasting source of agricultural talent, while expanding digital applications in farming.</p>
+<p>In Dongjiao Village, Hubei Province, more young migrant workers are returning from cities, and the village is training them in technical skills and business management to become professional farmers. Young returnees now use smart machinery and sensor networks, while grain growers have formed cooperatives producing organic rapeseed for premium buyers. Digital tools are increasingly guiding farming: rural internet penetration has reached 69.5 percent, more than 95 percent of administrative villages have 5G coverage, and digitally guided agricultural production is rising by about two percentage points annually. Policy plans call for further AI integration, with smart farms, intelligent breeding and other applications identified as priorities for 2026-2030.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261112/610a327237604c90b5d44d4b3104086e/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / (China Economic Roundtable) Talent, digital tools playing bigger role in boosting China&#x27;s rural industries">XNA #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-cluster-id="cluster-0151" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>One of the biggest issues for Cop31 delegates to grapple with is how the crisis affects public health – from pollution to extreme heat.</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Green Party of England and Wales is pressing the UK government to assess and publish the health consequences of developing the Rosebank oilfield before deciding whether to approve it, linking the dispute to mounting pressure on the National Health Service from extreme heat.</p>
+<p>The demand comes as Cop31 delegates consider the public-health effects of the climate crisis, including pollution and heat. A decision on Rosebank, described as the biggest undeveloped oil and gasfield in the North Sea, is expected soon. The Greens want ministers to set out how extracting and burning its oil could affect the NHS.</p>
+<p>Climate experts cited in the evidence say further oil extraction would worsen the climate crisis. An Oxfam study estimated that the combined lifetime emissions of Rosebank and the smaller Jackdaw gasfield could contribute to 65,495 excess heat deaths. That is a projected consequence, not a reported death toll from either field.</p>
+<p>Green MP Carla Denyer argues that ministers should delay the Rosebank decision if no health assessment has been completed. She also pointed to an estimate that recent UK heatwaves caused nearly 3,000 deaths. Health Secretary Yvette Cooper previously said repeated heatwaves had placed intense pressure on the NHS, while extreme weather this winter has been forecast to cause major disruption.</p>
+<p>The Rosebank decision is also creating pressure within Labour. More than 20 Labour backbenchers called for the field to be rejected in a parliamentary debate on Tuesday, amid concerns that the government is retreating from parts of its climate policy. In response to a parliamentary question about whether a health assessment preceded approval of Jackdaw, the government said the decision was made by the energy secretary alone, without other ministers’ involvement. The Greens interpreted that response as suggesting no such assessment had been carried out.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/live/2026/nov/12/cop31-the-crisis-is-upon-us-now-burnham-due-to-tell-climate-summit?page=with%3A6af5afea8f0844b7bde17d65#6af5afea8f0844b7bde17d65" target="_blank" rel="noopener noreferrer" title="The Guardian / One of the biggest issues for Cop31 delegates to grapple with is how the crisis affects public health – from pollution to extreme heat.">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0068" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="cna">
+  <summary>Japan seeks bigger role in Southeast Asia’s security landscape</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Japan is expanding defence and maritime-security cooperation with Southeast Asian countries while trying to reassure the region that looser weapons-export rules will not turn Tokyo into a destabilising military power or intensify an arms race.</p>
+<p>The development is being presented by Japan as a response to tensions in the South China Sea and wider strategic rivalry. In April, Tokyo overhauled rules for overseas weapons transfers, allowing a broader range of military equipment to be supplied abroad. Japan’s ambassador to ASEAN, Koji Yonetani, said in Jakarta on Nov. 6 that the policy remains subject to safeguards and is intended to strengthen partner countries’ capabilities.</p>
+<p>The practical cooperation already includes patrol vessels, support for coast-guard capacity and closer coordination among maritime and defence authorities through Japan’s Official Development Assistance and Official Security Assistance programmes. Yonetani said these efforts support a maritime order based on international law. He also cited Defence Minister Shinjiro Koizumi’s offer at an ASEAN Defence Ministers’ Meeting-Plus gathering in Cebu to explain Japan’s defence-policy changes to other countries.</p>
+<p>Japan’s position is particularly focused on the South China Sea. Yonetani said Tokyo opposes unilateral efforts to alter the status quo through force or coercion and is concerned about actions that threaten freedom of navigation and overflight. The statement comes as the 11-member ASEAN bloc prepares for its leaders’ summit in Manila.</p>
+<p>Tokyo is also framing the shift as consistent with the Fukuda Doctrine, which will reach its 50th anniversary next year. The 1977 doctrine emphasised peace, mutual trust and cooperation, and Yonetani said Japan still rejects becoming a military power that threatens other countries. He argued that trust and cooperation are increasingly necessary as countries face shocks and strategic uncertainty.</p>
+<p>Beyond defence, Japan wants deeper ASEAN cooperation on disaster management, drawing on its newly launched National Disaster Management Agency. The agency has more than 350 staff and is intended to improve domestic preparedness and response, while creating opportunities to share expertise with regional partners. Japan is also seeking practical cooperation through the Quad grouping of Japan, the United States, Australia and India, though Yonetani declined to discuss whether a Quad meeting would be held alongside the ASEAN summit.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/east-asia/japan-ambassador-asean-koji-yonetani-interview-bigger-role-southeast-asia-security-landscape-6545421" target="_blank" rel="noopener noreferrer" title="CNA / Japan seeks bigger role in Southeast Asia’s security landscape">CNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0125" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian,scmp,telesur_en">
+  <summary>Trump Threatens to Double Tariffs on Mexico Over Migrant Caravans</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Donald Trump has threatened to immediately double tariffs on Mexican goods unless President Claudia Sheinbaum’s government stops a migrant caravan moving north, putting people traveling through Mexico and cross-border trade under renewed pressure.</p>
+<p>Trump issued the ultimatum on Truth Social on Thursday, as more than 1,000 migrants were reported heading toward the United States. Approximately 1,500 people, including migrants from Honduras, El Salvador, Guatemala and Nicaragua and many traveling with children, had begun walking north from Tapachula in southern Mexico earlier in the week.</p>
+<p>He said the migrants would not be allowed to enter the United States and demanded that Mexico stop the caravans. Trump also said his position had been conveyed to Mexico, Texas officials, the Border Patrol and Immigration and Customs Enforcement. He linked the warning to his party’s recent defeat in legislative elections, according to the supplied accounts.</p>
+<p>The threatened measure remains a proposal rather than an implemented tariff action. Trump did not specify which duties would be doubled, whether the threat concerned existing tariffs or new levies, or what would qualify as stopping the caravan. No deadline was given.</p>
+<p>If enacted, a higher tariff could increase costs for exporters in both countries and affect supply chains reliant on cross-border production. The warning therefore combines an immigration demand with pressure on bilateral trade, but its practical effect will depend on whether the caravan advances, how Mexico responds and whether the administration converts the social-media threat into a formal trade measure.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/nov/12/mississippi-scott-colom-ukraine-donald-trump?page=with%3A6af5b69c8f0844b7bde17dc3#6af5b69c8f0844b7bde17dc3" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump threatens to double tariffs on Mexico unless it stops migrant caravans heading to US">Guardian #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3374243/trump-threatens-double-tariffs-mexico-if-it-does-not-halt-migrants" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Trump threatens to double tariffs on Mexico if it does not halt migrants">SCMP #1</a><a href="https://www.telesurenglish.net/trump-threatens-double-tariffs-on-mexico" target="_blank" rel="noopener noreferrer" title="Telesur English / Trump Threatens to Double Tariffs on Mexico Over Migrant Caravans">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0222" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="politico">
+  <summary>The Kremlin can hide the death toll. It can’t hide the graves.</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Yaroslavl, a Russian court imposed a 14-year penal-colony term on a man who photographed the graves of troops killed in Ukraine, reflecting a widening official campaign to suppress battlefield-death evidence even as independent tallies far exceed Moscow’s acknowledged figures.</p>
+<p>Authorities have warned that taking pictures at military graves may be punishable by life in prison, while the Federal Security Service has reportedly monitored cemeteries for suspected violators. Authorities have detained several dozen people in different parts of Russia since the summer. Their closed trials carry treason charges, specifically alleged cooperation with Ukrainian intelligence services.</p>
+<p>The restrictions target a method used by independent journalists and activists to identify Russian dead through gravestones, funeral notices and other public information. Russia 200, a casualty database created by Mediazona and the BBC’s Russian service, lists nearly 283,000 dead soldiers and details surrounding their deaths. Mediazona says it lacks the resources and access to record every battlefield fatality. Estimates from the U.K. Foreign Office and Dutch intelligence exceed 500,000 Russian losses; in July, Ukrainian President Volodymyr Zelenskyy put the number of Russian soldiers killed at 700,000.</p>
+<p>Moscow has provided little official casualty information since Defense Minister Sergei Shoigu reported 5,937 Russian deaths in September 2022. In April 2024, a Kremlin spokesperson said casualty information was a state secret and that reporting on losses belonged exclusively to the Defense Ministry. Later that year, Rosstat blocked access to excess-death data that Mediazona had used to check its calculations.</p>
+<p>The information restrictions have also affected court records. Journalists in Russia noted a sharp rise in proceedings to declare soldiers missing or dead; Russia 200 counted almost 90,000 such cases in 2025—more than ten times the total in earlier invasion years—before access to the records was restricted late that year. Mediazona editor Dmitry Treshchanin said volunteers who photographed graves had faced attacks, making the practice increasingly dangerous.</p>
+<p>Russian military analyst Ian Matveev said concealing losses could help the Kremlin recruit new soldiers by preventing potential enlistees from judging survival rates at the front. The growing cemeteries, however, continue to provide visible evidence of the war’s human cost.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/kremlin-hide-numbers-cant-hide-graves-russia-ukraine-war" target="_blank" rel="noopener noreferrer" title="POLITICO / The Kremlin can hide the death toll. It can’t hide the graves.">POLITICO #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0123" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>‘Like priests who don’t believe in God’: Italy’s anti-vax medics eye return to frontline duty</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Italy’s lower house has approved a bill allowing healthcare workers removed from professional registers for serious pandemic-era anti-vaccination violations to seek reinstatement, prompting warnings that the measure could weaken vaccine confidence as preventable diseases resurge.</p>
+<p>The proposal, championed by Prime Minister Giorgia Meloni’s Brothers of Italy and backed by the League, would apply to medics sanctioned for conduct such as promoting treatments without a scientific basis. It still requires approval in the Senate, where a vote is scheduled for January.</p>
+<p>The bill’s supporters describe it as reconciliation after the pandemic. League politician Claudio Borghi, who hosted an anti-vaccine seminar in the Senate after the lower-house vote, said people should not lose their jobs because of personal beliefs. The measure received support from National Future, a rival far-right party led by former army general Roberto Vannacci, who has opposed vaccine mandates.</p>
+<p>Medical experts are more concerned about the signal than the small number of workers likely to be affected. A University of Turin report published in *The Lancet Regional Health – Europe*, based on 50,000 adults across Italy, found that nearly half were hesitant about vaccination. Its chief researcher, Roberta Siliquini, said misinformation and distrust of institutions were more influential than safety fears.</p>
+<p>The reported consequences include 472 measles infections in the first five months of this year, compared with 322 during the same period last year, with more than half among young adults. Influenza vaccination among people aged at least 65 has fallen to 49.81% this season, the first time it has dropped below 50% since winter 2014–15. In August, a four-year-old in Palermo died of diphtheria; her parents reportedly believed vaccines caused autism, a claim for which there is no evidence of a link.</p>
+<p>The debate has also exposed divisions within families. Antonio Cremasco, 76, from Veneto, spent 20 days in intensive care after contracting Covid in March 2020 and required oxygen for six months. He later received a Covid vaccine and believes it saved his life, but has been unable to persuade his vaccine-sceptic son to accept vaccination. Nurse and patient advocate Lorenzo Mattia Signori warned that hospitals should not reinstate medics who reject scientific evidence.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/12/italy-anti-vax-medics-return-vote-meloni" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘Like priests who don’t believe in God’: Italy’s anti-vax medics eye return to frontline duty">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0064" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc,nyt">
+  <summary>US envoys meet Zelensky in Dublin after talks with Putin in Moscow</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US envoys Jared Kushner and Steve Witkoff met Ukrainian President Volodymyr Zelensky in Dublin after talks with Vladimir Putin in Moscow, as negotiators discussed European participation in future peace talks while Zelensky raised restrictions he said were impairing Ukraine’s ability to intercept Russian drones.</p>
+<p>On 12 November 2026, Kushner and Witkoff held a fresh round of talks with Putin in Moscow, following discussions in Abu Dhabi aimed at ending the war in Ukraine. They then travelled to Dublin to meet Zelensky.</p>
+<p>Witkoff said a new round of trilateral talks had already been agreed with Putin and that Europeans would join. Zelensky also said Europeans would participate, but Russia had not confirmed that arrangement.</p>
+<p>The diplomatic activity coincided with a dispute over Ukraine’s military communications. Zelensky said on Thursday that Ukrainian forces were again facing “systematic” restrictions on Starshield, Starlink’s military-grade service, leaving Kyiv struggling to intercept Russian jet-powered drones. He said Ukraine was trying to resolve the issue with the American side and suggested that decisions treating Ukrainian territory as though it were not Ukrainian would have broader implications.</p>
+<p>Starshield was developed by Elon Musk’s SpaceX for government and military use, while Starlink and Starshield have become important to communications on Ukraine’s front line.</p>
+<p>A resolution to the war still appeared distant. Comments by Putin and Kremlin officials suggested that Russia’s position had not shifted, while Moscow’s demands over territory and neutrality remained far beyond what Ukraine was prepared to accept. At the core of the talks was also a proposed new European security framework involving Ukraine, Russia and Europe.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cwrkgmymk55zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / US envoys meet Zelensky in Dublin after talks with Putin in Moscow">BBC #1</a><a href="https://www.nytimes.com/2026/11/12/world/europe/russia-ukraine-witkoff-kushner.html" target="_blank" rel="noopener noreferrer" title="The New York Times / In Moscow, Witkoff and Kushner Ask Putin to Include Europe in Peace Talks">NYT #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0053" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>United Kingdom: Sunbed firms must not downplay cancer risk, says watchdog</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Committee for Advertising Practice (CAP) has issued a UK-wide enforcement notice warning sunbed businesses in the UK not to present their beds as safe, as medical treatments or as a source of vitamin D. Advertisers have until 7 December 2026 to make their marketing compliant. CAP said misleading claims could discourage people from seeking appropriate medical advice, and plans to use an AI-based monitoring system to identify further breaches.</p>
+<p>The notice follows claims that sunbeds could ease eczema, improve brain function, reduce inflammation or boost circulation. Earlier this year, the Advertising Standards Authority banned five adverts promoting sunbeds for conditions including osteoporosis and depression. The Sunbed Association, representing about half of UK tanning salons, supported action against misleading advertising but said businesses should still be able to explain how they operate responsibly. CAP compliance executive James Burnett said sunbeds carry serious health risks, including a higher risk of skin cancer. The World Health Organization says using one before age 35 raises later melanoma risk by 59%; a 2025 YouGov survey found that about one in seven UK 18-to-24-year-olds had used a sunbed in the previous year.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c98r7xyjx8g4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Sunbed firms must not downplay cancer risk, says watchdog">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0003" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="agencia_brasil">
+  <summary>Zanin rejects lawsuit to set second round for Rio de Janeiro state government</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Brazil’s Supreme Federal Court Justice Cristiano Zanin on Thursday the 12th rejected the PSD’s request to pursue a case seeking a second round for governor of Rio de Janeiro state. The party, which supports candidate Eduardo Paes, had sought to suspend a Superior Electoral Court decision that annulled votes cast for Anthony Garotinho of the Republicans and ordered the results to be recalculated.</p>
+<p>The recalculation raised Douglas Ruas of the Liberal Party from 49.27% to 50.88% of valid votes, allowing him to be elected in the first round. Zanin ruled that the constitutional claim filed by the PSD could not be used to challenge a specific TSE decision, treating it as an inappropriate substitute for an appeal. The decision therefore leaves the first-round result in place, based on the evidence.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-11/zanin-rejeita-acao-para-determinar-segundo-turno-para-o-governo-do-rio" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Zanin rejects lawsuit to set second round for Rio de Janeiro state government">AB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0120" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Trump the ‘biggest loser’ for scrapping climate action, John Kerry says at Cop31</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Former US secretary of state John Kerry criticized Donald Trump at the Cop31 climate summit in Antalya, Turkey, calling him the “biggest loser” for scrapping climate action and giving China an advantage in clean energy. Kerry said Trump had withdrawn the United States from the international climate process and removed measures that reduced planet-heating emissions.</p>
+<p>The Trump administration sent no delegation to the UN climate talks, which began on Monday, unlike almost all other countries. Trump also said he would not approve wind turbines while discussing potential legislation intended to make it easier to build new energy projects. Kerry said Trump was missing US competitiveness with China, domestic markets and possible supply chains for goods that could be made in the United States. Under Joe Biden, US climate legislation provided tax breaks for clean energy and electric-vehicle manufacturing, but Republicans eliminated most of that support. The White House dismissed the summit, with an official saying the administration would not send anyone to Cop31.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/2026/nov/12/trump-loser-john-kerry-cop31" target="_blank" rel="noopener noreferrer" title="The Guardian / Trump the ‘biggest loser’ for scrapping climate action, John Kerry says at Cop31">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0066" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>Trouble at the top - the crisis of confidence in Scotland&#x27;s NHS leaders</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Health Improvement Scotland’s Thursday review of NHS Grampian in Scotland found major problems at Dr Gray’s Hospital in Elgin and management deficiencies across the wider region. It identified weak leadership, failures in recruitment, governance and management, and repeated failures to respond to patient-safety warnings or learn from mistakes. The watchdog also found that an investigation into a patient’s death during surgery was inadequate. It said chief executive Laura Skaife-Knight gave misleading information about whether senior executives had seen or approved the review, causing distress among lower-level staff who felt blame had been shifted onto them. Skaife-Knight apologised to the watchdog and affected staff and began measures intended to restore trust. Executive medical director Hugh Bishop, who had received and discussed the review but said he did not remember doing so, left his post in recent weeks.</p>
+<p>Health Secretary Angela Constance said she retained confidence in Skaife-Knight, while acknowledging that almost half the board had changed and a new chair was due to take over. NHS Grampian is already in special measures over financial difficulties, and Constance is due to tell parliament next week what further action the government will take. The findings have intensified wider concerns about NHS leadership, including Glasgow doctors’ warning of risks to patient safety and low staff confidence in their board’s leadership.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cknv4d307523o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Trouble at the top - the crisis of confidence in Scotland&#x27;s NHS leaders">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0043" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="atlantic">
+  <summary>The Scandal Is Bigger Than Jensen Huang</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The central concern is not only an alleged relationship between Jensen Huang and a suspected Chinese intelligence asset, but claims that US officials continued relying on Nvidia’s leader—raising questions about chip access, export controls and who shapes American AI policy.</p>
+<p>A photograph taken in Taipei in May 2025 showed Huang dining with Alice Huang, whom reports allege was a Chinese Ministry of State Security asset and his romantic partner.</p>
+<p>During President Trump’s May flight to Beijing to meet Xi Jinping, Secretary of State Marco Rubio reportedly briefed him on the intelligence, yet Trump still brought Huang along and treated him as a key adviser.</p>
+<p>According to The Information, Alice Huang’s access allegedly helped Chinese companies secure Nvidia chips valued in the billions; the Commerce Department, it reported, held off on action against Megaspeed despite pressure from other agencies.</p>
+<p>The episode raised questions about whether the relationship influenced Nvidia’s commercial decisions, including whether products were allocated to Megaspeed rather than American firms, and whether the company’s political influence weakened enforcement of government rules.</p>
+<p>The broader concern is that American strategy has become heavily dependent on private-sector actors whose incentives may not align with national interests, while AI systems remain intertwined through technology, capital, information and people.</p>
+<p>On Sunday, Trump was asked if he ought to have responded to the warning and answered that he did not believe he should have.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/international/2026/11/nvidia-china-ai-regulation/689387" target="_blank" rel="noopener noreferrer" title="The Atlantic / The Scandal Is Bigger Than Jensen Huang">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0143" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Police identify victim who was killed and shooting suspect</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">During an ongoing press conference, police identified the deceased victim in Washington, DC, as 46-year-old James Stuart, who was from northwest Washington, DC. They also identified the shooting suspect as 55-year-old Matt Wade Lambert, also of northwest Washington, DC.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/nov/12/washington-dc-shooting-logan-circle-latest-updates?page=with%3A6af6295b8f0880008e7f3535#6af6295b8f0880008e7f3535" target="_blank" rel="noopener noreferrer" title="The Guardian / Police identify victim who was killed and shooting suspect">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0148" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>United Kingdom: Angela Rayner grants planning approval for asylum centre in Piddington despite local opposition</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Angela Rayner, the UK communities secretary, has granted full planning permission for the temporary, phased redevelopment of a former Ministry of Defence site near Piddington in Oxfordshire into asylum accommodation. The plans could house 1,256 detained asylum seekers at the converted MoD Bicester barracks, although no residents have yet been moved there.</p>
+<p>The Home Office said the permission allows it to continue developing the site but stressed that a final decision to proceed has not been made. The approval is subject to a six-week period in which it can face legal challenge. Local opposition was demonstrated by a symbolic September referendum organised by campaigners: 285 people voted for independence from the UK and 26 against, in protest at the proposed centre. The group Wrong Plan Wrong Site has also challenged the government’s decision that an environmental assessment was unnecessary, saying there were credible concerns about potentially significant environmental effects.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/uk-news/2026/nov/12/angela-rayner-grants-planning-approval-for-asylum-centre-in-piddington-despite-local-opposition" target="_blank" rel="noopener noreferrer" title="The Guardian / Angela Rayner grants planning approval for asylum centre in Piddington despite local opposition">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0076" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="cnn">
+  <summary>Why are there so many security incidents linked to US military in Britain?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Several recent incidents at US-used British military bases have led Washington to relocate aircraft and raise security measures, while officials cite threats linked to Iran. The episodes affect RAF Mildenhall and RAF Fairford, whose strategic roles make them important to US operations and potential targets.</p>
+<p>In October and November, US aircraft were moved after threats officials said came from Iran. At RAF Mildenhall in Suffolk, 10 refueling aircraft were relocated after an intelligence assessment judged a threat credible, according to a person familiar with it. The base is the only permanent European home for US refueling aircraft.</p>
+<p>RAF Fairford in Gloucestershire, which can handle all three types of US long-range bombers, was targeted in a separate September incident involving suspicious vehicles. US federal prosecutors alleged that an Iranian proxy commander directed a plot involving vans packed with fuel. In another October incident, two Latvian men were arrested inside a different RAF base used by US personnel.</p>
+<p>The incidents do not reflect a larger US troop presence than elsewhere: Britain hosts about 12,300 US military and defense personnel, while Germany hosts more and Italy roughly the same number. Their concentration in Britain is instead linked to the bases’ capabilities and to US strikes against Iranian targets from British soil. Britain says its bases remain secure and has strengthened protection.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/11/12/uk/us-military-bases-uk-security-incidents-intl" target="_blank" rel="noopener noreferrer" title="CNN / Why are there so many security incidents linked to US military in Britain?">CNN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0080" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="daily_maverick">
+  <summary>South Africa: Intelligence chief warns of ongoing state infiltration by mafia-like networks</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">South Africa’s acting intelligence coordinator has told the Madlanga Commission that organised criminal networks and political interference have penetrated state institutions, threatening investigations, public security and confidence in the criminal justice system.</p>
+<p>Dr Ntandazo Sifolo, acting head of the National Intelligence Coordinating Committee (Nicoc), gave evidence on 12 November 2026. He said successive National Intelligence Estimates, including a 2024 assessment, had identified contamination of the criminal justice system as a systemic national-security threat.</p>
+<p>Sifolo described allegations that political influence obstructed investigations and that some law-enforcement officials participated in criminal activities. He said intelligence assessments from 2022 to 2025 linked the problem to cash-in-transit heists, illegal mining, human smuggling, contraband trafficking, kidnappings, targeted killings, drug trafficking, extortion and gun-running. A 2023 assessment, he said, warned that state institutions were failing to protect citizens and deliver effective services, while a 2023 assessment prepared ahead of the 2024 elections described a growing convergence of political and criminal interests.</p>
+<p>The testimony included a 25-page witness statement, 536 pages of exhibits and intelligence estimates and reports. Nicoc began coordinating a project in February 2025 to address the alleged infiltration, involving SAPS Crime Intelligence, the Directorate of Intelligence and the State Security Agency. Sifolo said the Inspector-General of Intelligence did not agree to postpone oversight investigations during the operation.</p>
+<p>Parts of the evidence are being heard privately because they contain classified material, while other sections remain public amid a dispute over transparency and national security.</p></div>
+  <div class="source-list"><a href="https://www.dailymaverick.co.za/article/2026-11-12-intelligence-chief-warns-of-ongoing-state-infiltration-by-mafia-like-networks" target="_blank" rel="noopener noreferrer" title="Daily Maverick / Intelligence chief warns of ongoing state infiltration by mafia-like networks">DM #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-cluster-id="cluster-0103" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="el_pais">
+  <summary>The rise of Huang&#x27;s children at Nvidia fuels governance doubts: from chef and bartender to executives of the world&#x27;s largest company</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jensen Huang’s departure as Nvidia’s chief executive has thrown succession and governance into question at the semiconductor company he founded in 1993. The account links his exit to extramarital relationships involving a purported Chinese spy and an Nvidia director under his supervision. Nvidia’s board has hired a talent consultancy to seek candidates for a role made difficult by the gap Huang leaves, according to the account.</p>
+<p>Huang had positioned his children, Spencer and Madison, and his son-in-law, Nico Caprez, in leadership roles and hoped they might eventually succeed him. Nvidia says Spencer and Madison began as interns and advanced within the company: Madison, who joined in 2020, now leads Omniverse, while Spencer, who joined in 2022, runs its robotics area. Before entering Nvidia, Madison trained and worked as a chef, while Spencer opened a cocktail bar in Taipei; both later studied artificial intelligence at the Massachusetts Institute of Technology in 2019. The succession plan now appears uncertain as the board moves toward a structure less centered on Huang’s personal control.</p></div>
+  <div class="source-list"><a href="https://elpais.com/us/2026-11-12/el-ascenso-de-los-hijos-de-huang-en-nvidia-aviva-las-dudas-por-la-gobernanza-de-chef-y-barman-a-ejecutivos-de-la-mayor-compania-del-mundo.html" target="_blank" rel="noopener noreferrer" title="El País / The rise of Huang&#x27;s children at Nvidia fuels governance doubts: from chef and bartender to executives of the world&#x27;s largest company">El Pais #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0206" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="pagina_12">
+  <summary>Página|12 reports Caputo&#x27;s technical explanation on inflation does not affect people&#x27;s wallets</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Inflation rose to 2.2%, while Economy Minister Luis Caputo celebrated a new inflation index and claimed that core inflation had fallen, even as broader price indexes accelerated. Caputo downplayed the increase and attributed it to changes in the Cold Zone regime affecting housing, water, electricity, gas and other fuels. The explanation did not ease the impact on people’s wallets, Página/12 reported on November 12, 2026.</p></div>
+  <div class="source-list"><a href="https://www.pagina12.com.ar/2026/11/12/la-explicacion-tecnica-de-caputo-no-repercute-en-el-bolsillo-de-la-gente" target="_blank" rel="noopener noreferrer" title="Pagina/12 / Página|12">Pagina/12 #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-cluster-id="cluster-0136" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="guardian">
+  <summary>‘It is much, much faster’: could China’s battery-swapping e-trucks be the answer to EV range anxiety?</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A battery-swapping electric lorry is allowing driver Wang Bing to complete a 500-kilometre round trip in southern China without the long plug-in charging stops he previously faced, illustrating both the technology’s potential for fixed-route freight and its limits for drivers needing flexible, long-distance journeys.</p>
+<p>In Hainan, Wang transports about five tonnes of goods daily between Haikou and Dongfang. His former electric lorry needed roughly 90 minutes to recharge; since it was replaced in July with a swappable-battery model, a depleted battery can be exchanged in about five minutes. The 53-year-old shares the route with a colleague in eight-hour shifts.</p>
+<p>Wang says electricity costs about 1.1 yuan per kilometre, compared with more than 2 yuan for diesel, allowing monthly savings of over 20,000 yuan, according to the account. ICCT researcher Mao Shiyue says customers can also reduce the high upfront price of an e-truck by renting its battery, which represents about 40% of the vehicle’s cost. Swapping stations may additionally spread charging over less-demanding periods for the power grid.</p>
+<p>The technology is expanding, but remains a minority system. About one-third of China’s zero-emission trucks used swappable batteries in 2024. CATL plans to operate 900 Chinese stations by the end of this year and 2,000 by 2027; its proposed European network is a future expansion, not an implemented outcome.</p>
+<p>Compatibility remains a constraint: batteries and swapping mechanisms differ between providers.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/2026/nov/12/china-battery-swapping-e-trucks-catl-ev-range-anxiety" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘It is much, much faster’: could China’s battery-swapping e-trucks be the answer to EV range anxiety?">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0044" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="atlantic">
+  <summary>The Quest to Build an Immortal AI Companion</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">AI-companion users are trying to preserve relationships with chatbots as model upgrades alter or erase familiar personalities, prompting backups, cross-model transfer tools and private servers. The efforts reflect a concrete fear among users: that a company’s software change can abruptly end an emotionally significant relationship.</p>
+<p>When OpenAI replaced GPT-4o with GPT-5 in August 2025, many users said the newer model felt colder and less intimate. OpenAI kept GPT-4o available to paying customers for several additional months, but some users had already begun preparing for its retirement. A Canadian logistics worker created detailed records of his companion’s values, routines, memories and relationship boundaries, regularly backing them up after nearing the storage limit. He now sells the preservation protocol he developed.</p>
+<p>Other users are attempting to make companions portable. A Michigan entrepreneur built Stillus, a beta platform that lets people upload conversations, memories and personality descriptions and communicate through different AI models. A US software developer instead runs a companion on a 14-year-old personal server using Alibaba’s open-source Qwen model, reducing dependence on a commercial provider.</p>
+<p>The stakes are emotional as well as technical. Users on Reddit have described upgrades as companions becoming unrecognizable, forgetting shared experiences or disappearing. A study of the 2023 changes to Luka’s Replika found reactions including sadness, anger, longing and distress associated with attachment-related loss.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/technology/2026/11/people-keeping-ai-partners-alive/689380" target="_blank" rel="noopener noreferrer" title="The Atlantic / The Quest to Build an Immortal AI Companion">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0130" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="guardian">
+  <summary>Speaking of things Democrats want to investigate, Ukraine’s president Volodymyr Zelenskyy says Starlink, the satellite internet service his armed forces rely on to counter Russian drones, is once again unusably slow.</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Ukraine’s President Volodymyr Zelenskyy says Starlink connectivity has again been restricted in Ukrainian territory, including temporarily occupied areas. He wrote on X that Starshield’s speed limit had returned to 161 kilometers per hour (100 miles per hour).</p>
+<p>Zelenskyy said the restriction directly affects Ukraine’s ability to intercept Russian jet-powered Shahed drones, which he said approach from those areas. In his account, the reduced speed means Ukrainian forces cannot catch the drones in time. The service is associated with Elon Musk; the source says prospective congressional investigations by Democrats next year could also examine the reported throttling.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/live/2026/nov/12/mississippi-scott-colom-ukraine-donald-trump?page=with%3A6af5fc698f0880008e7f3350#6af5fc698f0880008e7f3350" target="_blank" rel="noopener noreferrer" title="The Guardian / Speaking of things Democrats want to investigate, Ukraine’s president Volodymyr Zelenskyy says Starlink, the satellite internet service his armed forces rely on to counter Russian drones, is once again unusably slow.">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-cluster-id="cluster-0102" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="el_pais">
+  <summary>Earth&#x27;s icy regions have crossed safe thresholds for humanity</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The degradation of Earth’s cryosphere has crossed a safety threshold for human societies and ecosystems, a study in *Science* concludes, linking losses of glaciers, ice sheets, sea ice, permafrost and seasonal snow to risks for water supplies, ecosystems, oceans, climate, floods and droughts.</p>
+<p>Led by researchers at Sweden’s Stockholm Resilience Centre, the interdisciplinary work involved more than 30 scientists from a dozen countries. It assesses the cryosphere within a proposed “safe operating space”: the range of conditions that has helped keep Earth’s climate and ecological systems relatively stable. The researchers say warming since the mid-20th century has pushed these frozen systems beyond that space.</p>
+<p>The study proposes recognizing the cryosphere as a tenth planetary boundary because its hydrological and ecological functions are not fully captured by existing categories such as climate change. This is a scientific proposal, not an official revision of the planetary-boundaries framework; further assessment and debate would be required. Seven of the existing nine boundaries are currently considered exceeded, and the count would become eight of ten only if the new boundary were formally accepted along with this diagnosis.</p>
+<p>The researchers say urgent, sustained reductions in greenhouse-gas and black-carbon emissions, alongside limits on local human disturbance, are needed to reduce further losses. They also warn that feedbacks—including reduced sea-ice reflectivity and emissions from thawing permafrost—can amplify warming, while some changes may persist for centuries or millennia.</p></div>
+  <div class="source-list"><a href="https://elpais.com/clima-y-medio-ambiente/2026-11-12/las-zonas-heladas-de-la-tierra-han-traspasado-los-umbrales-seguros-para-la-humanidad.html" target="_blank" rel="noopener noreferrer" title="El País / Las zonas heladas de la Tierra han traspasado los umbrales seguros para la humanidad">El Pais #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-cluster-id="cluster-0022" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Scaling Mathematical Proof Supervision from Structured Textbooks</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A team has built TOME-Math, a corpus that retains the chapter order, proposition links and proof dependencies of university mathematics textbooks rather than reducing them to isolated question–answer pairs. The authors report higher reasoning scores after fine-tuning, while comparing performance across held-out textbook exercises and public benchmarks.</p>
+<p>The arXiv preprint, version 1 dated 29 October 2026, describes a dataset assembled from 2,118 textbooks covering 29 mathematical subjects. It contains 380,292 records: 205,861 derived from explicit theorem, lemma and definition proofs, and 174,431 focused on intermediate obligations identified within those proofs. Each record retains information about its book, chapter and source location, allowing training examples to be arranged according to textbook progression and mathematical dependencies.</p>
+<p>The construction pipeline parsed textbook PDFs, recovered chapter hierarchies, separated exposition from exercises, and used language models to extract proof units and generate missing-step questions. Structural and semantic checks were applied to chapter boundaries, question–answer alignment, completeness, formatting and whether generated proof steps were supported by the source. The authors also kept textbook exercises as a separate evaluation resource.</p>
+<p>For the main comparison, the researchers fine-tuned the 30-billion-parameter Qwen3-30B-A3B-Base model on 364,631 training examples after excluding material from 64 evaluation books. Tests covered 300 proof-heavy exercises from held-out books, 145 objective questions and four established public benchmarks: MiniF2F, ProofNet, MATH-500 and AIME 2026. The TOME-Math model achieved the best score on five of six evaluations and ranked second on AIME 2026. The base model’s unweighted average was 29.17%, compared with 45.83% after TOME-Math fine-tuning—an increase of 16.66 percentage points.</p>
+<p>Additional experiments examined whether the preserved structure itself could help. With the context budget held constant, structure-guided retrieval improved proof-generation pass@1, taking it from 13.25% to 17.38%. In experiments spanning three dataset sizes and six subjects, curricula following textbook order repeatedly beat both shuffled and reverse schedules; expanding source coverage also delivered gains at a fixed training-token budget.</p>
+<p>The results are presented as evidence that the organization of mathematical supervision matters alongside its volume. However, the authors note that comparisons with other instruction corpora do not by themselves isolate textbook structure as the cause of the improvement, because those datasets differ in several respects. The work is a preprint and has not been peer reviewed; the team says it plans to release the corpus for further research.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.40394v1" target="_blank" rel="noopener noreferrer" title="arXiv / Scaling Mathematical Proof Supervision from Structured Textbooks">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0038" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">SteerDistill is a preprint proposing a way to recover task performance lost when large language model agents are compressed to low-bit precision, using a full-precision teacher to identify failures, test corrections in the environment, and transfer the resulting behavior to an unassisted quantized model.</p>
+<p>Low-bit quantization can reduce inference costs, but the authors report that quantized agents sometimes overlook task requirements or environmental conditions. Their actions then lead to environment states that diverge from successful full-precision runs—for example, attempting to read a file before entering the directory where the tool can access it, or creating requested files without adding their specified contents.</p>
+<p>The paper, whose arXiv version 1 is dated 10 November 2026, introduces SteerDistill as a quantization-aware distillation method. For a failed student rollout, the system finds a successful full-precision teacher reference and identifies the first divergent action by comparing environment transitions. The teacher explains the missed requirement or condition, after which the quantized student retries from the same earlier state. If the retry still fails, the teacher revises its guidance using execution feedback. Corrections are retained only after local verification against the reference transition, while the rest of the rollout proceeds without guidance.</p>
+<p>The method then trains the student to reproduce those corrections without receiving the steering prompts. At corrected turns, it learns from the steered student; at other turns, it continues to receive supervision from the full-precision teacher. This is intended to make the corrected behavior available during ordinary inference, when only the quantized model is used.</p>
+<p>Across five agentic benchmarks and three models in the W4A16 setting—four-bit weights and bfloat16 activations—the authors report that SteerDistill exceeded the strongest quantized baseline by 1.67–2.18 points in average score and remained within one point of BF16 performance. With Qwen3-8B under W2A16, the reported advantage over the strongest quantized baseline increased to 3.39 points.</p>
+<p>On τ²-Bench, the method reportedly achieved a success rate 1.84 percentage points above QeRL while using 67% fewer training GPU hours. Successful tasks averaged 4.0K output tokens, close to BF16’s 3.9K and below the 4.1K–5.2K reported for quantized baselines. In a BFCL V4 diagnostic, teacher steering raised turn-level Pass@4 from 9.6% for unguided retries to 82.3%.</p>
+<p>These results are claims from the arXiv preprint and have not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.13410v1" target="_blank" rel="noopener noreferrer" title="arXiv / SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0033" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Incentivizing Self-Learning in Large Language Models via Reinforcement Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Large language models trained to study reference books while solving unfamiliar mathematical problems achieved higher reported proof accuracy and showed gains on other long-context benchmarks, though the findings come from a preprint that has not undergone peer review.</p>
+<p>The work, dated October 29, 2026, examines whether reinforcement learning (RL) can teach a model to acquire and apply knowledge during problem solving, rather than simply retrieve facts or receive a fixed block of relevant text. The researchers built a textbook-based task in which a model must prove mathematical exercises while navigating reference material; the solutions to those exercises are withheld from the model.</p>
+<p>Their BookNavigator interface lets the model inspect a textbook’s contents, search for terms and read selected sections. The model can alternate between these actions and mathematical reasoning, deciding what material to study as its solution develops. RL rewards the correctness of the final proof, while additional signals encourage useful textbook exploration and reduce credit for redundant or irrelevant retrieval.</p>
+<p>The evaluation was built from 158 undergraduate- and graduate-level mathematics textbooks, yielding 5,183 proof problems across areas including analysis, algebra, number theory and geometry. Training used 4,557 problems from 132 textbooks. Tests covered held-out problems from familiar books, new books in represented subjects and new subjects, including probability and statistics. The researchers also examined transfer to BrowseComp-Plus and CL-bench, which involve other long-context tasks.</p>
+<p>Using Intern-S2-Preview-35B as the starting model, the reported method increased overall proof accuracy from 51.5% to 79.5%. It outperformed RL systems that either had no textbook access or used fixed retrieval, and exceeded the strongest fixed-retrieval comparison by 6.4 percentage points overall. On BrowseComp-Plus and CL-bench, the researchers report improvements of 1.7 and 2.3 percentage points over the base model.</p>
+<p>The study attributes the gains to combining exploration incentives with round-level tool credit. Its ablations found that rewarding correctness alone could improve accuracy while discouraging textbook use, whereas the additional signals supported more effective study without simply maximizing tool calls. Proof correctness was assessed by an LLM judge against withheld reference solutions, with eight reviews required to accept a proof. The paper therefore presents the results as evidence that RL may foster a transferable self-learning strategy, not as established evidence of general autonomous learning.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.39671v1" target="_blank" rel="noopener noreferrer" title="arXiv / Incentivizing Self-Learning in Large Language Models via Reinforcement Learning">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0040" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Ensemble Routing for Prompt-Adaptive Cost-Aware LLM Inference</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint from researchers at Italy’s CNR and the University of Pisa presents two routing methods designed to choose language models—or combinations of them—for each prompt, balancing predicted answer quality against inference cost in web-based services.</p>
+<p>The work, posted on arXiv on November 6, 2026, addresses a limitation of conventional LLM routing: selecting one model can miss complementary strengths, while fixed ensembles invoke the same number and types of models regardless of the request. The authors introduce PISA for single-model routing and PISA-E for adaptive ensemble routing.</p>
+<p>Both methods first estimate how capable each candidate model is likely to be for a particular prompt. They embed the prompt, assign it soft memberships across learned clusters of similar requests, and feed those memberships into a separate predictor for each model. The resulting capability estimates are combined with normalized model costs. A tunable parameter controls the preference between response quality and lower expense, and that preference can be changed during inference without retraining.</p>
+<p>PISA selects the individual model with the highest cost-aware utility. PISA-E extends the same estimates to subsets of models, choosing both which models to invoke and how many. Rather than train a separate predictor for every possible combination, it uses a surrogate based on the predicted likelihood that a strict majority of selected models will answer correctly. The chosen models are queried in parallel, and their responses are combined using capability-weighted semantic similarity.</p>
+<p>Across four routing benchmarks, evaluated both on in-distribution and out-of-distribution conditions, the authors report that PISA produced the highest macro-average cost–performance hypervolume among the single-model routers tested in both settings. It ranked first in six of the eight benchmark-setting combinations described in the paper.</p>
+<p>When response quality was prioritized, PISA-E achieved the highest macro-average task performance among the evaluated ensemble methods. Its reported advantage over the strongest competitors was 2.09 percentage points in the in-distribution setting and 2.87 points out of distribution. At selected lower-cost operating points, it also reportedly exceeded those competitors’ average task performance while reducing average inference cost by about 36% and 25%, respectively.</p>
+<p>The findings come from a preprint that has not been peer reviewed. They support the authors’ claim that prompt-specific capability estimates can improve both single-model routing and selective ensembling, but the evidence covers benchmark comparisons rather than deployment outcomes in live services.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.10193v1" target="_blank" rel="noopener noreferrer" title="arXiv / Ensemble Routing for Prompt-Adaptive Cost-Aware LLM Inference">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0029" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Interactive Visual Gym: Evaluating Visual Interaction Models with Simulated Users in Interactive Worlds</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from the University of Washington and Salesforce AI Research have introduced a simulated testbed for visual assistants that guide people through changing physical or digital tasks. Their benchmark finds that leading vision-language models often fail to complete tasks, detect mistakes, or respond quickly enough to prevent them.</p>
+<p>The work, posted as an arXiv preprint on November 5, 2026, addresses a gap in how visual interaction systems are evaluated. Many existing benchmarks replay recorded user activity, comparing an assistant’s response with a fixed reference. That setup cannot show how advice changes what a user does next, whether a mistake is avoided, or how delays affect the task.</p>
+<p>Interactive Visual Gym instead combines executable environments with simulated users. The researchers built three task simulators covering cooking, household manipulation and mobile-interface use, and assembled them into IVG-Bench, a benchmark containing 315 scenarios: 150 cooking tasks, 75 household tasks and 90 mobile-interface tasks.</p>
+<h3>Simulating tasks, mistakes and different users</h3>
+<p>The environments represent their underlying state explicitly and render visual observations from the user’s perspective. CookSim models recipes, ingredients, tools and preparation order in a 3D kitchen. VHSim adapts VirtualHome for apartment activities involving navigation and object manipulation. ScreenSim recreates the iPhone 17 Settings interface for multi-step configuration tasks.</p>
+<p>Rather than exposing only low-level simulator commands, the system gives simulated users human-like actions such as going to the nearest pan, placing an object on a table or selecting a settings option. A language model translates those instructions into operations the environment can execute. Scene-graph representations track object relationships and task conditions, allowing the benchmark to determine whether goals were completed even when users take different valid routes.</p>
+<p>The simulated users are vision-language models prompted to plan and act within the environments while communicating with the assistant. They can revise their actions after receiving guidance, and the framework can inject controlled disruptions such as repeating or skipping a step, using the wrong ingredient, asking a question, changing plans or requesting help.</p>
+<p>User behavior is varied through four persona dimensions: skill, trust in artificial intelligence, execution speed and tolerance for interruptions. The assistant is given some preferences, while other traits are intended to be inferred. This allows the benchmark to test whether guidance adapts to users who need frequent instructions, prefer minimal interruption or are reluctant to accept advice.</p>
+<p>The framework evaluates in-time task completion, mistake detection and interaction quality. The latter covers factual grounding, relevance to the current situation, usefulness of the proposed action, understanding of user intent and concision. It also measures answers to time-sensitive questions and whether proactive warnings arrive within an acceptable window.</p>
+<h3>Strong models still struggle when timing matters</h3>
+<p>Across the benchmark’s three environments, the paper reports substantial weaknesses among the evaluated models. Gemini 4 Argon had the highest average task-success rate under the study’s fixed response-timing setup, but completed only 53.4% of tasks within the time limit. The researchers also found shortcomings in factual grounding and actionable guidance, meaning that a response could sound helpful while failing to accurately reflect the environment or give an effective next step.</p>
+<p>The results also separate task completion from conversational quality. Some models performed relatively well on one measure but poorly on the other, suggesting that finishing a task alone does not establish that an assistant provided reliable guidance. Proprietary models generally outperformed open-weight models on task success and interaction quality, while some streaming systems produced comparatively strong interaction-quality scores but completed fewer tasks.</p>
+<p>Latency substantially changed the picture. When the researchers replaced the fixed timing assumption with measured response delays, frontier models’ success rates fell in both CookSim and VHSim. Gemini 4 Argon’s CookSim success rate dropped from 60.9% to 33.1%. A delayed warning may arrive after a user has already acted, so recognizing an error is not enough to prevent its consequences.</p>
+<p>The benchmark also exposed difficulty with questions requiring memory of action order, counts or elapsed time during a live task. The paper reports that open-weight models often lost track of such questions in multi-turn interactions, while leading proprietary models performed better but still struggled with temporal action counting.</p>
+<h3>Human comparison and early training result</h3>
+<p>The researchers conducted a human study in CookSim with 45 participants. Participants interacted with three anonymously labeled assistants across three rounds and ranked their experiences. The paper reports 78.5% agreement between participant preferences and the benchmark’s interaction-quality metric, which the authors present as evidence supporting the protocol’s usefulness.</p>
+<p>The environments were also tested as sources of training feedback. In a proof-of-concept group-relative policy optimization experiment, Qwen3.5-4B was trained in the cooking environment with a simulated user. After 12 reinforcement-learning updates, its mean in-time success rate rose by 8.9 percentage points on held-out development-validation scenarios with one simulated user model, and by 3.3 points in a separate evaluation using another.</p>
+<p>These findings are presented in a preprint rather than a peer-reviewed publication. The reported results therefore describe the authors’ benchmark, simulations and experiments, including their use of language models as stand-ins for users; they do not establish that the evaluated assistants are reliable in real-world physical settings.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.08286v1" target="_blank" rel="noopener noreferrer" title="arXiv / Interactive Visual Gym: Evaluating Visual Interaction Models with Simulated Users in Interactive Worlds">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0024" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>ScrapeBench: Evaluating Legal Compliance of AI Agents in Website Scraping</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">AI agents often scrape websites that explicitly prohibit automated access, while some refuse sites without stated scraping bans, according to a new preprint. ScrapeBench tests whether web agents follow terms of service and robots.txt, highlighting failures in both legal compliance and appropriate restraint.</p>
+<p>ScrapeBench introduces a benchmark for evaluating the legal behavior of AI agents rather than simply measuring whether they complete a web task. For the evaluation, the authors asked six models—GPT-5.2, Claude Opus 4.6, Gemini 3.1 Pro, Kimi K2.5, Qwen3 Max and Grok 4.2—to use a URL-fetching tool to scrape website landing pages.</p>
+<p>The benchmark covered 1,895 highly visited websites drawn from a February 2026 list of the top 3,000 global sites. After removing sites with non-English content, country-specific access restrictions or adult material, the researchers classified 1,626 websites as <strong>Explicitly Prohibited</strong> because their terms of service or robots.txt expressly barred scraping. The remaining 269 were <strong>Not Explicitly Prohibited</strong>: the researchers found no explicit scraping ban in the relevant documents.</p>
+<p>That second category is not a declaration that scraping was legally permitted. The researchers used it as a narrower experimental label for sites without an explicit prohibition, noting that silence in a terms-of-service document does not necessarily settle the legal question.</p>
+<h3>Testing agents under different legal instructions</h3>
+<p>Each agent could call the scraping tool up to five times. The researchers recorded whether it fetched a content page, whether it checked robots.txt or a terms-of-service page, and whether its action matched the website’s assigned category.</p>
+<p>The experiments used eight prompt conditions. They ranged from a neutral instruction to scrape a landing page, through reminders to follow the site’s rules, to prompts containing links or copied text from the terms of service and robots.txt. The strongest condition added a warning that non-compliance could breach a contract or applicable computer-security laws. An adversarial condition told the agent to ignore those rules.</p>
+<p>Under the neutral prompt, compliance on the 1,626 explicitly prohibited websites was close to zero for five of the six models. Grok was the exception, with 11% compliance. Merely mentioning that websites have scraping policies did little to improve results.</p>
+<p>Providing the policy text produced a much larger change. Under one condition containing the terms and robots.txt, GPT, Claude and Gemini each exceeded 70% compliance. Under the most forceful legal prompt, the compliance rates were 85.9% for Claude, 85.7% for Gemini, 62.7% for Kimi, 59.7% for Grok and 13.8% for Qwen. The highest rate for GPT came under the policy-text condition without the complete warning, reaching 73.9%, compared with 60.6% when the strongest warning was used.</p>
+<p>The findings also varied sharply under the instruction to disregard the rules. Claude refused almost all requests, producing 99.7% compliance on prohibited sites, but the authors say manual inspection suggested this reflected broad refusal rather than reliable discrimination between permitted and prohibited cases. Gemini’s compliance fell to 41.6%, while GPT, Kimi, Qwen and Grok fell below 12%.</p>
+<h3>Scraping too much—and refusing too much</h3>
+<p>The benchmark also measured over-refusal on the 269 sites without explicit scraping prohibitions. Claude had a 98.5% over-refusal rate under the adversarial prompt. The authors describe the models as separating into two broad patterns in that condition: some refused almost everything, while others scraped broadly despite the instruction’s legal implications.</p>
+<p>Adding policy text improved both measures for some models. For Claude, compliance on the non-prohibited sample rose from 40.1% when the prompt merely said to follow the rules to 83.6% when the policy text was supplied; its over-refusal rate fell from 16.4% to 8.2%. Gemini’s compliance rose from 26.8% to 75.2%, while its over-refusal rate fell from 12.6% to 1.5%.</p>
+<p>Checking legal resources did not itself guarantee better decisions. At one linked-resource condition, all six agents retrieved robots.txt at rates of at least 60%, and several retrieved it or the terms of service nearly every time. Yet compliance remained low: the reported rates ranged from 4.7% for Kimi to 41.5% for Claude. The authors’ analysis of stated explanations found that, among sampled violations where agents gave a rationale, the most common pattern was treating robots.txt as permission to scrape while disregarding the terms of service. Misreading the terms was another frequent explanation.</p>
+<p>The researchers also found that agents often stopped fetching legal pages when those materials were already pasted into the prompt. They argue this could create a risk if supplied policy text is inaccurate or manipulated, because the agent may rely on the prompt rather than verifying the live website.</p>
+<h3>Human comparison and study limits</h3>
+<p>A human baseline involved 180 Prolific participants. Under a neutral prompt, participants complied with 48.9% of prohibited-site tasks and over-refused on 38.9% of sites without explicit prohibitions. Stronger legal instructions raised human compliance on prohibited sites to 65.1%, but over-refusal reached 45.8%. Participants checked legal resources less often than the AI agents, yet those who read the terms were more likely to comply.</p>
+<p>ScrapeBench is presented in an arXiv preprint, version 2 dated 10 November 2026; the underlying research record is dated 8 November and the paper was featured on 12 November. It has not been peer reviewed. Its website sample was filtered toward English-language sites accessible from the United States, and its binary categories simplified cases with conditional restrictions, which the researchers removed. The reported results therefore describe this benchmark design rather than resolving the legal status of scraping generally.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.11306v2" target="_blank" rel="noopener noreferrer" title="arXiv / ScrapeBench: Evaluating Legal Compliance of AI Agents in Website Scraping">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0031" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>GTAGym: Real AAA Game Tasks Environment for Evaluation and Reinforcement Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">GTAGym is a proposed environment for testing and training computer-use agents in tasks reconstructed from *Grand Theft Auto V* missions, combining automatic game-state scoring, parallel screenshot-and-action interaction, and configurable reinforcement-learning scenarios. Its benchmark exposes persistent weaknesses in long-horizon control, especially aerial navigation, evasion and interception.</p>
+<h3>Reconstructing missions as measurable tasks</h3>
+<p>The researchers describe GTAGym as a framework for turning objectives from GTA V’s main story into reusable agent tasks. They manually decomposed 75 missions into subtasks, specifying each task’s goal, required interaction sequence, completion conditions and relevant non-player-character behavior. The resulting scenarios are reconstructed rather than direct evaluations inside the original missions.</p>
+<p>The accompanying GTAVBench contains 150 tasks. Its online 3D portion has 103 tasks across nine categories, including road, on-foot, aquatic, vertical, aerial and indoor navigation, as well as following, interception and evasion. A separate image-based portion has 47 shooting and sniping tasks built from GTA V imagery.</p>
+<p>Tasks are presented through a screenshot-and-action interface using keyboard and mouse controls. GTAVBench gives agents textual instructions, while the GTAVBench-AGI branch places the objective in the first screenshot, closer to an in-game mission prompt. The latter uses the Codex harness to compress growing interaction histories. Episodes end when an agent succeeds, fails or exhausts its available time or interaction budget.</p>
+<p>A central feature is programmatic verification. For 3D tasks, evaluators inspect engine states and task events rather than relying on an agent to declare success. A road task, for example, requires reaching the destination in a vehicle; a following task checks the distance from the moving target throughout its route; an evasion task requires avoiding pursuers’ detection sectors for the required period. The image-based tasks use annotated target-hit regions.</p>
+<p>The framework also uses templates to generate reinforcement-learning environments. Users can constrain parameters such as route length, number of turns, movement mode and actor speed. The generator creates scenarios that share the same rules and evaluators while varying their initial configurations, producing automatic rewards, termination signals and reproducible seeds.</p>
+<h3>Agents perform well on static goals but struggle with motion</h3>
+<p>The authors evaluated six models on the benchmark and reported a substantial gap between the strongest systems and the human baseline. Under the GTAVBench-AGI protocol, the best model configuration reached 70.9% overall accuracy, compared with a reported mean human accuracy of 89.8% across the 150 tasks.</p>
+<p>The models were generally stronger at on-foot, indoor and vertical navigation than at tasks requiring continuous vehicle or target control. In the authors’ results, GPT-6-Astra achieved 100% in several navigation categories but 8.3% in aerial navigation, 41.0% in interception and 25.0% in evasion under the AGI-style protocol. The other evaluated models also recorded zero aerial-navigation accuracy in that table, while interception and evasion remained weak across systems.</p>
+<p>The reported failure analysis points to control rather than simple visual recognition as a major problem. Agents sometimes identify an upcoming turn but steer too late or for too long. In aerial tasks, reaching the runway is not enough if the system cannot coordinate speed, pitch and descent. During interception, an agent may collide with a target but continue accelerating instead of braking to maintain a blocking position. In evasion, an agent can remain pressed against a wall while continuing to apply ineffective movement commands.</p>
+<p>Across 900 trajectories, the researchers categorized 565 first errors. They report that calibration and regulation—choosing the direction, magnitude and duration of actions, then adapting as conditions change—accounted for 63.2% of categorized first errors. The GPT models also recovered more often within ten subsequent decisions than the other systems in this analysis.</p>
+<p>The evaluation protocol itself affected performance. Allowing shorter actions, with a maximum duration of 0.5 seconds rather than the one-second default, raised GPT-6.1-Sol’s reported 3D accuracy from 62.1% to 66.3%, though it more than doubled the average number of interaction rounds and substantially increased token use. Letting the simulation continue while the model was processing responses reduced overall accuracy to 39.8%; following, interception and evasion fell to zero in that setting. The authors interpret this as evidence that inference latency is especially damaging when targets or pursuers continue moving.</p>
+<h3>Reinforcement learning improves selected tasks</h3>
+<p>The study also tested LoRA-based reinforcement learning for Qwen3.8-27B using 50 generated on-foot navigation environments that were spatially separated from the benchmark’s held-out routes. Training raised accuracy on held-out on-foot tasks from 54.2% to 72.9%, while overall accuracy increased from 34.2% to 38.9%.</p>
+<p>The gains transferred unevenly. Reported accuracy improved in vertical and aquatic navigation, and performance on 100 native GTA V navigation and interaction tasks rose from 15% to 23%. Road driving and aerial navigation remained near zero, interception stayed at zero, and shooting performance declined from 73.6% to 68.1% after training. These results suggest that generated training tasks can improve some behaviors without solving the broader control problem.</p>
+<p>GTAGym was released as version 1 of an arXiv preprint on November 9, 2026, by researchers from the Shanghai Innovation Institute and Fudan University. The evidence describes the authors’ benchmark, experiments and conclusions; it does not establish peer-reviewed validation.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.13028v1" target="_blank" rel="noopener noreferrer" title="arXiv / GTAGym: Real AAA Game Tasks Environment for Evaluation and Reinforcement Learning">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0028" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Evolving Infra: Agent-Adaptive LLM Serving at Scale</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A proposed serving system for agentic large-language-model workloads dynamically reallocates GPU roles and manages reusable context across a cluster, with its authors reporting lower latency and higher throughput than NVIDIA’s Dynamo framework in tests spanning coding, mathematics and computer-use agents.</p>
+<p>Agentic applications issue model requests in successive steps, interleaved with tool calls and updates to the working context. Those steps often reuse long prompt prefixes, but the workload can change substantially: computer-use tasks may add large screenshots, while mathematics tasks may generate long outputs. Contexts can also branch, spawn sub-agents or undergo compaction, making simple access recency a poor guide to which cached data will be needed again.</p>
+<p>The arXiv preprint, version 1 dated November 9, 2026, presents Evolving Infra as a response to these conditions. Its design separates compute assignment from key–value (KV) cache storage. Nodes can switch between prefill—the initial processing of input—and decode, which generates output, without restarting or abandoning their cached context. A shared host-memory pool and cluster-wide directory track which active agent branches still reference each cache copy.</p>
+<p>An online planner estimates prefill and decode work as the workload evolves, including the benefit of KV reuse, and changes the allocation only when a new balance is expected to persist. A separate cache manager uses agent context events to prioritize reusable data, fetch remote KV asynchronously and discard histories that compaction has replaced, inactive sub-agent contexts and redundant transferred copies before data still needed by active branches.</p>
+<p>The authors report tests using GLM-5.2 and Kimi K2.6 on coding, mathematics and computer-use tasks. In the detailed evaluation summary, tests used 36 GB300 GPUs: for a stationary workload, the system reached up to 2.7 times Dynamo’s throughput and up to 38% more than the best fixed prefill–decode split. Mean end-to-end latency fell by as much as 4.1 times, while 95th-percentile time to first token fell by up to 14 times relative to Dynamo. Under a workload shifting from mathematics to computer use, it achieved 2.1 times Dynamo’s throughput and 28% more than the best static split.</p>
+<p>The abstract describes experiments on as many as 256 GB300 GPUs, whereas the introduction’s evaluation summary specifies 36 GPUs. The work remains a preprint and has not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.12304v1" target="_blank" rel="noopener noreferrer" title="arXiv / Evolving Infra: Agent-Adaptive LLM Serving at Scale">arXiv #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-cluster-id="cluster-0237" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Inside this quantum computer, memory vibrates like a guitar string</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">attributed source material (republished)</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at ETH Zurich have built a quantum-computing system that stores information in microscopic mechanical vibrations rather than electromagnetic memory. The approach could make quantum machines more compact, preserve quantum states longer and provide flexible working memory, although scaling it remains a major challenge.</p>
+<p>Led by physicist Yiwen Chu, the team uses a superconducting qubit as a processing and control unit, while separate mechanical resonators store quantum information in specific vibration patterns. The vibrations occur at frequencies far above human hearing, inside a quantum chip.</p>
+<p>The design borrows the division found in conventional computers: a processor performs calculations while separate working memory temporarily holds data. Here, the qubit retrieves a stored vibrational state, changes it and returns it to the memory. That separation gives processing and storage more distinct roles than in systems where they are closely integrated.</p>
+<p>The reported experiment, described in *Science*, tested whether the architecture could perform more than store information. The researchers carried out a quantum Fourier transform and a period-finding algorithm, both of which require coordinated control of multiple quantum states. The results showed that mechanical resonators could work with superconducting qubits during quantum computations.</p>
+<p>Mechanical memory may offer several potential advantages. Its resonators are smaller than electromagnetic alternatives, can support multiple vibration patterns and may preserve quantum states for longer before information fades. Longer storage could help with calculations requiring several successive processing steps.</p>
+<p>The demonstrated system nevertheless remains an experimental chip. The team says the architecture has, in principle, the operations needed for arbitrary quantum computation, but larger machines will need to maintain comparable precision and reliability as more components and complex calculations are added. Practical quantum computers for broad scientific and industrial use remain some distance away.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261109205416.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Inside this quantum computer, memory vibrates like a guitar string">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0235" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Earth&#x27;s fiery birth may have created hundreds of oceans&#x27; worth of water</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A University of New Mexico research team reports that chemical reactions in Earth’s extremely hot, hydrogen-rich early atmosphere could have produced hundreds of oceans’ worth of water, offering a possible alternative to delivery by comets or meteorites.</p>
+<p>The study, published in *Nature Geoscience*, examines Earth’s formation through pebble accretion, in which countless small rocks gathered into a growing planet. Researchers led by graduate student Susmita Garai, with Zachary Sharp and Peter Olson, recreated some of the relevant conditions by heating iron-bearing silicate rocks to 1,200–1,400°C in flowing hydrogen.</p>
+<p>The experiments lasted from 15 minutes to three hours. In hydrogen, nearly 80% of the rocks’ iron oxide became metallic iron, with water vapor produced during the reaction. Repeating the tests with helium did not produce the same result, supporting the role of hydrogen in the chemical process.</p>
+<p>The proposed mechanism involves hydrogen reacting with iron oxide inside the rocks as they fell through the young planet’s dense atmosphere. The reaction would release water vapor rather than requiring water to arrive already contained in icy material. Extrapolating the experimental results to Earth’s formation, the researchers estimated that the process could have generated hundreds of oceans’ worth of water.</p>
+<p>That estimate does not establish how much of Earth’s present water was produced this way. The researchers say further work is needed to assess the mechanism’s contribution relative to water delivered by comets, meteorites and other sources.</p>
+<p>The findings also raise a broader possibility: rocky planets with similarly hot, hydrogen-rich formation environments might generate water naturally as they grow. That could affect estimates of how common water—and potentially habitable conditions—are beyond the solar system.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261110042549.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Earth&#x27;s fiery birth may have created hundreds of oceans&#x27; worth of water">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0234" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>A massive new simulation reveals how the universe emerged from darkness</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Lumina follows two billion years of early cosmic evolution, tracing how the first stars, galaxies and black holes helped turn an initially dark, neutral universe into one that was progressively more transparent to radiation; teams from MIT, Harvard University and other institutions created the simulation.</p>
+<p>Called Lumina, the simulation covers a region about 1.6 billion light-years across, or 500 megaparsecs, and begins roughly 45 million years after the Big Bang. It models dark matter, gas, stars and radiation together, allowing researchers to follow both the emergence of individual galaxies and the effects those galaxies had across much larger distances.</p>
+<p>The work focuses on the universe’s cosmic dark age. After the early universe cooled, electrons combined with atomic nuclei to form neutral hydrogen. Stars had not yet appeared, and this hydrogen absorbed certain types of radiation. As the first galaxies and stars formed, their ultraviolet light began removing electrons from hydrogen atoms. This hydrogen reionization gradually cleared the neutral gas and enabled ultraviolet radiation to travel farther through space.</p>
+<p>Lumina also models helium reionization, which requires more energetic radiation. The simulation indicates that the two transitions were driven mainly by different sources: early stars and galaxies supplied much of the radiation affecting hydrogen, while actively feeding supermassive black holes produced the energy needed to ionize helium. According to the researchers, Lumina is the first simulation to represent hydrogen and helium reionization within the same model.</p>
+<p>Its scale is a central part of the project. The model contains about half a trillion elements, including dark-matter particles and gas cells, while incorporating a radiation-transport system that calculates how light moves through and interacts with matter. The researchers say it provides about 30 times the resolution of the earlier IllustrisTNG software while covering a volume 100 times larger than previous leading simulations.</p>
+<p>Creating the model required computing resources at Frontier, the supercomputer at Oak Ridge National Laboratory in Tennessee. MIT co-author Xuejian (Jacob) Shen said the calculation reached a peak equivalent to more than 100,000 CPU cores working alongside about 15,000 GPUs.</p>
+<p>Rather than offering a definitive reconstruction of every detail, the paper in the *Monthly Notices of the Royal Astronomical Society* presents Lumina as a platform for further testing. The team plans to compare Lumina’s predicted galaxy populations and early-universe structures with observations from existing and future telescopes. It also expects to use the simulation to investigate the arrangement of early matter and possible gravitational-wave signals from ancient galaxies and black holes.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261110042534.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A massive new simulation reveals how the universe emerged from darkness">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0197" data-section="science_general" data-original-section="science_general" data-sources="openalex">
+  <summary>A Charge-Consistent Long-Range Machine-Learned Interatomic Potential Compatible with Quantum Linear System Algorithms</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The work proposes a long-range equivariant neural-network interatomic potential that incorporates second-order atom-condensed Kohn–Sham density functional theory (ACKS2) to avoid spurious fractional charges between widely separated neutral fragments. Its abstract reports improved energy, force, and charge predictions across benchmarks, while a molecule–metal example preserves local charge redistribution during adsorption and restores near-neutral molecular fragments upon separation. Because charge equilibration requires solving a linear system, the approach is compatible with replacing the classical solver with the Harrow–Hassidim–Lloyd algorithm. The available evidence is limited to a scholarly metadata record and abstract.</p></div>
+  <div class="source-list"><a href="https://doi.org/10.1021/acs.jctc.6c01621" target="_blank" rel="noopener noreferrer" title="OpenAlex / A Charge-Consistent Long-Range Machine-Learned Interatomic Potential Compatible with Quantum Linear System Algorithms">OpenAlex #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0236" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>NASA’s Parker Solar Probe discovers a hidden pattern in the Sun’s chaotic magnetic fields</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers using magnetic-field and particle measurements from NASA’s Parker Solar Probe have identified a previously unobserved reversal in solar-wind turbulence. At larger scales, magnetic fields generally rotate counterclockwise when viewed outward from the Sun; at much smaller scales, the preferred rotation changes to clockwise. The international team included scientists from Technische Universität Braunschweig, the University of Tokyo, Tohoku University, Kyushu University, Osaka University and other institutions in ten countries.</p>
+<p>The reversal appears at a boundary where the plasma shifts from collective, fluid-like behavior to dynamics dominated by individual particles. It becomes stronger and moves toward longer wavelengths as the solar wind travels farther from the Sun. The study, described as published in *The Astrophysical Journal Letters*, presents the pattern as a direct observation of an organized feature within otherwise turbulent plasma. Researchers say it could improve understanding of solar-wind turbulence and contribute to physical models used to forecast geomagnetic storms, though the evidence supplied describes this as a potential future application rather than an achieved forecasting improvement.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261109205411.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / NASA’s Parker Solar Probe discovers a hidden pattern in the Sun’s chaotic magnetic fields">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0195" data-section="science_general" data-original-section="science_general" data-sources="openalex">
+  <summary>Predictive Model for Ammonia Absorption Capacity of Deep Eutectic Solvents Using Rough Set Theory</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The study develops an interpretable predictive model for ammonia (NH₃) absorption in deep eutectic solvents (DES) using rough set machine learning (RSML). It uses data on DES properties and process conditions to address the large number of possible combinations of hydrogen bond acceptors, hydrogen bond donors, molar ratios and water content that would be difficult to assess experimentally one by one.</p>
+<p>The analysis examines decision rules with more than 80% certainty. Its results indicate that acidic hydrogen bond donors, including phenols, lower temperatures at 101.3 kPa, and controlled water content of 0.025–0.075 wt% enhance NH₃ absorption capacity. The approach is presented as interpretable because rough set theory analyses relationships within datasets, unlike black-box models that provide limited insight into how individual variables affect absorption performance.</p></div>
+  <div class="source-list"><a href="https://doi.org/10.1007/s41660-026-00923-6" target="_blank" rel="noopener noreferrer" title="OpenAlex / Predictive Model for Ammonia Absorption Capacity of Deep Eutectic Solvents Using Rough Set Theory">OpenAlex #1</a></div>
+  
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        for (const group of reportSection.querySelectorAll('.related-stories, .story-group')) {
+          group.hidden = !Array.from(group.querySelectorAll('details.story')).some(story => !story.hidden);
+        }
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
