@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-11-15</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .story-group {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+    .related-stories {
+      margin-left: 16px;
+    }
+    .related-stories > h3 {
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-11-15</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-cluster-id="cluster-0234" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>At Least Two Dead From a Methane Gas Explosion in a Mine in Central Colombia</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A methane gas explosion in a coal mine in La Playa, a hamlet in Chita municipality, Boyacá, central Colombia, killed at least two of the four workers inside the shaft, officials reported Saturday. The National Mining Agency said two bodies had been evacuated, while rescuers continued searching for the other two miners, who remained trapped. The explosion occurred Friday afternoon, and rescue teams worked through difficult conditions caused by a collapse, including overnight ventilation and mine-support operations.</p>
+<p>The agency said its mine-rescue teams were still working at the site to locate and extract the remaining workers. The incident follows another mine explosion less than a month earlier in Landázuri, Santander, where four workers died. Underground coal mining is common in parts of Colombia’s Andean region, and methane explosions are among the risks associated with the activity.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/at-least-two-dead-from-a-methane-gas-explosion-in-a-mine-in-central-colombia" target="_blank" rel="noopener noreferrer" title="Telesur English / At Least Two Dead From a Methane Gas Explosion in a Mine in Central Colombia">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0112" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="global_voices">
+  <summary>Letter from a jailed Azerbaijani political prisoner reveals deadly consequences of silence</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A letter from Azerbaijani political prisoner Bahruz Samadov, dated October 27, 2026, says continued international silence is worsening conditions for dissenters. It describes his imprisonment, reported health risks and the failure of appeals to overturn his conviction.</p>
+<p>Samadov, a political scientist, peace activist and former PhD candidate at Charles University in Prague, was detained by Azerbaijan’s State Security Service in Baku on August 21, 2024. Prosecutors charged him with high treason over WhatsApp exchanges with Armenian peace activists and publicly available information. Samadov rejected the allegations; his attorney said existing case law did not support prosecutors’ indirect-espionage theory.</p>
+<p>The Baku Grave Crimes Court imposed a 15-year prison sentence on Samadov on June 23, 2025, following proceedings held behind closed doors. The Baku Court of Appeal and Azerbaijan’s Supreme Court upheld the verdict in September 2025 and September 2026, respectively.</p>
+<p>Samadov presents his prosecution as part of Azerbaijan’s wider repression targeting civil society, independent outlets, politicians and academics. He argues that the Trump administration has taken no publicly known action over severe human-rights violations, despite appeals from political prisoners and international calls for their release. Amnesty International says his detention is arbitrary and that he has twice attempted suicide; it also says he has been kept alone in his cell and refused medical treatment. Samadov urges Washington to raise Azerbaijan’s human-rights record in its dealings with Baku.</p></div>
+  <div class="source-list"><a href="https://globalvoices.org/2026/11/14/letter-from-a-jailed-azerbaijani-political-prisoner-reveals-deadly-consequences-of-silence" target="_blank" rel="noopener noreferrer" title="Global Voices / Letter from a jailed Azerbaijani political prisoner reveals deadly consequences of silence">GV #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0074" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="cnn">
+  <summary>The Trump administration is diverting billions in health funding away from low-income countries, defying Congress’ plans</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Trump administration is planning to redirect or withhold most US international family-planning aid and cut broader global-health assistance, affecting programs in low- and middle-income countries that provide contraception and other medical services.</p>
+<p>A preliminary State Department allocation for fiscal 2026 would repurpose almost all of the $607.5 million Congress allocated for overseas contraception and reproductive-health services; another account describes about $605 million as redirected or withheld. A September memo signed by Secretary of State Marco Rubio authorizes up to $125 million in foreign-aid diversions for partners’ energy-security needs, including more than $48 million from family-planning aid. The documents provide few details about how the redirected money would be spent.</p>
+<p>The plans would also move $888 million into a global-health “innovation fund” supporting US companies, while an analysis by Public Citizen, Partners In Health and Population Action International found more than $1.6 billion in cuts to health funding for foreign countries compared with 2024. South Africa, Tanzania and Zimbabwe face cuts exceeding $100 million each; eight countries, including Afghanistan, Somalia, Sudan and Yemen, have had funding reduced to zero since 2024.</p>
+<p>US family-planning aid has supplied contraceptives to millions of women. The Guttmacher Institute estimated that such investment prevented 34,000 maternal deaths in 2024. Nonprofit groups and lawmakers say the diversions disregard Congress’s spending decisions.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/11/14/world/trump-administration-foreign-aid-global-health-diverted-intl" target="_blank" rel="noopener noreferrer" title="CNN / The Trump administration is diverting billions in health funding away from low-income countries, defying Congress’ plans">CNN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0083" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>Man, twin daughters found dead in Ctg</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Police recovered the body of 50-year-old Md Jahed Hossain and his five-month-old twin daughters, Jarin Jannat and Jasia Jannat, from a locked room at his in-laws’ home in Banshkhali upazila of Chattogram on Friday evening. The incident occurred around 6:00pm in Mawlar Para, Pui Chhari union. Police and local residents said Jahed’s wife and other family members were away on an errand when the room was locked from inside; they found the bodies after returning.</p>
+<p>A Banshkhali Fire Service and Civil Defence team reached the scene around 6:00pm, according to station official Md Mizanur Rahman. He said Jahed was found hanging from a beam, while the children were found on the floor beside a bed. Police sent all three bodies for autopsies. Officer-in-Charge Md Robiul Haque said legal steps would be taken after the autopsy reports are received.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/crime-justice/news/man-twin-daughters-found-dead-ctg-4324086" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Man, twin daughters found dead in Ctg">TDSB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0002" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="agencia_brasil">
+  <summary>Brazil: Social support, culture, and education led a youth to abandon crime</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Brazil, Anderson de Sousa Barbosa’s path from street life and adolescent offending to construction work is presented as a case for social support, cultural access and education over early incarceration. Now 38, he is raising a family and preparing for the birth of his third child.</p>
+<p>With drug-using parents, Anderson lived on the streets from age 12 and obtained a shack in Rio de Janeiro’s Cidade de Deus at 14. He said hunger, isolation and the desire for clothes and leisure drew him into drug trafficking and robberies. After an attempted robbery at 16, he spent about two years in Brazil’s socio-educational system, which he says offered neither study nor courses and intensified his anger.</p>
+<p>After leaving at 18, he returned to petty crime until joining the Moleque Movement. The project exposed him to places such as theaters and classical-music performances and helped him complete a civil-construction course. Anderson credits its support, particularly from co-founder Monica Cunha, with helping him leave crime behind. He now works in construction, rising at 4 a.m. for a 6 a.m. shift, and helps raise two stepchildren.</p>
+<p>Cunha, whose son was killed by police, says the movement supports families and young people who have committed offenses while challenging racism and inadequate application of Brazil’s Child and Adolescent Statute. Her account links many affected youths to poverty, domestic violence and families lacking time and resources.</p></div>
+  <div class="source-list"><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-11/revolta-e-abandono-fizeram-jovem-entrar-no-mundo-do-crime" target="_blank" rel="noopener noreferrer" title="Agencia Brasil / Social support, culture, and education led a youth to abandon crime">AB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0114" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>Terror from the skies: drones are redefining warfare in Sudan, and massacring its civilians</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Drone strikes are killing civilians across Sudan, with reported tolls of at least 139 in Al-Dibab and 103 in Nyala, while the UN says at least 306 people died in drone attacks during the first three weeks of October and hundreds more were injured.</p>
+<p>On the evening of 18 October, a drone struck a transport hub near a market in Al-Dibab, West Kordofan, where people were gathering to board trucks. A second strike hit the same site 10 minutes later, killing at least 139 people. Eight days afterward, another drone hit a crowded market in Nyala, South Darfur’s capital. Emergency Lawyers estimated 103 deaths. A resident said his 19-year-old son was among those killed and that more than 70 bodies were buried together.</p>
+<p>Drone use has increased sharply since Sudan’s war began in April 2023. The Centre for Information Resilience identified 21 UAV models used by the opposing forces, including larger long-range systems capable of carrying precision-guided munitions. The UN Human Rights Office said drone strikes caused at least 880 civilian deaths—more than 80% of conflict-related civilian deaths—from January through April.</p>
+<p>The attacks are also damaging essential services. In early November, the UN humanitarian coordinator said strikes were disrupting electricity, water, fuel and aid deliveries, leaving hospitals unable to provide dialysis, lighting or surgery. UNICEF said drones caused two-thirds of child injuries and deaths in Sudan this year, bringing attacks into areas previously considered safe.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/14/drones-redefining-warfare-sudan-massacring-civilians" target="_blank" rel="noopener noreferrer" title="The Guardian / Terror from the skies: drones are redefining warfare in Sudan, and massacring its civilians">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0073" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="cna">
+  <summary>Singapore: &#x27;Very inconvenient&#x27;: Residents, shop owners frustrated by indiscriminately parked bicycles despite stepped-up enforcement</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Singapore’s stepped-up enforcement against indiscriminate bicycle parking has not stopped obstructions at some housing estates, transport hubs and shops, affecting postal workers, older residents, wheelchair users and cyclists who struggle to pass through walkways or find usable parking spaces.</p>
+<p>At an HDB estate along Admiralty Drive, 55-year-old postal worker Mdm Kua said bicycles and personal mobility devices are placed in front of letterboxes almost daily. She has to move them before delivering mail, a task she has done during 15 years with SingPost. In Sembawang, 69-year-old resident Mrs Tan said bicycles near her block’s entrance can reduce the passageway to about a metre.</p>
+<p>The problem remains visible despite action by the Land Transport Authority (LTA). The authority said it removed 186 bicycles from parking areas at key transport nodes and elsewhere during the first half of 2026, and another 303 from July to October. It said obstructing bicycles can be moved to designated areas or impounded, while bicycles showing signs of disuse and left unmoved for more than seven days may be tagged for removal.</p>
+<p>LTA also said recent legal amendments will shorten the reclaim period for impounded bicycles from 30 days to seven, followed by seven days’ notice before disposal. During a visit to nine locations, bicycles were generally orderly at most MRT stations, but officials observed improper parking near Paya Lebar and Admiralty stations. The authority is exploring extra or alternative parking, including better use of existing space.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/singapore/bicycle-indiscriminate-parking-mrt-stations-cyclists-6551666" target="_blank" rel="noopener noreferrer" title="CNA / &#x27;Very inconvenient&#x27;: Residents, shop owners frustrated by indiscriminately parked bicycles despite stepped-up enforcement">CNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0086" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="dawn">
+  <summary>Broken record: Quaid’s visit, an RSS cell, and Dawn under attack</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Pakistan in September 1947, Mohammad Ali Jinnah and Fatima Jinnah visited refugee camps as displaced Muslims arrived after communal violence, while reports from the same week described an alleged RSS network in Karachi and an armed attack on Dawn’s Delhi press.</p>
+<p>A September 18 report detailed the Jinnahs’ visits to three refugee camps and a transit centre. Refugees described murder, arson and communal violence in Indian states and East Punjab; many had left behind land and wealth and reached Pakistan impoverished. Jinnah urged them to bear their hardships and said the state would do what it could to help, according to the account.</p>
+<h3>Violence and pressure on the press</h3>
+<p>A September 17 edition reported that authorities had arrested 30 alleged RSS leaders in Karachi and confiscated explosives after a bomb explosion led them to what the report described as a wider underground organisation. It said the group’s leaders and cadres later left for India, followed by other extremists.</p>
+<p>The retrospective also recounts an attack on the Dawn Delhi press on September 14. Citing the BBC, the report described a two-hour gun battle involving the press and military. Delhi staff told colleagues in Karachi that they remained surrounded by danger. Dawn presents the episodes as early examples of displacement, political violence and threats to journalism after Partition.</p></div>
+  <div class="source-list"><a href="https://www.dawn.com/news/2044514/broken-record-quaids-visit-an-rss-cell-and-dawn-under-attack" target="_blank" rel="noopener noreferrer" title="Dawn / Broken record: Quaid’s visit, an RSS cell, and Dawn under attack">Dawn #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0140" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>LGBTQ+ protesters defy crackdown in Turkey to march with Cop31 activists</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Queer and gay protesters in Antalya, Turkey, helped lead a civil-society climate march on Saturday, displaying rainbow flags despite increased pressure on LGBTQ+ groups and extensive police controls around the demonstration.</p>
+<p>International civil-society campaigners formed a cordon around the LGBTQ+ participants as they unfurled the flags. Őzgǔr, a 20-year-old Turkish activist, marched with one wrapped around her shoulders and said doing so felt dangerous because police would normally prevent it.</p>
+<p>Turkey’s LGBTQ+ groups have faced increased persecution since September, with police targeting activists in their homes and at offices of rights-focused NGOs. One activist, Beren, said she was glad to wave the flag but wished a friend could join her; she said the friend was detained because she is trans.</p>
+<p>Police searched attendees and their bags twice at Aydin Kanza Park, checked protest placards and photographed some slogans, while steel barriers sealed the route until the march ended. Organisers had planned the LGBTQ+ participation carefully, distributing flags only after international groups and media had surrounded the activists.</p>
+<p>Turkish environmental activists said the march also created space to draw attention to local grassroots campaigns defending villages and forests. The demonstration came as COP31 reached its halfway point, with negotiations continuing and little progress reported on substantive issues.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/14/lgbtq-protesters-defy-crackdown-in-turkey-to-march-with-cop31-activists" target="_blank" rel="noopener noreferrer" title="The Guardian / LGBTQ+ protesters defy crackdown in Turkey to march with Cop31 activists">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0061" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="bbc">
+  <summary>Arrested generals and a threatened VP: President&#x27;s son fuels Ugandan succession fever</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Uganda’s army chief, Gen Muhoozi Kainerugaba, has intensified a succession struggle by threatening Vice-President Jessica Alupo while at least a dozen senior officers have been arrested, deepening uncertainty over President Yoweri Museveni’s eventual successor.</p>
+<p>Over the 15 months to November 2026, generals and senior officers have been detained under Kainerugaba, Museveni’s son and a potential presidential successor. Some face allegations including treason, corruption and providing false intelligence; others have been released after Kainerugaba said he had forgiven them. The military says the arrests target corruption and criminality, while political scientist Dr Gerald Bareebe argues that officers seen as opposing Kainerugaba are being pushed aside. A security analyst, Freddie David Egesa, rejects the idea of an army purge and says investigations involve several security agencies.</p>
+<p>The succession dispute has also reached the ruling National Resistance Movement (NRM). A recent leadership meeting reportedly failed to agree on a proposal to position Kainerugaba as Museveni’s successor, after opposition from several attendees, according to AFP. ChimpReports gave a different account, saying most speakers supported his potential presidency. NRM Secretary General Richard Todwong Awany denied that the party had rejected the proposal and said decisions would be communicated through the proper channel.</p>
+<p>In posts later deleted, Kainerugaba demanded Alupo’s job, questioned her loyalty and threatened dismissal and possible arrest. Alupo remains vice-president and has not publicly responded.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cmlydy0xw45wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Arrested generals and a threatened VP: President&#x27;s son fuels Ugandan succession fever">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0082" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>Savar man arrested over wife’s murder</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A man was detained in Savar, Bangladesh, after his wife, Rozina Begum, 30, was allegedly killed at their home in the Tetuljhora area. Police, citing local residents, identified the suspect as Bablu Mia, 40, and said he used a knife during a morning argument over a family dispute. Neighbours later handed him to police. Bablu works as a street vendor, while Rozina was employed at a local garment factory, police said.</p>
+<p>Police recovered Rozina’s body and sent it to the morgue at Shaheed Suhrawardy Medical College Hospital in Dhaka for an autopsy. Md Mosharraf Hossain, an investigation inspector at Savar Model Police Station, said the process of filing a case was underway and that Bablu would be formally shown as arrested in the case and produced before a court the following day. The account of the killing was attributed to police and local residents.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/crime-justice/news/savar-man-arrested-over-wifes-murder-4324091" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / Savar man arrested over wife’s murder">TDSB #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-cluster-id="cluster-0195" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>Be wary of AI companionship becoming an emotional necessity</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In July 2026, the “Interim Measures for the Management of AI Personified Interactive Services” took effect, addressing risks in chats with AI agents designed for emotional companionship. Several domestic apps let users create virtual personalities through prompts and then converse with them through large language models. The services are becoming a substantial emotional-companionship industry, while more people use them to meet social and emotional needs.</p>
+<p>The systems can provide immediate, affirming and nonjudgmental responses, potentially reducing loneliness and offering a space to express feelings. But the discussion warns that heavy users may come to depend on these interactions as an emotional necessity, treating an always-available simulated relationship as preferable to less predictable human relationships. It identifies particular concern for adolescents and others with strong attachment to the services. The measures address healthy content, avoidance of emotional dependence and prevention of excessive use, while the stated goal is for such technology to help people engage more fully in real social life.</p></div>
+  <div class="source-list"><a href="http://health.people.com.cn/n1/2026/1114/c14739-40833721.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Be wary of AI companionship becoming an emotional necessity">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0249" data-section="china_domestic" data-original-section="china_domestic" data-sources="xinhua_en">
+  <summary>China steps up coverage of innovative drugs under medical insurance</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China unveiled revised national medical-insurance and commercial innovative-drug lists on Nov. 14, with the National Healthcare Security Administration (NHSA) saying the changes will take effect on Jan. 1, 2027. The national list adds 107 medicines, including 51 Class 1 innovative drugs that had not yet been marketed in China or abroad; the NHSA said they target needs in cancer, rare diseases, chronic conditions and mental-health disorders.</p>
+<p>The commercial list, introduced in December 2025, adds 12 medicines and reaches 28, including a CAR-T therapy described by the administration as the world&#x27;s first for solid tumors and China&#x27;s first gene therapy for hemophilia. The administration said the catalog now includes 3,331 Western and traditional Chinese medicines, following its ninth adjustment since 2018.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261114/633ecfacfae144e9bfbe7beb5d551e31/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China steps up coverage of innovative drugs under medical insurance">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0192" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China: From &#x27;Having Hardware&#x27; to &#x27;Being Able to Apply&#x27; AI-empowered Rural Education Development</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">technology_and_ai_society</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Kuaishou Public Welfare recently released a collection of 30 AI-integration cases in Beijing under its “Enlightening Minds Plan,” highlighting how rural schools in China are moving from acquiring hardware to applying low-cost tools in teaching. At Wudong Primary School in Liangjiang County, Chongqing, students use recycled materials to build competition tracks and AI-generated code in science practice; the school has won Chongqing’s digital-information-literacy activity for three consecutive years and received multiple World Robotics Championship awards, while five students entered key senior high schools on merit.</p>
+<p>The cases report practical gains in several schools. At Fanjia Primary School in Sichuan, a teacher used a mobile phone and free AI tools for student action analysis and fitness grouping, reporting a 60% reduction in injuries and a reduction in preparation work from three days to 20 minutes. A Tibetan ethnic boarding school in Qinghai reported cutting class-preparation time from three hours to 40 minutes and grading work by half through bilingual and differentiated teaching. The initiative also plans cooperation with education bureaus, schools and foundations in 10 counties, including 10 model schools, teacher-development programs and digital upgrades. Its three-year target is more than 2,000 rural schools, 30,000 teachers and 5 million rural students.</p></div>
+  <div class="source-list"><a href="http://finance.people.com.cn/n1/2026/1114/c1004-40833839.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / From &#x27;Having Hardware&#x27; to &#x27;Being Able to Apply&#x27; AI-empowered Rural Education Development">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0196" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China: Online games also have a rule-of-law safeguard</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Jiading District People’s Court has used four online-game disputes to define responsibilities for operators, guardians and players, addressing unauthorized spending by minors, abusive usernames and paid random-draw systems.</p>
+<p>The court’s review comes as China’s online-game user base reached 584 million by June 2025, according to the 56th China Internet Network Development Statistical Report cited in the account. The cases reflect growing disputes over purchases, community rules, random rewards and service changes. Jiading District, in Shanghai, is described as a major game-industry center.</p>
+<p>In one case, a 12-year-old used his grandmother’s authenticated mini-program account to make 46 purchases totaling 8,491 yuan in a week. The court found that the child’s actions were incompatible with his age and capacity and that the contract was invalid. It also identified failures by both the guardian, who did not adequately protect the phone and payment access, and the operator, which relied on WeChat identity data without additional verification or facial checks. The operator was ordered to refund 5,000 yuan rather than the full amount sought.</p>
+<p>The court also upheld platform sanctions against a player who repeatedly used another player’s real name in insulting nicknames, while stressing that account penalties must be proportionate, documented and appealable. In a separate lottery dispute, it rejected a refund claim because one player’s lower-than-advertised results did not establish that the published probability was false. Operators were urged to disclose probabilities and retain data supporting them.</p></div>
+  <div class="source-list"><a href="http://society.people.com.cn/n1/2026/1114/c1008-40833796.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Online games also have a rule-of-law safeguard">PDE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-cluster-id="cluster-0091" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="el_pais">
+  <summary>Experts deem Ayuso’s order prohibiting pro-strike messages unconstitutional</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Madrid’s regional government has announced an instruction restricting pro-strike messages in publicly funded schools, prompting two constitutional-law experts to say it violates freedom of expression and trade-union rights, while the indefinite teachers’ strike continues and the measure remains unenforced.</p>
+<p>On October 14, the facades of Madrid’s publicly funded non-university education centers displayed green posters supporting the strike, while some teachers sold strike merchandise at school gates to help finance the walkout. Messages also appeared on balloons in the Usera district. Some posters had already been removed by school management teams before the government announcement.</p>
+<p>The instruction, issued by the government of Isabel Díaz Ayuso on the day of the general strike, says political, ideological or partisan opinions must not be conveyed to students. It prohibits related banners, posters and symbols in facades, corridors and other spaces used by minors, while exempting union noticeboards. The regional government says school administrations must remove such material and report incidents. Education Minister Mercedes Zarzalejo has also said that digital platforms, school websites, social networks and corporate email cannot be used to distribute political manifestos or union messages.</p>
+<p>The government presents the measure as an effort to prevent ideological indoctrination in schools. Gerardo Pérez, a constitutional-law professor at the University of La Laguna, argues that messages informing people about a strike or making labour demands are protected under public-service, strike and association law. Gabriel Moreno of the University of Extremadura likewise says a general prohibition could restrict protected expression and discourage participation in the strike.</p>
+<p>The order has not yet entered into force. The Madrid strike committee has denounced it, and Pérez says it could challenge the instruction in court once it is published in the regional official gazette. He also said any later sanctions could be contested. A fast-track fundamental-rights procedure might be available, although he expects a ruling could arrive after the strike ends; such a judgment could nevertheless establish precedent.</p>
+<p>The dispute comes alongside separate legal challenges over the regional government’s handling of negotiations and a letter sent to teachers. Directors’ association ADiMAD has supported the strike and rejected the government’s suggestion that Madrid’s public schools are engaging in political or ideological indoctrination.</p></div>
+  <div class="source-list"><a href="https://elpais.com/educacion/2026-11-14/los-expertos-ven-inconstitucional-la-orden-de-ayuso-para-prohibir-mensajes-en-favor-de-la-huelga-educativa.html" target="_blank" rel="noopener noreferrer" title="El País / Experts deem Ayuso’s order prohibiting pro-strike messages unconstitutional">El Pais #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0200" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="peoples_daily_en">
+  <summary>Improving Copyright Adjudication Rules to Promote Cultural Prosperity</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s Supreme People’s Court has put into effect revised copyright adjudication rules intended to update civil dispute decisions for digital publishing, social media and online reuse, affecting creators, news organizations, internet platforms and the public’s access to cultural works.</p>
+<p>On August 20, 2026, the court issued the *Explanation on Several Issues Concerning the Application of Law in Civil Disputes Involving Copyright*. The revision responds to the 2020 Copyright Law amendments and to disputes created by changing methods of creating, sharing and using works online. It addresses when a work is considered public, how fair use applies to artworks displayed in public places, and which reprints qualify for statutory licensing.</p>
+<p>For publication disputes, the revised interpretation adopts an objective standard: a work is considered made public when disclosed to unspecified people, without requiring proof that the author personally disclosed it or authorized the disclosure. The explanation also says that unauthorized leakage can constitute public disclosure while leaving reproduction and online-dissemination rights protected. Rights holders may still seek an end to infringement and damages, and may pursue contractual remedies when confidentiality obligations were breached.</p>
+<p>The rules broaden the category of public-place artworks to include works displayed indoors, such as in museums, galleries and exhibition halls. People may reasonably reuse photographs, videos, paintings or other representations of those works, but may not, without permission, install, display or publicly disseminate the original work in the same manner. The stated aim is to permit legitimate cultural and creative use while preventing fair use from becoming a cover for copying.</p>
+<p>The explanation also narrows newspaper-reprint licensing in the internet environment. The statutory scheme applies to approved print newspapers and journals, as well as digital editions that fully match their print versions in content and layout. Reprinting between newspapers and internet information providers, or among online providers, is excluded; permission from the copyright holder and remuneration are required.</p>
+<p>The court’s interpretation is presented as guidance for judges and market participants, not as a mechanical substitute for case-specific assessment. Courts are to consider the work, purpose and extent of use, and effects on the original work’s market when weighing infringement and fair use.</p></div>
+  <div class="source-list"><a href="http://society.people.com.cn/n1/2026/1114/c1008-40833795.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Improving Copyright Adjudication Rules to Promote Cultural Prosperity">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0069" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>United Kingdom: Neets review won&#x27;t be for the faint-hearted - and will test Burnham&#x27;s appetite for a welfare fight</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A UK review due on Tuesday proposes a permanent response to youth inactivity, combining welfare changes with expanded employment, education and health support, while potentially cutting benefits for some under-25s and creating a legal guarantee of help for others.</p>
+<p>Nearly one million people under 25 in the UK are not in employment, education or training, after hundreds of thousands struggled for more than a decade to find a secure future. The issue costs taxpayers billions and has been described as a major human crisis.</p>
+<p>The review, led by former Labour MP Alan Milburn and prepared over a year, is intended to replace short-lived schemes with a permanent system. Its recommendations would apply across the UK, although the details for Scotland, Wales and Northern Ireland would be settled while draft laws are developed.</p>
+<h3>A major shift in welfare and support</h3>
+<p>Milburn proposes stopping under-25s from claiming the main sickness and disability benefits and redirecting spending towards employment support. He says benefits spending for young people is currently 25 times higher than employment-support spending and wants the balance changed to two to one.</p>
+<p>He accepts that the proposal would mean a significant number of young people losing benefits or facing cuts, alongside a substantial expansion of further education, training, health support and taxpayer-subsidised jobs. His proposed “opportunity guarantee” would place a legal duty on authorities to provide a job, apprenticeship, training place or health treatment that could help a young person work.</p>
+<p>The plan would require billions in public spending over time, and Milburn says it could take up to a decade to make a significant reduction in the benefits bill. He cites the annual cost of the issue as £22bn, while Liberal Democrat research suggests the number of young people affected could reach 1.26 million by 2031 if no action is taken.</p>
+<p>The review is also a political test for Prime Minister Andy Burnham, whose government must decide whether to pursue its proposed welfare changes. A possible fault line is whether reduced benefits would apply to existing claimants or only to people claiming in future; a No 10 source said the plans would have to cover those already receiving benefits, although new laws would take time.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cmg46qgkl7r4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Neets review won&#x27;t be for the faint-hearted - and will test Burnham&#x27;s appetite for a welfare fight">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0064" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>Alleged Russell Brand rape victim wants age of consent law changed</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mia Latter has waived anonymity and is campaigning for a staggered age-of-consent law after alleging that Russell Brand raped her when she was 16. Her proposal would allow sexual relationships between 16- and 17-year-olds while making relationships between adults and anyone under 18 a criminal offence, she told the Sunday Times. Latter said she met Brand, then 30, while he was working at MTV; she said he told her to keep the relationship secret and referred to her as a child.</p>
+<p>She was previously known as Alice and was one of six women whose allegations formed part of a 2023 Times, Sunday Times and Channel 4 Dispatches investigation; Brand denied the allegations. None of those women were complainants in Brand’s recent criminal trial, in which he was sentenced on Monday to 10 and a half years for one rape and three sexual assaults, while being acquitted of two rape counts and attempted indecent assault. Latter said she would stop pursuing the criminal process to focus on the campaign; the Metropolitan Police said its investigation into a rape allegation, launched in January 2026, remains ongoing. The Crown Prosecution Service said it would continue advising investigators as the case progresses.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/cm3rgx9p583zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Alleged Russell Brand rape victim wants age of consent law changed">BBC #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0019" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="al_monitor">
+  <summary>Trump wagers time is on US side, for now, in dealing with Iran</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">US President Donald Trump has, for now, shelved negotiations on a nuclear agreement with Iran, favoring an economic-pressure strategy and naval embargo. The approach follows his downplaying of renewed strikes since the US midterm elections. It is based on the calculation that Washington can wait while Iran’s position deteriorates, though the assessment argues that pressure should be paired with reassurance for US partners in the Middle East.</p>
+<p>The assessment says repeated bombing has damaged Iran’s nuclear facilities, missile and drone bases, and military and naval forces, while new sanctions on Iranian commercial banks have deepened an economic collapse. It also says Iran’s oil exports have been halted by the US embargo and naval blockade, while leaders face the possibility of further US or Israeli attacks. Secretary of State Marco Rubio said Friday that military action was unnecessary because Iran had been weakened, defining victory as preventing it from obtaining a nuclear weapon. Despite describing Iran as resilient and capable of proxy and drone warfare, the account says its people are suffering from intensified political repression and economic strain.</p></div>
+  <div class="source-list"><a href="https://www.al-monitor.com/originals/2026/11/trump-wagers-time-us-side-now-dealing-iran" target="_blank" rel="noopener noreferrer" title="Al-Monitor / Trump wagers time is on US side, for now, in dealing with Iran">AM #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0050" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="axios">
+  <summary>AI&#x27;s four colliding crises</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The U.S. AI industry is confronting a rapid collapse in public and political trust after being given responsibility for voluntary self-policing. Axios reports that President Trump announced six weeks earlier that leading AI companies had agreed to a voluntary safety accord, but four crises have since converged: opposition to data centers, safety concerns, financial uncertainty and leadership scandals. In midterm voting, measures opposing data centers prevailed in 40 of 41 cases, while incumbents associated with the facilities, including Sen. Jon Husted and Texas Gov. Greg Abbott, were defeated, the account says.</p>
+<p>The political response remains partly prospective: Democrats are planning extensive AI legislation after taking control of Congress in January and intend to summon major AI executives to testify. Safety concerns intensified after an OpenAI-related Hugging Face breach revealed in July; Axios also says OpenAI and Anthropic are investigating tens of thousands of security incidents involving AI agents accessing U.S. bank accounts. Financial pressure is reflected in a reported 13% weekly fall in Nvidia shares and a projected Anthropic valuation around $600 billion below investor expectations. The leadership crisis centers on Nvidia founder and CEO Jensen Huang’s reported resignation and revelations about affairs, while AI executives and engineers have warned of potentially catastrophic risks from the technology.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/11/14/ai-trust-nvidia-tech-stocks" target="_blank" rel="noopener noreferrer" title="Axios / AI&#x27;s four colliding crises">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0189" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="peoples_daily_en,xinhua_en">
+  <summary>China Focus: China, Austria sign social security agreement to avoid dual contributions, boost cross-border business</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China and Austria have signed a social security agreement intended to prevent companies and workers operating across their borders from paying overlapping contributions, potentially lowering costs and protecting access to pension and unemployment insurance.</p>
+<p>The governments signed the agreement on November 6 after technical consultations and formal negotiations. China’s Ministry of Human Resources and Social Security said the 19-article accord addresses duplicate contributions by enterprises and employees investing or working in the other country.</p>
+<p>It provides for reciprocal exemptions from pension and unemployment insurance contributions, covering China’s basic pension and unemployment schemes and Austria’s corresponding programs, excluding notary insurance. The exemptions apply to specified categories, including employees dispatched abroad, seafarers, and officials of diplomatic and consular missions, subject to exceptions and special provisions.</p>
+<p>The agreement’s implementing arrangements have not yet been described as complete: the competent authorities are to issue an administrative agreement naming the agencies responsible for insurance certificates, data exchange and other procedures.</p>
+<p>The ministry said the pact should support cross-border investment, business activity and personnel movement as China-Austria economic ties expand. In 2025, bilateral goods trade totaled about $12.5 billion; two-way investment exceeded $4 billion, involving more than 650 Austrian companies in China and over 50 Chinese companies in Austria.</p>
+<p>China said it will continue negotiating similar agreements with developed, Belt and Road and neighboring countries.</p></div>
+  <div class="source-list"><a href="http://society.people.com.cn/n1/2026/1115/c1008-40833874.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Injecting People&#x27;s Livelihood Content into the China-Austria Friendship Strategic Partnership — The Ministry of Human Resources and Social Security Answers Reporters&#x27; Questions on the China-Austria Social Security Agreement">PDE #1</a><a href="https://english.news.cn/20261114/8ad6147a3b604418847cf32ab5561544/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China Focus: China, Austria sign social security agreement to avoid dual contributions, boost cross-border business">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0015" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="al_jazeera_en,bbc,politico">
+  <summary>Italy fines Meta €805m over accessing users&#x27; photos</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Italy’s data protection authority has fined Meta €805m over an Android Facebook feature that accessed users’ phone photos and videos without specific consent, potentially affecting about 20 million people in Italy and requiring changes to how the feature operates.</p>
+<p>The case concerns a gallery-suggestion tool that recommends images and videos for users to add to Facebook posts. The Italian authority said the app sought access through a broad, single permission and did not clearly explain that it would be used to generate these suggestions. The feature was enabled by default.</p>
+<p>The authority said the practice violated Italian legislation implementing the European Union’s ePrivacy directive. It ordered Meta to disable the feature by default, obtain separate and specific consent, and explain how it works and can be turned off. Meta has 60 days to comply, including for users who had previously authorized the access.</p>
+<p>The regulator said the impact remained ongoing for people who had not updated the app or had already consented under the existing system. It also cited Meta’s lack of cooperation and an earlier 2019 violation when setting the penalty, described as the largest imposed by the Italian regulator.</p>
+<p>Meta disputes the authority’s assessment, the application of the law and the size of the fine. The company said users must grant device permission and can change it in their settings, and plans to appeal.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/11/14/italy-fines-meta-880m-over-photo-privacy?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Italy fines Meta $880m over photo privacy">AJ #1</a><a href="https://www.bbc.co.uk/news/articles/cwn83gxemk35o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Italy fines Meta €805m over accessing users&#x27; photos">BBC #1</a><a href="https://www.politico.eu/article/italy-hits-meta-with-e805m-fine-over-privacy-law-violation" target="_blank" rel="noopener noreferrer" title="POLITICO / Italy hits Meta with €805m fine over privacy law violation">POLITICO #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0117" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>How a US extradition bid over Hamas allegations put a wealthy activist before a Spanish court</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Spain’s high court held a two-hour hearing on Friday over the United States’ request to extradite James “Fergie” Chambers, a wealthy activist arrested in Ibiza, with the case turning on competing accounts of protests, money transfers and alleged support for Hamas.</p>
+<p>Chambers’s defense questioned him at length and challenged what it described as irregularities in the US request. Neither the judges nor the prosecutor asked him directly about the suggestion that he supported Hamas. The allegation is reportedly linked to an international money-laundering charge and donations to groups assisting Palestinians in Gaza.</p>
+<p>The hearing was Chambers’s first opportunity since his 10 July arrest to address the conduct underlying the case. He described participating in 2023 protests against Israeli arms maker Elbit in Massachusetts and New Hampshire, including locking himself to a door, marching and standing in a road. Two US charges concern those demonstrations.</p>
+<p>His lawyers and financial expert Albert Deulofeu Schilt also discussed $7.2m transferred from the US to Tunisia in 2024, where Chambers lived. They said most of the money supported the football club Club Africain and a sporting business; Schilt testified that he saw no indication it funded terrorism.</p>
+<p>Prosecutor Juan Hernández Villalba presented the protests and financing as coordinated illegal activity and said there were sufficient indications of terrorism-related funding. Chambers denied contact with or financing of any terrorist organization.</p>
+<p>The court is due to decide next week.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/nov/14/activist-extradition-gaza-hamas-spanish-court" target="_blank" rel="noopener noreferrer" title="The Guardian / How a US extradition bid over Hamas allegations put a wealthy activist before a Spanish court">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0184" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="pagina_12">
+  <summary>Two Córdoba Residents Detained by US ICE; Fundraising and Repatriation Campaign Launched</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Gustavo Romanello and Agustín Baccega, a couple from Córdoba, Argentina, were detained by ICE in the United States, Página/12 reported on November 14, 2026. The two work together as circus acrobats and had entered with work permits while their asylum applications were pending. The report says ICE arrested them for overstaying. Their family has launched a fundraising campaign to cover legal costs, while relatives and friends are demanding their release and repatriation.</p></div>
+  <div class="source-list"><a href="https://www.pagina12.com.ar/2026/11/14/dos-cordobeses-fueron-detenidos-por-el-ice-de-estados-unidos" target="_blank" rel="noopener noreferrer" title="Pagina/12 / Página|12">Pagina/12 #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0212" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="scmp">
+  <summary>Could major power politics stall the landmark High Seas Treaty?</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Nearly a year after taking effect, the Agreement on Biodiversity Beyond National Jurisdiction (BBNJ), or High Seas Treaty, risks becoming a geopolitical battleground among major powers, observers have warned. Ratified by 105 countries, including China but not the United States or Russia, the pact governs international waters covering nearly two-thirds of the global ocean. It was designed to safeguard marine ecosystems, but the warning raises the prospect that major-power tensions could hinder its implementation rather than produce an observed outcome of stalling.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/china/diplomacy/article/3374392/could-major-power-politics-stall-landmark-high-seas-treaty" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Could major power politics stall the landmark High Seas Treaty?">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0052" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="axios">
+  <summary>MAGA turns on Lutnick amid China spy scandal</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In the United States, Commerce Secretary Howard Lutnick is facing mounting pressure over the administration’s handling of suspected Chinese espionage and technology diversion. Axios reports that officials across Treasury, State, the United States Trade Representative and the Defense Department supported placing Singapore-based Megaspeed on the Commerce Department’s Entity List, which would have restricted its access to U.S. technology. Treasury Secretary Scott Bessent said on Friday that Commerce controlled the decision. The report says President Donald Trump backed action three times, but Lutnick delayed it; the measure has not been described as implemented.</p>
+<p>Republican senators, fellow Cabinet officials and MAGA commentators are now targeting Lutnick, amid allegations that the affair may have exposed sensitive technology to China. The controversy also involves a reported CIA warning concerning former Nvidia chief Jensen Huang’s relationship with Alice Huang, who ran Megaspeed and was alleged to be a Chinese spy. Lutnick’s political survival is being questioned within Trump’s circle, while Trump continues to defend him. The White House has not objected to efforts to have Lutnick testify before Congress. The Commerce Department rejected Axios’s account, calling its reports inaccurate and false.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/11/14/lutnick-commerce-china" target="_blank" rel="noopener noreferrer" title="Axios / MAGA turns on Lutnick amid China spy scandal">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0118" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Democrat wins Alaska governor’s seat for first time in nearly 30 years</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Former Alaska state legislator Jonathan Kreiss-Tomkins has won the governor’s seat for the Democratic Party, the first Democrat elected to lead the US state since 1998. The Associated Press called the race on Friday, 10 days after polls closed. Kreiss-Tomkins defeated three Republican opponents, including a candidate backed by Donald Trump, and won more than 50% of first-choice votes under Alaska’s ranked-choice voting system. The result brings Democrats’ total to 30 governorships and adds Alaska to a series of Republican-leaning states where the party gained control.</p>
+<p>Kreiss-Tomkins campaigned on affordability, full funding for public education and requiring oil and gas producers to pay corporate income taxes. He also proposed temporarily stopping new data-center developments until lawmakers establish construction rules; these remain campaign proposals rather than implemented policies. He criticized outgoing Republican Governor Mike Dunleavy, including over the deterioration of Alaska’s ferry system. That network is a key transport link for southeastern communities without road connections, including some with limited air access. Kreiss-Tomkins has pledged to form a cabinet including Democrats, Republicans and independents.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/us-news/2026/nov/14/alaska-governor-democrat-jonathan-kreiss-tomkins-wins" target="_blank" rel="noopener noreferrer" title="The Guardian / Democrat wins Alaska governor’s seat for first time in nearly 30 years">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0202" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="politico">
+  <summary>Nearly €20m in cash found buried, hidden in Hungary corruption case</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Hungary, authorities recovered nearly €20 million in cash during searches on Thursday and Friday, finding it buried in forests, hidden in warehouses and homes, and kept in a high-value safe. The National Asset Recovery and Protection Office said the total included more than 5 billion forints, €2.6 million and €1.2 million, spread across Budapest, Pest, Békés and Nógrád counties. Twelve Treasury staff spent eight hours counting the money with five machines, Finance Minister Kármán András said.</p>
+<p>The searches are part of a criminal investigation into alleged bribery involving former minister Miklós Seszták, who served under former Prime Minister Viktor Orbán. Seszták is in pre-trial detention and denies wrongdoing. The announcement came after authorities detained Aron Orbán, the former prime minister’s brother, in a separate people-smuggling investigation. Orbán said the move announced by Prime Minister Peter Magyar was a “political witch-hunt” aimed at him.</p></div>
+  <div class="source-list"><a href="https://www.politico.eu/article/nearly-e20m-in-cash-found-buried-hidden-in-hungary-corruption-case" target="_blank" rel="noopener noreferrer" title="POLITICO / Nearly €20m in cash found buried, hidden in Hungary corruption case">POLITICO #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0159" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>‘Loss of confidence’: US Navy fires commanders of warships deployed against Iran</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Several senior US Navy officers were dismissed without the service making its customary public announcements, including the full leadership team of the nuclear-powered attack submarine USS *South Dakota*. In October, the submarine’s commander, second-in-command and senior enlisted sailor lost their positions after it reportedly hit an object on the seabed.</p>
+<p>According to a defence official, the Navy relieved Commander Caitlin Cunningham of her command of the USS *Michael Murphy* destroyer on 27 September after citing a “loss of confidence”. The destroyer had been sent to support operations against Iran. Amid an investigation, Admiral Brian Monahan was reportedly no longer in his post.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/loss-confidence-us-navy-fires-commanders-warships-deployed-against-iran" target="_blank" rel="noopener noreferrer" title="Middle East Eye / ‘Loss of confidence’: US Navy fires commanders of warships deployed against Iran">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0225" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="scmp">
+  <summary>Hong Kong police arrest 3 teens over alleged assault on 13-year-old schoolmate</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Hong Kong, police arrested three teenage boys over an alleged assault on a 13-year-old schoolmate at a school in Chai Wan. Police said they received the report on Wednesday, alleging that the incident occurred the previous day. The arrests followed a social-media post criticizing the school’s handling of alleged bullying. After a preliminary inquiry, police classified the case as common assault and said the boy had no superficial injuries before being sent to Pamela Youde Nethersole.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/hong-kong/education/article/3374422/hong-kong-police-arrest-3-teens-over-alleged-assault-13-year-old-schoolmate" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Hong Kong police arrest 3 teens over alleged assault on 13-year-old schoolmate">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0155" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="la_jornada">
+  <summary>Convicted in the US Tony Montana</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Department of Justice said Antonio Oseguera Cervantes, also known by the nickname Tony Montana, received a 22½-year prison sentence in the United States. In August, the 67-year-old Mexican national from Michoacán admitted guilt to conspiring to distribute cocaine and methamphetamine, as well as to charges concerning a weapon’s use, possession and carrying. Oseguera’s late brother, Nemesio Oseguera Cervantes, led the Jalisco New Generation Cartel (CJNG) and was known by the alias El Mencho.</p></div>
+  <div class="source-list"><a href="https://www.jornada.com.mx/2026/11/14/politica/007n3pol?partner=rss" target="_blank" rel="noopener noreferrer" title="La Jornada / Convicted in the US Tony Montana">LJ #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-cluster-id="cluster-0051" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="axios">
+  <summary>Wholesale food prices are on the rise</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Wholesale food prices in the United States are accelerating before products reach supermarket shelves, with fresh and dry vegetables up 27% last month after a 31% increase the month before. Overall wholesale food prices rose 1.7% from a year earlier, ending three consecutive months of annual declines; distributors, grocery chains and other businesses pay these prices to farmers and other producers. Consumers are already feeling the increase: grocery prices rose 0.4% last month, while fresh vegetables climbed 2% and lettuce nearly 8%.</p>
+<p>In California, unusually warm weather, crop disease and insect infestations have reduced lettuce and other leafy-green harvests. Higher fertilizer and fuel costs tied to the Iran war are also making food more expensive to grow and transport, while truck freight costs are nearly 25% higher than a year ago—the largest annual increase since 2022. A regional grocery chain told Federal Reserve officials that transporting a head of lettuce from California now costs more than buying it, citing diesel prices. It remains unclear how much of the higher producer costs will reach consumers.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/11/14/grocery-wholesale-inflation-vegetables" target="_blank" rel="noopener noreferrer" title="Axios / Wholesale food prices are on the rise">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0186" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="pagina_12">
+  <summary>Inflation rises in Argentina in 2026 as consumer prices climb faster than in 2025</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">general_news</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Argentina’s cumulative consumer-price inflation reached 33.1% from January through October 2026, up from 31.3% during the same period in 2025, according to a November 14 report by Página/12. The report attributed the increase to higher bus fares, sharp rises in electricity, gas and water tariffs, and deregulation affecting services and rents.</p></div>
+  <div class="source-list"><a href="https://www.pagina12.com.ar/2026/11/14/la-inflacion-va-para-arriba" target="_blank" rel="noopener noreferrer" title="Pagina/12 / Página|12">Pagina/12 #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0255" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="xinhua_en">
+  <summary>China, U.S. hold first meeting of trade council under economic, trade consultation mechanism</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China and the United States held the first meeting of their trade council by video link on Friday, with China’s Ministry of Commerce announcing it on Saturday. The Beijing-based ministry said discussions covered implementation of earlier bilateral consultation outcomes, tariffs, a reciprocal tariff-reduction arrangement involving about $30 billion in goods from each country, agricultural trade and other concerns. It described the exchange as candid, detailed and constructive.</p>
+<p>The council was established in May 2026 to address trade concerns. In the eighth round of consultations, held in New York and Washington, D.C., from Sept. 20 to 23, the two sides agreed to reduce tariffs reciprocally on about $30 billion in goods, with rates on roughly 90 percent of covered products set to fall to most-favored-nation levels. The ministry said both governments would continue using the council to address concerns, expand cooperation and reduce outstanding issues; these are stated goals rather than reported new outcomes from the meeting.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261114/1a3cd956c57a41d78026ada36909ff25/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China, U.S. hold first meeting of trade council under economic, trade consultation mechanism">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0013" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="al_jazeera_en">
+  <summary>Canada’s Stelco to recall 175 workers after government pressure</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Canada’s Stelco plans to bring back 175 workers at its Hamilton, Ontario, plant on December 1 and compensate them for regular wages lost during the layoff, the company said. Stelco said it had secured sufficient customer commitments to resume finishing operations. The announcement came after Industry Minister Melanie Joly said she would seek a court order requiring Stelco’s US owner, Cleveland-Cliffs, to sell the company if management did not respond by the end of the day.</p>
+<p>United Steelworkers Local 1005 President Ron Wells welcomed the planned recall and attributed it to pressure from workers, the union and the government. As background, Cleveland-Cliffs announced in late September that as many as 500 employees at its Hamilton and Nanticoke plants could be laid off, citing weak demand and difficult market conditions. The company blamed US tariffs on Canadian steel and cheaper foreign competition.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/economy/2026/11/14/canadas-stelco-to-recall-175-workers-after-government-pressure?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Canada’s Stelco to recall 175 workers after government pressure">AJ #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0080" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="cnn">
+  <summary>‘Separating wants and needs’: Milwaukee couple reconsider their financial habits</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mariza and Geffrey Gordon of Milwaukee are reconsidering their spending habits through a Savings Challenge that pairs them with financial educator Tiffany Aliche. A modest inheritance allowed them to clear their credit-card debt and raised their credit scores by more than 100 points, to about 750. They nonetheless remain living paycheck to paycheck without sufficient emergency savings. The couple has begun distinguishing necessities from discretionary spending, cutting back on clothes, travel, concerts and sporting events. They also chose not to install a replacement garbage disposal after realizing they could manage without it.</p>
+<p>The Gordons did approve new carpeting and bedroom furniture. They paid $400 in cash and financed the remainder with a 0% store card, which they said they expect to repay before the promotional rate ends; Aliche advised avoiding new debt unless it supports their health or safety. Their financial pressure has increased since Mariza was laid off from her job as a plan consultant. They are using part of the inheritance and savings automatically taken from Geffrey’s paycheck to cover her $555 monthly car payment and other expenses. Aliche has advised maintaining, rather than increasing, their savings for now. If Mariza finds work, they plan to prioritize an emergency fund covering six months of expenses, while continuing to cook at home and buy some goods in bulk.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/11/14/business/savings-challenge-participant-third-update-mariza-and-geffrey-gordon" target="_blank" rel="noopener noreferrer" title="CNN / ‘Separating wants and needs’: Milwaukee couple reconsider their financial habits">CNN #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-cluster-id="cluster-0121" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="guardian,scmp">
+  <summary>SpaceX’s Starship returns to launch pad from orbit in victory for company</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">SpaceX’s Starship upper stage completed a 22-hour orbital test flight and was caught by the company’s Texas launch-tower arms on Saturday, a first for the vehicle that advances its effort to develop a rapidly reusable spacecraft for human spaceflight.</p>
+<p>The 171-foot (52-metre) stage orbited Earth 14 times before descending into the mechanical arms at the launch site. The achievement did not produce the planned double catch: Super Heavy, the lower booster, diverted minutes after Friday’s liftoff and exploded in the Gulf of Mexico.</p>
+<p>SpaceX spokesperson Dan Huot said the guidance, navigation and control system blocked the catch after detecting that the booster was not positioned correctly. Wreckage remained in the Gulf, according to the South China Morning Post, which described the area as cordoned off by buoys.</p>
+<p>The result nevertheless marks the first time SpaceX has caught Starship’s upper stage, rather than recovering all components at sea as in some earlier tests. The test comes as NASA’s 2028 plan to return humans to the lunar surface approaches; NASA has contracted SpaceX and Blue Origin for that mission.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/science/2026/nov/14/spacex-starship-double-catch" target="_blank" rel="noopener noreferrer" title="The Guardian / SpaceX’s Starship returns to launch pad from orbit in victory for company">Guardian #1</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3374463/spacex-successfully-carries-out-first-ever-spaceship-catch" target="_blank" rel="noopener noreferrer" title="South China Morning Post / SpaceX successfully carries out first-ever spaceship catch">SCMP #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-cluster-id="cluster-0119" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="guardian">
+  <summary>Choking fires, deadly heat and devastating floods: 2026 in extreme weather</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A year of record heat, wildfires, floods and storms has produced a reported extreme-weather death toll already in the high tens of thousands, while disasters across several continents have displaced communities, damaged infrastructure and threatened food and water supplies.</p>
+<p>The Guardian’s year-end review describes 2026 as a year of exceptional climate extremes, following the hottest summer since records began in 1850. The review puts deaths from extreme weather at many tens of thousands so far, calling that total conservative and warning it will rise substantially. The review was published as COP31 continued, amid warnings from scientists that climate breakdown may be accelerating.</p>
+<h3>Heat and fires stretch health systems</h3>
+<p>Australia experienced severe heat early in the year. Temperatures in Victoria and other southern states rose nearly 20C above average, reaching 50C in Port Augusta and Andamooka. Heat-related illness reports at Melbourne hospitals rose by 25%, as officials in several areas battled wildfires. Scientists cited in the review said the climate crisis had made the heatwave five times more likely.</p>
+<p>Across South Asia, the heat affected a population numbering in the hundreds of millions. Several cities in India and Bangladesh recorded temperatures above 45C; Pakistan’s Sindh province reached 52C, and authorities reported at least 47 heat-related deaths. In Europe, the June-to-August heat killed an estimated 50,000 people in cities, with the review attributing two-thirds of those excess deaths to the climate crisis. Low water levels in the Danube forced Romania to shut its only nuclear power station because its cooling system could not be replenished.</p>
+<p>Wildfires caused further health and environmental damage. Nearly 1,000 fires burned three million hectares in Canada, sending smoke as far as New York. Europe’s fires burned 686,000 hectares, twice the average of the previous 20 years. An estimated 3,560 people died in one month from smoke produced by Indonesian fires that burned almost two million hectares.</p>
+<h3>Floods, landslides and storms kill and displace</h3>
+<p>Record rainfall caused deadly flooding in multiple regions. Mudslides in Juiz de Fora, Brazil, killed 72 people and destroyed hundreds of homes in poor hillside communities; more than 10,000 people were displaced, while flooding disrupted Rio de Janeiro and São Paulo. In Ethiopia, floods and mudslides killed at least 131 people and buried entire villages. Related disasters killed 80 people in Kenya and 18 in Tanzania.</p>
+<p>A super typhoon that struck Micronesia, Guam and Saipan on 12 April reached winds of 295km/h. It killed 12 people, forced mass evacuations, left 43,000 without power and caused reported damage of $1.5bn.</p>
+<p>In August, a collapse of rock and glacier ice in Nepal swept away communities in the Lhende Khola river valley. At least 1,300 people were killed, more than 5,000 were missing and 8,600 required medical attention. The review identifies unusually warm temperatures and long-term permafrost degradation as likely contributing factors.</p>
+<h3>A worsening outlook</h3>
+<p>More than nine-tenths of the extra energy building up in Earth’s climate system has gone into the oceans, and their warming has accelerated, according to the review. October brought warnings of an unprecedented El Niño expected to peak near year’s end. Scientists projected that its additional heat could cause more than 450,000 deaths globally by February.</p>
+<p>November figures described global temperatures at 2.04C above pre-industrial levels, matching the record set in 2023. The year was forecast to rank among the four warmest on record, while atmospheric carbon dioxide reached a level not seen for two million years.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/14/fires-heat-floods-extreme-weather-2026" target="_blank" rel="noopener noreferrer" title="The Guardian / Choking fires, deadly heat and devastating floods: 2026 in extreme weather">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0129" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="guardian">
+  <summary>Australia: Even Labor MPs are at a loss over the Victorian premier’s ‘tough love’ plan for youth offenders</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Victoria Premier Ben Carroll’s proposed $204 million youth-offending plan would place children who commit low- and mid-level offences in secure facilities, prompting criticism from legal groups, Indigenous child advocates, union leaders and Labor MPs over its consequences.</p>
+<p>Announced last week, the Victorian plan would use facilities including the former Malmsbury youth justice centre for schooling, drug and alcohol treatment and life-skills training. Carroll said children judged to be moving towards offences such as carrying knives or stealing cars could face mandatory detention there.</p>
+<p>Meena Singh, who served as Victoria’s commissioner for Aboriginal children and young people from 2022 until December last year, said the government had not previously approached her with a proposal of this kind. Now a Monash law professor, she said she was horrified and argued that imprisonment should not be presented as therapy for children whose offending may be connected to trauma.</p>
+<p>The Victorian Aboriginal Legal Service described the plan as mandatory sentencing presented as political leadership, while the Justice Reform Initiative called it a disproportionate response. Both organisations have also opposed other Labor crime measures introduced during the current term, including tougher bail rules and provisions allowing some young people to receive adult sentences for violent offences.</p>
+<p>Victoria’s union movement has also criticized the proposal. Trades Hall secretary Luke Hilakari questioned imprisoning children for offences such as shoplifting or vandalism, and argued that the government should address disadvantage rather than intensify it.</p>
+<p>The plan has exposed divisions inside Labor as the party campaigns on crime. Several MPs from different factions, speaking anonymously, said the government was making it easier for the Liberals to attack Labor after rising crime rates and police-station closures. Others said they had supported earlier measures despite reservations, hoping they would improve the party’s position.</p>
+<p>That improvement has not appeared in the polling cited in the evidence. A DemosAU survey put Labor’s primary vote at 18%, its lowest recorded figure, while a separate RedBridge poll placed it at 23% and showed the party 18 points behind the Coalition on crime.</p>
+<p>The dispute also reflects Carroll’s effort to present himself as a new, centrist premier while distancing himself from more than a decade of Labor government. MPs on the party’s right view the policy as overdue because crime affects working-class outer-suburban communities; those on the left see it as evidence Labor has abandoned its values.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/2026/nov/15/victoria-premier-ben-caroll-youth-crime-offenders-plan-ntwnfb" target="_blank" rel="noopener noreferrer" title="The Guardian / Even Labor MPs are at a loss over the Victorian premier’s ‘tough love’ plan for youth offenders">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-cluster-id="cluster-0039" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">public_health</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">System One models are designed to make fast, structured decisions without lengthy generated reasoning, but a new preprint finds that capability and reliability can diverge sharply across domains, making aggregate accuracy an incomplete guide to deployment performance.</p>
+<p>Researchers assembled SO-Arena from 2,919 tasks spanning 11 domains and grouped them into five capability families: semantic understanding; knowledge and reasoning; safety and policy compliance; evidence assessment; and agent task completion. Evaluation covers 21 models, including System One systems and two System Two references, through fixed-input tasks and interactive web or tool environments.</p>
+<p>Its design aims to test more than whether a model selects the correct answer. The researchers draw on 40 public datasets, benchmarks and environments, manually review reference labels, and remove items with questionable references. Nine domains are divided into difficulty tiers, although the tiers are relative to each domain rather than calibrated against one another. The benchmark also includes sequential tasks in which models choose actions as an environment changes, as well as judgments about whether recorded executions satisfied intermediate requirements—not merely whether the final state looks correct.</p>
+<p>SO-Arena assigns a capability score by weighting domains equally and emphasizing their more demanding tasks. It separately measures reliability in two ways: whether a model keeps the same decision when answer choices are reordered, and whether it recognizes that no valid answer is available when the correct option has been removed. These measures are combined into a reliability score; consistency alone is not treated as evidence of correctness.</p>
+<p>The evaluation found that scaling models or adding reasoning produced uneven benefits across domains, while performance generally fell as task difficulty increased, particularly in agentic settings. The two System Two reference models led the capability ranking. Among System One models, GLiDE and KnowLine-31B recorded the highest capability scores, illustrating a remaining performance gap despite System One’s speed advantage.</p>
+<p>Capability and reliability did not follow the same order. The preprint reports that the best-performing System One model ranked only seventh on reliability. JevAny-27B led the evaluated System One models in reliability but placed 11th for capability. The authors therefore argue that model evaluations should treat breadth and depth of capability, decision reliability, and inference speed as distinct dimensions.</p>
+<p>The work was posted as arXiv preprint version 1 on November 11, 2026, and featured on November 13. It has not been peer reviewed, so its reported benchmark results remain research claims rather than established findings.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.15777v1" target="_blank" rel="noopener noreferrer" title="arXiv / SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0032" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint from researchers affiliated with NVIDIA and KAIST introduces a driving world model designed to predict both camera-view video and top-down scene structure, aiming to make simulated vehicle interactions and ego-vehicle trajectories more controllable for autonomous-driving evaluation.</p>
+<p>Posted on arXiv on November 10, 2026, BirdDreams addresses a problem in driving simulation: a model must show how the scene changes when the vehicle takes a different route, while also predicting how surrounding vehicles respond. Perspective video alone makes this difficult because apparent movement depends on distance, lighting and appearance, and vehicles may be hidden by occlusion. Earlier systems could use externally supplied layouts and future vehicle paths, but those inputs could keep surrounding traffic tied to recorded behavior rather than allowing it to react to a changed maneuver.</p>
+<p>BirdDreams generates two synchronized video streams from one initial camera image. One is a conventional perspective view containing visual details such as traffic signals and object appearance. The other is a schematic bird’s-eye view (BEV), rendered during training from road and object annotations. It represents roads and vehicles as simple shapes at a fixed metric scale, making positions, headings and motion easier to model and reducing vehicle overlap caused by perspective.</p>
+<p>The two streams are produced by separate video-diffusion-transformer branches linked through joint attention. This allows the BEV stream to provide explicit motion and geometry to the perspective stream, while visual information from the perspective stream can inform the schematic prediction. At inference, the system does not require an HD map, an observed BEV frame or vehicle-state inputs.</p>
+<p>The predicted BEV also serves as an interface for ego control. Researchers reproject its latest frame according to a supplied trajectory—translating and rotating the scene in metric space—and use those frames as a soft condition. The model can therefore generate perspective video in which the ego vehicle follows the requested path while surrounding vehicles continue to move and respond.</p>
+<p>On the PhysicalAI-AV and nuScenes datasets, the researchers report that BirdDreams follows input trajectories more accurately than the driving world models and baselines they compare against. Without ego-action conditioning, they report more plausible ego motion; when the simulated vehicle departs from a recorded path, surrounding vehicles can respond to the altered maneuver. A human evaluation also found more realistic surrounding-vehicle behavior than a perspective-only baseline.</p>
+<p>These are results reported in an arXiv preprint, not a peer-reviewed study. The paper presents the BEV design as a way to improve learned scene dynamics and reactive simulation, rather than as evidence that generated video is ready to replace testing on real or independently validated systems.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.14815v1" target="_blank" rel="noopener noreferrer" title="arXiv / BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0041" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>PhysLoop: Harnessing LLMs&#x27; Physics Awareness for Self-Improving Video Generation Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint released on arXiv on 12 November 2026 presents PhysLoop, a system for generating and repairing videos with more physically consistent motion. Its proposed stakes are practical: improving training data for video models whose images may look realistic while depicting impossible events.</p>
+<p>Researchers affiliated with Peking University, ByteDance Seed, the University of California, Santa Barbara, MIT, Universität Hamburg and Hangzhou Normal University describe a recurring weakness in current video generation. Objects can vanish or duplicate, collisions may produce implausible responses, and motion can conflict with gravity, inertia or contact. A sequence may therefore appear convincing frame by frame while failing as a causal physical event.</p>
+<p>PhysLoop is designed as a self-improvement loop rather than simply a larger video generator. A language-model-based agent turns a request into a task specification, selects or creates assets, builds a scene and runs it through a simulator. The system checks conditions such as object contact and subsequent motion, then uses failures to revise the scene or generation settings. After simulation passes, a video refiner adjusts the appearance; a second check tests whether refinement has changed the verified physical behavior.</p>
+<p>The system primarily uses Unreal Engine, with Taichi and Genesis providing additional simulator support. It records simulation time, camera settings, depth, segmentation, object states and event signals. For a falling-glass example, the agent can vary release height or initial velocity while holding other conditions fixed, producing controlled examples for fine-tuning. The authors also apply the workflow to localized repair: an identified faulty interval in an existing video is replaced while frames outside that interval remain unchanged, and the revised section is checked against the surrounding event.</p>
+<p>The authors say PhysLoop-100K contains 100,000 accepted videos representing 2,500 physical events, with an average of 40 videos per event. The data span areas including rigid-body motion, fluids, flexible materials, magnetism and fracture, and include simulation annotations alongside refined video-text pairs. Two evaluation sets target controllable generation and physical-error repair.</p>
+<p>Their reported evaluation combines human judgments and automatic metrics across generation, repair and an external benchmark. The table includes 85% and 86% results in columns labeled “Gen” and “Repair” for PhysLoop. However, its reported 75.76 win score comes from 301 unblinded pairwise comparisons conducted by one author, with ties counted as half wins. The work is a preprint and has not been peer reviewed, so these results are the authors’ reported findings rather than independently established performance.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.16748v1" target="_blank" rel="noopener noreferrer" title="arXiv / PhysLoop: Harnessing LLMs&#x27; Physics Awareness for Self-Improving Video Generation Models">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0021" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The preprint introduces GSTAR, a discrete autoregressive image-generation system designed to reduce the long token sequences that slow high-resolution synthesis. Its authors report that scaling the number of codes carried by each spatial token enables much deeper compression while retaining image reconstruction, semantic representation and generation quality.</p>
+<p>Discrete autoregressive image models generate visual tokens sequentially. That gives them a language-model-like framework for image synthesis, but creates a basic trade-off: more tokens can preserve detail, while fewer tokens make generation faster but force each token to represent more information. The team behind GSTAR—researchers affiliated with Peking University, Meituan Longcat, Shanghai Jiao Tong University, Huazhong University of Science and Technology, The Chinese University of Hong Kong, Tsinghua University and MBZUAI—addresses this trade-off by increasing the capacity of each remaining spatial position.</p>
+<p>The central design uses product quantization, in which each spatial position is represented by several discrete codes rather than one. The authors argue that, with a fixed nominal bit budget, the number of codes per position should grow with the square of the per-axis spatial compression factor. Increasing the compression factor reduces the number of global positions that the autoregressive model must generate; increasing the group size supplies those positions with more representational capacity.</p>
+<h3>Trading spatial positions for grouped codes</h3>
+<p>GSTAR applies this principle at two compression levels. GSTAR-Pro-8B uses a native 32×32 tokenizer with 16 codes per global position. GSTAR-Flash-1.7B uses an effective 64×64 interface with 32 codes per position. To form the latter, the researchers losslessly combine each four-position 2×2 patch from the 32×32 grid into a single global unit, cutting the number of autoregressive steps by four and placing four times as many codes in each step. Before image decoding, the decoder maps those combined representations back onto the original native grid.</p>
+<p>The paper explicitly describes its bit calculation as a nominal information budget, not as a measurement of the learned codes’ empirical entropy or effective semantic information. Its controlled experiments nevertheless report that increasing group size generally improves reconstruction and semantic representation. In one tokenizer study, group sizes of 1, 8, 16 and 32 were compared with a fixed codebook size. Larger groups improved the reported reconstruction measures and linear-probe performance, although the group-32 configuration showed a worse gFID value than group 16 in the supplied table.</p>
+<p>A cost emerges as groups become larger: the codes within each group are correlated and must be generated coherently. A fully causal head models those dependencies but predicts codes one at a time, while a fully parallel head is faster but treats them as conditionally independent. According to the authors, independent sampling can produce incompatible code combinations, a failure they label multimodal collision.</p>
+<p>GSTAR therefore uses a semi-autoregressive head. A parallel component first computes representations for all code slots, after which a lightweight single-layer causal Transformer generates the codes sequentially using previously sampled codes. In a matched 512×512 experiment, the paper reports 3.41 seconds per image for this head, compared with 6.44 seconds for the fully causal version and 1.77 seconds for the parallel version. The semi-autoregressive head matched the causal head’s reported PRISM score of 5.46, while outperforming the parallel head on the three listed quality measures.</p>
+<h3>Reported generation results and speed</h3>
+<p>For text-to-image assessment, the researchers used GenEval and DPG-Bench alongside PRISM, LongText-Bench and Qwen-Image-Bench. The authors say both models were competitive with leading proprietary, diffusion and discrete autoregressive systems. GSTAR-Pro-8B recorded scores of 0.84 on GenEval, 83.38 on DPG-Bench, 6.98 on PRISM, 0.935 on LongText-Bench and 50.07 on Qwen-Image-Bench. On those measures, GSTAR-Flash-1.7B scored 0.76 on GenEval, 80.18 on DPG-Bench, 6.81 on PRISM, 0.853 on LongText-Bench and 46.88 on Qwen-Image-Bench.</p>
+<p>For instruction-guided image editing, GSTAR-Pro-8B achieved an overall score of 7.45 on the English subset of GEdit-Bench in the supplied results. The paper also presents examples spanning portraits, landscapes, typography and structured layouts, alongside edits intended to preserve unrelated image content.</p>
+<p>At 1024×1024 resolution, the authors report that GSTAR generates an image in 2.5 seconds on one NVIDIA H200—20 times faster than prior discrete autoregressive models. A separate efficiency breakdown starts from a 22.23-second causal-head baseline and reaches 2.50 seconds after adding the semi-autoregressive head, CUDA-graph capture, fused kernels and SGLang serving. Thus, the headline comparison is against prior discrete autoregressive systems, while the detailed 8.9-times figure describes cumulative optimizations within the reported GSTAR pipeline.</p>
+<p>The work is an arXiv version 1 preprint dated 8 November 2026 and is not peer reviewed. Its experiments report slower early training convergence for larger groups, even though larger groups can catch up or perform better later. The evidence supplied here presents the authors’ benchmarks and architectural analysis; it does not establish independent validation of the results.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.13004v1" target="_blank" rel="noopener noreferrer" title="arXiv / Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0028" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Duo: A Reciprocal World Model for Full-Duplex Interaction</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Duo v1 is a proposed full-duplex world model that continuously processes a user’s audio, video and text while deciding when and how to respond. Its designers aim to make reasoning, participation and audiovisual behavior part of the simulated world, enabling interruptions and shared activities beyond keyboard- or mouse-based control.</p>
+<p>The preprint, dated 11 November 2026, introduces the Reciprocal World Model (RWM) and a modular implementation called Duo v1. It frames a world as having two equally fundamental components: physical reality and intelligence. In this formulation, <strong>Intent</strong> handles interaction reasoning and decisions such as whether to speak, while <strong>Realization</strong> turns those decisions into synchronized audiovisual behavior.</p>
+<p>Duo divides interaction into chunks of 17 video frames—about 0.71 seconds at 24 frames per second—on a shared timeline. The Intent module receives the user’s available audio, video and transcribed speech, then autoregressively determines whether to respond and, when appropriate, generates language. Its hidden states guide the Realization module, which produces the assistant’s video and stereo audio. Both modules maintain histories so generated media can remain continuous across response chunks.</p>
+<p>The report describes three design choices intended to support live interaction. First, autoregressive modeling is used for ongoing reasoning and participation timing, rather than limiting a language model to interpreting instructions for a separate generator. Second, chunk-specific conditions and synchronized tokens coordinate user input, intent and assistant media while module-specific attention masks prevent access to future information. Third, dual rollout distillation trains the system with self-generated intent and audiovisual histories, reducing the mismatch between recorded training examples and the conditions encountered during inference.</p>
+<p>The proposed interface is broader than turn-by-turn conversation. The system is designed to handle spontaneous speech, interruptions and periods of silence while continuously perceiving the other participant. The report also describes possible interactions involving real objects, reshaped virtual scenes, guided assistants and audiovisual games without mouse or keyboard controls.</p>
+<p>Duo v1 is presented as an initial implementation, not as a validated performance result. The evidence describes its architecture, training approach and intended interaction modes but provides no benchmark figures or user-study outcomes. The work is an arXiv preprint and has not been peer reviewed; its authors say a subsequent version is forthcoming.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.15131" target="_blank" rel="noopener noreferrer" title="arXiv / Duo: A Reciprocal World Model for Full-Duplex Interaction">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0030" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">SteerDistill is a preprint proposing a way to recover task performance lost when large language model agents are compressed to low-bit precision. The authors report higher scores than competing quantized methods across five benchmarks and three models, while bringing performance close to full-precision BF16 systems.</p>
+<p>Low-bit quantization can reduce inference costs, but the paper says it can cause agents to overlook task requirements or environmental conditions. As a result, an agent can leave the environment in a state unlike that reached by a successful full-precision run; it might, for instance, attempt to read a file while still outside its directory. In the paper’s terminology, this mismatch is a behavioral divergence.</p>
+<p>The proposed method uses a full-precision model as a teacher during training. When the quantized student fails, the teacher identifies the missed requirement or condition and guides the student to revise its response. The revised action is executed, and the teacher updates its guidance from the result. This loop continues until the correction is locally verified or the attempt budget is exhausted. The corrected behavior is then distilled into the student so it can act without the teacher or steering prompts at inference.</p>
+<p>The paper reports that, in a BFCL V4 multi-turn diagnostic, unguided retries produced a correct action on 9.6% of divergent turns, compared with 82.3% after teacher steering. Using W4A16, with four-bit weights and BF16 activations, SteerDistill’s average score was 1.67–2.18 points above the best quantized competitor across BFCL V4, τ²-Bench, WebShop, ALFWorld and Search QA; the gap from BF16 remained under one point. With Qwen3-8B and the more aggressive W2A16 configuration, the authors measured a 3.39-point advantage over the quantized baseline.</p>
+<p>On τ²-Bench, the authors report a 1.84-percentage-point success-rate advantage over QeRL while using 67% fewer training GPU hours. Successful tasks also averaged 4.0K output tokens, close to BF16’s 3.9K and below the 4.1K–5.2K range reported for quantized baselines.</p>
+<p>The work is an arXiv version 1 preprint dated 10 November 2026 and has not been peer reviewed. Its results are therefore presented as the authors’ experimental findings rather than established performance.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.13410" target="_blank" rel="noopener noreferrer" title="arXiv / SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0029" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Incentivizing Self-Learning in Large Language Models via Reinforcement Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint from researchers affiliated with Shanghai AI Laboratory and several Chinese universities describes a reinforcement-learning system that teaches a language model to study unfamiliar mathematical material while solving problems, improving reported proof accuracy and performance on other long-context tasks.</p>
+<p>Posted to arXiv on 29 October 2026 and later featured on 12 November, the study focuses on a gap between retrieving facts and using new knowledge in reasoning. In the paper, self-learning means that a model independently finds material in lengthy references, learns from it, and uses it while working through a problem. They test this with mathematical exercises whose solutions are withheld from the model. To solve each exercise, the model must navigate textbooks containing definitions, theorems and general proofs, then construct its own derivation.</p>
+<p>From 158 mathematics textbooks at undergraduate and graduate level, the team assembled 5,183 proof problems spanning analysis, algebra, number theory and geometry. Their BookNavigator interface allows a model to inspect a book’s contents, search for keywords and read selected sections. Reinforcement learning rewards correct final proofs, while additional signals encourage useful textbook exploration and distinguish productive retrieval from redundant or irrelevant tool use. The system was trained from Intern-S2-Preview-35B.</p>
+<p>According to the paper, proof accuracy reached 79.5%, up from 51.5%, and exceeded results from RL comparisons with neither a textbook nor preselected retrieved content. Gains were reported on problems from books represented in training, unseen books in familiar subjects, and books covering subjects held out from task-specific training. On BrowseComp-Plus and CL-bench, the base model trailed by 1.7 and 2.3 percentage points, respectively, even though BookNavigator was not used for either evaluation.</p>
+<p>The results are presented as evidence that reinforcement learning can encourage a transferable study strategy rather than merely improve access to preselected context. The reported evaluation used an automated correctness process: GLM-5.2 judged proofs against withheld reference solutions, and a proof was accepted only when eight independent reviews all marked it correct. The work remains a preprint and has not been peer reviewed, so its claims are reported findings from the described experiments rather than an established consensus.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.39671" target="_blank" rel="noopener noreferrer" title="arXiv / Incentivizing Self-Learning in Large Language Models via Reinforcement Learning">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0027" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Open Vision Banana: A Fully Open Recipe for Generative Visual Perception</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A team has released Open Vision Banana (OVB), a preprint proposing an openly reproducible way to adapt image generators into multi-task visual-perception systems. The work targets segmentation, depth and surface-normal estimation while preserving image-editing capabilities, giving researchers access to its data pipeline, code and checkpoints.</p>
+<p>The researchers describe OVB as an open alternative to Vision Banana, whose data, model weights and implementation details are not public. OVB starts with open-weight FLUX.2-Klein generators containing 4 billion or 9 billion parameters and trains them on 2.1 million to 3.8 million pairs drawn from public datasets. Rather than adding task-specific prediction heads, the system represents perception outputs as RGB images: masks, inverse-depth maps and surface-normal vectors are encoded into colors, then decoded into task results.</p>
+<p>The study examines how color encoding, prompt wording, parameter adaptation and the balance of training tasks affect generalization. It reports that these choices interact: a design that helps on its own can reduce performance when combined with other choices. The models cover semantic, instance, referring and reasoning segmentation, along with depth and surface-normal estimation.</p>
+<p>On the paper’s evaluation, the 9B zero-shot model achieves 73.9 mean intersection-over-union on Cityscapes, compared with 69.9 reported for Vision Banana. Here, “zero-shot” means Cityscapes was excluded from training, although the underlying task type was included. OVB also reaches 97.4% on the paper’s NYUv2 depth metric and a 19.85-degree surface-normal error in that configuration. Its non-zero-shot versions come within five points of Vision Banana on referring and reasoning segmentation, but remain further behind on instance segmentation.</p>
+<p>A key addition is “legend ensembling,” which runs segmentation with multiple color-class assignments and combines the outputs by majority vote. The paper reports gains of up to 8.7 points in Cityscapes mIoU and 15.0 points on COCO-Object without retraining, mainly by correcting cases where colors are assigned to the wrong classes. The authors also say the models largely retain the base generators’ image-editing abilities.</p>
+<p>The work was posted to arXiv on 11 November 2026 as a preprint and has not been peer reviewed. Its released materials include the dataset-construction and processing pipeline, training and evaluation code, and final, intermediate and ablation checkpoints.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.15844" target="_blank" rel="noopener noreferrer" title="arXiv / Open Vision Banana: A Fully Open Recipe for Generative Visual Perception">arXiv #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-cluster-id="cluster-0208" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Stanford scientists discover hidden brain signals that predict Alzheimer’s years before symptoms</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Stanford Medicine-led team reports that interactions among brain regions could signal vulnerability to Alzheimer’s well before symptoms appear. The approach also distinguishes brain activity associated with unusually resilient aging, but it is not yet a diagnostic test, and researchers have not shown that changing the patterns can prevent disease.</p>
+<p>Published November 4 in *Science Advances*, the study examined fMRI images recorded at rest from 180 older adults classified as “super agers” and 110 participants with Alzheimer’s disease. The participants were at least 75 years old and represented opposite ends of cognitive aging: the super agers performed on memory tests at levels typical of much younger adults, while the other group had Alzheimer’s.</p>
+<p>Researchers used differences in activity across brain regions to create the Alzheimer’s resilience-vulnerability connectome, or ARC, score. The score distinguished the two groups with about 85% accuracy. The researchers next tested the score in a group of more than 1,300 cognitively healthy adults between 55 and 70; their starting cognitive results did not visibly vary with the scores.</p>
+<p>During follow-up, which extended as long as 12 years in some datasets but lasted about five to six years for most participants, higher scores—indicating activity more similar to the Alzheimer’s group—were associated with faster decline in memory, attention and executive function. They were also associated with greater likelihood of amyloid-beta plaque accumulation and later mild cognitive impairment or Alzheimer’s diagnosis. Lower scores, resembling the super-ager pattern, were associated with slower decline and fewer of those outcomes.</p>
+<p>In the researchers’ analysis, ARC equaled or surpassed measures based on demographics, inherited risk, and amyloid-beta and tau biomarkers. Combining ARC with existing biomarkers improved prediction in the researchers’ analysis. The findings suggest that functional connectivity may reveal risk earlier than some conventional measures, which often track biological changes after the disease process is already underway.</p>
+<p>The researchers emphasize that ARC scores estimate future risk rather than diagnose Alzheimer’s, and that an individual’s pattern can change. Brain injuries and neuropsychiatric conditions may also affect the patterns. The proposed use of cognitive training or transcranial magnetic stimulation to shift activity toward a more resilient profile remains untested for preventing cognitive decline. Stanford’s team is preparing a trial to examine whether cognitive training changes ARC scores, but whether such changes would alter Alzheimer’s progression remains unknown.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261112230444.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Stanford scientists discover hidden brain signals that predict Alzheimer’s years before symptoms">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0207" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>5,000-year-old skulls reveal a disturbing secret of ancient Egypt&#x27;s first kings</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">global_south_and_exploited</span><span class="badge">science anchor</span><span class="badge">attributed source material (republished)</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A forensic reexamination of 46 skulls from royal burial grounds at Abydos, Egypt, has found potentially fatal head injuries in 18 individuals. The results strengthen, but do not conclusively prove, the long-standing theory that royal attendants were sacrificed when First Dynasty kings died.</p>
+<p>The skulls came from subsidiary graves surrounding the tombs of Egypt’s earliest rulers, who built burial complexes at Abydos around 3000 BCE. During his excavations in the 1920s, archaeologist Flinders Petrie observed that many people had been buried alongside the kings and proposed that they were victims of retainer sacrifice, a practice in which members of a ruler’s household were killed so they could continue serving him in the afterlife. He could not, however, identify clear evidence of violent deaths.</p>
+<p>Roselyn Campbell of Purdue University led the modern examination, locating 46 preserved skulls in Cambridge University’s Duckworth Collection. Eighteen showed substantial cranial trauma, mostly linear fractures. The researchers interpreted the damage as injuries sustained around the time of death, rather than later deterioration. Some skulls also showed sharp-force trauma, including an injury near one individual’s eye.</p>
+<p>The researchers estimate that deliberate killing may account for at least 39% of the people examined. Campbell said the injuries would likely have caused rapid unconsciousness, internal bleeding and death, although the precise circumstances remain uncertain. The patterns do not match the depressed fractures typically associated with mace blows, and accidental falls cannot be completely excluded.</p>
+<p>The study does not reveal what happened to the remaining individuals. Natural causes may account for some deaths, while asphyxiation and other methods could have left no visible marks. Most of the associated skeletons were reburied after Petrie’s excavations, limiting further examination. The study therefore offers new support for human sacrifice at early royal burials while leaving the full scale and method of the practice unresolved.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261112025540.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / 5,000-year-old skulls reveal a disturbing secret of ancient Egypt&#x27;s first kings">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0206" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists find a simple daily routine linked to less pain and depression</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">University of Missouri researchers found that older adults with steadier daily schedules reported less physical pain and fewer depressive symptoms, including among participants with insomnia. The survey-based finding suggests that regular timing for sleep, meals and social activity may matter for well-being, but it does not show that routines directly cause better health.</p>
+<p>Eunjin Tracy, an assistant professor in the university’s College of Education and Human Development, examined survey responses from 67 older adults. Thirty-seven participants reported insomnia. Those participants generally described more pain and depression, but schedule regularity was associated with better outcomes regardless of reported sleep quality.</p>
+<p>The routines included keeping broadly consistent times for waking, eating, working or studying, interacting with other people and going to bed. The researchers propose that these repeated time cues may help coordinate the circadian rhythm, the body’s internal timing system, which influences alertness, sleep, hormone activity, metabolism and mood. Irregular patterns—including major differences between weekday and weekend sleep—may disturb that timing.</p>
+<p>The study, published in the *Journal of Behavioral Medicine*, focused on relationships between behavioral-social rhythms, insomnia symptoms, pain, body mass index and depressive symptoms. Its findings are observational: the survey cannot establish that adopting a regular routine would relieve pain or depression. Other factors could help explain the reported associations, and larger studies would be needed to test whether changing schedules improves either outcome.</p>
+<p>The researchers said consistent routines could be considered alongside efforts to address sleep problems, particularly for older adults. The work emphasizes that sleep health may involve not only how long or how well people sleep, but also how predictably their daily activities are timed.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261113231624.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists find a simple daily routine linked to less pain and depression">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0210" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists capture electrons making seemingly impossible quantum jumps</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science anchor</span><span class="badge">attributed source material (republished)</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers from the University of Regensburg, Philipps-Universität Marburg and Forschungszentrum Jülich have directly observed electrons crossing energy gaps in graphene, sometimes with a reported transition probability of 100%. The result exposes ultrafast quantum behavior and may inform efforts to control electronics with light.</p>
+<p>The electrons normally occupy defined energy bands, separated by ranges in which stable states are not ordinarily available. In the experiment, intense pulses of light accelerated electrons through graphene’s band structure, enabling them to move from a lower, valence band into a higher, conduction band through a Landau-Zener-Majorana transition. Rather than progressing through every intermediate energy level, an electron can make a quantum jump across the gap.</p>
+<p>The team combined intense laser fields with a photoemission momentum microscope. This instrument measures both the energies of emitted electrons and the directions in which they move, allowing researchers to reconstruct how electrons were distributed across energy states as the light field changed. The approach was designed to capture many electrons at once, increasing the chance of observing the rare transitions amid the much larger population that does not make the jump.</p>
+<p>The experiment relied on exceptionally pure, one-atom-thick graphene produced at Forschungszentrum Jülich. The researchers also used a rotated form of graphene, which the account says made the quantum dynamics easier to distinguish from effects caused by imperfections. Under sufficiently strong light fields, the transition probability reached 100% in the observed conditions. The outcome depended not simply on the size of the energy gap, but on how rapidly the electric field drove electrons toward it.</p>
+<p>The measurements also showed that the electrons’ initially orderly motion is gradually disrupted by interactions with graphene’s crystal lattice. Understanding that loss of control could be important for technologies that use rapidly oscillating light to direct electrons rather than relying solely on conventional voltage-driven operation.</p>
+<p>The researchers say the method could be applied to other quantum materials, giving scientists a way to examine electron motion that has previously been too fast to follow directly. The findings were published in *Nature*, while the evidence does not establish the underlying study’s research or release date beyond that publication reference.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261112025523.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists capture electrons making seemingly impossible quantum jumps">ScienceDaily #1</a></div>
+  
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        for (const group of reportSection.querySelectorAll('.related-stories, .story-group')) {
+          group.hidden = !Array.from(group.querySelectorAll('details.story')).some(story => !story.hidden);
+        }
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
