@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily News and Science Report - 2026-11-16</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d252c;
+      --muted: #60717f;
+      --line: #d9e2e8;
+      --surface: #f7f9fb;
+      --accent: #245c73;
+      --badge: #e8f2f4;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px clamp(16px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(24px, 4vw, 40px);
+      letter-spacing: 0;
+    }
+    main {
+      padding: 20px clamp(16px, 5vw, 56px) 48px;
+    }
+    section.report-section {
+      margin: 24px 0 34px;
+    }
+    section.report-section h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .story-group {
+      border-left: 3px solid var(--accent);
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+    .related-stories {
+      margin-left: 16px;
+    }
+    .related-stories > h3 {
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    select, input {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: white;
+    }
+    details.story {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+    details.story:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 8px;
+      border-radius: 6px;
+      background: var(--badge);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .source-list a {
+      display: inline-block;
+      margin: 0 10px 6px 0;
+      color: var(--accent);
+    }
+    .field-label {
+      margin-top: 12px;
+      font-weight: 700;
+    }
+    .story-body {
+      max-width: 78ch;
+    }
+    .story-body .standfirst {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .story-body h3 {
+      margin: 20px 0 6px;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+    .story-body p {
+      margin: 0 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daily News and Science Report - 2026-11-16</h1>
+  </header>
+  <main>
+    <div class="toolbar" aria-label="Report filters">
+      <label>Section <select id="sectionFilter"><option value="">All sections</option><option value="global_front_page">Global Front Page</option><option value="global_south_and_exploited">Global South And Exploited</option><option value="china_domestic">China Domestic</option><option value="politics_and_power">Politics And Power</option><option value="economy_and_business">Economy And Business</option><option value="technology_and_ai_society">Technology And Ai Society</option><option value="undercovered_watchlist">Undercovered Watchlist</option><option value="science_cs_ai">Science Cs Ai</option><option value="science_general">Science General</option></select></label>
+      <label>Source <select id="sourceFilter"><option value="">All sources</option><option value="guardian">The Guardian</option><option value="reuters">Reuters</option><option value="afp">Agence France-Presse</option><option value="nyt">The New York Times</option><option value="bbc">BBC News</option><option value="xinhua_en">Xinhua News Agency</option><option value="scmp">South China Morning Post</option><option value="cnn">CNN</option><option value="politico">POLITICO</option><option value="axios">Axios</option><option value="atlantic">The Atlantic</option><option value="el_pais">El País</option><option value="economist">The Economist</option><option value="al_jazeera_en">Al Jazeera English</option><option value="le_monde">Le Monde</option><option value="indian_express">The Indian Express</option><option value="dawn">Dawn</option><option value="daily_star_bangladesh">The Daily Star Bangladesh</option><option value="cna">CNA</option><option value="straits_times">The Straits Times</option><option value="nikkei_asia">Nikkei Asia</option><option value="yonhap">Yonhap News Agency</option><option value="korea_herald">The Korea Herald</option><option value="bangkok_post">Bangkok Post</option><option value="rappler">Rappler</option><option value="jakarta_post">The Jakarta Post</option><option value="kompas">Kompas</option><option value="tempo">Tempo English</option><option value="peoples_daily_en">People&#x27;s Daily English</option><option value="daily_maverick">Daily Maverick</option><option value="mail_guardian">Mail &amp; Guardian</option><option value="nation_africa">Nation Africa</option><option value="premium_times">Premium Times</option><option value="vanguard_ng">Vanguard Nigeria</option><option value="middle_east_eye">Middle East Eye</option><option value="al_monitor">Al-Monitor</option><option value="haaretz_news">Haaretz news sections</option><option value="agencia_brasil">Agencia Brasil</option><option value="folha">Folha de S.Paulo</option><option value="la_jornada">La Jornada</option><option value="pagina_12">Pagina/12</option><option value="el_universal_mx">El Universal Mexico</option><option value="telesur_en">Telesur English</option><option value="project_syndicate">Project Syndicate</option><option value="global_voices">Global Voices</option><option value="reliefweb">ReliefWeb</option><option value="ocha">UN OCHA updates</option><option value="arxiv">arXiv</option><option value="semantic_scholar">Semantic Scholar</option><option value="openalex">OpenAlex</option><option value="nature">Nature</option><option value="science_aaas">Science/AAAS</option><option value="sciencedaily">ScienceDaily</option></select></label>
+      <label>Text <input id="textFilter" type="search" placeholder="Filter stories"></label>
+    </div>
+    <section id="stories">
+      
+<section class="report-section" data-section="global_front_page">
+  <h2>Global Front Page</h2>
+  
+<details class="story" data-cluster-id="cluster-0230" data-section="global_front_page" data-original-section="global_front_page" data-sources="telesur_en">
+  <summary>Colombia: More Than 45 Social Leaders Killed in De la Espriella’s First 100 Days in Office</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Indepaz reported that Colombia recorded 45 assassinations of social leaders and human-rights defenders during the first 100 days of President Abelardo de la Espriella’s administration, covering August 7 to November 15, 2026. Thirty-six victims were men and nine were women; in 44 cases, the alleged perpetrator had not been identified. The report placed the highest numbers in Cauca, with 11 cases, and Antioquia, with eight, followed by Putumayo with four.</p>
+<p>The assessment also counted eight assassinated signatories of the peace agreement, all men, and 26 massacres that killed 87 people, including five minors. It recorded 6,667 people displaced by violence during August and September. Indepaz said the violence reflected territorial dynamics and conflicts predating the current government, so the crimes could not automatically be attributed to its decisions. It nevertheless said the state remains responsible for protecting the population and guaranteeing human rights.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/colombia-more-than-45-social-leaders-killed-in-de-la-espriellas-first-100-days-in-office" target="_blank" rel="noopener noreferrer" title="Telesur English / Colombia: More Than 45 Social Leaders Killed in De la Espriella’s First 100 Days in Office">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0110" data-section="global_front_page" data-original-section="global_front_page" data-sources="guardian">
+  <summary>‘Risk multiplier’: super El Niño looms over Cop31 as climate pattern fuels global disasters</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A super El Niño event, described as the strongest in at least 1,000 years, is adding urgency to climate-finance negotiations at COP31 in Turkey. Its weather effects have already been linked to wildfires and crop failures in Indonesia, coastal inundation in the United States, drought in Sudan, and flooding in Ecuador and Somalia. In the Marshall Islands, drought has struck a country heavily dependent on rainfall for water, while rising seas continue to threaten homes and drinking supplies; the government has declared a state of emergency.</p>
+<p>The most severe consequences are forecast as El Niño peaks in December and affects the following year. Expected impacts include heatwaves, crop shortages, excessive or insufficient rainfall, coral bleaching and more humanitarian emergencies. The UNHCR forecasts up to 3 million displacements across Kenya, Somalia, South Sudan and Uganda, while maize production in Kenya is already reported to be down 40%. Wealthy countries agreed last year to triple adaptation finance for vulnerable nations, but only a fraction of the $305 billion needed annually by 2035 is being delivered. Marshall Islands climate envoy Kathy Jetn̄il-Kijiner said the country has limited capacity to respond as the drought compounds existing pressures.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/2026/nov/15/el-nino-cop31-turkey-climate" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘Risk multiplier’: super El Niño looms over Cop31 as climate pattern fuels global disasters">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0126" data-section="global_front_page" data-original-section="global_front_page" data-sources="guardian">
+  <summary>World’s top court to rule if Myanmar committed genocide against Rohingya</summary>
+  <div class="meta"><span class="badge">global_front_page</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The International Court of Justice (ICJ) is due to deliver its judgment on Thursday on whether Myanmar violated the 1948 Genocide Convention through its treatment of the Rohingya, a decision that could shape accountability for survivors and influence other genocide litigation.</p>
+<p>Judges in The Hague have spent seven years considering allegations brought by Gambia, which says Myanmar’s repression of the Muslim minority breached the convention. No state has previously been held responsible for genocide by the court. One pivotal legal issue is whether the evidence establishes the requisite intent to destroy all or part of the Rohingya.</p>
+<p>The case concerns the military campaign that drove hundreds of thousands of Rohingya into Bangladesh nearly a decade ago. Legal Action Worldwide, which represents survivors, says repeated attacks, village burnings, killings and sexual violence indicate a coordinated attempt to destroy the group. Rohingya witnesses who travelled from camps in Bangladesh described killings and mass graves during closed-door hearings in January. Myanmar denies committing genocide and says its operations targeted an insurgency.</p>
+<p>Bangladesh hosts over 1 million Rohingya, whereas estimates put the population still in Myanmar below 600,000. Supporters of the case say a finding against Myanmar should pressure states to restrict arms transfers and jet-fuel supplies, although the ICJ lacks direct enforcement powers. The judgment is also expected to carry significance for South Africa’s separate genocide case against Israel.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/15/myanmar-rohingya-genocide-icj" target="_blank" rel="noopener noreferrer" title="The Guardian / World’s top court to rule if Myanmar committed genocide against Rohingya">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="global_south_and_exploited">
+  <h2>Global South And Exploited</h2>
+  
+<details class="story" data-cluster-id="cluster-0118" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="guardian">
+  <summary>The creeks are dry, rain is contaminated and food scarce. What lies ahead for the people of PNG’s Ahus Island?</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Papua New Guinea’s Ahus Island is facing an immediate water and food emergency after extreme heat and drought disrupted fishing, emptied wells and contaminated rainfall. Researchers say the crisis is leaving households hungry, shortening school days and undermining a community’s long-standing efforts to adapt to climate change.</p>
+<p>During a research visit in October, Ahus appeared deserted. Josh Cinner, director of the University of Sydney’s Thriving Oceans Research Hub, said residents were lying in their homes to conserve energy and water. School had been reduced to half days because of the heat, while fishing had fallen sharply: people lacked both the water and energy needed for the physically demanding work.</p>
+<p>The drought is affecting the wider region of Papua New Guinea. On neighbouring Manus Island, markets have little food available, while Ahus fishers have few catches to trade. The islands’ interconnected economy, based partly on exchanging fish and other goods, is therefore breaking down.</p>
+<p>When rain eventually arrived, smoke from bushfires in Borneo left it too contaminated for villagers to collect safely, Cinner said. They disconnected their water-catchment systems, while wells remained dry. Some residents have had to cross the channel to seek water on Manus, although they do not have rights to the mainland’s supplies; local creeks there are also drying.</p>
+<p>A recent survey by the researchers found that only 7% of Ahus households had enough drinking water, while 81% said they could not cope with climate change. Michelle Suri, who lives on the island, said almost every household was facing hunger as heat and water shortages reduced fishing, gleaning and other daily activities. Some people have stayed in the sea during the day to keep cool and conserve energy.</p>
+<p>The community had spent years preparing, including by building sea walls, installing water tanks and working with development and conservation organisations to diversify livelihoods. But the severity of the current drought has shaken confidence in those measures. Cinner said relocation options were limited because most land in Papua New Guinea is held under customary ownership, leaving Ahus residents with few alternatives if conditions continue to worsen.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/environment/2026/nov/16/png-ahus-island-water-cop-31-climate-crisis-impact-papua-new-guinea" target="_blank" rel="noopener noreferrer" title="The Guardian / The creeks are dry, rain is contaminated and food scarce. What lies ahead for the people of PNG’s Ahus Island?">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0236" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>At Least Ten People Killed in the Haitian Department of Artibonito</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Local media reported Sunday that an armed gang assault in Haiti’s central Artibonite department left at least ten people dead. The incident took place Saturday in Morne-Robert, a village in Saint-Marc; reports linked it to Gran Grif.</p>
+<p>The victims were reportedly farmers from Verrettes traveling to the Pont-Sondé market to sell their produce; other local media put the death toll at 13, but authorities had not officially confirmed that figure. André Saint-Louis, who leads the Committee of the Initiative for Peace in Lower Artibonite, said most victims were peasants using the route to avoid gangs controlling the main road near Liancourt. He also alleged that a gang member known as Kenkenn had threatened travelers on the secondary road and that authorities had failed to act. The source said the UN attributed 80% of civilian deaths in Artibonite between 2022 and July 2025 to Gran Grif. Haiti’s wider anti-gang campaign includes Haitian security forces, the UN-authorized Gang Suppression Force and Vectus Global; more than 2,000 Salvadoran soldiers joined it last month.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/at-least-ten-people-killed-in-the-haitian-department-of-artibonito" target="_blank" rel="noopener noreferrer" title="Telesur English / At Least Ten People Killed in the Haitian Department of Artibonito">TE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0074" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="cna">
+  <summary>Indonesia President Prabowo apologises to Singapore, Malaysia over transboundary haze</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Indonesia’s President Prabowo Subianto apologised to Singapore and Malaysia on Sunday, Nov. 15, for haze from forest and land fires that affected communities in both countries. Speaking after the first day of the ASEAN Leaders’ Summit in Manila, Prabowo conveyed the apology on behalf of Indonesia’s government and people. An Indonesian Presidential Secretariat statement said the fires had persisted for nearly four months.</p>
+<p>Prabowo said Indonesia had revoked 17 corporate concessions, while 26 companies were under investigation and 11 had been charged; he added that 23 more were slated for charges and that police were investigating 104 companies in total. He also said 71,000 personnel had been deployed, with 16 firefighters killed, others injured and two helicopters lost during operations. Prabowo said Indonesia planned to shift from firefighting and mitigation toward prevention, including establishing a new agency and related programs. The apology follows an agreement between Singapore and Indonesia to create a joint task force investigating companies linked to the fires; Singapore Prime Minister Lawrence Wong proposed expanding it into an ASEAN-wide platform for sharing evidence and information.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/indonesia-prabowo-apology-haze-6553166" target="_blank" rel="noopener noreferrer" title="CNA / Indonesia President Prabowo apologises to Singapore, Malaysia over transboundary haze">CNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0186" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="rappler">
+  <summary>Police arrest anti-Pax Silica protesters as ASEAN Summit opens in Manila</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Police clashed with anti-Pax Silica protesters at Liwasang Bonifacio in Manila, Philippines, on Sunday, November 15, as demonstrators tried to reach the Philippine International Convention Center, venue of the 49th ASEAN Summit. Officers blocked the march, although some protesters briefly passed through police lines before being stopped again. After nearly an hour, the group returned to Liwasang Bonifacio; Manila Police District spokesperson Philip Ines said at least 11 protesters were arrested and 16 police personnel were injured. KMU President Jerome Adonis said police cited the absence of a permit and questioned the legality of arrests made inside the freedom park.</p>
+<p>The protest opposed Pax Silica and US President Donald Trump’s participation in the summit. Activists have raised concerns that the US-led initiative could displace Indigenous peoples and farming communities through a planned 4,000-acre industrial hub in New Clark City, Tarlac. Philippine Trade and Industry Undersecretary Ceferino Rodolfo said the Philippines would not sign the agreement during the summit, but said officials aimed to conclude a deal with the US before the end of the year.</p></div>
+  <div class="source-list"><a href="https://www.rappler.com/philippines/pax-silica-protest-arrest-asean-opening-manila" target="_blank" rel="noopener noreferrer" title="Rappler / Police arrest anti-Pax Silica protesters as ASEAN Summit opens in Manila">Rappler #1</a></div>
+  
+</details>
+
+<div class="story-group">
+<details class="story" data-cluster-id="cluster-0011" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="al_jazeera_en,al_monitor">
+  <summary>Yemeni government forces redeploy from Bab al-Mandeb to defend Aden</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Yemeni government-aligned forces said on November 15, 2026, that they were moving from the Bab al-Mandeb area to defend Aden, shifting troops as Houthi pressure raised the prospect of advances toward the internationally recognised government’s southern base.</p>
+<p>A spokesman for the Southern Armed Forces said the group was redeploying from Dhubab airport and areas around Bab al-Mandeb in southwestern Yemen. He said the move was intended to secure Aden and nearby governorates, while reinforcements would also be sent toward Taiz, where the Houthis have besieged the city.</p>
+<p>The redeployment could mark a setback for the government counteroffensive launched in September to recover territory seized by Houthi fighters. That campaign retook positions around the strait, including Dhubab, but did not dislodge the Houthis from Mocha and other coastal areas.</p>
+<p>The announcement raises the possibility of further Houthi movement toward Aden; the group has captured highland areas north of the city and says it is preparing to advance. The shift also carries humanitarian consequences in Taiz, where aid cannot enter, civilians cannot leave, and the city hosts about half of the 300,000 people displaced by recent fighting. There was no immediate response from the Houthis or Saudi Arabia.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/11/15/yemeni-government-forces-redeploy-from-bab-al-mandeb-to-defend-aden?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Yemeni government forces redeploy from Bab al-Mandeb to defend Aden">AJ #1</a><a href="https://www.al-monitor.com/originals/2026/11/anti-houthi-forces-retreat-yemen-iran-strikes-bahrain" target="_blank" rel="noopener noreferrer" title="Al-Monitor / Anti-Houthi forces retreat in Yemen as Iran strikes Bahrain">AM #1</a></div>
+  
+</details>
+<div class="related-stories"><h3>Related coverage</h3>
+<details class="story" data-cluster-id="cluster-0238" data-section="global_south_and_exploited" data-original-section="politics_and_power" data-sources="telesur_en">
+  <summary>Yemen Bab al-Mandab Conflict: 2 Key Bases Fall as Houthis Advance</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Yemen, Houthi forces captured the Kharaz military base and nearby hills in Lahj province after overnight fighting, prompting Saudi-backed forces to pull back toward defenses around Aden. On November 15, the Southern Armed Forces said they would reposition units from Dhubab airport and the Bab al-Mandab sector in Taiz province to bolster Aden’s defensive perimeter as Houthi fighters moved south.</p>
+<p>The withdrawal changes the position of forces around a route linking the Red Sea with the Gulf of Aden. Military sources described Kharaz as a key shield for Aden’s western approaches and land routes toward both waterways, while the account said its loss could increase pressure on Aden and threaten supply lines. Retreating units were reported to be constructing fortifications west of Aden. According to a second military source, weakening performance by the Giants Brigades and tensions involving Saudi Arabia and the Southern Transitional Council contributed to the retreat. The account said the deterioration had raised concerns about navigation security, but described any effects on energy markets and supply chains as potential consequences of a shipping disruption, not an observed outcome.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/yemen-bab-al-mandab-conflict" target="_blank" rel="noopener noreferrer" title="Telesur English / Yemen Bab al-Mandab Conflict: 2 Key Bases Fall as Houthis Advance">TE #1</a></div>
+  
+</details>
+</div></div>
+
+<details class="story" data-cluster-id="cluster-0016" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="al_monitor,bbc,nyt,scmp">
+  <summary>Jordan sentences three men to death over deadly church attack</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jordan’s State Security Court in Jordan sentenced three men to death on Sunday, November 15, over an October church attack in Karak that killed nine people and wounded dozens, placing the case under appeal and automatic judicial review.</p>
+<p>The defendants were found guilty of several charges, among them causing death through terrorist acts, keeping weapons and ammunition for terrorism, and spreading a terrorist group’s ideology. The ruling, reported by Petra, remains subject to appeal and automatic review by Jordan’s Court of Cassation.</p>
+<p>On October 23, gunfire erupted at a funeral held in a Greek Orthodox church in Hamoud, southern Karak Governorate. According to authorities, the three suspects were taken into custody on October 26 following an exchange of fire at an abandoned house; each had been injured, but no security personnel suffered injuries.</p>
+<p>Accounts differed on the number of people wounded: Al-Monitor and BBC News reported 34, while the South China Morning Post reported 25. The New York Times said the Jordanian military described the men as convicted on terrorism charges. Jordan’s Christmas celebrations were also cancelled in solidarity with the victims’ families.</p></div>
+  <div class="source-list"><a href="https://www.al-monitor.com/originals/2026/11/jordan-sentences-three-men-death-over-deadly-church-attack" target="_blank" rel="noopener noreferrer" title="Al-Monitor / Jordan sentences three men to death over deadly church attack">AM #1</a><a href="https://www.bbc.co.uk/news/articles/c3rrg9xgqlwpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / Three men sentenced to death in Jordan over fatal church mass shooting">BBC #1</a><a href="https://www.nytimes.com/2026/11/15/world/middleeast/jordan-church-attack-death-sentence.html" target="_blank" rel="noopener noreferrer" title="The New York Times / 3 Men Sentenced to Death Over Church Attack in Jordan">NYT #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3374499/jordan-sentences-3-men-death-over-deadly-church-attack" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Jordan sentences 3 men to death over deadly church attack">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0204" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="scmp">
+  <summary>Mexican journalist who reported on missing persons found dead in Acapulco</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Mexican authorities said on Sunday that they had launched a murder investigation into the death of journalist Eduardo Flores in Acapulco. Flores reported on security, social issues and missing persons in the coastal city. His killing would be the latest in a series of attacks against reporters, according to the account. Mexico is consistently ranked among the deadliest countries for journalists, while London-based advocacy group Article 19 has documented 181 such cases since 2000.</p></div>
+  <div class="source-list"><a href="https://www.scmp.com/news/world/americas/article/3374520/mexican-journalist-who-reported-missing-persons-found-dead-acapulco" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Mexican journalist who reported on missing persons found dead in Acapulco">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0014" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="al_monitor,cnn,scmp">
+  <summary>Senior Hamas commander killed in Israeli strike in Gaza</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span><span class="badge">major supplement</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">An Israeli airstrike in southern Gaza killed Samir Abu Younis, 53, the commander of Hamas’s Rafah Brigade, while medics said other people were wounded; Hamas and the Israeli military both reported his death.</p>
+<p>The strike occurred overnight Saturday in a street in the Mawasi area of Khan Younis, where medics said Abu Younis was the target.</p>
+<p>Hamas attributed to Abu Younis a role in planning and supervising the October 7, 2023 attack on Israel, and said he had previously held senior operational positions in Rafah. The Israeli military said he had led the brigade since his predecessor, Nael Abu Obeid, was killed on September 15.</p>
+<p>The attack took place during an October 2025 ceasefire that halted major fighting but had not stopped Israeli attacks. Gaza health authorities said at least 1,600 Palestinians had been killed since the ceasefire began, alongside five Israeli soldiers.</p>
+<p>Hamas said Abu Younis’s funeral was scheduled for Sunday afternoon in Khan Younis.</p></div>
+  <div class="source-list"><a href="https://www.al-monitor.com/originals/2026/11/senior-hamas-commander-killed-israeli-strike-gaza" target="_blank" rel="noopener noreferrer" title="Al-Monitor / Senior Hamas commander killed in Israeli strike in Gaza">AM #1</a><a href="https://www.cnn.com/2026/11/15/middleeast/israel-kills-hamas-commander-gaza-intl" target="_blank" rel="noopener noreferrer" title="CNN / Israel kills senior Hamas commander in Gaza two months after killing his predecessor as ceasefire stagnates">CNN #1</a><a href="https://www.scmp.com/news/world/middle-east/article/3374498/top-hamas-commander-killed-israeli-strike-gaza" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Top Hamas commander killed in Israeli strike in Gaza">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0083" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="daily_star_bangladesh">
+  <summary>2 killed after being ‘pushed off’ bus in Rangpur</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Two passengers were killed and a third injured in Bangladesh’s Rangpur district after they were allegedly forced from a moving bus during a fare dispute in Taraganj upazila. Police identified the dead as Mukul Mia, 30, and Shakil Islam, 28, construction workers from Cumilla and residents of Charai Khola village in Nilphamari. The injured passenger, Atikul Islam, 30, was taken to Taraganj Upazila Health Complex.</p>
+<p>Atikul, witnesses and local residents said the three were travelling on a Saimum Paribahan night coach from Cumilla toward Jaldhaka in Nilphamari. The dispute reportedly began at about 8:30am at Jigartal and escalated before the alleged incident. Mukul and Shakil died at the scene, while Atikul survived. Locals later blocked the Rangpur-Saidpur highway, calling for action against those responsible. Around noon, they detained driver Aziz Hossain and helper Shafiqul Islam Shafik and handed them to police. Taraganj police said the bodies were recovered and Atikul was receiving treatment; police also said two people had been arrested and were being questioned after a case was filed by the father of one victim.</p></div>
+  <div class="source-list"><a href="https://www.thedailystar.net/news/accidents-and-fires/news/2-killed-after-being-pushed-bus-rangpur-4325001" target="_blank" rel="noopener noreferrer" title="The Daily Star Bangladesh / 2 killed after being ‘pushed off’ bus in Rangpur">TDSB #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0226" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="straits_times">
+  <summary>Israel: Eisenkot says Netanyahu cannot stay in office ‘a minute longer’</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On Nov. 15 in Israel, prime ministerial hopeful Gadi Eisenkot said caretaker premier Benjamin Netanyahu could not remain in office “for a minute longer” and called for an immediate investigation into alleged electoral interference by a Netanyahu aide. The remarks came hours after representatives of Eisenkot and Netanyahu met to discuss a possible national unity government. Eisenkot described Netanyahu’s conduct and that of his entourage as an immediate threat to Israeli democracy.</p>
+<p>The allegations concern a Channel 12 report that Netanyahu’s chief of staff, Ido Norden, contacted police before the election about members of the Arab-Israeli Raam party and directed officers to a former Netanyahu-office employee described as an intelligence source. Three Raam members were arrested on information attributed to that source, then released after police determined it was unfounded. Netanyahu later accused Arab-Israeli parties of electoral fraud after they gained seats, according to the account. Netanyahu’s office called the report “false” and said Norden had acted properly; his Likud party accused Eisenkot of inflammatory incitement. Neither bloc won the 61 seats needed to form a government, while Raam and the Joint List indicated support for Eisenkot, who had been tasked with forming one.</p></div>
+  <div class="source-list"><a href="https://www.straitstimes.com/world/middle-east/eisenkot-says-netanyahu-cannot-stay-in-office-a-minute-longer" target="_blank" rel="noopener noreferrer" title="The Straits Times / Eisenkot says Netanyahu cannot stay in office ‘a minute longer’">TST #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0235" data-section="global_south_and_exploited" data-original-section="global_south_and_exploited" data-sources="telesur_en">
+  <summary>Cuba Humanitarian Aid: 1 US Bishops’ Delegation Strengthens Church Ties</summary>
+  <div class="meta"><span class="badge">global_south_and_exploited</span><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Cuba’s President Miguel Díaz-Canel met on Saturday with a delegation from the United States Conference of Catholic Bishops to discuss the Church’s role in facilitating humanitarian assistance arriving from several countries. Led by Cardinal Sean Patrick O’Malley, the delegation included Archbishop Borys Gudziak, Christopher Ljungquist and SOMOS Community Care executive Mario Jesús Paredes. Díaz-Canel thanked the group for helping humanitarian aid reach the island and said Church organizations had contributed to getting assistance to people in need.</p>
+<p>Caritas Cuba has received food aid and hygiene packages in recent months from several countries, including the United States, and distributed them to communities facing shortages of basic goods. The meeting was also attended by Santiago de Cuba’s newly appointed archbishop, Monsignor Juan Gabriel Díaz Ruíz, and senior Cuban officials. Díaz-Canel described the exchange as an opportunity to strengthen dialogue and cooperation with the United States, while saying both countries share responsibility for addressing global challenges. Further coordination among Caritas Cuba, international donors and local authorities is expected to determine whether the engagement produces additional assistance and cooperation in areas such as health, education and disaster response.</p></div>
+  <div class="source-list"><a href="https://www.telesurenglish.net/cuba-humanitarian-aid" target="_blank" rel="noopener noreferrer" title="Telesur English / Cuba Humanitarian Aid: 1 US Bishops’ Delegation Strengthens Church Ties">TE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="china_domestic">
+  <h2>China Domestic</h2>
+  
+<details class="story" data-cluster-id="cluster-0249" data-section="china_domestic" data-original-section="china_domestic" data-sources="xinhua_en">
+  <summary>China Focus: China steps up efforts to improve care for preterm babies</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">material_harm</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China is expanding care for preterm babies through prenatal risk screening, neonatal intensive treatment, specialized nursing and follow-up services. In Beijing, a baby born at 26 weeks at the First Hospital of Tsinghua University developed respiratory distress and required mechanical ventilation during the first critical days of life. Preterm birth—before 37 completed weeks—can involve breathing, infection and nutritional risks; the WHO estimates that 15 million babies are born preterm each year.</p>
+<p>The care system includes transferring high-risk expectant mothers to hospitals with neonatal intensive care units, neonatal resuscitation, lung-protective ventilation and pulmonary surfactant treatment. After stabilization, hospitals are incorporating skin-to-skin kangaroo mother care, while discharged infants can receive screening for retinopathy, hearing problems and neurological development through 24 to 36 months of corrected age. China says pregnancy-risk screening and case management for high-risk women have been fully implemented, and 3,221 critically ill newborn treatment centers have been established. The National Health Commission reported an infant mortality rate of 3.8 deaths per 1,000 live births in 2025; China aims to reduce it below 3.5 by 2030.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261115/b17e0290b790480abf98ac76aaf72bdd/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / China Focus: China steps up efforts to improve care for preterm babies">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0179" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China: &quot;Policy implementation is quite affordable&quot; (Finance Deep Dive)</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s residential mortgage-interest subsidy, implemented on October 1, is prompting some prospective buyers to move faster and lowering monthly borrowing costs for eligible households. Early reported effects include increased home-viewing activity, simplified bank processing and higher housing-loan activity in several cities.</p>
+<p>The Ministry of Finance joined the People’s Bank of China and the Financial Regulatory Administration in releasing the implementation notice on September 29. Officials characterize the measure as the central government’s first program to subsidize interest on commercial personal housing loans. For first-time buyers, eligibility is limited to homes of up to 120 square meters, priced at no more than 1.5 million yuan, with a subsidized loan ceiling of 1 million yuan.</p>
+<p>In Qingdao, Lianjia agent Liu Chentao said home viewings doubled on the first day compared with usual levels and that customers were deciding more quickly. On October 18, he showed Zhou Pengfei a 92-square-meter home priced at about 1.4 million yuan. Liu estimated that the maximum interest reduction on a 1-million-yuan loan would approach 50,000 yuan, averaging roughly 10,000 yuan annually, after which Zhou intended to finalize the deal that weekend.</p>
+<p>The reported benefits extend to new residents and salaried families. In Jiangsu’s Haimen, Li Xiuli obtained a 450,000-yuan, 20-year mortgage with a 1% annual subsidy, reducing the interest rate during the subsidy period to 2.05%. Policy estimates put her five-year interest saving at about 20,000 yuan. The buyer in Beijing was informed that the interest reduction on her 930,000-yuan apartment could approach 39,500 yuan.</p>
+<p>Banks have incorporated subsidy processing into ordinary loan procedures, including for some second-hand homes, and have offered services at housing exhibitions and sales offices. The account says that, by the end of October, 25,000 China Construction Bank personal housing loans had received the subsidy. Chongqing reported more than 5,000 beneficiary households, while Agricultural Bank of China’s Jiangsu branch had accepted over 1,500 eligible applications involving more than 700 million yuan.</p>
+<p>These are early results rather than a final assessment. Chongqing officials forecast that the policy could benefit 19,000 residents in the fourth quarter and support 9.82 billion yuan in new housing loans. The account also reports a 24.7% month-on-month increase in Chongqing’s commercial housing transaction area since October, while noting that the policy’s broader effect may emerge gradually.</p></div>
+  <div class="source-list"><a href="http://finance.people.com.cn/n1/2026/1116/c1004-40834221.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / &quot;Policy implementation is quite affordable&quot; (Finance Deep Dive)">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0260" data-section="china_domestic" data-original-section="china_domestic" data-sources="xinhua_en">
+  <summary>Chinese courts strengthen judicial protection for security, development, people&#x27;s livelihoods</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A Nov. 15 Xinhua report said China’s courts have broadened legal safeguards covering national security, social stability, economic development and people’s livelihoods. In 2025, courts concluded 46,000 serious-violent-crime cases and 41,000 telecom and online-fraud cases; over the preceding five years, they concluded 9,326 cases involving cyber-security crimes. Between January and October, mediation handled more than 4.86 million disputes before formal litigation, and comprehensive social-governance centers were served by primary-level courts in every county-level center.</p>
+<p>The reported measures also cover businesses, digital markets, environmental protection and everyday services. In late May 2025, a division of China’s top court applied the private economy promotion law for the first time and ordered a government department to pay a company more than 8 million yuan in one case. Courts concluded 908 data-ownership and transaction disputes in 2025, a 25.6 percent year-on-year increase. Across the 2021–2025 Five-Year Plan period, more than 23 million first-instance cases concerning education, employment, elderly care and medical services were resolved by the courts. The account says courts are expected to continue judicial reform and improve the quality, efficiency and credibility of proceedings.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261115/1f6a2fda39924dae90778633f0663192/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / Chinese courts strengthen judicial protection for security, development, people&#x27;s livelihoods">XNA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0172" data-section="china_domestic" data-original-section="china_domestic" data-sources="peoples_daily_en">
+  <summary>China: Promoting New Energy Storage to Enter the Market-Oriented Development Stage (Ruicai Jing)</summary>
+  <div class="meta"><span class="badge">china_domestic</span><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">technology_and_ai_society</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China has set out a plan to move its new energy storage industry into market-oriented development, with proposed expansion for renewable-energy bases and power grids intended to improve electricity integration, supply assurance and system stability.</p>
+<p>The National Development and Reform Commission and National Energy Administration recently jointly issued an Implementation Plan for the 15th Five-Year Plan, shifting storage from a scale-up phase toward market-oriented development. The plan covers scale, applications, technology, market mechanisms, industry management and industrial development.</p>
+<p>The policy builds on rapid expansion already reported in China. By the end of 2025, installed new energy storage capacity had reached 136 million kilowatts, more than 40 times the capacity added by the end of the 13th Five-Year Plan. Projects using compressed air, flow batteries, sodium-ion batteries and flywheels had come online, while grid-forming storage projects had also been implemented. Storage utilization reached 1,195 hours in 2025, supporting renewable-energy consumption, power supply and grid stability.</p>
+<p>The plan sets a 2030 target of 300 million kilowatts of national storage capacity, with an average duration of about three hours. It proposes roughly 50 million to 60 million kilowatts in new-energy bases and about 140 million kilowatts of grid-side independent storage capable of supporting peak demand.</p>
+<p>Its proposed applications include desert and offshore wind-power bases, wind-solar-hydrogen projects, distribution networks, microgrids, virtual power plants, direct green-electricity supply and zero-carbon industrial parks. On technology, it calls for continued lithium-ion development, wider use of sodium-ion storage, and the transition of compressed-air, flow-battery and flywheel systems from pilot to commercial applications.</p>
+<p>A National Energy Administration official said the period presents both opportunities and challenges. The authorities also plan to strengthen implementation guidance and follow-up assessment while improving policies supporting the industry.</p></div>
+  <div class="source-list"><a href="http://finance.people.com.cn/n1/2026/1116/c1004-40834242.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / Promoting New Energy Storage to Enter the Market-Oriented Development Stage (Ruicai Jing)">PDE #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="politics_and_power">
+  <h2>Politics And Power</h2>
+  
+<details class="story" data-cluster-id="cluster-0045" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="axios">
+  <summary>Trump&#x27;s border crackdown faces a new blue wall of governors and House members</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Democratic candidates won all 10 U.S. House districts bordering Mexico, all four governorships in California, Arizona, New Mexico and Texas, and the attorney general races in those states, according to the supplied account. An Associated Press analysis described the House sweep as the party’s first since 2008; National Governors Association records indicate Democrats last held all four border-state governorships in January 1979. The results are expected to give Democrats greater influence over state resources, border spending and legal challenges during President Donald Trump’s final two years, beginning next year.</p>
+<p>The most immediate potential shift is in Texas, where Gina Hinojosa defeated Gov. Greg Abbott, Democrats flipped the state House and Nathan Johnson won the attorney general’s office, although Republicans retained the state Senate. Hinojosa has questioned Abbott’s roughly $11 billion Operation Lone Star spending and could reconsider state deployments and enforcement priorities, while existing law and federal authority constrain her options. Johnson has pledged to challenge what he considers unconstitutional federal border tactics, potentially changing the attorney general’s role from defending Abbott’s approach to opposing Trump administration policies. Newly elected border-district Democrats have combined support for stronger security with pathways to citizenship, while businesses in Laredo and near San Diego report weaker activity amid tougher enforcement.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/11/15/blue-border-wall-democrats-governors-immigration" target="_blank" rel="noopener noreferrer" title="Axios / Trump&#x27;s border crackdown faces a new blue wall of governors and House members">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0046" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="axios">
+  <summary>Bessent questions did Nvidia &quot;goose&quot; earnings with suspect China chip sales</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In the United States, Treasury Secretary Scott Bessent said Sunday that Nvidia may have inflated earnings through inappropriate China sales and urged its board to choose an outside candidate as chief executive. He cited allegations that former CEO Jensen Huang oversaw sanctions-evading chip sales to Asian companies, called some Nvidia partners shell companies serving Chinese interests, and accused the chipmaker of a culture of noncompliance.</p>
+<p>Bessent said Nvidia’s board and outside counsel should provide answers within 10 days; Nvidia had not immediately responded to a request for comment. Nvidia shares have lost more than $1.2 trillion in market value since the scandal emerged in late October, with reported effects on millions of Americans. The company is due to release quarterly results Tuesday, its first significant public comments since Huang resigned and CFO Collette Kress became acting CEO.</p></div>
+  <div class="source-list"><a href="https://www.axios.com/2026/11/15/bessent-nvidia-earnings-china-chip-sales-ceo" target="_blank" rel="noopener noreferrer" title="Axios / Bessent questions did Nvidia &quot;goose&quot; earnings with suspect China chip sales">Axios #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0012" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="al_jazeera_en,cnn,el_pais,guardian,scmp">
+  <summary>Estonia to close border crossings with Russia after attack on drone maker</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Estonia will close its three border crossings with Russia from December 1 after authorities said eight people were detained over an attempted arson attack at drone maker Threod Systems, a move Tallinn says will reduce security risks and limit hostile activity.</p>
+<p>Foreign Minister Margus Tsahkna announced the measure on Sunday, citing what he described as clear evidence that Russia’s military intelligence service, the GRU, ordered the attack. Estonia’s security services have attributed the alleged operation to Moscow, while Russian officials rejected the characterization.</p>
+<p>The attempted arson took place early Saturday at Threod’s facilities in Viimsi, near Tallinn, where combat and reconnaissance drones are made. Eight people living in Latvia were arrested, although their nationalities were not specified.</p>
+<p>Estonia’s Internal Security Service, Kapo, said the attackers intended to cause an explosion and set the building on fire. Authorities requested continued detention for five of those arrested, and no injuries or damage were reported after Threod’s security team responded.</p>
+<p>Prime Minister Kristen Michal said closing the border would reduce the risk of further attacks and signal that attacks on Estonia’s defence industry were unacceptable. Tsahkna also said the measure would restrict hostile activity and help prevent sanctions circumvention.</p>
+<p>The closure is due to cover the Narva, Koidula and Luhamaa crossings, but officials have not said how long it will last. Interior Minister Igor Taro said the government would decide at the end of the following week whether the measure would be temporary or permanent.</p>
+<p>Estonian residents who had travelled to Russia, as well as truck drivers who had crossed the border, were told they could return during the next two weeks. Russia’s Foreign Ministry spokeswoman, Maria Zakharova, described the plan as part of a broader pattern of Russophobia and said Moscow would examine whether the plans were genuine.</p></div>
+  <div class="source-list"><a href="https://www.aljazeera.com/news/2026/11/15/estonia-to-close-border-crossings-with-russia-after-attack-on-drone-maker?traffic_source=rss" target="_blank" rel="noopener noreferrer" title="Al Jazeera English / Estonia to close border crossings with Russia after attack on drone maker">AJ #1</a><a href="https://www.cnn.com/2026/11/15/europe/estonia-close-russian-border-attack-intl" target="_blank" rel="noopener noreferrer" title="CNN / Estonia to shut its border with Russia, blaming Moscow for foiled arson plot">CNN #1</a><a href="https://elpais.com/internacional/2026-11-15/estonia-se-prepara-para-cerrar-en-diciembre-su-frontera-con-rusia-tras-un-presunto-intento-de-sabotaje.html" target="_blank" rel="noopener noreferrer" title="El País / Estonia will close its border with Russia in December after accusing the Kremlin of a sabotage attempt">El Pais #1</a><a href="https://www.theguardian.com/world/2026/nov/15/estonia-to-close-all-border-crossings-with-russia-after-attack-on-drone-maker" target="_blank" rel="noopener noreferrer" title="The Guardian / Estonia to close all border crossings with Russia after attack on drone maker">Guardian #1</a><a href="https://www.scmp.com/news/world/russia-central-asia/article/3374514/estonia-close-russia-border-after-sabotage-bid-foreign-minister-says" target="_blank" rel="noopener noreferrer" title="South China Morning Post / Estonia to close Russia border after ‘sabotage’ bid, foreign minister says">SCMP #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0128" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Women prosecuted for abortions hail ‘historic day’ after receiving pardon</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A UK law taking effect on Monday will pardon women prosecuted or investigated for ending their own pregnancies and remove related criminal-record entries. About 150 women identified through police records are expected to benefit, easing restrictions that affected employment, travel, privacy and family life.</p>
+<p>The measure follows votes in the House of Commons and House of Lords. Under section 242 of the Crime and Policing Act 2026, pardons will be granted and records of related convictions, cautions, arrests and police investigations will be removed. Women will not need to apply: police forces and courts are expected to update records under the new requirements.</p>
+<p>The Commons had earlier approved changes intended to prevent future cases in which women are criminalised for ending their own pregnancies, while leaving the wider legal framework for abortions in place. Campaigners and women affected by the prosecutions have welcomed the development, but some warn that a pardon cannot reverse the stigma, distress or disruption caused by being prosecuted.</p>
+<p>Several cases involved women who ordered medication online or obtained it after remote consultations, including during the Covid-19 pandemic. After enduring nearly five years of legal proceedings, Nicola Packer was acquitted by a jury at Isleworth crown court in London last year. Packer had received the medication from an authorised provider without understanding that she was further along in the pregnancy than she had first thought.</p>
+<p>Other women who advocated for the change had experienced domestic abuse or coercive control. Laura*, a young mother, received a prison sentence after her abusive partner pressured her to order abortion pills online. Amy* said the consequences had included questions about her parenting, restrictions on contact with her children and the loss of privacy after details of her case became public.</p>
+<p>The pardons also cover historical cases prosecuted under Victorian legislation dating to 1861. The Royal College of Obstetricians and Gynaecologists and the British Pregnancy Advisory Service welcomed the measure, while acknowledging that removing records cannot erase the trauma experienced by the women involved.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/15/women-pardoned-abortion-england-wales" target="_blank" rel="noopener noreferrer" title="The Guardian / Women prosecuted for abortions hail ‘historic day’ after receiving pardon">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0071" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="cna,daily_maverick">
+  <summary>ASEAN, China reach provisional agreement on 80% of South China Sea code, says Philippines</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">ASEAN and China have provisionally settled most of the negotiating text for a South China Sea Code of Conduct, a step toward rules for managing maritime tensions, but Philippine officials say the agreement remains incomplete and further talks are needed.</p>
+<p>On Nov. 15, Philippine Foreign Secretary Theresa Lazaro announced in Manila that roughly 80 percent of the text had been provisionally agreed. The announcement followed the opening day of the 49th ASEAN Leaders’ Summit, where she said negotiators would continue pursuing an effective and substantive agreement.</p>
+<p>Lazaro stressed that no final deal had been reached. She attributed the delay to differences between ASEAN members and China, and said another five to six months might be enough to complete the negotiations.</p>
+<p>The proposed code is intended to manage tensions in the disputed South China Sea, where China’s maritime claims overlap with those of several Southeast Asian countries. It would build on the 2002 Declaration on the Conduct of Parties, establish more substantive guidance for conduct and cooperation, and help manage disputes without settling competing territorial claims.</p>
+<p>The Philippines said it had increased the agreed portion from about 50 percent to 80 percent during its ASEAN chairmanship. Singapore will assume the chair in 2027, and Lazaro said she was confident it could finish the discussions.</p></div>
+  <div class="source-list"><a href="https://www.channelnewsasia.com/asia/asean-philippines-south-china-sea-myanmar-haze-6553056" target="_blank" rel="noopener noreferrer" title="CNA / ASEAN, China reach provisional agreement on 80% of South China Sea code, says Philippines">CNA #1</a><a href="https://www.dailymaverick.co.za/article/2026-11-15-anc-rules-out-national-stability-pact-with-da" target="_blank" rel="noopener noreferrer" title="Daily Maverick / LOCAL ELECTIONS 2026: ANC rules out national stability pact with DA">DM #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0123" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>The Queensland ebike scheme keeping regional riders off the road: ‘If you live north of Rockhampton, bad luck’</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In Queensland, Australia, a new verification scheme is leaving regional ebike owners with limited time and few places to comply. Riders whose otherwise legal vehicles lack an assessment sticker may be pushed back into cars, increasing costs and undermining the state’s active-transport goals.</p>
+<p>Rhianna Steindl says her large cargo ebike has saved thousands of dollars in petrol and running costs since she bought it six years ago. In Bundaberg, she used it for commuting and taking her children to school, despite limited cycling infrastructure. She has now stopped riding it and drives her four-wheel drive instead, saying diesel has become one of her household’s largest bills.</p>
+<p>Legislation passed earlier this year bars e-vehicles from public use unless they meet a new standard, including a 250-watt power cap. Steindl says her ebike meets the requirements except for the sticker showing that an authorised retailer has assessed it. The state announced the Electrically Power-Assisted Cycle assurance scheme on 2 November, with owners required to have vehicles checked by February at a capped cost of $70.</p>
+<p>Only nine bike shops had joined the scheme when the account was published. Steindl’s nearest authorised location was 287km away in Rockhampton, the most northerly listed site. Active-transport groups say the arrangement was rushed and could force regional users back behind the wheel. Matt Burke of Bikes Queensland estimates that 20,000 to 50,000 legal ebikes statewide lack the sticker; a University of Queensland study published the previous month estimated that 200,000 or more legal e-mobility devices may need one.</p>
+<p>The government says authorised locations are operating across Queensland and more will be added. Bicycle Industries Australia said it hoped to have 20 stores participating by the end of the month, with more in the new year. The Transport and Main Roads website also refers to possible temporary, conditional permits for remote residents, but details had not been provided.</p>
+<p>The dispute matters beyond convenience: the study found that about 28% of households in remote Queensland own an e-mobility device, while for a quarter of users a private car is their only alternative.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/16/e-bikes-queensland-cycle-assurance-scheme-state-laws" target="_blank" rel="noopener noreferrer" title="The Guardian / The Queensland ebike scheme keeping regional riders off the road: ‘If you live north of Rockhampton, bad luck’">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0148" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="middle_east_eye">
+  <summary>Mossad abducted Iranian general in Turkey, tortured him for weeks before killing him: Report</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Alireza Asgari, a former Iranian Revolutionary Guard general and deputy defense minister, was kidnapped in Istanbul in December 2006, according to an account by The New York Times relayed by Middle East Eye. Israeli agents allegedly took him from a hotel, interrogated and tortured him for several weeks while seeking information about missing Israeli pilot Ron Arad, then killed him and disposed of his body in the Black Sea after concluding he knew nothing about Arad.</p>
+<p>The account says Iranian investigators found evidence that agents had entered Asgari’s hotel room, drugged him and used a vehicle later abandoned near the Black Sea. It places the abduction within Israel’s long-running effort to establish what happened to Arad, whose aircraft crashed in Lebanon in 1986. The same investigation described a later kidnapping of IRGC commander Abdullah Saberi in Damascus in 2021; after interrogation, he was allegedly abandoned alive in Johannesburg. Israeli officials also reportedly linked Lebanese security officer Ahmad Shukr, who disappeared in December 2025, to Arad’s death, although the account says there is no evidence supporting that theory. Israeli strikes on Nabi Chit in Lebanon in March killed at least 41 people and wounded more than 40, but did not locate Arad’s remains.</p></div>
+  <div class="source-list"><a href="https://www.middleeasteye.net/news/mossad-abducted-iranian-general-turkey-tortured-him-weeks-killing-him" target="_blank" rel="noopener noreferrer" title="Middle East Eye / Mossad abducted Iranian general in Turkey, tortured him for weeks before killing him: Report">MEE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0105" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="el_pais">
+  <summary>Jensen Huang plans his return to Nvidia with Silicon Valley’s support</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Jensen Huang is exploring a return to Nvidia’s chief executive role after being forced out last Thursday, with backing from Elon Musk, Tim Sweeney, Steve Chen and loyal employees, El País reports, citing the Financial Times. His team is reportedly assembling a crisis group to seek White House support for persuading Nvidia’s board to reinstate him, while Silicon Valley executives have signed a letter urging his return.</p>
+<p>El País says Nvidia’s board opened an investigation on Sunday into Huang’s nearly two-year relationship with a Chinese businesswoman who allegedly worked for Beijing’s intelligence and participated in sending Nvidia’s latest-generation microprocessors to China; revelations about two other relationships with employees reportedly hastened his exit. Colette Krees was named interim CEO, and the company hired headhunters to find a leader. The same account says Nvidia’s stock, after rising 700,000% during Huang’s 33 years to a $5.7 trillion valuation, fell by more than a third after the espionage scandal. Huang’s return faces resistance: Treasury Secretary Scott Bessent called for a major leadership reorganization, while lawmakers sought an investigation and asked Huang to testify.</p></div>
+  <div class="source-list"><a href="https://elpais.com/us/2026-11-15/jensen-huang-planea-su-regreso-a-nvidia-con-el-apoyo-de-silicon-valley.html" target="_blank" rel="noopener noreferrer" title="El País / Jensen Huang plans his return to Nvidia with Silicon Valley’s support">El Pais #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0187" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="rappler">
+  <summary>Philippines, Australia ink updated defense cooperation deal</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Officials from the Philippines and Australia signed an updated Defense Cooperation Arrangement on Sunday, November 15, at Manila South Harbor. Philippine Defense Secretary Gilberto Teodoro Jr. and Australian Ambassador Marc Innes-Brown signed the agreement in the presence of Prime Minister Anthony Albanese, who was visiting Manila for the 49th ASEAN Summit and related meetings. The arrangement updates a 1995 defense-cooperation memorandum that is about 30 years old.</p>
+<p>A joint statement by Teodoro and Australian Deputy Prime Minister and Defense Minister Richard Marles said the agreement would establish a contemporary framework for bilateral defense relations. It builds on a 2012 Status of Visiting Forces Agreement, which facilitates military access for training and humanitarian response. Philippine and Australian forces also conduct bilateral and multilateral exercises, including in the West Philippine Sea. The agreement comes as Manila and Canberra deepen their strategic partnership and cooperate on the Philippines’ claims within its South China Sea exclusive economic zone, areas China also claims as its territory.</p></div>
+  <div class="source-list"><a href="https://www.rappler.com/philippines/australia-defense-cooperation-arrangement-signing-november-2026" target="_blank" rel="noopener noreferrer" title="Rappler / Philippines, Australia ink updated defense cooperation deal">Rappler #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0042" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="atlantic">
+  <summary>The Pentagon Ignored a Warning About the Danger of Iran’s Drones</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">On March 1, a Shahed-variant drone hit a military logistics center in Kuwait, killing six U.S. service members and injuring more than two dozen others. The attack has prompted allegations that warnings about an available Ukrainian countermeasure were ignored before the war began.</p>
+<p>The drone hit an office building where Army Reserve personnel were working, penetrating the roof and detonating its payload. Reports said that several of the injured were in critical condition, and the source characterized the strike as the conflict’s deadliest assault on U.S. troops.</p>
+<p>In interviews with The Atlantic, senior U.S. officers said they had pressed Middle Eastern commanders to adopt an inexpensive interceptor created in Ukraine after years of comparable Iranian-made drones being used by Russia. U.S. Army personnel in Europe had trained with the system, and reports circulated within the military in December 2025 and February. European Command had already deployed the interceptors at bases in Romania and Poland, while officers sought wider use in the Middle East.</p>
+<p>Those officers said the warnings reached commanders in Washington but were not acted on, and that some who raised concerns were later fired or pushed into early retirement. They believe earlier deployment might have saved lives, though that is their assessment rather than an established finding.</p>
+<p>The Pentagon disputed their account, saying U.S. Central Command had established extensive air defenses across the Middle East and rejecting the suggestion that the military was unprepared.</p></div>
+  <div class="source-list"><a href="https://www.theatlantic.com/national-security/2026/11/pentagon-drones-iran-war-hegseth/689425" target="_blank" rel="noopener noreferrer" title="The Atlantic / The Pentagon Ignored a Warning About the Danger of Iran’s Drones">TA #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0098" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="el_pais">
+  <summary>The migratory route to the Canary Islands records its highest daily arrivals with more than 1,500 people</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">More than 1,500 migrants were rescued in a single day on Spain’s Canary Islands route, the highest daily total in its 32-year record, as hundreds of arrivals over the weekend put pressure on El Hierro and prompted renewed government measures.</p>
+<p>Saturday brought 1,580 people aboard 15 boats within 24 hours, according to the Maritime Rescue service’s balance. The eight vessels operated by Maritime Rescue and the Civil Guard carried out the rescues. Assistance services said some migrants reported spending four to seven days at sea after departing from Senegal, Gambia or Mauritania.</p>
+<p>Arrivals remained high on Sunday, when seven boats carrying 1,261 people reached El Hierro, according to Efe. Since Friday, 3,684 people had landed in the Canary Islands. The surge has generated protests in La Restinga, a fishing and tourist port on El Hierro, where Minister of Territorial Policy Ángel Víctor Torres visited on Sunday. He said about 1,600 migrants remained on the island after transfers to other destinations and mainland Spain.</p>
+<p>Torres announced that the Interministerial Immigration Commission would meet on Tuesday. An earlier government agreement includes €15.8 million in emergency funding to expand accommodation and transfers, plus resources for Red Cross staff, another rescue vessel, and reinforced police and Civil Guard capacity. The Canary Islands president, Fernando Clavijo, has called for faster implementation, citing pressure on healthcare, emergency services and island staff.</p></div>
+  <div class="source-list"><a href="https://elpais.com/espana/2026-11-15/la-ruta-migratoria-a-canarias-bate-su-record-de-llegadas-en-un-solo-dia-con-1500-personas.html" target="_blank" rel="noopener noreferrer" title="El País / The migratory route to the Canary Islands records its highest daily arrivals with more than 1,500 people">El Pais #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0127" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>‘We need to get back to class’: some teachers lose patience as France enters its eighth week of student protests</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">France’s student protests are entering their eighth week in France, with hundreds of high schools barricaded or closed and thousands of pupils missing substantial teaching, while staff face injuries, violence and growing uncertainty over how classes can resume.</p>
+<p>Students have protested since September over dilapidated buildings, too few replacement teachers, overcrowded classes and inequality in university applications. The government’s efforts to reduce some class sizes and review the university-application platform have not ended the movement.</p>
+<p>More than 360 schoolchildren and 245 staff have been injured since the protests began. Fireworks have been fired near schools and inside classrooms, while a councillor was struck by a gasoline-filled bottle during an attempt to mediate; the government and teachers’ unions distinguish violent individuals from students peacefully demanding education rights.</p>
+<p>The disruption is also weighing on staff: principals have demonstrated, at least 50 have requested to leave their posts, and one school reported 10 colleagues on sick leave. Pupils in examination years have missed up to 150 hours of teaching, and online lessons have rarely replaced classroom instruction.</p>
+<p>Some teachers support the students’ demands for more resources and dignity but worry about exams and whether the school year could be lost. Others say pupils who panic at the sight of police, including vulnerable teenagers already struggling at school, are being pushed further away from education.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/world/2026/nov/15/we-need-to-get-back-to-class-some-teachers-lose-patience-as-france-enters-its-eighth-week-of-student-protests" target="_blank" rel="noopener noreferrer" title="The Guardian / ‘We need to get back to class’: some teachers lose patience as France enters its eighth week of student protests">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0069" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc,yonhap">
+  <summary>South Korea: Top scorer in tax accountant exam turns himself in over AI-assisted cheating</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">technology_and_ai_society</span><span class="badge">anchor</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">In South Korea, the reported top scorer in this year’s certified tax accountant exam has admitted using a miniature camera, smartphone and generative AI to cheat in both rounds and has turned himself in, prompting a police investigation and government action over test fairness.</p>
+<p>The unnamed 34-year-old disclosed the admission on his lawyer’s YouTube channel after unusually high scores sparked suspicion online. He said he photographed questions with a concealed camera, sent them to AI and checked the answers on his phone. In April’s first round, he scored 397.5 out of 400, missing one of 160 questions; he later reportedly ranked first overall. He also said he used the same method in a certified public accountant exam.</p>
+<p>Police said they received his written confession through his lawyer and would investigate. The Ministry of Finance and Economy plans to suspend the validity of his certificate. If cheating is established, his result can be invalidated and he can be barred from retaking the exam for five years; criminal charges are also possible depending on the investigation.</p>
+<p>The case has intensified concern ahead of South Korea’s nationwide college entrance exam, scheduled for Thursday. The presidential office said it was taking the matter seriously, while the government pledged stronger detection of high-tech devices and planned discussions on countermeasures. Recent cases involving AI glasses in university and school tests have added to the pressure.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/ckvg2ezvpe08o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / South Korea&#x27;s top scorer in tax accountancy exam admits cheating">BBC #1</a><a href="https://en.yna.co.kr/view/AEN20261115000753315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Top scorer in tax accountant exam turns himself in over AI-assisted cheating">YNA #1</a><a href="https://en.yna.co.kr/view/AEN20261115000752315" target="_blank" rel="noopener noreferrer" title="Yonhap News Agency / Top scorer in tax accountant exam turns himself in over AI-assisted cheating">YNA #2</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0112" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="guardian">
+  <summary>Confused about who to vote for in the Victoria election? A guide to key promises made by Labor, the Coalition, Greens and One Nation</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">As Victorians vote in Australia’s state election this month, Labor, the Coalition, Greens and One Nation are offering competing plans on household costs, healthcare, housing, crime and transport—proposals that would reshape public services, taxes, policing and development if implemented.</p>
+<p>Labor would cap combined public-transport fares and tolls at $30 a week, spend $1.17bn on 100,000 additional public elective surgeries and build 25,600 homes for first-home buyers. It also proposes 1,500 more police officers and a $12bn Melbourne Airport rail project.</p>
+<p>The Coalition would cap tolls at $50 a week, partner with private hospitals for 100,000 public-patient surgeries, and build or upgrade eight hospitals. Its housing plan includes a higher stamp-duty exemption for first-home buyers, expanded high-rise development and selling $1.3bn of government land to developers. It would also add 3,000 police officers and pause the Suburban Rail Loop for review.</p>
+<p>The Greens propose permanently free public transport, 10 publicly owned supermarkets and $4bn for public housing, alongside rent controls and expanded dental care. One Nation’s proposals include child sports vouchers, regional emergency-department guarantees and tighter bail and court measures.</p>
+<p>The parties’ costings are not all complete, and some estimates have not been independently verified. The election also comes after Victoria’s 2025 treaty law created Indigenous oversight and truth-telling bodies.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/australia-news/2026/nov/16/victoria-election-2026-who-to-vote-for-policies-promises-labor-coalition-greens-one-nation-ntwnfb" target="_blank" rel="noopener noreferrer" title="The Guardian / Confused about who to vote for in the Victoria election? A guide to key promises made by Labor, the Coalition, Greens and One Nation">Guardian #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0075" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="cnn">
+  <summary>Europe scrambles to respond to wave of bomb threats disrupting transport, media and schools</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">material_harm</span><span class="badge">major supplement</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A cross-border barrage of emailed bomb warnings has disrupted air travel, schools, broadcasters and a cruise ship across Europe. Although none has so far been shown genuine, the incidents have caused evacuations, flight diversions and costly security responses while authorities try to establish who is responsible.</p>
+<p>More than 50 flights were affected. Responses differed by country: some aircraft were redirected, while Hungary and France deployed fighter jets to accompany threatened passenger planes. The incidents have highlighted the difficulty of handling alerts that cross jurisdictions and involve police, aviation authorities and multiple airports.</p>
+<p>Italy received warnings affecting about 6,300 schools on Wednesday and 3,778 on Thursday. Hundreds of schools were evacuated, while others stayed open. The Italian government subsequently instructed schools not to evacuate solely because of a mass email without supporting evidence. Threatening messages also reached schools in Scotland, Northern Ireland and the Republic of Ireland, where police considered them likely hoaxes and facilities remained open.</p>
+<p>Tracing the senders is difficult. Cybersecurity companies found that many messages came through hijacked legitimate webmail accounts, while apparent references to the Russian ultra-nationalist group “Male State” may have been fabricated.</p>
+<p>Some officials suspect a broader hybrid-warfare campaign, but French President Emmanuel Macron said there was insufficient evidence to attribute the threats to foreign powers. Their links to one another also remain unclear.</p></div>
+  <div class="source-list"><a href="https://www.cnn.com/2026/11/15/europe/europe-bomb-threats-response-intl" target="_blank" rel="noopener noreferrer" title="CNN / Europe scrambles to respond to wave of bomb threats disrupting transport, media and schools">CNN #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0070" data-section="politics_and_power" data-original-section="politics_and_power" data-sources="bbc">
+  <summary>UK will have &#x27;voice&#x27; but no vote on EU food rules in Brexit reset</summary>
+  <div class="meta"><span class="badge">politics_and_power</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The UK is seeking a new food-trade arrangement with the European Union that would reduce border paperwork and costs, but leave Britain able to influence EU rules without voting on them. The proposal remains subject to a summit expected on Friday and could be reversed by a future government.</p>
+<p>EU relations minister Hamish Falconer said the UK would participate in shaping relevant food policies while aligning with rules it could not formally approve or reject. He said the arrangement would not require upfront payments, but could include an exit clause if a later Conservative or Reform government sought to undo it.</p>
+<p>The proposed reset would dismantle border food-safety facilities introduced after Brexit and could remove checks on goods moving from Great Britain to Northern Ireland, along with separate “Not for EU” labels. Falconer said exporters currently face extensive paperwork and delays, with some products, including Lincolnshire sausages, becoming difficult to sell in the EU. He estimated the food element could add £5bn, while the wider agreement is forecast to increase UK GDP by 0.4%.</p>
+<p>Critics say the plan would make Britain a rule-taker and leave consumers and businesses without control over regulations. The Conservatives and Reform have said they would reverse it in government. National Farmers’ Union president Tom Bradshaw welcomed fewer inspections but called the proposal an opportunity and a risk, with details on exemptions and transitional arrangements still pending.</p></div>
+  <div class="source-list"><a href="https://www.bbc.co.uk/news/articles/c6wy4l8nl42wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer" title="BBC News / UK will have &#x27;voice&#x27; but no vote on EU food rules in Brexit reset">BBC #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="economy_and_business">
+  <h2>Economy And Business</h2>
+  
+<details class="story" data-cluster-id="cluster-0180" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="peoples_daily_en">
+  <summary>This Year, National Railways Transmitted 34.2 Hundred Million Tons of Goods in the First 10 Months</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">regional expansion</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">China’s national rail network transported 342 million tons of goods from January through October, according to China State Railway Group, with average daily wagon loading reaching 189,200. Tonnage rose 1.1% year on year and wagon loading 1.8%, in figures reported from Beijing on November 15. Rail coal shipments totaled 175 million tons, including 116 million tons for electricity generation, while grain shipments exceeded 100 million tons, an 11.7% increase.</p>
+<p>The railway sector also expanded connections with ports, shipping companies and international freight routes. Newly established rail-water transfer platforms numbered 95,306, while container-rail volumes increased 8.9%; rail-road intermodal freight reached 385 million tons, up 48.4%. China-Europe freight trains completed 18,600 trips, a 14.6% rise, and China-Central Asia services made 12,100 trips, up 1.9%. Rail-sea services on the Western Land-Sea New Corridor moved more than 1.13 million standard containers.</p></div>
+  <div class="source-list"><a href="http://society.people.com.cn/n1/2026/1115/c1008-40834131.html" target="_blank" rel="noopener noreferrer" title="People&#x27;s Daily English / This Year, National Railways Transmitted 34.2 Hundred Million Tons of Goods in the First 10 Months">PDE #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0251" data-section="economy_and_business" data-original-section="economy_and_business" data-sources="xinhua_en">
+  <summary>Hong Kong&#x27;s trade, finance sectors see value-added development: HKSAR financial chief</summary>
+  <div class="meta"><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Hong Kong’s annual maritime week opened on Sunday, while Hong Kong Exchanges and Clearing Limited (HKEX) was scheduled to launch an offshore renminbi bond index on Monday. Paul Chan, financial secretary of the Hong Kong Special Administrative Region government, said the events demonstrated the development of the city’s trade and finance sectors. The index covers more than 300 offshore renminbi, or “dim sum,” bonds issued in Hong Kong.</p>
+<p>Chan said dim sum issuance had increased since 2026 and represented 38 percent of Hong Kong’s total bond issuance in the first three quarters of this year, giving renminbi bonds the largest share of the local bond market. He said mainland Chinese technology companies, foreign governments and overseas financial institutions were increasingly using the bonds for financing. The index is intended to support the creation of index funds and exchange-traded funds and help investors track renminbi-denominated assets. Chan also cited a 20 percent year-on-year rise in outstanding offshore renminbi loans during the first three quarters, linking Hong Kong’s financial and shipping strengths to its role in global trade.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261115/d459fdbdc00f4cf4b3adb7692445b081/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / Hong Kong&#x27;s trade, finance sectors see value-added development: HKSAR financial chief">XNA #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="technology_and_ai_society">
+  <h2>Technology And Ai Society</h2>
+  
+<details class="story" data-cluster-id="cluster-0247" data-section="technology_and_ai_society" data-original-section="technology_and_ai_society" data-sources="xinhua_en">
+  <summary>10 years on, world&#x27;s first Luban Workshop helps create brighter future for Thai youth</summary>
+  <div class="meta"><span class="badge">technology_and_ai_society</span><span class="badge">economy_and_business</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The Luban Workshop at Ayutthaya Technical College in Thailand is marking a decade of vocational cooperation between China and Thailand. Established in March 2016 by Ayutthaya Technical College and Tianjin Bohai Vocational Technical College, it now has 15 teaching and practice areas across 2,000 square meters. The college says more than 2,600 local students have pursued degrees through the workshop, while over 500 have studied in China; the two institutions have jointly trained nearly 100,000 people.</p>
+<p>The workshop’s six internationalized majors have been incorporated into Thailand’s national education system. Its programs include mechatronics, robotics, the Internet of Things and intelligent manufacturing, with students working on automation systems and high-speed-train simulation equipment. One graduate, Teerapat Sudso, studied in Tianjin for more than a year and now works as an assistant engineer at the Thai subsidiary of Zhongji Innolight, where he mentors Chinese and Thai apprentices and uses Chinese in his daily work. In September, the colleges inaugurated an EPIP Center offering practical modules in artificial intelligence, IoT and intelligent manufacturing. Ayutthaya officials hope to establish additional centers in northern, southern and northeastern Thailand.</p></div>
+  <div class="source-list"><a href="https://english.news.cn/20261115/14bf992f7d314354bca62124460146fc/c.html" target="_blank" rel="noopener noreferrer" title="Xinhua News Agency / 10 years on, world&#x27;s first Luban Workshop helps create brighter future for Thai youth">XNA #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="undercovered_watchlist">
+  <h2>Undercovered Watchlist</h2>
+  
+<details class="story" data-cluster-id="cluster-0125" data-section="undercovered_watchlist" data-original-section="undercovered_watchlist" data-sources="guardian">
+  <summary>How sensitive data from Centrelink and other Australian agencies may have been fed to Palantir software</summary>
+  <div class="meta"><span class="badge">undercovered_watchlist</span><span class="badge">material_harm</span><span class="badge">technology_and_ai_society</span><span class="badge">politics_and_power</span><span class="badge">anchor</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Sensitive personal information held by Australian agencies—including Centrelink customer, tax and childcare-related data—may be reaching Palantir software through a fraud taskforce, while some departments did not know whether the system was being used.</p>
+<p>Freedom-of-information documents obtained by independent researcher and data scientist Dr Gabrielle Josling show that at least 10 federal agencies share data with the Australian Criminal Intelligence Commission (ACIC), which could ultimately place it in Palantir’s software. The taskforce was established in 2022 to target suspected fraud involving welfare, childcare and National Disability Insurance Scheme payments.</p>
+<p>The information authorised for ACIC access through Services Australia includes names, birth dates, identity documents, addresses, contact details, Centrelink claims, income and assets, employer and bank information, and agency-held surveillance material. The fraud fusion centre is led by the ACIC, while the wider data-sharing network is headed by the National Disability Insurance Agency and Services Australia.</p>
+<p>Services Australia said disclosures were assessed individually, while the Australian Taxation Office said taxpayer information was shared only where legally permitted. However, the ACIC did not answer whether agencies were told when their data was loaded into Palantir, and neither the ATO nor Centrelink knew whether the software had been used.</p>
+<p>Documents also show that an ethics and human-oversight framework was replaced by an “ethics guide” after officials judged the original process too difficult to implement. Josling told an Australian National Audit Office review that defined assessments and performance monitoring had been abandoned.</p></div>
+  <div class="source-list"><a href="https://www.theguardian.com/technology/2026/nov/16/personal-data-centrelink-ato-ndis-palantir" target="_blank" rel="noopener noreferrer" title="The Guardian / How sensitive data from Centrelink and other Australian agencies may have been fed to Palantir software">Guardian #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_cs_ai">
+  <h2>Science Cs Ai</h2>
+  
+<details class="story" data-cluster-id="cluster-0038" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The SO-Arena preprint introduces a benchmark for evaluating System One models across 11 domains and five capability families. It assesses more than aggregate accuracy, combining evidence-grounded tasks, manually checked reference labels, domain-specific difficulty levels, and interactive sandbox tasks in which models perform actions iteratively. Reasoning-intensive tasks also support comparisons between System One and System Two systems.</p>
+<p>The benchmark evaluates 21 models on decision reliability as well as capability. Its reliability measures test whether decisions remain stable when available options change and whether models recognize when no valid answer is offered. The reported results indicate that scaling and additional reasoning produce uneven benefits across domains. They also show that strong overall performance does not guarantee dependable decisions: the highest-performing System One model ranked seventh for reliability. The findings are presented in a preprint and therefore have not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.15777" target="_blank" rel="noopener noreferrer" title="arXiv / SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0030" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">BirdDreams introduces an autoregressive driving world model that generates perspective video and schematic bird’s-eye-view (BEV) video together. The preprint frames this as a way to simulate scenes under different ego-vehicle actions while modeling surrounding-vehicle motion. Its BEV represents roads and vehicles at a fixed metric scale, reducing occlusion and making positions and motion explicit, while perspective video preserves details such as traffic signals and appearance. Two video diffusion transformers use joint attention so each stream can inform the other during generation.</p>
+<p>The predicted BEV also supports ego control: the latest BEV frame is transformed along an input ego trajectory and used as a soft condition for generating how the scene should change when the ego vehicle moves. At inference, the system produces both video streams from one camera image without an HD map or vehicle-state inputs. On PhysicalAI-AV and nuScenes, the preprint reports more faithful following of input ego trajectories than prior driving world models, more plausible ego motion without ego-action conditioning, and better surrounding-vehicle behavior than a perspective-only baseline in human evaluation. These findings come from a preprint and are not peer-reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.14815" target="_blank" rel="noopener noreferrer" title="arXiv / BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0019" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Scaling Mathematical Proof Supervision from Structured Textbooks</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers introduce TOME-Math, a corpus built from 2,118 textbooks covering core university-level mathematics. It converts the material into approximately 380,000 structured proof-supervision records while retaining chapter order, links between propositions and proofs, dependency references, and source provenance—information typically lost when mathematical training data is reduced to isolated problem-solution pairs.</p>
+<p>Using these structural signals, the authors explore curriculum learning across multiple mathematical subjects and examine how performance changes with supervision volume and source breadth. They report that full-scale fine-tuning on TOME-Math increased the unweighted mean across held-out evaluations and established public benchmarks by 16.7 percentage points over the base model, exceeding the three public instruction-data baselines in aggregate. The work presents structured textbooks as a scalable source of mathematical supervision and says the corpus will be released for further research. These findings come from a preprint and have not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.40394" target="_blank" rel="noopener noreferrer" title="arXiv / Scaling Mathematical Proof Supervision from Structured Textbooks">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0031" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>PhysLoop: Harnessing LLMs&#x27; Physics Awareness for Self-Improving Video Generation Models</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">PhysLoop is a proposed framework for improving video-generation models by using large language models’ physical knowledge. The authors say current systems can produce realistic-looking videos while struggling with physical dynamics and causal consistency, and that creating reliable supervision, correction pairs and controlled variations is difficult. PhysLoop guides and constrains an LLM during video generation, selection and correction to produce more physically consistent training material.</p>
+<p>The preprint reports the release of 100,000 videos covering diverse indoor and outdoor scenes, together with generation tools and two evaluation datasets: PhysLoop-Gen and PhysLoop-Repair. These datasets are used to assess controllable generation and localized video repair, while physical behavior is evaluated on the external Physics-IQ Verified benchmark. The framework also supports inference-time repair and controllable training-data construction. The authors describe failure identification and correction as progress toward recursive self-improvement with limited human intervention, but the available evidence gives no numerical results from the evaluations. This work is presented as a preprint and has not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.16748" target="_blank" rel="noopener noreferrer" title="arXiv / PhysLoop: Harnessing LLMs&#x27; Physics Awareness for Self-Improving Video Generation Models">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0021" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint proposes GSTAR, a framework for making discrete autoregressive image generation more heavily compressed without sacrificing reported image quality. It addresses a trade-off: long token sequences preserve representation detail but slow generation, while aggressive spatial compression can reduce capacity. Using product quantization, the authors argue that, under a fixed nominal information budget, token-group size should increase quadratically with the per-axis spatial compression factor. GSTAR applies this spatial–group co-scaling to achieve reported compression of 32× and effective compression of 64×.</p>
+<p>The design also includes a semi-autoregressive decoder, combining parallel feature computation with lightweight causal modeling to handle dependencies within larger token groups. In the preprint’s evaluation, the compressed models performed competitively on five text-to-image benchmarks: GenEval, DPG-Bench, PRISM, LongText-Bench and Qwen-Image-Bench. At 1024×1024 resolution, the authors report a 20× speedup over prior discrete autoregressive models, generating an image in 2.5 seconds on a single NVIDIA H200. These are reported research results from a preprint rather than peer-reviewed findings.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.13004" target="_blank" rel="noopener noreferrer" title="arXiv / Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0027" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Incentivizing Self-Learning in Large Language Models via Reinforcement Learning</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint dated October 29, 2026, presents a reinforcement-learning approach for helping large language models acquire and use unfamiliar knowledge while solving problems. Its textbook-based task requires models to find relevant explanations, learn mathematical principles, and write proofs without access to reference solutions. The proposed BookNavigator interface provides access to textbooks and uses fine-grained rewards to encourage this process.</p>
+<p>In the reported experiments, the method increased Intern-S2-Preview-35B’s overall proof accuracy from 51.5% to 79.5% across familiar and unfamiliar textbooks and subjects. It also outperformed reinforcement-learning baselines that either lacked textbook access or used fixed retrieval. On the long-context BrowseComp-Plus and CL-bench evaluations, the approach improved on the base model by 1.7 and 2.3 percentage points, respectively. The findings suggest that reinforcement learning may support a more general strategy for learning from extended reference material, but the work is a preprint and has not undergone peer review.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2610.39671" target="_blank" rel="noopener noreferrer" title="arXiv / Incentivizing Self-Learning in Large Language Models via Reinforcement Learning">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0025" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Open Vision Banana: A Fully Open Recipe for Generative Visual Perception</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A preprint posted on November 11, 2026, presents Open Vision Banana (OVB), a proposed open and reproducible method for turning pretrained image generators into unified systems for multiple visual-perception tasks. OVB treats vision tasks as conditional image editing and starts from open-weight models with 4 billion and 9 billion parameters, training on 2.1 million to 3.8 million pairs from public datasets. The authors examine how color encoding, prompts, parameter adaptation and task balancing affect generalization, noting that these choices can interact in ways that make individually helpful changes counterproductive.</p>
+<p>In the authors’ reported evaluations, OVB reached 73.9 mean intersection-over-union on zero-shot Cityscapes segmentation, compared with 69.9 for Vision Banana, and performed comparably with leading affine-invariant depth estimators. Other variants came within five points of Vision Banana on referring and reasoning segmentation but lagged further on instance segmentation. A test-time “legend ensembling” method, which combines outputs generated with different class-color mappings, improved mean intersection-over-union by up to 8.7 points on Cityscapes and 15.0 on COCO-Object without retraining. The authors say the release includes data-processing tools, training and evaluation code, and multiple model checkpoints. As an arXiv preprint, these findings have not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.15844" target="_blank" rel="noopener noreferrer" title="arXiv / Open Vision Banana: A Fully Open Recipe for Generative Visual Perception">arXiv #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0029" data-section="science_cs_ai" data-original-section="science_cs_ai" data-sources="arxiv">
+  <summary>Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents</summary>
+  <div class="meta"><span class="badge">science_cs_ai</span><span class="badge">politics_and_power</span><span class="badge">technology_and_ai</span><span class="badge">science anchor</span><span class="badge">preprint_not_peer_reviewed</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Decision models can serve as actors that choose actions, judges that assess completed actions, or teachers that score actions for reinforcement learning. A preprint posted on November 12 examines these roles using three decision models and three general large language models on ALFWorld, with JEV also used as a teacher on ALFWorld and WebShop.</p>
+<p>As actors, all six models were drawn toward an easier task even when another subgoal had to come first. When judging complete trajectories, however, they tended to recognize steps that advanced the required subgoal; evaluating whether each action helped was more useful than predicting whether the overall task would succeed. Using JEV to train a Qwen2.5-1.5B policy with GRPO increased reported success on ALFWorld from 72.8% to 82.9%, and on WebShop from 56.8% to 71.4%. The authors therefore suggest that weak action performance does not prevent a model from providing effective training feedback. These findings are reported in a preprint that has not been peer reviewed.</p></div>
+  <div class="source-list"><a href="https://arxiv.org/abs/2611.17167" target="_blank" rel="noopener noreferrer" title="arXiv / Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents">arXiv #1</a></div>
+  
+</details>
+
+</section>
+
+
+<section class="report-section" data-section="science_general">
+  <h2>Science General</h2>
+  
+<details class="story" data-cluster-id="cluster-0190" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Physicists use laser light to unlock a crystal&#x27;s hidden electrical powers</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">economy_and_business</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Auburn University physicists report that brief laser pulses can align microscopic electrical regions inside a modified strontium titanate crystal for about one trillionth of a second, clarifying how the material develops electrical order and suggesting a possible route toward faster information processing and storage.</p>
+<p>The researchers, led by Wencan Jin and graduate student Mohamed Kandil, studied a material that combines electrical conductivity with tiny regions carrying positive and negative sides. The nanoregions may face varied directions, or they may orient collectively. Scientists have debated for decades whether cooling creates the regions by moving atoms together or merely organizes regions that already exist.</p>
+<p>Researchers from Japan’s National Institute of Advanced Industrial Science and Technology prepared the experimental crystals. At Auburn, the team developed a highly sensitive laser-based system to detect weak optical changes in the material while repeatedly heating and cooling it. At higher temperatures, the regions pointed in apparently random directions. As the crystal cooled, they adopted preferred orientations, supporting the explanation that the electrical regions exist before becoming aligned.</p>
+<p>The researchers then used short laser pulses to produce temporary alignment even at temperatures where the regions would normally remain disordered. An optical measurement detected the resulting pattern, which lasted approximately one picosecond. The experiment therefore did more than observe the crystal’s internal behavior: it demonstrated that light can briefly influence its microscopic electrical arrangement.</p>
+<p>The work followed nearly three years of experimental development. The partnership took shape when Jin encountered Japanese researchers during the March 2023 meeting of the American Physical Society. At Auburn, nearly a year went into refining the equipment; according to the source, Kandil detected laser-induced alignment for the first time in 2025. Physical Review Letters gave an Editors’ Suggestion designation to the paper *Optical Poling of a Quantum Ferroelectric Metal across the Order-Disorder Phase Transition*.</p>
+<p>The study both clarifies how electrical order arises in this unusual crystal and shows that light can be used to alter that order. Practical technologies have not been demonstrated: the release presents ultrafast computing and information storage as possibilities for future investigation. The short-lived alignment could nevertheless provide a way to study rapid electrical processes in quantum materials and explore whether such processes can eventually support faster control of information.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261112230500.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Physicists use laser light to unlock a crystal&#x27;s hidden electrical powers">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0189" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>A simple supplement could help your immune system fight cancer and viral infections</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Rockefeller University researchers report that restoring the amino acid arginine improved immune responses in mice with colon cancer, influenza, or SARS-CoV-2 infection, pointing to a possible future supplement-based approach—but not yet a proven treatment for people.</p>
+<p>Arginine is produced by the body and obtained from protein-rich foods. The study, published in *Cell*, examined how its availability affects the immune system’s ability to identify abnormal or infected cells. In laboratory experiments, arginine shortages disrupted production of MHC-I proteins, which display cellular material to T cells. When fewer of these molecular signals reached the cell surface, cancerous or virus-infected cells could become harder for immune defenses to detect.</p>
+<p>The researchers then tested dietary arginine in mouse disease models. Mice given more arginine developed fewer colon cancer tumors and experienced less severe influenza and SARS-CoV-2 infections than mice on lower-arginine diets. Additional arginine also improved outcomes when it was given after influenza infection had already begun, rather than only before exposure.</p>
+<p>The team says a moderate amount comparable to that in a couple of over-the-counter supplement tablets restored MHC-I production in its experiments. The findings raise the possibility of testing arginine alongside cancer immunotherapies or for people at elevated risk from respiratory viruses. The researchers also point to aging and inadequate nutrition as situations in which arginine availability may decline.</p>
+<p>However, the reported benefits were observed in cells and mice. The evidence does not establish that arginine supplements prevent or treat cancer, influenza, or COVID-19 in humans. Further human research would be needed to determine whether the immune effects and disease outcomes translate into effective or safe treatments.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261113232000.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A simple supplement could help your immune system fight cancer and viral infections">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0199" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>A common osteoporosis drug blocked spinal damage in a surprising new study</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">Researchers at the Universities of Edinburgh and Bristol found that a bisphosphonate, a drug class already used to treat osteoporosis, prevented abnormal spinal mineral buildup in genetically altered zebrafish. The early finding points to possible treatments for disc degeneration, but has not yet been confirmed in humans.</p>
+<p>In the study, published in *Communications Biology*, the researchers examined zebrafish bred without a functioning copy of a gene linked to collagen IX, a protein that helps maintain the structure of spinal discs. As the fish aged, the tissues between their vertebrae began to deteriorate, followed by mineral deposits and fusion between neighboring vertebrae.</p>
+<p>The sequence offered a possible explanation for how spinal degeneration develops. The supporting layer around the developing spine began breaking down before mineralization appeared, suggesting that loss of this framework may trigger later hardening. The researchers also found changes in fat metabolism, phosphate regulation, vitamin A signaling and mTOR, a system involved in cell growth and nutrient responses.</p>
+<h3>A possible treatment target, not yet a human therapy</h3>
+<p>When the team tested interventions, a bisphosphonate blocked the abnormal mineral buildup in the fish. Reducing the animals’ food intake and using drugs that suppressed fat metabolism also reduced spinal fusion. These results identify several biological processes that could be explored in future treatments, rather than demonstrating that any of these approaches will work in people.</p>
+<p>Spinal disc degeneration affects the flexible structures that cushion the vertebrae and can contribute to pain, stiffness and reduced mobility. The evidence says no medication currently stops or reverses the degenerative process, leaving surgery as the established long-term option for some severe cases.</p>
+<p>The researchers said the findings could help explain why genetic changes lead to spinal damage and show how zebrafish can be used to investigate the disease and test potential therapies. However, the experiments were conducted in fish, and the evidence does not establish that the same mechanisms operate in humans or that osteoporosis drugs can safely slow spinal degeneration.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261113232105.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / A common osteoporosis drug blocked spinal damage in a surprising new study">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0197" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Vitamin C could help block cancer-linked chemicals in your stomach, study finds</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">public_health</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">University of Waterloo researchers used a mathematical model to examine how vitamin C may affect reactions involving nitrates and nitrites in the digestive system. Nitrates and nitrites are present in foods such as bacon and salami, and they also occur in fruits and vegetables grown where soil or water has been polluted. In the stomach, they can participate in nitrosation, a process that produces chemicals researchers suspect may contribute to cancer development.</p>
+<p>The model simulated interactions across the salivary glands, stomach, small intestine and blood plasma. According to the simulations, vitamin C eaten alongside foods containing either nitrate or nitrite could limit the production of compounds that may be harmful. Simulations also indicated that taking vitamin C after meals could moderately reduce nitrosation products, particularly after eating processed meats. The paper in the *Journal of Theoretical Biology* suggests that the amount of vitamin C consumed, eating schedule, gastric conditions and microbes in the mouth may help account for differing dietary-risk findings. However, the results come from mathematical simulations, not clinical trials, and further research is needed to establish whether the predicted chemical changes reduce cancer risk in people.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261114202236.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Vitamin C could help block cancer-linked chemicals in your stomach, study finds">ScienceDaily #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0221" data-section="science_general" data-original-section="science_general" data-sources="semantic_scholar">
+  <summary>Empathy-Aware Relational Graph Networks With Self-Distillation for Multimodal Emotion Recognition in Conversation</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">science_cs_ai</span><span class="badge">science anchor</span><span class="badge">scholarly_metadata_record</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">The proposed EASDG framework addresses multimodal emotion recognition in conversation by representing dialogue as a relational graph that couples temporal dependence with cross-modal interaction. It adds node-level empathy embeddings to provide cues for affective responses and emotional transitions between speakers, while targeting limitations in methods that mainly integrate modalities at the perception level and do not fully model empathy consistency or heterogeneous modality contributions.</p>
+<p>EASDG also uses graph-based self-distillation: single-modal subnetworks provide complementary supervision for the multimodal graph to improve modality-specific representations. Experiments on the IEMOCAP benchmark reached weighted F1 scores of 86.00% and 72.49% in the four-way and six-way tasks, respectively, while the MELD result reached 67.53%. The evidence describes these results as superior performance and says ablation analysis confirmed a synergistic effect between empathy embeddings and self-distillation in improving multimodal emotion-recognition performance.</p></div>
+  <div class="source-list"><a href="https://www.semanticscholar.org/paper/e842597fc6ae5af7a07e1777f57350020e3583a0" target="_blank" rel="noopener noreferrer" title="Semantic Scholar / Empathy-Aware Relational Graph Networks With Self-Distillation for Multimodal Emotion Recognition in Conversation">SS #1</a></div>
+  
+</details>
+
+
+<details class="story" data-cluster-id="cluster-0194" data-section="science_general" data-original-section="science_general" data-sources="sciencedaily">
+  <summary>Scientists discover a bizarre paradox among endangered penguins</summary>
+  <div class="meta"><span class="badge">science_general</span><span class="badge">politics_and_power</span><span class="badge">climate_disaster</span><span class="badge">science anchor</span><span class="badge">institutional_press_release</span></div>
+  <div class="field-label">What happened</div>
+  <div class="story-body"><p class="standfirst">A University of Otago-led study has found sharply diverging outcomes among New Zealand’s endangered Erect-crested penguins: one island population has remained stable, while another has fallen by more than 40%, exposing how species-wide averages can conceal a serious conservation crisis.</p>
+<p>Erect-crested penguins breed only on the Bounty and Antipodes island groups, about 800 kilometers southeast of New Zealand’s South Island. Researchers used drone surveys from 2022 to 2024 to photograph and count breeding colonies across both groups, producing what the study describes as the first comprehensive survey of the species. The research was published in *PLOS ONE*.</p>
+<p>The Bounty Islands, covering just 50 hectares, held about 27,800 breeding pairs—nearly as many as the roughly 29,800 pairs on the Antipodes Islands, which are 40 times larger. Historical comparisons found that the Bounty population has stayed essentially unchanged for at least 25 years, while the Antipodes population has declined by more than 40% since 1995.</p>
+<p>Researchers believe several pressures may be interacting at the Antipodes. Skuas prey on penguin eggs and chicks, and shrinking colonies may have weakened the birds’ collective defense. Klemens Pütz of the Antarctic Research Trust suggested that the collapse of Eastern Rockhopper penguins, leaving fewer than 1,000 breeding pairs on the Antipodes, may have pushed skuas toward Erect-crested penguins. More destructive storms, landslides and different feeding routes could add to the disparity: Antipodes penguins travel into the Antarctic Polar Frontal Zone, while Bounty birds remain closer to potentially more sheltered waters.</p>
+<p>The researchers call this split “Schrödinger’s Penguin.” They warn that combining both populations could improve the species’ overall classification from Endangered to Vulnerable, masking the Antipodes decline and the Bounty population’s exposure to industrial fishing.</p></div>
+  <div class="source-list"><a href="https://www.sciencedaily.com/releases/2026/11/261112230458.htm" target="_blank" rel="noopener noreferrer" title="ScienceDaily / Scientists discover a bizarre paradox among endangered penguins">ScienceDaily #1</a></div>
+  
+</details>
+
+</section>
+
+    </section>
+  </main>
+  <script>
+    const sectionFilter = document.getElementById('sectionFilter');
+    const sourceFilter = document.getElementById('sourceFilter');
+    const textFilter = document.getElementById('textFilter');
+    const stories = Array.from(document.querySelectorAll('details.story'));
+    const sections = Array.from(document.querySelectorAll('section.report-section'));
+    function applyFilters() {
+      const section = sectionFilter.value;
+      const source = sourceFilter.value;
+      const text = textFilter.value.toLowerCase();
+      for (const story of stories) {
+        const sectionMatch = !section || story.dataset.section === section;
+        const sourceMatch = !source || story.dataset.sources.split(',').includes(source);
+        const textMatch = !text || story.textContent.toLowerCase().includes(text);
+        story.hidden = !(sectionMatch && sourceMatch && textMatch);
+      }
+      for (const reportSection of sections) {
+        for (const group of reportSection.querySelectorAll('.related-stories, .story-group')) {
+          group.hidden = !Array.from(group.querySelectorAll('details.story')).some(story => !story.hidden);
+        }
+        const visibleStories = Array.from(reportSection.querySelectorAll('details.story')).some(story => !story.hidden);
+        reportSection.hidden = !visibleStories;
+      }
+    }
+    sectionFilter.addEventListener('change', applyFilters);
+    sourceFilter.addEventListener('change', applyFilters);
+    textFilter.addEventListener('input', applyFilters);
+  </script>
+</body>
+</html>
